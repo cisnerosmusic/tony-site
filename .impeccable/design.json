@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-10T00:05:00-04:00",
+  "title": "Design System: Antonio López Sánchez, número especial",
+  "extensions": {
+    "colorMeta": {
+      "verde": {
+        "role": "primary",
+        "displayName": "Verde caimán",
+        "canonical": "#0d5a3c",
+        "tonalRamp": ["oklch(15% 0.09 162)", "oklch(25% 0.09 162)", "oklch(35% 0.09 162)", "oklch(45% 0.09 162)", "oklch(55% 0.09 162)", "oklch(68% 0.09 162)", "oklch(82% 0.07 162)", "oklch(95% 0.04 162)"]
+      },
+      "verde-tinta": {
+        "role": "primary",
+        "displayName": "Verde tinta",
+        "canonical": "#0a4530"
+      },
+      "rojo": {
+        "role": "secondary",
+        "displayName": "Rojo offset",
+        "canonical": "#d0342a",
+        "tonalRamp": ["oklch(15% 0.12 29)", "oklch(25% 0.15 29)", "oklch(35% 0.17 29)", "oklch(45% 0.19 29)", "oklch(55% 0.19 29)", "oklch(68% 0.16 29)", "oklch(82% 0.10 29)", "oklch(95% 0.04 29)"]
+      },
+      "rojo-pagina": {
+        "role": "secondary",
+        "displayName": "Rojo página",
+        "canonical": "#9c231b"
+      },
+      "rojo-texto": {
+        "role": "secondary",
+        "displayName": "Rojo texto",
+        "canonical": "#a8271f"
+      },
+      "rojo-boton": {
+        "role": "secondary",
+        "displayName": "Rojo botón",
+        "canonical": "#b02a20"
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta cálida",
+        "canonical": "#201709",
+        "tonalRamp": ["oklch(15% 0.03 75)", "oklch(21% 0.035 75)", "oklch(32% 0.035 75)", "oklch(45% 0.035 75)", "oklch(58% 0.035 75)", "oklch(70% 0.035 75)", "oklch(83% 0.03 75)", "oklch(95% 0.02 75)"]
+      },
+      "papel": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "#f2e8d0",
+        "tonalRamp": ["oklch(15% 0.03 90)", "oklch(28% 0.03 90)", "oklch(42% 0.03 90)", "oklch(56% 0.03 90)", "oklch(70% 0.03 90)", "oklch(80% 0.03 90)", "oklch(88% 0.03 90)", "oklch(95% 0.025 90)"]
+      },
+      "papel-sombra": {
+        "role": "neutral",
+        "displayName": "Papel sombra",
+        "canonical": "#e4d6b4"
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Cabecera", "purpose": "Cabecera de portada en mayúsculas, una palabra por línea; su peso variable baja de 900 a 650 con el scroll." },
+      "headline": { "displayName": "Titular de pliego", "purpose": "Titular de cada sección, con text-wrap: balance." },
+      "title": { "displayName": "Título de obra", "purpose": "Títulos de novela; la obra premiada sube de cuerpo y el título del poema baja, por jerarquía editorial." },
+      "entradilla": { "displayName": "Entradilla", "purpose": "Párrafo de entrada de un pliego, caja máxima de 38rem." },
+      "body": { "displayName": "Texto corrido", "purpose": "Lectura general; sinopsis a 52ch, texto documental a 68ch." },
+      "poema": { "displayName": "Poema", "purpose": "El verso con white-space: pre-wrap; los espacios internos del poema son significantes y se respetan." },
+      "label": { "displayName": "Aparato de redacción", "purpose": "Folios, cabezales, sumario y términos en Archivo wdth 80 mayúsculas; créditos y datos editoriales en la variante wdth 85." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "paso", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Única curva de easing del sistema, para toda transición." },
+      { "name": "duracion-boton", "value": "0.35s", "purpose": "Transiciones de botón (fondo, despegue, flecha)." },
+      { "name": "duracion-lamina", "value": "0.45s", "purpose": "Inclinación de la lámina al hover de la obra." },
+      { "name": "duracion-pasada", "value": "0.7s", "purpose": "Entrada de cada pasada de tinta al cargar." },
+      { "name": "escalon-pasada", "value": "0.25s", "purpose": "Retardo entre pasadas de imprenta (verde, rojo, papel, negro)." }
+    ],
+    "breakpoints": [
+      { "name": "pliego-movil", "value": "44rem" },
+      { "name": "sumario-doble", "value": "54rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "La acción primaria del número: tipografía de taller en rojo, borde filete, se despega sin sombra al hover.",
+      "html": "<a class=\"ds-boton\" href=\"#\">Abrir el número <svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M12 4v14m0 0 6-6m-6 6-6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-boton { display: inline-flex; align-items: center; gap: 0.7rem; background: var(--rojo-boton, #b02a20); color: var(--papel, #f2e8d0); font-family: \"Archivo\", \"Helvetica Neue\", sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: 0.01em; text-transform: uppercase; text-decoration: none; padding: 1.05rem 2.2rem; border: 1px solid var(--tinta, #201709); border-radius: 0; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-boton svg { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-boton:hover { background: #8d1f18; transform: translate(2px, -2px); } .ds-boton:hover svg { transform: translateY(3px); } .ds-boton:active { transform: translate(0, 0); } .ds-boton:focus-visible { outline: 3px solid var(--rojo, #d0342a); outline-offset: 3px; }"
+    },
+    {
+      "name": "Botón directorio",
+      "kind": "button",
+      "refersTo": "button-directorio",
+      "description": "La misma anatomía del botón en tinta verde caimán, para el cierre del número.",
+      "html": "<button class=\"ds-boton-verde\" type=\"button\">Escribir al autor</button>",
+      "css": ".ds-boton-verde { display: inline-flex; align-items: center; gap: 0.7rem; background: var(--verde, #0d5a3c); color: var(--papel, #f2e8d0); font-family: \"Archivo\", \"Helvetica Neue\", sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: 0.01em; text-transform: uppercase; padding: 1.05rem 2.2rem; border: 1px solid var(--tinta, #201709); border-radius: 0; cursor: pointer; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-boton-verde:hover:not(:disabled) { background: var(--verde-tinta, #0a4530); transform: translate(2px, -2px); } .ds-boton-verde:focus-visible { outline: 3px solid var(--rojo, #d0342a); outline-offset: 3px; } .ds-boton-verde:disabled { cursor: not-allowed; opacity: 0.65; transform: none; }"
+    },
+    {
+      "name": "Sumario",
+      "kind": "nav",
+      "refersTo": "sumario",
+      "description": "La navegación del sitio es el sumario del número: tema, línea de puntos y folio de página sobre filete. Cinco entradas en el build (p. 2 a p. 6).",
+      "html": "<nav class=\"ds-sumario\" aria-label=\"Sumario\"><p class=\"ds-sumario-titulo\">En este número</p><ol><li><a href=\"#\"><span class=\"ds-tema\">Las novelas</span><span class=\"ds-puntos\" aria-hidden=\"true\"></span><span class=\"ds-pag\">p. 2</span></a></li><li><a href=\"#\"><span class=\"ds-tema\">El poeta</span><span class=\"ds-puntos\" aria-hidden=\"true\"></span><span class=\"ds-pag\">p. 4</span></a></li></ol></nav>",
+      "css": ".ds-sumario { width: min(100%, 44rem); border-top: 1px solid var(--papel, #f2e8d0); padding-top: 0.8rem; background: var(--verde, #0d5a3c); color: var(--papel, #f2e8d0); padding: 0.8rem 1rem 0.6rem; font-family: \"Archivo\", \"Helvetica Neue\", sans-serif; } .ds-sumario-titulo { margin: 0 0 0.5rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-variation-settings: \"wdth\" 80; } .ds-sumario ol { list-style: none; margin: 0; padding: 0; } .ds-sumario li + li { border-top: 1px solid color-mix(in srgb, var(--papel, #f2e8d0) 30%, transparent); } .ds-sumario a { display: flex; align-items: baseline; gap: 0.8rem; padding: 0.45rem 0; text-decoration: none; color: inherit; font-weight: 600; } .ds-tema { font-size: 1rem; } .ds-sumario a:hover .ds-tema { text-decoration: underline; text-underline-offset: 0.22em; } .ds-puntos { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--papel, #f2e8d0) 55%, transparent); } .ds-pag { font-size: 0.9rem; font-variation-settings: \"wdth\" 80; }"
+    },
+    {
+      "name": "Cabezal de pliego",
+      "kind": "custom",
+      "refersTo": "cabezal",
+      "description": "La línea de folio que abre cada pliego: título del número a la izquierda, página a la derecha, sobre filete de 1px.",
+      "html": "<p class=\"ds-cabezal\"><span>Antonio López Sánchez, número especial</span><span>p. 2</span></p>",
+      "css": ".ds-cabezal { display: flex; justify-content: space-between; gap: 1rem; margin: 0; border-top: 1px solid currentColor; padding-top: 0.5rem; font-family: \"Archivo\", \"Helvetica Neue\", sans-serif; font-size: 0.8rem; font-weight: 600; font-variation-settings: \"wdth\" 80; letter-spacing: 0.08em; text-transform: uppercase; color: var(--papel, #f2e8d0); background: var(--tinta, #201709); padding: 0.5rem 0.75rem 0.25rem; }"
+    },
+    {
+      "name": "Lámina de obra",
+      "kind": "card",
+      "refersTo": "lamina",
+      "description": "Encarte principal de novela: reproducción de la cubierta real (en el build, img/*.webp con dimensiones y lazy) con filete de papel translúcido y pie de crédito en Archivo; se inclina al hover. Aquí un placeholder ocupa el lugar de la cubierta.",
+      "html": "<figure class=\"ds-lamina\"><svg viewBox=\"0 0 640 966\" class=\"ds-lamina-img\" role=\"img\" aria-label=\"Cubierta de la edición\"><rect width=\"640\" height=\"966\" fill=\"var(--verde, #0d5a3c)\"/><rect x=\"60\" y=\"60\" width=\"520\" height=\"846\" fill=\"none\" stroke=\"var(--papel, #f2e8d0)\" stroke-width=\"4\"/><text x=\"320\" y=\"500\" text-anchor=\"middle\" fill=\"var(--papel, #f2e8d0)\" font-family=\"Archivo, sans-serif\" font-size=\"48\" font-weight=\"800\" letter-spacing=\"4\">CUBIERTA</text></svg><figcaption class=\"ds-lamina-pie\">Cubierta de la edición · Editorial de la Mujer</figcaption></figure>",
+      "css": ".ds-lamina { max-width: 21rem; width: 100%; margin: 0; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1); } .ds-lamina:hover { transform: rotate(-1.2deg); } .ds-lamina-img { display: block; width: 100%; height: auto; border: 1px solid color-mix(in srgb, var(--papel, #f2e8d0) 35%, transparent); } .ds-lamina-pie { font-family: \"Archivo\", \"Helvetica Neue\", sans-serif; font-size: 0.8rem; font-weight: 500; font-variation-settings: \"wdth\" 85; letter-spacing: 0.03em; color: color-mix(in srgb, var(--papel, #f2e8d0) 75%, transparent); padding-top: 0.5rem; }"
+    },
+    {
+      "name": "Recorte de prensa",
+      "kind": "card",
+      "refersTo": "recorte",
+      "description": "Reproducción secundaria de cubierta pegada con rotación leve (1.4deg, o -1.2deg la variante izquierda), filete y crédito; ocupa la columna angosta de 10 a 14rem. Placeholder en lugar de la cubierta real.",
+      "html": "<figure class=\"ds-recorte\"><svg viewBox=\"0 0 520 769\" class=\"ds-recorte-img\" role=\"img\" aria-label=\"Cubierta\"><rect width=\"520\" height=\"769\" fill=\"var(--rojo, #d0342a)\"/><text x=\"260\" y=\"400\" text-anchor=\"middle\" fill=\"var(--papel, #f2e8d0)\" font-family=\"Archivo, sans-serif\" font-size=\"44\" font-weight=\"800\" letter-spacing=\"4\">CUBIERTA</text></svg><figcaption>Trovadoras, Editorial Oriente, 2009. Cubierta de la edición.</figcaption></figure>",
+      "css": ".ds-recorte { margin: 0; width: 100%; max-width: 14rem; transform: rotate(1.4deg); background: var(--papel, #f2e8d0); padding: 0.5rem; } .ds-recorte-img { display: block; width: 100%; height: auto; border: 1px solid var(--tinta, #201709); } .ds-recorte figcaption { font-family: \"Archivo\", \"Helvetica Neue\", sans-serif; font-size: 0.8rem; font-weight: 500; font-variation-settings: \"wdth\" 85; letter-spacing: 0.03em; padding-top: 0.5rem; color: color-mix(in srgb, var(--tinta, #201709) 80%, transparent); }"
+    },
+    {
+      "name": "Poema",
+      "kind": "custom",
+      "refersTo": "poema",
+      "description": "La página literaria: verso con pre-wrap que conserva espacios y sangrías, sobre el pliego rojo de página, con crédito en Archivo sobre filete.",
+      "html": "<article class=\"ds-poema\"><h3>Informe legal sobre la muerte de un poema</h3><div class=\"ds-poema-texto\">   Después de efectuar el examen correspondiente\nse informa\nque el poema encontrado muerto\ntiene diseminados en sus versos\nvarias cicatrices y ternuras</div><p class=\"ds-poema-credito\">Poema de Antonio López Sánchez</p></article>",
+      "css": ".ds-poema { max-width: 38rem; background: #9c231b; color: var(--papel, #f2e8d0); padding: 2rem; font-family: \"Besley\", Georgia, serif; } .ds-poema h3 { margin: 0 0 2.2rem; font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 850; line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance; } .ds-poema-texto { white-space: pre-wrap; font-size: 1.1rem; line-height: 1.75; } .ds-poema-credito { font-family: \"Archivo\", \"Helvetica Neue\", sans-serif; font-size: 0.8rem; font-weight: 600; font-variation-settings: \"wdth\" 85; letter-spacing: 0.08em; text-transform: uppercase; margin: 2.2rem 0 0; padding-top: 0.8rem; border-top: 1px solid color-mix(in srgb, var(--papel, #f2e8d0) 40%, transparent); display: inline-block; } .ds-poema ::selection { background: var(--tinta, #201709); color: var(--papel, #f2e8d0); }"
+    },
+    {
+      "name": "Ficha editorial",
+      "kind": "custom",
+      "refersTo": "ficha",
+      "description": "Fila de término y definición con filete superior; el término en voz de aparato condensado.",
+      "html": "<dl class=\"ds-ficha\"><div><dt>Nace</dt><dd>La Habana, 16 de enero de 1973</dd></div><div><dt>Formación</dt><dd>Licenciado en Comunicación Social, Universidad de La Habana</dd></div></dl>",
+      "css": ".ds-ficha { margin: 0; background: var(--verde, #0d5a3c); color: var(--papel, #f2e8d0); padding: 0 0.75rem; font-family: \"Besley\", Georgia, serif; font-size: 1.0625rem; line-height: 1.6; } .ds-ficha div { display: grid; grid-template-columns: minmax(7rem, 1fr) minmax(0, 3.2fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid color-mix(in srgb, var(--papel, #f2e8d0) 35%, transparent); } .ds-ficha dt { font-family: \"Archivo\", \"Helvetica Neue\", sans-serif; font-weight: 700; font-variation-settings: \"wdth\" 80; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 0.25rem; } .ds-ficha dd { margin: 0; max-width: 68ch; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Número Especial",
+    "overview": "La web no es un sitio de autor con hero y tarjetas: es un número especial de revista literaria cubana (linaje El Caimán Barbudo, La Gaceta de Cuba) dedicado íntegro a Antonio López Sánchez. Todo el sistema se deriva de la imprenta offset de tirada limitada: tres tintas (verde caimán, rojo offset, tinta cálida) sobre un papel crema que nunca se pinta, se reserva. Las secciones son pliegos a sangre que se hojean en scroll, cada uno con su cabezal, su folio de página y su titular rotundo; las tres tintas cometen a escala de página (verde en portada y periodista, tinta en novelas y directorio, papel en trova, rojo en el poeta). La densidad es editorial, no de aplicación: texto corrido con capitular, columnas con corondel, sumario con líneas de puntos, fichas con filetes, un poema compuesto con sus espacios reales. La única fotografía admitida es documental: reproducciones de las cubiertas reales de los libros, montadas como encartes y recortes con filete y pie de crédito. No hay sombras, no hay esquinas redondeadas, no hay degradados; la única profundidad legítima es la que produce la tinta al sobreimprimirse (multiply), el misregistro deliberado de las pasadas y la leve rotación de los recortes pegados. El movimiento también viene del taller: al cargar, el número se imprime por pasadas de tinta en orden de imprenta, y la cabecera pierde peso variable al hacer scroll, como materia viva de composición tipográfica.",
+    "keyCharacteristics": [
+      "Tres tintas planas más papel como reserva; ningún cuarto pigmento en las superficies diseñadas.",
+      "Cada tinta comete a escala de pliego: verde, tinta cálida, papel y rojo de página como fondos a sangre.",
+      "Fotografía solo documental: cubiertas reales como encarte, siempre con filete de 1px y crédito en Archivo.",
+      "Besley variable para todo lo que se lee; Archivo condensada para todo el aparato de revista.",
+      "Filetes de 1px como única costura; cero sombras, cero radios.",
+      "Sobreimpresión con mix-blend-mode: multiply donde dos tintas se tocan."
+    ],
+    "rules": [
+      { "name": "La Regla de las Tres Tintas", "body": "Todo color diseñado es una de las tres tintas (verde, rojo, tinta cálida) o papel en reserva. No existe un cuarto pigmento, ni degradados, ni transparencias decorativas; las medias tintas se logran con color-mix() de una tinta hacia el papel o hacia otra tinta, nunca con colores nuevos.", "section": "colors" },
+      { "name": "La Regla del Encarte", "body": "La única imagen fotográfica del sistema es la reproducción documental de una cubierta real. Entra como cita, no como decoración: siempre enmarcada por un filete de 1px y acompañada de su pie de crédito en Archivo. Sus colores propios no ingresan a la paleta.", "section": "colors" },
+      { "name": "La Regla de la Sobreimpresión", "body": "Cuando dos tintas se superponen no se mezclan digitalmente: se sobreimprimen con mix-blend-mode: multiply y el resultado oscuro se acepta como física del offset (las pasadas fantasma del emblema de portada).", "section": "colors" },
+      { "name": "La Regla de los Dos Oficios", "body": "Besley compone todo lo que se lee; Archivo compone todo el aparato de revista. Ninguna familia invade el oficio de la otra, y no entra una tercera.", "section": "typography" },
+      { "name": "La Regla del Aparato Condensado", "body": "Todo texto de aparato estructural (folio, cabezal, término de ficha) va en Archivo a wdth 80, mayúsculas, 0.8rem y tracking 0.08em; los créditos documentales relajan el ancho a wdth 85. Es una sola voz de redacción repetida en toda la revista.", "section": "typography" },
+      { "name": "La Regla del Verso Intacto", "body": "El texto poético se reproduce con sus espacios y sangrías originales (white-space: pre-wrap); la maqueta nunca reescribe la respiración de un poema.", "section": "typography" },
+      { "name": "La Regla del Papel Plano", "body": "Ninguna superficie proyecta sombra. Si un elemento necesita separarse, lo hace con un filete de 1px, un cambio de tinta, una sobreimpresión o una rotación leve de material pegado.", "section": "elevation" },
+      { "name": "La Regla del Filete", "body": "La única costura del sistema es un filete de 1px sólido (en currentColor, en tinta o en papel translúcido vía color-mix), más la línea de puntos del sumario. Nada más grueso, nada con color propio ajeno a las tintas.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do imprimir cada pliego en una sola tinta de fondo (verde #0d5a3c, papel #f2e8d0, tinta #201709 o rojo página #9c231b) y reservar el rojo puro para acentos y acciones.",
+      "Do montar toda reproducción de cubierta como material documental: filete de 1px, pie de crédito en Archivo, y rotación leve si es recorte.",
+      "Do resolver toda superposición de tintas con mix-blend-mode: multiply y aceptar el oscurecimiento resultante.",
+      "Do derivar medias tintas con color-mix() desde las tintas existentes, nunca con valores nuevos.",
+      "Do componer todo aparato editorial (folios, cabezales, términos, créditos) en Archivo condensada, mayúsculas donde es estructural, 0.8rem.",
+      "Do usar la única curva --paso para cualquier transición y apagarla bajo prefers-reduced-motion.",
+      "Do conservar los espacios internos de cualquier texto poético con white-space: pre-wrap."
+    ],
+    "donts": [
+      "Don't usar sombras (box-shadow, text-shadow) ni desenfoques: la profundidad es tinta, filete, sobreimpresión y rotación de recorte.",
+      "Don't redondear esquinas: border-radius 0 en todo componente (solo 1px en el contorno de foco).",
+      "Don't introducir colores diseñados fuera de las tres tintas más papel, ni degradados; la fotografía solo entra como reproducción de cubierta real con filete y crédito, y sus colores no ingresan a la paleta.",
+      "Don't sumar una tercera familia tipográfica ni usar fuentes del sistema: solo Besley y Archivo locales.",
+      "Don't montar navegación de app (barra fija, hamburguesa, tarjetas): la navegación es el sumario y el scroll hojea los pliegos.",
+      "Don't usar raya larga en ningún texto visible de la página (regla editorial del proyecto)."
+    ]
+  }
+}

@@ -1,0 +1,519 @@
+/* Antonio López Sánchez · número especial · mundo: revista literaria cubana */
+
+@font-face {
+  font-family: "Besley";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("fonts/besley-var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Besley";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("fonts/besley-italic-var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("fonts/archivo-var.woff2") format("woff2");
+}
+
+:root {
+  --verde: #0d5a3c;
+  --verde-tinta: #0a4530;
+  --rojo: #d0342a;
+  --rojo-texto: #a8271f;
+  --rojo-boton: #b02a20;
+  --rojo-pagina: #9c231b;
+  --tinta: #201709;
+  --papel: #f2e8d0;
+  --papel-sombra: #e4d6b4;
+  --filete: 1px solid;
+  --paso: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--verde) var(--papel);
+}
+
+body {
+  font-family: "Besley", "Georgia", serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  background: var(--tinta);
+  color: var(--papel);
+  caret-color: var(--rojo);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--rojo); color: var(--papel); }
+
+a { color: inherit; text-underline-offset: 0.22em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 3px solid var(--rojo);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+.pliego-papel :focus-visible { outline-color: var(--rojo-texto); }
+
+.salto {
+  position: absolute;
+  left: 1rem; top: -4rem;
+  z-index: 10;
+  background: var(--tinta); color: var(--papel);
+  padding: 0.6rem 1rem;
+  font-family: "Archivo", sans-serif;
+  transition: top 0.2s var(--paso);
+}
+.salto:focus-visible { top: 1rem; }
+
+/* ---------- etiquetas compartidas ---------- */
+
+.folio, .cabezal, .sumario, .obra-datos, .nota-demo, .boton, .oferta-quien {
+  font-family: "Archivo", "Helvetica Neue", sans-serif;
+}
+
+.cabezal {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: var(--filete) currentColor;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  font-variation-settings: "wdth" 80;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.titular {
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  font-weight: 850;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nota-demo {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+  margin-top: 0.6rem;
+}
+
+/* ---------- portada ---------- */
+
+.portada {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+  justify-items: center;
+  overflow: clip;
+  padding: 3.5rem 1.5rem 1rem;
+  color: var(--papel);
+}
+
+.pasada-verde {
+  position: absolute;
+  inset: 0;
+  background: var(--verde);
+  z-index: -1;
+}
+
+.folio {
+  position: absolute;
+  top: 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-variation-settings: "wdth" 80;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.folio-a { left: 1.5rem; }
+.folio-b { right: 1.5rem; text-align: right; }
+
+.cabecera {
+  font-size: clamp(2.7rem, min(11.5vw, 11svh), 9rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.cabecera span { display: block; }
+
+.emblema {
+  aspect-ratio: 1 / 1;
+  height: clamp(8.5rem, 21svh, 26rem);
+  max-height: 78vw;
+  margin: -1rem 0;
+  align-self: center;
+}
+.emblema-svg { display: block; width: 100%; height: 100%; }
+.fantasma-multiplicado { opacity: 0.5; mix-blend-mode: multiply; }
+.fantasma-reserva { opacity: 0.4; }
+.sobreimpresion { mix-blend-mode: multiply; }
+
+.oferta { text-align: center; max-width: 34rem; }
+.oferta-quien {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.oferta-prueba {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--papel-sombra);
+  margin-top: 0.4rem;
+  text-wrap: balance;
+}
+
+.accion { margin: 0.9rem 0 1.1rem; }
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--rojo-boton);
+  color: var(--papel);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.05rem 2.2rem;
+  border: var(--filete) var(--tinta);
+  transition: transform 0.35s var(--paso), background-color 0.35s var(--paso);
+}
+.boton:hover { background: #8d1f18; transform: translate(2px, -2px); }
+.boton:active { transform: translate(0, 0); }
+.boton svg { transition: transform 0.35s var(--paso); }
+.boton:hover svg { transform: translateY(3px); }
+
+.sumario {
+  width: min(100%, 44rem);
+  border-top: var(--filete) var(--papel);
+  padding-top: 0.8rem;
+}
+.sumario-titulo {
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-variation-settings: "wdth" 80;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.sumario ol { list-style: none; }
+.sumario li + li { border-top: 1px solid color-mix(in srgb, var(--papel) 30%, transparent); }
+@media (min-width: 54rem) {
+  .sumario ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+  }
+  .sumario li { border-top: 1px solid color-mix(in srgb, var(--papel) 30%, transparent); }
+}
+.sumario a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.45rem 0;
+  text-decoration: none;
+  font-weight: 600;
+}
+.sumario a:hover .sumario-tema { color: var(--papel); text-decoration: underline; text-underline-offset: 0.22em; }
+.sumario-tema { font-size: 1rem; }
+.puntos { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--papel) 55%, transparent); }
+.sumario-pag { font-size: 0.9rem; font-variation-settings: "wdth" 80; }
+
+/* pasadas de imprenta: el numero se imprime al cargar */
+.pasada { transition: opacity 0.7s var(--paso), transform 0.7s var(--paso); }
+.pasada-verde, .pasada-rojo, .pasada-papel, .pasada-negro { opacity: 1; }
+
+body.imprimiendo .pasada-verde { opacity: 0; }
+body.imprimiendo .pasada-rojo { opacity: 0; transform: translate(6px, 6px); }
+body.imprimiendo .pasada-papel { opacity: 0; transform: translate(-5px, 4px); }
+body.imprimiendo .pasada-negro { opacity: 0; transform: translate(0, 5px); }
+
+.pasada-rojo, .pasada-papel, .pasada-negro {
+  transition: opacity 0.7s var(--paso), transform 0.7s var(--paso);
+}
+.pasada-rojo { transition-delay: 0.25s; }
+.pasada-papel { transition-delay: 0.5s; }
+.pasada-negro { transition-delay: 0.75s; }
+
+/* ---------- pliegos ---------- */
+
+.pliego {
+  padding: 1.2rem max(1.5rem, calc((100vw - 72rem) / 2)) 5rem;
+}
+
+.pliego-tinta { background: var(--tinta); color: var(--papel); }
+.pliego-papel { background: var(--papel); color: var(--tinta); }
+.pliego-verde { background: var(--verde); color: var(--papel); }
+.pliego-rojo { background: var(--rojo-pagina); color: var(--papel); }
+.pliego-cierre { background: var(--tinta); color: var(--papel); }
+
+.entradilla {
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  line-height: 1.45;
+  max-width: 38rem;
+  margin-bottom: 4.5rem;
+}
+
+/* ---------- p.2 novelas ---------- */
+
+.obra {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 3.2rem 0;
+}
+.obra + .obra { border-top: 1px solid color-mix(in srgb, var(--papel) 25%, transparent); }
+.obra:nth-of-type(even) .lamina { order: 2; }
+
+.obra-guerreras { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+.obra-guerreras .lamina { max-width: 26rem; }
+
+.lamina {
+  max-width: 21rem;
+  justify-self: center;
+  width: 100%;
+  margin: 0;
+  transition: transform 0.45s var(--paso);
+}
+.obra:hover .lamina { transform: rotate(-1.2deg); }
+.obra:nth-of-type(even):hover .lamina { transform: rotate(1.2deg); }
+.lamina img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--filete) color-mix(in srgb, var(--papel) 35%, transparent);
+}
+.lamina-pie {
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-variation-settings: "wdth" 85;
+  letter-spacing: 0.03em;
+  color: color-mix(in srgb, var(--papel) 75%, transparent);
+  padding-top: 0.5rem;
+}
+
+.recorte {
+  margin: 0;
+  width: 100%;
+  align-self: start;
+  transform: rotate(1.4deg);
+}
+.recorte img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--filete) var(--tinta);
+}
+.recorte figcaption {
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-variation-settings: "wdth" 85;
+  letter-spacing: 0.03em;
+  padding-top: 0.5rem;
+  color: color-mix(in srgb, var(--tinta) 80%, transparent);
+}
+.recorte-izq { transform: rotate(-1.2deg); }
+.recorte-izq img { border-color: color-mix(in srgb, var(--papel) 45%, transparent); }
+.recorte-izq figcaption { color: color-mix(in srgb, var(--papel) 80%, transparent); }
+
+.obra-texto h3 {
+  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  margin-bottom: 0.7rem;
+}
+.obra-guerreras .obra-texto h3 { font-size: clamp(2.1rem, 4.2vw, 3.4rem); }
+
+.obra-datos {
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-variation-settings: "wdth" 85;
+  letter-spacing: 0.03em;
+  color: color-mix(in srgb, var(--papel) 78%, var(--rojo));
+  margin-bottom: 1rem;
+}
+
+.obra-sinopsis { max-width: 52ch; }
+
+/* ---------- p.3 trova ---------- */
+
+.pliego-papel .titular { color: var(--rojo-texto); }
+
+.trova-cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 14rem);
+  gap: 3rem;
+  align-items: start;
+  max-width: 60rem;
+  margin-bottom: 4rem;
+}
+
+.columnas {
+  columns: 2 18rem;
+  column-gap: 3rem;
+  column-rule: 1px solid var(--papel-sombra);
+}
+.columnas p {
+  max-width: 68ch;
+  margin-bottom: 1rem;
+  break-inside: avoid-column;
+}
+.columnas p:first-child::first-letter {
+  font-size: 3.4em;
+  font-weight: 850;
+  float: left;
+  line-height: 0.8;
+  padding-right: 0.12em;
+  color: var(--rojo-texto);
+}
+
+.discografia {
+  list-style: none;
+  max-width: 60rem;
+}
+.discografia li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--tinta);
+}
+.discografia h3 {
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  font-weight: 850;
+  letter-spacing: -0.01em;
+}
+.discografia p { color: color-mix(in srgb, var(--tinta) 80%, var(--rojo-texto)); }
+
+/* ---------- p.4 poeta ---------- */
+
+.poema {
+  max-width: 38rem;
+  margin: 4rem auto 1rem;
+}
+.poema h3 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 850;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin-bottom: 2.2rem;
+}
+.poema-texto {
+  white-space: pre-wrap;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+.poema-credito {
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-variation-settings: "wdth" 85;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2.2rem;
+  padding-top: 0.8rem;
+  border-top: var(--filete) color-mix(in srgb, var(--papel) 40%, transparent);
+  display: inline-block;
+}
+.pliego-rojo ::selection { background: var(--tinta); color: var(--papel); }
+.pliego-rojo :focus-visible { outline-color: var(--papel); }
+
+/* ---------- p.5 periodista ---------- */
+
+.periodista-cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 14rem);
+  gap: 3rem;
+  align-items: start;
+  max-width: 60rem;
+}
+.ficha { min-width: 0; }
+.ficha dl div {
+  display: grid;
+  grid-template-columns: minmax(7rem, 1fr) minmax(0, 3.2fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--papel) 35%, transparent);
+}
+.ficha dt {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wdth" 80;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 0.25rem;
+}
+.ficha dd { max-width: 68ch; }
+
+/* ---------- p.5 directorio ---------- */
+
+.cierre-texto { max-width: 44ch; font-size: clamp(1.1rem, 2.2vw, 1.4rem); }
+
+.accion-cierre { margin: 3rem 0 4rem; }
+.boton-cierre { background: var(--verde); }
+.boton-cierre:hover:not(:disabled) { background: var(--verde-tinta); }
+.boton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+.boton:disabled:hover { transform: none; }
+
+.colofon {
+  border-top: var(--filete) var(--papel);
+  padding-top: 1rem;
+  max-width: 68ch;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--papel) 80%, transparent);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 44rem) {
+  .portada { padding-top: 4.2rem; }
+  .folio-b { display: none; }
+  .obra, .obra-guerreras { grid-template-columns: 1fr; padding: 2.6rem 0; }
+  .obra:nth-of-type(even) .lamina { order: 0; }
+  .lamina, .obra-guerreras .lamina { max-width: 17rem; justify-self: start; }
+  .discografia li { grid-template-columns: 1fr; gap: 0.2rem; }
+  .trova-cuerpo, .periodista-cuerpo { grid-template-columns: 1fr; gap: 2rem; }
+  .recorte, .recorte-izq { max-width: 14rem; }
+  .pliego { padding-bottom: 3.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .pasada, .pasada-rojo, .pasada-papel, .pasada-negro, .lamina, .lamina-arte, .boton, .boton svg { transition: none; }
+}
