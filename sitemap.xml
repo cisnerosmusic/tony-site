@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://antoniolopezsanchez.art/</loc><lastmod>2026-09-06</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://antoniolopezsanchez.art/</loc><lastmod>2026-09-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/</loc><lastmod>2026-09-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/"/>
+  </url>
   <url><loc>https://antoniolopezsanchez.art/libros/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://antoniolopezsanchez.art/ineditos/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://antoniolopezsanchez.art/tinta-ciones/</loc><lastmod>2026-09-06</lastmod></url>
   <url><loc>https://antoniolopezsanchez.art/trova/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/poeta/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://antoniolopezsanchez.art/plano-abierto/</loc><lastmod>2026-09-06</lastmod></url>
   <url><loc>https://antoniolopezsanchez.art/periodista/</loc><lastmod>2026-09-06</lastmod></url>
   <url><loc>https://antoniolopezsanchez.art/directorio/</loc><lastmod>2026-09-06</lastmod></url>
 </urlset>

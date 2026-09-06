@@ -1,32 +1,32 @@
 /* Antonio López Sánchez · la mesa del escritor · mundo: manuscrito y máquina de escribir */
 
 @font-face {
-  font-family: "IM Fell DW Pica";
+  font-family: "Bonum";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("fonts/fell-400.woff2") format("woff2");
+  src: url("fonts/bonum-400.woff2") format("woff2");
 }
 @font-face {
-  font-family: "IM Fell DW Pica";
+  font-family: "Bonum";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/bonum-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Bonum";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("fonts/fell-italic.woff2") format("woff2");
+  src: url("fonts/bonum-italic.woff2") format("woff2");
 }
 @font-face {
-  font-family: "EB Garamond";
-  font-style: normal;
-  font-weight: 400 800;
-  font-display: swap;
-  src: url("fonts/garamond-var.woff2") format("woff2");
-}
-@font-face {
-  font-family: "EB Garamond";
+  font-family: "Bonum";
   font-style: italic;
-  font-weight: 400 800;
+  font-weight: 700;
   font-display: swap;
-  src: url("fonts/garamond-italic-var.woff2") format("woff2");
+  src: url("fonts/bonum-bolditalic.woff2") format("woff2");
 }
 @font-face {
   font-family: "Courier Prime";
@@ -62,8 +62,8 @@
   --papel-viejo: #f5edda;
   --tinta: #262019;
   --tinta-suave: #4d4335;
-  --rojo: #b3372b;
-  --rojo-tenue: #c86a5f;
+  --anil: #1d4e89;
+  --anil-tenue: #7d97b8;
   --paso: cubic-bezier(0.16, 1, 0.3, 1);
   --sombra-hoja: 0 2px 4px rgba(52, 63, 75, 0.11), 0 6px 18px rgba(52, 63, 75, 0.14);
 }
@@ -76,22 +76,22 @@ html {
 }
 
 body {
-  font-family: "EB Garamond", "Georgia", serif;
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
   font-size: 1.15rem;
   line-height: 1.65;
   background: var(--mesa);
   color: var(--tinta);
-  caret-color: var(--rojo);
+  caret-color: var(--anil);
   padding: clamp(1.2rem, 4vw, 3.5rem) 1rem 4rem;
 }
 
-::selection { background: var(--rojo); color: var(--papel); }
+::selection { background: var(--anil); color: var(--papel); }
 
 a { color: inherit; text-underline-offset: 0.24em; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
 
 :focus-visible {
-  outline: 2px solid var(--rojo);
+  outline: 2px solid var(--anil);
   outline-offset: 3px;
   border-radius: 1px;
 }
@@ -110,10 +110,10 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* ---------- lo mecanografiado ---------- */
 
-.maquina, .maquina-roja {
+.maquina, .maquina-azul {
   font-family: "Courier Prime", "Courier New", monospace;
 }
-.maquina-roja { color: var(--rojo); }
+.maquina-azul { color: var(--anil); }
 
 /* ---------- cuartillas ---------- */
 
@@ -172,7 +172,7 @@ main > .cuartilla:nth-of-type(even)::after { transform: rotate(-1deg) translate(
 }
 
 .nombre {
-  font-family: "IM Fell DW Pica", "Georgia", serif;
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
   font-weight: 400;
   font-size: clamp(2.7rem, 8.5vw, 5.4rem);
   line-height: 1.02;
@@ -212,10 +212,10 @@ main > .cuartilla:nth-of-type(even)::after { transform: rotate(-1deg) translate(
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--rojo);
+  color: var(--anil);
   background: transparent;
-  border: 2px solid var(--rojo);
-  outline: 1px solid var(--rojo);
+  border: 2px solid var(--anil);
+  outline: 1px solid var(--anil);
   outline-offset: 3px;
   padding: 0.85rem 1.9rem;
   transform: rotate(-2deg);
@@ -226,13 +226,13 @@ main > .cuartilla:nth-of-type(even)::after { transform: rotate(-1deg) translate(
   mask-size: 260px 140px;
   transition: transform 0.3s var(--paso), color 0.3s var(--paso), border-color 0.3s var(--paso);
 }
-.sello:hover { transform: rotate(-2deg) scale(0.97); color: #922c22; border-color: #922c22; }
+.sello:hover { transform: rotate(-2deg) scale(0.97); color: #163c6a; border-color: #163c6a; }
 .sello:active { transform: rotate(-2deg) scale(0.94); }
-.sello:focus-visible { outline: 2px solid var(--rojo); outline-offset: 5px; }
+.sello:focus-visible { outline: 2px solid var(--anil); outline-offset: 5px; }
 .sello:disabled {
-  color: var(--rojo-tenue);
-  border-color: var(--rojo-tenue);
-  outline-color: var(--rojo-tenue);
+  color: var(--anil-tenue);
+  border-color: var(--anil-tenue);
+  outline-color: var(--anil-tenue);
   cursor: not-allowed;
   transform: rotate(-2deg);
 }
@@ -318,10 +318,12 @@ main > .cuartilla:nth-of-type(even)::after { transform: rotate(-1deg) translate(
 }
 section:nth-of-type(even) .tira { transform: rotate(1deg); }
 .tira h1, .tira h2 {
-  font-family: "IM Fell DW Pica", "Georgia", serif;
-  font-weight: 400;
-  font-size: clamp(1.7rem, 4.5vw, 2.4rem);
-  line-height: 1.1;
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-wrap: balance;
 }
 .tira .maquina {
@@ -346,7 +348,7 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
 }
 
 .obra-texto h3 {
-  font-family: "IM Fell DW Pica", "Georgia", serif;
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
   font-weight: 400;
   font-size: clamp(1.9rem, 5vw, 2.9rem);
   line-height: 1.05;
@@ -367,7 +369,7 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
 }
 
 .prosa-inicial::first-letter {
-  font-family: "IM Fell DW Pica", "Georgia", serif;
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
   font-size: 3.1em;
   float: left;
   line-height: 0.78;
@@ -449,12 +451,12 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
 .poema-credito {
   margin-top: 1.8rem;
   font-size: 0.85rem;
-  color: var(--rojo);
+  color: var(--anil);
 }
 
 /* ---------- el periodista: ficha ---------- */
 
-.ficha-archivo { border-top: 3px solid var(--rojo); }
+.ficha-archivo { border-top: 3px solid var(--anil); }
 
 .ficha div {
   display: grid;
@@ -477,7 +479,7 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
 .pie { margin-top: 4.5rem; transform: rotate(0.25deg); }
 
 .pie h2 {
-  font-family: "IM Fell DW Pica", "Georgia", serif;
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
   font-weight: 400;
   font-size: clamp(2rem, 5vw, 2.8rem);
   margin-bottom: 0.9rem;
@@ -518,4 +520,183 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
   html { scroll-behavior: auto; }
   .sello, .foto, .salto { transition: none; }
   .cursor-maquina { animation: none; }
+}
+
+/* ---------- la casa: Ala del Mar ---------- */
+
+.casa-nombre {
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 7.5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--anil);
+  margin: 0.6rem 0 0.2rem;
+}
+.lema {
+  font-family: "Bonum", serif;
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+  color: var(--tinta-suave);
+  margin-bottom: 1rem;
+}
+.autor-linea {
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.idiomas {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  margin: 1.4rem 0 0;
+  color: var(--tinta-suave);
+}
+.idiomas a { color: var(--anil); }
+.idiomas .pronto { opacity: 0.55; }
+
+/* ---------- pagina de libro ---------- */
+
+.cubierta-dominante {
+  margin: 0 auto 2.6rem;
+  max-width: 22rem;
+  transform: rotate(-0.8deg);
+}
+.cubierta-dominante img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--mesa-fria);
+  box-shadow: var(--sombra-hoja);
+}
+
+.bloque { margin-top: 3.4rem; }
+.bloque > h2 {
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--mesa-sombra);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.4rem;
+}
+.bloque > h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 1.8rem 0 0.7rem;
+}
+
+.contratapa { font-style: italic; max-width: 58ch; }
+
+.ficha-libro { max-width: 40rem; }
+.ficha-libro div {
+  display: grid;
+  grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--mesa-sombra);
+}
+.ficha-libro div:first-child { border-top: none; }
+.ficha-libro dt {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--tinta-suave);
+  padding-top: 0.25rem;
+}
+
+.fragmento { max-width: 62ch; margin-bottom: 2.2rem; }
+.fragmento p { text-indent: 1.6em; margin-bottom: 0.35rem; }
+.fragmento p:first-of-type { text-indent: 0; }
+.fragmento-verso {
+  white-space: pre-wrap;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 40rem;
+  margin-bottom: 2.2rem;
+}
+.fragmento-titulo {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 2.4rem 0 1rem;
+}
+.nota-idioma {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.78rem;
+  color: var(--tinta-suave);
+  margin-top: 0.6rem;
+}
+
+/* con voz y voto: la voz del autor sobre hoja vieja */
+.vyv {
+  background: var(--grano), var(--papel-viejo);
+  padding: 1.6rem clamp(1.2rem, 3vw, 2.2rem);
+  max-width: 62ch;
+  box-shadow: 0 1px 4px rgba(52, 63, 75, 0.1);
+  transform: rotate(0.4deg);
+}
+.vyv p { text-indent: 1.6em; margin-bottom: 0.35rem; }
+.vyv p:first-of-type { text-indent: 0; }
+.vyv-firma {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.85rem;
+  color: var(--anil);
+  margin-top: 1.2rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.4rem;
+  align-items: start;
+}
+.galeria figure { margin: 0; transform: rotate(0.8deg); }
+.galeria figure:nth-child(even) { transform: rotate(-0.9deg); }
+.galeria img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 5px solid var(--papel);
+  outline: 1px solid var(--mesa-fria);
+  box-shadow: 0 1px 4px rgba(52, 63, 75, 0.14);
+}
+.galeria figcaption {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.75rem;
+  color: var(--tinta-suave);
+  padding-top: 0.4rem;
+}
+
+/* catalogo mecanografiado de otros libros */
+.catalogo { list-style: none; max-width: 60ch; }
+.catalogo li {
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--mesa-sombra);
+  font-size: 1.02rem;
+}
+.catalogo .maquina { font-size: 0.82rem; color: var(--tinta-suave); }
+
+.volver { margin-top: 2.4rem; }
+
+/* portada de la casa: retrato a la izquierda, nombre a la derecha */
+.portada-casa {
+  grid-template-columns: minmax(11rem, 16rem) minmax(0, 1fr);
+  align-items: start;
+}
+.portada-casa .foto-retrato { margin-top: 0.6rem; }
+
+.sello-menor { font-size: 0.82rem; padding: 0.6rem 1.3rem; letter-spacing: 0.12em; }
+.titular-menor {
+  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
+  font-weight: 700;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
