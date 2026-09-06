@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>La Nueva Trova escrita: ensayo y entrevista de Antonio López Sánchez</title>
 <meta name="description" content="La otra vida de Antonio López Sánchez: dos décadas documentando la Nueva Trova cubana en La canción de la Nueva Trova (2001), Trovadoras (2009) y Convertida en canción (2019).">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23faf5e9'/%3E%3Crect x='4' y='2' width='24' height='28' fill='none' stroke='%23d9c8ab' stroke-width='1'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='18' fill='%23262019'%3EA%3C/text%3E%3Crect x='19' y='4' width='7' height='7' fill='none' stroke='%231d4e89' stroke-width='1.5' transform='rotate(8 22.5 7.5)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0c1f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='19' fill='%23d4a030'%3EA%3C/text%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23d4a030' stroke-opacity='0.4' stroke-width='1'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://antoniolopezsanchez.art/trova/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://antoniolopezsanchez.art/trova/">
@@ -13,40 +13,59 @@
 <meta property="og:description" content="Dos décadas documentando la canción cubana: La canción de la Nueva Trova, Trovadoras y Convertida en canción.">
 <meta property="og:image" content="https://antoniolopezsanchez.art/img/trovadoras.webp">
 <meta property="og:locale" content="es_ES">
-<link rel="preload" href="/fonts/bonum-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/courier-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/bonum-700.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0a0c1f">
+<link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<a class="salto" href="#contenido">Saltar al contenido</a>
+<a class="salto" href="#main">Saltar al contenido</a>
 
-<div class="tira">
-  <h1 id="contenido">La otra vida: la trova</h1>
-  <p class="maquina">Ensayo, entrevista y crónica de la Nueva Trova</p>
-</div>
+<nav class="nav">
+  <a href="/" class="nav-logo">Ala del Mar</a>
+  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/libros/">Mis libros</a></li>
+    <li><a href="/ineditos/">Inéditos</a></li>
+    <li><a href="/tinta-ciones/">Tinta-ciones</a></li>
+    <li><a href="/trova/" class="active">La trova</a></li>
+    <li><a href="/plano-abierto/">Plano abierto</a></li>
+    <li><a href="/periodista/">El periodista</a></li>
+    <li><a href="/directorio/">Directorio</a></li>
+    <li><a href="/en/" lang="en" hreflang="en">EN</a></li>
+  </ul>
+</nav>
 
-<main>
-<article class="cuartilla">
-  <p class="cabezal"><span>Ala del Mar · La trova</span></p>
-  <div class="obra-cuerpo">
-    <div class="obra-texto">
-      <p class="prosa prosa-inicial">Antes de las espadas fueron las guitarras. Llevo dos décadas documentando la Nueva Trova cubana en ensayos, entrevistas y crónicas: la memoria escrita de una canción que definió a varias generaciones.</p>
-      <p class="prosa">Es mi doble condición: el mismo que levanta reinos imaginarios lleva años registrando, con rigor de periodista, el cancionero real de su país.</p>
-      <ul class="lista-maquina">
-        <li><span class="maquina">1.</span> <strong>La canción de la Nueva Trova</strong> <span class="maquina">· Atril Ediciones Musicales, 2001 · ensayo</span></li>
-        <li><span class="maquina">2.</span> <strong>Trovadoras</strong> <span class="maquina">· Editorial Oriente, 2009 · entrevistas a las mujeres de la trova</span></li>
-        <li><span class="maquina">3.</span> <strong>Convertida en canción</strong> <span class="maquina">· Editorial Capiro, 2019 · la imagen de la mujer en los textos de la Nueva Trova</span></li>
-      </ul>
-    </div>
-    <figure class="foto">
-      <img src="/img/trovadoras.webp" width="520" height="769" alt="Cubierta de Trovadoras" loading="lazy">
-    </figure>
+<header class="page-header">
+  <h1>La otra vida: la trova</h1>
+  <p>Ensayo, entrevista y crónica de la Nueva Trova.</p>
+</header>
+
+<main id="main">
+<div class="section" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(11rem,15rem);gap:3rem;align-items:start;">
+  <div class="reveal reveal-right">
+    <h2 class="section-title">Antes de las espadas fueron las guitarras</h2>
+    <div class="section-divider"></div>
+    <p class="section-text" style="margin-bottom:1.25rem;">Llevo dos décadas documentando la Nueva Trova cubana en ensayos, entrevistas y crónicas: la memoria escrita de una canción que definió a varias generaciones.</p>
+    <p class="section-text">Es mi doble condición: el mismo que levanta reinos imaginarios lleva años registrando, con rigor de periodista, el cancionero real de su país.</p>
+    <ul class="lista-obras">
+      <li><strong>La canción de la Nueva Trova</strong> <span class="meta">· Atril Ediciones Musicales, 2001 · ensayo</span></li>
+      <li><strong>Trovadoras</strong> <span class="meta">· Editorial Oriente, 2009 · entrevistas a las mujeres de la trova</span></li>
+      <li><strong>Convertida en canción</strong> <span class="meta">· Editorial Capiro, 2019 · la imagen de la mujer en los textos de la Nueva Trova</span></li>
+    </ul>
   </div>
+  <figure class="libro-cubierta reveal reveal-left">
+    <img src="/img/trovadoras.webp" width="520" height="769" alt="Cubierta de Trovadoras" loading="lazy">
+  </figure>
+</div>
+</main>
 
-  <nav class="indice-pie maquina" aria-label="Navegación del manuscrito">
-    <a href="/">Portada</a>
+<footer class="footer">
+  <nav class="footer-nav" aria-label="Secciones">
     <a href="/libros/">Mis libros</a>
     <a href="/ineditos/">Inéditos</a>
     <a href="/tinta-ciones/">Tinta-ciones</a>
@@ -55,9 +74,14 @@
     <a href="/periodista/">El periodista</a>
     <a href="/directorio/">Directorio</a>
   </nav>
-  <p class="fin maquina" aria-hidden="true">bene scriptus</p>
-</article>
-</main>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
+  </div>
+  <p class="footer-lema">bene scriptus</p>
+  <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
+  <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
+</footer>
 
+<script src="/app.js" defer></script>
 </body>
 </html>

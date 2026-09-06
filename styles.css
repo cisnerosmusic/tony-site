@@ -1,704 +1,614 @@
-/* Antonio López Sánchez · la mesa del escritor · mundo: manuscrito y máquina de escribir */
-
-@font-face {
-  font-family: "Bonum";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/bonum-400.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Bonum";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("fonts/bonum-700.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Bonum";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/bonum-italic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Bonum";
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url("fonts/bonum-bolditalic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Courier Prime";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/courier-400.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Courier Prime";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("fonts/courier-700.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Courier Prime";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/courier-italic.woff2") format("woff2");
-}
+/* ═══════════════════════════════════════════════════
+   ALA DEL MAR · Antonio López Sánchez
+   Base visual: template Index01 (impulses-art-site)
+   Navy en varias tonalidades + serif dorada
+   ═══════════════════════════════════════════════════ */
 
 :root {
-  /* grano de papel: ruido tibio de baja opacidad, tile de 220px */
-  --grano: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0 0.24 0 0 0 0.17 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
-  /* mascara de entintado para sellos: alfa alto con calvas de tinta */
-  --entintado: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='140'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11 0.13' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0.62'/%3E%3C/filter%3E%3Crect width='260' height='140' filter='url(%23m)'/%3E%3C/svg%3E");
-  --mesa: #dde6ec;
-  --mesa-fria: #b9c7d1;
-  --mesa-sombra: #d9c8ab;
-  --papel: #faf5e9;
-  --papel-viejo: #f5edda;
-  --tinta: #262019;
-  --tinta-suave: #4d4335;
-  --anil: #1d4e89;
-  --anil-tenue: #7d97b8;
-  --paso: cubic-bezier(0.16, 1, 0.3, 1);
-  --sombra-hoja: 0 2px 4px rgba(52, 63, 75, 0.11), 0 6px 18px rgba(52, 63, 75, 0.14);
+  --bg-deep: #0a0c1f;
+  --bg-dark: #0d0f2b;
+  --bg-card: rgba(16, 18, 42, 0.7);
+  --bg-section: #0f1130;
+  --navy: #1a1d4a;
+  --navy-light: #252860;
+  --gold: #d4a030;
+  --gold-bright: #f0c860;
+  --gold-dim: rgba(212, 160, 48, 0.5);
+  --gold-faint: rgba(212, 160, 48, 0.12);
+  --text-primary: #e8e4dc;
+  --text-secondary: rgba(200, 195, 185, 0.7);
+  --text-dim: rgba(180, 170, 155, 0.5);
+  --line: rgba(212, 160, 48, 0.12);
+  --line-bright: rgba(212, 160, 48, 0.25);
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Cormorant Garamond', serif;
+  --font-mono: 'Space Mono', monospace;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  scrollbar-color: var(--tinta-suave) var(--mesa);
-}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scrollbar-color: var(--navy-light) var(--bg-deep); overflow-x: clip; }
 
 body {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
-  font-size: 1.15rem;
-  line-height: 1.65;
-  background: var(--mesa);
-  color: var(--tinta);
-  caret-color: var(--anil);
-  padding: clamp(1.2rem, 4vw, 3.5rem) 1rem 4rem;
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 18px;
+  overflow-x: hidden;
+  caret-color: var(--gold);
 }
 
-::selection { background: var(--anil); color: var(--papel); }
+::selection { background: var(--gold); color: var(--bg-deep); }
 
-a { color: inherit; text-underline-offset: 0.24em; text-decoration-thickness: 1px; }
-a:hover { text-decoration-thickness: 2px; }
+a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--gold-bright); }
 
-:focus-visible {
-  outline: 2px solid var(--anil);
-  outline-offset: 3px;
-  border-radius: 1px;
-}
+img { max-width: 100%; height: auto; display: block; }
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 .salto {
-  position: absolute;
+  position: fixed;
   left: 1rem; top: -4rem;
-  z-index: 10;
-  background: var(--tinta); color: var(--papel);
+  z-index: 200;
+  background: var(--navy); color: var(--gold);
   padding: 0.6rem 1rem;
-  font-family: "Courier Prime", monospace;
-  font-size: 0.9rem;
-  transition: top 0.2s var(--paso);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  transition: top 0.2s;
 }
 .salto:focus-visible { top: 1rem; }
 
-/* ---------- lo mecanografiado ---------- */
-
-.maquina, .maquina-azul {
-  font-family: "Courier Prime", "Courier New", monospace;
+/* ── Navegación ─────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 3rem;
+  background: rgba(10, 12, 31, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
 }
-.maquina-azul { color: var(--anil); }
 
-/* ---------- cuartillas ---------- */
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
 
-.cuartilla {
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+
+.nav-links a {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.3s;
   position: relative;
-  width: min(100%, 46rem);
-  margin: 0 auto;
-  background: var(--grano), var(--papel);
-  padding: 1.4rem clamp(1.4rem, 5vw, 4rem) 3.2rem;
-  box-shadow: var(--sombra-hoja);
+  white-space: nowrap;
 }
-.cuartilla + .cuartilla { margin-top: 3rem; }
 
-/* la hoja de abajo del montón */
-.cuartilla::after {
-  content: "";
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+.nav-links a.active::after {
+  content: '';
   position: absolute;
-  inset: 0;
-  background: var(--papel-viejo);
-  transform: rotate(0.9deg) translate(5px, 3px);
-  z-index: -1;
-  box-shadow: 0 2px 8px rgba(52, 63, 75, 0.09);
+  bottom: -4px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold);
 }
 
-/* la rotacion vive en la seccion contenedora: un transform en la propia
-   cuartilla crearia stacking context y la hoja de abajo (::after, z -1)
-   taparia el grano y los renglones del fondo propio */
-section:nth-of-type(odd), main > .cuartilla:nth-of-type(odd) { transform: rotate(0.35deg); }
-section:nth-of-type(even), main > .cuartilla:nth-of-type(even) { transform: rotate(-0.3deg); }
-section:nth-of-type(even) .cuartilla::after,
-main > .cuartilla:nth-of-type(even)::after { transform: rotate(-1deg) translate(-5px, 3px); }
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-hamburger span { width: 22px; height: 1.5px; background: var(--gold); transition: all 0.3s; }
 
-.cabezal {
-  font-family: "Courier Prime", monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  color: var(--tinta-suave);
-  margin-bottom: 2.6rem;
+/* ── Cabecera de página interior ────────────── */
+.page-header {
+  padding: 140px 3rem 60px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-section) 0%, var(--bg-deep) 100%);
+  border-bottom: 1px solid var(--line);
 }
 
-/* ---------- hoja 1: portada ---------- */
-
-.portada {
-  padding-bottom: 2.6rem;
-}
-.portada::after { transform: rotate(-1.1deg) translate(-6px, 4px); }
-/* el monton: mas hojas debajo de la primera cuartilla */
-.portada::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: color-mix(in srgb, var(--papel-viejo) 88%, var(--mesa-sombra));
-  transform: rotate(1.7deg) translate(10px, 8px);
-  z-index: -2;
-  box-shadow: 0 3px 10px rgba(52, 63, 75, 0.11), 0 14px 2px -12px rgba(52, 63, 75, 0.19);
-}
-
-.nombre {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 400;
-  font-size: clamp(2.7rem, 8.5vw, 5.4rem);
-  line-height: 1.02;
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-  margin: 1rem 0 1.6rem;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ── Secciones ──────────────────────────────── */
+.section {
+  padding: 80px 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-alt {
+  background: var(--bg-section);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.section-divider {
+  width: 50px; height: 1px;
+  background: var(--gold-dim);
+  margin-bottom: 2rem;
+  animation: breathe 4s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { width: 50px; opacity: 0.5; }
+  50% { width: 75px; opacity: 1; }
+}
+
+.section-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.9;
+  max-width: 700px;
+}
+
+/* ── Split (imagen + texto) ─────────────────── */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 92vh;
+}
+
+.split-image {
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+.split-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 70%, var(--bg-deep) 100%);
+}
+
+.split-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7rem clamp(1.8rem, 5vw, 5rem) 4rem;
+}
+
+/* ── Hero de la casa ────────────────────────── */
+.casa-nombre, .casa-autor, .lema { display: block; }
+
+.casa-nombre, .casa-autor {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.casa-nombre { color: var(--gold); }
+.casa-autor { color: var(--text-primary); margin-top: 0.4rem; }
+
+.lema {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  margin: 0.8rem 0 0.4rem;
 }
 
 .oficio {
-  font-size: clamp(1rem, 2.4vw, 1.2rem);
-  min-height: 1.6em;
-  margin-bottom: 0.6rem;
-}
-.cursor-maquina {
-  display: inline-block;
-  width: 0.55em;
-  height: 1.05em;
-  vertical-align: text-bottom;
-  background: var(--tinta);
-  margin-left: 1px;
-  animation: parpadeo 1s steps(1) infinite;
-}
-@keyframes parpadeo { 50% { opacity: 0; } }
-
-.premio {
-  font-size: 0.95rem;
-  margin-bottom: 2.4rem;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  max-width: 46ch;
+  margin: 1.6rem 0 2.2rem;
 }
 
-.accion { margin: 0 0 2.6rem; }
+.hero-acciones { display: flex; flex-wrap: wrap; gap: 1rem; }
 
-.sello {
-  display: inline-block;
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--anil);
-  background: transparent;
-  border: 2px solid var(--anil);
-  outline: 1px solid var(--anil);
-  outline-offset: 3px;
-  padding: 0.85rem 1.9rem;
-  transform: rotate(-2deg);
-  cursor: pointer;
-  -webkit-mask-image: var(--entintado);
-  mask-image: var(--entintado);
-  -webkit-mask-size: 260px 140px;
-  mask-size: 260px 140px;
-  transition: transform 0.3s var(--paso), color 0.3s var(--paso), border-color 0.3s var(--paso);
-}
-.sello:hover { transform: rotate(-2deg) scale(0.97); color: #163c6a; border-color: #163c6a; }
-.sello:active { transform: rotate(-2deg) scale(0.94); }
-.sello:focus-visible { outline: 2px solid var(--anil); outline-offset: 5px; }
-.sello:disabled {
-  color: var(--anil-tenue);
-  border-color: var(--anil-tenue);
-  outline-color: var(--anil-tenue);
-  cursor: not-allowed;
-  transform: rotate(-2deg);
-}
-
-.portada-cuerpo {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(11rem, 15rem);
-  gap: clamp(1.4rem, 4vw, 2.8rem);
-  align-items: center;
-  margin-bottom: 2.4rem;
-}
-.foto-retrato { margin-top: 0; }
-
-/* la foto del mar, suelta sobre la mesa */
-.foto-mar {
-  width: min(26rem, 88%);
-  margin: 3.2rem auto 0;
-  transform: rotate(0.9deg);
-}
-.foto-mar img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 6px solid var(--papel);
-  outline: 1px solid var(--mesa-fria);
-  box-shadow: var(--sombra-hoja);
-}
-
-/* navegacion mecanografiada al pie de cada hoja */
-.indice-pie {
+/* ── Banda del mar ──────────────────────────── */
+.banda-mar {
+  position: relative;
+  min-height: 42vh;
+  background: url('/img/mar.webp') center 60% / cover no-repeat;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.6rem;
-  border-top: 1px solid var(--mesa-sombra);
-  margin-top: 3rem;
-  padding-top: 1rem;
-  font-size: 0.85rem;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
-.indice-pie a { text-decoration: none; }
-.indice-pie a:hover { text-decoration: underline; text-underline-offset: 0.24em; }
-.indice-pie span[aria-current] {
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.24em;
+.banda-mar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,12,31,0.82) 0%, rgba(10,12,31,0.45) 50%, rgba(10,12,31,0.86) 100%);
 }
-
-.accion-cierre { margin: 1.8rem 0 2.4rem; }
-
-.indice {
-  border-top: 1px solid var(--mesa-sombra);
-  padding-top: 1.1rem;
-  max-width: 30rem;
-}
-.indice-titulo {
-  font-family: "Courier Prime", monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--tinta-suave);
-  margin-bottom: 0.5rem;
-}
-.indice ol { list-style: none; }
-.indice a {
-  display: inline-block;
-  padding: 0.32rem 0;
-  text-decoration: none;
-  font-family: "Courier Prime", monospace;
-  font-size: 0.95rem;
-}
-.indice a:hover { text-decoration: underline; text-underline-offset: 0.24em; }
-
-/* ---------- tiras separadoras ---------- */
-
-.tira {
-  width: fit-content;
-  max-width: 100%;
-  margin: 4.5rem auto 2.8rem;
-  background: var(--grano), var(--papel-viejo);
-  padding: 0.9rem 2.4rem 1rem;
-  box-shadow: var(--sombra-hoja);
-  transform: rotate(-1.2deg);
+.banda-mar p {
+  position: relative;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
   text-align: center;
+  padding: 2rem;
+  text-shadow: 0 1px 12px rgba(10, 12, 31, 0.8);
 }
-section:nth-of-type(even) .tira { transform: rotate(1deg); }
-.tira h1, .tira h2 {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
-  font-weight: 700;
-  font-size: clamp(1.5rem, 4vw, 2.1rem);
-  line-height: 1.15;
-  letter-spacing: 0.06em;
+
+/* ── Botones ────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  text-wrap: balance;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
 }
-.tira .maquina {
-  font-size: 0.82rem;
-  color: var(--tinta-suave);
-  margin-top: 0.2rem;
+.btn:hover {
+  background: var(--gold-faint);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+  box-shadow: 0 0 20px rgba(212, 160, 48, 0.1);
+}
+.btn-filled { background: var(--navy); border-color: var(--gold-dim); }
+.btn-filled:hover { background: var(--navy-light); }
+.btn:disabled {
+  color: var(--text-dim);
+  border-color: var(--line);
+  cursor: not-allowed;
+  background: transparent;
+  box-shadow: none;
 }
 
-/* ---------- obras ---------- */
-
-.obra-cuerpo {
+/* ── Libros ─────────────────────────────────── */
+.libro-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(9.5rem, 12.5rem);
-  gap: clamp(1.4rem, 4vw, 2.8rem);
+  grid-template-columns: minmax(10rem, 15rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: start;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.libro-item:last-of-type { border-bottom: none; }
+
+.libro-cubierta img {
+  border: 1px solid var(--line-bright);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.libro-item:hover .libro-cubierta img,
+a.libro-cubierta:hover img {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
 }
 
-.obra-numero {
-  font-size: 1rem;
-  color: var(--tinta-suave);
-  margin-bottom: 0.3rem;
-}
-
-.obra-texto h3 {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
+.libro-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
   font-weight: 400;
-  font-size: clamp(1.9rem, 5vw, 2.9rem);
-  line-height: 1.05;
-  letter-spacing: -0.005em;
-  text-wrap: balance;
-  margin-bottom: 0.9rem;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
 }
+.libro-titulo a { color: inherit; }
+.libro-titulo a:hover { color: var(--gold-bright); }
 
-.obra-datos {
-  font-size: 0.88rem;
-  line-height: 1.55;
+.libro-meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
   margin-bottom: 1.2rem;
 }
+.libro-meta .premio { color: var(--gold-dim); }
 
-.obra-sinopsis, .prosa {
-  max-width: 58ch;
-  margin-bottom: 0.9rem;
-}
-
-.prosa-inicial::first-letter {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
-  font-size: 3.1em;
-  float: left;
-  line-height: 0.78;
-  padding-right: 0.14em;
+.libro-sinopsis {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 62ch;
 }
 
 .nota-demo {
-  font-size: 0.78rem;
-  color: var(--tinta-suave);
-  margin-top: 1.1rem;
-}
-
-/* fotos de cubierta apoyadas sobre la hoja */
-.foto {
-  position: relative;
-  margin-top: 1.6rem;
-  transform: rotate(2deg);
-  transition: transform 0.4s var(--paso);
-}
-.obra:nth-of-type(even) .foto, section:nth-of-type(even) .foto { transform: rotate(-1.8deg); }
-.cuartilla:hover .foto { transform: rotate(0.6deg); }
-.foto img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--mesa-sombra);
-  box-shadow: 0 1px 3px rgba(84, 62, 34, 0.18);
-}
-
-/* ---------- trova ---------- */
-
-.lista-maquina {
-  list-style: none;
-  margin-top: 1.6rem;
-  border-top: 1px solid var(--mesa-sombra);
-}
-.lista-maquina li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--mesa-sombra);
-  font-size: 1.05rem;
-}
-.lista-maquina .maquina { font-size: 0.85rem; color: var(--tinta-suave); }
-.lista-maquina strong { font-weight: 600; }
-
-/* ---------- el poeta: copia al carbon en papel cebolla ---------- */
-
-.carbon {
-  /* papel de segunda: mas frio y delgado que la cuartilla;
-     la mancha se funde por multiply, como cafe absorbido por la fibra */
-  background:
-    url("img/mancha.svg") no-repeat top -3.4rem right -3.2rem / 16rem 16rem,
-    var(--grano),
-    #f2ede0;
-  background-blend-mode: multiply, normal, normal;
-  overflow: clip;
-}
-/* el tipeo de copia: tinta de carbon, un punto mas difusa */
-.carbon .poema-titulo,
-.carbon .poema-texto {
-  color: #3b3327;
-  text-shadow: 0 0 0.6px rgba(59, 51, 39, 0.55);
-}
-.carbon .cabezal { margin-bottom: 1.9rem; }
-
-.poema-titulo {
-  font-size: 1.05rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.28em;
-  text-decoration-thickness: 1px;
-  margin-bottom: 1.8rem;
-}
-.poema-texto {
-  white-space: pre-wrap;
-  font-size: 0.98rem;
-  line-height: 1.85;
-  max-width: 56ch;
-}
-.poema-credito {
-  margin-top: 1.8rem;
-  font-size: 0.85rem;
-  color: var(--anil);
-}
-
-/* ---------- el periodista: ficha ---------- */
-
-.ficha-archivo { border-top: 3px solid var(--anil); }
-
-.ficha div {
-  display: grid;
-  grid-template-columns: minmax(6.5rem, 9rem) minmax(0, 1fr);
-  gap: 1rem;
-  padding: 0.85rem 0;
-  border-top: 1px solid var(--mesa-sombra);
-}
-.ficha div:first-child { border-top: none; padding-top: 0; }
-.ficha dt {
-  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
   letter-spacing: 0.06em;
-  color: var(--tinta-suave);
-  padding-top: 0.3rem;
+  color: var(--text-dim);
+  margin-top: 1rem;
 }
-.ficha dd { max-width: 58ch; }
 
-/* ---------- directorio ---------- */
-
-.pie { margin-top: 4.5rem; transform: rotate(0.25deg); }
-
-.pie h2 {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
+/* Subsecciones dentro de la página de un libro */
+.libro-bloque { margin-bottom: 3.5rem; }
+.libro-bloque h2 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
   font-weight: 400;
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  margin-bottom: 0.9rem;
-}
-.cierre-texto { max-width: 44ch; }
-.pie .accion { margin: 1.8rem 0 2.4rem; }
-
-.colofon {
-  font-size: 0.76rem;
-  line-height: 1.7;
-  color: var(--tinta-suave);
-  border-top: 1px solid var(--mesa-sombra);
-  padding-top: 1rem;
-  max-width: 58ch;
-}
-.fin {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--tinta-suave);
-  margin-top: 2.4rem;
-}
-
-/* ---------- responsive ---------- */
-
-@media (max-width: 40rem) {
-  body { padding-top: 1rem; }
-  .obra-cuerpo, .portada-cuerpo { grid-template-columns: 1fr; }
-  .foto-retrato { max-width: 15rem; margin-inline: auto; }
-  .foto-mar { width: min(20rem, 92%); }
-  .foto { max-width: 13rem; margin-inline: auto; }
-  section, section:nth-of-type(odd), section:nth-of-type(even), .pie { transform: none; }
-  .cuartilla::after, section .cuartilla::after { transform: rotate(0.7deg) translate(4px, 3px); }
-  .cabezal { margin-bottom: 1.8rem; }
-  .poema-texto { font-size: 0.88rem; line-height: 1.8; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .sello, .foto, .salto { transition: none; }
-  .cursor-maquina { animation: none; }
-}
-
-/* ---------- la casa: Ala del Mar ---------- */
-
-.casa-nombre {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
-  font-weight: 700;
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  line-height: 1.05;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--anil);
-  margin: 0.6rem 0 0.2rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
 }
-.lema {
-  font-family: "Bonum", serif;
-  font-style: italic;
-  font-size: clamp(1.15rem, 3vw, 1.6rem);
-  color: var(--tinta-suave);
-  margin-bottom: 1.1rem;
-}
-.autor-linea {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  line-height: 1.05;
-  font-weight: 700;
-  margin-bottom: 0.7rem;
-}
+.libro-bloque .section-divider { margin-bottom: 1.25rem; }
+.libro-bloque p { color: var(--text-secondary); font-weight: 300; line-height: 1.9; max-width: 700px; margin-bottom: 1.1rem; }
 
-.idiomas {
-  font-family: "Courier Prime", monospace;
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
-  margin: 1.4rem 0 0;
-  color: var(--tinta-suave);
-}
-.idiomas a { color: var(--anil); }
-.idiomas .pronto { opacity: 0.55; }
-
-/* ---------- pagina de libro ---------- */
+/* ── Página de un libro ─────────────────────── */
+.libro-pagina { max-width: 860px; }
 
 .cubierta-dominante {
-  margin: 0 auto 2.6rem;
-  max-width: 22rem;
-  transform: rotate(-0.8deg);
+  max-width: 19rem;
+  margin: 0 auto 4rem;
 }
 .cubierta-dominante img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--mesa-fria);
-  box-shadow: var(--sombra-hoja);
+  border: 1px solid var(--line-bright);
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.55);
 }
 
-.bloque { margin-top: 3.4rem; }
-.bloque > h2 {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
-  font-weight: 700;
-  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--mesa-sombra);
-  padding-bottom: 0.4rem;
-  margin-bottom: 1.4rem;
-}
-.bloque > h3 {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin: 1.8rem 0 0.7rem;
+.fragmento-titulo {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+  margin: 2rem 0 0.8rem;
 }
 
-.contratapa { font-style: italic; max-width: 58ch; }
-
-.ficha-libro { max-width: 40rem; }
-.ficha-libro div {
-  display: grid;
-  grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr);
-  gap: 1rem;
-  padding: 0.6rem 0;
-  border-top: 1px solid var(--mesa-sombra);
-}
-.ficha-libro div:first-child { border-top: none; }
-.ficha-libro dt {
-  font-family: "Courier Prime", monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  color: var(--tinta-suave);
-  padding-top: 0.25rem;
-}
-
-.fragmento { max-width: 62ch; margin-bottom: 2.2rem; }
-.fragmento p { text-indent: 1.6em; margin-bottom: 0.35rem; }
-.fragmento p:first-of-type { text-indent: 0; }
 .fragmento-verso {
   white-space: pre-wrap;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 40rem;
-  margin-bottom: 2.2rem;
-}
-.fragmento-titulo {
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 2.4rem 0 1rem;
-}
-.nota-idioma {
-  font-family: "Courier Prime", monospace;
-  font-size: 0.78rem;
-  color: var(--tinta-suave);
-  margin-top: 0.6rem;
-}
-
-/* con voz y voto: la voz del autor sobre hoja vieja */
-.vyv {
-  background: var(--grano), var(--papel-viejo);
-  padding: 1.6rem clamp(1.2rem, 3vw, 2.2rem);
-  max-width: 62ch;
-  box-shadow: 0 1px 4px rgba(52, 63, 75, 0.1);
-  transform: rotate(0.4deg);
-}
-.vyv p { text-indent: 1.6em; margin-bottom: 0.35rem; }
-.vyv p:first-of-type { text-indent: 0; }
-.vyv-firma {
-  font-family: "Courier Prime", monospace;
-  font-size: 0.85rem;
-  color: var(--anil);
-  margin-top: 1.2rem;
+  font-family: var(--font-body);
+  font-size: 1.12rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--text-primary);
+  border-left: 1px solid var(--line-bright);
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 1.4rem;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.5rem;
 }
-.galeria figure { margin: 0; transform: rotate(0.8deg); }
-.galeria figure:nth-child(even) { transform: rotate(-0.9deg); }
-.galeria img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 5px solid var(--papel);
-  outline: 1px solid var(--mesa-fria);
-  box-shadow: 0 1px 4px rgba(52, 63, 75, 0.14);
-}
+.galeria figure { margin: 0; }
+.galeria img { border: 1px solid var(--line); }
 .galeria figcaption {
-  font-family: "Courier Prime", monospace;
-  font-size: 0.75rem;
-  color: var(--tinta-suave);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  padding-top: 0.5rem;
+}
+
+.vyv-firma {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-top: 1.5rem;
+}
+
+/* ── Ficha (dl) ─────────────────────────────── */
+.ficha div {
+  display: grid;
+  grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.ficha dt {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
   padding-top: 0.4rem;
 }
+.ficha dd { color: var(--text-secondary); font-weight: 300; max-width: 62ch; }
 
-/* catalogo mecanografiado de otros libros */
-.catalogo { list-style: none; max-width: 60ch; }
-.catalogo li {
-  padding: 0.55rem 0;
-  border-top: 1px solid var(--mesa-sombra);
+/* ── Listas de obra (trova, etc.) ───────────── */
+.lista-obras { list-style: none; margin-top: 2rem; }
+.lista-obras li {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+.lista-obras strong {
+  font-family: var(--font-display);
+  font-weight: 400;
   font-size: 1.02rem;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
 }
-.catalogo .maquina { font-size: 0.82rem; color: var(--tinta-suave); }
-
-.volver { margin-top: 2.4rem; }
-
-/* portada de la casa: retrato a la izquierda, nombre a la derecha */
-.portada-casa {
-  grid-template-columns: minmax(11rem, 16rem) minmax(0, 1fr);
-  align-items: start;
-}
-.portada-casa .foto-retrato { margin-top: 0.6rem; }
-
-.sello-menor { font-size: 0.82rem; padding: 0.6rem 1.3rem; letter-spacing: 0.12em; }
-.titular-menor {
-  font-family: "Bonum", "Bookman Old Style", "Georgia", serif;
-  font-weight: 700;
-  font-size: clamp(1.3rem, 3vw, 1.7rem);
-  letter-spacing: 0.07em;
+.lista-obras .meta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  color: var(--text-dim);
 }
+
+/* ── Poesía ─────────────────────────────────── */
+.poema {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+.poema-titulo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+.poema-texto {
+  white-space: pre-wrap;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.95;
+  color: var(--text-primary);
+}
+.poema-credito {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  display: inline-block;
+}
+
+/* ── Idiomas ────────────────────────────────── */
+.idiomas {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.idiomas a { color: var(--text-secondary); }
+.idiomas a:hover, .idiomas .activo { color: var(--gold); }
+.idiomas .pendiente { opacity: 0.45; cursor: default; }
+
+/* ── Footer ─────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: 3rem 2rem 2.5rem;
+  border-top: 1px solid var(--line);
+  background: var(--bg-deep);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem 2rem;
+  margin-bottom: 1.8rem;
+}
+.footer-nav a, .footer-nav span {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.footer-nav a:hover { color: var(--gold); }
+.footer-nav span[aria-current] { color: var(--gold); }
+
+.footer-lema {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.2rem;
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+.footer-copy a { color: var(--gold-dim); }
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 900px) {
+  .nav { padding: 1rem 1.5rem; }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    background: rgba(10, 12, 31, 0.98);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links.open { display: flex; }
+  .nav-hamburger { display: flex; }
+
+  .split { grid-template-columns: 1fr; min-height: auto; }
+  .split-image { height: 48vh; }
+  .split-image::after {
+    background: linear-gradient(180deg, transparent 60%, var(--bg-deep) 100%);
+  }
+  .split-content { padding: 2.5rem 1.5rem 3rem; }
+
+  .section { padding: 50px 1.5rem; }
+  .page-header { padding: 110px 1.5rem 40px; }
+
+  .libro-item { grid-template-columns: 1fr; }
+  .libro-cubierta { max-width: 13rem; }
+  .ficha div { grid-template-columns: 1fr; gap: 0.3rem; }
+  .banda-mar { min-height: 34vh; }
+}
+
+/* ── Animaciones de aparición ───────────────── */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  will-change: opacity, transform;
+}
+.reveal-right { transform: translateX(60px); }
+.reveal-left { transform: translateX(-60px); }
+.reveal.visible { opacity: 1; transform: translateX(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal-right, .reveal-left { opacity: 1; transform: none; transition: none; }
+  .section-divider { animation: none; }
+}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

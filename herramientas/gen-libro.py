@@ -9,7 +9,7 @@ from PIL import Image
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 
-FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23faf5e9'/%3E%3Crect x='4' y='2' width='24' height='28' fill='none' stroke='%23d9c8ab' stroke-width='1'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='18' fill='%23262019'%3EA%3C/text%3E%3Crect x='19' y='4' width='7' height='7' fill='none' stroke='%231d4e89' stroke-width='1.5' transform='rotate(8 22.5 7.5)'/%3E%3C/svg%3E"
+FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0c1f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='19' fill='%23d4a030'%3EA%3C/text%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23d4a030' stroke-opacity='0.4' stroke-width='1'/%3E%3C/svg%3E"
 
 NAV = [("/", "Portada"), ("/libros/", "Mis libros"), ("/ineditos/", "Inéditos"),
        ("/tinta-ciones/", "Tinta-ciones"), ("/trova/", "La trova"),
@@ -46,7 +46,7 @@ def generar(manifiesto):
     for f in m.get("fragmentos", []):
         cuerpo = leer(f["archivo"])
         if f["tipo"] == "verso":
-            frags.append(f'<h3 class="fragmento-titulo">{esc(f["titulo"])}</h3>\n<div class="fragmento-verso maquina">{esc(cuerpo)}</div>')
+            frags.append(f'<h3 class="fragmento-titulo">{esc(f["titulo"])}</h3>\n<div class="fragmento-verso">{esc(cuerpo)}</div>')
         else:
             # quita las dos primeras lineas si son numero de capitulo y titulo repetido
             lineas = cuerpo.split("\n")
@@ -63,9 +63,7 @@ def generar(manifiesto):
         galeria += f'<figure><img src="{g["img"]}" width="{gw}" height="{gh}" alt="{esc(g["alt"])}" loading="lazy"><figcaption>{esc(g["pie"])}</figcaption></figure>\n'
 
     prensa = "\n".join(f"<li>{esc(p)}</li>" for p in m.get("prensa", []))
-    nav_html = "\n    ".join(
-        f'<span aria-current="page">{n}</span>' if h == "/libros/" else f'<a href="{h}">{n}</a>'
-        for h, n in NAV)
+    nav_html = "\n    ".join(f'<a href="{h}">{n}</a>' for h, n in NAV if h != "/")
 
     premios_jsonld = json.dumps(m.get("premios", []), ensure_ascii=False)
 
@@ -98,76 +96,107 @@ def generar(manifiesto):
   "image": "{DOMINIO}{m["cubierta"]}"
 }}
 </script>
-<link rel="preload" href="/fonts/bonum-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/courier-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0a0c1f">
+<link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<a class="salto" href="#contenido">Saltar al contenido</a>
+<a class="salto" href="#main">Saltar al contenido</a>
 
-<div class="tira">
-  <h1 id="contenido">{esc(titulo)}</h1>
-  <p class="maquina">{esc(m["tira_sub"])}</p>
-</div>
+<nav class="nav">
+  <a href="/" class="nav-logo">Ala del Mar</a>
+  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/libros/" class="active">Mis libros</a></li>
+    <li><a href="/ineditos/">Inéditos</a></li>
+    <li><a href="/tinta-ciones/">Tinta-ciones</a></li>
+    <li><a href="/trova/">La trova</a></li>
+    <li><a href="/plano-abierto/">Plano abierto</a></li>
+    <li><a href="/periodista/">El periodista</a></li>
+    <li><a href="/directorio/">Directorio</a></li>
+    <li><a href="/en/" lang="en" hreflang="en">EN</a></li>
+  </ul>
+</nav>
 
-<main>
-<article class="cuartilla">
-  <p class="cabezal"><span>Ala del Mar · Mis libros · {esc(titulo)}</span></p>
+<header class="page-header">
+  <h1>{esc(titulo)}</h1>
+  <p>{esc(m["tira_sub"])}</p>
+</header>
 
-  <figure class="cubierta-dominante">
+<main id="main">
+<div class="section libro-pagina">
+
+  <figure class="cubierta-dominante reveal reveal-right">
     <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc(m["cubierta_alt"])}">
   </figure>
 
-  <section class="bloque" aria-labelledby="b-contratapa">
+  <section class="libro-bloque reveal reveal-left" aria-labelledby="b-contratapa">
     <h2 id="b-contratapa">Nota de contratapa</h2>
-    <div class="contratapa">{contratapa}</div>
+    <div class="section-divider"></div>
+    {contratapa}
   </section>
 
-  <section class="bloque" aria-labelledby="b-ficha">
+  <section class="libro-bloque reveal reveal-right" aria-labelledby="b-ficha">
     <h2 id="b-ficha">Ficha</h2>
-    <dl class="ficha-libro">
+    <div class="section-divider"></div>
+    <dl class="ficha">
 {ficha}
     </dl>
   </section>
 
-  <section class="bloque" aria-labelledby="b-fragmentos">
+  <section class="libro-bloque reveal reveal-left" aria-labelledby="b-fragmentos">
     <h2 id="b-fragmentos">Fragmentos</h2>
+    <div class="section-divider"></div>
 {fragmentos}
-    <p class="nota-idioma">Los textos literarios se publican siempre en su idioma original, el español.</p>
+    <p class="nota-demo">Los textos literarios se publican siempre en su idioma original, el español.</p>
   </section>
 
-  <section class="bloque" aria-labelledby="b-presentaciones">
+  <section class="libro-bloque reveal reveal-right" aria-labelledby="b-presentaciones">
     <h2 id="b-presentaciones">Presentaciones</h2>
+    <div class="section-divider"></div>
     <div class="galeria">
 {galeria}
     </div>
   </section>
 
-  <section class="bloque" aria-labelledby="b-prensa">
+  <section class="libro-bloque reveal reveal-left" aria-labelledby="b-prensa">
     <h2 id="b-prensa">Prensa</h2>
-    <ul class="catalogo">
+    <div class="section-divider"></div>
+    <ul class="lista-obras">
 {prensa}
     </ul>
   </section>
 
-  <section class="bloque" aria-labelledby="b-vyv">
+  <section class="libro-bloque reveal reveal-right" aria-labelledby="b-vyv">
     <h2 id="b-vyv">Con voz y voto</h2>
-    <div class="vyv">
+    <div class="section-divider"></div>
 {vyv}
-      <p class="vyv-firma">A. López Sánchez</p>
-    </div>
+    <p class="vyv-firma">A. López Sánchez</p>
   </section>
 
-  <p class="volver"><a href="/libros/">Volver a Mis libros</a></p>
+  <p style="margin-top:2rem;"><a href="/libros/" class="btn">Volver a Mis libros</a></p>
 
-  <nav class="indice-pie maquina" aria-label="Navegación del manuscrito">
-    {nav_html}
-  </nav>
-  <p class="fin maquina" aria-hidden="true">bene scriptus</p>
-</article>
+</div>
 </main>
 
+<footer class="footer">
+  <nav class="footer-nav" aria-label="Secciones">
+    {nav_html}
+  </nav>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
+  </div>
+  <p class="footer-lema">bene scriptus</p>
+  <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
+  <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
+</footer>
+
+<script src="/app.js" defer></script>
 </body>
 </html>
 """

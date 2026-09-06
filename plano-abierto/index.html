@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plano abierto: Antonio López Sánchez en radio, televisión y prensa</title>
 <meta name="description" content="Plano abierto reúne las apariciones de Antonio López Sánchez en radio, televisión y prensa que no pertenecen a un libro en particular: programas, entrevistas y grabaciones.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23faf5e9'/%3E%3Crect x='4' y='2' width='24' height='28' fill='none' stroke='%23d9c8ab' stroke-width='1'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='18' fill='%23262019'%3EA%3C/text%3E%3Crect x='19' y='4' width='7' height='7' fill='none' stroke='%231d4e89' stroke-width='1.5' transform='rotate(8 22.5 7.5)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0c1f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='19' fill='%23d4a030'%3EA%3C/text%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23d4a030' stroke-opacity='0.4' stroke-width='1'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://antoniolopezsanchez.art/plano-abierto/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://antoniolopezsanchez.art/plano-abierto/">
@@ -13,32 +13,56 @@
 <meta property="og:description" content="Programas, entrevistas y grabaciones que no pertenecen a un libro en particular.">
 <meta property="og:image" content="https://antoniolopezsanchez.art/img/retrato.webp">
 <meta property="og:locale" content="es_ES">
-<link rel="preload" href="/fonts/bonum-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/courier-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0a0c1f">
+<link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<a class="salto" href="#contenido">Saltar al contenido</a>
+<a class="salto" href="#main">Saltar al contenido</a>
 
-<div class="tira">
-  <h1 id="contenido">Plano abierto</h1>
-  <p class="maquina">Radio, televisión y prensa fuera de los libros</p>
-</div>
-
-<main>
-<article class="cuartilla">
-  <p class="cabezal"><span>Ala del Mar · Plano abierto</span></p>
-  <p class="prosa">No todo cabe en un libro. Aquí irán las grabaciones de programas de radio y televisión, y las apariciones en prensa que no pertenecen a un título en particular.</p>
-  <ul class="catalogo">
-    <li><strong>Hablar de poesía</strong> <span class="maquina">· Radio Ciudad de La Habana, 2000 · un programa dedicado íntegramente a mi obra poética · grabación en localización</span></li>
-    <li><strong>La impúdica es la guitarra</strong> <span class="maquina">· casete grabado en vivo con varios trovadores, Centro Pablo de la Torriente Brau, 2000 · con poemas míos</span></li>
-    <li><strong>Más que sobrevivir</strong> <span class="maquina">· casete de la trovadora Rita del Prado, 1999 · con poemas míos</span></li>
+<nav class="nav">
+  <a href="/" class="nav-logo">Ala del Mar</a>
+  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/libros/">Mis libros</a></li>
+    <li><a href="/ineditos/">Inéditos</a></li>
+    <li><a href="/tinta-ciones/">Tinta-ciones</a></li>
+    <li><a href="/trova/">La trova</a></li>
+    <li><a href="/plano-abierto/" class="active">Plano abierto</a></li>
+    <li><a href="/periodista/">El periodista</a></li>
+    <li><a href="/directorio/">Directorio</a></li>
+    <li><a href="/en/" lang="en" hreflang="en">EN</a></li>
   </ul>
-  <p class="nota-demo maquina">[sección en preparación: las grabaciones y enlaces se irán sumando]</p>
+</nav>
 
-  <nav class="indice-pie maquina" aria-label="Navegación del manuscrito">
-    <a href="/">Portada</a>
+<header class="page-header">
+  <h1>Plano abierto</h1>
+  <p>Radio, televisión y prensa fuera de los libros.</p>
+</header>
+
+<main id="main">
+<div class="section">
+  <div class="reveal reveal-right">
+    <h2 class="section-title">No todo cabe en un libro</h2>
+    <div class="section-divider"></div>
+    <p class="section-text" style="margin-bottom:2rem;">Aquí irán las grabaciones de programas de radio y televisión, y las apariciones en prensa que no pertenecen a un título en particular.</p>
+    <ul class="lista-obras">
+      <li><strong>Hablar de poesía</strong> <span class="meta">· Radio Ciudad de La Habana, 2000 · un programa dedicado íntegramente a mi obra poética · grabación en localización</span></li>
+      <li><strong>La impúdica es la guitarra</strong> <span class="meta">· casete grabado en vivo con varios trovadores, Centro Pablo de la Torriente Brau, 2000 · con poemas míos</span></li>
+      <li><strong>Más que sobrevivir</strong> <span class="meta">· casete de la trovadora Rita del Prado, 1999 · con poemas míos</span></li>
+    </ul>
+    <p class="nota-demo">[sección en preparación: las grabaciones y enlaces se irán sumando]</p>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <nav class="footer-nav" aria-label="Secciones">
     <a href="/libros/">Mis libros</a>
     <a href="/ineditos/">Inéditos</a>
     <a href="/tinta-ciones/">Tinta-ciones</a>
@@ -47,9 +71,14 @@
     <a href="/periodista/">El periodista</a>
     <a href="/directorio/">Directorio</a>
   </nav>
-  <p class="fin maquina" aria-hidden="true">bene scriptus</p>
-</article>
-</main>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
+  </div>
+  <p class="footer-lema">bene scriptus</p>
+  <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
+  <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
+</footer>
 
+<script src="/app.js" defer></script>
 </body>
 </html>
