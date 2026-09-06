@@ -245,7 +245,7 @@ img { max-width: 100%; height: auto; display: block; }
 .banda-mar {
   position: relative;
   min-height: 42vh;
-  background: url('/img/mar.webp') center 60% / cover no-repeat;
+  background: url('/img/mar2.webp') center 74% / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -506,6 +506,35 @@ a.libro-cubierta:hover img {
   padding-top: 1rem;
   border-top: 1px solid var(--line);
   display: inline-block;
+}
+
+/* ── En mi voz (audio) ──────────────────────── */
+.audio-item {
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 2rem 2.2rem;
+}
+.audio-item h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+.audio-meta {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 1.2rem;
+}
+.audio-item audio {
+  width: 100%;
+  display: block;
 }
 
 /* ── Idiomas ────────────────────────────────── */
