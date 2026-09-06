@@ -55,7 +55,8 @@
   --grano: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0 0.24 0 0 0 0.17 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
   /* mascara de entintado para sellos: alfa alto con calvas de tinta */
   --entintado: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='140'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11 0.13' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0.62'/%3E%3C/filter%3E%3Crect width='260' height='140' filter='url(%23m)'/%3E%3C/svg%3E");
-  --mesa: #eadcc4;
+  --mesa: #dde6ec;
+  --mesa-fria: #b9c7d1;
   --mesa-sombra: #d9c8ab;
   --papel: #faf5e9;
   --papel-viejo: #f5edda;
@@ -64,7 +65,7 @@
   --rojo: #b3372b;
   --rojo-tenue: #c86a5f;
   --paso: cubic-bezier(0.16, 1, 0.3, 1);
-  --sombra-hoja: 0 2px 4px rgba(84, 62, 34, 0.1), 0 6px 18px rgba(84, 62, 34, 0.13);
+  --sombra-hoja: 0 2px 4px rgba(52, 63, 75, 0.11), 0 6px 18px rgba(52, 63, 75, 0.14);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -134,7 +135,7 @@ a:hover { text-decoration-thickness: 2px; }
   background: var(--papel-viejo);
   transform: rotate(0.9deg) translate(5px, 3px);
   z-index: -1;
-  box-shadow: 0 2px 8px rgba(84, 62, 34, 0.08);
+  box-shadow: 0 2px 8px rgba(52, 63, 75, 0.09);
 }
 
 /* la rotacion vive en la seccion contenedora: un transform en la propia
@@ -167,7 +168,7 @@ main > .cuartilla:nth-of-type(even)::after { transform: rotate(-1deg) translate(
   background: color-mix(in srgb, var(--papel-viejo) 88%, var(--mesa-sombra));
   transform: rotate(1.7deg) translate(10px, 8px);
   z-index: -2;
-  box-shadow: 0 3px 10px rgba(84, 62, 34, 0.1), 0 14px 2px -12px rgba(84, 62, 34, 0.18);
+  box-shadow: 0 3px 10px rgba(52, 63, 75, 0.11), 0 14px 2px -12px rgba(52, 63, 75, 0.19);
 }
 
 .nombre {
@@ -256,7 +257,7 @@ main > .cuartilla:nth-of-type(even)::after { transform: rotate(-1deg) translate(
   width: 100%;
   height: auto;
   border: 6px solid var(--papel);
-  outline: 1px solid var(--mesa-sombra);
+  outline: 1px solid var(--mesa-fria);
   box-shadow: var(--sombra-hoja);
 }
 
