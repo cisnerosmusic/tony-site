@@ -369,8 +369,13 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
 /* ---------- el poeta: copia al carbon en papel cebolla ---------- */
 
 .carbon {
-  /* papel de segunda: mas frio y delgado que la cuartilla */
-  background: var(--grano), #f2ede0;
+  /* papel de segunda: mas frio y delgado que la cuartilla;
+     la mancha se funde por multiply, como cafe absorbido por la fibra */
+  background:
+    url("img/mancha.svg") no-repeat top -3.4rem right -3.2rem / 16rem 16rem,
+    var(--grano),
+    #f2ede0;
+  background-blend-mode: multiply, normal, normal;
   overflow: clip;
 }
 /* el tipeo de copia: tinta de carbon, un punto mas difusa */
@@ -378,26 +383,6 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
 .carbon .poema-texto {
   color: #3b3327;
   text-shadow: 0 0 0.6px rgba(59, 51, 39, 0.55);
-}
-/* el cerco de la taza de la madrugada */
-.carbon::before {
-  content: "";
-  position: absolute;
-  top: -2.2rem;
-  right: -2.6rem;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  background:
-    radial-gradient(closest-side,
-      transparent 72%,
-      rgba(150, 101, 58, 0.2) 75%,
-      rgba(150, 101, 58, 0.08) 80%,
-      rgba(150, 101, 58, 0.26) 86%,
-      rgba(150, 101, 58, 0.06) 89%,
-      transparent 91%);
-  transform: rotate(14deg) scaleX(0.96);
-  pointer-events: none;
 }
 .carbon .cabezal { margin-bottom: 1.9rem; }
 

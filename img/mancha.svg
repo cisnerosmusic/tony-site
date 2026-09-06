@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260">
+  <defs>
+    <filter id="agua" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="10"/>
+      <feGaussianBlur stdDeviation="0.45"/>
+    </filter>
+    <radialGradient id="lavado" cx="50%" cy="52%" r="50%">
+      <stop offset="82%" stop-color="#a97b4a" stop-opacity="0"/>
+      <stop offset="95%" stop-color="#a97b4a" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#8a5a2b" stop-opacity="0.11"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#agua)">
+    <circle cx="132" cy="126" r="97" fill="url(#lavado)"/>
+    <circle cx="132" cy="126" r="96" fill="none" stroke="#8a5a2b" stroke-opacity="0.3" stroke-width="3.5"/>
+    <circle cx="132" cy="126" r="92" fill="none" stroke="#a97b4a" stroke-opacity="0.09" stroke-width="6"/>
+    <path d="M74 196 A94 94 0 0 0 189 199" fill="none" stroke="#7d4e26" stroke-opacity="0.3" stroke-width="10" stroke-linecap="round"/>
+    <path d="M100 214 A94 94 0 0 0 168 211" fill="none" stroke="#7d4e26" stroke-opacity="0.16" stroke-width="15" stroke-linecap="round"/>
+    <ellipse cx="27" cy="177" rx="14" ry="11" fill="#8a5a2b" fill-opacity="0.22"/>
+    <ellipse cx="40" cy="163" rx="5" ry="4" fill="#8a5a2b" fill-opacity="0.16"/>
+    <circle cx="177" cy="119" r="3.2" fill="#7d4e26" fill-opacity="0.28"/>
+    <circle cx="168" cy="131" r="1.7" fill="#7d4e26" fill-opacity="0.2"/>
+  </g>
+</svg>
