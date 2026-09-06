@@ -1,207 +1,196 @@
 ---
-name: Antonio López Sánchez, número especial
-description: Web de autor compuesta como número especial de revista literaria cubana, en tres tintas de offset sobre papel.
+name: Antonio López Sánchez, la mesa del escritor
+description: Web de autor compuesta como la mesa de trabajo de un escritor a la vieja usanza, cuartillas mecanografiadas sobre una mesa café con leche, tinta sepia y un solo rojo de cinta bicolor.
 colors:
-  verde: "#0d5a3c"
-  verde-tinta: "#0a4530"
-  rojo: "#d0342a"
-  rojo-texto: "#a8271f"
-  rojo-boton: "#b02a20"
-  rojo-pagina: "#9c231b"
-  tinta: "#201709"
-  papel: "#f2e8d0"
-  papel-sombra: "#e4d6b4"
+  mesa: "#eadcc4"
+  mesa-sombra: "#d9c8ab"
+  papel: "#faf5e9"
+  papel-viejo: "#f5edda"
+  tinta: "#262019"
+  tinta-suave: "#4d4335"
+  rojo: "#b3372b"
+  rojo-tenue: "#c86a5f"
+  raya-azul: "rgba(124, 152, 176, 0.75)"
 typography:
   display:
-    fontFamily: "Besley, Georgia, serif"
-    fontSize: "clamp(2.7rem, min(11.5vw, 11svh), 9rem)"
-    fontWeight: 900
-    lineHeight: 0.92
-    letterSpacing: "-0.02em"
+    fontFamily: "IM Fell DW Pica, Georgia, serif"
+    fontSize: "clamp(2.7rem, 8.5vw, 5.4rem)"
+    fontWeight: 400
+    lineHeight: 1.02
+    letterSpacing: "-0.01em"
   headline:
-    fontFamily: "Besley, Georgia, serif"
-    fontSize: "clamp(2.6rem, 7vw, 5.5rem)"
-    fontWeight: 850
-    lineHeight: 0.98
-    letterSpacing: "-0.02em"
-  title:
-    fontFamily: "Besley, Georgia, serif"
-    fontSize: "clamp(1.7rem, 3.4vw, 2.6rem)"
-    fontWeight: 850
+    fontFamily: "IM Fell DW Pica, Georgia, serif"
+    fontSize: "clamp(1.9rem, 5vw, 2.9rem)"
+    fontWeight: 400
     lineHeight: 1.05
-    letterSpacing: "-0.015em"
-  entradilla:
-    fontFamily: "Besley, Georgia, serif"
-    fontSize: "clamp(1.15rem, 2.4vw, 1.5rem)"
+    letterSpacing: "-0.005em"
+  title:
+    fontFamily: "IM Fell DW Pica, Georgia, serif"
+    fontSize: "clamp(1.7rem, 4.5vw, 2.4rem)"
     fontWeight: 400
-    lineHeight: 1.45
+    lineHeight: 1.1
   body:
-    fontFamily: "Besley, Georgia, serif"
-    fontSize: "1.0625rem"
+    fontFamily: "EB Garamond, Georgia, serif"
+    fontSize: "1.15rem"
     fontWeight: 400
-    lineHeight: 1.6
-  poema:
-    fontFamily: "Besley, Georgia, serif"
-    fontSize: "1.1rem"
-    fontWeight: 400
-    lineHeight: 1.75
+    lineHeight: 1.65
   label:
-    fontFamily: "Archivo, Helvetica Neue, sans-serif"
-    fontSize: "0.8rem"
-    fontWeight: 600
-    letterSpacing: "0.08em"
-    fontVariation: '"wdth" 80'
+    fontFamily: "Courier Prime, Courier New, monospace"
+    fontSize: "0.78rem"
+    fontWeight: 400
+    letterSpacing: "0.06em"
+spacing:
+  renglon: "1.9rem"
+  entre-cuartillas: "3rem"
 components:
-  button-primary:
-    backgroundColor: "{colors.rojo-boton}"
-    textColor: "{colors.papel}"
-    padding: "1.05rem 2.2rem"
-  button-primary-hover:
-    backgroundColor: "#8d1f18"
-  button-directorio:
-    backgroundColor: "{colors.verde}"
-    textColor: "{colors.papel}"
-    padding: "1.05rem 2.2rem"
-  button-directorio-hover:
-    backgroundColor: "{colors.verde-tinta}"
+  sello:
+    backgroundColor: "transparent"
+    textColor: "{colors.rojo}"
+    padding: "0.85rem 1.9rem"
+  cuartilla:
+    backgroundColor: "{colors.papel}"
+    textColor: "{colors.tinta}"
+    padding: "1.4rem clamp(1.4rem, 5vw, 4rem) 3.2rem"
+  tira:
+    backgroundColor: "{colors.papel-viejo}"
+    textColor: "{colors.tinta}"
+    padding: "0.9rem 2.4rem 1rem"
 ---
 
-# Design System: Antonio López Sánchez, número especial
+# Design System: Antonio López Sánchez, la mesa del escritor
 
 ## Overview
 
-**Creative North Star: "El Número Especial"**
+**Creative North Star: "La mesa del escritor a la vieja usanza"**
 
-La web no es un sitio de autor con hero y tarjetas: es un número especial de revista literaria cubana (linaje El Caimán Barbudo, La Gaceta de Cuba) dedicado íntegro a Antonio López Sánchez. Todo el sistema se deriva de la imprenta offset de tirada limitada: tres tintas (verde caimán, rojo offset, tinta cálida) sobre un papel crema que nunca se pinta, se reserva. Las secciones son pliegos a sangre que se hojean en scroll, cada uno con su cabezal, su folio de página y su titular rotundo; las tres tintas cometen a escala de página (verde en portada y periodista, tinta en novelas y directorio, papel en trova, rojo en el poeta).
+Todo lo que se ve es un objeto físico sobre una mesa café con leche: cuartillas de papel con grano, tiras de papel viejo como separadores, fotos sujetas con cinta adhesiva, un sello de goma como botón, una hoja rayada de libreta con margen rojo. La web no tiene "secciones" en el sentido web: tiene hojas numeradas de un manuscrito que el visitante hojea de arriba abajo. La gramática de manuscrito (cabezal mecanografiado arriba de cada hoja, numeración "hoja N", índice con puntos de guía) es estructural, no decorativa.
 
-La densidad es editorial, no de aplicación: texto corrido con capitular, columnas con corondel, sumario con líneas de puntos, fichas con filetes, un poema compuesto con sus espacios reales. La única fotografía admitida es documental: reproducciones de las cubiertas reales de los libros, montadas como encartes y recortes con filete y pie de crédito. No hay sombras, no hay esquinas redondeadas, no hay degradados; la única profundidad legítima es la que produce la tinta al sobreimprimirse (multiply), el misregistro deliberado de las pasadas y la leve rotación de los recortes pegados. El movimiento también viene del taller: al cargar, el número se imprime por pasadas de tinta en orden de imprenta, y la cabecera pierde peso variable al hacer scroll, como materia viva de composición tipográfica.
+Tres voces tipográficas reparten el mundo: IM Fell DW Pica es la imprenta antigua (nombre y títulos), EB Garamond la prosa impresa (cuerpo de lectura), Courier Prime la máquina de escribir del sujeto (todo lo que el autor "tecleó": cabezales, índice, datos editoriales, el poema). La tinta es sepia casi negra y hay un solo acento: el rojo de la cinta bicolor de máquina.
+
+Este mundo reemplaza por completo al anterior (número de revista literaria en tres tintas, Besley y Archivo, sobreimpresión multiply, doctrina de cero sombras). Ese mundo es anti-referencia: nada de él se hereda.
 
 **Key Characteristics:**
-- Tres tintas planas más papel como reserva; ningún cuarto pigmento en las superficies diseñadas.
-- Cada tinta comete a escala de pliego: verde, tinta cálida, papel y rojo de página como fondos a sangre.
-- Fotografía solo documental: cubiertas reales como encarte, siempre con filete de 1px y crédito en Archivo.
-- Besley variable para todo lo que se lee; Archivo condensada para todo el aparato de revista.
-- Filetes de 1px como única costura; cero sombras, cero radios.
-- Sobreimpresión con `mix-blend-mode: multiply` donde dos tintas se tocan.
+- Materialidad literal: cada superficie es papel con grano sobre mesa, con sombra física suave.
+- Una sola columna de cuartillas centradas, ligeramente rotadas en alternancia.
+- Un solo acento (rojo cinta bicolor) sobre una gama sepia de mesa, papel y tinta.
+- Monospace legítimo: Courier Prime es la voz del sujeto, nunca disfraz decorativo.
+- Un solo movimiento en todo el sitio: el oficio mecanografiándose al cargar.
 
 ## Colors
 
-Una paleta de taller de offset: tres tintas y el papel que las recibe, con variantes de trabajo por tinta para estados, texto y escala de página.
+Gama sepia de mesa, papel y tinta con un único acento rojo; el azul de renglón es material de la hoja rayada, no un color de interfaz.
 
 ### Primary
-- **Verde caimán** (#0d5a3c): la tinta identitaria del número. Fondo a sangre de la portada y del pliego "El periodista"; color del botón del directorio y del scrollbar.
-- **Verde tinta** (#0a4530): el mismo verde cargado de tinta; solo como estado hover del botón verde.
-
-### Secondary
-- **Rojo offset** (#d0342a): la tinta de acento puro. Dibuja la guitarra del emblema, marca la selección de texto y el caret. Demasiado saturado para fondo de página: a esa escala se usa su variante rebajada.
-- **Rojo página** (#9c231b): el rojo asentado a escala de pliego. Fondo a sangre de "El poeta"; da contraste 6.3:1 con el papel para lectura larga. Sobre este fondo la selección se invierte a tinta cálida y el foco visible pasa a papel.
-- **Rojo texto** (#a8271f): el rojo rebajado para leer sobre papel; titulares y capitulares del pliego claro, y foco visible sobre fondo claro.
-- **Rojo botón** (#b02a20): el rojo de impacto de la acción primaria (con hover #8d1f18, más hundido en tinta).
+- **Rojo cinta bicolor** (#b3372b): el único acento del mundo. Tinta roja de máquina: el sello de goma, los premios en los datos editoriales, el crédito del poema, la línea del margen de libreta (en su versión tenue), la línea superior de la ficha de archivo, selección de texto, caret y focus ring.
+- **Rojo tenue** (#c86a5f): el mismo rojo desgastado, para el margen de la hoja rayada y el estado disabled del sello.
 
 ### Neutral
-- **Tinta cálida** (#201709): el negro de imprenta con base cálida. Fondo de los pliegos oscuros, texto sobre papel, borde de botones y de recortes sobre papel.
-- **Papel** (#f2e8d0): el soporte. Texto sobre tintas, reservas dentro del emblema, fondo del pliego "La trova". No es un color que se aplica: es lo que queda sin imprimir.
-- **Papel sombra** (#e4d6b4): papel envejecido para texto secundario sobre verde y para el corondel de las columnas.
+- **Mesa café con leche** (#eadcc4): el fondo del sitio, la madera clara de la mesa. Nunca es superficie de contenido.
+- **Sombra de mesa** (#d9c8ab): bordes finos, filetes divisores, puntos de guía del índice y marco de las fotos.
+- **Papel de cuartilla** (#faf5e9): la superficie de contenido principal; siempre lleva el grano encima.
+- **Papel viejo** (#f5edda): las tiras separadoras y las hojas de abajo del montón.
+- **Tinta sepia** (#262019): el texto principal, casi negro pero caliente.
+- **Tinta suave** (#4d4335): la tinta secundaria de cabezales, pies de foto, notas y colofón.
+- **Azul de renglón** (rgba(124, 152, 176, 0.75)): exclusivo de los renglones de la hoja rayada; jamás aparece fuera de ella.
 
 ### Named Rules
-**La Regla de las Tres Tintas.** Todo color diseñado es una de las tres tintas (verde, rojo, tinta cálida) o papel en reserva. No existe un cuarto pigmento, ni degradados, ni transparencias decorativas; las medias tintas se logran con `color-mix()` de una tinta hacia el papel o hacia otra tinta, nunca con colores nuevos.
+**La regla de la cinta bicolor.** La máquina solo tiene dos tintas: sepia y rojo. Cualquier tercer color de interfaz rompe el mundo. El rojo marca lo excepcional (premios, la acción, el margen); si abunda, deja de significar.
 
-**La Regla del Encarte.** La única imagen fotográfica del sistema es la reproducción documental de una cubierta real. Entra como cita, no como decoración: siempre enmarcada por un filete de 1px y acompañada de su pie de crédito en Archivo. Sus colores propios no ingresan a la paleta.
-
-**La Regla de la Sobreimpresión.** Cuando dos tintas se superponen no se mezclan digitalmente: se sobreimprimen con `mix-blend-mode: multiply` y el resultado oscuro se acepta como física del offset (las pasadas fantasma del emblema de portada).
+**La regla del grano.** El grano de papel (`var(--grano)`, tile SVG de 220px de ruido tibio) es material obligatorio de toda cuartilla y toda tira: se compone como primera capa del background sobre el color de papel. Papel sin grano es papel falso.
 
 ## Typography
 
-**Display Font:** Besley variable, 400 a 900, con itálica (fallback Georgia, serif)
-**Body Font:** Besley variable (la misma familia compone titulares, texto corrido y poema)
-**Label Font:** Archivo variable, 400 a 900, ancho 62% a 125% (fallback Helvetica Neue, sans-serif)
+**Display Font:** IM Fell DW Pica (con Georgia)
+**Body Font:** EB Garamond variable 400 a 800, romana e itálica (con Georgia)
+**Label/Mono Font:** Courier Prime 400/700 e itálica (con Courier New)
 
-**Character:** Besley pone la voz literaria: rotunda en negro 850 a 900 para titulares, serena en 400 para el texto corrido y el verso. Archivo, condensada y en mayúsculas, es el aparato de la redacción: folios, cabezales, datos editoriales, créditos y botones. Ambas se sirven como woff2 variables locales, sin terceros.
+**Character:** Tres siglos en una mesa: tipo de imprenta antigua con sus irregularidades (Fell) para lo que va en grande, garalda serena para la prosa impresa, y máquina de escribir para todo lo que el sujeto tecleó. Las tres familias están autohospedadas en woff2.
 
 ### Hierarchy
-- **Display** (900, clamp(2.7rem, min(11.5vw, 11svh), 9rem), 0.92): la cabecera de portada, en mayúsculas, una palabra por línea. Su peso variable baja hasta 650 con el scroll (comportamiento de app.js).
-- **Headline** (850, clamp(2.6rem, 7vw, 5.5rem), 0.98): el titular de cada pliego, con `text-wrap: balance`.
-- **Title** (850, clamp(1.7rem, 3.4vw, 2.6rem), 1.05): títulos de novela; la obra premiada sube a clamp(2.1rem, 4.2vw, 3.4rem) y el título del poema baja a clamp(1.5rem, 3vw, 2.1rem), por jerarquía editorial.
-- **Entradilla** (400, clamp(1.15rem, 2.4vw, 1.5rem), 1.45): el párrafo de entrada de un pliego, caja máxima de 38rem.
-- **Body** (400, 1.0625rem, 1.6): texto corrido; sinopsis a máximo 52ch, texto documental a máximo 68ch.
-- **Poema** (400, 1.1rem, 1.75): el verso, con `white-space: pre-wrap` porque los espacios internos del poema son significantes y se respetan tal como el autor los compuso.
-- **Label** (600 a 700, 0.8rem, 0.08em, mayúsculas, `"wdth" 80`): folios, cabezales, sumario y términos de ficha. Los créditos y datos editoriales (pies de lámina y recorte, datos de obra, crédito del poema) usan la variante a `"wdth" 85`, peso 500 a 600 y tracking 0.03 a 0.08em.
+- **Display** (400, clamp(2.7rem, 8.5vw, 5.4rem), 1.02): el nombre del autor en la primera cuartilla. Solo IM Fell, solo peso 400: la imprenta antigua no conoce la negrita.
+- **Headline** (400, clamp(1.9rem, 5vw, 2.9rem), 1.05): títulos de obra dentro de las cuartillas.
+- **Title** (400, clamp(1.7rem, 4.5vw, 2.4rem), 1.1): titulares de las tiras separadoras.
+- **Body** (400, 1.15rem, 1.65): prosa en EB Garamond, máximo 58ch. La primera prosa de una hoja puede abrir con capitular Fell (::first-letter, 3.1em).
+- **Label** (400, 0.78rem, 0.06em de tracking): cabezales mecanografiados y notas en Courier Prime, en tinta suave. La variante de acción (sello) sube a 700, 1rem, 0.14em, mayúsculas.
 
 ### Named Rules
-**La Regla de los Dos Oficios.** Besley compone todo lo que se lee; Archivo compone todo el aparato de revista. Ninguna familia invade el oficio de la otra, y no entra una tercera.
+**La regla de la máquina.** Courier Prime es la máquina de escribir del sujeto: aparece solo en lo que el autor tecleó (cabezales, índice, datos editoriales, listas, poema, notas, colofón). Es monospace legítimo, con contenido diegético; nunca se usa como textura decorativa ni como "estética tech".
 
-**La Regla del Aparato Condensado.** Todo texto de aparato estructural (folio, cabezal, término de ficha) va en Archivo a `"wdth" 80`, mayúsculas, 0.8rem y tracking 0.08em; los créditos documentales relajan el ancho a `"wdth" 85`. Es una sola voz de redacción repetida en toda la revista.
-
-**La Regla del Verso Intacto.** El texto poético se reproduce con sus espacios y sangrías originales (`white-space: pre-wrap`); la maqueta nunca reescribe la respiración de un poema.
+**La regla del cabezal.** Toda cuartilla abre con su cabezal mecanografiado (autor y sección a la izquierda, "hoja N" a la derecha) y la numeración de hojas es continua en todo el sitio. Es la gramática del manuscrito: una hoja sin cabezal no pertenece al montón.
 
 ## Layout
 
-El modelo espacial es el pliego: cada sección es una banda a sangre de una sola tinta, con padding horizontal `max(1.5rem, calc((100vw - 72rem) / 2))` que centra un ancho máximo de 72rem sin contenedor extra. El número tiene seis páginas: portada, novelas (p. 2), trova (p. 3), poeta (p. 4), periodista (p. 5) y directorio (p. 6). Dentro del pliego las cajas de lectura se limitan por contenido: 38rem la entradilla y el poema (este centrado), 60rem los cuerpos con recorte, 68rem las obras, y medidas en `ch` (44 a 68ch) para el texto corrido.
+Una sola columna de cuartillas de ancho min(100%, 46rem) centradas sobre la mesa, separadas 3rem entre sí dentro de una sección y con tiras separadoras entre secciones (margin 4.5rem arriba, 2.8rem abajo). El body respira con padding clamp(1.2rem, 4vw, 3.5rem) arriba y 4rem abajo.
 
-La portada es una retícula de filas (`auto minmax(0,1fr) auto auto auto`) que encaja portada completa en 100svh: folios absolutos arriba, cabecera, emblema flexible al centro, oferta, acción y sumario al pie. Decisión registrada: en escritorios de poca altura el emblema comprime hacia su preferencia de 21svh (mínimo 8.5rem); se acepta para que la portada nunca expulse el sumario del primer viewport.
+Dentro de una cuartilla de obra, grid de dos columnas: texto (1fr) y foto (minmax(9.5rem, 12.5rem)) con gap clamp(1.4rem, 4vw, 2.8rem). La hoja rayada define su propio sistema: `--renglon: 1.9rem` gobierna el line-height de todo su contenido y `--margen-libreta: clamp(2.4rem, 7vw, 4.6rem)` sitúa la línea roja vertical; todo el contenido arranca a la derecha de esa línea (padding-left: margen + 1.4rem).
 
-Las obras alternan lámina y texto en retícula de dos columnas (5fr/6fr, la premiada 6fr/5fr con lámina mayor), con orden invertido en las pares. Los cuerpos de trova y periodista montan el recorte en una retícula de `minmax(0, 1fr) minmax(10rem, 14rem)` con gap de 3rem: la columna angosta es siempre la del recorte. El texto documental usa columnas CSS reales (`columns: 2 18rem`) con corondel de 1px. Bajo 44rem todo colapsa a una columna: láminas a la izquierda a 17rem, recortes a 14rem, y el folio derecho de portada desaparece. El ritmo vertical es amplio y editorial: 3.2rem entre obras, 4 a 5rem al cierre de pliego, separadores siempre de 1px.
+Un solo breakpoint, 40rem: el grid de obra colapsa a una columna, la foto se centra a máximo 13rem, las rotaciones de sección se apagan (la hoja de abajo conserva la suya) y la hoja rayada compacta renglón y margen.
+
+### Named Rules
+**La regla del margen rojo.** En la hoja rayada nada pisa el margen: la línea roja vive en `--margen-libreta` y todo contenido, cabezal incluido, empieza a su derecha.
 
 ## Elevation & Depth
 
-No hay sombras de ninguna clase: ni `box-shadow`, ni `text-shadow`, ni desenfoques. La página es papel plano, y la profundidad se produce con los medios de la imprenta: sobreimpresión multiply donde las tintas se cruzan, pasadas fantasma desplazadas (el misregistro del emblema, a 6 o 7px de la pasada buena), filetes de 1px que cosen el aparato editorial, y la leve rotación de los recortes (1.4 grados, o -1.2 la variante izquierda), que se leen como material pegado sobre la página sin proyectar sombra. El hover de los botones se levanta con `translate(2px, -2px)` y el de las obras inclina la lámina 1.2 grados: el papel se despega, la tinta no.
+La profundidad es física, no tonal: papel que descansa sobre una mesa. Cada cuartilla proyecta una sombra suave de dos capas y trae debajo su "hoja de abajo" (::after en papel viejo, rotada y desplazada unos píxeles, z-index -1); la portada añade una tercera hoja (::before) para leerse como montón. Las fotos llevan sombra mínima de contacto. No hay glows, ni sombras duras desplazadas, ni elevación por hover.
+
+### Shadow Vocabulary
+- **Sombra de hoja** (`box-shadow: 0 2px 4px rgba(84, 62, 34, 0.1), 0 6px 18px rgba(84, 62, 34, 0.13)`): la sombra estándar de cuartillas y tiras sobre la mesa. Siempre en tono madera cálido, nunca gris neutro.
+- **Sombra de contacto** (`box-shadow: 0 1px 3px rgba(84, 62, 34, 0.18)`): fotos pegadas sobre el papel.
 
 ### Named Rules
-**La Regla del Papel Plano.** Ninguna superficie proyecta sombra. Si un elemento necesita separarse, lo hace con un filete de 1px, un cambio de tinta, una sobreimpresión o una rotación leve de material pegado.
-
-**La Regla del Filete.** La única costura del sistema es un filete de 1px sólido (en `currentColor`, en tinta o en papel translúcido vía `color-mix`), más la línea de puntos del sumario. Nada más grueso, nada con color propio ajeno a las tintas.
+**La regla de la rotación en el contenedor.** La rotación de las hojas vive siempre en la sección contenedora (section:nth-of-type(odd) 0.35deg, even -0.3deg), nunca en la propia cuartilla: un transform en la cuartilla crea stacking context y la hoja de abajo (::after con z-index -1) tapa el grano y los renglones del fondo propio. Bug real ya sufrido en este build; no se repite.
 
 ## Shapes
 
-Esquinas vivas de guillotina: `border-radius` 0 en todo el sistema (la única excepción es 1px en el contorno de foco, para que el trazo no se rompa). Las reproducciones de cubierta son rectángulos puros con filete, en su proporción original declarada (`width`/`height` en el HTML). Las formas curvas viven solo dentro del arte impreso del emblema (círculos, radiantes), nunca como contorno de componente. Los recortes se distinguen de las láminas por su rotación estática leve, como recorte de prensa pegado en el número.
+Esquinas rectas en todo: el papel cortado no tiene border-radius (el único radio del sitio es 1px en el focus ring). El lenguaje de forma es la rotación leve: hojas, tiras, fotos y sello viven entre 0.25deg y 2deg de giro, alternando el signo por sección para que la mesa se sienta usada y no maquetada. Los bordes son filetes de 1px en sombra de mesa (divisores de listas, ficha, índice, marco de foto); el sello es el único elemento con borde doble (border 2px + outline 1px separados 3px, la doble línea del sello de goma).
 
 ## Components
 
-### Buttons
-- **Carácter:** tipografía de taller: Archivo 800, mayúsculas, 1.05rem.
-- **Shape:** rectángulo puro sin radio, borde filete de 1px en tinta cálida.
-- **Primary** ("Abrir el número"): fondo rojo botón (#b02a20), texto papel, padding 1.05rem 2.2rem, flecha SVG inline de 20px.
-- **Hover / Focus:** el fondo se hunde a #8d1f18, el botón se despega con `translate(2px, -2px)` y la flecha baja 3px; todo con la curva `--paso` a 0.35s. Foco visible: contorno de 3px en rojo con offset de 3px (papel sobre el pliego rojo, rojo texto sobre papel).
-- **Directorio:** misma anatomía en verde caimán con hover verde tinta. Deshabilitado: opacidad 0.65, sin transformaciones, cursor `not-allowed`.
+### Sello (acción primaria)
+Un sello de goma estampado: la única forma de botón del mundo.
+- **Shape:** rectángulo recto con doble línea roja (border 2px + outline 1px con offset 3px), rotado -2deg.
+- **Estilo:** fondo transparente, texto Courier Prime 700 en mayúsculas (0.14em de tracking) en rojo cinta, padding 0.85rem 1.9rem.
+- **Entintado:** lleva obligatoriamente la máscara `var(--entintado)` (mask-image, 260px por 140px): las calvas de tinta son lo que lo hace sello y no botón con borde.
+- **Hover / Active:** se aprieta contra el papel (scale 0.97 / 0.94, manteniendo la rotación) y oscurece a #922c22. Focus visible con outline rojo a 5px.
+- **Disabled:** rojo tenue (#c86a5f) en texto, borde y doble línea; cursor not-allowed.
 
-### Cards / Containers
-- **La obra** (artículo de novela): retícula lámina más texto, sin fondo propio ni borde de caja; las obras se separan entre sí con filete de papel al 25%. Al hover la lámina rota 1.2 grados (hacia el lado contrario en las pares).
-- **La ficha** (dl del periodista): filas de término y definición con filete superior de papel al 35%; términos en voz de aparato condensado.
+### Cuartilla (contenedor principal)
+- **Corner Style:** recto, sin radio.
+- **Background:** `var(--grano)` sobre papel (#faf5e9); la variante rayada añade renglones repeating-linear-gradient en azul de renglón.
+- **Shadow Strategy:** sombra de hoja + hoja de abajo en ::after (ver Elevation & Depth).
+- **Internal Padding:** 1.4rem arriba, clamp(1.4rem, 5vw, 4rem) lateral, 3.2rem abajo.
+- **Cabezal:** obligatorio (ver La regla del cabezal).
 
-### Navigation
-- **El sumario:** la navegación es el sumario del número, al pie de portada: lista ordenada de cinco entradas con tema, línea de puntos (`border-bottom: 1px dotted`) y folio de página ("p. 2" a "p. 6"). A partir de 54rem se parte en dos columnas. Hover: subrayado del tema. No existe barra de navegación fija ni menú hamburguesa.
-- **El cabezal:** cada pliego abre con su línea de folio (título del número a la izquierda, "p. N" a la derecha) sobre filete de 1px en `currentColor`.
+### Tira (separador de sección)
+Recorte de papel viejo con el titular: width fit-content centrado, grano sobre papel viejo, sombra de hoja, rotación entre -1.2deg y 1deg, titular Fell con subtítulo mecanografiado en tinta suave.
 
-### La lámina (signature)
-Encarte principal de cada novela: `figure` con la reproducción de la cubierta real (img/*.webp con dimensiones declaradas y `loading="lazy"`, alt descriptivo de la cubierta), filete de 1px en papel al 35% sobre la imagen, y pie de crédito `.lamina-pie` en Archivo `"wdth" 85`, 0.8rem, papel al 75%, que nombra la edición. Ancho máximo 21rem (26rem la obra premiada), centrada en su columna. Conserva el gesto del mundo: al hover de la obra, la lámina se inclina 1.2 grados con la curva `--paso`.
+### Foto con cinta adhesiva
+Las imágenes (cubiertas de libros) van pegadas: rotación de 1.8 a 2deg alternando signo, borde 1px sombra de mesa, sombra de contacto, y dos tiras de cinta adhesiva semitransparente (::before/::after a ±42deg en las esquinas superiores). Al hover de la cuartilla, la foto se endereza suavemente (0.6deg). Pie de foto mecanografiado, 0.74rem, centrado.
 
-### El recorte
-Reproducción secundaria de cubierta, como recorte de prensa pegado: `figure` con rotación estática de 1.4 grados (o -1.2 en la variante `-izq`), imagen con filete de 1px (tinta sobre papel; papel al 45% sobre verde) y `figcaption` de crédito en Archivo `"wdth" 85`. Se monta en la columna angosta (10 a 14rem) de los cuerpos de trova y periodista; bajo 44rem baja a 14rem en flujo.
+### Índice (navegación)
+Índice mecanografiado de manuscrito: lista ordenada de enlaces Courier Prime 0.95rem, cada línea con título, puntos de guía (border-bottom dotted en sombra de mesa) y "hoja N" al final. Sin subrayado en reposo; hover subraya solo el título. Es la única navegación del sitio, dentro de la primera cuartilla.
 
-### El poema
-La página literaria del número: caja de 38rem centrada, título en Besley 850, cuerpo `.poema-texto` con `white-space: pre-wrap` que conserva las sangrías y los espacios internos del verso, y crédito en Archivo mayúsculas con filete superior de papel al 40%. Vive sobre el pliego rojo de página, con selección invertida a tinta.
-
-### El emblema (signature)
-Medallón radiante de portada: espada y guitarra sobreimpresas en rotaciones opuestas de 38 grados, con pasadas fantasma desplazadas (multiply al 50% y reserva al 40%) que declaran el misregistro de imprenta como firma visual. Toda ilustración nueva del sistema se resuelve como él: geometría plana en las tres tintas con reservas de papel, sin degradados ni trazos que no existan en offset.
+### Ficha de archivo
+Para datos tabulares (el periodista): dl en grid de dos columnas (término minmax(6.5rem, 9rem) + definición), filetes de 1px entre filas, términos mecanografiados en tinta suave, y la cuartilla coronada por un filete rojo de 3px.
 
 ### Motion
-Una sola curva de easing para todo el sistema: `--paso: cubic-bezier(0.16, 1, 0.3, 1)`. Dos gestos de mundo: al cargar, las pasadas de tinta entran escalonadas cada 0.25s (verde, rojo, papel, negro) como órdenes de impresión; al hacer scroll, la cabecera pierde peso variable de 900 a 650. Ambos se apagan por completo con `prefers-reduced-motion: reduce`.
+Un solo movimiento en el mundo: el oficio se mecanografía solo al cargar (app.js), con cadencia irregular de tecla (34 a 74ms, pausa de 220ms tras coma), cursor de bloque parpadeante que se retira 2.6s después de terminar, y aria-label con el texto completo desde el inicio. Con prefers-reduced-motion el texto aparece directo y las transiciones se apagan. El easing global es `--paso` (cubic-bezier(0.16, 1, 0.3, 1)), solo para microtransiciones de sello, foto y salto de foco.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** imprimir cada pliego en una sola tinta de fondo (verde #0d5a3c, papel #f2e8d0, tinta #201709 o rojo página #9c231b) y reservar el rojo puro para acentos y acciones.
-- **Do** montar toda reproducción de cubierta como material documental: filete de 1px, pie de crédito en Archivo, y rotación leve si es recorte.
-- **Do** resolver toda superposición de tintas con `mix-blend-mode: multiply` y aceptar el oscurecimiento resultante.
-- **Do** derivar medias tintas con `color-mix()` desde las tintas existentes, nunca con valores nuevos.
-- **Do** componer todo aparato editorial (folios, cabezales, términos, créditos) en Archivo condensada, mayúsculas donde es estructural, 0.8rem.
-- **Do** usar la única curva `--paso` para cualquier transición y apagarla bajo `prefers-reduced-motion`.
-- **Do** conservar los espacios internos de cualquier texto poético con `white-space: pre-wrap`.
+- **Do** componer toda superficie de papel como `var(--grano)` + color de papel; el grano es material, no adorno.
+- **Do** poner la rotación de hojas en la sección contenedora y las rotaciones propias solo en elementos sin ::after de fondo (tiras, fotos, sello).
+- **Do** enmascarar todo sello de goma con `var(--entintado)`.
+- **Do** abrir cada cuartilla nueva con cabezal mecanografiado y número de hoja continuo.
+- **Do** mantener las sombras en tono madera rgba(84, 62, 34, x), nunca negro neutro.
+- **Do** respetar los 58ch de la prosa y el sistema de renglón (`--renglon`) dentro de la hoja rayada.
 
 ### Don't:
-- **Don't** usar sombras (`box-shadow`, `text-shadow`) ni desenfoques: la profundidad es tinta, filete, sobreimpresión y rotación de recorte.
-- **Don't** redondear esquinas: `border-radius` 0 en todo componente (solo 1px en el contorno de foco).
-- **Don't** introducir colores diseñados fuera de las tres tintas más papel, ni degradados; la fotografía solo entra como reproducción de cubierta real con filete y crédito, y sus colores no ingresan a la paleta.
-- **Don't** sumar una tercera familia tipográfica ni usar fuentes del sistema: solo Besley y Archivo locales.
-- **Don't** montar navegación de app (barra fija, hamburguesa, tarjetas): la navegación es el sumario y el scroll hojea los pliegos.
-- **Don't** usar raya larga en ningún texto visible de la página (regla editorial del proyecto).
+- **Don't** introducir un tercer color de tinta: solo sepia y rojo cinta bicolor (el azul de renglón es material de la libreta, no tinta de interfaz).
+- **Don't** aplicar transform a `.cuartilla`: crea stacking context y la hoja de abajo tapa el fondo propio (bug documentado).
+- **Don't** usar Courier Prime como decoración fuera de lo que el sujeto tecleó.
+- **Don't** usar pesos bold en IM Fell ni sustituir las tres familias por fuentes de sistema o CDN: todo va autohospedado en woff2.
+- **Don't** añadir motion más allá del mecanografiado de carga y las microtransiciones existentes; nada de reveals por scroll ni parallax.
+- **Don't** resucitar el mundo anterior: tres tintas de revista (verde y rojo de offset), Besley/Archivo, sobreimpresión multiply o la doctrina de cero sombras son anti-referencia.
+- **Don't** usar border-radius en el papel: el corte es recto; el único radio permitido es el 1px del focus ring.

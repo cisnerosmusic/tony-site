@@ -1,29 +1,28 @@
-// El número se imprime al cargar: pasadas de tinta en orden de imprenta.
-// La cabecera responde al scroll con su peso variable (materia viva, no imagen).
+// La única pieza de motion del mundo: el oficio se mecanografía solo al cargar,
+// con retorno de carro invisible y cursor de bloque. Con reduced-motion, texto directo.
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const oficio = document.getElementById("oficio");
 
-if (!reduceMotion) {
-  document.body.classList.add("imprimiendo");
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => document.body.classList.remove("imprimiendo"));
-  });
-}
+if (oficio && !reduceMotion) {
+  const texto = oficio.textContent;
+  oficio.textContent = "";
+  const cursor = document.createElement("span");
+  cursor.className = "cursor-maquina";
+  cursor.setAttribute("aria-hidden", "true");
+  oficio.setAttribute("aria-label", texto);
+  oficio.appendChild(cursor);
 
-const cabecera = document.getElementById("cabecera");
-if (cabecera && !reduceMotion) {
-  let ticking = false;
-  const pesar = () => {
-    const alto = window.innerHeight || 1;
-    const avance = Math.min(window.scrollY / alto, 1);
-    const peso = Math.round(900 - avance * 250);
-    cabecera.style.fontVariationSettings = `"wght" ${peso}`;
-    ticking = false;
-  };
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(pesar);
+  let i = 0;
+  const tecla = () => {
+    if (i < texto.length) {
+      cursor.before(document.createTextNode(texto[i]));
+      i += 1;
+      const pausa = texto[i - 1] === "," ? 220 : 34 + Math.random() * 40;
+      setTimeout(tecla, pausa);
+    } else {
+      setTimeout(() => cursor.remove(), 2600);
     }
-  }, { passive: true });
+  };
+  setTimeout(tecla, 500);
 }

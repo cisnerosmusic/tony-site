@@ -13,6 +13,7 @@
 .impeccable/live/annotations/
 .impeccable/live/cache/
 .impeccable/live/*.png
+.impeccable/review/
 # impeccable-ignore-end
 
 seed-roll.txt

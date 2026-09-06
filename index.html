@@ -5,203 +5,166 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Antonio López Sánchez, escritor de fantasía heroica, poeta y periodista cubano</title>
 <meta name="description" content="Web oficial de Antonio López Sánchez (La Habana, 1973): novelas de fantasía heroica como Las guerreras de la luz (Premio La Rosa Blanca 2012), El Escudo de Valnúss, El otro lado del espejo y Grimorium, además de su obra sobre la Nueva Trova.">
-<link rel="preload" href="fonts/besley-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23faf5e9'/%3E%3Crect x='4' y='2' width='24' height='28' fill='none' stroke='%23d9c8ab' stroke-width='1'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='18' fill='%23262019'%3EA%3C/text%3E%3Crect x='19' y='4' width='7' height='7' fill='none' stroke='%23b3372b' stroke-width='1.5' transform='rotate(8 22.5 7.5)'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/fell-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/courier-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/garamond-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!--
-THESIS: la web es un numero especial de revista literaria cubana dedicado integro a un autor de fantasia; rechaza el arreglo hero mas tarjetas de toda web de autor.
-OWN-WORLD: tres tintas de offset (verde caiman, rojo, negro calido) y papel solo como reserva; sobreimpresion multiply; Besley rotunda de titulares, Archivo de folios; costuras de filete de 1px, sin sombras.
-STORY: el visitante entiende en segundos que Antonio es escritor cubano de fantasia premiado con otra vida documental en la trova, hojea el numero y sale queriendo leerlo o contactarlo.
-FIRST VIEWPORT: portada a sangre en verde; cabecera gigante en papel; emblema central radiante (espada y guitarra sobreimpresas); sumario al pie como navegacion; una sola accion primaria aislada.
-FORM: revista literaria cubana, candidata 5 de 7, seed 6c89a57f.
+THESIS: la web es la mesa de trabajo de un escritor a la vieja usanza: cuartillas Letter mecanografiadas sobre una mesa cafe con leche; rechaza la web de autor generica y el numero de revista anterior.
+OWN-WORLD: mesa cafe con leche clara, papel de cuartilla, tinta sepia casi negra y un solo acento: el rojo de la cinta bicolor de maquina; IM Fell para la imprenta antigua, EB Garamond para la prosa impresa, Courier Prime para lo mecanografiado; fotos sujetas con cinta adhesiva, sellos de goma como acciones, hoja rayada con margen rojo para el poema.
+STORY: el visitante hojea el manuscrito del autor y sale sabiendo que es narrador premiado de fantasia, poeta del instante y periodista.
+FIRST VIEWPORT: una cuartilla dominante centrada; nombre en tipo de imprenta, oficio mecanografiandose, premio en tinta roja, sello de goma como accion, indice mecanografiado.
+FORM: mesa de manuscritos; direccion fijada por el brief del usuario, sin tiro.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
 
 <a class="salto" href="#novelas">Saltar al contenido</a>
 
-<!-- PORTADA -->
-<header class="portada" id="portada">
-  <div class="pasada pasada-verde"></div>
+<!-- HOJA 1: PRIMERA CUARTILLA -->
+<header class="cuartilla portada" id="portada">
+  <p class="cabezal"><span>original · la habana</span><span>hoja 1</span></p>
 
-  <p class="folio folio-a pasada-negro">Número especial · La Habana</p>
-  <p class="folio folio-b pasada-negro">Fantasía heroica en español</p>
+  <h1 class="nombre">Antonio<br>López Sánchez</h1>
 
-  <h1 class="cabecera pasada-papel" id="cabecera">
-    <span>Antonio</span>
-    <span>López</span>
-    <span>Sánchez</span>
-  </h1>
+  <p class="oficio maquina" id="oficio">escritor de fantasía heroica, poeta y periodista cubano</p>
 
-  <figure class="emblema pasada-rojo" aria-hidden="true">
-    <svg viewBox="0 0 560 560" class="emblema-svg" role="img" aria-hidden="true">
-      <g class="rayos">
-        <g stroke="var(--papel)" stroke-width="2" opacity=".55">
-          <line x1="280" y1="16" x2="280" y2="96"/>
-          <line x1="280" y1="464" x2="280" y2="544"/>
-          <line x1="16" y1="280" x2="96" y2="280"/>
-          <line x1="464" y1="280" x2="544" y2="280"/>
-          <line x1="93" y1="93" x2="150" y2="150"/>
-          <line x1="410" y1="410" x2="467" y2="467"/>
-          <line x1="93" y1="467" x2="150" y2="410"/>
-          <line x1="410" y1="150" x2="467" y2="93"/>
-        </g>
-        <circle cx="280" cy="280" r="216" fill="none" stroke="var(--papel)" stroke-width="2" opacity=".4"/>
-        <circle cx="280" cy="280" r="168" fill="none" stroke="var(--papel)" stroke-width="2" opacity=".65"/>
-      </g>
-      <defs>
-        <g id="guitarra-forma">
-          <g transform="rotate(-38 280 280)">
-            <circle cx="280" cy="352" r="86"/>
-            <circle cx="280" cy="252" r="62"/>
-            <rect x="266" y="96" width="28" height="140"/>
-            <rect x="248" y="76" width="64" height="30"/>
-          </g>
-        </g>
-        <g id="espada-forma">
-          <g transform="rotate(38 280 280)">
-            <polygon points="280,40 300,80 300,330 260,330 260,80"/>
-            <rect x="216" y="330" width="128" height="26"/>
-            <rect x="264" y="356" width="32" height="90"/>
-            <circle cx="280" cy="470" r="30"/>
-          </g>
-        </g>
-      </defs>
-      <!-- pasadas fantasma: misregistro de imprenta, sobreimpresion multiply -->
-      <use href="#guitarra-forma" class="fantasma-multiplicado" fill="var(--rojo)" transform="translate(7 5)"/>
-      <use href="#espada-forma" class="fantasma-reserva" fill="var(--papel)" transform="translate(-6 4)"/>
-      <!-- guitarra: tinta roja -->
-      <g class="tinta-roja" fill="var(--rojo)">
-        <use href="#guitarra-forma"/>
-        <g transform="rotate(-38 280 280)"><circle cx="280" cy="316" r="26" fill="var(--tinta)"/></g>
-      </g>
-      <!-- espada: reserva de papel -->
-      <use href="#espada-forma" fill="var(--papel)"/>
-    </svg>
-  </figure>
+  <p class="premio maquina-roja">premio la rosa blanca de la uneac 2012 · las guerreras de la luz</p>
 
-  <div class="oferta pasada-negro">
-    <p class="oferta-quien">Escritor de fantasía heroica, poeta y periodista cubano</p>
-    <p class="oferta-prueba">Premio La Rosa Blanca de la UNEAC 2012 por <em>Las guerreras de la luz</em></p>
+  <div class="accion">
+    <a class="sello" href="#novelas">Leer la obra</a>
   </div>
 
-  <div class="accion pasada-negro">
-    <a class="boton" href="#novelas">
-      Abrir el número
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 4v14m0 0 6-6m-6 6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-  </div>
-
-  <nav class="sumario pasada-negro" aria-label="Sumario del número">
-    <p class="sumario-titulo">En este número</p>
+  <nav class="indice" aria-label="Índice del manuscrito">
+    <p class="indice-titulo">índice</p>
     <ol>
-      <li><a href="#novelas"><span class="sumario-tema">Las novelas</span><span class="puntos" aria-hidden="true"></span><span class="sumario-pag">p. 2</span></a></li>
-      <li><a href="#trova"><span class="sumario-tema">La trova</span><span class="puntos" aria-hidden="true"></span><span class="sumario-pag">p. 3</span></a></li>
-      <li><a href="#poeta"><span class="sumario-tema">El poeta</span><span class="puntos" aria-hidden="true"></span><span class="sumario-pag">p. 4</span></a></li>
-      <li><a href="#periodista"><span class="sumario-tema">El periodista</span><span class="puntos" aria-hidden="true"></span><span class="sumario-pag">p. 5</span></a></li>
-      <li><a href="#directorio"><span class="sumario-tema">Directorio</span><span class="puntos" aria-hidden="true"></span><span class="sumario-pag">p. 6</span></a></li>
+      <li><a href="#novelas"><span>Las novelas</span><span class="puntos" aria-hidden="true"></span><span>hoja 2</span></a></li>
+      <li><a href="#trova"><span>La trova</span><span class="puntos" aria-hidden="true"></span><span>hoja 6</span></a></li>
+      <li><a href="#poeta"><span>El poeta</span><span class="puntos" aria-hidden="true"></span><span>hoja 7</span></a></li>
+      <li><a href="#periodista"><span>El periodista</span><span class="puntos" aria-hidden="true"></span><span>hoja 8</span></a></li>
+      <li><a href="#directorio"><span>Directorio</span><span class="puntos" aria-hidden="true"></span><span>hoja 9</span></a></li>
     </ol>
   </nav>
 </header>
 
 <main>
-<!-- P.2 LAS NOVELAS -->
-<section class="pliego pliego-tinta" id="novelas" aria-labelledby="t-novelas">
-  <p class="cabezal"><span>Antonio López Sánchez, número especial</span><span>p. 2</span></p>
-  <h2 class="titular" id="t-novelas">Las novelas</h2>
-  <p class="entradilla">Cuatro novelas de fantasía heroica publicadas en Cuba entre 2012 y 2018. Espadas, escudos, espejos y grimorios escritos desde La Habana.</p>
-
-  <article class="obra obra-guerreras">
-    <figure class="lamina">
-      <img src="img/guerreras.webp" width="640" height="966" alt="Cubierta de Las guerreras de la luz: empuñadura de espada con una rosa grabada en el pomo, sobre cuero verde" loading="lazy">
-      <figcaption class="lamina-pie">Cubierta de la edición · Editorial de la Mujer</figcaption>
-    </figure>
-    <div class="obra-texto">
-      <h3>Las guerreras de la luz</h3>
-      <p class="obra-datos">Editorial de la Mujer, 2012 · Premio La Rosa Blanca de la UNEAC</p>
-      <p class="obra-sinopsis">Una orden de mujeres guerreras se alza contra la oscuridad que avanza sobre su reino. La novela que abrió la saga fantástica del autor y le valió el premio de la UNEAC.</p>
-      <p class="nota-demo">Sinopsis provisional del demo, pendiente del texto oficial.</p>
-    </div>
-  </article>
-
-  <article class="obra obra-escudo">
-    <figure class="lamina">
-      <img src="img/valnuss.webp" width="640" height="977" alt="Cubierta de El Escudo de Valnúss: escudo rúnico de metal sobre un muro de piedra" loading="lazy">
-      <figcaption class="lamina-pie">Cubierta de la edición · Editorial de la Mujer</figcaption>
-    </figure>
-    <div class="obra-texto">
-      <h3>El Escudo de Valnúss</h3>
-      <p class="obra-datos">Editorial de la Mujer, 2015</p>
-      <p class="obra-sinopsis">La saga continúa: una reliquia capaz de detener la guerra obliga a sus guardianas a decidir cuánto están dispuestas a perder para protegerla.</p>
-      <p class="nota-demo">Sinopsis provisional del demo, pendiente del texto oficial.</p>
-    </div>
-  </article>
-
-  <article class="obra obra-espejo">
-    <figure class="lamina">
-      <img src="img/espejo.webp" width="640" height="896" alt="Cubierta de El otro lado del espejo: una mano con una pluma emerge de un espejo de marco dorado tendido en el suelo de una biblioteca" loading="lazy">
-      <figcaption class="lamina-pie">Cubierta de la edición · Gente Nueva</figcaption>
-    </figure>
-    <div class="obra-texto">
-      <h3>El otro lado del espejo</h3>
-      <p class="obra-datos">Gente Nueva, 2017 · Mención en el Concurso La Edad de Oro 2014</p>
-      <p class="obra-sinopsis">Fantasía heroica para lectores jóvenes: al cruzar un espejo, el mundo conocido se invierte y lo cotidiano se vuelve leyenda.</p>
-      <p class="nota-demo">Sinopsis provisional del demo, pendiente del texto oficial.</p>
-    </div>
-  </article>
-
-  <article class="obra obra-grimorium">
-    <figure class="lamina">
-      <img src="img/grimorium.webp" width="640" height="954" alt="Cubierta de Grimorium: un libro de piel cosida del que se abren tres ojos" loading="lazy">
-      <figcaption class="lamina-pie">Cubierta de la edición · Editorial Oriente</figcaption>
-    </figure>
-    <div class="obra-texto">
-      <h3>Grimorium</h3>
-      <p class="obra-datos">Editorial Oriente, 2018</p>
-      <p class="obra-sinopsis">Un libro de conjuros que se escribe a sí mismo y los lectores que se atreven a abrirlo. La entrega más oscura de su narrativa fantástica.</p>
-      <p class="nota-demo">Sinopsis provisional del demo, pendiente del texto oficial.</p>
-    </div>
-  </article>
-</section>
-
-<!-- P.3 LA TROVA -->
-<section class="pliego pliego-papel" id="trova" aria-labelledby="t-trova">
-  <p class="cabezal"><span>Antonio López Sánchez, número especial</span><span>p. 3</span></p>
-  <h2 class="titular" id="t-trova">La otra vida: la trova</h2>
-  <div class="trova-cuerpo">
-    <div class="columnas">
-      <p>Antes de las espadas fueron las guitarras. Durante dos décadas Antonio ha documentado la Nueva Trova cubana en ensayos, entrevistas y crónicas: la memoria escrita de una canción que definió a varias generaciones.</p>
-      <p>Esa doble condición lo vuelve único en el género: el mismo autor que levanta reinos imaginarios lleva años registrando, con rigor de periodista, el cancionero real de su país.</p>
-    </div>
-    <figure class="recorte">
-      <img src="img/trovadoras.webp" width="520" height="769" alt="Cubierta de Trovadoras" loading="lazy">
-      <figcaption>Trovadoras, Editorial Oriente, 2009. Cubierta de la edición.</figcaption>
-    </figure>
+<!-- LAS NOVELAS -->
+<section id="novelas" aria-labelledby="t-novelas">
+  <div class="tira">
+    <h2 id="t-novelas">Las novelas</h2>
+    <p class="maquina">cuatro novelas de fantasía heroica, 2012 a 2018</p>
   </div>
-  <ul class="discografia">
-    <li>
-      <h3>La canción de la Nueva Trova</h3>
-      <p>Atril Ediciones Musicales, 2001. Ensayo.</p>
-    </li>
-    <li>
-      <h3>Trovadoras</h3>
-      <p>Editorial Oriente, 2009. Entrevistas a las mujeres de la trova.</p>
-    </li>
-    <li>
-      <h3>Convertida en canción</h3>
-      <p>Editorial Capiro, 2019. La imagen de la mujer en los textos de la Nueva Trova.</p>
-    </li>
-  </ul>
+
+  <article class="cuartilla obra">
+    <p class="cabezal"><span>a. lópez sánchez · las novelas</span><span>hoja 2</span></p>
+    <div class="obra-cuerpo">
+      <div class="obra-texto">
+        <p class="obra-numero maquina">I.</p>
+        <h3>Las guerreras de la luz</h3>
+        <p class="obra-datos maquina">editorial de la mujer, 2012<br><span class="maquina-roja">premio la rosa blanca de la uneac</span></p>
+        <p class="obra-sinopsis">Una orden de mujeres guerreras se alza contra la oscuridad que avanza sobre su reino. La novela que abrió la saga fantástica del autor y le valió el premio de la UNEAC.</p>
+        <p class="nota-demo maquina">[sinopsis provisional del demo, pendiente del texto oficial]</p>
+      </div>
+      <figure class="foto">
+        <img src="img/guerreras.webp" width="640" height="966" alt="Cubierta de Las guerreras de la luz: empuñadura de espada con una rosa grabada en el pomo, sobre cuero verde" loading="lazy">
+        <figcaption class="maquina">cubierta de la edición</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <article class="cuartilla obra">
+    <p class="cabezal"><span>a. lópez sánchez · las novelas</span><span>hoja 3</span></p>
+    <div class="obra-cuerpo">
+      <div class="obra-texto">
+        <p class="obra-numero maquina">II.</p>
+        <h3>El Escudo de Valnúss</h3>
+        <p class="obra-datos maquina">editorial de la mujer, 2015</p>
+        <p class="obra-sinopsis">La saga continúa: una reliquia capaz de detener la guerra obliga a sus guardianas a decidir cuánto están dispuestas a perder para protegerla.</p>
+        <p class="nota-demo maquina">[sinopsis provisional del demo, pendiente del texto oficial]</p>
+      </div>
+      <figure class="foto">
+        <img src="img/valnuss.webp" width="640" height="977" alt="Cubierta de El Escudo de Valnúss: escudo rúnico de metal sobre un muro de piedra" loading="lazy">
+        <figcaption class="maquina">cubierta de la edición</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <article class="cuartilla obra">
+    <p class="cabezal"><span>a. lópez sánchez · las novelas</span><span>hoja 4</span></p>
+    <div class="obra-cuerpo">
+      <div class="obra-texto">
+        <p class="obra-numero maquina">III.</p>
+        <h3>El otro lado del espejo</h3>
+        <p class="obra-datos maquina">gente nueva, 2017<br><span class="maquina-roja">mención, concurso la edad de oro 2014</span></p>
+        <p class="obra-sinopsis">Fantasía heroica para lectores jóvenes: al cruzar un espejo, el mundo conocido se invierte y lo cotidiano se vuelve leyenda.</p>
+        <p class="nota-demo maquina">[sinopsis provisional del demo, pendiente del texto oficial]</p>
+      </div>
+      <figure class="foto">
+        <img src="img/espejo.webp" width="640" height="896" alt="Cubierta de El otro lado del espejo: una mano con una pluma emerge de un espejo de marco dorado tendido en el suelo de una biblioteca" loading="lazy">
+        <figcaption class="maquina">cubierta de la edición</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <article class="cuartilla obra">
+    <p class="cabezal"><span>a. lópez sánchez · las novelas</span><span>hoja 5</span></p>
+    <div class="obra-cuerpo">
+      <div class="obra-texto">
+        <p class="obra-numero maquina">IV.</p>
+        <h3>Grimorium</h3>
+        <p class="obra-datos maquina">editorial oriente, 2018</p>
+        <p class="obra-sinopsis">Un libro de conjuros que se escribe a sí mismo y los lectores que se atreven a abrirlo. La entrega más oscura de su narrativa fantástica.</p>
+        <p class="nota-demo maquina">[sinopsis provisional del demo, pendiente del texto oficial]</p>
+      </div>
+      <figure class="foto">
+        <img src="img/grimorium.webp" width="640" height="954" alt="Cubierta de Grimorium: un libro de piel cosida del que se abren tres ojos" loading="lazy">
+        <figcaption class="maquina">cubierta de la edición</figcaption>
+      </figure>
+    </div>
+  </article>
 </section>
 
-<!-- P.4 EL POETA -->
-<section class="pliego pliego-rojo" id="poeta" aria-labelledby="t-poeta">
-  <p class="cabezal"><span>Antonio López Sánchez, número especial</span><span>p. 4</span></p>
-  <h2 class="titular" id="t-poeta">El poeta</h2>
-  <article class="poema">
-    <h3>Informe legal sobre la muerte de un poema</h3>
-    <div class="poema-texto">   Después de efectuar el examen correspondiente
+<!-- LA TROVA -->
+<section id="trova" aria-labelledby="t-trova">
+  <div class="tira">
+    <h2 id="t-trova">La otra vida: la trova</h2>
+    <p class="maquina">ensayo, entrevista y crónica de la nueva trova</p>
+  </div>
+
+  <article class="cuartilla">
+    <p class="cabezal"><span>a. lópez sánchez · la trova</span><span>hoja 6</span></p>
+    <div class="obra-cuerpo">
+      <div class="obra-texto">
+        <p class="prosa prosa-inicial">Antes de las espadas fueron las guitarras. Durante dos décadas Antonio ha documentado la Nueva Trova cubana en ensayos, entrevistas y crónicas: la memoria escrita de una canción que definió a varias generaciones.</p>
+        <p class="prosa">Esa doble condición lo vuelve único en el género: el mismo autor que levanta reinos imaginarios lleva años registrando, con rigor de periodista, el cancionero real de su país.</p>
+        <ul class="lista-maquina">
+          <li><span class="maquina">1.</span> <strong>La canción de la Nueva Trova</strong> <span class="maquina">· atril ediciones musicales, 2001 · ensayo</span></li>
+          <li><span class="maquina">2.</span> <strong>Trovadoras</strong> <span class="maquina">· editorial oriente, 2009 · entrevistas a las mujeres de la trova</span></li>
+          <li><span class="maquina">3.</span> <strong>Convertida en canción</strong> <span class="maquina">· editorial capiro, 2019 · la imagen de la mujer en los textos de la nueva trova</span></li>
+        </ul>
+      </div>
+      <figure class="foto">
+        <img src="img/trovadoras.webp" width="520" height="769" alt="Cubierta de Trovadoras" loading="lazy">
+        <figcaption class="maquina">cubierta de la edición</figcaption>
+      </figure>
+    </div>
+  </article>
+</section>
+
+<!-- EL POETA -->
+<section id="poeta" aria-labelledby="t-poeta">
+  <div class="tira">
+    <h2 id="t-poeta">El poeta</h2>
+    <p class="maquina">poesía del instante, glosas en cualquier hoja</p>
+  </div>
+
+  <article class="cuartilla rayada">
+    <p class="cabezal"><span>a. lópez sánchez · el poeta</span><span>hoja 7</span></p>
+    <div class="poema">
+      <h3 class="maquina poema-titulo">informe legal sobre la muerte de un poema</h3>
+      <div class="poema-texto maquina">   Después de efectuar el examen correspondiente
 se informa
 que el poema encontrado muerto
 tiene diseminados en sus versos
@@ -221,41 +184,51 @@ la causa directa del silencio
 otra propiedad que su nostalgia y sus sueños
 y un arma enfundada en la esperanza
 con un amor intacto en la recámara</div>
-    <p class="poema-credito">Poema de Antonio López Sánchez</p>
+      <p class="poema-credito maquina">a. lópez sánchez</p>
+    </div>
   </article>
 </section>
 
-<!-- P.5 EL PERIODISTA -->
-<section class="pliego pliego-verde" id="periodista" aria-labelledby="t-periodista">
-  <p class="cabezal"><span>Antonio López Sánchez, número especial</span><span>p. 5</span></p>
-  <h2 class="titular" id="t-periodista">El periodista</h2>
-  <div class="periodista-cuerpo">
-  <div class="ficha">
-    <dl>
-      <div><dt>Nace</dt><dd>La Habana, 16 de enero de 1973</dd></div>
-      <div><dt>Formación</dt><dd>Licenciado en Comunicación Social, Universidad de La Habana. Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso, 2007.</dd></div>
-      <div><dt>Redacciones</dt><dd>Secciones culturales de las revistas Mujeres y Muchacha, 2001 a 2011.</dd></div>
-      <div><dt>Colabora en</dt><dd>La Jiribilla, La Gaceta de Cuba, El Caimán Barbudo, Juventud Rebelde y Alma Máter.</dd></div>
-      <div><dt>Además</dt><dd>Primer premio del concurso Reescribir El Quijote en Cuba, 2005. Coautor del poemario Trampas, retratos y un 17 rojo, 2005.</dd></div>
-    </dl>
+<!-- EL PERIODISTA -->
+<section id="periodista" aria-labelledby="t-periodista">
+  <div class="tira">
+    <h2 id="t-periodista">El periodista</h2>
+    <p class="maquina">ficha de redacción</p>
   </div>
-  <figure class="recorte recorte-izq">
-    <img src="img/quijote.webp" width="520" height="692" alt="Cubierta de De la extraña aventura de don Quijote" loading="lazy">
-    <figcaption>De la extraña aventura de don Quijote. Del premio Reescribir El Quijote en Cuba. Cubierta de la edición.</figcaption>
-  </figure>
-  </div>
+
+  <article class="cuartilla ficha-archivo">
+    <p class="cabezal"><span>a. lópez sánchez · el periodista</span><span>hoja 8</span></p>
+    <div class="obra-cuerpo">
+      <div class="obra-texto">
+        <dl class="ficha">
+          <div><dt class="maquina">nace</dt><dd>La Habana, 16 de enero de 1973</dd></div>
+          <div><dt class="maquina">formación</dt><dd>Licenciado en Comunicación Social, Universidad de La Habana. Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso, 2007.</dd></div>
+          <div><dt class="maquina">redacciones</dt><dd>Secciones culturales de las revistas Mujeres y Muchacha, 2001 a 2011.</dd></div>
+          <div><dt class="maquina">colabora en</dt><dd>La Jiribilla, La Gaceta de Cuba, El Caimán Barbudo, Juventud Rebelde y Alma Máter.</dd></div>
+          <div><dt class="maquina">además</dt><dd>Primer premio del concurso Reescribir El Quijote en Cuba, 2005. Coautor del poemario Trampas, retratos y un 17 rojo, 2005.</dd></div>
+        </dl>
+      </div>
+      <figure class="foto">
+        <img src="img/quijote.webp" width="520" height="692" alt="Cubierta de De la extraña aventura de don Quijote" loading="lazy">
+        <figcaption class="maquina">del premio del quijote, 2005</figcaption>
+      </figure>
+    </div>
+  </article>
 </section>
 
-<!-- P.6 DIRECTORIO -->
-<footer class="pliego pliego-cierre" id="directorio" aria-labelledby="t-directorio">
-  <p class="cabezal"><span>Antonio López Sánchez, número especial</span><span>p. 6</span></p>
-  <h2 class="titular" id="t-directorio">Directorio</h2>
-  <p class="cierre-texto">Para invitaciones, prensa, derechos o lectores que quieran escribirle al autor.</p>
-  <div class="accion accion-cierre">
-    <button class="boton boton-cierre" type="button" disabled>Escribir al autor</button>
-    <p class="nota-demo">Demo: el contacto real se conectará cuando el autor entregue sus datos.</p>
-  </div>
-  <p class="colofon">Demo de dirección visual producido por Index01. Datos biográficos y bibliográficos verificados en fuentes públicas; sinopsis y textos de sección son material sintético provisional. La Habana y Miami, 2026.</p>
+<!-- DIRECTORIO -->
+<footer class="pie" id="directorio" aria-labelledby="t-directorio">
+  <article class="cuartilla">
+    <p class="cabezal"><span>a. lópez sánchez · directorio</span><span>hoja 9</span></p>
+    <h2 id="t-directorio">Directorio</h2>
+    <p class="prosa cierre-texto">Para invitaciones, prensa, derechos o lectores que quieran escribirle al autor.</p>
+    <div class="accion">
+      <button class="sello sello-quieto" type="button" disabled>Escribir al autor</button>
+      <p class="nota-demo maquina">[demo: el contacto real se conectará cuando el autor entregue sus datos]</p>
+    </div>
+    <p class="colofon maquina">demo de dirección visual producido por index01 · datos biográficos y bibliográficos verificados en fuentes públicas · sinopsis y textos de sección son material sintético provisional · la habana y miami, 2026</p>
+    <p class="fin maquina" aria-hidden="true">· fin ·</p>
+  </article>
 </footer>
 </main>
 
