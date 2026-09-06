@@ -401,56 +401,59 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
 .lista-maquina .maquina { font-size: 0.85rem; color: var(--tinta-suave); }
 .lista-maquina strong { font-weight: 600; }
 
-/* ---------- el poeta: hoja rayada ---------- */
+/* ---------- el poeta: copia al carbon en papel cebolla ---------- */
 
-.rayada {
-  --renglon: 1.9rem;
-  --margen-libreta: clamp(2.4rem, 7vw, 4.6rem);
-  padding-left: calc(var(--margen-libreta) + 1.4rem);
-  background:
-    var(--grano),
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0,
-      transparent calc(var(--renglon) - 1.5px),
-      rgba(124, 152, 176, 0.75) calc(var(--renglon) - 1.5px),
-      rgba(124, 152, 176, 0.75) var(--renglon)
-    );
-  background-color: var(--papel);
+.carbon {
+  /* papel de segunda: mas frio y delgado que la cuartilla */
+  background: var(--grano), #f2ede0;
+  overflow: clip;
 }
-.rayada::before {
+/* el tipeo de copia: tinta de carbon, un punto mas difusa */
+.carbon .poema-titulo,
+.carbon .poema-texto {
+  color: #3b3327;
+  text-shadow: 0 0 0.6px rgba(59, 51, 39, 0.55);
+}
+/* el cerco de la taza de la madrugada */
+.carbon::before {
   content: "";
   position: absolute;
-  top: 0; bottom: 0;
-  left: var(--margen-libreta);
-  width: 1px;
-  background: var(--rojo-tenue);
+  top: -2.2rem;
+  right: -2.6rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side,
+      transparent 72%,
+      rgba(150, 101, 58, 0.2) 75%,
+      rgba(150, 101, 58, 0.08) 80%,
+      rgba(150, 101, 58, 0.26) 86%,
+      rgba(150, 101, 58, 0.06) 89%,
+      transparent 91%);
+  transform: rotate(14deg) scaleX(0.96);
+  pointer-events: none;
 }
-.rayada .cabezal { margin-bottom: 1.9rem; }
+.carbon .cabezal { margin-bottom: 1.9rem; }
 
-.poema {
-  padding-left: 0;
-}
 .poema-titulo {
   font-size: 1.05rem;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 0.28em;
   text-decoration-thickness: 1px;
-  line-height: var(--renglon);
-  margin-bottom: var(--renglon);
+  margin-bottom: 1.8rem;
 }
 .poema-texto {
   white-space: pre-wrap;
   font-size: 0.98rem;
-  line-height: var(--renglon);
+  line-height: 1.85;
   max-width: 56ch;
 }
 .poema-credito {
-  margin-top: var(--renglon);
+  margin-top: 1.8rem;
   font-size: 0.85rem;
   color: var(--rojo);
-  line-height: var(--renglon);
 }
 
 /* ---------- el periodista: ficha ---------- */
@@ -510,9 +513,9 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
   section, section:nth-of-type(odd), section:nth-of-type(even), .pie { transform: none; }
   .cuartilla::after, section .cuartilla::after { transform: rotate(0.7deg) translate(4px, 3px); }
   .cabezal { margin-bottom: 1.8rem; }
-  .rayada { --renglon: 1.7rem; --margen-libreta: 1.6rem; padding-left: 2.8rem; }
-  .rayada .cabezal { font-size: 0.7rem; letter-spacing: 0.03em; }
-  .poema-texto { font-size: 0.88rem; }
+  .carbon .cabezal { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+  .carbon::before { top: -3rem; right: -3.4rem; width: 8.5rem; height: 8.5rem; }
+  .poema-texto { font-size: 0.88rem; line-height: 1.8; }
 }
 
 @media (prefers-reduced-motion: reduce) {
