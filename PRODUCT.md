@@ -45,9 +45,10 @@ Verificado en fuentes públicas (EcuRed, El Camagüey, La Jiribilla):
 - Periodismo cultural: revistas Mujeres y Muchacha (2001-2011); colaborador de La Jiribilla, La Gaceta de Cuba, El Caimán Barbudo, Juventud Rebelde, Alma Máter.
 
 - Carátulas reales de las ediciones, entregadas por Ernesto (optimizadas en img/ del proyecto): Las guerreras de la luz, El Escudo de Valnúss, El otro lado del espejo, Grimorium, Trovadoras y De la extraña aventura de don Quijote. Originales en OneDrive/Imágenes/tony.
-- Poema real del autor, entregado por Ernesto y publicado en la página: "Informe legal sobre la muerte de un poema" (texto íntegro en index.html, sección El poeta).
+- Poema real del autor, entregado por Ernesto y publicado en la página: "Informe legal sobre la muerte de un poema" (texto íntegro en /poeta/).
+- Fotos reales del autor, entregadas por Tony vía Ernesto (sept 2026, calidad media por las condiciones de envío desde Cuba, 715px nativos): retrato oficial junto al cañón de la fortaleza de La Habana (img/retrato.webp) y una foto del mar que el autor quiso en su home por valor simbólico (img/mar.webp). Originales en OneDrive/Imágenes/tony.
 
-Ausencias que no se deben fabricar: retrato del autor, sinopsis oficiales, datos de contacto, testimonios o reseñas citables.
+Ausencias que no se deben fabricar: sinopsis oficiales, datos de contacto, testimonios o reseñas citables.
 
 ## Product Principles
 

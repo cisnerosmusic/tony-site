@@ -140,9 +140,10 @@ a:hover { text-decoration-thickness: 2px; }
 /* la rotacion vive en la seccion contenedora: un transform en la propia
    cuartilla crearia stacking context y la hoja de abajo (::after, z -1)
    taparia el grano y los renglones del fondo propio */
-section:nth-of-type(odd) { transform: rotate(0.35deg); }
-section:nth-of-type(even) { transform: rotate(-0.3deg); }
-section:nth-of-type(even) .cuartilla::after { transform: rotate(-1deg) translate(-5px, 3px); }
+section:nth-of-type(odd), main > .cuartilla:nth-of-type(odd) { transform: rotate(0.35deg); }
+section:nth-of-type(even), main > .cuartilla:nth-of-type(even) { transform: rotate(-0.3deg); }
+section:nth-of-type(even) .cuartilla::after,
+main > .cuartilla:nth-of-type(even)::after { transform: rotate(-1deg) translate(-5px, 3px); }
 
 .cabezal {
   font-family: "Courier Prime", monospace;
@@ -235,6 +236,50 @@ section:nth-of-type(even) .cuartilla::after { transform: rotate(-1deg) translate
   transform: rotate(-2deg);
 }
 
+.portada-cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(11rem, 15rem);
+  gap: clamp(1.4rem, 4vw, 2.8rem);
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.foto-retrato { margin-top: 0; }
+
+/* la foto del mar, suelta sobre la mesa */
+.foto-mar {
+  width: min(26rem, 88%);
+  margin: 3.2rem auto 0;
+  transform: rotate(0.9deg);
+}
+.foto-mar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 6px solid var(--papel);
+  outline: 1px solid var(--mesa-sombra);
+  box-shadow: var(--sombra-hoja);
+}
+
+/* navegacion mecanografiada al pie de cada hoja */
+.indice-pie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+  border-top: 1px solid var(--mesa-sombra);
+  margin-top: 3rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+.indice-pie a { text-decoration: none; }
+.indice-pie a:hover { text-decoration: underline; text-underline-offset: 0.24em; }
+.indice-pie span[aria-current] {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.24em;
+}
+
+.accion-cierre { margin: 1.8rem 0 2.4rem; }
+
 .indice {
   border-top: 1px solid var(--mesa-sombra);
   padding-top: 1.1rem;
@@ -271,7 +316,7 @@ section:nth-of-type(even) .cuartilla::after { transform: rotate(-1deg) translate
   text-align: center;
 }
 section:nth-of-type(even) .tira { transform: rotate(1deg); }
-.tira h2 {
+.tira h1, .tira h2 {
   font-family: "IM Fell DW Pica", "Georgia", serif;
   font-weight: 400;
   font-size: clamp(1.7rem, 4.5vw, 2.4rem);
@@ -458,7 +503,9 @@ section:nth-of-type(even) .tira { transform: rotate(1deg); }
 
 @media (max-width: 40rem) {
   body { padding-top: 1rem; }
-  .obra-cuerpo { grid-template-columns: 1fr; }
+  .obra-cuerpo, .portada-cuerpo { grid-template-columns: 1fr; }
+  .foto-retrato { max-width: 15rem; margin-inline: auto; }
+  .foto-mar { width: min(20rem, 92%); }
   .foto { max-width: 13rem; margin-inline: auto; }
   section, section:nth-of-type(odd), section:nth-of-type(even), .pie { transform: none; }
   .cuartilla::after, section .cuartilla::after { transform: rotate(0.7deg) translate(4px, 3px); }
