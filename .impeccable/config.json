@@ -1,0 +1,128 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font-size",
+        "value": "0.75rem",
+        "createdAt": "2026-09-06T18:20:03.030Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.76rem",
+        "createdAt": "2026-09-06T18:20:03.130Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.78rem",
+        "createdAt": "2026-09-06T18:20:03.229Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.8rem",
+        "createdAt": "2026-09-06T18:20:03.331Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.82rem",
+        "createdAt": "2026-09-06T18:20:03.429Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.85rem",
+        "createdAt": "2026-09-06T18:20:03.515Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.88rem",
+        "createdAt": "2026-09-06T18:20:03.586Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.9rem",
+        "createdAt": "2026-09-06T18:20:03.661Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.95rem",
+        "createdAt": "2026-09-06T18:20:03.742Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "0.98rem",
+        "createdAt": "2026-09-06T18:20:03.808Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1rem",
+        "createdAt": "2026-09-06T18:20:03.879Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.02rem",
+        "createdAt": "2026-09-06T18:20:03.942Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.05rem",
+        "createdAt": "2026-09-06T18:20:04.014Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.1rem",
+        "createdAt": "2026-09-06T18:20:04.078Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.3rem",
+        "createdAt": "2026-09-06T18:20:04.141Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "2rem",
+        "createdAt": "2026-09-06T18:20:04.211Z",
+        "reason": "escala utilitaria del aparato mecanografiado; DESIGN.md la documenta como rango, el build usa pasos literales"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#3b3327",
+        "createdAt": "2026-09-06T18:20:04.276Z",
+        "reason": "tinta de copia al carbon o sombra de papel: tratamiento de una sola hoja, no canonizado a proposito por el documentador"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(52, 63, 75, 0.19)",
+        "createdAt": "2026-09-06T18:20:04.336Z",
+        "reason": "tinta de copia al carbon o sombra de papel: tratamiento de una sola hoja, no canonizado a proposito por el documentador"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(59, 51, 39, 0.55)",
+        "createdAt": "2026-09-06T18:20:04.408Z",
+        "reason": "tinta de copia al carbon o sombra de papel: tratamiento de una sola hoja, no canonizado a proposito por el documentador"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(84, 62, 34, 0.18)",
+        "createdAt": "2026-09-06T18:20:04.462Z",
+        "reason": "tinta de copia al carbon o sombra de papel: tratamiento de una sola hoja, no canonizado a proposito por el documentador"
+      }
+    ]
+  }
+}

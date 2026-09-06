@@ -1,212 +1,229 @@
 ---
-name: Antonio López Sánchez, escritor
-description: La mesa del escritor, cuartillas mecanografiadas sobre madera café con leche, un solo acento rojo de cinta bicolor
+name: Ala del Mar
+description: La casa del escritor Antonio López Sánchez, cuartillas sobre una mesa azul frente al mar de Alamar
 colors:
-  mesa: "#eadcc4"
+  mesa: "#dde6ec"
+  mesa-fria: "#b9c7d1"
   mesa-sombra: "#d9c8ab"
   papel: "#faf5e9"
   papel-viejo: "#f5edda"
-  papel-cebolla: "#f2ede0"
   tinta: "#262019"
   tinta-suave: "#4d4335"
-  tinta-carbon: "#3b3327"
-  rojo: "#b3372b"
-  rojo-profundo: "#922c22"
-  rojo-tenue: "#c86a5f"
+  anil: "#1d4e89"
+  anil-profundo: "#163c6a"
+  anil-tenue: "#7d97b8"
 typography:
   display:
-    fontFamily: "IM Fell DW Pica, Georgia, serif"
+    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
     fontSize: "clamp(2.7rem, 8.5vw, 5.4rem)"
     fontWeight: 400
     lineHeight: 1.02
     letterSpacing: "-0.01em"
+  casa:
+    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
+    fontSize: "clamp(2.4rem, 7.5vw, 4.6rem)"
+    fontWeight: 700
+    lineHeight: 1.02
+    letterSpacing: "0.05em"
   headline:
-    fontFamily: "IM Fell DW Pica, Georgia, serif"
-    fontSize: "clamp(1.7rem, 4.5vw, 2.4rem)"
-    fontWeight: 400
-    lineHeight: 1.1
+    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
+    fontSize: "clamp(1.5rem, 4vw, 2.1rem)"
+    fontWeight: 700
+    lineHeight: 1.15
+    letterSpacing: "0.06em"
   title:
-    fontFamily: "IM Fell DW Pica, Georgia, serif"
+    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
     fontSize: "clamp(1.9rem, 5vw, 2.9rem)"
     fontWeight: 400
     lineHeight: 1.05
-    letterSpacing: "-0.005em"
+  seccion:
+    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
+    fontSize: "clamp(1.15rem, 2.6vw, 1.45rem)"
+    fontWeight: 700
+    letterSpacing: "0.08em"
   body:
-    fontFamily: "EB Garamond, Georgia, serif"
+    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
     fontSize: "1.15rem"
     fontWeight: 400
     lineHeight: 1.65
-  label:
+  maquina:
     fontFamily: "Courier Prime, Courier New, monospace"
-    fontSize: "0.78rem"
+    fontSize: "0.85rem"
     fontWeight: 400
     letterSpacing: "0.06em"
-spacing:
-  entre-cuartillas: "3rem"
-  bajo-cabezal: "2.6rem"
-  margen-cuartilla: "clamp(1.4rem, 5vw, 4rem)"
 components:
   sello:
     backgroundColor: "transparent"
-    textColor: "{colors.rojo}"
-    typography: "{typography.label}"
-    rounded: "0"
+    textColor: "{colors.anil}"
+    typography: "{typography.maquina}"
     padding: "0.85rem 1.9rem"
   sello-hover:
-    textColor: "{colors.rojo-profundo}"
-  sello-disabled:
-    textColor: "{colors.rojo-tenue}"
+    textColor: "{colors.anil-profundo}"
+  sello-menor:
+    textColor: "{colors.anil}"
+    padding: "0.6rem 1.3rem"
   cuartilla:
     backgroundColor: "{colors.papel}"
     textColor: "{colors.tinta}"
-    rounded: "0"
     padding: "1.4rem clamp(1.4rem, 5vw, 4rem) 3.2rem"
-    width: "min(100%, 46rem)"
   tira:
     backgroundColor: "{colors.papel-viejo}"
     textColor: "{colors.tinta}"
-    rounded: "0"
     padding: "0.9rem 2.4rem 1rem"
+  vyv:
+    backgroundColor: "{colors.papel-viejo}"
+    textColor: "{colors.tinta}"
+    padding: "1.6rem clamp(1.2rem, 3vw, 2.2rem)"
 ---
 
-# Design System: Antonio López Sánchez, escritor
+# Design System: Ala del Mar
 
 ## Overview
 
-**Creative North Star: "La mesa del escritor"**
+**Creative North Star: "La mesa del escritor frente al mar"**
 
-La web es la mesa de trabajo de un escritor a la vieja usanza: cuartillas mecanografiadas apoyadas sobre una mesa de madera clara color café con leche. No hay pantallas dentro del mundo: todo lo que se ve es papel, tinta y el rojo de la cinta bicolor de la máquina de escribir. Cada sección es una hoja distinta del montón, con su rotación leve, su hoja de abajo asomando y su cabezal mecanografiado, y las secciones se anuncian con tiras de papel viejo recortadas.
+Ala del Mar es la casa con nombre propio del escritor Antonio López Sánchez, y la web es su mesa de trabajo vista desde arriba: cuartillas de papel cálido apiladas sobre una mesa azul pálido, con la hoja de abajo asomando torcida, sellos de goma entintados en añil, copias al carbón con mancha de café y navegación mecanografiada al pie de cada hoja. Todo lo que se ve es un objeto del oficio de escribir a la vieja usanza; no hay componentes "de web" (hero, cards, badges), hay hojas, tiras, sellos y fichas. Cada hoja interior cierra con el sello de la casa: la línea "bene scriptus" (`.fin`).
 
-El mundo distingue tres voces materiales: la imprenta antigua (IM Fell DW Pica, para nombres y títulos), la prosa impresa (EB Garamond, para leer) y lo mecanografiado (Courier Prime, para cabezales, datos, listas y todo lo que "salió de la máquina"). El papel tiene grano real (ruido SVG en data URI, tile de 220px, fundido sobre el color del papel) y las hojas proyectan una sombra suave doble, nunca dura.
+La voz es primera persona ("Mis libros", "Escribo fantasía heroica") salvo cuando se declara otra voz. La estructura es multipágina y multiidioma (selector es · en · fr · it · ru, con los idiomas no publicados marcados `.pronto`), pero los textos literarios se publican siempre en español, acompañados de una `.nota-idioma` mecanografiada que lo aclara.
 
-Reemplaza al mundo anterior de revista literaria cubana (Besley/Archivo, tres tintas), descartado por rediseño pedido por el usuario. Rechazos confirmados: web de autor genérica, trozos de cinta adhesiva sobre las cubiertas, pies de foto bajo las cubiertas, numeración "hoja N" en cabezales e índice.
+Esta identidad reemplaza por completo la iteración anterior (IM Fell + EB Garamond con acento rojo). El rojo fue retirado del sistema; el único acento es el añil de bolígrafo.
 
 **Key Characteristics:**
-- Todo objeto visible es papel sobre mesa; cero cromo de interfaz
-- Un solo acento: el rojo de cinta bicolor (#b3372b), siempre en Courier
-- Tres tipografías con roles materiales estrictos (imprenta / prosa / máquina)
-- Rotaciones leves (0.3° a 2°) y sombras suaves como única profundidad
-- Un solo motion: el oficio se mecanografía al cargar
+- Mesa azul pálido (#dde6ec) como fondo universal; nunca blanco puro ni gris neutro.
+- Papel con grano SVG y hoja de abajo asomando; rotaciones alternas de fracciones de grado.
+- Una sola familia impresa (Bonum) y una mecanografiada (Courier Prime); jerarquía por caja y puntaje, no por cambio de fuente.
+- Un solo acento: añil #1d4e89. Sellos de goma con máscara de entintado.
+- Un solo motion: el oficio mecanografiándose al cargar la portada, con reduced-motion respetado.
 
 ## Colors
 
-Paleta de materiales: dos maderas, tres papeles, tres tintas y un rojo de cinta con sus estados.
+Paleta de escritorio: azules fríos de mesa, papeles cálidos, tinta sepia y un único añil de bolígrafo.
 
 ### Primary
-- **Rojo de cinta bicolor** (#b3372b): el único acento del mundo. Premios y menciones en texto mecanografiado (`.maquina-roja`), el sello de goma, el crédito del poema, el borde superior de la ficha de archivo, `::selection`, `caret-color` y el anillo de foco. Nunca aparece en Garamond ni en IM Fell.
-- **Rojo profundo** (#922c22): estado hover/active del sello.
-- **Rojo tenue** (#c86a5f): sello deshabilitado.
+- **Añil de bolígrafo** (#1d4e89, `--anil`): el único acento del sistema. Sellos de goma, enlaces de idiomas, línea de premio (`.maquina-azul`), firma del autor (`.vyv-firma`), crédito del poema, borde superior de la ficha de archivo, foco visible, selección de texto y caret.
+- **Añil profundo** (#163c6a): estado hover/active del sello; no tiene otro uso.
+- **Añil tenue** (#7d97b8, `--anil-tenue`): añil desactivado (sello `:disabled`, idiomas `.pronto` vía opacidad).
 
 ### Neutral
-- **Mesa café con leche** (#eadcc4): el fondo del documento, la madera. Nunca lleva texto directamente encima salvo nada: todo texto vive sobre papel.
-- **Sombra de mesa** (#d9c8ab): bordes de foto, filetes divisores (índice, lista mecanografiada, ficha, colofón) y el tinte de las hojas más viejas del montón.
-- **Papel de cuartilla** (#faf5e9): la hoja principal, siempre con el grano SVG encima.
-- **Papel viejo** (#f5edda): las hojas de abajo del montón y las tiras separadoras.
-- **Papel cebolla** (#f2ede0): solo la hoja de copia al carbón (El poeta); más frío y delgado que la cuartilla.
-- **Tinta sepia** (#262019): el texto. Casi negro, nunca negro puro.
-- **Tinta suave** (#4d4335): cabezales, datos secundarios, numeración, colofón, notas de demo.
-- **Tinta de carbón** (#3b3327): solo el tipeo de la copia al carbón, con `text-shadow: 0 0 0.6px rgba(59,51,39,0.55)` para difuminarla un punto.
+- **Mesa azul pálido** (#dde6ec, `--mesa`): fondo del body en todas las páginas. La mesa siempre se ve entre hojas.
+- **Mesa fría** (#b9c7d1, `--mesa-fria`): contornos finos de fotos y cubiertas (outline 1px), borde de la cubierta dominante.
+- **Sombra de mesa** (#d9c8ab, `--mesa-sombra`): hairlines cálidos: separadores de listas, fichas, índice al pie, borde de cubiertas pequeñas.
+- **Papel de cuartilla** (#faf5e9, `--papel`): superficie principal de toda hoja (`.cuartilla`), marco blanco-hueso de las fotos.
+- **Papel viejo** (#f5edda, `--papel-viejo`): la hoja de abajo del montón, las tiras separadoras y el bloque "Con voz y voto" (`.vyv`).
+- **Tinta** (#262019, `--tinta`): texto impreso; también el cursor de máquina.
+- **Tinta suave** (#4d4335, `--tinta-suave`): metadatos, cabezales, notas, colofón, `.fin`.
 
 ### Named Rules
-**The Cinta Bicolor Rule.** El rojo es la tinta roja de la máquina: solo existe en texto Courier, en el sello y en filetes de archivo. Jamás tiñe fondos, titulares de imprenta ni prosa Garamond.
+**La regla del añil único.** Hay un solo acento en toda la casa: el añil #1d4e89, aplicado a lo que un escritor marcaría con su bolígrafo o su sello. El rojo #b3372b de la iteración anterior fue retirado; no vuelve. Ningún segundo acento entra al sistema.
 
-**The Todo Es Papel Rule.** Ningún texto se apoya sobre la mesa. Todo contenido vive dentro de una cuartilla, una tira o el pie, siempre con grano de papel.
+**La mesa nunca es blanca.** Ningún fondo es #fff ni gris neutro: o es mesa azul, o es papel cálido con grano (`--grano` sobre `--papel` o `--papel-viejo`).
 
 ## Typography
 
-**Display Font:** IM Fell DW Pica (con Georgia, serif)
-**Body Font:** EB Garamond variable 400-800 (con Georgia, serif)
-**Label/Mono Font:** Courier Prime 400/700 (con Courier New, monospace)
+**Display Font:** Bonum, es decir TeX Gyre Bonum, clon libre de Bookman Old Style, la letra del autor (fallback "Bookman Old Style", Georgia, serif). Cuatro cortes locales: 400, 700, italic, bold italic.
+**Body Font:** la misma Bonum; el mundo imprime todo con una sola familia.
+**Label/Mono Font:** Courier Prime (fallback "Courier New", monospace), en 400, 700 e italic locales. Es "lo mecanografiado": cabezales, navegación, notas, sellos, versos en máquina.
 
-**Character:** Tres oficios de la letra: la imprenta antigua e irregular de IM Fell para lo que merece portada, la prosa serena de Garamond para leer, y la máquina de escribir para todo lo que el autor teclearía él mismo. Las tres son de época; ninguna es geométrica ni de sistema.
+**Character:** Bonum es redonda, ancha y libresca; Courier Prime aporta el tecleo documental. La jerarquía se construye con una sola fuente impresa: los títulos de sección van en ALTAS de Bonum y lo subordinado baja de puntaje (regla pedida por el propio autor).
 
 ### Hierarchy
-- **Display** (400, clamp(2.7rem, 8.5vw, 5.4rem), 1.02): solo el nombre del autor en la portada. `text-wrap: balance`.
-- **Headline** (400, clamp(1.7rem, 4.5vw, 2.4rem) a clamp(2rem, 5vw, 2.8rem), 1.1): títulos de sección en las tiras y en el pie.
-- **Title** (400, clamp(1.9rem, 5vw, 2.9rem), 1.05): títulos de obra dentro de las cuartillas.
-- **Body** (400, 1.15rem, 1.65): prosa Garamond; sinopsis y prosa a máximo 58ch, cierre a 44ch.
-- **Label** (400, 0.78rem a 1.05rem, letter-spacing 0.06em a 0.14em): todo lo mecanografiado (clases `.maquina` / `.maquina-roja`): cabezales, datos editoriales, numeración romana, listas, ficha, colofón. El poema completo es label a 0.98rem con line-height 1.85 y `white-space: pre-wrap`.
+- **Display / nombre de autor** (400, clamp(2.7rem, 8.5vw, 5.4rem), lh 1.02): `.nombre`; título mayor en caja normal, tracking -0.01em.
+- **Casa** (700, clamp(2.4rem, 7.5vw, 4.6rem), ALTAS, tracking 0.05em, color añil): `.casa-nombre`, solo para "Ala del Mar" en la portada.
+- **Headline / tira** (700, clamp(1.5rem, 4vw, 2.1rem), ALTAS, tracking 0.06em): títulos de sección sobre tira de papel viejo.
+- **Titular menor** (700, clamp(1.3rem, 3vw, 1.7rem), ALTAS, tracking 0.07em): `.titular-menor`, encabezados dentro de hoja.
+- **Title / obra** (400, clamp(1.9rem, 5vw, 2.9rem), lh 1.05): títulos de libro (`.obra-texto h3`), caja normal.
+- **Sección de página de libro** (700, clamp(1.15rem, 2.6vw, 1.45rem), ALTAS, tracking 0.08em, hairline inferior): `.bloque > h2`.
+- **Body** (400, 1.15rem, lh 1.65): prosa en Bonum; máximo 58ch (62ch en fragmentos). Capitular en `.prosa-inicial::first-letter` (3.1em).
+- **Label / máquina** (Courier Prime 400 a 700, 0.75 a 1rem, tracking 0.06 a 0.14em, ALTAS solo en sellos, `.indice-titulo` y `.fragmento-titulo`): metadatos, navegación, notas de idioma.
+- **Lema** (Bonum italic, clamp(1.05rem, 2.6vw, 1.35rem), tinta suave): "bene scriptus" bajo el nombre de la casa.
 
 ### Named Rules
-**The Tres Manos Rule.** IM Fell solo para nombres y títulos (incluida la letra capitular `::first-letter` de la prosa inicial); Garamond solo para prosa corrida; Courier para todo dato, cabezal, lista y acción. Un texto nunca mezcla dos manos dentro de la misma frase salvo la convención número/dato en las listas.
+**La regla de las ALTAS.** Los títulos de sección van en la misma Bonum en mayúsculas con tracking positivo; lo subordinado se distingue por menor puntaje, nunca por otra fuente decorativa. Es la regla del autor y ordena toda la jerarquía.
 
-**The Mayúscula Propia Rule.** En texto mecanografiado, mayúscula inicial obligatoria en nombres propios, premios y editoriales; el minúsculas-todo solo se permite en rótulos cortos de una palabra como "índice" o los `dt` de la ficha.
-
-**The Sin Numeración Rule.** Los cabezales mecanografiados llevan autor y sección ("A. López Sánchez · Las novelas"), nunca "hoja N". El índice es una lista simple sin números visibles (`list-style: none`).
+**Dos letras, dos oficios.** Bonum imprime (prosa, títulos, versos impresos); Courier Prime mecanografía (cabezales, índices, sellos, fichas, notas, versos en máquina `.fragmento-verso`). Ningún texto usa una tercera familia.
 
 ## Layout
 
-Una sola columna de hojas: cada cuartilla mide `min(100%, 46rem)` centrada, con padding interno `1.4rem clamp(1.4rem, 5vw, 4rem) 3.2rem` y 3rem de aire entre cuartillas consecutivas. El body respira `clamp(1.2rem, 4vw, 3.5rem)` arriba y 4rem abajo sobre la mesa.
+Una columna de hojas centradas: cada `.cuartilla` mide `min(100%, 46rem)` con padding interno `1.4rem clamp(1.4rem, 5vw, 4rem) 3.2rem` y 3rem de separación entre hojas. El body respira con `clamp(1.2rem, 4vw, 3.5rem)` arriba y 4rem abajo, dejando ver la mesa. Las secciones alternan rotaciones (impar +0.35deg, par -0.3deg) aplicadas al contenedor, nunca a la cuartilla misma (un transform propio crearía stacking context y taparía la hoja de abajo).
 
-Las secciones alternan rotación: impares +0.35°, pares -0.3°. La rotación vive en la `section` contenedora, no en la cuartilla (un transform propio crearía stacking context y la hoja de abajo taparía el grano). Dentro de las obras, `.obra-cuerpo` es grid de dos columnas: texto flexible y foto de `minmax(9.5rem, 12.5rem)`, gap `clamp(1.4rem, 4vw, 2.8rem)`.
+Grids internos de dos columnas: portada (`minmax(0,1fr)` + retrato `minmax(11rem,15rem)`; en `.portada-casa` el retrato va a la izquierda), obra (texto + cubierta `minmax(9.5rem,12.5rem)`), fichas (`dt` estrecho + `dd`). Galería en `repeat(auto-fit, minmax(12rem, 1fr))`. Un solo breakpoint a 40rem: los grids caen a una columna, las rotaciones de sección se anulan (la hoja de abajo conserva la suya) y las fotos se centran con ancho acotado.
 
-Un solo breakpoint (max-width: 40rem): las rotaciones de sección se anulan (las hojas de abajo conservan la suya), la obra pasa a una columna y la foto se centra a máximo 13rem.
+La navegación es doble: el índice mecanografiado de la portada y el `.indice-pie` al pie de cada hoja con las 8 entradas fijas (Portada, Mis libros, Inéditos, Tinta-ciones, La trova, Plano abierto, El periodista, Directorio), con la página actual en `aria-current` subrayada en bold.
+
+**La regla de la hoja nueva.** Toda página de libro nueva se genera con `herramientas/gen-libro.py` desde un manifiesto JSON (`herramientas/libros/<slug>.json`); su estructura es fija y en este orden: CUBIERTA dominante, NOTA DE CONTRATAPA, FICHA, FRAGMENTOS, PRESENTACIONES, PRENSA, CON VOZ Y VOTO. No se maquetan hojas de libro a mano.
 
 ## Elevation & Depth
 
-Profundidad de papel apilado, nunca de interfaz. La sombra canónica de hoja es doble y suave: `0 2px 4px rgba(84, 62, 34, 0.1), 0 6px 18px rgba(84, 62, 34, 0.13)` (var `--sombra-hoja`), en tono madera, jamás gris ni negra. La segunda capa de profundidad es física: cada cuartilla lleva una hoja de abajo (`::after` en papel viejo, rotada ~1° y desplazada unos píxeles, z-index -1) y la portada suma una tercera hoja (`::before`) para leer como montón. Las fotos llevan sombra mínima `0 1px 3px rgba(84, 62, 34, 0.18)` más borde de 1px en sombra de mesa.
+La profundidad es física, no atmosférica: una hoja de papel proyecta una sombra corta sobre la mesa y deja ver la hoja de abajo del montón (pseudo-elemento `::after` en papel viejo, rotado y desplazado unos píxeles, con z-index -1; la portada añade una tercera hoja con `::before`). No hay glows, blurs de color ni elevaciones por estado.
 
 ### Shadow Vocabulary
-- **Sombra de hoja** (`box-shadow: 0 2px 4px rgba(84,62,34,0.1), 0 6px 18px rgba(84,62,34,0.13)`): cuartillas y tiras.
-- **Hoja de abajo** (`box-shadow: 0 2px 8px rgba(84,62,34,0.08)`): el ::after del montón.
-- **Foto revelada** (`box-shadow: 0 1px 3px rgba(84,62,34,0.18)`): cubiertas de libro.
+- **Sombra de hoja** (`box-shadow: 0 2px 4px rgba(52, 63, 75, 0.11), 0 6px 18px rgba(52, 63, 75, 0.14)`, `--sombra-hoja`): toda cuartilla, tira, foto enmarcada y cubierta dominante.
+- **Hoja de abajo** (`0 2px 8px rgba(52, 63, 75, 0.09)`): el ::after del montón.
+- **Objeto apoyado** (`0 1px 3px` a `0 1px 4px`, rgba fría u ocre según el objeto): cubiertas pequeñas, galería, hoja `.vyv`.
 
 ### Named Rules
-**The Sombra Tibia Rule.** Toda sombra usa la base rgba(84, 62, 34, x): sombra de madera bajo papel. Nada de sombras duras con offset, nada de rgba(0,0,0,x).
+**La regla del papel apilado.** La única fuente de profundidad es papel sobre papel: sombra corta más hoja de abajo asomando. Nada "flota" ni se eleva al hacer hover; lo más que hace una cubierta es enderezarse (`.cuartilla:hover .foto`).
 
 ## Shapes
 
-Radio cero en todo: el papel se corta recto (el único radius del sistema es el 1px del anillo de foco). La forma característica es el rectángulo levemente rotado: cuartillas heredan ±0.3° de su sección, tiras ±1° a 1.2°, fotos ±1.8° a 2°, el sello -2°. Los filetes son líneas de 1px en sombra de mesa; la ficha de archivo se distingue con un borde superior de 3px en rojo. El grano de papel (`--grano`, ruido fractal SVG en data URI) se apila como primera capa de background sobre cada superficie de papel.
+Esquinas vivas en todo: papel, fotos, sellos y fichas tienen radio 0 (la única excepción es el `border-radius: 1px` del contorno de foco). La geometría del mundo es la rotación leve y alterna: hojas ±0.3deg, hoja de abajo ±1deg, tiras ±1.2deg, fotos ±2deg, sello -2deg, siempre alternando el signo entre elementos consecutivos. Los bordes son de dos familias: marcos de foto (borde grueso de papel 5-6px + outline 1px mesa fría) y hairlines de 1px en mesa-sombra para separar filas y pies. El sello lleva doble trazo: border 2px + outline 1px separado 3px, con máscara de entintado SVG (`--entintado`) que le come calvas de tinta.
+
+**La regla de nada redondeado.** Ningún radio, ninguna píldora, ningún círculo decorativo. Si un elemento necesita distinguirse, se rota o cambia de papel, no de forma.
 
 ## Components
 
-### Sello de goma (acción única)
-El botón del mundo es un sello de goma entintado: Courier 700, 1rem, mayúsculas con tracking 0.14em, rojo sobre transparente, doble marco (border 2px + outline 1px con offset 3px), rotado -2°, padding 0.85rem 1.9rem.
-- **Entintado:** `mask-image: var(--entintado)` (ruido SVG 260x140) le come calvas de tinta; ningún sello se estampa perfecto.
-- **Hover:** se aprieta (`scale(0.97)`) y oscurece a rojo profundo (#922c22); **active** `scale(0.94)`.
-- **Focus:** outline 2px rojo, offset 5px.
-- **Disabled:** todo pasa a rojo tenue (#c86a5f), cursor not-allowed.
+### Sello (botón/enlace primario)
+- **Carácter:** sello de goma entintado en añil, siempre un poco torcido.
+- **Shape:** rectángulo de esquinas vivas rotado -2deg; border 2px añil + outline 1px a 3px; máscara `--entintado` (260x140px) que simula el entintado irregular.
+- **Tipografía:** Courier Prime 700, 1rem, ALTAS, tracking 0.14em; padding 0.85rem 1.9rem; fondo transparente.
+- **Hover / Active:** se aprieta contra el papel (scale 0.97 / 0.94) y oscurece a añil profundo (#163c6a); transición 0.3s con `--paso`.
+- **Disabled:** todo en añil tenue (#7d97b8), cursor not-allowed.
+- **Variante `.sello-menor`:** 0.82rem, padding 0.6rem 1.3rem, tracking 0.12em.
 
-### Cuartilla
-- **Corner Style:** recto, sin radius.
-- **Background:** grano SVG sobre papel #faf5e9 (variante carbón: mancha de café + grano sobre #f2ede0, ver abajo).
-- **Shadow Strategy:** sombra de hoja + hoja de abajo en ::after (ver Elevation & Depth).
-- **Internal Padding:** 1.4rem arriba, clamp(1.4rem, 5vw, 4rem) lateral, 3.2rem abajo.
-- **Cabezal:** primera línea siempre, Courier 0.78rem en tinta suave, 2.6rem de aire debajo (1.9rem en la copia al carbón, 1.8rem en móvil).
+### Cuartilla (contenedor universal)
+- Papel #faf5e9 con grano SVG, `--sombra-hoja`, sin radio; hoja de abajo en papel viejo vía ::after. Abre con `.cabezal` mecanografiado (0.78rem, tinta suave) y cierra con `.indice-pie` y, en hojas interiores, `.fin`.
 
 ### Tira separadora
-Recorte de papel viejo que anuncia cada sección: `width: fit-content` centrada, grano + papel viejo, sombra de hoja, rotación -1.2° (pares +1°). Contiene el h2 en IM Fell y una línea Courier de 0.82rem en tinta suave.
+- Título de sección sobre tira de papel viejo con grano, `width: fit-content` centrada, rotada (-1.2deg / +1deg alternado), con subtítulo mecanografiado opcional.
 
-### Foto de cubierta
-`figure.foto` rotada ±1.8° a 2°, sin cinta adhesiva, sin figcaption ni texto debajo (decisión confirmada por el usuario; el alt cuenta la cubierta). Imagen con borde 1px sombra de mesa y sombra mínima. Al hover de la cuartilla la foto se endereza a 0.6° (`transition: transform 0.4s var(--paso)`).
+### Índice al pie (navegación)
+- Courier Prime 0.85rem, flex con wrap, hairline superior en mesa-sombra; enlaces sin subrayado hasta hover; página actual en `aria-current` con bold y subrayado. Siempre las 8 secciones.
 
-### Copia al carbón (hoja del poeta)
-La única hoja en papel cebolla #f2ede0: la mancha de café (img/mancha.svg, 16rem, esquina superior derecha desbordada) se funde a la fibra con `background-blend-mode: multiply` sobre el grano y el papel; `overflow: clip` recorta el desborde. El tipeo va en tinta de carbón #3b3327 con text-shadow difusor; el poema conserva su sangrado con `pre-wrap`; el crédito en rojo.
+### Idiomas
+- Línea mecanografiada `es · en · fr · it · ru` bajo el nombre del autor: actual en `aria-current`, publicados como enlace añil, futuros como `.pronto` (opacidad 0.55, title "pronto").
 
-### Ficha de archivo (el periodista)
-`dl` con borde superior de 3px rojo en la cuartilla; cada par dt/dd en grid `minmax(6.5rem, 9rem) / 1fr` con filete de 1px arriba; dt en Courier 0.8rem tinta suave, dd en Garamond a 58ch.
+### Ficha / Ficha de libro
+- `dl` en grid de dos columnas con hairlines entre filas; `dt` mecanografiado 0.8rem en tinta suave; `.ficha-archivo` lleva borde superior de 3px en añil. La ficha de libro (`.ficha-libro`) es la variante generada por gen-libro.py.
 
-### Lista mecanografiada (la trova)
-`ul` sin viñetas con filetes de 1px arriba y abajo de cada ítem; número y datos en Courier tinta suave, título de obra en Garamond `strong` 600.
+### Fragmentos
+- `.fragmento`: prosa con sangría francesa (text-indent 1.6em salvo primer párrafo), máximo 62ch. `.fragmento-verso`: verso mecanografiado con `white-space: pre-wrap` que respeta la sangría original. `.fragmento-titulo`: rótulo Courier 700 en ALTAS. Todo fragmento literario en otra hoja idiomática lleva `.nota-idioma`.
 
-### Índice
-Nav de portada sobre filete: rótulo "índice" en Courier mayúsculas tracking 0.14em, lista `ol` sin numeración visible, enlaces Courier 0.95rem sin subrayado que lo ganan al hover.
+### Con voz y voto (.vyv)
+- La voz del autor sobre hoja vieja: papel viejo con grano, rotada 0.4deg, sombra mínima, firma mecanografiada en añil (`.vyv-firma`).
 
-### Motion (grammar del mundo)
-Un solo motion narrativo: el oficio de la portada se mecanografía al cargar (app.js), tecla a tecla con cadencia irregular (34-74ms, pausa de 220ms tras coma), cursor de bloque parpadeante (`steps(1)`, 1s) que desaparece 2.6s después de terminar; con `prefers-reduced-motion` el texto aparece directo y el cursor no anima. El easing único de las transiciones es `cubic-bezier(0.16, 1, 0.3, 1)` (var `--paso`). Todo lo demás es estático: el papel no se anima.
+### Copia al carbón (.carbon)
+- Hoja de segunda para el poeta: papel más frío (#f2ede0) con mancha de café (`img/mancha.svg`) fundida por `background-blend-mode: multiply`; el tipeo en tinta de carbón (#3b3327) con text-shadow de 0.6px que lo difumina un punto.
+
+### Galería
+- Fotos con marco de papel de 5px + outline mesa fría, rotaciones alternas ±0.9deg, pies mecanografiados de 0.75rem.
+
+### Motion
+- **El único motion del mundo:** el `.oficio` de la portada se mecanografía solo al cargar (app.js): cadencia 34-74ms por tecla, pausa de 220ms tras coma, cursor de bloque parpadeando (`parpadeo`, 1s steps) que desaparece a los 2.6s. Con `prefers-reduced-motion` el texto aparece directo y todas las transiciones y el cursor se apagan. Easing global `--paso: cubic-bezier(0.16, 1, 0.3, 1)`.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** poner todo contenido sobre papel con grano (`var(--grano)` como primera capa de background) y sombra de hoja; la mesa nunca lleva texto.
-- **Do** usar Courier Prime para cualquier texto que el autor teclearía (datos, cabezales, listas, acciones, notas) y reservar el rojo #b3372b exclusivamente para ese registro mecanografiado y el sello.
-- **Do** rotar levemente cada objeto (secciones ±0.3°, tiras ±1.2°, fotos ±2°, sello -2°) y anular las rotaciones de sección bajo 40rem.
-- **Do** escribir mayúscula inicial en nombres propios, premios y editoriales dentro del texto mecanografiado.
-- **Do** respetar reduced-motion: tipeo directo, cursor quieto, transiciones apagadas.
+- **Do** generar toda página de libro nueva con `herramientas/gen-libro.py` y su manifiesto JSON; la estructura CUBIERTA / CONTRATAPA / FICHA / FRAGMENTOS / PRESENTACIONES / PRENSA / CON VOZ Y VOTO es fija.
+- **Do** escribir en primera persona salvo voz declarada (prensa, presentaciones de terceros van citadas o enlazadas, nunca apropiadas).
+- **Do** publicar los textos literarios siempre en español, con `.nota-idioma` cuando la hoja está en otro idioma.
+- **Do** cerrar cada hoja interior con `.fin` ("bene scriptus", Courier, aria-hidden) y abrirla con su `.cabezal`.
+- **Do** alternar el signo de las rotaciones entre elementos consecutivos y aplicarlas al contenedor de sección, no a la cuartilla.
+- **Do** respetar `prefers-reduced-motion` en cualquier motion nuevo (que en principio no debería existir: el tecleo es el único).
 
 ### Don't:
-- **Don't** añadir trozos de cinta adhesiva, pies de foto ni texto alguno bajo las cubiertas (rechazo confirmado por el usuario).
-- **Don't** numerar hojas: nada de "hoja N" en cabezales ni números visibles en el índice.
-- **Don't** usar negro puro, sombras grises o con offset duro, bordes redondeados ni degradados: la profundidad es papel apilado y sombra tibia rgba(84,62,34,x).
-- **Don't** introducir un segundo acento ni llevar el rojo a fondos, titulares IM Fell o prosa Garamond.
-- **Don't** añadir más motion que el tipeo de carga; ningún elemento entra animado al hacer scroll.
+- **Don't** usar raya larga en ningún texto visible de la página; comas, dos puntos o paréntesis (la raya corta de diálogo dentro de fragmentos literarios del autor es material citado y se respeta).
+- **Don't** mencionar Palabra Nueva en ninguna parte del sitio.
+- **Don't** introducir un segundo acento de color: el rojo fue retirado y ningún color fuera de la paleta mesa/papel/tinta/añil entra al sistema.
+- **Don't** usar fondos blancos puros, esquinas redondeadas, glows, ni tipografías fuera de Bonum y Courier Prime.
+- **Don't** fabricar sinopsis, reseñas, testimonios o datos de contacto: lo sintético se etiqueta (`.nota-demo`) y lo biográfico debe ser verificable.
+- **Don't** titular secciones en caja baja o con otra fuente: sección nueva = ALTAS de Bonum con tracking, subordinado = menor puntaje.

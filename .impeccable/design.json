@@ -1,138 +1,151 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-06T00:00:00Z",
-  "title": "Design System: Antonio López Sánchez, escritor",
+  "title": "Design System: Ala del Mar",
   "extensions": {
     "colorMeta": {
-      "rojo": { "role": "primary", "displayName": "Rojo de cinta bicolor", "canonical": "#b3372b", "tonalRamp": ["oklch(25% 0.09 29)", "oklch(35% 0.11 29)", "oklch(45% 0.13 29)", "oklch(52% 0.14 29)", "oklch(62% 0.12 29)", "oklch(72% 0.09 29)", "oklch(84% 0.05 29)", "oklch(94% 0.02 29)"] },
-      "rojo-profundo": { "role": "primary", "displayName": "Rojo profundo (sello apretado)", "canonical": "#922c22" },
-      "rojo-tenue": { "role": "primary", "displayName": "Rojo tenue (sello sin tinta)", "canonical": "#c86a5f" },
-      "mesa": { "role": "neutral", "displayName": "Mesa café con leche", "canonical": "#eadcc4", "tonalRamp": ["oklch(25% 0.03 80)", "oklch(38% 0.04 80)", "oklch(52% 0.05 80)", "oklch(66% 0.05 80)", "oklch(78% 0.05 80)", "oklch(86% 0.045 82)", "oklch(91% 0.035 84)", "oklch(96% 0.02 86)"] },
-      "mesa-sombra": { "role": "neutral", "displayName": "Sombra de mesa (filetes y bordes)", "canonical": "#d9c8ab" },
-      "papel": { "role": "neutral", "displayName": "Papel de cuartilla", "canonical": "#faf5e9", "tonalRamp": ["oklch(25% 0.02 90)", "oklch(40% 0.025 90)", "oklch(55% 0.03 90)", "oklch(68% 0.03 90)", "oklch(80% 0.03 90)", "oklch(89% 0.025 92)", "oklch(94% 0.02 94)", "oklch(97.5% 0.012 95)"] },
-      "papel-viejo": { "role": "neutral", "displayName": "Papel viejo (hojas de abajo y tiras)", "canonical": "#f5edda" },
-      "papel-cebolla": { "role": "neutral", "displayName": "Papel cebolla (copia al carbón)", "canonical": "#f2ede0" },
-      "tinta": { "role": "neutral", "displayName": "Tinta sepia", "canonical": "#262019", "tonalRamp": ["oklch(15% 0.012 75)", "oklch(24% 0.015 75)", "oklch(34% 0.02 75)", "oklch(45% 0.025 75)", "oklch(58% 0.025 75)", "oklch(72% 0.02 78)", "oklch(85% 0.015 82)", "oklch(95% 0.01 88)"] },
-      "tinta-suave": { "role": "neutral", "displayName": "Tinta suave (cabezales y datos)", "canonical": "#4d4335" },
-      "tinta-carbon": { "role": "neutral", "displayName": "Tinta de carbón (copia del poema)", "canonical": "#3b3327" }
+      "anil": { "role": "primary", "displayName": "Añil de bolígrafo", "canonical": "#1d4e89", "tonalRamp": ["oklch(20% 0.09 258)", "oklch(30% 0.11 258)", "oklch(41% 0.12 258)", "oklch(52% 0.11 258)", "oklch(63% 0.09 258)", "oklch(74% 0.07 258)", "oklch(85% 0.045 258)", "oklch(94% 0.02 258)"] },
+      "anil-profundo": { "role": "primary", "displayName": "Añil profundo (hover del sello)", "canonical": "#163c6a", "tonalRamp": ["oklch(17% 0.08 258)", "oklch(26% 0.1 258)", "oklch(36% 0.11 258)", "oklch(47% 0.1 258)", "oklch(58% 0.08 258)", "oklch(70% 0.06 258)", "oklch(82% 0.04 258)", "oklch(93% 0.02 258)"] },
+      "anil-tenue": { "role": "primary", "displayName": "Añil tenue (desactivado)", "canonical": "#7d97b8", "tonalRamp": ["oklch(22% 0.05 255)", "oklch(33% 0.06 255)", "oklch(44% 0.06 255)", "oklch(55% 0.06 255)", "oklch(66% 0.06 255)", "oklch(76% 0.05 255)", "oklch(86% 0.035 255)", "oklch(95% 0.015 255)"] },
+      "mesa": { "role": "neutral", "displayName": "Mesa azul pálido", "canonical": "#dde6ec", "tonalRamp": ["oklch(22% 0.02 240)", "oklch(34% 0.025 240)", "oklch(46% 0.025 240)", "oklch(58% 0.025 240)", "oklch(70% 0.02 240)", "oklch(81% 0.018 240)", "oklch(91% 0.012 240)", "oklch(96% 0.008 240)"] },
+      "mesa-fria": { "role": "neutral", "displayName": "Mesa fría (contornos)", "canonical": "#b9c7d1", "tonalRamp": ["oklch(20% 0.02 240)", "oklch(32% 0.025 240)", "oklch(44% 0.025 240)", "oklch(56% 0.025 240)", "oklch(68% 0.022 240)", "oklch(80% 0.018 240)", "oklch(89% 0.012 240)", "oklch(95% 0.008 240)"] },
+      "mesa-sombra": { "role": "neutral", "displayName": "Sombra de mesa (hairlines cálidos)", "canonical": "#d9c8ab", "tonalRamp": ["oklch(24% 0.035 85)", "oklch(36% 0.045 85)", "oklch(48% 0.05 85)", "oklch(60% 0.05 85)", "oklch(71% 0.045 85)", "oklch(82% 0.04 85)", "oklch(90% 0.03 85)", "oklch(96% 0.015 85)"] },
+      "papel": { "role": "neutral", "displayName": "Papel de cuartilla", "canonical": "#faf5e9", "tonalRamp": ["oklch(24% 0.02 95)", "oklch(37% 0.025 95)", "oklch(50% 0.03 95)", "oklch(62% 0.03 95)", "oklch(74% 0.028 95)", "oklch(85% 0.022 95)", "oklch(93% 0.015 95)", "oklch(97% 0.01 95)"] },
+      "papel-viejo": { "role": "neutral", "displayName": "Papel viejo (hoja de abajo, tiras, vyv)", "canonical": "#f5edda", "tonalRamp": ["oklch(23% 0.025 92)", "oklch(36% 0.03 92)", "oklch(49% 0.035 92)", "oklch(61% 0.035 92)", "oklch(73% 0.032 92)", "oklch(84% 0.028 92)", "oklch(92% 0.02 92)", "oklch(96% 0.014 92)"] },
+      "tinta": { "role": "neutral", "displayName": "Tinta sepia", "canonical": "#262019", "tonalRamp": ["oklch(15% 0.012 75)", "oklch(24% 0.015 75)", "oklch(34% 0.018 75)", "oklch(45% 0.02 75)", "oklch(57% 0.02 75)", "oklch(70% 0.018 75)", "oklch(83% 0.014 75)", "oklch(94% 0.008 75)"] },
+      "tinta-suave": { "role": "neutral", "displayName": "Tinta suave (metadatos)", "canonical": "#4d4335", "tonalRamp": ["oklch(16% 0.015 78)", "oklch(26% 0.02 78)", "oklch(37% 0.025 78)", "oklch(48% 0.025 78)", "oklch(60% 0.024 78)", "oklch(72% 0.02 78)", "oklch(84% 0.015 78)", "oklch(94% 0.008 78)"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Imprenta antigua", "purpose": "Solo el nombre del autor en la portada. IM Fell DW Pica 400." },
-      "headline": { "displayName": "Título de tira", "purpose": "Títulos de sección en tiras separadoras y en el pie." },
-      "title": { "displayName": "Título de obra", "purpose": "Títulos de libro dentro de cuartillas; también la letra capitular de la prosa inicial." },
-      "body": { "displayName": "Prosa impresa", "purpose": "EB Garamond para toda prosa corrida, máximo 58ch (cierre 44ch)." },
-      "label": { "displayName": "Mecanografiado", "purpose": "Courier Prime para cabezales, datos, listas, ficha, poema, sello y colofón. El rojo solo existe en este registro." }
+      "display": { "displayName": "Nombre del autor", "purpose": "El título mayor de la portada (.nombre), Bonum 400 en caja normal." },
+      "casa": { "displayName": "Nombre de la casa", "purpose": "Solo para ALA DEL MAR: Bonum 700, ALTAS, añil." },
+      "headline": { "displayName": "Tira de sección", "purpose": "Títulos de sección en ALTAS sobre tira de papel viejo." },
+      "title": { "displayName": "Título de obra", "purpose": "Títulos de libro en Bonum 400, caja normal, grandes." },
+      "seccion": { "displayName": "Sección de página de libro", "purpose": "h2 de .bloque: ALTAS con tracking 0.08em y hairline inferior." },
+      "body": { "displayName": "Prosa impresa", "purpose": "Todo el texto corrido en Bonum 400, 1.15rem, máximo 58-62ch." },
+      "maquina": { "displayName": "Lo mecanografiado", "purpose": "Courier Prime para cabezales, índices, sellos, fichas, notas y versos en máquina." }
     },
     "shadows": [
-      { "name": "sombra-hoja", "value": "0 2px 4px rgba(84, 62, 34, 0.1), 0 6px 18px rgba(84, 62, 34, 0.13)", "purpose": "Sombra canónica de cuartillas y tiras; base tibia de madera, nunca negra." },
-      { "name": "hoja-de-abajo", "value": "0 2px 8px rgba(84, 62, 34, 0.08)", "purpose": "La hoja de abajo del montón (::after rotado tras cada cuartilla)." },
-      { "name": "foto-revelada", "value": "0 1px 3px rgba(84, 62, 34, 0.18)", "purpose": "Cubiertas de libro, junto a borde de 1px en sombra de mesa." }
+      { "name": "sombra-hoja", "value": "0 2px 4px rgba(52, 63, 75, 0.11), 0 6px 18px rgba(52, 63, 75, 0.14)", "purpose": "Toda hoja, tira, foto enmarcada o cubierta apoyada sobre la mesa." },
+      { "name": "hoja-de-abajo", "value": "0 2px 8px rgba(52, 63, 75, 0.09)", "purpose": "El ::after del montón de cuartillas." },
+      { "name": "objeto-apoyado", "value": "0 1px 4px rgba(52, 63, 75, 0.14)", "purpose": "Cubiertas pequeñas, galería y la hoja vieja de Con voz y voto." }
     ],
     "motion": [
-      { "name": "paso", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Easing único de todas las transiciones (sello, foto, salto)." },
-      { "name": "tipeo-portada", "value": "34-74ms por tecla, 220ms tras coma, arranque 500ms, cursor steps(1) 1s, retiro del cursor a 2600ms", "purpose": "Único motion narrativo del mundo: el oficio se mecanografía al cargar (app.js). Con prefers-reduced-motion el texto aparece directo." }
+      { "name": "paso", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Easing único para transiciones de sello, fotos y salto." },
+      { "name": "tecleo", "value": "34-74ms por carácter, 220ms tras coma, arranque a 500ms", "purpose": "El único motion del mundo: el oficio se mecanografía al cargar la portada (app.js); con reduced-motion, texto directo." },
+      { "name": "parpadeo", "value": "1s steps(1) infinite (50% opacity 0)", "purpose": "Cursor de bloque de la máquina; se retira 2.6s después de terminar el tecleo." }
     ],
     "breakpoints": [
-      { "name": "hoja-unica", "value": "40rem", "purpose": "Bajo 40rem: rotaciones de sección a cero, obra a una columna, foto centrada a 13rem máx." }
+      { "name": "hoja-estrecha", "value": "40rem" }
     ]
   },
   "components": [
     {
-      "name": "Sello de goma",
+      "name": "Sello",
       "kind": "button",
       "refersTo": "sello",
-      "description": "La acción única del mundo: sello rojo entintado con calvas de tinta por máscara SVG, rotado -2 grados.",
-      "html": "<a class=\"ds-sello\" href=\"#\">Leer la obra</a>",
-      "css": ".ds-sello { display: inline-block; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 1rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: #b3372b; background: transparent; border: 2px solid #b3372b; outline: 1px solid #b3372b; outline-offset: 3px; padding: 0.85rem 1.9rem; transform: rotate(-2deg); cursor: pointer; -webkit-mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='140'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11 0.13' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0.62'/%3E%3C/filter%3E%3Crect width='260' height='140' filter='url(%23m)'/%3E%3C/svg%3E\"); mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='140'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11 0.13' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0.62'/%3E%3C/filter%3E%3Crect width='260' height='140' filter='url(%23m)'/%3E%3C/svg%3E\"); -webkit-mask-size: 260px 140px; mask-size: 260px 140px; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s, border-color 0.3s; } .ds-sello:hover { transform: rotate(-2deg) scale(0.97); color: #922c22; border-color: #922c22; } .ds-sello:active { transform: rotate(-2deg) scale(0.94); } .ds-sello:focus-visible { outline: 2px solid #b3372b; outline-offset: 5px; }"
+      "description": "Acción primaria: sello de goma añil, torcido, con máscara de entintado.",
+      "html": "<a class=\"ds-sello\" href=\"#\">Mis libros</a>",
+      "css": ".ds-sello { display: inline-block; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 1rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--anil, #1d4e89); background: transparent; border: 2px solid var(--anil, #1d4e89); outline: 1px solid var(--anil, #1d4e89); outline-offset: 3px; padding: 0.85rem 1.9rem; transform: rotate(-2deg); cursor: pointer; -webkit-mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='140'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11 0.13' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0.62'/%3E%3C/filter%3E%3Crect width='260' height='140' filter='url(%23m)'/%3E%3C/svg%3E\"); mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='140'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11 0.13' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0.62'/%3E%3C/filter%3E%3Crect width='260' height='140' filter='url(%23m)'/%3E%3C/svg%3E\"); -webkit-mask-size: 260px 140px; mask-size: 260px 140px; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s, border-color 0.3s; } .ds-sello:hover { transform: rotate(-2deg) scale(0.97); color: #163c6a; border-color: #163c6a; } .ds-sello:active { transform: rotate(-2deg) scale(0.94); } .ds-sello:focus-visible { outline: 2px solid var(--anil, #1d4e89); outline-offset: 5px; }"
+    },
+    {
+      "name": "Sello menor",
+      "kind": "button",
+      "refersTo": "sello-menor",
+      "description": "El mismo sello en cuerpo pequeño para acciones secundarias.",
+      "html": "<a class=\"ds-sello-menor\" href=\"#\">Volver a mis libros</a>",
+      "css": ".ds-sello-menor { display: inline-block; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--anil, #1d4e89); background: transparent; border: 2px solid var(--anil, #1d4e89); outline: 1px solid var(--anil, #1d4e89); outline-offset: 3px; padding: 0.6rem 1.3rem; transform: rotate(-2deg); cursor: pointer; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s, border-color 0.3s; } .ds-sello-menor:hover { transform: rotate(-2deg) scale(0.97); color: #163c6a; border-color: #163c6a; } .ds-sello-menor:focus-visible { outline: 2px solid var(--anil, #1d4e89); outline-offset: 5px; }"
     },
     {
       "name": "Cuartilla",
       "kind": "card",
       "refersTo": "cuartilla",
-      "description": "La hoja base: papel con grano, sombra tibia y hoja de abajo asomando; cabezal mecanografiado como primera línea.",
-      "html": "<article class=\"ds-cuartilla\"><p class=\"ds-cabezal\">A. López Sánchez · Las novelas</p><h3 class=\"ds-titulo-obra\">Las guerreras de la luz</h3><p class=\"ds-prosa\">Una orden de mujeres guerreras se alza contra la oscuridad que avanza sobre su reino.</p></article>",
-      "css": ".ds-cuartilla { position: relative; width: min(100%, 30rem); background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0 0.24 0 0 0 0.17 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E\"), #faf5e9; padding: 1.4rem 2.4rem 3.2rem; box-shadow: 0 2px 4px rgba(84, 62, 34, 0.1), 0 6px 18px rgba(84, 62, 34, 0.13); color: #262019; } .ds-cuartilla::after { content: ''; position: absolute; inset: 0; background: #f5edda; transform: rotate(0.9deg) translate(5px, 3px); z-index: -1; box-shadow: 0 2px 8px rgba(84, 62, 34, 0.08); } .ds-cabezal { font-family: 'Courier Prime', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: #4d4335; margin: 0 0 2.6rem; } .ds-titulo-obra { font-family: 'IM Fell DW Pica', Georgia, serif; font-weight: 400; font-size: 2.2rem; line-height: 1.05; margin: 0 0 0.9rem; } .ds-prosa { font-family: 'EB Garamond', Georgia, serif; font-size: 1.15rem; line-height: 1.65; max-width: 58ch; margin: 0; }"
+      "description": "El contenedor universal: hoja de papel con grano y la hoja de abajo asomando.",
+      "html": "<article class=\"ds-cuartilla\"><p class=\"ds-cabezal\">Ala del Mar · Mis libros</p><p>Sobre la mesa azul, cada sección es una cuartilla con grano de papel, sombra corta y una hoja vieja asomando debajo.</p></article>",
+      "css": ".ds-cuartilla { position: relative; max-width: 46rem; background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0 0.24 0 0 0 0.17 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E\"), var(--papel, #faf5e9); color: var(--tinta, #262019); font-family: 'Bonum', 'Bookman Old Style', Georgia, serif; font-size: 1.15rem; line-height: 1.65; padding: 1.4rem 2.4rem 3.2rem; box-shadow: 0 2px 4px rgba(52, 63, 75, 0.11), 0 6px 18px rgba(52, 63, 75, 0.14); } .ds-cuartilla::after { content: ''; position: absolute; inset: 0; background: var(--papel-viejo, #f5edda); transform: rotate(0.9deg) translate(5px, 3px); z-index: -1; box-shadow: 0 2px 8px rgba(52, 63, 75, 0.09); } .ds-cabezal { font-family: 'Courier Prime', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: var(--tinta-suave, #4d4335); margin: 0 0 2rem; }"
     },
     {
       "name": "Tira separadora",
       "kind": "custom",
       "refersTo": "tira",
-      "description": "Recorte de papel viejo rotado que anuncia cada sección: título de imprenta más línea mecanografiada.",
-      "html": "<div class=\"ds-tira\"><h2 class=\"ds-tira-titulo\">Las novelas</h2><p class=\"ds-tira-sub\">Cuatro novelas de fantasía heroica, 2012 a 2018</p></div>",
-      "css": ".ds-tira { width: fit-content; max-width: 100%; margin: 1rem auto; background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0 0.24 0 0 0 0.17 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E\"), #f5edda; padding: 0.9rem 2.4rem 1rem; box-shadow: 0 2px 4px rgba(84, 62, 34, 0.1), 0 6px 18px rgba(84, 62, 34, 0.13); transform: rotate(-1.2deg); text-align: center; color: #262019; } .ds-tira-titulo { font-family: 'IM Fell DW Pica', Georgia, serif; font-weight: 400; font-size: 2rem; line-height: 1.1; margin: 0; } .ds-tira-sub { font-family: 'Courier Prime', monospace; font-size: 0.82rem; color: #4d4335; margin: 0.2rem 0 0; }"
+      "description": "Título de sección en ALTAS de Bonum sobre tira de papel viejo, rotada.",
+      "html": "<div class=\"ds-tira\"><h2>Mis libros</h2><p>ocho novelas y ensayos, en orden de escritura</p></div>",
+      "css": ".ds-tira { width: fit-content; margin: 1rem auto; background: var(--papel-viejo, #f5edda); padding: 0.9rem 2.4rem 1rem; box-shadow: 0 2px 4px rgba(52, 63, 75, 0.11), 0 6px 18px rgba(52, 63, 75, 0.14); transform: rotate(-1.2deg); text-align: center; } .ds-tira h2 { font-family: 'Bonum', 'Bookman Old Style', Georgia, serif; font-weight: 700; font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.15; letter-spacing: 0.06em; text-transform: uppercase; margin: 0; color: var(--tinta, #262019); } .ds-tira p { font-family: 'Courier Prime', monospace; font-size: 0.82rem; color: var(--tinta-suave, #4d4335); margin: 0.2rem 0 0; }"
     },
     {
-      "name": "Índice mecanografiado",
+      "name": "Índice al pie",
       "kind": "nav",
-      "refersTo": "indice",
-      "description": "Lista simple sin numeración visible sobre filete; enlaces Courier que ganan subrayado al hover.",
-      "html": "<nav class=\"ds-indice\"><p class=\"ds-indice-titulo\">índice</p><ol class=\"ds-indice-lista\"><li><a href=\"#\">Las novelas</a></li><li><a href=\"#\">La trova</a></li><li><a href=\"#\">El poeta</a></li></ol></nav>",
-      "css": ".ds-indice { border-top: 1px solid #d9c8ab; padding-top: 1.1rem; max-width: 30rem; background: #faf5e9; color: #262019; } .ds-indice-titulo { font-family: 'Courier Prime', monospace; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #4d4335; margin: 0 0 0.5rem; } .ds-indice-lista { list-style: none; margin: 0; padding: 0; } .ds-indice-lista a { display: inline-block; padding: 0.32rem 0; text-decoration: none; font-family: 'Courier Prime', monospace; font-size: 0.95rem; color: inherit; } .ds-indice-lista a:hover { text-decoration: underline; text-underline-offset: 0.24em; } .ds-indice-lista a:focus-visible { outline: 2px solid #b3372b; outline-offset: 3px; }"
+      "refersTo": "indice-pie",
+      "description": "Navegación mecanografiada al pie de cada hoja; 8 secciones fijas, actual en bold subrayado.",
+      "html": "<nav class=\"ds-indice-pie\"><a href=\"#\">Portada</a><span aria-current=\"page\">Mis libros</span><a href=\"#\">Inéditos</a><a href=\"#\">Tinta-ciones</a><a href=\"#\">La trova</a><a href=\"#\">Plano abierto</a><a href=\"#\">El periodista</a><a href=\"#\">Directorio</a></nav>",
+      "css": ".ds-indice-pie { display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; border-top: 1px solid var(--mesa-sombra, #d9c8ab); padding-top: 1rem; font-family: 'Courier Prime', monospace; font-size: 0.85rem; color: var(--tinta, #262019); } .ds-indice-pie a { color: inherit; text-decoration: none; } .ds-indice-pie a:hover { text-decoration: underline; text-underline-offset: 0.24em; } .ds-indice-pie a:focus-visible { outline: 2px solid var(--anil, #1d4e89); outline-offset: 3px; } .ds-indice-pie span[aria-current] { font-weight: 700; text-decoration: underline; text-underline-offset: 0.24em; }"
     },
     {
-      "name": "Foto de cubierta",
-      "kind": "custom",
-      "refersTo": "foto",
-      "description": "Cubierta rotada sin cinta ni pie de foto; se endereza levemente al hover de su cuartilla.",
-      "html": "<figure class=\"ds-foto\"><img src=\"img/guerreras.webp\" width=\"200\" height=\"302\" alt=\"Cubierta de Las guerreras de la luz\"></figure>",
-      "css": ".ds-foto { margin: 0; transform: rotate(2deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); max-width: 12.5rem; } .ds-foto:hover { transform: rotate(0.6deg); } .ds-foto img { display: block; width: 100%; height: auto; border: 1px solid #d9c8ab; box-shadow: 0 1px 3px rgba(84, 62, 34, 0.18); }"
+      "name": "Idiomas",
+      "kind": "nav",
+      "refersTo": "idiomas",
+      "description": "Selector es·en·fr·it·ru mecanografiado; los no publicados van en .pronto.",
+      "html": "<p class=\"ds-idiomas\"><span aria-current=\"true\">es</span> · <a href=\"#\">en</a> · <span class=\"ds-pronto\" title=\"pronto\">fr</span> · <span class=\"ds-pronto\" title=\"pronto\">it</span> · <span class=\"ds-pronto\" title=\"pronto\">ru</span></p>",
+      "css": ".ds-idiomas { font-family: 'Courier Prime', monospace; font-size: 0.85rem; letter-spacing: 0.06em; color: var(--tinta-suave, #4d4335); margin: 0; } .ds-idiomas a { color: var(--anil, #1d4e89); text-underline-offset: 0.24em; text-decoration-thickness: 1px; } .ds-idiomas a:hover { text-decoration-thickness: 2px; } .ds-idiomas a:focus-visible { outline: 2px solid var(--anil, #1d4e89); outline-offset: 3px; } .ds-idiomas .ds-pronto { opacity: 0.55; }"
     },
     {
-      "name": "Ficha de archivo",
+      "name": "Ficha de libro",
       "kind": "custom",
-      "refersTo": "ficha-archivo",
-      "description": "Datos del periodista como dl de redacción: borde superior rojo de 3px y filetes entre pares dt/dd.",
-      "html": "<dl class=\"ds-ficha\"><div><dt>nace</dt><dd>La Habana, 16 de enero de 1973</dd></div><div><dt>formación</dt><dd>Licenciado en Comunicación Social, Universidad de La Habana.</dd></div></dl>",
-      "css": ".ds-ficha { border-top: 3px solid #b3372b; margin: 0; background: #faf5e9; color: #262019; font-family: 'EB Garamond', Georgia, serif; font-size: 1.05rem; line-height: 1.65; } .ds-ficha div { display: grid; grid-template-columns: minmax(6.5rem, 9rem) minmax(0, 1fr); gap: 1rem; padding: 0.85rem 0; border-top: 1px solid #d9c8ab; } .ds-ficha div:first-child { border-top: none; padding-top: 0.85rem; } .ds-ficha dt { font-family: 'Courier Prime', monospace; font-size: 0.8rem; letter-spacing: 0.06em; color: #4d4335; padding-top: 0.3rem; } .ds-ficha dd { margin: 0; max-width: 58ch; }"
+      "refersTo": "ficha-libro",
+      "description": "Ficha bibliográfica en dos columnas con hairlines; dt mecanografiado.",
+      "html": "<dl class=\"ds-ficha-libro\"><div><dt>título</dt><dd>Las guerreras de la luz</dd></div><div><dt>editorial</dt><dd>Editorial de la Mujer, La Habana</dd></div><div><dt>premio</dt><dd>La Rosa Blanca 2012, UNEAC</dd></div></dl>",
+      "css": ".ds-ficha-libro { max-width: 40rem; margin: 0; font-family: 'Bonum', 'Bookman Old Style', Georgia, serif; font-size: 1.05rem; color: var(--tinta, #262019); } .ds-ficha-libro div { display: grid; grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr); gap: 1rem; padding: 0.6rem 0; border-top: 1px solid var(--mesa-sombra, #d9c8ab); } .ds-ficha-libro div:first-child { border-top: none; } .ds-ficha-libro dt { font-family: 'Courier Prime', monospace; font-size: 0.8rem; letter-spacing: 0.06em; color: var(--tinta-suave, #4d4335); padding-top: 0.25rem; } .ds-ficha-libro dd { margin: 0; }"
     },
     {
-      "name": "Lista mecanografiada",
+      "name": "Con voz y voto",
       "kind": "custom",
-      "refersTo": "lista-maquina",
-      "description": "Bibliografía con filetes: número y datos en Courier tinta suave, título en Garamond seminegrita.",
-      "html": "<ul class=\"ds-lista-maquina\"><li><span class=\"ds-lm-num\">1.</span> <strong>Trovadoras</strong> <span class=\"ds-lm-dato\">· Editorial Oriente, 2009 · entrevistas</span></li><li><span class=\"ds-lm-num\">2.</span> <strong>Convertida en canción</strong> <span class=\"ds-lm-dato\">· Editorial Capiro, 2019</span></li></ul>",
-      "css": ".ds-lista-maquina { list-style: none; margin: 0; padding: 0; border-top: 1px solid #d9c8ab; background: #faf5e9; color: #262019; font-family: 'EB Garamond', Georgia, serif; } .ds-lista-maquina li { padding: 0.75rem 0; border-bottom: 1px solid #d9c8ab; font-size: 1.05rem; } .ds-lista-maquina strong { font-weight: 600; } .ds-lm-num, .ds-lm-dato { font-family: 'Courier Prime', monospace; font-size: 0.85rem; color: #4d4335; }"
+      "refersTo": "vyv",
+      "description": "La voz del autor sobre hoja de papel viejo, con firma mecanografiada en añil.",
+      "html": "<div class=\"ds-vyv\"><p>Esta fue la novela de las primeras veces: el primer premio, la primera vez que vi a una lectora abrazar el libro.</p><p class=\"ds-vyv-firma\">Antonio López Sánchez</p></div>",
+      "css": ".ds-vyv { background: var(--papel-viejo, #f5edda); color: var(--tinta, #262019); font-family: 'Bonum', 'Bookman Old Style', Georgia, serif; font-size: 1.1rem; line-height: 1.65; padding: 1.6rem 2rem; max-width: 62ch; box-shadow: 0 1px 4px rgba(52, 63, 75, 0.1); transform: rotate(0.4deg); } .ds-vyv p { margin: 0 0 0.35rem; } .ds-vyv p + p { text-indent: 1.6em; } .ds-vyv .ds-vyv-firma { font-family: 'Courier Prime', monospace; font-size: 0.85rem; color: var(--anil, #1d4e89); margin-top: 1.2rem; text-indent: 0; }"
     },
     {
-      "name": "Copia al carbón",
+      "name": "Sello de cierre (bene scriptus)",
       "kind": "custom",
-      "refersTo": "carbon",
-      "description": "Hoja de papel cebolla con mancha de café fundida por multiply y tipeo de carbón difuminado.",
-      "html": "<article class=\"ds-carbon\"><h3 class=\"ds-poema-titulo\">Informe legal sobre la muerte de un poema</h3><div class=\"ds-poema-texto\">   Después de efectuar el examen correspondiente\nse informa\nque el poema encontrado muerto...</div></article>",
-      "css": ".ds-carbon { background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0 0.24 0 0 0 0.17 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E\"), #f2ede0; overflow: clip; padding: 1.4rem 2.4rem 3.2rem; box-shadow: 0 2px 4px rgba(84, 62, 34, 0.1), 0 6px 18px rgba(84, 62, 34, 0.13); } .ds-poema-titulo { font-family: 'Courier Prime', monospace; font-size: 1.05rem; font-weight: 700; text-decoration: underline; text-underline-offset: 0.28em; text-decoration-thickness: 1px; color: #3b3327; text-shadow: 0 0 0.6px rgba(59, 51, 39, 0.55); margin: 0 0 1.8rem; } .ds-poema-texto { font-family: 'Courier Prime', monospace; white-space: pre-wrap; font-size: 0.98rem; line-height: 1.85; max-width: 56ch; color: #3b3327; text-shadow: 0 0 0.6px rgba(59, 51, 39, 0.55); }"
+      "refersTo": "fin",
+      "description": "Cada hoja interior cierra con la línea bene scriptus, mecanografiada y centrada.",
+      "html": "<p class=\"ds-fin\" aria-hidden=\"true\">bene scriptus</p>",
+      "css": ".ds-fin { text-align: center; font-family: 'Courier Prime', monospace; font-size: 0.85rem; color: var(--tinta-suave, #4d4335); margin: 2.4rem 0 0; }"
     }
   ],
   "narrative": {
-    "northStar": "La mesa del escritor",
-    "overview": "La web es la mesa de trabajo de un escritor a la vieja usanza: cuartillas mecanografiadas apoyadas sobre una mesa de madera clara color café con leche. No hay pantallas dentro del mundo: todo lo que se ve es papel, tinta y el rojo de la cinta bicolor de la máquina de escribir. Cada sección es una hoja distinta del montón, con su rotación leve, su hoja de abajo asomando y su cabezal mecanografiado, y las secciones se anuncian con tiras de papel viejo recortadas. El mundo distingue tres voces materiales: la imprenta antigua (IM Fell DW Pica, para nombres y títulos), la prosa impresa (EB Garamond, para leer) y lo mecanografiado (Courier Prime, para todo lo que salió de la máquina). El papel tiene grano real (ruido SVG) y las hojas proyectan una sombra suave doble, nunca dura.",
+    "northStar": "La mesa del escritor frente al mar",
+    "overview": "Ala del Mar es la casa con nombre propio del escritor Antonio López Sánchez, y la web es su mesa de trabajo vista desde arriba: cuartillas de papel cálido apiladas sobre una mesa azul pálido, con la hoja de abajo asomando torcida, sellos de goma entintados en añil, copias al carbón con mancha de café y navegación mecanografiada al pie de cada hoja. Todo lo que se ve es un objeto del oficio de escribir a la vieja usanza; no hay componentes 'de web', hay hojas, tiras, sellos y fichas. Cada hoja interior cierra con el sello de la casa: la línea 'bene scriptus'. La voz es primera persona salvo cuando se declara otra voz. La estructura es multipágina y multiidioma, pero los textos literarios se publican siempre en español con su nota de idioma. Esta identidad reemplaza por completo la iteración anterior; el rojo fue retirado del sistema y el único acento es el añil de bolígrafo.",
     "keyCharacteristics": [
-      "Todo objeto visible es papel sobre mesa; cero cromo de interfaz",
-      "Un solo acento: el rojo de cinta bicolor (#b3372b), siempre en Courier",
-      "Tres tipografías con roles materiales estrictos (imprenta / prosa / máquina)",
-      "Rotaciones leves (0.3° a 2°) y sombras suaves como única profundidad",
-      "Un solo motion: el oficio se mecanografía al cargar"
+      "Mesa azul pálido (#dde6ec) como fondo universal; nunca blanco puro ni gris neutro.",
+      "Papel con grano SVG y hoja de abajo asomando; rotaciones alternas de fracciones de grado.",
+      "Una sola familia impresa (Bonum) y una mecanografiada (Courier Prime); jerarquía por caja y puntaje, no por cambio de fuente.",
+      "Un solo acento: añil #1d4e89. Sellos de goma con máscara de entintado.",
+      "Un solo motion: el oficio mecanografiándose al cargar la portada, con reduced-motion respetado."
     ],
     "rules": [
-      { "name": "The Cinta Bicolor Rule", "body": "El rojo es la tinta roja de la máquina: solo existe en texto Courier, en el sello y en filetes de archivo. Jamás tiñe fondos, titulares de imprenta ni prosa Garamond.", "section": "colors" },
-      { "name": "The Todo Es Papel Rule", "body": "Ningún texto se apoya sobre la mesa. Todo contenido vive dentro de una cuartilla, una tira o el pie, siempre con grano de papel.", "section": "colors" },
-      { "name": "The Tres Manos Rule", "body": "IM Fell solo para nombres y títulos (incluida la letra capitular); Garamond solo para prosa corrida; Courier para todo dato, cabezal, lista y acción.", "section": "typography" },
-      { "name": "The Mayúscula Propia Rule", "body": "En texto mecanografiado, mayúscula inicial obligatoria en nombres propios, premios y editoriales; el minúsculas-todo solo se permite en rótulos cortos de una palabra.", "section": "typography" },
-      { "name": "The Sin Numeración Rule", "body": "Los cabezales mecanografiados llevan autor y sección, nunca 'hoja N'. El índice es una lista simple sin números visibles.", "section": "typography" },
-      { "name": "The Sombra Tibia Rule", "body": "Toda sombra usa la base rgba(84, 62, 34, x): sombra de madera bajo papel. Nada de sombras duras con offset, nada de rgba(0,0,0,x).", "section": "elevation" }
+      { "name": "La regla del añil único", "body": "Hay un solo acento en toda la casa: el añil #1d4e89, aplicado a lo que un escritor marcaría con su bolígrafo o su sello. El rojo #b3372b de la iteración anterior fue retirado; no vuelve. Ningún segundo acento entra al sistema.", "section": "colors" },
+      { "name": "La mesa nunca es blanca", "body": "Ningún fondo es #fff ni gris neutro: o es mesa azul, o es papel cálido con grano.", "section": "colors" },
+      { "name": "La regla de las ALTAS", "body": "Los títulos de sección van en la misma Bonum en mayúsculas con tracking positivo; lo subordinado se distingue por menor puntaje, nunca por otra fuente decorativa. Es la regla del autor y ordena toda la jerarquía.", "section": "typography" },
+      { "name": "Dos letras, dos oficios", "body": "Bonum imprime (prosa, títulos, versos impresos); Courier Prime mecanografía (cabezales, índices, sellos, fichas, notas, versos en máquina). Ningún texto usa una tercera familia.", "section": "typography" },
+      { "name": "La regla de la hoja nueva", "body": "Toda página de libro nueva se genera con herramientas/gen-libro.py desde un manifiesto JSON; su estructura es fija: CUBIERTA dominante, NOTA DE CONTRATAPA, FICHA, FRAGMENTOS, PRESENTACIONES, PRENSA, CON VOZ Y VOTO. No se maquetan hojas de libro a mano.", "section": "layout" },
+      { "name": "La regla del papel apilado", "body": "La única fuente de profundidad es papel sobre papel: sombra corta más hoja de abajo asomando. Nada flota ni se eleva al hacer hover; lo más que hace una cubierta es enderezarse.", "section": "elevation" },
+      { "name": "La regla de nada redondeado", "body": "Ningún radio, ninguna píldora, ningún círculo decorativo. Si un elemento necesita distinguirse, se rota o cambia de papel, no de forma.", "section": "shapes" }
     ],
     "dos": [
-      "Do poner todo contenido sobre papel con grano (var(--grano) como primera capa de background) y sombra de hoja; la mesa nunca lleva texto.",
-      "Do usar Courier Prime para cualquier texto que el autor teclearía (datos, cabezales, listas, acciones, notas) y reservar el rojo #b3372b exclusivamente para ese registro mecanografiado y el sello.",
-      "Do rotar levemente cada objeto (secciones ±0.3°, tiras ±1.2°, fotos ±2°, sello -2°) y anular las rotaciones de sección bajo 40rem.",
-      "Do escribir mayúscula inicial en nombres propios, premios y editoriales dentro del texto mecanografiado.",
-      "Do respetar reduced-motion: tipeo directo, cursor quieto, transiciones apagadas."
+      "Do generar toda página de libro nueva con herramientas/gen-libro.py y su manifiesto JSON; la estructura CUBIERTA / CONTRATAPA / FICHA / FRAGMENTOS / PRESENTACIONES / PRENSA / CON VOZ Y VOTO es fija.",
+      "Do escribir en primera persona salvo voz declarada (prensa, presentaciones de terceros van citadas o enlazadas, nunca apropiadas).",
+      "Do publicar los textos literarios siempre en español, con .nota-idioma cuando la hoja está en otro idioma.",
+      "Do cerrar cada hoja interior con .fin ('bene scriptus', Courier, aria-hidden) y abrirla con su .cabezal.",
+      "Do alternar el signo de las rotaciones entre elementos consecutivos y aplicarlas al contenedor de sección, no a la cuartilla.",
+      "Do respetar prefers-reduced-motion en cualquier motion nuevo (que en principio no debería existir: el tecleo es el único)."
     ],
     "donts": [
-      "Don't añadir trozos de cinta adhesiva, pies de foto ni texto alguno bajo las cubiertas (rechazo confirmado por el usuario).",
-      "Don't numerar hojas: nada de 'hoja N' en cabezales ni números visibles en el índice.",
-      "Don't usar negro puro, sombras grises o con offset duro, bordes redondeados ni degradados: la profundidad es papel apilado y sombra tibia rgba(84,62,34,x).",
-      "Don't introducir un segundo acento ni llevar el rojo a fondos, titulares IM Fell o prosa Garamond.",
-      "Don't añadir más motion que el tipeo de carga; ningún elemento entra animado al hacer scroll."
+      "Don't usar raya larga en ningún texto visible de la página; comas, dos puntos o paréntesis (la raya corta de diálogo dentro de fragmentos literarios del autor es material citado y se respeta).",
+      "Don't mencionar Palabra Nueva en ninguna parte del sitio.",
+      "Don't introducir un segundo acento de color: el rojo fue retirado y ningún color fuera de la paleta mesa/papel/tinta/añil entra al sistema.",
+      "Don't usar fondos blancos puros, esquinas redondeadas, glows, ni tipografías fuera de Bonum y Courier Prime.",
+      "Don't fabricar sinopsis, reseñas, testimonios o datos de contacto: lo sintético se etiqueta (.nota-demo) y lo biográfico debe ser verificable.",
+      "Don't titular secciones en caja baja o con otra fuente: sección nueva = ALTAS de Bonum con tracking, subordinado = menor puntaje."
     ]
   }
 }
