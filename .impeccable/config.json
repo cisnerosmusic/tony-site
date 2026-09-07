@@ -122,6 +122,15 @@
         "value": "rgba(84, 62, 34, 0.18)",
         "createdAt": "2026-09-06T18:20:04.462Z",
         "reason": "tinta de copia al carbon o sombra de papel: tratamiento de una sola hoja, no canonizado a proposito por el documentador"
+      },
+      {
+        "rule": "monotonous-spacing",
+        "value": "*",
+        "files": [
+          "tinta-ciones/poemas-sueltos/index.html"
+        ],
+        "createdAt": "2026-09-07T03:34:02.296Z",
+        "reason": "Antologia de poemas: los diez textos son unidades equivalentes y la separacion uniforme entre ellos es la convencion tipografica del genero; no hay jerarquia que expresar con ritmo variable. El aire se subio de 3rem a 5rem para que cada poema respire."
       }
     ]
   }
