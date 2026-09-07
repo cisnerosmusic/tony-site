@@ -9,7 +9,10 @@ from PIL import Image
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 
-FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0c1f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='19' fill='%23d4a030'%3EA%3C/text%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23d4a030' stroke-opacity='0.4' stroke-width='1'/%3E%3C/svg%3E"
+# Archivos reales, no data URI: Google solo indexa favicons que puede rastrear aparte.
+FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
+           '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
+           '<link rel="apple-touch-icon" href="/apple-touch-icon.png">')
 
 NAV = [("/", "Portada"), ("/libros/", "Mis libros"), ("/ineditos/", "Inéditos"),
        ("/tinta-ciones/", "Tinta-ciones"), ("/trova/", "La trova"),
@@ -98,7 +101,7 @@ def generar(manifiesto):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(seo_titulo)}</title>
 <meta name="description" content="{esc(seo_desc)}">
-<link rel="icon" href="{FAVICON}">
+{FAVICON}
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="book">
 <meta property="og:url" content="{url}">
