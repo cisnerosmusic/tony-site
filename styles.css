@@ -307,10 +307,14 @@ img { max-width: 100%; height: auto; display: block; }
   grid-template-columns: minmax(10rem, 15rem) minmax(0, 1fr);
   gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: start;
-  padding: 3.5rem 0;
+  padding: 2.6rem 0;
   border-bottom: 1px solid var(--line);
 }
 .libro-item:last-of-type { border-bottom: none; }
+/* ritmo de estanteria: grupos apretados, cabeceras con aire */
+.section > .reveal:has(.section-title) { margin-top: 4.5rem; }
+.section > .reveal:first-child:has(.section-title) { margin-top: 0; }
+.section > .reveal:has(.section-title) .section-divider { margin-bottom: 0.75rem; }
 
 .libro-cubierta img {
   border: 1px solid var(--line-bright);
