@@ -58,6 +58,10 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 
 Al publicar páginas nuevas: actualizar `sitemap.xml`, subir el número de versión de los assets (`?v=N` en `styles.css`, `fonts.css` y `app.js`) y relanzar el ping de IndexNow.
 
+## Pendientes
+
+El trabajo por delante (traducciones a inglés, francés, italiano y portugués, y el material que falta de Tony) está en [PENDIENTES.md](PENDIENTES.md).
+
 ## Créditos
 
 Obra literaria y textos: © Antonio López Sánchez. Cubiertas: Rainel Cabarroi, Juan Carlos García, Ramón Eduardo Haití, Alain R. Cuba, Iván Batista, Tomás Egea Ascona y Michele Millares Hollands, según cada ficha. Fotografía del mar: Wikimedia Commons (CC0).
