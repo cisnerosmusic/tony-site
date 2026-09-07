@@ -84,11 +84,11 @@ def generar(manifiesto):
     nota_idioma = '    <p class="nota-demo">Los textos literarios se publican siempre en su idioma original, el español.</p>'
     bloques = "".join([
         bloque("contratapa", m.get("contratapa_titulo", "Nota de contratapa"), contratapa, "left"),
-        bloque("ficha", "Ficha", f'    <dl class="ficha">\n{ficha}\n    </dl>', "right"),
+        bloque("vyv", "Con voz y voto", (vyv + '\n    <p class="vyv-firma">ALS</p>') if vyv else "", "right"),
         bloque("fragmentos", "Fragmentos", (fragmentos + "\n" + nota_idioma) if fragmentos else "", "left"),
         bloque("presentaciones", "Presentaciones", f'    <div class="galeria">\n{galeria}    </div>' if galeria else "", "right"),
         bloque("prensa", "Prensa", f'    <ul class="lista-obras">\n{prensa}\n    </ul>' if prensa else "", "left"),
-        bloque("vyv", "Con voz y voto", (vyv + '\n    <p class="vyv-firma">A. López Sánchez</p>') if vyv else "", "right"),
+        bloque("ficha", "Ficha", f'    <dl class="ficha">\n{ficha}\n    </dl>', "right"),
     ])
 
     pagina = f"""<!DOCTYPE html>
