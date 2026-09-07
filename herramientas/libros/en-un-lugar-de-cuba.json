@@ -1,0 +1,28 @@
+{
+  "slug": "en-un-lugar-de-cuba",
+  "titulo": "En un lugar de Cuba de cuyo nombre quiero acordarme",
+  "genero": "Narrativa",
+  "genero_frase": "antología del premio Reescribir El Quijote en Cuba",
+  "anio": "2005",
+  "editorial": "Diputación de Córdoba",
+  "premios": ["Primer premio del concurso Reescribir El Quijote en Cuba, 2005"],
+  "descripcion": "En un lugar de Cuba de cuyo nombre quiero acordarme (2005), antología del concurso Reescribir El Quijote en Cuba donde Antonio López Sánchez obtuvo el primer premio: ficha, presentación y el comentario del autor.",
+  "tira_sub": "El Quijote reescrito desde Cuba, con primer premio",
+  "cubierta": "/img/libros/lugar-cubierta.webp",
+  "cubierta_alt": "Cubierta de En un lugar de Cuba de cuyo nombre quiero acordarme, ilustrada por Tomás Egea Ascona",
+  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2006) En un lugar de Cuba de cuyo nombre quiero acordarme/(2006) En un lugar de Cuba de cuyo nombre quiero acordarme CON VOZ Y VOTO.txt",
+  "ficha": {
+    "título": "En un lugar de Cuba de cuyo nombre quiero acordarme",
+    "autoría": "Varios autores",
+    "género": "Narrativa",
+    "edición": "Fundación provincial de artes plásticas Rafael Botí, Diputación de Córdoba, Embajada de España en Cuba y Agencia Española de Cooperación Internacional",
+    "año": "2005",
+    "cubierta": "Ilustración de portada y viñetas de Tomás Egea Ascona",
+    "premio": "Primer premio del concurso Reescribir El Quijote en Cuba, 2005"
+  },
+  "fragmentos": [],
+  "galeria": [
+    { "img": "/img/libros/lugar-premio.webp", "alt": "Del premio Reescribir El Quijote en Cuba", "pie": "Del premio Reescribir El Quijote en Cuba, 2005" }
+  ],
+  "prensa": []
+}

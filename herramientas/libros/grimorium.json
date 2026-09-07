@@ -1,0 +1,29 @@
+{
+  "slug": "grimorium",
+  "titulo": "Grimorium",
+  "genero": "Horror",
+  "genero_frase": "novela de horror",
+  "anio": "2018",
+  "editorial": "Editorial Oriente",
+  "premios": [],
+  "descripcion": "Grimorium (Editorial Oriente, 2018), novela de horror de Antonio López Sánchez: nota de contratapa, ficha, fragmentos y el comentario del autor.",
+  "tira_sub": "Mi entrega más oscura",
+  "cubierta": "/img/libros/grimorium-cubierta.webp",
+  "cubierta_alt": "Cubierta de Grimorium, ilustrada por Rainel Cabarroi",
+  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/(2018) Grimorium  NOTA DE CONTRATAPA.txt",
+  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/(2018) Grimorium  CON VOZ Y VOTO.txt",
+  "ficha": {
+    "título": "Grimorium",
+    "género": "Horror",
+    "editorial": "Editorial Oriente",
+    "año": "2018",
+    "cubierta": "Ilustración de Rainel Cabarroi"
+  },
+  "fragmentos": [
+    { "titulo": "Texto de Abdul Alhazred", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/04 Texto de Abdul Alhazred.txt", "tipo": "prosa" },
+    { "titulo": "Hesternus (I)", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/06 Hesternus   (I).txt", "tipo": "prosa" },
+    { "titulo": "Grimorium vox (Archetypus scriptum)", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/07 Grimorium vox (Archetypus scriptum)   (I).txt", "tipo": "prosa" }
+  ],
+  "galeria": [],
+  "prensa": []
+}

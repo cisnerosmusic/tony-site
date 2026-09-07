@@ -1,0 +1,31 @@
+{
+  "slug": "el-escudo-de-valnuss",
+  "titulo": "El Escudo de Valnúss",
+  "genero": "Fantasía heroica",
+  "genero_frase": "saga de fantasía heroica en cinco volúmenes",
+  "anio": "2015",
+  "editorial": "Editorial de la Mujer",
+  "premios": [],
+  "descripcion": "El Escudo de Valnúss (Editorial de la Mujer, 2015), saga de fantasía heroica de Antonio López Sánchez en un estuche de cinco volúmenes ilustrados por Rainel Cabarroi: sinopsis, ficha, fragmentos y el comentario del autor.",
+  "tira_sub": "Cinco volúmenes en un estuche: mi saga mayor",
+  "cubierta": "/img/libros/valnuss-cubierta.webp",
+  "cubierta_alt": "Cubierta de El Escudo de Valnúss, ilustrada por Rainel Cabarroi",
+  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/(2015) El Escudo de Valnúss.txt",
+  "contratapa_titulo": "Sinopsis",
+  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/(2015) El Escudo de Valnúss CON VOZ Y VOTO.txt",
+  "ficha": {
+    "título": "El Escudo de Valnúss",
+    "género": "Fantasía heroica",
+    "editorial": "Editorial de la Mujer",
+    "año": "2015",
+    "formato": "Estuche con cinco volúmenes",
+    "cubierta": "Ilustración de todas las portadas y del estuche: Rainel Cabarroi"
+  },
+  "fragmentos": [
+    { "titulo": "De La magia de la aurora", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/014 De La magia de la aurora.txt", "tipo": "prosa" }
+  ],
+  "galeria": [
+    { "img": "/img/libros/valnuss-portadas.webp", "alt": "Las cinco portadas del estuche de El Escudo de Valnúss", "pie": "Las cinco portadas del estuche, ilustradas por Rainel Cabarroi" }
+  ],
+  "prensa": []
+}

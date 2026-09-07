@@ -1,0 +1,30 @@
+{
+  "slug": "trovadoras",
+  "titulo": "Trovadoras",
+  "genero": "Entrevistas",
+  "genero_frase": "libro de entrevistas",
+  "anio": "2008",
+  "editorial": "Editorial Oriente",
+  "premios": [],
+  "descripcion": "Trovadoras (Editorial Oriente, 2008), libro de entrevistas de Antonio López Sánchez a las mujeres de la trova cubana: nota de contratapa, ficha, presentaciones y el comentario del autor.",
+  "tira_sub": "Las mujeres de la trova, en sus propias voces",
+  "cubierta": "/img/libros/trovadoras-cubierta.webp",
+  "cubierta_alt": "Cubierta de Trovadoras, ilustrada por Ramón Eduardo Haití",
+  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Trovadoras/(2008) Trovadoras NOTA CONTRATAPA.txt",
+  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Trovadoras/(2008) Trovadoras CON VOZ Y VOTO.txt",
+  "ficha": {
+    "título": "Trovadoras",
+    "género": "Entrevistas",
+    "editorial": "Editorial Oriente",
+    "año": "2008",
+    "cubierta": "Ilustración de Ramón Eduardo Haití"
+  },
+  "fragmentos": [],
+  "galeria": [
+    { "img": "/img/libros/trovadoras-pres-1.webp", "alt": "Presentación del libro Trovadoras", "pie": "Presentación de Trovadoras. Fotos: Ramón Eduardo Haití y Alain Gutiérrez Almeida" },
+    { "img": "/img/libros/trovadoras-pres-2.webp", "alt": "Presentación de Trovadoras en la Feria Internacional del Libro de La Habana", "pie": "18 Feria Internacional del Libro de La Habana, febrero de 2009" }
+  ],
+  "prensa": [
+    "Entrevistas y reseñas en la prensa cubana de la época; los enlaces están en localización y se irán sumando aquí."
+  ]
+}

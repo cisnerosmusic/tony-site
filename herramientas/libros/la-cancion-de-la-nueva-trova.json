@@ -1,0 +1,30 @@
+{
+  "slug": "la-cancion-de-la-nueva-trova",
+  "titulo": "La canción de la Nueva Trova",
+  "genero": "Ensayo",
+  "genero_frase": "libro de ensayos y entrevistas",
+  "anio": "2001",
+  "editorial": "Atril Ediciones Musicales",
+  "premios": [],
+  "descripcion": "La canción de la Nueva Trova (Atril Ediciones Musicales, 2001), primer libro de Antonio López Sánchez: ensayos y entrevistas sobre la Nueva Trova cubana, con nota de contratapa, ficha, fragmentos, presentaciones y el comentario del autor.",
+  "tira_sub": "Mi primer libro: la trova puesta por escrito",
+  "cubierta": "/img/libros/nueva-trova-cubierta.webp",
+  "cubierta_alt": "Cubierta de La canción de la Nueva Trova",
+  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/(2001) La canción de la Nueva Trova  NOTA CONTRATAPA.txt",
+  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/(2001) La canción de la Nueva Trova CON VOZ Y VOTO.txt",
+  "ficha": {
+    "título": "La canción de la Nueva Trova",
+    "género": "Ensayos y entrevistas",
+    "editorial": "Atril Ediciones Musicales",
+    "año": "2001"
+  },
+  "fragmentos": [
+    { "titulo": "Introducción", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/06 Introducción PARA FRAGMENTOS.txt", "tipo": "prosa" },
+    { "titulo": "Noel Nicola: seguir creyendo siempre", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/23 Noel Nicola   Seguir creyendo siempre PARA FRAGMENTOS.txt", "tipo": "prosa" }
+  ],
+  "galeria": [
+    { "img": "/img/libros/nueva-trova-pres-1.webp", "alt": "Presentación de La canción de la Nueva Trova en Cubadisco 2001", "pie": "Presentación en Cubadisco, mayo de 2001. Foto: Alain Gutiérrez Almeida" },
+    { "img": "/img/libros/nueva-trova-pres-2.webp", "alt": "Presentación del libro en el Festival Universitario del Libro y la Lectura", "pie": "Festival Universitario del Libro y la Lectura (FULL), Pabellón Cuba, 2007. Foto: Alain Gutiérrez Almeida" }
+  ],
+  "prensa": []
+}

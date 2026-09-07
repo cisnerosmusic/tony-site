@@ -13,7 +13,7 @@ FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox=
 
 NAV = [("/", "Portada"), ("/libros/", "Mis libros"), ("/ineditos/", "Inéditos"),
        ("/tinta-ciones/", "Tinta-ciones"), ("/trova/", "La trova"),
-       ("/plano-abierto/", "Plano abierto"), ("/periodista/", "El periodista"),
+       ("/plano-abierto/", "Plano abierto"), ("/laureles/", "Laureles"), ("/periodista/", "El periodista"),
        ("/directorio/", "Directorio")]
 
 def esc(t):
@@ -67,6 +67,23 @@ def generar(manifiesto):
 
     premios_jsonld = json.dumps(m.get("premios", []), ensure_ascii=False)
 
+    def bloque(id_, titulo_b, cuerpo, lado):
+        if not cuerpo.strip():
+            return ""
+        return (f'  <section class="libro-bloque reveal reveal-{lado}" aria-labelledby="b-{id_}">\n'
+                f'    <h2 id="b-{id_}">{titulo_b}</h2>\n'
+                f'    <div class="section-divider"></div>\n{cuerpo}\n  </section>\n\n')
+
+    nota_idioma = '    <p class="nota-demo">Los textos literarios se publican siempre en su idioma original, el español.</p>'
+    bloques = "".join([
+        bloque("contratapa", m.get("contratapa_titulo", "Nota de contratapa"), contratapa, "left"),
+        bloque("ficha", "Ficha", f'    <dl class="ficha">\n{ficha}\n    </dl>', "right"),
+        bloque("fragmentos", "Fragmentos", (fragmentos + "\n" + nota_idioma) if fragmentos else "", "left"),
+        bloque("presentaciones", "Presentaciones", f'    <div class="galeria">\n{galeria}    </div>' if galeria else "", "right"),
+        bloque("prensa", "Prensa", f'    <ul class="lista-obras">\n{prensa}\n    </ul>' if prensa else "", "left"),
+        bloque("vyv", "Con voz y voto", (vyv + '\n    <p class="vyv-firma">A. López Sánchez</p>') if vyv else "", "right"),
+    ])
+
     pagina = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -117,6 +134,7 @@ def generar(manifiesto):
     <li><a href="/tinta-ciones/">Tinta-ciones</a></li>
     <li><a href="/trova/">La trova</a></li>
     <li><a href="/plano-abierto/">Plano abierto</a></li>
+    <li><a href="/laureles/">Laureles</a></li>
     <li><a href="/periodista/">El periodista</a></li>
     <li><a href="/directorio/">Directorio</a></li>
     <li><a href="/en/" lang="en" hreflang="en">EN</a></li>
@@ -135,51 +153,7 @@ def generar(manifiesto):
     <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc(m["cubierta_alt"])}">
   </figure>
 
-  <section class="libro-bloque reveal reveal-left" aria-labelledby="b-contratapa">
-    <h2 id="b-contratapa">Nota de contratapa</h2>
-    <div class="section-divider"></div>
-    {contratapa}
-  </section>
-
-  <section class="libro-bloque reveal reveal-right" aria-labelledby="b-ficha">
-    <h2 id="b-ficha">Ficha</h2>
-    <div class="section-divider"></div>
-    <dl class="ficha">
-{ficha}
-    </dl>
-  </section>
-
-  <section class="libro-bloque reveal reveal-left" aria-labelledby="b-fragmentos">
-    <h2 id="b-fragmentos">Fragmentos</h2>
-    <div class="section-divider"></div>
-{fragmentos}
-    <p class="nota-demo">Los textos literarios se publican siempre en su idioma original, el español.</p>
-  </section>
-
-  <section class="libro-bloque reveal reveal-right" aria-labelledby="b-presentaciones">
-    <h2 id="b-presentaciones">Presentaciones</h2>
-    <div class="section-divider"></div>
-    <div class="galeria">
-{galeria}
-    </div>
-  </section>
-
-  <section class="libro-bloque reveal reveal-left" aria-labelledby="b-prensa">
-    <h2 id="b-prensa">Prensa</h2>
-    <div class="section-divider"></div>
-    <ul class="lista-obras">
-{prensa}
-    </ul>
-  </section>
-
-  <section class="libro-bloque reveal reveal-right" aria-labelledby="b-vyv">
-    <h2 id="b-vyv">Con voz y voto</h2>
-    <div class="section-divider"></div>
-{vyv}
-    <p class="vyv-firma">A. López Sánchez</p>
-  </section>
-
-  <p style="margin-top:2rem;"><a href="/libros/" class="btn">Volver a Mis libros</a></p>
+{bloques}  <p style="margin-top:2rem;"><a href="/libros/" class="btn">Volver a Mis libros</a></p>
 
 </div>
 </main>

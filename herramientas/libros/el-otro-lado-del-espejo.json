@@ -1,0 +1,30 @@
+{
+  "slug": "el-otro-lado-del-espejo",
+  "titulo": "El otro lado del espejo",
+  "genero": "Fantasía heroica",
+  "genero_frase": "novela de fantasía heroica",
+  "anio": "2017",
+  "editorial": "Editorial Gente Nueva",
+  "premios": ["Mención en el Concurso La Edad de Oro 2014"],
+  "descripcion": "El otro lado del espejo (Editorial Gente Nueva, 2017), novela de fantasía heroica de Antonio López Sánchez con mención en el Concurso La Edad de Oro 2014: nota de contratapa, ficha, fragmentos y el comentario del autor.",
+  "tira_sub": "Del lado de allá también se escribe",
+  "cubierta": "/img/libros/espejo-cubierta.webp",
+  "cubierta_alt": "Cubierta de El otro lado del espejo, ilustrada por Rainel Cabarroi",
+  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/(2017) El otro lado del espejo NOTA DE CONTRATAPA.txt",
+  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/(2017) El otro lado del espejo   CON VOZ Y VOTO.txt",
+  "ficha": {
+    "título": "El otro lado del espejo",
+    "género": "Fantasía heroica",
+    "editorial": "Editorial Gente Nueva",
+    "año": "2017",
+    "cubierta": "Ilustración de Rainel Cabarroi",
+    "premio": "Mención en el Concurso La Edad de Oro 2014"
+  },
+  "fragmentos": [
+    { "titulo": "I", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/01.txt", "tipo": "prosa" },
+    { "titulo": "II", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/02.txt", "tipo": "prosa" },
+    { "titulo": "III", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/03.txt", "tipo": "prosa" }
+  ],
+  "galeria": [],
+  "prensa": []
+}

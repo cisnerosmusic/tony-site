@@ -1,0 +1,30 @@
+{
+  "slug": "trampas-retratos-y-un-17-rojo",
+  "titulo": "Trampas, retratos y un 17 rojo",
+  "genero": "Poesía",
+  "genero_frase": "poemario en coautoría",
+  "anio": "2005",
+  "editorial": "Editorial de la Mujer",
+  "premios": [],
+  "descripcion": "Trampas, retratos y un 17 rojo (Editorial de la Mujer, 2005), poemario de Antonio López Sánchez en coautoría con María del Carmen Mestas y Marcel Luerio: ficha, fragmentos, presentaciones y el comentario del autor.",
+  "tira_sub": "Poesía a seis manos",
+  "cubierta": "/img/libros/trampas-cubierta.webp",
+  "cubierta_alt": "Cubierta de Trampas, retratos y un 17 rojo, ilustrada por Juan Carlos García",
+  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2005) Trampas, retratos y un 17 rojo/(2005) Trampas, retratos y un 17 rojo   CON VOZ Y VOTO.txt",
+  "ficha": {
+    "título": "Trampas, retratos y un 17 rojo",
+    "autoría": "En coautoría con María del Carmen Mestas y Marcel Luerio",
+    "género": "Poesía",
+    "editorial": "Editorial de la Mujer",
+    "año": "2005",
+    "cubierta": "Ilustración de Juan Carlos García"
+  },
+  "fragmentos": [
+    { "titulo": "Décimas: Retratos de mañana", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2005) Trampas, retratos y un 17 rojo/Décimas Retratos de mañana.txt", "tipo": "verso" }
+  ],
+  "galeria": [
+    { "img": "/img/libros/trampas-pres-1.webp", "alt": "Antonio López Sánchez con María del Carmen Mestas y Marcel Luerio", "pie": "Con María del Carmen Mestas y Marcel Luerio" },
+    { "img": "/img/libros/trampas-pres-2.webp", "alt": "Presentación del poemario en la Casa de la Poesía", "pie": "Presentación en la Casa de la Poesía, La Habana, marzo de 2005" }
+  ],
+  "prensa": []
+}

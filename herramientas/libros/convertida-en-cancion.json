@@ -1,0 +1,28 @@
+{
+  "slug": "convertida-en-cancion",
+  "titulo": "Convertida en canción",
+  "genero": "Ensayo",
+  "genero_frase": "ensayo sobre la Nueva Trova",
+  "anio": "2019",
+  "editorial": "Editorial Capiro",
+  "premios": [],
+  "descripcion": "Convertida en canción, la imagen de la mujer en los textos de la Nueva Trova (Editorial Capiro, 2019), ensayo de Antonio López Sánchez: nota de contratapa, ficha, fragmentos y el comentario del autor.",
+  "tira_sub": "La mujer, cantada: mi ensayo sobre la trova",
+  "cubierta": "/img/libros/convertida-cubierta.webp",
+  "cubierta_alt": "Cubierta de Convertida en canción, ilustrada por Ramón Eduardo Haití",
+  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/(2019) Convertida en canción   TEXTO CONTRATAPA.txt",
+  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/(2019) Convertida en canción   CON VOZ Y VOTO.txt",
+  "ficha": {
+    "título": "Convertida en canción (La imagen de la mujer en los textos de la Nueva Trova)",
+    "género": "Ensayo",
+    "editorial": "Editorial Capiro",
+    "año": "2019",
+    "cubierta": "Ilustración de Ramón Eduardo Haití"
+  },
+  "fragmentos": [
+    { "titulo": "Y el río cantando siempre", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/005 Y el río cantando siempre OK.txt", "tipo": "prosa" },
+    { "titulo": "IV · Lunas rotas", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/009 IV Lunas rotas OK.txt", "tipo": "prosa" }
+  ],
+  "galeria": [],
+  "prensa": []
+}
