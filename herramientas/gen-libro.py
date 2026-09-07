@@ -55,7 +55,12 @@ def generar(manifiesto):
             frags.append(f'<h3 class="fragmento-titulo">{esc(f["titulo"])}</h3>\n<div class="fragmento">{prosa_a_html(chr(10).join(lineas))}</div>')
     fragmentos = "\n".join(frags)
 
-    ficha = "\n".join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in m["ficha"].items())
+    ficha_items = dict(m["ficha"])
+    # Señal editorial discreta: derechos mundiales disponibles fuera de Cuba,
+    # salvo que el manifiesto la apague o la reemplace.
+    if m.get("derechos", True):
+        ficha_items.setdefault("derechos", "Disponibles para ediciones y traducciones fuera de Cuba")
+    ficha = "\n".join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in ficha_items.items())
 
     galeria = ""
     for g in m.get("galeria", []):
