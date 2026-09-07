@@ -1,6 +1,6 @@
 # Ala del Mar · Antonio López Sánchez
 
-Sitio oficial del escritor cubano **Antonio López Sánchez** (La Habana, 1973): novelista de fantasía heroica y horror, poeta y periodista cultural. En vivo en **[antoniolopezsanchez.art](https://antoniolopezsanchez.art)**.
+Sitio oficial del escritor cubano **Antonio López Sánchez** (La Habana, 1973): novelista, poeta y periodista cultural. En vivo en **[antoniolopezsanchez.art](https://antoniolopezsanchez.art)**.
 
 La casa se llama *Ala del Mar* por la fórmula con que el autor cierra sus libros desde Alamar, el barrio habanero frente al mar donde vive y escribe: *"Hallado en Ala del Mar, [fecha]. bene scriptus"*.
 
