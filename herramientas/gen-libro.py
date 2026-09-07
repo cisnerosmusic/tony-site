@@ -74,6 +74,10 @@ def generar(manifiesto):
     nav_html = "\n    ".join(f'<a href="{h}">{n}</a>' for h, n in NAV if h != "/")
 
     premios_jsonld = json.dumps(m.get("premios", []), ensure_ascii=False)
+    # sameAs ata esta ficha al mismo libro en fuentes externas verificadas, para que
+    # los buscadores no lo confundan con obras homonimas de otros autores.
+    referencias = m.get("referencias", [])
+    sameas_jsonld = (',\n  "sameAs": ' + json.dumps(referencias, ensure_ascii=False)) if referencias else ""
     seo_titulo = m.get("seo_titulo") or (titulo + " | Antonio López Sánchez")
     seo_desc = m.get("seo_desc") or m["descripcion"][:155]
 
@@ -125,7 +129,7 @@ def generar(manifiesto):
   "genre": {json.dumps(m["genero"], ensure_ascii=False)},
   "award": {premios_jsonld},
   "image": "{DOMINIO}{m["cubierta"]}",
-  "url": "{url}"
+  "url": "{url}"{sameas_jsonld}
 }}
 </script>
 <script type="application/ld+json">
