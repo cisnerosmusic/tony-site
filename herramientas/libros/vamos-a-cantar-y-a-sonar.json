@@ -21,12 +21,30 @@
     "incluye": "Los poemas Tus ojos, Náufrago y Trovada de Grillo y Polimita, de Antonio López Sánchez"
   },
   "fragmentos": [
-    { "titulo": "Náufrago", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/001 Náufrago.txt", "tipo": "verso" },
-    { "titulo": "Tus ojos", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/003 Tus ojos.txt", "tipo": "verso" },
-    { "titulo": "Trovada de Grillo y Polimita", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/Trovada de Grillo y Polimita.txt", "tipo": "verso" }
+    {
+      "titulo": "Náufrago",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/001 Náufrago.txt",
+      "tipo": "verso"
+    },
+    {
+      "titulo": "Tus ojos",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/003 Tus ojos.txt",
+      "tipo": "verso"
+    },
+    {
+      "titulo": "Trovada de Grillo y Polimita",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/Trovada de Grillo y Polimita.txt",
+      "tipo": "verso"
+    }
   ],
   "galeria": [
-    { "img": "/img/libros/vamos-foto-1.webp", "alt": "Ejemplar de Vamos a cantar y a soñar", "pie": "Del libro Vamos a cantar y a soñar" }
+    {
+      "img": "/img/libros/vamos-foto-1.webp",
+      "alt": "Ejemplar de Vamos a cantar y a soñar",
+      "pie": "Del libro Vamos a cantar y a soñar"
+    }
   ],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "Vamos a cantar y a soñar | Antonio López Sánchez",
+  "seo_desc": "Compilación de Nerys Pupo (Editorial de la Mujer, 2008) con tres poemas infantiles de Antonio López Sánchez: Náufrago, Tus ojos y Trovada."
 }

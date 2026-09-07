@@ -22,8 +22,14 @@
     "incluye": "Sin segundas partes, de Antonio López Sánchez"
   },
   "fragmentos": [
-    { "titulo": "Sin segundas partes", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2006) Nota de prensa y otros minicuentos (Antología)/Sin segundas partes VERSIÓN FINAL 2006.txt", "tipo": "prosa" }
+    {
+      "titulo": "Sin segundas partes",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2006) Nota de prensa y otros minicuentos (Antología)/Sin segundas partes VERSIÓN FINAL 2006.txt",
+      "tipo": "prosa"
+    }
   ],
   "galeria": [],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "Nota de prensa y otros minicuentos | Antonio López Sánchez",
+  "seo_desc": "Antología del Centro Onelio Jorge Cardoso (Cajachina, 2006) con el minicuento Sin segundas partes, de Antonio López Sánchez."
 }

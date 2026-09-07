@@ -20,9 +20,19 @@
     "cubierta": "Ilustración de Ramón Eduardo Haití"
   },
   "fragmentos": [
-    { "titulo": "Y el río cantando siempre", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/005 Y el río cantando siempre OK.txt", "tipo": "prosa" },
-    { "titulo": "IV · Lunas rotas", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/009 IV Lunas rotas OK.txt", "tipo": "prosa" }
+    {
+      "titulo": "Y el río cantando siempre",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/005 Y el río cantando siempre OK.txt",
+      "tipo": "prosa"
+    },
+    {
+      "titulo": "IV · Lunas rotas",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/009 IV Lunas rotas OK.txt",
+      "tipo": "prosa"
+    }
   ],
   "galeria": [],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "Convertida en canción | Antonio López Sánchez",
+  "seo_desc": "Convertida en canción (Capiro, 2019), ensayo sobre la imagen de la mujer en los textos de la Nueva Trova: contratapa, ficha y fragmentos."
 }

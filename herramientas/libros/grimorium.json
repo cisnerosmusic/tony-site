@@ -20,10 +20,24 @@
     "cubierta": "Ilustración de Rainel Cabarroi"
   },
   "fragmentos": [
-    { "titulo": "Texto de Abdul Alhazred", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/04 Texto de Abdul Alhazred.txt", "tipo": "prosa" },
-    { "titulo": "Hesternus (I)", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/06 Hesternus   (I).txt", "tipo": "prosa" },
-    { "titulo": "Grimorium vox (Archetypus scriptum)", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/07 Grimorium vox (Archetypus scriptum)   (I).txt", "tipo": "prosa" }
+    {
+      "titulo": "Texto de Abdul Alhazred",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/04 Texto de Abdul Alhazred.txt",
+      "tipo": "prosa"
+    },
+    {
+      "titulo": "Hesternus (I)",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/06 Hesternus   (I).txt",
+      "tipo": "prosa"
+    },
+    {
+      "titulo": "Grimorium vox (Archetypus scriptum)",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/07 Grimorium vox (Archetypus scriptum)   (I).txt",
+      "tipo": "prosa"
+    }
   ],
   "galeria": [],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "Grimorium, novela de horror | Antonio López Sánchez",
+  "seo_desc": "Grimorium (Editorial Oriente, 2018), la novela de horror de Antonio López Sánchez: contratapa, ficha, fragmentos y comentario del autor."
 }

@@ -22,10 +22,20 @@
     "cubierta": "Ilustración de todas las portadas y del estuche: Rainel Cabarroi"
   },
   "fragmentos": [
-    { "titulo": "De La magia de la aurora", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/014 De La magia de la aurora.txt", "tipo": "prosa" }
+    {
+      "titulo": "De La magia de la aurora",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/014 De La magia de la aurora.txt",
+      "tipo": "prosa"
+    }
   ],
   "galeria": [
-    { "img": "/img/libros/valnuss-portadas.webp", "alt": "Las cinco portadas del estuche de El Escudo de Valnúss", "pie": "Las cinco portadas del estuche, ilustradas por Rainel Cabarroi" }
+    {
+      "img": "/img/libros/valnuss-portadas.webp",
+      "alt": "Las cinco portadas del estuche de El Escudo de Valnúss",
+      "pie": "Las cinco portadas del estuche, ilustradas por Rainel Cabarroi"
+    }
   ],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "El Escudo de Valnúss | Antonio López Sánchez",
+  "seo_desc": "El Escudo de Valnúss (Editorial de la Mujer, 2015), saga de fantasía heroica en estuche de cinco volúmenes: sinopsis, ficha y fragmentos."
 }

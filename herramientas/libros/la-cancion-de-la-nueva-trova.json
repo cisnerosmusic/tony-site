@@ -19,12 +19,30 @@
     "año": "2001"
   },
   "fragmentos": [
-    { "titulo": "Introducción", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/06 Introducción PARA FRAGMENTOS.txt", "tipo": "prosa" },
-    { "titulo": "Noel Nicola: seguir creyendo siempre", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/23 Noel Nicola   Seguir creyendo siempre PARA FRAGMENTOS.txt", "tipo": "prosa" }
+    {
+      "titulo": "Introducción",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/06 Introducción PARA FRAGMENTOS.txt",
+      "tipo": "prosa"
+    },
+    {
+      "titulo": "Noel Nicola: seguir creyendo siempre",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/23 Noel Nicola   Seguir creyendo siempre PARA FRAGMENTOS.txt",
+      "tipo": "prosa"
+    }
   ],
   "galeria": [
-    { "img": "/img/libros/nueva-trova-pres-1.webp", "alt": "Presentación de La canción de la Nueva Trova en Cubadisco 2001", "pie": "Presentación en Cubadisco, mayo de 2001. Foto: Alain Gutiérrez Almeida" },
-    { "img": "/img/libros/nueva-trova-pres-2.webp", "alt": "Presentación del libro en el Festival Universitario del Libro y la Lectura", "pie": "Festival Universitario del Libro y la Lectura (FULL), Pabellón Cuba, 2007. Foto: Alain Gutiérrez Almeida" }
+    {
+      "img": "/img/libros/nueva-trova-pres-1.webp",
+      "alt": "Presentación de La canción de la Nueva Trova en Cubadisco 2001",
+      "pie": "Presentación en Cubadisco, mayo de 2001. Foto: Alain Gutiérrez Almeida"
+    },
+    {
+      "img": "/img/libros/nueva-trova-pres-2.webp",
+      "alt": "Presentación del libro en el Festival Universitario del Libro y la Lectura",
+      "pie": "Festival Universitario del Libro y la Lectura (FULL), Pabellón Cuba, 2007. Foto: Alain Gutiérrez Almeida"
+    }
   ],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "La canción de la Nueva Trova | Antonio López Sánchez",
+  "seo_desc": "La canción de la Nueva Trova (Atril, 2001), primer libro del autor: ensayos y entrevistas sobre la trova cubana, con fragmentos y presentaciones."
 }

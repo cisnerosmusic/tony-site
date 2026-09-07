@@ -71,6 +71,8 @@ def generar(manifiesto):
     nav_html = "\n    ".join(f'<a href="{h}">{n}</a>' for h, n in NAV if h != "/")
 
     premios_jsonld = json.dumps(m.get("premios", []), ensure_ascii=False)
+    seo_titulo = m.get("seo_titulo") or (titulo + " | Antonio López Sánchez")
+    seo_desc = m.get("seo_desc") or m["descripcion"][:155]
 
     def bloque(id_, titulo_b, cuerpo, lado):
         if not cuerpo.strip():
@@ -94,15 +96,19 @@ def generar(manifiesto):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(titulo)}, {esc(m["genero_frase"])} de Antonio López Sánchez</title>
-<meta name="description" content="{esc(m["descripcion"])}">
+<title>{esc(seo_titulo)}</title>
+<meta name="description" content="{esc(seo_desc)}">
 <link rel="icon" href="{FAVICON}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="book">
 <meta property="og:url" content="{url}">
-<meta property="og:title" content="{esc(titulo)}, de Antonio López Sánchez">
-<meta property="og:description" content="{esc(m["descripcion"])}">
+<meta property="og:title" content="{esc(seo_titulo)}">
+<meta property="og:description" content="{esc(seo_desc)}">
 <meta property="og:image" content="{DOMINIO}{m["cubierta"]}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(seo_titulo)}">
+<meta name="twitter:description" content="{esc(seo_desc)}">
+<meta name="twitter:image" content="{DOMINIO}{m["cubierta"]}">
 <meta property="og:locale" content="es_ES">
 <script type="application/ld+json">
 {{
@@ -115,7 +121,19 @@ def generar(manifiesto):
   "inLanguage": "es",
   "genre": {json.dumps(m["genero"], ensure_ascii=False)},
   "award": {premios_jsonld},
-  "image": "{DOMINIO}{m["cubierta"]}"
+  "image": "{DOMINIO}{m["cubierta"]}",
+  "url": "{url}"
+}}
+</script>
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{ "@type": "ListItem", "position": 1, "name": "Ala del Mar", "item": "{DOMINIO}/" }},
+    {{ "@type": "ListItem", "position": 2, "name": "Mis libros", "item": "{DOMINIO}/libros/" }},
+    {{ "@type": "ListItem", "position": 3, "name": {json.dumps(titulo, ensure_ascii=False)}, "item": "{url}" }}
+  ]
 }}
 </script>
 <meta name="theme-color" content="#0a0c1f">

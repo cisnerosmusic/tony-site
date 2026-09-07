@@ -5,7 +5,9 @@
   "genero_frase": "novela de fantasía heroica",
   "anio": "2011",
   "editorial": "Editorial de la Mujer",
-  "premios": ["Premio La Rosa Blanca 2012, Sección de Literatura para Niños y Jóvenes de la UNEAC"],
+  "premios": [
+    "Premio La Rosa Blanca 2012, Sección de Literatura para Niños y Jóvenes de la UNEAC"
+  ],
   "descripcion": "Las guerreras de la luz (Editorial de la Mujer, 2011), primera novela de Antonio López Sánchez y Premio La Rosa Blanca 2012 de la UNEAC: nota de contratapa, ficha, fragmentos, presentaciones y el comentario del autor.",
   "tira_sub": "Mi primera novela, la de las primeras veces",
   "cubierta": "/img/libros/guerreras-cubierta.webp",
@@ -21,17 +23,39 @@
     "premio": "La Rosa Blanca 2012, Sección de Literatura para Niños y Jóvenes de la UNEAC, entregado el 19 de marzo de 2013"
   },
   "fragmentos": [
-    { "titulo": "VII · Donde habla el colibrí", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/07 Donde habla el colibrí.txt", "tipo": "prosa" },
-    { "titulo": "XXXV · Cuenta la voz de Glajur", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/35 Cuenta la voz de Glajur.txt", "tipo": "verso" },
-    { "titulo": "XLVII · El ataque", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/47 El ataque.txt", "tipo": "prosa" }
+    {
+      "titulo": "VII · Donde habla el colibrí",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/07 Donde habla el colibrí.txt",
+      "tipo": "prosa"
+    },
+    {
+      "titulo": "XXXV · Cuenta la voz de Glajur",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/35 Cuenta la voz de Glajur.txt",
+      "tipo": "verso"
+    },
+    {
+      "titulo": "XLVII · El ataque",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/47 El ataque.txt",
+      "tipo": "prosa"
+    }
   ],
   "galeria": [
-    { "img": "/img/libros/guerreras-premio-1.webp", "alt": "Antonio López Sánchez recibe el Premio La Rosa Blanca", "pie": "Entrega del Premio La Rosa Blanca, 19 de marzo de 2013" },
-    { "img": "/img/libros/guerreras-premio-2.webp", "alt": "Ceremonia de entrega del Premio La Rosa Blanca", "pie": "Ceremonia del Premio La Rosa Blanca, UNEAC, 2013" }
+    {
+      "img": "/img/libros/guerreras-premio-1.webp",
+      "alt": "Antonio López Sánchez recibe el Premio La Rosa Blanca",
+      "pie": "Entrega del Premio La Rosa Blanca, 19 de marzo de 2013"
+    },
+    {
+      "img": "/img/libros/guerreras-premio-2.webp",
+      "alt": "Ceremonia de entrega del Premio La Rosa Blanca",
+      "pie": "Ceremonia del Premio La Rosa Blanca, UNEAC, 2013"
+    }
   ],
   "prensa": [
     "Reseñada en la revista Bohemia.",
     "Reseñada en El Tintero, suplemento literario de Juventud Rebelde.",
     "[Los enlaces a la prensa digital están en localización; se irán sumando aquí.]"
-  ]
+  ],
+  "seo_titulo": "Las guerreras de la luz | Antonio López Sánchez",
+  "seo_desc": "Las guerreras de la luz (Editorial de la Mujer, 2011), Premio La Rosa Blanca de la UNEAC: contratapa, ficha, fragmentos y el comentario del autor."
 }

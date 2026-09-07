@@ -23,8 +23,14 @@
     "incluye": "La muñeca y el príncipe, de Antonio López Sánchez"
   },
   "fragmentos": [
-    { "titulo": "La muñeca y el príncipe", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación)/09 La muñeca y el príncipe   (2014).txt", "tipo": "prosa" }
+    {
+      "titulo": "La muñeca y el príncipe",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación)/09 La muñeca y el príncipe   (2014).txt",
+      "tipo": "prosa"
+    }
   ],
   "galeria": [],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "Cuentos de muñecas | Antonio López Sánchez",
+  "seo_desc": "Compilación de Magaly Sánchez Ochoa (Editorial de la Mujer, 2015) con el cuento La muñeca y el príncipe, de Antonio López Sánchez."
 }

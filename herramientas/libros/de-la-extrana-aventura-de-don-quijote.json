@@ -5,7 +5,9 @@
   "genero_frase": "relato en formato digital",
   "anio": "2021",
   "editorial": "Editorial Cubaliteraria",
-  "premios": ["Primer premio del concurso Reescribir El Quijote en Cuba, 2005"],
+  "premios": [
+    "Primer premio del concurso Reescribir El Quijote en Cuba, 2005"
+  ],
   "descripcion": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (Editorial Cubaliteraria, 2021, EPUB), el Quijote reescrito desde Cuba por Antonio López Sánchez: ficha, presentación y el comentario del autor.",
   "tira_sub": "Mi Quijote, ahora en libro digital",
   "cubierta": "/img/libros/quijote-cubierta.webp",
@@ -24,5 +26,7 @@
   },
   "fragmentos": [],
   "galeria": [],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "De la extraña aventura de Don Quijote | A. López Sánchez",
+  "seo_desc": "El Quijote reescrito desde Cuba (Cubaliteraria, 2021, EPUB), del primer premio de Reescribir El Quijote en Cuba: ficha y presentación."
 }

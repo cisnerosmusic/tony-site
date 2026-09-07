@@ -20,11 +20,25 @@
     "cubierta": "Ilustración de Juan Carlos García"
   },
   "fragmentos": [
-    { "titulo": "Décimas: Retratos de mañana", "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2005) Trampas, retratos y un 17 rojo/Décimas Retratos de mañana.txt", "tipo": "verso" }
+    {
+      "titulo": "Décimas: Retratos de mañana",
+      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2005) Trampas, retratos y un 17 rojo/Décimas Retratos de mañana.txt",
+      "tipo": "verso"
+    }
   ],
   "galeria": [
-    { "img": "/img/libros/trampas-pres-1.webp", "alt": "Antonio López Sánchez con María del Carmen Mestas y Marcel Luerio", "pie": "Con María del Carmen Mestas y Marcel Luerio" },
-    { "img": "/img/libros/trampas-pres-2.webp", "alt": "Presentación del poemario en la Casa de la Poesía", "pie": "Presentación en la Casa de la Poesía, La Habana, marzo de 2005" }
+    {
+      "img": "/img/libros/trampas-pres-1.webp",
+      "alt": "Antonio López Sánchez con María del Carmen Mestas y Marcel Luerio",
+      "pie": "Con María del Carmen Mestas y Marcel Luerio"
+    },
+    {
+      "img": "/img/libros/trampas-pres-2.webp",
+      "alt": "Presentación del poemario en la Casa de la Poesía",
+      "pie": "Presentación en la Casa de la Poesía, La Habana, marzo de 2005"
+    }
   ],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "Trampas, retratos y un 17 rojo | Antonio López Sánchez",
+  "seo_desc": "Trampas, retratos y un 17 rojo (Editorial de la Mujer, 2005), poemario en coautoría: ficha, décimas y el comentario del autor."
 }

@@ -5,7 +5,9 @@
   "genero_frase": "antología del premio Reescribir El Quijote en Cuba",
   "anio": "2005",
   "editorial": "Diputación de Córdoba",
-  "premios": ["Primer premio del concurso Reescribir El Quijote en Cuba, 2005"],
+  "premios": [
+    "Primer premio del concurso Reescribir El Quijote en Cuba, 2005"
+  ],
   "descripcion": "En un lugar de Cuba de cuyo nombre quiero acordarme (2005), antología del concurso Reescribir El Quijote en Cuba donde Antonio López Sánchez obtuvo el primer premio: ficha, presentación y el comentario del autor.",
   "tira_sub": "El Quijote reescrito desde Cuba, con primer premio",
   "cubierta": "/img/libros/lugar-cubierta.webp",
@@ -22,7 +24,13 @@
   },
   "fragmentos": [],
   "galeria": [
-    { "img": "/img/libros/lugar-premio.webp", "alt": "Del premio Reescribir El Quijote en Cuba", "pie": "Del premio Reescribir El Quijote en Cuba, 2005" }
+    {
+      "img": "/img/libros/lugar-premio.webp",
+      "alt": "Del premio Reescribir El Quijote en Cuba",
+      "pie": "Del premio Reescribir El Quijote en Cuba, 2005"
+    }
   ],
-  "prensa": []
+  "prensa": [],
+  "seo_titulo": "En un lugar de Cuba de cuyo nombre quiero acordarme",
+  "seo_desc": "Antología del concurso Reescribir El Quijote en Cuba (2005), donde Antonio López Sánchez obtuvo el primer premio: ficha y comentario del autor."
 }
