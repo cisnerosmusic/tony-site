@@ -1,229 +1,235 @@
 ---
 name: Ala del Mar
-description: La casa del escritor Antonio López Sánchez, cuartillas sobre una mesa azul frente al mar de Alamar
+description: La casa del escritor Antonio López Sánchez, de noche frente al mar de Alamar; navy en varias tonalidades y serif dorada
 colors:
-  mesa: "#dde6ec"
-  mesa-fria: "#b9c7d1"
-  mesa-sombra: "#d9c8ab"
-  papel: "#faf5e9"
-  papel-viejo: "#f5edda"
-  tinta: "#262019"
-  tinta-suave: "#4d4335"
-  anil: "#1d4e89"
-  anil-profundo: "#163c6a"
-  anil-tenue: "#7d97b8"
+  bg-deep: "#0a0c1f"
+  bg-dark: "#0d0f2b"
+  bg-section: "#0f1130"
+  bg-card: "rgba(16, 18, 42, 0.7)"
+  navy: "#1a1d4a"
+  navy-light: "#252860"
+  gold: "#d4a030"
+  gold-bright: "#f0c860"
+  gold-dim: "rgba(212, 160, 48, 0.5)"
+  gold-faint: "rgba(212, 160, 48, 0.12)"
+  text-primary: "#e8e4dc"
+  text-secondary: "rgba(200, 195, 185, 0.7)"
+  text-dim: "rgba(180, 170, 155, 0.5)"
+  line: "rgba(212, 160, 48, 0.12)"
+  line-bright: "rgba(212, 160, 48, 0.25)"
 typography:
   display:
-    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
-    fontSize: "clamp(2.7rem, 8.5vw, 5.4rem)"
+    fontFamily: "Cinzel, serif"
+    fontSize: "clamp(2rem, 4.5vw, 3.4rem)"
     fontWeight: 400
-    lineHeight: 1.02
-    letterSpacing: "-0.01em"
-  casa:
-    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
-    fontSize: "clamp(2.4rem, 7.5vw, 4.6rem)"
-    fontWeight: 700
-    lineHeight: 1.02
-    letterSpacing: "0.05em"
-  headline:
-    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
-    fontSize: "clamp(1.5rem, 4vw, 2.1rem)"
-    fontWeight: 700
     lineHeight: 1.15
-    letterSpacing: "0.06em"
-  title:
-    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
-    fontSize: "clamp(1.9rem, 5vw, 2.9rem)"
+    letterSpacing: "0.12em"
+  headline:
+    fontFamily: "Cinzel, serif"
+    fontSize: "clamp(1.8rem, 4vw, 2.8rem)"
     fontWeight: 400
-    lineHeight: 1.05
-  seccion:
-    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
-    fontSize: "clamp(1.15rem, 2.6vw, 1.45rem)"
-    fontWeight: 700
     letterSpacing: "0.08em"
-  body:
-    fontFamily: "Bonum, Bookman Old Style, Georgia, serif"
-    fontSize: "1.15rem"
-    fontWeight: 400
-    lineHeight: 1.65
-  maquina:
-    fontFamily: "Courier Prime, Courier New, monospace"
-    fontSize: "0.85rem"
+  seccion:
+    fontFamily: "Cinzel, serif"
+    fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)"
     fontWeight: 400
     letterSpacing: "0.06em"
+  body:
+    fontFamily: "Cormorant Garamond, serif"
+    fontSize: "1.05rem"
+    fontWeight: 300
+    lineHeight: 1.9
+  lema:
+    fontFamily: "Cormorant Garamond, serif"
+    fontSize: "1.3rem"
+    fontStyle: italic
+    fontWeight: 300
+    letterSpacing: "0.06em"
+  aparato:
+    fontFamily: "Space Mono, monospace"
+    fontSize: "0.7rem"
+    fontWeight: 400
+    letterSpacing: "0.1em"
+    textTransform: uppercase
 components:
-  sello:
-    backgroundColor: "transparent"
-    textColor: "{colors.anil}"
-    typography: "{typography.maquina}"
-    padding: "0.85rem 1.9rem"
-  sello-hover:
-    textColor: "{colors.anil-profundo}"
-  sello-menor:
-    textColor: "{colors.anil}"
-    padding: "0.6rem 1.3rem"
-  cuartilla:
-    backgroundColor: "{colors.papel}"
-    textColor: "{colors.tinta}"
-    padding: "1.4rem clamp(1.4rem, 5vw, 4rem) 3.2rem"
-  tira:
-    backgroundColor: "{colors.papel-viejo}"
-    textColor: "{colors.tinta}"
-    padding: "0.9rem 2.4rem 1rem"
-  vyv:
-    backgroundColor: "{colors.papel-viejo}"
-    textColor: "{colors.tinta}"
-    padding: "1.6rem clamp(1.2rem, 3vw, 2.2rem)"
+  btn:
+    backgroundColor: transparent
+    textColor: "{colors.gold}"
+    borderColor: "{colors.gold-dim}"
+    typography: "{typography.aparato}"
+    padding: "0.9rem 2.2rem"
+  btn-filled:
+    backgroundColor: "{colors.navy}"
+    borderColor: "{colors.gold-dim}"
+  poema:
+    backgroundColor: "{colors.bg-card}"
+    borderColor: "{colors.line}"
+    padding: "clamp(2rem, 5vw, 3.5rem)"
+  audio-item:
+    backgroundColor: "{colors.bg-card}"
+    borderColor: "{colors.line}"
+    padding: "2rem 2.2rem"
 ---
 
 # Design System: Ala del Mar
 
+> **Aviso para quien retome el proyecto.** Este documento describe el sistema **en vivo**, el que corresponde a `styles.css` y a lo que sirve antoniolopezsanchez.art. Una versión anterior de este mismo archivo describía otro mundo completamente distinto, de cuartillas de papel sobre una mesa azul pálido, con añil #1d4e89, Bonum y Courier Prime. **Ese camino fue abandonado.** El autor y el estudio eligieron la dirección navy y oro heredada de la plantilla propia de Index01. Si encuentras en cualquier parte del proyecto referencias a añil, mesa, cuartilla, sello de goma, Bonum o Courier Prime, son fósiles de aquella iteración: no son autoridad y no se restauran.
+
 ## Overview
 
-**Creative North Star: "La mesa del escritor frente al mar"**
+La casa del escritor de noche frente al mar. Fondos azul noche en varias tonalidades, un único acento en oro, serif romana para los nombres y los títulos, serif de lectura para la prosa y la poesía, y monoespaciada solo para el aparato (etiquetas, metadatos, notas, pie). La estructura del sitio es de página larga con secciones anchas, no de documento.
 
-Ala del Mar es la casa con nombre propio del escritor Antonio López Sánchez, y la web es su mesa de trabajo vista desde arriba: cuartillas de papel cálido apiladas sobre una mesa azul pálido, con la hoja de abajo asomando torcida, sellos de goma entintados en añil, copias al carbón con mancha de café y navegación mecanografiada al pie de cada hoja. Todo lo que se ve es un objeto del oficio de escribir a la vieja usanza; no hay componentes "de web" (hero, cards, badges), hay hojas, tiras, sellos y fichas. Cada hoja interior cierra con el sello de la casa: la línea "bene scriptus" (`.fin`).
-
-La voz es primera persona ("Mis libros", "Escribo fantasía heroica") salvo cuando se declara otra voz. La estructura es multipágina y multiidioma (selector es · en · fr · it · ru, con los idiomas no publicados marcados `.pronto`), pero los textos literarios se publican siempre en español, acompañados de una `.nota-idioma` mecanografiada que lo aclara.
-
-Esta identidad reemplaza por completo la iteración anterior (IM Fell + EB Garamond con acento rojo). El rojo fue retirado del sistema; el único acento es el añil de bolígrafo.
-
-**Key Characteristics:**
-- Mesa azul pálido (#dde6ec) como fondo universal; nunca blanco puro ni gris neutro.
-- Papel con grano SVG y hoja de abajo asomando; rotaciones alternas de fracciones de grado.
-- Una sola familia impresa (Bonum) y una mecanografiada (Courier Prime); jerarquía por caja y puntaje, no por cambio de fuente.
-- Un solo acento: añil #1d4e89. Sellos de goma con máscara de entintado.
-- Un solo motion: el oficio mecanografiándose al cargar la portada, con reduced-motion respetado.
+Base heredada de [impulses-art-site](https://github.com/cisnerosmusic/impulses-art-site), plantilla propia de Index01, adaptada a esta casa.
 
 ## Colors
 
-Paleta de escritorio: azules fríos de mesa, papeles cálidos, tinta sepia y un único añil de bolígrafo.
+Paleta nocturna: azules profundos de fondo, un solo oro de acento, y textos cálidos de papel viejo sobre la noche.
 
 ### Primary
-- **Añil de bolígrafo** (#1d4e89, `--anil`): el único acento del sistema. Sellos de goma, enlaces de idiomas, línea de premio (`.maquina-azul`), firma del autor (`.vyv-firma`), crédito del poema, borde superior de la ficha de archivo, foco visible, selección de texto y caret.
-- **Añil profundo** (#163c6a): estado hover/active del sello; no tiene otro uso.
-- **Añil tenue** (#7d97b8, `--anil-tenue`): añil desactivado (sello `:disabled`, idiomas `.pronto` vía opacidad).
+- **Oro** (#d4a030, `--gold`): el único acento del sistema. Logo de navegación, títulos de sección, nombre de la casa, títulos de libro, subrayado de la página activa, bordes de botón en hover, foco visible.
+- **Oro brillante** (#f0c860, `--gold-bright`): solo estado hover sobre texto ya dorado. No tiene otro uso.
+- **Oro tenue** (rgba(212, 160, 48, 0.5), `--gold-dim`): bordes de botón en reposo, divisores, etiquetas `dt` de ficha, año de laurel, crédito de poema, lema del pie.
+- **Oro velado** (rgba(212, 160, 48, 0.12), `--gold-faint`): relleno de botón en hover. Nunca texto.
 
 ### Neutral
-- **Mesa azul pálido** (#dde6ec, `--mesa`): fondo del body en todas las páginas. La mesa siempre se ve entre hojas.
-- **Mesa fría** (#b9c7d1, `--mesa-fria`): contornos finos de fotos y cubiertas (outline 1px), borde de la cubierta dominante.
-- **Sombra de mesa** (#d9c8ab, `--mesa-sombra`): hairlines cálidos: separadores de listas, fichas, índice al pie, borde de cubiertas pequeñas.
-- **Papel de cuartilla** (#faf5e9, `--papel`): superficie principal de toda hoja (`.cuartilla`), marco blanco-hueso de las fotos.
-- **Papel viejo** (#f5edda, `--papel-viejo`): la hoja de abajo del montón, las tiras separadoras y el bloque "Con voz y voto" (`.vyv`).
-- **Tinta** (#262019, `--tinta`): texto impreso; también el cursor de máquina.
-- **Tinta suave** (#4d4335, `--tinta-suave`): metadatos, cabezales, notas, colofón, `.fin`.
+- **Noche profunda** (#0a0c1f, `--bg-deep`): fondo del body y del pie. Es el suelo del mundo.
+- **Noche de sección** (#0f1130, `--bg-section`): fondo de `.section-alt`, para alternar bloques sin cambiar de mundo.
+- **Noche de tarjeta** (rgba(16, 18, 42, 0.7), `--bg-card`): superficie de los contenedores aislados, poema y audio.
+- **Navy** (#1a1d4a, `--navy`) y **navy claro** (#252860, `--navy-light`): relleno del botón sólido y su hover. Único uso.
+- **Texto principal** (#e8e4dc, `--text-primary`): prosa literaria, versos, nombre del autor. Cálido, no blanco.
+- **Texto secundario** (rgba(200, 195, 185, 0.7), `--text-secondary`): prosa de presentación, sinopsis, navegación, `dd` de ficha.
+- **Texto tenue** (rgba(180, 170, 155, 0.5), `--text-dim`): aparato de menor jerarquía: metadatos, pies de galería, notas, copyright.
+- **Línea** (rgba(212, 160, 48, 0.12), `--line`) y **línea viva** (rgba(212, 160, 48, 0.25), `--line-bright`): hairlines dorados al 12% para separar, al 25% para enmarcar cubiertas y versos.
 
 ### Named Rules
-**La regla del añil único.** Hay un solo acento en toda la casa: el añil #1d4e89, aplicado a lo que un escritor marcaría con su bolígrafo o su sello. El rojo #b3372b de la iteración anterior fue retirado; no vuelve. Ningún segundo acento entra al sistema.
 
-**La mesa nunca es blanca.** Ningún fondo es #fff ni gris neutro: o es mesa azul, o es papel cálido con grano (`--grano` sobre `--papel` o `--papel-viejo`).
+**La regla del oro único.** Hay un solo acento en toda la casa. Ningún segundo color entra al sistema: si algo necesita distinguirse, cambia de peso, de familia o de fondo, nunca de color.
+
+**El fondo nunca es negro.** Ningún fondo es #000 ni gris neutro. Siempre es azul de noche, en alguna de sus tonalidades.
+
+**Las líneas son oro al 12%.** Todo separador y todo borde estructural nace del oro rebajado, no de un gris. Es lo que mantiene la unidad del mundo cuando no hay color.
+
+**Pendiente de contraste, no lo deshagas.** `--text-dim` (2,89:1) y `--gold-dim` usado como texto (2,80:1) están por debajo del mínimo AA de 4,5:1 sobre los fondos navy. El arreglo acordado es subir el alfa de ambos de 0.5 a 0.72. Ver `PENDIENTES.md`, sección 2. Si al leer este archivo esos valores ya están en 0.72, es correcto: no los devuelvas a 0.5.
 
 ## Typography
 
-**Display Font:** Bonum, es decir TeX Gyre Bonum, clon libre de Bookman Old Style, la letra del autor (fallback "Bookman Old Style", Georgia, serif). Cuatro cortes locales: 400, 700, italic, bold italic.
-**Body Font:** la misma Bonum; el mundo imprime todo con una sola familia.
-**Label/Mono Font:** Courier Prime (fallback "Courier New", monospace), en 400, 700 e italic locales. Es "lo mecanografiado": cabezales, navegación, notas, sellos, versos en máquina.
-
-**Character:** Bonum es redonda, ancha y libresca; Courier Prime aporta el tecleo documental. La jerarquía se construye con una sola fuente impresa: los títulos de sección van en ALTAS de Bonum y lo subordinado baja de puntaje (regla pedida por el propio autor).
+Tres familias, autohospedadas en `fonts/` como woff2 subset latin, sin una sola petición a Google.
 
 ### Hierarchy
-- **Display / nombre de autor** (400, clamp(2.7rem, 8.5vw, 5.4rem), lh 1.02): `.nombre`; título mayor en caja normal, tracking -0.01em.
-- **Casa** (700, clamp(2.4rem, 7.5vw, 4.6rem), ALTAS, tracking 0.05em, color añil): `.casa-nombre`, solo para "Ala del Mar" en la portada.
-- **Headline / tira** (700, clamp(1.5rem, 4vw, 2.1rem), ALTAS, tracking 0.06em): títulos de sección sobre tira de papel viejo.
-- **Titular menor** (700, clamp(1.3rem, 3vw, 1.7rem), ALTAS, tracking 0.07em): `.titular-menor`, encabezados dentro de hoja.
-- **Title / obra** (400, clamp(1.9rem, 5vw, 2.9rem), lh 1.05): títulos de libro (`.obra-texto h3`), caja normal.
-- **Sección de página de libro** (700, clamp(1.15rem, 2.6vw, 1.45rem), ALTAS, tracking 0.08em, hairline inferior): `.bloque > h2`.
-- **Body** (400, 1.15rem, lh 1.65): prosa en Bonum; máximo 58ch (62ch en fragmentos). Capitular en `.prosa-inicial::first-letter` (3.1em).
-- **Label / máquina** (Courier Prime 400 a 700, 0.75 a 1rem, tracking 0.06 a 0.14em, ALTAS solo en sellos, `.indice-titulo` y `.fragmento-titulo`): metadatos, navegación, notas de idioma.
-- **Lema** (Bonum italic, clamp(1.05rem, 2.6vw, 1.35rem), tinta suave): "bene scriptus" bajo el nombre de la casa.
+- **Cinzel 400** (`--font-display`): romana capital. Nombres, títulos de sección, títulos de libro, botones y navegación. Siempre con tracking abierto (0.05em a 0.2em) y con frecuencia en ALTAS. Nunca se usa para leer.
+- **Cormorant Garamond 300/400/500, con itálicas 300/400** (`--font-body`): la letra de lectura. Prosa, sinopsis, fragmentos, poemas, lema. El peso por defecto del cuerpo es 300 y la interlínea es ancha (1.7 en el body, 1.9 en la prosa de sección).
+- **Space Mono 400** (`--font-mono`): el aparato. Etiquetas de ficha, metadatos de libro, pies de galería, notas, idiomas, copyright. Siempre pequeña (0.6rem a 0.7rem), en ALTAS y con tracking amplio.
+
+El body arranca en 18px con `line-height: 1.7`. Los tamaños grandes usan `clamp()` para escalar con el viewport; el aparato usa pasos literales en rem.
 
 ### Named Rules
-**La regla de las ALTAS.** Los títulos de sección van en la misma Bonum en mayúsculas con tracking positivo; lo subordinado se distingue por menor puntaje, nunca por otra fuente decorativa. Es la regla del autor y ordena toda la jerarquía.
 
-**Dos letras, dos oficios.** Bonum imprime (prosa, títulos, versos impresos); Courier Prime mecanografía (cabezales, índices, sellos, fichas, notas, versos en máquina `.fragmento-verso`). Ningún texto usa una tercera familia.
+**Cada familia tiene un solo oficio.** Cinzel nombra, Cormorant lee, Space Mono etiqueta. Una familia nunca invade el trabajo de otra: no hay títulos en Cormorant ni prosa en Cinzel.
+
+**El aparato siempre en altas y con tracking.** Todo lo que es Space Mono va en mayúsculas con `letter-spacing` de 0.06em a 0.14em. Es lo que lo distingue de la lectura sin necesidad de color.
+
+**Los textos literarios respetan su forma original.** `.fragmento-verso` y `.poema-texto` usan `white-space: pre-wrap` para conservar la sangría y los cortes de verso del autor.
 
 ## Layout
 
-Una columna de hojas centradas: cada `.cuartilla` mide `min(100%, 46rem)` con padding interno `1.4rem clamp(1.4rem, 5vw, 4rem) 3.2rem` y 3rem de separación entre hojas. El body respira con `clamp(1.2rem, 4vw, 3.5rem)` arriba y 4rem abajo, dejando ver la mesa. Las secciones alternan rotaciones (impar +0.35deg, par -0.3deg) aplicadas al contenedor, nunca a la cuartilla misma (un transform propio crearía stacking context y taparía la hoja de abajo).
+Página larga y ancha, no documento. `.section` mide `max-width: 1200px` con `padding: 80px 3rem`; las páginas de libro estrechan a `max-width: 860px` con `.libro-pagina`, y la prosa se acota a 62-70ch para que la línea sea legible.
 
-Grids internos de dos columnas: portada (`minmax(0,1fr)` + retrato `minmax(11rem,15rem)`; en `.portada-casa` el retrato va a la izquierda), obra (texto + cubierta `minmax(9.5rem,12.5rem)`), fichas (`dt` estrecho + `dd`). Galería en `repeat(auto-fit, minmax(12rem, 1fr))`. Un solo breakpoint a 40rem: los grids caen a una columna, las rotaciones de sección se anulan (la hoja de abajo conserva la suya) y las fotos se centran con ancho acotado.
+La portada usa `.split`, un grid de dos columnas a `1fr 1fr` con `min-height: 92vh`: retrato a sangre a la izquierda con degradado que lo funde con el fondo por la derecha, y el bloque de nombre a la derecha. Las páginas interiores abren con `.page-header`, centrado, con degradado de `--bg-section` a `--bg-deep`.
 
-La navegación es doble: el índice mecanografiado de la portada y el `.indice-pie` al pie de cada hoja con las 8 entradas fijas (Portada, Mis libros, Inéditos, Tinta-ciones, La trova, Plano abierto, El periodista, Directorio), con la página actual en `aria-current` subrayada en bold.
+Entre secciones puede ir `.banda-mar`, una banda de 42vh con la foto del mar, oscurecida por un degradado de tres paradas para que el texto encima siga legible.
 
-**La regla de la hoja nueva.** Toda página de libro nueva se genera con `herramientas/gen-libro.py` desde un manifiesto JSON (`herramientas/libros/<slug>.json`); su estructura es fija y en este orden: CUBIERTA dominante, NOTA DE CONTRATAPA, FICHA, FRAGMENTOS, PRESENTACIONES, PRENSA, CON VOZ Y VOTO. No se maquetan hojas de libro a mano.
+**Un solo breakpoint, a 900px.** Ahí el split cae a una columna con la imagen a 48vh, la navegación se convierte en menú desplegable, `.libro-item` y `.ficha div` pasan a una columna, y los paddings se reducen a 1.5rem.
+
+**La regla de la hoja nueva.** Toda página de libro se genera con `herramientas/gen-libro.py` desde un manifiesto JSON (`herramientas/libros/<slug>.json`); su estructura es fija y en este orden: cubierta dominante, nota de contratapa, ficha, fragmentos, presentaciones, prensa, con voz y voto. No se maquetan páginas de libro a mano.
 
 ## Elevation & Depth
 
-La profundidad es física, no atmosférica: una hoja de papel proyecta una sombra corta sobre la mesa y deja ver la hoja de abajo del montón (pseudo-elemento `::after` en papel viejo, rotado y desplazado unos píxeles, con z-index -1; la portada añade una tercera hoja con `::before`). No hay glows, blurs de color ni elevaciones por estado.
+La profundidad es atmosférica y sobria: sombras negras difusas bajo las cubiertas, que son los únicos objetos que se levantan del fondo. No hay tarjetas elevadas ni superficies flotantes.
 
 ### Shadow Vocabulary
-- **Sombra de hoja** (`box-shadow: 0 2px 4px rgba(52, 63, 75, 0.11), 0 6px 18px rgba(52, 63, 75, 0.14)`, `--sombra-hoja`): toda cuartilla, tira, foto enmarcada y cubierta dominante.
-- **Hoja de abajo** (`0 2px 8px rgba(52, 63, 75, 0.09)`): el ::after del montón.
-- **Objeto apoyado** (`0 1px 3px` a `0 1px 4px`, rgba fría u ocre según el objeto): cubiertas pequeñas, galería, hoja `.vyv`.
+- **Cubierta en lista** (`0 8px 30px rgba(0, 0, 0, 0.45)`): las portadas de `/libros/`, que suben 4px y refuerzan la sombra en hover.
+- **Cubierta dominante** (`0 14px 50px rgba(0, 0, 0, 0.55)`): la portada grande al abrir la página de un libro.
+- **Resplandor de botón** (`0 0 20px rgba(212, 160, 48, 0.1)`): el único glow del sistema, y solo en hover del botón.
 
 ### Named Rules
-**La regla del papel apilado.** La única fuente de profundidad es papel sobre papel: sombra corta más hoja de abajo asomando. Nada "flota" ni se eleva al hacer hover; lo más que hace una cubierta es enderezarse (`.cuartilla:hover .foto`).
+
+**Solo los libros tienen sombra.** La sombra está reservada a las cubiertas, que son objetos físicos en un mundo plano. Ningún contenedor, ninguna sección y ningún bloque de texto proyecta sombra.
+
+**Nada se eleva por estado**, salvo la cubierta en hover, que sube 4px. La navegación fija se separa del contenido con `backdrop-filter: blur(12px)` sobre fondo al 92%, no con sombra.
 
 ## Shapes
 
-Esquinas vivas en todo: papel, fotos, sellos y fichas tienen radio 0 (la única excepción es el `border-radius: 1px` del contorno de foco). La geometría del mundo es la rotación leve y alterna: hojas ±0.3deg, hoja de abajo ±1deg, tiras ±1.2deg, fotos ±2deg, sello -2deg, siempre alternando el signo entre elementos consecutivos. Los bordes son de dos familias: marcos de foto (borde grueso de papel 5-6px + outline 1px mesa fría) y hairlines de 1px en mesa-sombra para separar filas y pies. El sello lleva doble trazo: border 2px + outline 1px separado 3px, con máscara de entintado SVG (`--entintado`) que le come calvas de tinta.
+Esquinas vivas en todo: radio 0 en botones, cubiertas, fichas y contenedores. La única geometría curva del sistema es el `outline-offset` del foco. Los bordes son de una sola familia, hairlines de 1px en oro rebajado: `--line` al 12% para separar filas, secciones y pies, `--line-bright` al 25% para enmarcar cubiertas y para la barra vertical del verso.
 
-**La regla de nada redondeado.** Ningún radio, ninguna píldora, ningún círculo decorativo. Si un elemento necesita distinguirse, se rota o cambia de papel, no de forma.
+**La regla de nada redondeado.** Ningún radio, ninguna píldora, ningún círculo decorativo. Si un elemento necesita distinguirse, cambia de fondo o de borde, no de forma.
 
 ## Components
 
-### Sello (botón/enlace primario)
-- **Carácter:** sello de goma entintado en añil, siempre un poco torcido.
-- **Shape:** rectángulo de esquinas vivas rotado -2deg; border 2px añil + outline 1px a 3px; máscara `--entintado` (260x140px) que simula el entintado irregular.
-- **Tipografía:** Courier Prime 700, 1rem, ALTAS, tracking 0.14em; padding 0.85rem 1.9rem; fondo transparente.
-- **Hover / Active:** se aprieta contra el papel (scale 0.97 / 0.94) y oscurece a añil profundo (#163c6a); transición 0.3s con `--paso`.
-- **Disabled:** todo en añil tenue (#7d97b8), cursor not-allowed.
-- **Variante `.sello-menor`:** 0.82rem, padding 0.6rem 1.3rem, tracking 0.12em.
+### Botón (.btn)
+- **Carácter:** placa grabada, no botón de interfaz.
+- **Shape:** rectángulo de esquinas vivas, borde 1px en oro tenue, fondo transparente.
+- **Tipografía:** Cinzel 0.7rem en ALTAS, tracking 0.12em; padding 0.9rem 2.2rem.
+- **Hover:** fondo oro velado, borde a oro pleno, texto a oro brillante, glow de 20px al 10%.
+- **Variante `.btn-filled`:** fondo navy, hover a navy claro. Es la acción primaria de la portada.
+- **Disabled:** texto en `--text-dim`, borde en `--line`, sin fondo ni sombra.
 
-### Cuartilla (contenedor universal)
-- Papel #faf5e9 con grano SVG, `--sombra-hoja`, sin radio; hoja de abajo en papel viejo vía ::after. Abre con `.cabezal` mecanografiado (0.78rem, tinta suave) y cierra con `.indice-pie` y, en hojas interiores, `.fin`.
+### Navegación (.nav)
+- Fija arriba, fondo `rgba(10, 12, 31, 0.92)` con `backdrop-filter: blur(12px)`, hairline inferior. Logo en Cinzel oro con tracking 0.2em; enlaces en Cinzel 0.7rem ALTAS en texto secundario, a oro en hover, y la página activa con subrayado dorado de 1px vía `::after`.
+- **Por debajo de 900px** se colapsa en hamburguesa de tres barras doradas y el menú se despliega fijo bajo la barra. Pendiente de accesibilidad: le faltan `aria-expanded`, `aria-controls` y cierre con Escape. Ver `PENDIENTES.md`, sección 6.
 
-### Tira separadora
-- Título de sección sobre tira de papel viejo con grano, `width: fit-content` centrada, rotada (-1.2deg / +1deg alternado), con subtítulo mecanografiado opcional.
+### Cabecera interior (.page-header)
+- Bloque centrado de apertura de toda página que no sea la portada: título en Cinzel oro con `clamp(1.8rem, 4vw, 2.8rem)`, bajada en texto secundario acotada a 700px, degradado de sección a noche profunda y hairline inferior.
 
-### Índice al pie (navegación)
-- Courier Prime 0.85rem, flex con wrap, hairline superior en mesa-sombra; enlaces sin subrayado hasta hover; página actual en `aria-current` con bold y subrayado. Siempre las 8 secciones.
+### Título de sección (.section-title + .section-divider)
+- Título en Cinzel oro, y debajo un divisor de 50px por 1px en oro tenue que **respira**: animación `breathe` de 4s que lo lleva de 50px al 50% de opacidad hasta 75px al 100% y vuelve. Se apaga con `prefers-reduced-motion`.
 
-### Idiomas
-- Línea mecanografiada `es · en · fr · it · ru` bajo el nombre del autor: actual en `aria-current`, publicados como enlace añil, futuros como `.pronto` (opacidad 0.55, title "pronto").
+### Ficha (.ficha)
+- `dl` en grid de dos columnas con hairlines entre filas. `dt` en Space Mono 0.68rem ALTAS en oro tenue; `dd` en texto secundario acotado a 62ch. Es donde vive la línea de derechos de cada libro.
 
-### Ficha / Ficha de libro
-- `dl` en grid de dos columnas con hairlines entre filas; `dt` mecanografiado 0.8rem en tinta suave; `.ficha-archivo` lleva borde superior de 3px en añil. La ficha de libro (`.ficha-libro`) es la variante generada por gen-libro.py.
+### Libro en lista (.libro-item)
+- Grid de cubierta (`minmax(10rem, 15rem)`) más texto, separados por hairline. Título en Cinzel oro, metadatos en Space Mono tenue con el premio en oro tenue, sinopsis en texto secundario a 62ch. La cubierta sube 4px en hover.
 
 ### Fragmentos
-- `.fragmento`: prosa con sangría francesa (text-indent 1.6em salvo primer párrafo), máximo 62ch. `.fragmento-verso`: verso mecanografiado con `white-space: pre-wrap` que respeta la sangría original. `.fragmento-titulo`: rótulo Courier 700 en ALTAS. Todo fragmento literario en otra hoja idiomática lleva `.nota-idioma`.
+- `.fragmento-titulo`: Cormorant 500 en texto principal. `.fragmento`: prosa en texto secundario. `.fragmento-verso`: verso con `white-space: pre-wrap`, barra vertical de 1px en `--line-bright` a la izquierda y sangría de 1.5rem.
 
-### Con voz y voto (.vyv)
-- La voz del autor sobre hoja vieja: papel viejo con grano, rotada 0.4deg, sombra mínima, firma mecanografiada en añil (`.vyv-firma`).
+### Poema (.poema)
+- Contenedor aislado de 620px sobre `--bg-card` con hairline: título en Cinzel oro, texto en Cormorant 300 a 1.15rem con interlínea 1.95 y `pre-wrap`, y crédito al pie en Space Mono oro tenue sobre hairline superior.
 
-### Copia al carbón (.carbon)
-- Hoja de segunda para el poeta: papel más frío (#f2ede0) con mancha de café (`img/mancha.svg`) fundida por `background-blend-mode: multiply`; el tipeo en tinta de carbón (#3b3327) con text-shadow de 0.6px que lo difumina un punto.
+### Audio (.audio-item)
+- Mismo contenedor que el poema: título en Cinzel oro, metadatos en Space Mono tenue, y `<audio controls preload="none">` a ancho completo. El `preload="none"` no se quita: son ficheros de varios MB.
 
-### Galería
-- Fotos con marco de papel de 5px + outline mesa fría, rotaciones alternas ±0.9deg, pies mecanografiados de 0.75rem.
+### Laureles (.laurel-item)
+- Grid de año (90px, Cinzel 1.4rem en oro tenue, alineado a la derecha) más contenido, con hairline entre filas. A 900px el año baja a 56px y 1.1rem.
+
+### Galería (.galeria)
+- Grid `repeat(auto-fit, minmax(14rem, 1fr))`, imágenes con hairline y pies en Space Mono tenue de 0.65rem.
+
+### Nota (.nota-demo)
+- Space Mono 0.65rem en texto tenue. **El nombre engaña:** ya no marca contenido de demostración, ahora lleva notas reales al lector (el aviso de que los textos literarios se publican en su español original). Está pendiente renombrarla a `.nota` antes de clonar la plantilla a otro artista. No la borres pensando que es andamiaje.
+
+### Pie (.footer)
+- Centrado sobre noche profunda con hairline superior: índice de las 8 secciones en Cinzel 0.65rem ALTAS, iconos sociales en SVG inline, lema *bene scriptus* en Cormorant itálica oro tenue, y dos líneas de copyright y crédito en Space Mono tenue.
 
 ### Motion
-- **El único motion del mundo:** el `.oficio` de la portada se mecanografía solo al cargar (app.js): cadencia 34-74ms por tecla, pausa de 220ms tras coma, cursor de bloque parpadeando (`parpadeo`, 1s steps) que desaparece a los 2.6s. Con `prefers-reduced-motion` el texto aparece directo y todas las transiciones y el cursor se apagan. Easing global `--paso: cubic-bezier(0.16, 1, 0.3, 1)`.
+- **El único motion del mundo** es la aparición lateral de bloques: `.reveal` entra desde ±60px en X con opacidad 0, y `app.js` le pone `.visible` cuando el `IntersectionObserver` lo ve asomar (threshold 0, rootMargin -8% abajo). Transición de 0.9s. Los bloques más altos que 1.2 viewports se muestran directos, porque un capítulo completo nunca alcanzaría el umbral y el contenido largo jamás debe poder quedar invisible. Sin `IntersectionObserver` todo se muestra.
+- El segundo y último movimiento es el `breathe` del `.section-divider`.
+- Con `prefers-reduced-motion: reduce` se apagan el reveal, el breathe y el scroll suave.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** generar toda página de libro nueva con `herramientas/gen-libro.py` y su manifiesto JSON; la estructura CUBIERTA / CONTRATAPA / FICHA / FRAGMENTOS / PRESENTACIONES / PRENSA / CON VOZ Y VOTO es fija.
-- **Do** escribir en primera persona salvo voz declarada (prensa, presentaciones de terceros van citadas o enlazadas, nunca apropiadas).
-- **Do** publicar los textos literarios siempre en español, con `.nota-idioma` cuando la hoja está en otro idioma.
-- **Do** cerrar cada hoja interior con `.fin` ("bene scriptus", Courier, aria-hidden) y abrirla con su `.cabezal`.
-- **Do** alternar el signo de las rotaciones entre elementos consecutivos y aplicarlas al contenedor de sección, no a la cuartilla.
-- **Do** respetar `prefers-reduced-motion` en cualquier motion nuevo (que en principio no debería existir: el tecleo es el único).
+- Usa el oro como único acento, y cámbiale la opacidad antes de pensar en otro color.
+- Deja respirar: 80px de padding vertical en secciones de escritorio, prosa a 62-70ch.
+- Pon `width` y `height` en toda imagen. El CLS de este sitio es 0 y así se queda.
+- Envuelve los bloques nuevos en `.reveal reveal-left` o `.reveal reveal-right`, alternando el lado.
+- Sube el `?v=N` de `styles.css`, `fonts.css` y `app.js` al publicar cambios.
+- Genera las páginas de libro con `gen-libro.py`.
 
 ### Don't:
-- **Don't** usar raya larga en ningún texto visible de la página; comas, dos puntos o paréntesis (la raya corta de diálogo dentro de fragmentos literarios del autor es material citado y se respeta).
-- **Don't** mencionar Palabra Nueva en ninguna parte del sitio.
-- **Don't** introducir un segundo acento de color: el rojo fue retirado y ningún color fuera de la paleta mesa/papel/tinta/añil entra al sistema.
-- **Don't** usar fondos blancos puros, esquinas redondeadas, glows, ni tipografías fuera de Bonum y Courier Prime.
-- **Don't** fabricar sinopsis, reseñas, testimonios o datos de contacto: lo sintético se etiqueta (`.nota-demo`) y lo biográfico debe ser verificable.
-- **Don't** titular secciones en caja baja o con otra fuente: sección nueva = ALTAS de Bonum con tracking, subordinado = menor puntaje.
+- No metas un segundo acento de color, ni rojo, ni verde de estado, ni añil.
+- No uses fondos blancos, grises neutros ni #000.
+- No redondees nada.
+- No cargues fuentes, scripts ni imágenes desde terceros: todo se autohospeda.
+- No pongas texto sobre `--gold-faint` ni `--line`: son superficies y bordes, no colores de tinta.
+- No maquetes a mano una página de libro.
+- No restaures el mundo de cuartillas, mesa azul y añil. Fue abandonado.

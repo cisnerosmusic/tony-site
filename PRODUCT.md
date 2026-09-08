@@ -62,7 +62,7 @@ Verificado en fuentes públicas (EcuRed, El Camagüey, La Jiribilla):
 
 - Antonio López Sánchez, La Habana, 16 de enero de 1973. Licenciado en Comunicación Social (Universidad de La Habana). Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso (2007).
 - Novelas de fantasía y horror: Las guerreras de la luz (Editorial de la Mujer, 2011; Premio La Rosa Blanca 2012, UNEAC), El Escudo de Valnúss (Editorial de la Mujer, 2015), El otro lado del espejo (Gente Nueva, 2017; mención Concurso La Edad de Oro 2014), Grimorium (Editorial Oriente, 2018), Perdidos en un librero (Quisicuaba, 2026).
-- Ensayo y entrevista: La canción de la Nueva Trova (Atril, 2001), Trovadoras (Editorial Oriente, 2009), Convertida en canción (Capiro, 2019).
+- Ensayo y entrevista: La canción de la Nueva Trova (Atril, 2001), Trovadoras (Editorial Oriente, 2008), Convertida en canción (Capiro, 2019).
 - Poesía colectiva: Trampas, retratos y un 17 rojo (coautor, Editorial de la Mujer, 2005).
 - Primer premio "Reescribir El Quijote en Cuba" (2005). Premio Farraluque de Literatura Erótica (2026). Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima (2026).
 - Periodismo cultural: revistas Mujeres y Muchacha (2001-2011); colaborador de La Jiribilla, La Gaceta de Cuba, El Caimán Barbudo, Juventud Rebelde, Alma Máter.

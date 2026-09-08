@@ -6,6 +6,8 @@ Nota de trabajo para retomar el proyecto. Estado al 8 de septiembre de 2026.
 
 El sitio está **completo y sirviendo en todo el mundo** desde [antoniolopezsanchez.art](https://antoniolopezsanchez.art), con dominio propio, HTTPS, correo operativo, indexación enviada a Google y Bing, y auditoría de SEO/AEO aplicada.
 
+El 8 de septiembre, además, **se reescribió `DESIGN.md`**, que documentaba con autoridad total un sistema visual abandonado (cuartillas de papel sobre mesa azul, añil, Bonum, Courier Prime) sin una sola coincidencia con el sitio real. Era la única incidencia capaz de hacer que un agente rompiera el sitio activamente en vez de simplemente dejar algo sin hacer. Ahora describe el mundo navy y oro que está en vivo, y lleva un aviso al inicio para que nadie resucite el anterior.
+
 El 8 de septiembre se revisó el repositorio entero y **se corrigió el rumbo del producto en `PRODUCT.md`**: el público de esta web no es Cuba. Allí Tony ya tiene editoriales y circuito; la web se construyó para el afuera, y su lector de mayor valor es el editor, agente o traductor extranjero. De ahí salen los pendientes nuevos de la sección 1, que son los que más pagan. Lee `PRODUCT.md` antes de tocar nada: la jerarquía de la obra ahora depende del idioma.
 
 ## 1. El embudo de derechos está roto (lo más urgente)
@@ -84,7 +86,10 @@ Cuando haya corriente en Alamar y pueda enviar:
 - **Repo público sin `LICENSE`**, con la obra literaria del autor dentro. Por defecto es "todos los derechos reservados", así que no hay agujero, pero conviene un archivo explícito: código libre, textos © Antonio López Sánchez.
 - **Secciones vacías en el sitemap**: `/tinta-ciones/de-cimitas/` e `/ineditos/` están indexadas casi sin contenido. Valorar `noindex` hasta que tengan material.
 - **`.nota-demo`**: la clase ya no marca contenido de demo, ahora lleva notas reales. Conviene renombrarla a `.nota` antes de que la plantilla se clone a otro artista, para que nadie la borre pensando que es andamiaje.
-- **Hamburger sin `aria-expanded`** (usa `onclick` en línea).
+- **Menú móvil, la deficiencia más repetida del sitio.** Las 28 páginas con hamburguesa carecen de `aria-expanded`, `aria-controls`, sincronización accesible del estado abierto y cerrado, y cierre con Escape. Hoy se abre con un `onclick` en línea que solo hace toggle de una clase. No impide usar el sitio, pero es lo que más se repite.
+- **Tarjetas sociales mal proporcionadas.** Las 14 páginas de libro declaran `twitter:card: summary_large_image` con la cubierta como imagen, y las cubiertas son verticales (640x961, ratio 0.67, cuando ese formato pide ~1.91). Las redes van a recortarlas por el centro y se pierden el título y el nombre del autor. O se pasan esas páginas a `summary`, o se genera una tarjeta horizontal por libro.
+- **No hay pruebas ni workflows de GitHub Actions.** El README declara cifras de Lighthouse excelentes y no hay razón para dudarlas, pero no son reproducibles desde el repositorio. Un workflow que corra Lighthouse CI y valide el JSON-LD en cada push cerraría ese hueco y serviría de red para el trabajo entre dos máquinas.
+- **`/novelas/` y `/poeta/` son redirecciones blandas**: `meta refresh` con `noindex` y canonical, que responden 200. Están correctas para lo que son y GitHub Pages no permite un 301 real, pero conviene saber que no son redirecciones de servidor.
 - **Formspree** (opcional): formulario de consultas de derechos, para tener historial además de la notificación por correo.
 - **Verificación del dominio en la cuenta de GitHub** (opcional): un registro TXT que impide que otro usuario reclame el dominio si el repo se despublica.
 - **Backlinks de autoridad**, que es lo que más moverá el posicionamiento y no es trabajo técnico: que EcuRed enlace el sitio, que Tony lo publique en su Facebook, y que aparezca en las páginas de sus editoriales.
