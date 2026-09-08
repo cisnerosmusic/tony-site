@@ -58,6 +58,12 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 
 Al publicar páginas nuevas: actualizar `sitemap.xml`, subir el número de versión de los assets (`?v=N` en `styles.css`, `fonts.css` y `app.js`) y relanzar el ping de IndexNow.
 
+## Cómo se trabaja aquí
+
+El proyecto se construye desde dos máquinas con instancias distintas, más una tercera instancia que audita por turnos, y ninguna ve la conversación de las otras. El repositorio es el único medio común. El sistema de trabajo, el protocolo de entrega y los innegociables están en [AGENTS.md](AGENTS.md): **léelo antes de tocar nada**.
+
+Orden de autoridad cuando dos documentos se contradigan: la voluntad del autor, luego [PRODUCT.md](PRODUCT.md), [DESIGN.md](DESIGN.md), [PENDIENTES.md](PENDIENTES.md) y este README. Si un documento contradice al código, gana el código y el documento se corrige en el mismo commit.
+
 ## Pendientes
 
 El trabajo por delante (traducciones a inglés, francés, italiano y portugués, y el material que falta de Tony) está en [PENDIENTES.md](PENDIENTES.md).
