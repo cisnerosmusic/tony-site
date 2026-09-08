@@ -10,16 +10,24 @@ El 8 de septiembre, además, **se reescribió `DESIGN.md`**, que documentaba con
 
 El 8 de septiembre se revisó el repositorio entero y **se corrigió el rumbo del producto en `PRODUCT.md`**: el público de esta web no es Cuba. Allí Tony ya tiene editoriales y circuito; la web se construyó para el afuera, y su lector de mayor valor es el editor, agente o traductor extranjero. De ahí salen los pendientes nuevos de la sección 1, que son los que más pagan. Lee `PRODUCT.md` antes de tocar nada: la jerarquía de la obra ahora depende del idioma.
 
-## 1. El embudo de derechos está roto (lo más urgente)
+## 1. El embudo de derechos (HECHO el 8 de septiembre)
 
-Los derechos fuera de Cuba están disponibles y los gestiona Ernesto Cisneros. La página de representación existe y está bien hecha, en español y en inglés, en el sitio de Ernesto. El problema es que **desde este sitio no se llega a ella**.
+**Decisión del autor, por teléfono el 8 de septiembre de 2026: toda gestión de derechos fuera de Cuba pasa por Ernesto Cisneros, y todo el mundo va a dos destinos y ningún otro, sea cual sea el idioma:**
 
-- **Las 14 fichas de libro no enlazan a ninguna parte.** Cada una dice `derechos: Disponibles para ediciones y traducciones fuera de Cuba` y no ofrece a dónde escribir. Son las páginas donde cae la gente desde una búsqueda, así que es la fuga grande. Se arregla con **una línea en `herramientas/gen-libro.py`** y regenerando los 14. Debe enlazar a la página de representación y a `derechos@antoniolopezsanchez.art`.
-- **`/en/` no menciona los derechos.** Sus únicos enlaces externos son Index01 y Facebook. Falta un bloque que apunte a `https://ernestocisneros.art/literary-representation.html`, que es la versión inglesa y hoy no la alcanza nadie desde aquí.
-- **`/directorio/` enlaza solo a la versión española** de la representación. El enlace tiene que ser consciente del idioma.
-- **`derechos@antoniolopezsanchez.art` no aparece en ningún HTML de este sitio**, aunque es una dirección de este dominio y es la que se anuncia en el sitio de Ernesto.
+1. `https://ernestocisneros.art/es/representacion-literaria.html`
+2. `derechos@antoniolopezsanchez.art`
 
-Regla que quedó fijada en `PRODUCT.md`: *ninguna declaración de derechos sin salida, en el idioma de quien lee*.
+Estaban los dos declarados y no se llegaba a ninguno. Ya se cerró: **16 páginas ofrecen ahora salida de derechos** donde antes había cero.
+
+- Las 14 fichas de libro llevan la salida dentro del contenido, no solo en el menú. La emite `herramientas/gen-libro.py` desde las constantes `REPRESENTACION`, `DERECHOS_EMAIL` y `SALIDA_DERECHOS`. **Si cambia un destino, se cambia ahí y en ningún otro sitio.**
+- `/directorio/` ofrece los dos botones y publica la dirección.
+- `/en/` tiene sección propia "Rights and representation", con entrada en el menú, en el pie y en la portada.
+
+**Aviso de sincronía, importante mientras el punto 3 siga abierto.** Como el generador no corre desde un clon limpio, las 14 páginas se parchearon a mano con la misma cadena exacta que emite el generador. **Están sincronizadas hoy.** Si alguien toca `SALIDA_DERECHOS` sin poder regenerar, tiene que volver a parchear el HTML a mano o quedan divergentes. Esto se acaba cuando el punto 3 esté resuelto.
+
+**Pendiente de decisión:** `/en/` apunta a la versión **inglesa** de la página de representación (`/literary-representation.html`), no a la española. Es el mismo destino en el idioma del lector, y mandar a un editor anglófono a una página en español contradice el propósito del sitio. Si Ernesto prefiere el `/es/` literal en todas partes, es cambiar un `href` en `en/index.html`.
+
+Regla fijada en `PRODUCT.md`: *ninguna declaración de derechos sin salida, en el idioma de quien lee*.
 
 **El dossier de derechos no se duplica aquí.** El sitio de Tony es la casa y el catálogo; el sitio de Ernesto es el negocio. Esa separación es deliberada.
 

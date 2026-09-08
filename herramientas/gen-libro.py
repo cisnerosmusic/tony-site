@@ -9,6 +9,15 @@ from PIL import Image
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 
+# Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
+# fijos y ningun otro, en cualquier idioma: decision del autor, 8 de septiembre
+# de 2026. Una pagina que declara derechos disponibles y no dice a donde
+# escribir es una fuga (regla de PRODUCT.md).
+REPRESENTACION = "https://ernestocisneros.art/es/representacion-literaria.html"
+DERECHOS_EMAIL = "derechos@antoniolopezsanchez.art"
+SALIDA_DERECHOS = (f'<a href="{REPRESENTACION}">Consultas de derechos</a> '
+                   f'· <a href="mailto:{DERECHOS_EMAIL}">{DERECHOS_EMAIL}</a>')
+
 # Archivos reales, no data URI: Google solo indexa favicons que puede rastrear aparte.
 FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
@@ -63,7 +72,15 @@ def generar(manifiesto):
     # salvo que el manifiesto la apague o la reemplace.
     if m.get("derechos", True):
         ficha_items.setdefault("derechos", "Disponibles para ediciones y traducciones fuera de Cuba")
-    ficha = "\n".join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in ficha_items.items())
+    filas = []
+    for k, v in ficha_items.items():
+        # La fila de derechos nunca sale sin su via de contacto.
+        if k == "derechos":
+            filas.append(f'<div><dt>{esc(k)}</dt>'
+                         f'<dd>{esc(v).rstrip(".")}. {SALIDA_DERECHOS}</dd></div>')
+        else:
+            filas.append(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>')
+    ficha = "\n".join(filas)
 
     galeria = ""
     for g in m.get("galeria", []):
