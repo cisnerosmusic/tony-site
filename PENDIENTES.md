@@ -47,7 +47,7 @@ Regla fijada en `PRODUCT.md`: *ninguna declaración de derechos sin salida, en e
 
 **Los textos ya no llevan alfa.** Esa era la causa real: los colores base siempre fueron correctos, la transparencia era lo que los apagaba. Quitarla dio la escalera sola. Regla que quedó en `DESIGN.md`: si un texto tiene que ser más discreto, se baja de escalón (primary, secondary, dim), **nunca se le pone opacidad**.
 
-`--gold-dim` sigue existiendo pero ahora es estrictamente borde y superficie. El token `--gold-label`, creado unas horas antes cuando el objetivo era AA, se eliminó: con objetivo AAA el oro de tinta es simplemente `--gold`.
+`--gold-dim` sigue existiendo pero ahora es estrictamente borde y superficie. El token que había creado unas horas antes para el oro de tinta se eliminó: con objetivo AAA el oro de texto es simplemente `--gold`, y el sistema quedó más simple que por la mañana.
 
 `styles.css` va por `?v=7` en las 28 páginas y en el generador. `fonts.css` se queda en `?v=5` a propósito: las fuentes no cambiaron.
 
