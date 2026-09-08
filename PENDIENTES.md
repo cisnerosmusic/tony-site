@@ -31,20 +31,27 @@ Regla fijada en `PRODUCT.md`: *ninguna declaración de derechos sin salida, en e
 
 **El dossier de derechos no se duplica aquí.** El sitio de Tony es la casa y el catálogo; el sitio de Ernesto es el negocio. Esa separación es deliberada.
 
-## 2. Accesibilidad: contraste (HECHO el 8 de septiembre)
+## 2. Accesibilidad: contraste (HECHO el 8 de septiembre, nivel AAA)
 
-Dos tokens estaban por debajo del mínimo AA de 4,5:1 y afectaban al texto más pequeño del sitio: copyright del pie, crédito de Index01, pies de galería, etiquetas `dt` de las fichas, año de laurel y notas.
+**El sitio entero cumple AAA.** El peor contraste de cualquier texto en cualquier página es **7,76:1**, cuando el mínimo AA es 4,5 y el AAA es 7.
 
 | Token | Antes | Ahora |
 |---|---|---|
-| `--text-dim` | 2,89:1 (alfa 0.5) | **4,68:1** (alfa 0.72) |
-| oro como texto | 2,80:1 (alfa 0.5) | **4,80:1** (`--gold-label`, alfa 0.75) |
+| `--text-primary` | 14,49:1 | 14,49:1 (sin tocar) |
+| `--text-secondary` | 5,64:1 | **10,46:1** (`#c8c3b9`) |
+| `--text-dim` | 2,89:1 | **8,02:1** (`#b4aa9b`) |
+| oro como texto | 2,80:1 | **7,76:1** (`--gold`) |
+| oro sobre navy (botón sólido) | 6,73:1, y 5,72:1 en hover | **9,96:1** y 8,47:1 (`--gold-bright`) |
 
-**El oro se partió en dos tokens a propósito.** `--gold-dim` sigue en 0.5 y ahora es solo para bordes y superficies (borde de botón, fondo del divisor); el nuevo `--gold-label` en 0.75 es el oro cuando hace de tinta, y se llevó los 7 usos de texto. Subir `--gold-dim` habría arreglado el contraste pero habría cambiado el trazo de todos los botones del sitio, y eso es una decisión de diseño que nadie pidió.
+**Por qué AAA y no AA.** No es purismo. Una web casi toda navy dispara el atenuado automático de brillo de muchos monitores (CABC en LCD, ABL en OLED). La ratio de contraste sobrevive matemáticamente a esa atenuación, pero la percepción no: la sensibilidad del ojo cae en luminancias bajas y esos sistemas suelen aplastar la gamma justo en los grises medios. Un usuario con un monitor así veía el aparato del sitio casi negro sobre negro y se iba. Con la escalera actual el texto aguanta la atenuación.
 
-`styles.css` subió a `?v=6` en las 28 páginas y en el generador. `fonts.css` se queda en `?v=5` a propósito: las fuentes no cambiaron y no hay por qué hacer que 240KB se vuelvan a descargar.
+**Los textos ya no llevan alfa.** Esa era la causa real: los colores base siempre fueron correctos, la transparencia era lo que los apagaba. Quitarla dio la escalera sola. Regla que quedó en `DESIGN.md`: si un texto tiene que ser más discreto, se baja de escalón (primary, secondary, dim), **nunca se le pone opacidad**.
 
-Verificado midiendo el contraste real de cada nodo de texto renderizado en 13 páginas (portada, índice de libros, dos páginas de libro, laureles, poemas, audios, directorio, periodista, trova, inglés, inéditos, plano abierto y el 404): **cero textos por debajo de AA**.
+`--gold-dim` sigue existiendo pero ahora es estrictamente borde y superficie. El token `--gold-label`, creado unas horas antes cuando el objetivo era AA, se eliminó: con objetivo AAA el oro de tinta es simplemente `--gold`.
+
+`styles.css` va por `?v=7` en las 28 páginas y en el generador. `fonts.css` se queda en `?v=5` a propósito: las fuentes no cambiaron.
+
+Verificado midiendo el contraste real de cada nodo de texto renderizado, no los tokens en teoría, en 13 páginas incluido el 404.
 
 ## 3. El generador no es reproducible
 
@@ -54,7 +61,7 @@ Arreglo: copiar los `.txt` **ya publicados** a `herramientas/textos/<slug>/` y v
 
 **Cuidado**: solo el material que ya está en el sitio. Los inéditos no entran en este repositorio, que es público, porque publicarlos les quitaría la condición de inéditos ante concursos y editoriales.
 
-**Cómo verificar que la regeneración salió bien.** Este es el paso que no se puede saltar. Las 14 páginas actuales tienen dos cambios hechos a mano el 8 de septiembre que el generador ya sabe reproducir: la salida de derechos en la ficha y `styles.css?v=6`. Al regenerar por primera vez, el diff **tiene que salir vacío o casi vacío**. Si aparecen diferencias masivas, no es que el generador esté mal: es que algún `.txt` copiado no es el mismo que se uso para publicar.
+**Cómo verificar que la regeneración salió bien.** Este es el paso que no se puede saltar. Las 14 páginas actuales tienen dos cambios hechos a mano el 8 de septiembre que el generador ya sabe reproducir: la salida de derechos en la ficha y `styles.css?v=7`. Al regenerar por primera vez, el diff **tiene que salir vacío o casi vacío**. Si aparecen diferencias masivas, no es que el generador esté mal: es que algún `.txt` copiado no es el mismo que se uso para publicar.
 
 Procedimiento:
 

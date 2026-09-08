@@ -11,11 +11,10 @@ colors:
   gold: "#d4a030"
   gold-bright: "#f0c860"
   gold-dim: "rgba(212, 160, 48, 0.5)"
-  gold-label: "rgba(212, 160, 48, 0.75)"
   gold-faint: "rgba(212, 160, 48, 0.12)"
   text-primary: "#e8e4dc"
-  text-secondary: "rgba(200, 195, 185, 0.7)"
-  text-dim: "rgba(180, 170, 155, 0.72)"
+  text-secondary: "#c8c3b9"
+  text-dim: "#b4aa9b"
   line: "rgba(212, 160, 48, 0.12)"
   line-bright: "rgba(212, 160, 48, 0.25)"
 typography:
@@ -62,6 +61,7 @@ components:
   btn-filled:
     backgroundColor: "{colors.navy}"
     borderColor: "{colors.gold-dim}"
+    textColor: "{colors.gold-bright}"
   poema:
     backgroundColor: "{colors.bg-card}"
     borderColor: "{colors.line}"
@@ -88,9 +88,8 @@ Paleta nocturna: azules profundos de fondo, un solo oro de acento, y textos cál
 
 ### Primary
 - **Oro** (#d4a030, `--gold`): el único acento del sistema. Logo de navegación, títulos de sección, nombre de la casa, títulos de libro, subrayado de la página activa, bordes de botón en hover, foco visible.
-- **Oro brillante** (#f0c860, `--gold-bright`): solo estado hover sobre texto ya dorado. No tiene otro uso.
-- **Oro tenue** (rgba(212, 160, 48, 0.5), `--gold-dim`): **solo bordes y superficies**, nunca texto. Borde de botón en reposo y fondo del divisor que respira.
-- **Oro de etiqueta** (rgba(212, 160, 48, 0.75), `--gold-label`): **el oro cuando es tinta**. Etiquetas `dt` de ficha, año de laurel, premio en los metadatos, crédito de poema, lema del pie y enlace del copyright. Existe separado de `--gold-dim` porque el borde puede ser tenue y el texto no: al 0.5 daba 2,80:1 y no llegaba a AA.
+- **Oro brillante** (#f0c860, `--gold-bright`): hover sobre texto ya dorado, y **el oro cuando va sobre navy**, que es el fondo más claro del sitio: texto del botón sólido y del salto al contenido. Sobre navy el oro normal se queda en 6,73:1 y en el hover del botón baja a 5,72:1.
+- **Oro tenue** (rgba(212, 160, 48, 0.5), `--gold-dim`): **solo bordes y superficies, nunca texto.** Borde de botón en reposo y fondo del divisor que respira.
 - **Oro velado** (rgba(212, 160, 48, 0.12), `--gold-faint`): relleno de botón en hover. Nunca texto.
 
 ### Neutral
@@ -99,8 +98,8 @@ Paleta nocturna: azules profundos de fondo, un solo oro de acento, y textos cál
 - **Noche de tarjeta** (rgba(16, 18, 42, 0.7), `--bg-card`): superficie de los contenedores aislados, poema y audio.
 - **Navy** (#1a1d4a, `--navy`) y **navy claro** (#252860, `--navy-light`): relleno del botón sólido y su hover. Único uso.
 - **Texto principal** (#e8e4dc, `--text-primary`): prosa literaria, versos, nombre del autor. Cálido, no blanco.
-- **Texto secundario** (rgba(200, 195, 185, 0.7), `--text-secondary`): prosa de presentación, sinopsis, navegación, `dd` de ficha.
-- **Texto tenue** (rgba(180, 170, 155, 0.72), `--text-dim`): aparato de menor jerarquía: metadatos, pies de galería, notas, copyright. Es el texto más pequeño del sitio, así que el alfa no baja de 0.72.
+- **Texto secundario** (#c8c3b9, `--text-secondary`): prosa de presentación, sinopsis, navegación, `dd` de ficha.
+- **Texto tenue** (#b4aa9b, `--text-dim`): aparato de menor jerarquía: metadatos, pies de galería, notas, copyright. Es el texto más pequeño del sitio.
 - **Línea** (rgba(212, 160, 48, 0.12), `--line`) y **línea viva** (rgba(212, 160, 48, 0.25), `--line-bright`): hairlines dorados al 12% para separar, al 25% para enmarcar cubiertas y versos.
 
 ### Named Rules
@@ -111,7 +110,7 @@ Paleta nocturna: azules profundos de fondo, un solo oro de acento, y textos cál
 
 **Las líneas son oro al 12%.** Todo separador y todo borde estructural nace del oro rebajado, no de un gris. Es lo que mantiene la unidad del mundo cuando no hay color.
 
-**El oro de borde y el oro de tinta son tokens distintos, no los unifiques.** `--gold-dim` (0.5) es para bordes y superficies; `--gold-label` (0.75) es para texto. Parecen redundantes y no lo son: al 0.5 el texto daba 2,80:1 y no llegaba a AA, y subir `--gold-dim` habría cambiado el trazo de todos los botones del sitio. Lo mismo con `--text-dim`, que subió de 0.5 a 0.72. **No devuelvas ninguno a 0.5.** Verificado el 8 de septiembre de 2026: cero textos por debajo de AA en las 13 páginas medidas.
+**Ningún texto por debajo de 7:1, y los textos no llevan alfa.** El sitio entero cumple **AAA**: el peor contraste de cualquier texto en cualquier página es 7,76:1. La razón no es solo accesibilidad formal. Una web casi toda navy dispara el atenuado automático de brillo de muchos monitores (CABC en LCD, ABL en OLED), y aunque la ratio de contraste sobrevive matemáticamente a esa atenuación, la percepción no: la sensibilidad del ojo cae en luminancias bajas y esos sistemas suelen aplastar la gamma justo en los grises medios. Por eso **los colores de texto son sólidos, sin transparencia**: la opacidad era lo que los apagaba. Si necesitas un texto más discreto, baja de escalón en la escalera (primary, secondary, dim), nunca le pongas alfa. La escalera es 14,49 / 10,46 / 8,02, y el oro de tinta 7,76.
 
 ## Typography
 
