@@ -14,10 +14,11 @@
   --gold: #d4a030;
   --gold-bright: #f0c860;
   --gold-dim: rgba(212, 160, 48, 0.5);
+  --gold-label: rgba(212, 160, 48, 0.75);
   --gold-faint: rgba(212, 160, 48, 0.12);
   --text-primary: #e8e4dc;
   --text-secondary: rgba(200, 195, 185, 0.7);
-  --text-dim: rgba(180, 170, 155, 0.5);
+  --text-dim: rgba(180, 170, 155, 0.72);
   --line: rgba(212, 160, 48, 0.12);
   --line-bright: rgba(212, 160, 48, 0.25);
   --font-display: 'Cinzel', serif;
@@ -346,7 +347,7 @@ a.libro-cubierta:hover img {
   color: var(--text-dim);
   margin-bottom: 1.2rem;
 }
-.libro-meta .premio { color: var(--gold-dim); }
+.libro-meta .premio { color: var(--gold-label); }
 
 .libro-sinopsis {
   font-size: 1.05rem;
@@ -431,7 +432,7 @@ a.libro-cubierta:hover img {
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold-dim);
+  color: var(--gold-label);
   margin-top: 1.5rem;
 }
 
@@ -448,7 +449,7 @@ a.libro-cubierta:hover img {
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold-dim);
+  color: var(--gold-label);
   padding-top: 0.4rem;
 }
 .ficha dd { color: var(--text-secondary); font-weight: 300; max-width: 62ch; }
@@ -505,7 +506,7 @@ a.libro-cubierta:hover img {
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold-dim);
+  color: var(--gold-label);
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid var(--line);
@@ -526,7 +527,7 @@ a.libro-cubierta:hover img {
 .laurel-anio {
   font-family: var(--font-display);
   font-size: 1.4rem;
-  color: var(--gold-dim);
+  color: var(--gold-label);
   text-align: right;
   padding-top: 0.15rem;
 }
@@ -613,7 +614,7 @@ a.libro-cubierta:hover img {
   font-family: var(--font-body);
   font-style: italic;
   font-size: 1.05rem;
-  color: var(--gold-dim);
+  color: var(--gold-label);
   letter-spacing: 0.08em;
   margin-bottom: 1.2rem;
 }
@@ -624,7 +625,7 @@ a.libro-cubierta:hover img {
   letter-spacing: 0.1em;
   color: var(--text-dim);
 }
-.footer-copy a { color: var(--gold-dim); }
+.footer-copy a { color: var(--gold-label); }
 
 /* ── Responsive ─────────────────────────────── */
 @media (max-width: 900px) {

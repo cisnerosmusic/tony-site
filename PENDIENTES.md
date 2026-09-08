@@ -31,16 +31,20 @@ Regla fijada en `PRODUCT.md`: *ninguna declaración de derechos sin salida, en e
 
 **El dossier de derechos no se duplica aquí.** El sitio de Tony es la casa y el catálogo; el sitio de Ernesto es el negocio. Esa separación es deliberada.
 
-## 2. Accesibilidad: contraste por debajo de AA
+## 2. Accesibilidad: contraste (HECHO el 8 de septiembre)
 
-Dos tokens de color no llegan al mínimo de 4,5:1 y afectan al texto más pequeño del sitio (copyright del pie, crédito de Index01, pies de galería, etiquetas `dt` de las fichas, notas):
+Dos tokens estaban por debajo del mínimo AA de 4,5:1 y afectaban al texto más pequeño del sitio: copyright del pie, crédito de Index01, pies de galería, etiquetas `dt` de las fichas, año de laurel y notas.
 
-| Token | Ratio actual | Arreglo |
+| Token | Antes | Ahora |
 |---|---|---|
-| `--text-dim` | 2,89:1 | subir alfa de 0.5 a 0.72 (queda en 4,68) |
-| `--gold-dim` usado como texto | 2,80:1 | subir alfa de 0.5 a 0.72 (queda en 4,51) |
+| `--text-dim` | 2,89:1 (alfa 0.5) | **4,68:1** (alfa 0.72) |
+| oro como texto | 2,80:1 (alfa 0.5) | **4,80:1** (`--gold-label`, alfa 0.75) |
 
-Lighthouse da 100 en accesibilidad, pero eso no garantiza AA en todo. Son dos valores en `:root` de `styles.css`. Ojo: `--gold-dim` también se usa para bordes, donde 0.5 está bien; si el cambio ensucia algún borde, separar en un token propio para texto.
+**El oro se partió en dos tokens a propósito.** `--gold-dim` sigue en 0.5 y ahora es solo para bordes y superficies (borde de botón, fondo del divisor); el nuevo `--gold-label` en 0.75 es el oro cuando hace de tinta, y se llevó los 7 usos de texto. Subir `--gold-dim` habría arreglado el contraste pero habría cambiado el trazo de todos los botones del sitio, y eso es una decisión de diseño que nadie pidió.
+
+`styles.css` subió a `?v=6` en las 28 páginas y en el generador. `fonts.css` se queda en `?v=5` a propósito: las fuentes no cambiaron y no hay por qué hacer que 240KB se vuelvan a descargar.
+
+Verificado midiendo el contraste real de cada nodo de texto renderizado en 13 páginas (portada, índice de libros, dos páginas de libro, laureles, poemas, audios, directorio, periodista, trova, inglés, inéditos, plano abierto y el 404): **cero textos por debajo de AA**.
 
 ## 3. El generador no es reproducible
 
@@ -49,6 +53,26 @@ Lighthouse da 100 en accesibilidad, pero eso no garantiza AA en todo. Son dos va
 Arreglo: copiar los `.txt` **ya publicados** a `herramientas/textos/<slug>/` y volver relativas las rutas de los manifiestos.
 
 **Cuidado**: solo el material que ya está en el sitio. Los inéditos no entran en este repositorio, que es público, porque publicarlos les quitaría la condición de inéditos ante concursos y editoriales.
+
+**Cómo verificar que la regeneración salió bien.** Este es el paso que no se puede saltar. Las 14 páginas actuales tienen dos cambios hechos a mano el 8 de septiembre que el generador ya sabe reproducir: la salida de derechos en la ficha y `styles.css?v=6`. Al regenerar por primera vez, el diff **tiene que salir vacío o casi vacío**. Si aparecen diferencias masivas, no es que el generador esté mal: es que algún `.txt` copiado no es el mismo que se uso para publicar.
+
+Procedimiento:
+
+```bash
+git status --short            # limpio antes de empezar
+python herramientas/gen-libro.py herramientas/libros/grimorium.json
+git diff --stat               # una sola pagina, para probar
+```
+
+La fila de derechos regenerada debe quedar exactamente así, en una sola línea:
+
+```html
+<div><dt>derechos</dt><dd>Disponibles para ediciones y traducciones fuera de Cuba. <a href="https://ernestocisneros.art/es/representacion-literaria.html">Consultas de derechos</a> · <a href="mailto:derechos@antoniolopezsanchez.art">derechos@antoniolopezsanchez.art</a></dd></div>
+```
+
+Si esa página sale idéntica, se regeneran las 13 restantes. Si sale distinta, **para y revisa el `.txt` antes de regenerar el resto**: es más fácil arreglar una que catorce. Cuando el diff esté limpio, el aviso de sincronía del punto 1 deja de aplicar y se puede borrar.
+
+`gen-libro.py` necesita Pillow (`pip install Pillow`): lee las dimensiones reales de cada imagen para emitir `width` y `height`, que es de donde sale el CLS 0 del sitio.
 
 ## 4. Traducciones
 
