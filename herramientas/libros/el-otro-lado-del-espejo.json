@@ -40,7 +40,16 @@
     }
   ],
   "galeria": [],
-  "prensa": [],
+  "prensa": [
+    {
+      "titulo": "Libros malditos y espejos invasores",
+      "pie": "Entrevista de Iyaimí Palomares, Juventud Rebelde, 8 de febrero de 2019",
+      "url": "https://www.juventudrebelde.cu/index.php/cultura/2019-02-08/libros-malditos-y-espejos-invasores",
+      "medio": "Juventud Rebelde",
+      "autor": "Iyaimí Palomares",
+      "fecha": "2019-02-08"
+    }
+  ],
   "referencias": [
     "https://www.ecured.cu/El_otro_lado_del_espejo"
   ],

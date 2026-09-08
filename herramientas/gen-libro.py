@@ -70,7 +70,31 @@ def generar(manifiesto):
         gw, gh = dims(g["img"])
         galeria += f'<figure><img src="{g["img"]}" width="{gw}" height="{gh}" alt="{esc(g["alt"])}" loading="lazy"><figcaption>{esc(g["pie"])}</figcaption></figure>\n'
 
-    prensa = "\n".join(f"<li>{esc(p)}</li>" for p in m.get("prensa", []))
+    # Prensa: cada entrada puede ser texto suelto o una ficha con enlace. Ademas de
+    # la lista visible, los articulos con URL se declaran como subjectOf del libro en
+    # el JSON-LD, que es la propiedad correcta para un texto que habla de la obra;
+    # sameAs queda reservado a la identidad del libro mismo.
+    prensa_items, subjectof = [], []
+    for p in m.get("prensa", []):
+        if isinstance(p, str):
+            prensa_items.append(f"<li>{esc(p)}</li>")
+            continue
+        cabeza = (f'<a href="{p["url"]}" target="_blank" rel="noopener">{esc(p["titulo"])}</a>'
+                  if p.get("url") else f'<strong>{esc(p["titulo"])}</strong>')
+        pie = f' <span class="meta">· {esc(p["pie"])}</span>' if p.get("pie") else ""
+        prensa_items.append(f"<li>{cabeza}{pie}</li>")
+        if p.get("url"):
+            art = {"@type": "NewsArticle", "headline": p["titulo"], "url": p["url"]}
+            if p.get("fecha"):
+                art["datePublished"] = p["fecha"]
+            if p.get("autor"):
+                art["author"] = {"@type": "Person", "name": p["autor"]}
+            if p.get("medio"):
+                art["publisher"] = {"@type": "Organization", "name": p["medio"]}
+            subjectof.append(art)
+    prensa = "\n".join(prensa_items)
+    subjectof_jsonld = (',\n  "subjectOf": '
+                        + json.dumps(subjectof, ensure_ascii=False, indent=2).replace("\n", "\n  ")) if subjectof else ""
     nav_html = "\n    ".join(f'<a href="{h}">{n}</a>' for h, n in NAV if h != "/")
 
     premios_jsonld = json.dumps(m.get("premios", []), ensure_ascii=False)
@@ -129,7 +153,7 @@ def generar(manifiesto):
   "genre": {json.dumps(m["genero"], ensure_ascii=False)},
   "award": {premios_jsonld},
   "image": "{DOMINIO}{m["cubierta"]}",
-  "url": "{url}"{sameas_jsonld}
+  "url": "{url}"{sameas_jsonld}{subjectof_jsonld}
 }}
 </script>
 <script type="application/ld+json">

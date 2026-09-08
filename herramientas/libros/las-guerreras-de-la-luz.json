@@ -52,9 +52,14 @@
     }
   ],
   "prensa": [
-    "Reseñada en la revista Bohemia.",
-    "Reseñada en El Tintero, suplemento literario de Juventud Rebelde.",
-    "[Los enlaces a la prensa digital están en localización; se irán sumando aquí.]"
+    {
+      "titulo": "El juglar de las guerreras",
+      "pie": "Entrevista de Alain Gutiérrez, Juventud Rebelde, 13 de julio de 2012",
+      "url": "https://www.juventudrebelde.cu/index.php/cultura/2012-07-13/el-juglar-de-las-guerreras",
+      "medio": "Juventud Rebelde",
+      "autor": "Alain Gutiérrez",
+      "fecha": "2012-07-13"
+    }
   ],
   "referencias": [
     "https://www.ecured.cu/Las_guerreras_de_la_luz"

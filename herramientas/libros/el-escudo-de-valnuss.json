@@ -35,7 +35,16 @@
       "pie": "Las cinco portadas del estuche, ilustradas por Rainel Cabarroi"
     }
   ],
-  "prensa": [],
+  "prensa": [
+    {
+      "titulo": "Escudo de pura magia",
+      "pie": "Entrevista de Iyaimí Palomares, Juventud Rebelde, 12 de febrero de 2016",
+      "url": "https://www.juventudrebelde.cu/cultura/2016-02-12/escudo-de-pura-magia",
+      "medio": "Juventud Rebelde",
+      "autor": "Iyaimí Palomares",
+      "fecha": "2016-02-12"
+    }
+  ],
   "referencias": [
     "https://www.ecured.cu/El_Escudo_de_Valn%C3%BAss"
   ],

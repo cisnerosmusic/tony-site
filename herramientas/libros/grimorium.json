@@ -37,7 +37,23 @@
     }
   ],
   "galeria": [],
-  "prensa": [],
+  "prensa": [
+    {
+      "titulo": "Libros malditos y espejos invasores",
+      "pie": "Entrevista de Iyaimí Palomares, Juventud Rebelde, 8 de febrero de 2019",
+      "url": "https://www.juventudrebelde.cu/index.php/cultura/2019-02-08/libros-malditos-y-espejos-invasores",
+      "medio": "Juventud Rebelde",
+      "autor": "Iyaimí Palomares",
+      "fecha": "2019-02-08"
+    },
+    {
+      "titulo": "Grimorium: un estado de horror",
+      "pie": "Habana Radio, 2019; el sitio original está caído y el enlace lleva a la copia del Internet Archive",
+      "url": "https://web.archive.org/web/20240815001956/http://www.habanaradio.cu/coberturas-especiales/28-feria-internacional-del-libro/grimorium-un-estado-de-horror/",
+      "medio": "Habana Radio",
+      "fecha": "2019"
+    }
+  ],
   "referencias": [
     "https://www.ecured.cu/Grimorium"
   ],
