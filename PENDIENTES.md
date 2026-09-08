@@ -23,7 +23,9 @@ Estaban los dos declarados y no se llegaba a ninguno. Ya se cerró: **16 página
 - `/directorio/` ofrece los dos botones y publica la dirección.
 - `/en/` tiene sección propia "Rights and representation", con entrada en el menú, en el pie y en la portada.
 
-**Aviso de sincronía, importante mientras el punto 3 siga abierto.** Como el generador no corre desde un clon limpio, las 14 páginas se parchearon a mano con la misma cadena exacta que emite el generador. **Están sincronizadas hoy.** Si alguien toca `SALIDA_DERECHOS` sin poder regenerar, tiene que volver a parchear el HTML a mano o quedan divergentes. Esto se acaba cuando el punto 3 esté resuelto.
+**Sincronía VERIFICADA el 8 de septiembre desde la Máquina 1**, en el commit `30cfae3`, que es la única que puede ejecutar el generador. Se regeneraron los 14 manifiestos y `git status` quedó vacío: el HTML publicado y `gen-libro.py` producen exactamente lo mismo, byte a byte, incluida la fila de derechos y el `?v=7`. El parcheo a mano de la Máquina 2 fue correcto.
+
+Sigue en pie la fragilidad de fondo: si alguien toca `SALIDA_DERECHOS` sin poder regenerar, hay que volver a parchear a mano o divergen en silencio. Eso se acaba cuando el punto 3 esté resuelto.
 
 **Pendiente de decisión:** `/en/` apunta a la versión **inglesa** de la página de representación (`/literary-representation.html`), no a la española. Es el mismo destino en el idioma del lector, y mandar a un editor anglófono a una página en español contradice el propósito del sitio. Si Ernesto prefiere el `/es/` literal en todas partes, es cambiar un `href` en `en/index.html`.
 
@@ -53,6 +55,10 @@ Regla fijada en `PRODUCT.md`: *ninguna declaración de derechos sin salida, en e
 
 Verificado midiendo el contraste real de cada nodo de texto renderizado, no los tokens en teoría, en 13 páginas incluido el 404.
 
+**Contraverificación independiente desde la Máquina 1, commit `30cfae3`**, calculando la matriz completa de tinta contra fondo con la fórmula WCAG. Confirma el AAA: sobre los tres fondos que existen de verdad (`--bg-deep`, `--bg-dark`, `--bg-section`) el peor par es `--gold` sobre `--bg-section`, **7,76:1**, y sobre `--bg-card` compuesto sobre el fondo profundo (`#0e1027`) el oro da **7,91:1**. Los pares flojos que aparecen en la teoría, `--text-dim` y `--gold` sobre `--navy` (6,95:1 y 6,73:1) y sobre `--navy-light` (5,91:1 y 5,72:1), **no se renderizan nunca**: `--navy` y `--navy-light` solo se usan como fondo en tres reglas, el salto al contenido y `.btn-filled` con su hover, y las tres llevan `--gold-bright` encima (9,96:1 y 8,47:1). La afirmación de AAA se sostiene.
+
+**Hallazgo abierto, contraste de borde.** `--gold-dim` a alfa 0,5 compuesto sobre `--bg-deep` da `#6f5628`, **2,80:1** contra el fondo, por debajo del 3:1 que la WCAG 1.4.11 pide a los límites de un control. Afecta al borde de `.btn` (`styles.css:282`) y de `.btn-filled` (`styles.css:294`). No impide usar el botón, cuyo texto va a 12:1, pero el borde en sí es el elemento que queda corto. Arreglo de una línea: subir el alfa de `--gold-dim` de 0,5 a **0,55**, que da 3,14:1 con un cambio visual casi imperceptible. No lo aplico porque toca el peso visual de los botones y esa es decisión de diseño de Ernesto.
+
 ## 3. El generador no es reproducible
 
 `herramientas/gen-libro.py` es la única forma de tocar las páginas de libro, pero **desde un clon limpio no corre**. Las 45 rutas de texto declaradas en los manifiestos de `herramientas/libros/*.json` apuntan a `C:/Users/Ernesto/OneDrive/Imágenes/tony/x/...`, un perfil de Windows que no existe ni en la máquina de casa ni en la de UW. Hoy el pipeline vive en un solo disco.
@@ -77,7 +83,9 @@ La fila de derechos regenerada debe quedar exactamente así, en una sola línea:
 <div><dt>derechos</dt><dd>Disponibles para ediciones y traducciones fuera de Cuba. <a href="https://ernestocisneros.art/es/representacion-literaria.html">Consultas de derechos</a> · <a href="mailto:derechos@antoniolopezsanchez.art">derechos@antoniolopezsanchez.art</a></dd></div>
 ```
 
-Si esa página sale idéntica, se regeneran las 13 restantes. Si sale distinta, **para y revisa el `.txt` antes de regenerar el resto**: es más fácil arreglar una que catorce. Cuando el diff esté limpio, el aviso de sincronía del punto 1 deja de aplicar y se puede borrar.
+Si esa página sale idéntica, se regeneran las 13 restantes. Si sale distinta, **para y revisa el `.txt` antes de regenerar el resto**: es más fácil arreglar una que catorce.
+
+**Esa comprobación ya se hizo el 8 de septiembre desde la Máquina 1, en el commit `30cfae3`, y salió limpia**: las 14 regeneradas, `git status` vacío. Así que el parcheo a mano está validado y el aviso de sincronía del punto 1 quedó cerrado. Lo que sigue abierto es lo otro, que el pipeline vive en un solo disco: mientras las rutas apunten al OneDrive, la Máquina 2 no puede tocar el generador sin dejar que HTML y generador diverjan a ciegas.
 
 `gen-libro.py` necesita Pillow (`pip install Pillow`): lee las dimensiones reales de cada imagen para emitir `width` y `height`, que es de donde sale el CLS 0 del sitio.
 
@@ -114,7 +122,9 @@ Cuando haya corriente en Alamar y pueda enviar:
 - **De-Cimitas**: la sección de décimas con imagen y texto está creada pero vacía. Necesita las décimas y sus imágenes.
 - **Inéditos**: hay cinco poemarios y tres cuentos completos guardados (carpeta `tony 1`), pero solo deben publicarse **sinopsis y fragmentos** que él elija.
 - **Sinopsis oficiales** de los libros cuyas páginas siguen con texto provisional marcado.
-- **Prensa**: enlaces o recortes sobre sus libros para las secciones Prensa, hoy casi vacías.
+- **Prensa**: el 8 de septiembre envió la primera tanda y está cableada y verificada. Tienen bloque de Prensa 4 de los 14 libros: *Las guerreras de la luz*, *El Escudo de Valnúss*, *Grimorium* y *El otro lado del espejo*, con tres entrevistas de Juventud Rebelde (Alain Gutiérrez 2012, Iyaimí Palomares 2016 y 2019) y la reseña de Habana Radio. Faltan los diez restantes. **Aviso: Habana Radio está caída entera**, error 502 incluso en la raíz, y esa reseña sobrevive solo en la copia del Internet Archive, que es a donde apunta el enlace. Es la prueba de que este archivo también es rescate.
+- **Ojos de bruja**: relato por entregas publicado en Cubaliteraria en julio de 2020, las siete partes vivas y comprobadas (`/ojos-de-bruja-i/` a `/ojos-de-bruja-vi/` más `/ojos-de-bruja-vii-y-final/`). No es libro ni poesía, así que no cabe en las secciones actuales: falta decidir si lleva página propia. Tony conserva el texto completo y está por decidir si se aloja aquí, que lo convertiría en el único sitio donde se lee seguido.
+- **Dos reseñas descartadas**, decisión del 8 de septiembre: un video de booktuber sobre *Las guerreras de la luz* que el autor considera flojo, y una reseña de *Grimorium* en `diaentp.blogspot.com` que ya no existe (404). El bloque de Prensa es expediente de piezas firmadas en medios identificables; un video de aficionado no añade autoridad y omitirlo no oculta nada.
 - **Presentaciones**: más fotos, audios o palabras de lanzamientos, sobre todo de los libros que aún no tienen galería.
 - **Plano abierto**: grabaciones de radio y televisión que mencionó tener en localización.
 - **Foto de escritor** oficial, si finalmente hace la sesión que quería.
