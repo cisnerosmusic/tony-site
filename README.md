@@ -22,24 +22,40 @@ Base heredada del template propio de Index01 ([impulses-art-site](https://github
 | `/en/` | Portada en inglés |
 | `/libros/` | Los 14 libros publicados, cada uno con su propia página |
 | `/ineditos/` | Obras que esperan editorial |
-| `/tinta-ciones/` | Poesía: `poemas-sueltos/`, `de-cimitas/`, `en-mi-voz/` |
+| `/tinta-ciones/` | Poesía: `poemas-sueltos/` (20 poemas), `de-cimitas/` (7 piezas de foto y décima), `sonata-de-la-lluvia/`, `en-mi-voz/` |
+| `/contarte/` | Los cuentos, uno por página, con orden rotatorio diario |
 | `/trova/` | Su obra documental sobre la Nueva Trova |
-| `/plano-abierto/` | Radio, televisión y prensa fuera de los libros |
+| `/plano-abierto/` | Radio, televisión y grabaciones |
 | `/laureles/` | Los premios |
 | `/periodista/` | Ficha y trayectoria en la prensa cultural cubana |
+| `/entre-lectores/` | Álbum de ferias y firmas; se llega solo desde Mis libros |
 | `/directorio/` | Contacto del autor y consultas de derechos |
 
-Archivos de raíz: `index.html`, `styles.css`, `app.js`, `fonts.css`, `robots.txt`, `sitemap.xml`, `llms.txt`, `404.html`, `CNAME` y la clave de IndexNow. Recursos en `fonts/` (7 woff2), `img/` (33 WebP) y `audio/` (2 grabaciones del autor).
+Archivos de raíz: `index.html`, `styles.css`, `app.js`, `fonts.css`, `robots.txt`, `sitemap.xml`, `llms.txt`, `404.html`, `CNAME`, el favicon en archivos reales (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`) y la clave de IndexNow. Recursos en `fonts/`, `img/`, `audio/` y `video/`.
 
-## Añadir un libro
+**40 páginas, 37 URLs en el sitemap.**
 
-Las páginas de libro **no se escriben a mano**: se generan desde un manifiesto.
+## Añadir contenido
+
+Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `herramientas/`.
+
+| Generador | Escribe | Manifiesto |
+|---|---|---|
+| `gen-libro.py` | las 14 fichas de libro | `libros/<slug>.json` |
+| `gen-cuento.py` | Contarte y la página de cada cuento | `cuentos.json` |
+| `gen-poemas.py` | Poemas sueltos | `poemas.json` |
+| `gen-decimitas.py` | De-Cimitas | `decimitas.json` |
+| `gen-sonata.py` | Sonata de la lluvia | el propio `.txt` |
+| `gen-audios.py` | las grabaciones, repartidas a las salas que las reclaman | `grabaciones.json` |
+
+Y cuatro auxiliares: `navegacion.py`, que es la **única** definición del menú y del pie; `unificar-nav.py`, que la aplica a las páginas escritas a mano y tiene un `--comprobar` que falla si algo se desalinea; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
 
 ```bash
 python herramientas/gen-libro.py herramientas/libros/<slug>.json
+python herramientas/unificar-nav.py --comprobar   # debe decir: desalineadas: 0
 ```
 
-El manifiesto declara el título, la ficha, las rutas a los textos del autor (contratapa, fragmentos, *con voz y voto*), la galería y los campos `seo_titulo` y `seo_desc`. El generador arma la página completa con sus datos estructurados (`Book` y `BreadcrumbList`), omite los bloques sin material y hereda todas las mejoras de SEO. Después hay que añadir la URL nueva a `sitemap.xml` y al índice `/libros/`.
+Después de publicar algo nuevo: añadir la URL a `sitemap.xml`, subir el `?v=N` de `styles.css` en **todas** las páginas y en los generadores, y relanzar el ping de IndexNow.
 
 ## Reglas de contenido
 
@@ -48,6 +64,10 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 - **Los textos literarios se publican siempre en su idioma original, el español**, aunque el sitio crezca a otros idiomas.
 - **Primera persona**: en la casa habla siempre el autor, salvo donde se declare otra voz.
 - **Sin raya larga** en ningún texto público.
+- **La atribución es sagrada.** Varios poemas glosan o citan a otros autores (José Martí, Lezama Lima, Polito Ibáñez, Fito Páez, Noel Nicola, Santiago Feliú). Esos versos salen siempre en bloque aparte y con la firma de quien los escribió, nunca corridos con los del autor.
+- **En verso no se normaliza nada.** Los espacios múltiples dentro del verso son puntuación del autor y las sangrías marcan dónde abre cada décima. Se conservan tal cual, con `white-space: pre-wrap`.
+- **Un texto vive una sola vez.** Si una pieza pertenece a dos salas, se repite el enlace o el reproductor, nunca el texto ni el marcado de datos.
+- **Hay material que existe y no se publica**, por decisión del autor y de Ernesto. La lista está en los innegociables de `AGENTS.md` y no se revisa sin preguntarles.
 - **Mayúscula inicial** en nombres propios, premios y editoriales.
 - Las **obras inéditas** se presentan solo con sinopsis y fragmentos, nunca íntegras.
 - Las sinopsis marcadas como provisionales se sustituirán por el texto oficial del autor.

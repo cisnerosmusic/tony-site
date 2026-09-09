@@ -10,6 +10,51 @@ El 8 de septiembre, además, **se reescribió `DESIGN.md`**, que documentaba con
 
 El 8 de septiembre se revisó el repositorio entero y **se corrigió el rumbo del producto en `PRODUCT.md`**: el público de esta web no es Cuba. Allí Tony ya tiene editoriales y circuito; la web se construyó para el afuera, y su lector de mayor valor es el editor, agente o traductor extranjero. De ahí salen los pendientes nuevos de la sección 1, que son los que más pagan. Lee `PRODUCT.md` antes de tocar nada: la jerarquía de la obra ahora depende del idioma.
 
+## 0. La tarde del 8 de septiembre: entró el contenido
+
+Por la mañana el sitio era una casa bien construida y medio vacía. Por la tarde
+Tony mandó material sin parar y dejó de estarlo. Lo que hay ahora, todo en vivo:
+
+| Sala | Qué tiene | Motor |
+|---|---|---|
+| **Contarte** (nueva) | 7 cuentos completos, uno por habitación | `gen-cuento.py` + `cuentos.json` |
+| **Poemas sueltos** | 20 poemas, 8 de ellos glosas | `gen-poemas.py` + `poemas.json` + `leer-poema.py` |
+| **De-Cimitas** | 7 piezas de foto y décima | `gen-decimitas.py` + `decimitas.json` |
+| **Sonata de la lluvia** (nueva) | 150 versos en 3 movimientos | `gen-sonata.py` |
+| **Entre lectores** (nueva) | 11 fotos de ferias y firmas | a mano |
+| **Plano abierto** | 1 programa de TV, 2 de radio, lectura y concierto | `gen-audios.py` + `grabaciones.json` |
+| **4 fichas de libro** | prensa verificada con enlace | `gen-libro.py` |
+
+**40 páginas HTML, 37 URLs en el sitemap, unos 98 MB de medios.**
+
+Reglas que salieron de esta tanda y que conviene no re-descubrir:
+
+- **La atribución es lo primero.** Ocho poemas glosan a Martí y a Lezama, una
+  décima cita a Polito Ibáñez y la sonata lleva epígrafes de Fito Páez, Noel
+  Nicola y Santiago Feliú. Esos versos **no son del autor** y salen siempre en
+  bloque aparte, con la firma de quien los escribió.
+- **En verso no se normaliza nada.** El autor usa espacios múltiples dentro del
+  verso como puntuación y sangría de tres espacios para abrir cada décima de una
+  tirada. Todo se muestra con `white-space: pre-wrap`. `a-texto.py --verso`
+  conserva además las líneas en blanco, que separan estrofas.
+- **Los títulos de poema van escritos a mano en el manifiesto.** En los
+  originales están en mayúsculas y pasarlos a minúsculas por programa rompe los
+  nombres propios y confunde el nombre de la serie con el del poema.
+- **Un texto vive una sola vez.** Si pertenece a dos salas, se repite el
+  reproductor o el enlace, nunca el texto ni el marcado de datos. Ver AGENTS.md.
+
+### Lo que se quedó fuera a propósito
+
+- **Dos cuentos**, *Cantar el cuento III* y *La urna del tío*, que el autor marcó
+  en el nombre del archivo como pertenecientes a libros en proceso editorial.
+  Necesitan su palabra antes de publicarse.
+- **Proclama Real**, por la decisión ya escrita en los innegociables.
+- **Los diplomas del Farraluque**: sus datos entraron como texto en Laureles, las
+  fotos no. Eran fotos de folios y bajaban la autoridad de la página en vez de
+  subirla.
+- **Inéditos sigue vacía, y está bien así.** Es la única sala sin contenido y el
+  autor se toma su tiempo. No se llena con relleno.
+
 ## 1. El embudo de derechos (HECHO el 8 de septiembre)
 
 **Decisión del autor, por teléfono el 8 de septiembre de 2026: toda gestión de derechos fuera de Cuba pasa por Ernesto Cisneros, y todo el mundo va a dos destinos y ningún otro, sea cual sea el idioma:**
@@ -51,7 +96,7 @@ Regla fijada en `PRODUCT.md`: *ninguna declaración de derechos sin salida, en e
 
 `--gold-dim` sigue existiendo pero ahora es estrictamente borde y superficie. El token que había creado unas horas antes para el oro de tinta se eliminó: con objetivo AAA el oro de texto es simplemente `--gold`, y el sistema quedó más simple que por la mañana.
 
-`styles.css` va por `?v=7` en las 28 páginas y en el generador. `fonts.css` se queda en `?v=5` a propósito: las fuentes no cambiaron.
+`styles.css` iba por `?v=7` cuando se escribió esto; al cerrar el 8 de septiembre va por **`?v=19`**, y sube con cada cambio de hoja de estilos en las 40 páginas y en los seis generadores a la vez. `fonts.css` se queda en `?v=5` a propósito: las fuentes no han cambiado.
 
 Verificado midiendo el contraste real de cada nodo de texto renderizado, no los tokens en teoría, en 13 páginas incluido el 404.
 
@@ -88,6 +133,39 @@ Si esa página sale idéntica, se regeneran las 13 restantes. Si sale distinta, 
 **Esa comprobación ya se hizo el 8 de septiembre desde la Máquina 1, en el commit `30cfae3`, y salió limpia**: las 14 regeneradas, `git status` vacío. Así que el parcheo a mano está validado y el aviso de sincronía del punto 1 quedó cerrado. Lo que sigue abierto es lo otro, que el pipeline vive en un solo disco: mientras las rutas apunten al OneDrive, la Máquina 2 no puede tocar el generador sin dejar que HTML y generador diverjan a ciegas.
 
 `gen-libro.py` necesita Pillow (`pip install Pillow`): lee las dimensiones reales de cada imagen para emitir `width` y `height`, que es de donde sale el CLS 0 del sitio.
+
+## 3 bis. El orden de trabajo para mañana, 9 de septiembre
+
+Fijado con Ernesto al cerrar la jornada del 8, y en este orden:
+
+1. **Revisar el SEO de cada página, una por una.** La última auditoría es del 8
+   por la mañana y desde entonces han nacido siete páginas de cuento, la sonata,
+   Contarte, Entre lectores y De-Cimitas. Hay que comprobar en cada una título,
+   descripción, canónica, tarjetas sociales y JSON-LD, y volver a enviar el
+   sitemap y el ping de IndexNow.
+2. **Actualizar `README.md` y estos pendientes** cada vez que se cierre algo, no
+   al final. (El README se puso al día el 8 por la noche.)
+3. **Empezar la versión inglesa en serio.**
+
+### La versión inglesa no es la española traducida
+
+Es la regla que ya está en `PRODUCT.md` y que conviene tener delante desde la
+primera línea: **la prioridad del mundo anglosajón es distinta de la del mundo
+hispanohablante.**
+
+- En español manda la **fantasía heroica**: es lo que tiene circuito, premios y
+  lectores, y por eso abre Mis libros.
+- En inglés lo que abre puertas primero es **la trova**: hay editoriales
+  universitarias, departamentos de estudios latinoamericanos y de música, y
+  revistas académicas que buscan exactamente lo que Tony lleva veinte años
+  documentando. *Convertida en canción*, *Trovadoras* y *La canción de la Nueva
+  Trova* son, para ese lector, la puerta de entrada, no una sección lateral.
+- El segundo argumento en inglés es que **los derechos mundiales están libres**,
+  que ya tiene su sección en `/en/`.
+
+Traducir el aparato, nunca la literatura: navegación, presentaciones, fichas,
+notas de prensa y metadatos. Los poemas, los cuentos y los fragmentos se quedan
+en español, con su aviso. Hoy `/en/` es solo la portada.
 
 ## 4. Traducciones
 
@@ -152,14 +230,14 @@ cuerpo 1,18rem, interlineado 1,95 y sangría de primera línea. Clases
 
 Cuando haya corriente en Alamar y pueda enviar:
 
-- **De-Cimitas**: la sección de décimas con imagen y texto está creada pero vacía. Necesita las décimas y sus imágenes.
+- ~~De-Cimitas vacía~~ **RESUELTO el 8 de septiembre**: siete piezas de foto y décima, más *Sonata de la lluvia* con página propia. Falta saber si hay más décimitas: el autor dijo tener «cientos», y solo llegaron ocho fotos.
 - **Inéditos**: hay cinco poemarios y tres cuentos completos guardados (carpeta `tony 1`), pero solo deben publicarse **sinopsis y fragmentos** que él elija.
 - **Sinopsis oficiales** de los libros cuyas páginas siguen con texto provisional marcado.
 - **Prensa**: el 8 de septiembre envió la primera tanda y está cableada y verificada. Tienen bloque de Prensa 4 de los 14 libros: *Las guerreras de la luz*, *El Escudo de Valnúss*, *Grimorium* y *El otro lado del espejo*, con tres entrevistas de Juventud Rebelde (Alain Gutiérrez 2012, Iyaimí Palomares 2016 y 2019) y la reseña de Habana Radio. Faltan los diez restantes. **Aviso: Habana Radio está caída entera**, error 502 incluso en la raíz, y esa reseña sobrevive solo en la copia del Internet Archive, que es a donde apunta el enlace. Es la prueba de que este archivo también es rescate.
-- **Ojos de bruja**: relato por entregas publicado en Cubaliteraria en julio de 2020, las siete partes vivas y comprobadas (`/ojos-de-bruja-i/` a `/ojos-de-bruja-vi/` más `/ojos-de-bruja-vii-y-final/`). No es libro ni poesía, así que no cabe en las secciones actuales: falta decidir si lleva página propia. Tony conserva el texto completo y está por decidir si se aloja aquí, que lo convertiría en el único sitio donde se lee seguido.
+- **Ojos de bruja** (sigue abierto, y ahora hay dónde ponerlo: Contarte): relato por entregas publicado en Cubaliteraria en julio de 2020, las siete partes vivas y comprobadas (`/ojos-de-bruja-i/` a `/ojos-de-bruja-vi/` más `/ojos-de-bruja-vii-y-final/`). No es libro ni poesía, así que no cabe en las secciones actuales: falta decidir si lleva página propia. Tony conserva el texto completo y está por decidir si se aloja aquí, que lo convertiría en el único sitio donde se lee seguido.
 - **Dos reseñas descartadas**, decisión del 8 de septiembre: un video de booktuber sobre *Las guerreras de la luz* que el autor considera flojo, y una reseña de *Grimorium* en `diaentp.blogspot.com` que ya no existe (404). El bloque de Prensa es expediente de piezas firmadas en medios identificables; un video de aficionado no añade autoridad y omitirlo no oculta nada.
 - **Presentaciones**: más fotos, audios o palabras de lanzamientos, sobre todo de los libros que aún no tienen galería.
-- **Plano abierto**: grabaciones de radio y televisión que mencionó tener en localización.
+- ~~Plano abierto sin grabaciones~~ **RESUELTO el 8 de septiembre**: el programa de televisión *Entre libros* (2019), los dos de Habana Radio de Fernando Rodríguez Sosa (2018), la lectura en la UNEAC de Santa Clara (2022) y *Mar de papel* del concierto de Rita del Prado (1999). Sigue pendiente el corte de *Aviso*, de ese mismo concierto: el autor pidió dejar solo desde donde él dice «esto se llama aviso», y hay dos cortes candidatos esperando que lo escuche y elija.
 - **Foto de escritor** oficial, si finalmente hace la sesión que quería.
 - **Extensión y categoría de edad** de cada título, que es lo que pregunta una editorial extranjera y no se puede inventar.
 
@@ -185,7 +263,37 @@ Cuando haya corriente en Alamar y pueda enviar:
 ## 8. Recordatorios de mantenimiento
 
 - **Dos máquinas, un repositorio.** El trabajo se reparte entre la máquina de casa y la de UnlimitedWraps, con instancias distintas. Lo común son los repos: **si algo tiene que sobrevivir al cambio de máquina, va en este archivo o en el repo, nunca solo en la memoria del asistente, que es local a cada máquina.** Hacer `git pull` antes de empezar.
-- Las páginas de libro se generan con `herramientas/gen-libro.py`; no se editan a mano.
+- **Casi nada se edita ya a mano.** Los seis generadores y sus manifiestos:
+
+  | Generador | Qué escribe | Manifiesto |
+  |---|---|---|
+  | `gen-libro.py` | las 14 fichas de libro | `libros/*.json` |
+  | `gen-cuento.py` | Contarte y cada cuento | `cuentos.json` |
+  | `gen-poemas.py` | Poemas sueltos | `poemas.json` |
+  | `gen-decimitas.py` | De-Cimitas | `decimitas.json` |
+  | `gen-sonata.py` | Sonata de la lluvia | el propio .txt |
+  | `gen-audios.py` | las grabaciones, en las dos salas que las reclaman | `grabaciones.json` |
+
+  Auxiliares: `navegacion.py` (única definición del menú y el pie),
+  `unificar-nav.py` (reescribe la navegación de las páginas a mano, con
+  `--comprobar` para fallar si algo se desalinea), `a-texto.py` (RTF y DOCX a
+  texto, con `--verso`) y `leer-poema.py` (separa título, epígrafe, cuerpo y
+  colofón).
+
+- **Ritual al terminar cualquier tanda**, en este orden:
+
+  ```bash
+  for f in herramientas/libros/*.json; do python herramientas/gen-libro.py "$f"; done
+  python herramientas/gen-cuento.py && python herramientas/gen-poemas.py
+  python herramientas/gen-decimitas.py && python herramientas/gen-sonata.py
+  python herramientas/gen-audios.py && python herramientas/unificar-nav.py --comprobar
+  ```
+
+  Si `--comprobar` no dice `desalineadas: 0`, algo quedó a medias.
+- **`a-texto.py` usa striprtf, no un parser propio.** Hubo uno y se comía texto:
+  perdió las dos primeras palabras de un cuento y partió tres títulos
+  acentuados. Para textos del autor no se improvisa un conversor, y el
+  resultado se compara contra el original antes de publicar.
 - Al publicar páginas nuevas: actualizar `sitemap.xml`, subir el `?v=N` de `styles.css`, `fonts.css` y `app.js`, y relanzar el ping de IndexNow.
 - El meta `msvalidate.01` de la portada no se quita: Bing revalida la propiedad periódicamente.
 - Reglas de contenido vigentes en `README.md` y doctrina de producto en `PRODUCT.md`; la voluntad del autor manda sobre cualquier criterio de diseño.
