@@ -41,6 +41,31 @@
   ],
   "galeria": [
     {
+      "img": "/img/libros/guerreras-pres-1.webp",
+      "alt": "Presentación del libro con el ejemplar sobre la mesa, ante el micrófono",
+      "pie": "Presentación en el Pabellón Cuba, Feria Internacional del Libro de La Habana, 14 de febrero de 2012"
+    },
+    {
+      "img": "/img/libros/guerreras-pres-2.webp",
+      "alt": "Dos personas en la mesa de presentación con el libro entre ellas",
+      "pie": "En la mesa de presentación, Pabellón Cuba, febrero de 2012"
+    },
+    {
+      "img": "/img/libros/guerreras-pres-3.webp",
+      "alt": "Público sentado durante la presentación del libro",
+      "pie": "El público en la presentación del Pabellón Cuba, febrero de 2012"
+    },
+    {
+      "img": "/img/libros/guerreras-firma-1.webp",
+      "alt": "Firma de ejemplares en una mesa al aire libre, rodeado de lectores",
+      "pie": "Firmando ejemplares en el Sábado del Libro, agosto de 2012"
+    },
+    {
+      "img": "/img/libros/guerreras-firma-2.webp",
+      "alt": "Plaza con lectores haciendo cola ante la mesa de firmas",
+      "pie": "La cola de lectores en el Sábado del Libro, agosto de 2012"
+    },
+    {
       "img": "/img/libros/guerreras-premio-1.webp",
       "alt": "Antonio López Sánchez recibe el Premio La Rosa Blanca",
       "pie": "Entrega del Premio La Rosa Blanca, 19 de marzo de 2013"
