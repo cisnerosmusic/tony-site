@@ -31,8 +31,28 @@
       "tipo": "prosa"
     }
   ],
-  "galeria": [],
-  "prensa": [],
+  "galeria": [
+    {
+      "img": "/img/libros/convertida-pres-1.webp",
+      "alt": "Panel de presentación en la sala José Lezama Lima, con Antonio López Sánchez al micrófono",
+      "pie": "Presentación de Editorial Capiro en la sala José Lezama Lima del Colegio San Gerónimo, Feria Internacional del Libro de La Habana, abril de 2022"
+    },
+    {
+      "img": "/img/libros/convertida-pres-2.webp",
+      "alt": "Antonio López Sánchez habla al micrófono durante la presentación del libro",
+      "pie": "Presentando el libro en la Feria Internacional del Libro de La Habana, abril de 2022"
+    }
+  ],
+  "prensa": [
+    {
+      "titulo": "Capiro en plural. Metros de perplejidades y mujeres vueltas canciones",
+      "pie": "Crónica de Amalia Alejandra, Cubaliteraria, 25 de abril de 2022",
+      "url": "https://www.cubaliteraria.cu/capiro-en-plural-metros-de-perplejidades-y-mujeres-vueltas-canciones/",
+      "medio": "Cubaliteraria",
+      "autor": "Amalia Alejandra",
+      "fecha": "2022-04-25"
+    }
+  ],
   "referencias": [
     "https://www.ecured.cu/Convertida_en_canci%C3%B3n._La_imagen_de_la_mujer_en_los_textos_de_la_Nueva_Trova"
   ],

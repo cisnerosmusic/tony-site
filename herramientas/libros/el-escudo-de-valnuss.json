@@ -7,9 +7,42 @@
   "editorial": "Editorial de la Mujer",
   "premios": [],
   "descripcion": "El Escudo de Valnúss (Editorial de la Mujer, 2015), saga de fantasía heroica de Antonio López Sánchez en un estuche de cinco volúmenes ilustrados por Rainel Cabarroi: sinopsis, ficha, fragmentos y el comentario del autor.",
-  "tira_sub": "Cinco volúmenes en un estuche: mi saga mayor",
+  "tira_sub": "Cuatro protagonistas, cinco libros, una sola historia y un empaque singular...",
   "cubierta": "/img/libros/valnuss-cubierta.webp",
   "cubierta_alt": "Cubierta de El Escudo de Valnúss, ilustrada por Rainel Cabarroi",
+  "volumenes_titulo": "Los cinco libros",
+  "volumenes": [
+    {
+      "img": "/img/libros/valnuss-1-aurora.webp",
+      "alt": "Cubierta de La magia de la aurora, tomo 1 de El Escudo de Valnúss",
+      "titulo": "La magia de la aurora",
+      "pie": "La magia femenina lo puede todo..."
+    },
+    {
+      "img": "/img/libros/valnuss-2-rojo.webp",
+      "alt": "Cubierta de El rojo del mar, tomo 2 de El Escudo de Valnúss",
+      "titulo": "El rojo del mar",
+      "pie": "El poder de la voluntad y la disciplina..."
+    },
+    {
+      "img": "/img/libros/valnuss-3-fuego.webp",
+      "alt": "Cubierta de Un fuego a toda vela, tomo 3 de El Escudo de Valnúss",
+      "titulo": "Un fuego a toda vela",
+      "pie": "La venganza y el amor..."
+    },
+    {
+      "img": "/img/libros/valnuss-4-caballos.webp",
+      "alt": "Cubierta de Campos de caballos, tomo 4 de El Escudo de Valnúss",
+      "titulo": "Campos de caballos",
+      "pie": "La magia y el mal..."
+    },
+    {
+      "img": "/img/libros/valnuss-5-talismanes.webp",
+      "alt": "Cubierta de Los cuatro talismanes, tomo 5 de El Escudo de Valnúss",
+      "titulo": "Los cuatro talismanes",
+      "pie": "La batalla final..."
+    }
+  ],
   "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/(2015) El Escudo de Valnúss.txt",
   "contratapa_titulo": "Sinopsis",
   "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/(2015) El Escudo de Valnúss CON VOZ Y VOTO.txt",

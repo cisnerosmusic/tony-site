@@ -82,6 +82,14 @@ def generar(manifiesto):
             filas.append(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>')
     ficha = "\n".join(filas)
 
+    # Volumenes: para las obras que salieron como juego de varios tomos, cada
+    # portada con su titulo y la linea que el autor le puso.
+    volumenes = ""
+    for v in m.get("volumenes", []):
+        vw, vh = dims(v["img"])
+        volumenes += (f'<figure><img src="{v["img"]}" width="{vw}" height="{vh}" alt="{esc(v["alt"])}" loading="lazy">'
+                      f'<figcaption><strong>{esc(v["titulo"])}</strong><br>{esc(v["pie"])}</figcaption></figure>\n')
+
     galeria = ""
     for g in m.get("galeria", []):
         gw, gh = dims(g["img"])
@@ -130,14 +138,24 @@ def generar(manifiesto):
                 f'    <div class="section-divider"></div>\n{cuerpo}\n  </section>\n\n')
 
     nota_idioma = '    <p class="nota-demo">Los textos literarios se publican siempre en su idioma original, el español.</p>'
-    bloques = "".join([
-        bloque("contratapa", m.get("contratapa_titulo", "Nota de contratapa"), contratapa, "left"),
-        bloque("vyv", "Con voz y voto", (vyv + '\n    <p class="vyv-firma">ALS</p>') if vyv else "", "right"),
-        bloque("fragmentos", "Fragmentos", (fragmentos + "\n" + nota_idioma) if fragmentos else "", "left"),
-        bloque("presentaciones", "Presentaciones", f'    <div class="galeria">\n{galeria}    </div>' if galeria else "", "right"),
-        bloque("prensa", "Prensa", f'    <ul class="lista-obras">\n{prensa}\n    </ul>' if prensa else "", "left"),
-        bloque("ficha", "Ficha", f'    <dl class="ficha">\n{ficha}\n    </dl>', "right"),
-    ])
+    piezas = [
+        ("contratapa", m.get("contratapa_titulo", "Nota de contratapa"), contratapa),
+        ("volumenes", m.get("volumenes_titulo", "Los libros"),
+         f'    <div class="galeria">\n{volumenes}    </div>' if volumenes else ""),
+        ("vyv", "Con voz y voto", (vyv + '\n    <p class="vyv-firma">ALS</p>') if vyv else ""),
+        ("fragmentos", "Fragmentos", (fragmentos + "\n" + nota_idioma) if fragmentos else ""),
+        ("presentaciones", "Presentaciones", f'    <div class="galeria">\n{galeria}    </div>' if galeria else ""),
+        ("prensa", "Prensa", f'    <ul class="lista-obras">\n{prensa}\n    </ul>' if prensa else ""),
+        ("ficha", "Ficha", f'    <dl class="ficha">\n{ficha}\n    </dl>'),
+    ]
+    # El lado del reveal se alterna sobre los bloques que de verdad salen, no sobre
+    # la lista completa: asi un libro al que le falte alguno no rompe el zigzag.
+    bloques, n = "", 0
+    for id_, titulo_b, cuerpo in piezas:
+        if not cuerpo.strip():
+            continue
+        bloques += bloque(id_, titulo_b, cuerpo, "left" if n % 2 == 0 else "right")
+        n += 1
 
     pagina = f"""<!DOCTYPE html>
 <html lang="es">
