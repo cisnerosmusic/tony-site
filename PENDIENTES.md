@@ -76,6 +76,21 @@ Sigue en pie la fragilidad de fondo: si alguien toca `SALIDA_DERECHOS` sin poder
 
 Regla fijada en `PRODUCT.md`: *ninguna declaración de derechos sin salida, en el idioma de quien lee*.
 
+**Alcance de los derechos, decidido el 9 de septiembre de 2026 por Ernesto:**
+lo que este sitio ofrece son única y exclusivamente los derechos generados por
+Antonio López Sánchez, nunca los de otros autores, con énfasis en las obras
+colectivas. Escrito en tres capas: la frase de la ficha, que cambia sola en los
+cinco volúmenes compartidos; un párrafo en el Directorio; y `/derechos/` con
+`/en/rights/`, generadas por `gen-legal.py` desde `legal.json`.
+
+**Lo que no hay que tocar aquí:** la lista de obras colectivas del aviso legal
+se lee de las fichas, del mismo campo `autoría` que usa `gen-libro.py`. No se
+mantiene a mano, y así la página legal y el catálogo no pueden contradecirse.
+Si se añade un título con autoría compartida, la frase le sale correcta sola.
+
+**Pendiente real:** este aviso es una declaración clara, no asesoría legal.
+Antes de firmar una cesión con una editorial, que lo revise un abogado.
+
 **El dossier de derechos no se duplica aquí.** El sitio de Tony es la casa y el catálogo; el sitio de Ernesto es el negocio. Esa separación es deliberada.
 
 ## 2. Accesibilidad: contraste (HECHO el 8 de septiembre, nivel AAA)
