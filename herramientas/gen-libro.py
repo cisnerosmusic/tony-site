@@ -120,6 +120,15 @@ def generar(manifiesto):
     prensa = "\n".join(prensa_items)
     subjectof_jsonld = (',\n  "subjectOf": '
                         + json.dumps(subjectof, ensure_ascii=False, indent=2).replace("\n", "\n  ")) if subjectof else ""
+    # Descarga oficial, cuando el libro se puede leer entero en alguna parte.
+    d = m.get("descarga")
+    descarga_html = ""
+    if d:
+        descarga_html = ('\n  <p class="descarga reveal reveal-left">\n'
+                         f'    <a href="{d["url"]}" target="_blank" rel="noopener" class="btn btn-filled">{esc(d["texto"])}</a>\n'
+                         + (f'    <span class="meta">{esc(d["pie"])}</span>\n' if d.get("pie") else "")
+                         + '  </p>\n')
+
     nav_html = "\n    ".join(f'<a href="{h}">{n}</a>' for h, n in NAV if h != "/")
 
     premios_jsonld = json.dumps(m.get("premios", []), ensure_ascii=False)
@@ -206,7 +215,7 @@ def generar(manifiesto):
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css?v=5">
-<link rel="stylesheet" href="/styles.css?v=7">
+<link rel="stylesheet" href="/styles.css?v=8">
 </head>
 <body>
 
@@ -241,7 +250,7 @@ def generar(manifiesto):
   <figure class="cubierta-dominante reveal reveal-right">
     <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc(m["cubierta_alt"])}">
   </figure>
-
+{descarga_html}
 {bloques}  <p style="margin-top:2rem;"><a href="/libros/" class="btn">Volver a Mis libros</a></p>
 
 </div>
