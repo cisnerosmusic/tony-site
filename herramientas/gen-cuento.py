@@ -14,7 +14,22 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=13"
+CSS = "?v=14"
+
+# Calendario de Contarte. Cuadrado latino de 7x7: cada dia los cuentos salen en
+# otro orden, cada cuento pasa exactamente una vez por cada posicion a lo largo
+# de la semana, los siete ordenes son distintos y ninguno es la rotacion de
+# otro, que es lo que haria evidente la repeticion. Calculado con busqueda y
+# horneado aqui; si cambia el numero de cuentos hay que recalcularlo.
+CALENDARIO = [
+    [4, 5, 6, 0, 3, 1, 2],
+    [5, 0, 4, 1, 6, 2, 3],
+    [2, 6, 1, 3, 5, 4, 0],
+    [6, 3, 2, 4, 0, 5, 1],
+    [3, 1, 0, 2, 4, 6, 5],
+    [1, 4, 3, 5, 2, 0, 6],
+    [0, 2, 5, 6, 1, 3, 4],
+]
 
 FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
@@ -149,15 +164,35 @@ def pagina_cuento(c):
 
 def pagina_indice(cuentos):
     url = f"{DOMINIO}/contarte/"
-    filas = "\n".join(
-        f'''  <article class="libro-item reveal reveal-right" style="grid-template-columns:1fr;">
-    <div>
-      <h3 class="libro-titulo"><a href="/contarte/{c["slug"]}/">{esc(c["titulo"])}</a></h3>
-      <p class="libro-meta">{esc(c.get("anio",""))}{" · " + esc(c["procedencia"]["texto"]) if c.get("procedencia") else ""}</p>
-      <p class="libro-sinopsis">{esc(c["linea"])}</p>
-      <p style="margin-top:1.2rem;"><a href="/contarte/{c["slug"]}/" class="btn">Leer el cuento</a></p>
-    </div>
-  </article>''' for c in cuentos)
+    def ficha(i, c):
+        meta = esc(c.get("anio", ""))
+        if c.get("procedencia"):
+            meta = (meta + " · " if meta else "") + esc(c["procedencia"]["texto"])
+        meta = f'    <p class="libro-meta">{meta}</p>\n' if meta else ""
+        return (f'  <article class="cuento-ficha reveal reveal-right" data-cuento="{i}">\n'
+                f'    <h3 class="libro-titulo"><a href="/contarte/{c["slug"]}/">{esc(c["titulo"])}</a></h3>\n'
+                f'{meta}'
+                f'    <p class="libro-sinopsis">{esc(c["linea"])}</p>\n'
+                f'    <p style="margin-top:1.2rem;"><a href="/contarte/{c["slug"]}/" class="btn">Leer el cuento</a></p>\n'
+                f'  </article>')
+    filas = "\n".join(ficha(i, c) for i, c in enumerate(cuentos))
+
+    # El orden del dia. El script va sin defer, justo detras de la lista, para
+    # que se ejecute mientras se analiza la pagina: asi el navegador pinta una
+    # sola vez y no se ve el barajado. Sin JavaScript se ven los siete en el
+    # orden del manifiesto, que es la degradacion correcta.
+    orden_js = (
+        '<script>\n'
+        '(function(){\n'
+        '  var cal = ' + json.dumps(CALENDARIO) + ';\n'
+        '  var hoy = cal[new Date().getDay()];\n'
+        '  var fichas = document.querySelectorAll(".cuento-ficha");\n'
+        '  for (var p = 0; p < hoy.length; p++) {\n'
+        '    var f = fichas[hoy[p]];\n'
+        '    if (f) f.style.order = p;\n'
+        '  }\n'
+        '})();\n'
+        '</script>')
 
     lista = {"@context": "https://schema.org", "@type": "ItemList",
              "name": "Cuentos de Antonio López Sánchez",
@@ -190,7 +225,10 @@ def pagina_indice(cuentos):
     <p class="section-text" style="margin-bottom:3rem;">Algunos vienen de un libro y siguen perteneciéndole: desde su cuarto se puede ir al libro, y desde el libro se llega hasta aquí. Otros andan sueltos, esperando el suyo.</p>
   </div>
 
+  <div class="cuento-lista">
 {filas}
+  </div>
+{orden_js}
 
 </div>
 </main>

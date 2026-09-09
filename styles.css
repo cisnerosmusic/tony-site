@@ -757,3 +757,16 @@ a.libro-cubierta:hover img {
 @media (max-width: 900px) {
   .cuento-texto p { font-size: 1.1rem; line-height: 1.85; }
 }
+
+/* ── Contarte: la lista que rota cada dia ────── */
+/* Es flex para que el orden del dia se aplique con 'order' sin mover el HTML,
+   asi el orden del documento sigue siendo estable para buscadores y lectores
+   de pantalla, y lo que cambia es solo la presentacion. */
+.cuento-lista { display: flex; flex-direction: column; }
+
+.cuento-ficha {
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.cuento-ficha:last-of-type { border-bottom: none; }
+.cuento-ficha .libro-titulo { margin-bottom: 0.4rem; }
