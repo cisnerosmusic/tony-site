@@ -26,7 +26,11 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scrollbar-color: var(--navy-light) var(--bg-deep); overflow-x: clip; }
+/* scrollbar-gutter reserva el hueco de la barra aunque la pagina no llegue a
+   tener scroll. Sin esto, pasar de una pagina larga a una corta ensancha el
+   contenido unos 15px y el menu fijo da un salto lateral. Medido: /ineditos/
+   y /tinta-ciones/de-cimitas/ caben sin barra en una ventana de 1200px. */
+html { scroll-behavior: smooth; scrollbar-color: var(--navy-light) var(--bg-deep); overflow-x: clip; scrollbar-gutter: stable; }
 
 body {
   font-family: var(--font-body);

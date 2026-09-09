@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=12"
+CSS = "?v=13"
 
 FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
