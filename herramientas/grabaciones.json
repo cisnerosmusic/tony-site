@@ -1,0 +1,42 @@
+[
+  {
+    "id": "clase-de-literatura",
+    "titulo": "Clase de Literatura",
+    "archivo": "/audio/clase-de-literatura.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "canonica": "en-mi-voz",
+    "salas": ["en-mi-voz"]
+  },
+  {
+    "id": "luna-callada",
+    "titulo": "Luna Callada",
+    "archivo": "/audio/luna-callada.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "canonica": "en-mi-voz",
+    "salas": ["en-mi-voz"]
+  },
+  {
+    "id": "lectura-uneac-santa-clara-2022",
+    "titulo": "Lectura de poesía en la UNEAC de Santa Clara",
+    "archivo": "/audio/lectura-uneac-santa-clara-2022.mp3",
+    "frase": "Once minutos de poemas leídos por mí, en Santa Clara, mayo de 2022",
+    "ficha": "18 de mayo de 2022 · invitado como poeta a la Unión de Escritores y Artistas, en la 30 Feria Internacional del Libro por las provincias · once minutos",
+    "duracion": "PT11M22S",
+    "fecha": "2022-05-18",
+    "canonica": "plano-abierto",
+    "salas": ["plano-abierto", "en-mi-voz"]
+  },
+  {
+    "id": "mar-de-papel-1999",
+    "titulo": "Mar de papel",
+    "archivo": "/audio/mar-de-papel-1999.mp3",
+    "frase": "Mi poema en el concierto de Rita del Prado, Centro Pablo, 1999",
+    "ficha": "Del concierto Más que sobrevivir, de la trovadora Rita del Prado, en el ciclo A Guitarra Limpia del Centro Cultural Pablo de la Torriente Brau, 3 de abril de 1999, donde fui invitado",
+    "duracion": "PT1M5S",
+    "fecha": "1999-04-03",
+    "canonica": "plano-abierto",
+    "salas": ["plano-abierto", "en-mi-voz"]
+  }
+]

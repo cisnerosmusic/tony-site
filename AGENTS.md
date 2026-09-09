@@ -95,6 +95,29 @@ Dos trampas al leer esos zips:
 
 Y una regla de contenido que salió de aquí: **en los pies de foto no se atribuyen caras.** Se nombra a quien la nota del autor dice que estaba y se describe el acto, pero no se afirma quién es quién en la imagen si no lo ha dicho él.
 
+## Una pieza que pertenece a dos salas
+
+Pasa a menudo y va a seguir pasando. Un poema leído por el autor pertenece a la vez a **Plano abierto**, por el acto que lo generó, y a **En mi voz**, porque está en su voz. Tony planteó lo mismo para los cuentos: uno que salga en un libro y además en la sección de cuentos.
+
+La regla, decidida con Ernesto el 8 de septiembre de 2026:
+
+> **El reproductor, o el texto, se repite donde haga falta. La ficha larga y el marcado de datos NO se repiten: viven en la sala canónica, y la otra remite a ella con una línea corta.**
+
+No es contenido duplicado: el archivo tiene una sola URL, y la página que lo rodea es distinta en cada sala. Lo que sí haría daño es declarar dos veces el mismo `AudioObject` o repetir la descripción larga, porque parte la señal entre dos URLs.
+
+Y sobre todo, **el dato vive una sola vez**. La fuente es `herramientas/grabaciones.json`: cada grabación con su título, su ficha larga, su frase corta, su sala canónica y la lista de salas donde aparece. `herramientas/gen-audios.py` la reparte.
+
+Cada página marca su región así, y **todo lo que hay dentro lo escribe el script**:
+
+```html
+<!-- grabaciones: en-mi-voz -->
+  <!-- /grabaciones -->
+```
+
+Fuera de los marcadores no se toca nada, así que el resto de la página se sigue editando a mano. Correr el generador dos veces no cambia nada, está comprobado. Si corriges una fecha, se corrige en el JSON y aparece bien en las dos salas a la vez: es justamente lo que evita que deriven.
+
+Cuando toque resolver los cuentos, se hace igual, con su propio manifiesto.
+
 ## Estado frágil, mientras dure
 
 `gen-libro.py` **no corre desde un clon limpio**: las rutas de texto de los manifiestos apuntan al OneDrive de la Máquina 1. Por eso las 14 páginas de libro llevan hoy cambios aplicados a mano con la cadena exacta que el generador sabe emitir.
