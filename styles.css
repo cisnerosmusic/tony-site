@@ -481,12 +481,30 @@ a.libro-cubierta:hover img {
 }
 
 /* ── Poesía ─────────────────────────────────── */
+/* .verso es la regla que sostiene toda la poesia del sitio: conserva los
+   saltos de linea tal como los escribio el autor. Sin ella los versos se leen
+   como prosa, que es exactamente lo que paso una vez. */
+.verso {
+  white-space: pre-wrap;
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.9;
+}
+
 .poema {
   max-width: 620px;
-  margin: 0 auto;
+  margin: 0 auto 3.5rem;
   background: var(--bg-card);
   border: 1px solid var(--line);
   padding: clamp(2rem, 5vw, 3.5rem);
+}
+.poema-serie {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
 }
 .poema-titulo {
   font-family: var(--font-display);
@@ -494,15 +512,51 @@ a.libro-cubierta:hover img {
   font-weight: 400;
   letter-spacing: 0.08em;
   color: var(--gold);
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
-.poema-texto {
+.poema-numero {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  margin-left: 0.5rem;
+}
+
+/* El epigrafe son versos de otro poeta: se marca aparte y se firma. */
+.poema-epigrafe {
+  border-left: 1px solid var(--line-bright);
+  padding: 0 0 0 1.4rem;
+  margin: 0 0 2rem;
+}
+.poema-epigrafe .verso {
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+}
+.poema-epigrafe cite {
+  display: block;
+  margin-top: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  font-style: normal;
+  color: var(--gold);
+}
+
+.poema-texto, .poema-cuerpo {
   white-space: pre-wrap;
   font-family: var(--font-body);
   font-size: 1.15rem;
   font-weight: 300;
   line-height: 1.95;
   color: var(--text-primary);
+}
+.poema-colofon {
+  margin-top: 1.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
 }
 .poema-credito {
   font-family: var(--font-mono);
@@ -514,6 +568,10 @@ a.libro-cubierta:hover img {
   padding-top: 1rem;
   border-top: 1px solid var(--line);
   display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .poema-texto, .poema-cuerpo { font-size: 1.06rem; }
 }
 
 /* ── Laureles ───────────────────────────────── */
@@ -770,3 +828,43 @@ a.libro-cubierta:hover img {
 }
 .cuento-ficha:last-of-type { border-bottom: none; }
 .cuento-ficha .libro-titulo { margin-bottom: 0.4rem; }
+
+/* ── De-Cimitas: foto y decima en una sola pieza ── */
+/* La imagen y los diez versos son una obra sola, asi que comparten marco.
+   Separarlos, o dejar que uno se lea sin el otro, deshace la pieza. */
+.decimita {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 2.4rem;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 3.5rem;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+}
+.decimita-foto { margin: 0; }
+.decimita-foto img { width: 100%; height: auto; }
+
+.decimita-titulo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+.decimita-versos {
+  font-size: 1.12rem;
+  color: var(--text-primary);
+  line-height: 1.9;
+}
+.decimita .vyv-firma { margin-top: 1.2rem; }
+
+@media (max-width: 820px) {
+  .decimita {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    padding: 1.4rem;
+  }
+  .decimita-versos { font-size: 1.05rem; }
+}

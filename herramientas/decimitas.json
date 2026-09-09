@@ -1,0 +1,50 @@
+{
+  "documento": "C:/Users/Ernesto/OneDrive/Imágenes/tony/DECIMITAS/De-Cimitas.txt",
+
+  "_nota": "El emparejamiento imagen-texto va declarado a mano y no se adivina: los nombres no siempre coinciden (LABIOS DEL DESEO en el documento y LOS LABIOS DEL DESEO en la foto, Hada astral con espacio final). 'titulo_doc' es el encabezado tal como aparece en el documento del autor y sirve para cortar el texto; 'titulo' es como se lee en la pagina.",
+
+  "decimitas": [
+    {
+      "slug": "en-cada-mundo",
+      "titulo_doc": "EN CADA MUNDO",
+      "titulo": "En cada mundo",
+      "alt": "Rompiente sobre las rocas de la costa, con el cielo cubierto de nubes"
+    },
+    {
+      "slug": "hada-astral",
+      "titulo_doc": "HADA ASTRAL",
+      "titulo": "Hada astral",
+      "alt": "Una libélula de alas transparentes posada contra un fondo oscuro"
+    },
+    {
+      "slug": "senal",
+      "titulo_doc": "SEÑAL",
+      "titulo": "Señal",
+      "alt": "Señal de tráfico triangular con un cartel de 100 m, con la parte de arriba de un bikini rosado colgada del poste"
+    },
+    {
+      "slug": "labios-del-deseo",
+      "titulo_doc": "LABIOS DEL DESEO",
+      "titulo": "Labios del deseo",
+      "alt": "Tres frutas de cáscara verde, una de ellas partida y con la pulpa anaranjada a la vista"
+    },
+    {
+      "slug": "para-nadie",
+      "titulo_doc": "PARA NADIE",
+      "titulo": "Para nadie",
+      "alt": "Un reguero de arena sobre las páginas manuscritas de un cuaderno abierto"
+    },
+    {
+      "slug": "lagarto",
+      "titulo_doc": "LAGARTO",
+      "titulo": "Lagarto",
+      "alt": "Un lagarto reseco tendido sobre la hierba"
+    },
+    {
+      "slug": "baraja-rota",
+      "titulo_doc": "BARAJA ROTA",
+      "titulo": "Baraja rota",
+      "alt": "Un siete de bastos partido por la mitad, tirado en la tierra"
+    }
+  ]
+}
