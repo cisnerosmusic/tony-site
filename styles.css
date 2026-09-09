@@ -627,16 +627,17 @@ a.libro-cubierta:hover img {
 .footer-copy a { color: var(--gold); }
 
 /* ── Responsive ─────────────────────────────── */
-/* La barra lleva nueve secciones mas el idioma. Medido: entera pide 1120px y
-   solo cabe por encima de ~1400. Entre 1200 y 1440 se aprieta el espaciado; por
-   debajo de 1200 pasa a hamburguesa, que es mejor que desbordarse. */
-@media (max-width: 1440px) and (min-width: 1201px) {
+/* La barra lleva nueve secciones mas el idioma. Medido en el navegador: a
+   tamano completo pide 1033px, que en un portatil de 1280 solo deja 6px de
+   margen. Entre 1081 y 1440 se aprieta el espaciado y baja a 809px, con lo que
+   cabe holgada; por debajo de 1081 pasa a hamburguesa. */
+@media (max-width: 1440px) and (min-width: 1081px) {
   .nav { padding: 1.25rem 2rem; }
   .nav-links { gap: 1.15rem; }
   .nav-links a { font-size: 0.63rem; letter-spacing: 0.09em; }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
   .nav-links {
     display: none;
     position: fixed;
