@@ -24,7 +24,8 @@ FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">')
 
 NAV = [("/", "Portada"), ("/libros/", "Mis libros"), ("/ineditos/", "Inéditos"),
-       ("/tinta-ciones/", "Tinta-ciones"), ("/trova/", "La trova"),
+       ("/tinta-ciones/", "Tinta-ciones"),
+       ("/a-cuenta-del-cuento/", "A cuenta del cuento"), ("/trova/", "La trova"),
        ("/plano-abierto/", "Plano abierto"), ("/laureles/", "Laureles"), ("/periodista/", "El periodista"),
        ("/entre-lectores/", "Entre lectores"), ("/directorio/", "Directorio")]
 
@@ -215,7 +216,7 @@ def generar(manifiesto):
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css?v=5">
-<link rel="stylesheet" href="/styles.css?v=9">
+<link rel="stylesheet" href="/styles.css?v=10">
 </head>
 <body>
 
@@ -230,6 +231,7 @@ def generar(manifiesto):
     <li><a href="/libros/" class="active">Mis libros</a></li>
     <li><a href="/ineditos/">Inéditos</a></li>
     <li><a href="/tinta-ciones/">Tinta-ciones</a></li>
+    <li><a href="/a-cuenta-del-cuento/">A cuenta del cuento</a></li>
     <li><a href="/trova/">La trova</a></li>
     <li><a href="/plano-abierto/">Plano abierto</a></li>
     <li><a href="/laureles/">Laureles</a></li>
