@@ -18,7 +18,7 @@ leer_poema = SourceFileLoader("leer_poema", os.path.join(
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 URL = DOMINIO + "/tinta-ciones/poemas-sueltos/"
-CSS = "?v=17"
+CSS = "?v=19"
 
 
 def esc(t):

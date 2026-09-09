@@ -20,7 +20,7 @@ import navegacion
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 URL = DOMINIO + "/tinta-ciones/de-cimitas/"
-CSS = "?v=17"
+CSS = "?v=19"
 
 
 def esc(t):
@@ -175,6 +175,24 @@ def main():
   </div>
 
 {piezas}
+
+  <div class="reveal reveal-right" style="margin-top:4.5rem;">
+    <h2 class="section-title">Una que se salió del cuadro</h2>
+    <div class="section-divider"></div>
+    <p class="section-text" style="margin-bottom:2.5rem;">Empezó como las demás, mirando una foto. Pero le crecieron tres movimientos, cada uno con su tempo, y ya no cabía en diez versos. Tiene cuarto propio.</p>
+  </div>
+
+  <article class="decimita decimita-mayor reveal reveal-left" id="sonata-de-la-lluvia">
+    <figure class="decimita-foto">
+      <img src="/img/decimitas/sonata-de-la-lluvia.webp" width="720" height="540" alt="Atardecer sobre el muro del malecón, con el sol abriéndose paso entre las nubes" loading="lazy">
+    </figure>
+    <div class="decimita-texto">
+      <h2 class="decimita-titulo">Sonata de la lluvia</h2>
+      <p class="libro-sinopsis">Tres movimientos en décimas: un preludio, un aguacero y lo que queda después. Con Fito Páez, Noel Nicola y Santiago Feliú asomados a cada uno.</p>
+      <p class="decimita-nota">Con ella gané el <a href="/laureles/">Premio Colateral Yasmina Calcines</a> en 2026.</p>
+      <p style="margin-top:1.4rem;"><a href="/tinta-ciones/sonata-de-la-lluvia/" class="btn">Leer la sonata</a></p>
+    </div>
+  </article>
 
 </div>
 </main>
