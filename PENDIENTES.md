@@ -139,9 +139,12 @@ cuerpo 1,18rem, interlineado 1,95 y sangría de primera línea. Clases
   septiembre de 2026. En Laureles se queda la mención del premio; el texto no
   entra en este repositorio, que es público. Los motivos se hablan con
   Ernesto, no se escriben aquí. Ver los innegociables de `AGENTS.md`.
-- Fecha de ese premio **resuelta el 8 de septiembre**: el autor confirma que
-  el evento fue en **2014**, no 2013 como decía el currículo largo. Corregido
-  en Laureles. Si aparece 2013 en algún otro sitio, es el error viejo.
+- **Las tres fechas de ese premio no son un error, no las "arregles".** El
+  autor lo aclaró el 8 de septiembre: escribió *Proclama Real* en **2009**, el
+  concurso fue **El Dinosaurio 2013** y el fallo se dio a conocer en **2014**.
+  Por eso la entrada vive bajo 2014 y nombra un concurso de 2013. Parece una
+  errata y no lo es: yo mismo la "corregí" a 2014 y hubo que revertirlo. La
+  ficha lo explica ahora en su propio texto para que no vuelva a pasar.
 - Cuidado con los cuentos de los **dos libros de cuentos realistas por salir**:
   esos son inéditos y solo entran si él lo autoriza expresamente.
 
