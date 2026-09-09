@@ -720,3 +720,36 @@ a.libro-cubierta:hover img {
   color: var(--gold);
   margin-bottom: 0.4rem;
 }
+
+/* ── Contarte: leer un cuento entero ─────────── */
+/* Esta no es una sala de catalogo sino de lectura: medida de linea corta,
+   interlineado alto y sangria de primera linea, como en un libro. */
+.section.cuento { max-width: 46rem; }
+
+.cuento-texto p {
+  font-family: var(--font-body);
+  font-size: 1.18rem;
+  font-weight: 300;
+  line-height: 1.95;
+  color: var(--text-primary);
+  text-indent: 1.6em;
+  margin-bottom: 0.15rem;
+  text-wrap: pretty;
+}
+.cuento-texto p:first-child { text-indent: 0; }
+
+.cuento-procedencia {
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  line-height: 2;
+  color: var(--text-dim);
+  max-width: 46rem;
+}
+
+@media (max-width: 900px) {
+  .cuento-texto p { font-size: 1.1rem; line-height: 1.85; }
+}

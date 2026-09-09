@@ -121,14 +121,22 @@ def generar(manifiesto):
     prensa = "\n".join(prensa_items)
     subjectof_jsonld = (',\n  "subjectOf": '
                         + json.dumps(subjectof, ensure_ascii=False, indent=2).replace("\n", "\n  ")) if subjectof else ""
-    # Descarga oficial, cuando el libro se puede leer entero en alguna parte.
+    # Bajo la cubierta, los caminos para leer: la descarga oficial cuando el libro
+    # entero esta en alguna parte, y los cuentos que viven en Contarte con su
+    # propia habitacion. El texto no se duplica, se enlaza.
+    salidas = []
     d = m.get("descarga")
-    descarga_html = ""
     if d:
-        descarga_html = ('\n  <p class="descarga reveal reveal-left">\n'
-                         f'    <a href="{d["url"]}" target="_blank" rel="noopener" class="btn btn-filled">{esc(d["texto"])}</a>\n'
-                         + (f'    <span class="meta">{esc(d["pie"])}</span>\n' if d.get("pie") else "")
-                         + '  </p>\n')
+        salidas.append((d["url"], d["texto"], d.get("pie"), True))
+    for l in m.get("lecturas", []):
+        salidas.append((l["url"], l["texto"], l.get("pie"), False))
+    descarga_html = ""
+    if salidas:
+        botones = "".join(
+            f'    <a href="{u}"{" target=\"_blank\" rel=\"noopener\"" if fuera else ""} class="btn btn-filled">{esc(txt)}</a>\n'
+            + (f'    <span class="meta">{esc(pie_b)}</span>\n' if pie_b else "")
+            for u, txt, pie_b, fuera in salidas)
+        descarga_html = '\n  <p class="descarga reveal reveal-left">\n' + botones + '  </p>\n'
 
     nav_html = "\n    ".join(f'<a href="{h}">{n}</a>' for h, n in NAV if h != "/")
 
@@ -216,7 +224,7 @@ def generar(manifiesto):
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css?v=5">
-<link rel="stylesheet" href="/styles.css?v=11">
+<link rel="stylesheet" href="/styles.css?v=12">
 </head>
 <body>
 

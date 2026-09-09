@@ -10,6 +10,13 @@
   "tira_sub": "Las muñecas mandan; yo puse un príncipe",
   "cubierta": "/img/libros/munecas-cubierta.webp",
   "cubierta_alt": "Cubierta de Cuentos de muñecas, ilustrada por Alain R. Cuba",
+  "lecturas": [
+    {
+      "url": "/contarte/la-muneca-y-el-principe/",
+      "texto": "Leer La muñeca y el príncipe",
+      "pie": "Mi cuento de este libro, completo, en Contarte"
+    }
+  ],
   "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación)/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación).txt",
   "contratapa_titulo": "Sobre el libro",
   "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación)/(2015) Cuentos de muñecas (¡A leer y a jugar!) CON VOZ Y VOTO.txt",
@@ -22,13 +29,7 @@
     "cubierta": "Ilustración de Alain R. Cuba",
     "incluye": "La muñeca y el príncipe, de Antonio López Sánchez"
   },
-  "fragmentos": [
-    {
-      "titulo": "La muñeca y el príncipe",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación)/09 La muñeca y el príncipe   (2014).txt",
-      "tipo": "prosa"
-    }
-  ],
+  "fragmentos": [],
   "galeria": [],
   "prensa": [],
   "seo_titulo": "Cuentos de muñecas | Antonio López Sánchez",

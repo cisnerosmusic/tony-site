@@ -115,6 +115,33 @@ Es la vía para que la obra llegue a los lectores y editores que no leen españo
 
 Vale la pena añadir a la ficha dos campos que el editor extranjero pide y hoy no están: **derechos vendidos** (además de disponibles) y **muestra traducida: sí / no**.
 
+## 4 bis. Contarte, la sala de los cuentos (abierta el 8 de septiembre)
+
+Sección de primer nivel, en el menú, con página propia por cuento. Motor en
+`herramientas/gen-cuento.py` desde `herramientas/cuentos.json`: emite el índice
+y la habitación de cada cuento, con `ShortStory` e `isPartOf` al libro cuando
+viene de uno.
+
+**Estrena con La muñeca y el príncipe**, que estaba como fragmento dentro de
+*Cuentos de muñecas* y se mudó entero aquí. El libro se quedó sin bloque de
+Fragmentos y ganó un botón que lleva al cuento; el texto no está dos veces,
+según la regla de AGENTS.md. Son 19.330 caracteres, el cuento completo, ya
+publicado en 2015, así que no toca la condición de inédito de nada.
+
+La sala es de lectura, no de catálogo: medida de línea de unos 68 caracteres,
+cuerpo 1,18rem, interlineado 1,95 y sangría de primera línea. Clases
+`.section.cuento`, `.cuento-texto` y `.cuento-procedencia` en `styles.css`.
+
+**Pendiente aquí:**
+
+- **Cuatro cuentos más**, pedidos al autor el 8 de septiembre.
+- **Proclama real**, el minicuento finalista del Concurso El Dinosaurio 2013
+  del Centro Onelio, que aparece en Laureles bajo 2014. El autor lo va a
+  mandar. Cuando llegue, entra en Contarte y **Laureles enlaza a él**, que es
+  la primera vez que un premio va a poder apuntar al texto premiado.
+- Cuidado con los cuentos de los **dos libros de cuentos realistas por salir**:
+  esos son inéditos y solo entran si él lo autoriza expresamente.
+
 ## 5. Material que esperamos de Tony
 
 Cuando haya corriente en Alamar y pueda enviar:
