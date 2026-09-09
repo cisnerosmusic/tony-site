@@ -92,8 +92,8 @@ def main():
     cuerpo = "\n\n".join(piezas)
 
     T = "Sonata de la lluvia, de Antonio López Sánchez"
-    D = ("Sonata de la lluvia, la obra con la que Antonio López Sánchez ganó el Premio Colateral "
-         "Yasmina Calcines del XXVI Concurso Nacional Ala Décima: tres movimientos en décimas.")
+    D = ("Sonata de la lluvia, de Antonio López Sánchez: tres movimientos en décimas, "
+         "premiada en el XXVI Concurso Nacional Ala Décima.")
 
     # CreativeWork y no Poem: schema.org/Poem no existe, devuelve 404.
     # El genero se declara aparte, que es como se dice "esto es poesia".

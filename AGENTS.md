@@ -36,11 +36,22 @@ Un hallazgo que se queda en una sesión está perdido. Un hallazgo escrito en `P
 
 **Al terminar:**
 
-1. Escribe en `PENDIENTES.md` lo que quedó hecho y lo que quedó abierto, con datos verificables (rutas, cifras, comandos), no con impresiones.
-2. Commit con mensaje que explique **por qué**, no solo qué.
-3. Empuja. Un commit local no existe para las demás instancias.
+1. **Pasa el comprobador.** `python herramientas/comprobar.py`. No se cierra una tanda con fallos abiertos.
+2. Escribe en `PENDIENTES.md` lo que quedó hecho y lo que quedó abierto, con datos verificables (rutas, cifras, comandos), no con impresiones.
+3. Commit con mensaje que explique **por qué**, no solo qué.
+4. Empuja. Un commit local no existe para las demás instancias.
 
 Si dejas trabajo a medias, dilo en `PENDIENTES.md` con el punto exacto donde parar y cómo verificar. La siguiente instancia no tiene tu contexto.
+
+## El trabajo va en ciclos
+
+Se construye, una instancia evaluadora audita, se corrige, y vuelta a empezar. No es una fase del proyecto: es como se trabaja aquí siempre.
+
+De ahí sale `herramientas/comprobar.py`. Cada regla suya nació de un fallo real que encontró una auditoría, y está anotado cuál. La idea es sencilla: **lo que una máquina puede comprobar sola no debe gastar la atención de nadie**. La auditoría humana o de otra instancia queda libre para lo que sí necesita criterio, que es el sitio, no la sintaxis.
+
+Comprueba hoy enlaces rotos, sitemap contra páginas indexables, JSON-LD válido y con tipos que existan de verdad, títulos y descripciones únicos y en rango, una sola versión de CSS y JS, rutas absolutas de una máquina concreta, raya larga en texto público, imágenes sin `alt`, `target="_blank"` sin `noopener`, el menú y su script, la navegación alineada, y que los generadores sigan reproduciendo su HTML. Sale con código 1 si algo falla, así que puede colgarse de un workflow.
+
+**Cuando la auditoría encuentre algo que el comprobador podría haber cazado, se arregla el fallo y se añade la regla en el mismo commit.** Ese es el modo en que el ciclo se hace más barato cada vuelta.
 
 ## Quién manda sobre qué
 

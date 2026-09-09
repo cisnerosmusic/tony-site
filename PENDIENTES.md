@@ -119,7 +119,13 @@ Verificado midiendo el contraste real de cada nodo de texto renderizado, no los 
 
 **Hallazgo abierto, contraste de borde.** `--gold-dim` a alfa 0,5 compuesto sobre `--bg-deep` da `#6f5628`, **2,80:1** contra el fondo, por debajo del 3:1 que la WCAG 1.4.11 pide a los límites de un control. Afecta al borde de `.btn` (`styles.css:282`) y de `.btn-filled` (`styles.css:294`). No impide usar el botón, cuyo texto va a 12:1, pero el borde en sí es el elemento que queda corto. Arreglo de una línea: subir el alfa de `--gold-dim` de 0,5 a **0,55**, que da 3,14:1 con un cambio visual casi imperceptible. No lo aplico porque toca el peso visual de los botones y esa es decisión de diseño de Ernesto.
 
-## 3. El generador no es reproducible
+## 3. El generador no era reproducible (CERRADO el 9 de septiembre)
+
+Quedó resuelto: los 73 textos ya publicados (328 KB) viven en `herramientas/textos/`, y las 54 rutas absolutas al OneDrive de la Máquina 1 son 0. La prueba de que la copia fue fiel es que **regenerar el sitio entero no cambió ni un archivo HTML**. Desde un clon limpio el pipeline corre.
+
+Se deja abajo el diagnóstico original y, sobre todo, el procedimiento de verificación, que sigue siendo el bueno cada vez que se toque un generador.
+
+---
 
 `herramientas/gen-libro.py` es la única forma de tocar las páginas de libro, pero **desde un clon limpio no corre**. Las 45 rutas de texto declaradas en los manifiestos de `herramientas/libros/*.json` apuntan a `C:/Users/Ernesto/OneDrive/Imágenes/tony/x/...`, un perfil de Windows que no existe ni en la máquina de casa ni en la de UW. Hoy el pipeline vive en un solo disco.
 
@@ -148,6 +154,30 @@ Si esa página sale idéntica, se regeneran las 13 restantes. Si sale distinta, 
 **Esa comprobación ya se hizo el 8 de septiembre desde la Máquina 1, en el commit `30cfae3`, y salió limpia**: las 14 regeneradas, `git status` vacío. Así que el parcheo a mano está validado y el aviso de sincronía del punto 1 quedó cerrado. Lo que sigue abierto es lo otro, que el pipeline vive en un solo disco: mientras las rutas apunten al OneDrive, la Máquina 2 no puede tocar el generador sin dejar que HTML y generador diverjan a ciegas.
 
 `gen-libro.py` necesita Pillow (`pip install Pillow`): lee las dimensiones reales de cada imagen para emitir `width` y `height`, que es de donde sale el CLS 0 del sitio.
+
+## 3 ter. El comprobador, y por qué existe (9 de septiembre)
+
+Ernesto lo dejó dicho: *"cada vez que terminemos, habrá auditoría en ciclos, el pipe viene por ahí y será así siempre"*. Construir, auditar, corregir, volver a empezar.
+
+`herramientas/comprobar.py` es la consecuencia. Se pasa **antes de dar por cerrada cualquier tanda**, y sale con código 1 si algo falla:
+
+```bash
+python herramientas/comprobar.py
+```
+
+Estado hoy: **42 páginas, 0 fallos, 0 avisos**.
+
+Cada regla nació de un fallo real que cazó una auditoría, y en el archivo está anotado cuál. Ejemplo, el que más duele: `"Poem"` no es un tipo de schema.org, da 404, y estuvo publicado en el sitio hasta que la auditoría lo vio. Ahora hay una lista blanca de tipos y no puede volver a pasar.
+
+**La regla del ciclo**: cuando una auditoría encuentre algo que una máquina podría haber comprobado sola, se arregla el fallo **y se añade la regla, en el mismo commit**. Así cada vuelta sale más barata que la anterior, y la atención humana queda para lo que de verdad la necesita.
+
+Dos cosas que aprendió el propio comprobador el primer día:
+
+- La consola de Windows va en cp1252 y reventaba con cualquier símbolo. Un comprobador no puede fallar por cómo imprime: ahora envuelve `stdout` en UTF-8 y usa marcas ASCII.
+- La regla de "no dejes rutas absolutas" se acusaba a sí misma, porque el archivo contiene la cadena que busca. Se excluye.
+- La regla de "el generador reproduce su HTML" usaba `git status`, así que confundía *tener trabajo sin commitear* con *el generador ha dejado de reproducir la página*. Ahora compara el HTML antes y después de regenerar, que es lo único que se quería saber.
+
+Lo siguiente sería colgarlo de un GitHub Action, para que corra también cuando nadie se acuerde.
 
 ## 3 bis. El orden de trabajo para mañana, 9 de septiembre
 
