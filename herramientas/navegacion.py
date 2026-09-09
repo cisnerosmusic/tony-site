@@ -5,11 +5,10 @@
 # paginas y Entre lectores se colaba en el menu de dos. Ahora se define aqui y
 # todo lo demas la importa o la recibe.
 #
-# La diferencia entre las dos listas es deliberada:
-#   MENU son las secciones de primer nivel, las que el autor considera partes
-#   de la casa.
-#   PIE incluye ademas Entre lectores, que es un album y vive como enlace
-#   secundario, no como seccion.
+# Menu y pie llevan exactamente las mismas secciones. Entre lectores NO esta en
+# ninguno de los dos: es un album, no una seccion, y por decision de Ernesto
+# (8 de septiembre de 2026) se llega a el solo desde Mis libros. Si alguien lo
+# echa de menos aqui, esa es la razon, no un olvido.
 
 MENU = [
     ("/libros/", "Mis libros"),
@@ -23,18 +22,7 @@ MENU = [
     ("/directorio/", "Directorio"),
 ]
 
-PIE = [
-    ("/libros/", "Mis libros"),
-    ("/ineditos/", "Inéditos"),
-    ("/tinta-ciones/", "Tinta-ciones"),
-    ("/contarte/", "Contarte"),
-    ("/trova/", "La trova"),
-    ("/plano-abierto/", "Plano abierto"),
-    ("/laureles/", "Laureles"),
-    ("/periodista/", "El periodista"),
-    ("/entre-lectores/", "Entre lectores"),
-    ("/directorio/", "Directorio"),
-]
+PIE = MENU
 
 
 def seccion_de(ruta):
