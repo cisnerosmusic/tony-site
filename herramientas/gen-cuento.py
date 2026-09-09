@@ -8,7 +8,9 @@
 #
 # Uso: python herramientas/gen-cuento.py
 
-import json, os, html
+import json, os, sys, html
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
@@ -18,11 +20,7 @@ FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">')
 
-NAV = [("/libros/", "Mis libros"), ("/ineditos/", "Inéditos"),
-       ("/tinta-ciones/", "Tinta-ciones"), ("/contarte/", "Contarte"),
-       ("/trova/", "La trova"), ("/plano-abierto/", "Plano abierto"),
-       ("/laureles/", "Laureles"), ("/periodista/", "El periodista"),
-       ("/entre-lectores/", "Entre lectores"), ("/directorio/", "Directorio")]
+import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 def esc(t):
     return html.escape(t, quote=False)
@@ -68,9 +66,7 @@ def cabeza(titulo_seo, desc, url, activa, imagen=None):
 """
 
 def menu(activa):
-    filas = "\n".join(
-        f'    <li><a href="{h}"{" class=\"active\"" if h == activa else ""}>{n}</a></li>'
-        for h, n in NAV)
+    filas = navegacion.menu_html(activa)
     return f"""</head>
 <body>
 
@@ -83,19 +79,16 @@ def menu(activa):
   </button>
   <ul class="nav-links">
 {filas}
-    <li><a href="/en/" lang="en" hreflang="en">EN</a></li>
   </ul>
 </nav>
 """
 
 def pie(activa):
-    enlaces = "\n    ".join(
-        (f'<span aria-current="page">{n}</span>' if h == activa else f'<a href="{h}">{n}</a>')
-        for h, n in NAV)
+    enlaces = navegacion.pie_html(activa)
     return f"""
 <footer class="footer">
   <nav class="footer-nav" aria-label="Secciones">
-    {enlaces}
+{enlaces}
   </nav>
   <div class="footer-socials">
     <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
@@ -152,7 +145,7 @@ def pagina_cuento(c):
 </div>
 </main>
 """
-            + pie("/contarte/"))
+            + pie(None))
 
 def pagina_indice(cuentos):
     url = f"{DOMINIO}/contarte/"
@@ -199,7 +192,6 @@ def pagina_indice(cuentos):
 
 {filas}
 
-  <p class="nota-demo" style="margin-top:2.5rem;">Los textos literarios se publican siempre en su idioma original, el español.</p>
 </div>
 </main>
 """

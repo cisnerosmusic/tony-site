@@ -6,6 +6,9 @@
 import json, os, sys, html
 from PIL import Image
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import navegacion   # menu y pie: una sola definicion para todo el sitio
+
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 
@@ -23,11 +26,6 @@ FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">')
 
-NAV = [("/", "Portada"), ("/libros/", "Mis libros"), ("/ineditos/", "Inéditos"),
-       ("/tinta-ciones/", "Tinta-ciones"),
-       ("/contarte/", "Contarte"), ("/trova/", "La trova"),
-       ("/plano-abierto/", "Plano abierto"), ("/laureles/", "Laureles"), ("/periodista/", "El periodista"),
-       ("/entre-lectores/", "Entre lectores"), ("/directorio/", "Directorio")]
 
 def esc(t):
     return html.escape(t, quote=False)
@@ -138,7 +136,10 @@ def generar(manifiesto):
             for u, txt, pie_b, fuera in salidas)
         descarga_html = '\n  <p class="descarga reveal reveal-left">\n' + botones + '  </p>\n'
 
-    nav_html = "\n    ".join(f'<a href="{h}">{n}</a>' for h, n in NAV if h != "/")
+    # Una pagina de libro cuelga de Mis libros pero no ES Mis libros: el menu la
+    # marca activa y el pie no marca ninguna pagina como actual.
+    menu_html = navegacion.menu_html("/libros/")
+    nav_html = navegacion.pie_html(None)
 
     premios_jsonld = json.dumps(m.get("premios", []), ensure_ascii=False)
     # sameAs ata esta ficha al mismo libro en fuentes externas verificadas, para que
@@ -155,13 +156,12 @@ def generar(manifiesto):
                 f'    <h2 id="b-{id_}">{titulo_b}</h2>\n'
                 f'    <div class="section-divider"></div>\n{cuerpo}\n  </section>\n\n')
 
-    nota_idioma = '    <p class="nota-demo">Los textos literarios se publican siempre en su idioma original, el español.</p>'
     piezas = [
         ("contratapa", m.get("contratapa_titulo", "Nota de contratapa"), contratapa),
         ("volumenes", m.get("volumenes_titulo", "Los libros"),
          f'    <div class="galeria">\n{volumenes}    </div>' if volumenes else ""),
         ("vyv", "Con voz y voto", (vyv + '\n    <p class="vyv-firma">ALS</p>') if vyv else ""),
-        ("fragmentos", "Fragmentos", (fragmentos + "\n" + nota_idioma) if fragmentos else ""),
+        ("fragmentos", "Fragmentos", fragmentos),
         ("presentaciones", "Presentaciones", f'    <div class="galeria">\n{galeria}    </div>' if galeria else ""),
         ("prensa", "Prensa", f'    <ul class="lista-obras">\n{prensa}\n    </ul>' if prensa else ""),
         ("ficha", "Ficha", f'    <dl class="ficha">\n{ficha}\n    </dl>'),
@@ -236,16 +236,7 @@ def generar(manifiesto):
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
-    <li><a href="/libros/" class="active">Mis libros</a></li>
-    <li><a href="/ineditos/">Inéditos</a></li>
-    <li><a href="/tinta-ciones/">Tinta-ciones</a></li>
-    <li><a href="/contarte/">Contarte</a></li>
-    <li><a href="/trova/">La trova</a></li>
-    <li><a href="/plano-abierto/">Plano abierto</a></li>
-    <li><a href="/laureles/">Laureles</a></li>
-    <li><a href="/periodista/">El periodista</a></li>
-    <li><a href="/directorio/">Directorio</a></li>
-    <li><a href="/en/" lang="en" hreflang="en">EN</a></li>
+{menu_html}
   </ul>
 </nav>
 
@@ -268,7 +259,7 @@ def generar(manifiesto):
 
 <footer class="footer">
   <nav class="footer-nav" aria-label="Secciones">
-    {nav_html}
+{nav_html}
   </nav>
   <div class="footer-socials">
     <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
