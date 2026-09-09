@@ -908,3 +908,33 @@ a.libro-cubierta:hover img {
   color: var(--gold);
   margin-bottom: 1.5rem;
 }
+
+/* ── Aviso de derechos ──────────────────────── */
+.legal { max-width: 46rem; }
+.legal-intro {
+  font-size: 1.08rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  font-style: italic;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.5rem;
+}
+.legal-bloque { margin-bottom: 2.8rem; }
+.legal-bloque h2 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+}
+.legal-bloque p {
+  font-size: 1.02rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: 0.9rem;
+}
+.legal-bloque .lista-obras { margin-top: 1.2rem; }
+.legal-enlaces { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.4rem; }

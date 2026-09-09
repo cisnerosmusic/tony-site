@@ -83,8 +83,18 @@ def generar(manifiesto):
     ficha_items = dict(m["ficha"])
     # Señal editorial discreta: derechos mundiales disponibles fuera de Cuba,
     # salvo que el manifiesto la apague o la reemplace.
+    #
+    # En los volumenes colectivos la frase cambia, y es importante que cambie:
+    # Antonio solo puede ceder lo suyo. Se detecta por el campo "autoria" de la
+    # ficha, que es justo el que aparece cuando el libro no es solo de el, asi
+    # que no hace falta marcarlo a mano ni puede olvidarse al añadir un titulo.
+    colectiva = any(k.lower().startswith("autor") for k in m["ficha"])
     if m.get("derechos", True):
-        ficha_items.setdefault("derechos", "Disponibles para ediciones y traducciones fuera de Cuba")
+        ficha_items.setdefault("derechos",
+            "Disponibles para ediciones y traducciones fuera de Cuba, referidos solo a los textos "
+            "de Antonio López Sánchez que este volumen colectivo incluye"
+            if colectiva else
+            "Disponibles para ediciones y traducciones fuera de Cuba")
     filas = []
     for k, v in ficha_items.items():
         # La fila de derechos nunca sale sin su via de contacto.
@@ -238,7 +248,7 @@ def generar(manifiesto):
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css?v=5">
-<link rel="stylesheet" href="/styles.css?v=19">
+<link rel="stylesheet" href="/styles.css?v=20">
 </head>
 <body>
 

@@ -22,7 +22,9 @@ MENU = [
     ("/directorio/", "Directorio"),
 ]
 
-PIE = MENU
+# El pie lleva ademas el aviso de derechos, que es una pagina legal y no una
+# seccion de la casa: por eso esta abajo y no en el menu de arriba.
+PIE = MENU + [("/derechos/", "Derechos")]
 
 
 def seccion_de(ruta):

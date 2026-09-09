@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=19"
+CSS = "?v=20"
 
 # Calendario de Contarte. Cuadrado latino de 7x7: cada dia los cuentos salen en
 # otro orden, cada cuento pasa exactamente una vez por cada posicion a lo largo

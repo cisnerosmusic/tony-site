@@ -1,0 +1,117 @@
+{
+  "_nota": "Aviso de derechos, un bloque por idioma. Para añadir un idioma se copia el bloque, se traduce y se declara su ruta; gen-legal.py emite una página por cada uno y las enlaza entre sí con hreflang. Los títulos de los libros NO se traducen. La lista de obras colectivas se genera sola desde las fichas de los manifiestos, así que no hay que mantenerla aquí.",
+
+  "es": {
+    "ruta": "/derechos/",
+    "lang": "es",
+    "titulo": "Derechos",
+    "subtitulo": "Qué se ofrece en este sitio, y qué no.",
+    "seo_titulo": "Aviso de derechos | Antonio López Sánchez",
+    "seo_desc": "Alcance de los derechos ofrecidos en el sitio de Antonio López Sánchez: solo los de su obra. En volúmenes colectivos, solo sus textos.",
+    "intro": "Este aviso explica, en lenguaje llano, qué derechos se ofrecen desde este sitio y cuáles no. No sustituye a un contrato: cualquier cesión concreta se acuerda por escrito y por separado.",
+    "secciones": [
+      {
+        "titulo": "1. De quién es la obra",
+        "parrafos": [
+          "Los textos literarios publicados en este sitio, novelas, cuentos, poemas, décimas, ensayos y trabajos periodísticos, son obra de Antonio López Sánchez y le pertenecen. Su reproducción total o parcial, en cualquier soporte, requiere su autorización expresa y por escrito.",
+          "El diseño, el código y los sistemas que hacen funcionar este sitio son de Index01, que lo desarrolló. Son cosas distintas y se ceden por separado."
+        ]
+      },
+      {
+        "titulo": "2. Alcance de lo que se ofrece",
+        "parrafos": [
+          "Los derechos que este sitio declara disponibles son, única y exclusivamente, los que corresponden a Antonio López Sánchez sobre su propia obra.",
+          "Desde aquí no se ofrecen, ni se negocian, ni se gestionan derechos de ningún otro autor, ilustrador, compilador, prologuista, traductor o editorial."
+        ]
+      },
+      {
+        "titulo": "3. Obras colectivas, antologías y compilaciones",
+        "parrafos": [
+          "Varios de los títulos reseñados en este sitio son volúmenes compartidos con otros autores, o compilaciones a cargo de terceros. En todos esos casos, y sin excepción, la disponibilidad de derechos se refiere solamente a los textos de la autoría de Antonio López Sánchez que el volumen incluye.",
+          "Nunca al volumen completo, ni a las aportaciones de los demás autores, ni al trabajo de quien hizo la compilación, la edición o las ilustraciones.",
+          "En la ficha de cada uno de esos libros la línea de derechos lo dice con esas palabras. Los títulos afectados hoy son:"
+        ],
+        "lista_colectivas": true
+      },
+      {
+        "titulo": "4. Territorio",
+        "parrafos": [
+          "Los libros publicados mantienen exclusividad editorial con sus editoriales dentro de Cuba. Los derechos para ediciones y traducciones en el resto del mundo están disponibles, con el alcance descrito en los puntos anteriores."
+        ]
+      },
+      {
+        "titulo": "5. Versos y textos de otros autores",
+        "parrafos": [
+          "Algunas obras publicadas aquí incorporan versos ajenos como epígrafe o como base de una glosa. Esos versos pertenecen a sus autores, se reproducen identificados y atribuidos, y quedan fuera de cualquier cesión que se acuerde sobre la obra que los acompaña."
+        ]
+      },
+      {
+        "titulo": "6. A quién dirigirse",
+        "parrafos": [
+          "Toda consulta sobre derechos, ediciones o traducciones fuera de Cuba se dirige a la representación editorial del autor, que lleva Ernesto Cisneros desde Miami."
+        ],
+        "enlaces": [
+          { "texto": "Representación editorial", "url": "https://ernestocisneros.art/es/representacion-literaria.html", "externo": true },
+          { "texto": "derechos@antoniolopezsanchez.art", "url": "mailto:derechos@antoniolopezsanchez.art" }
+        ]
+      }
+    ]
+  },
+
+  "en": {
+    "ruta": "/en/rights/",
+    "lang": "en",
+    "titulo": "Rights",
+    "subtitulo": "What this site offers, and what it does not.",
+    "seo_titulo": "Rights notice | Antonio López Sánchez",
+    "seo_desc": "Scope of the rights offered on Antonio López Sánchez's site: his own work only. In collective volumes, only the texts he wrote.",
+    "intro": "This notice explains, in plain language, which rights are offered through this site and which are not. It does not replace a contract: any actual grant is agreed separately and in writing.",
+    "secciones": [
+      {
+        "titulo": "1. Who owns the work",
+        "parrafos": [
+          "The literary texts published on this site, novels, short stories, poems, décimas, essays and journalism, are the work of Antonio López Sánchez and belong to him. Reproduction in whole or in part, in any medium, requires his express written permission.",
+          "The design, the code and the systems that run this site belong to Index01, which built it. They are separate things and are licensed separately."
+        ]
+      },
+      {
+        "titulo": "2. Scope of what is offered",
+        "parrafos": [
+          "The rights this site declares available are, solely and exclusively, those held by Antonio López Sánchez over his own work.",
+          "No rights belonging to any other author, illustrator, compiler, prologue writer, translator or publisher are offered, negotiated or handled here."
+        ]
+      },
+      {
+        "titulo": "3. Collective volumes, anthologies and compilations",
+        "parrafos": [
+          "Several of the titles listed on this site are volumes shared with other authors, or compilations edited by third parties. In every one of those cases, without exception, the availability of rights refers only to the texts written by Antonio López Sánchez that the volume contains.",
+          "Never to the complete volume, nor to the contributions of the other authors, nor to the work of whoever compiled, edited or illustrated it.",
+          "The rights line on each of those book pages says exactly that. The titles concerned today are:"
+        ],
+        "lista_colectivas": true
+      },
+      {
+        "titulo": "4. Territory",
+        "parrafos": [
+          "The published books hold editorial exclusivity with their publishers within Cuba. Rights for editions and translations in the rest of the world are available, with the scope described above."
+        ]
+      },
+      {
+        "titulo": "5. Lines by other authors",
+        "parrafos": [
+          "Some works published here carry lines by other poets as an epigraph or as the basis of a glosa. Those lines belong to their authors, are reproduced here identified and attributed, and fall outside any grant agreed over the work that accompanies them."
+        ]
+      },
+      {
+        "titulo": "6. Where to write",
+        "parrafos": [
+          "Any enquiry about rights, editions or translations outside Cuba goes to the author's literary representation, handled by Ernesto Cisneros from Miami."
+        ],
+        "enlaces": [
+          { "texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true },
+          { "texto": "derechos@antoniolopezsanchez.art", "url": "mailto:derechos@antoniolopezsanchez.art" }
+        ]
+      }
+    ]
+  }
+}
