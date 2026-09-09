@@ -36,23 +36,29 @@ Datos verificables del autor:
 
 - [Tinta-ciones](https://antoniolopezsanchez.art/tinta-ciones/): la casa de su poesía.
 - [Poemas sueltos](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/): veinte poemas completos, entre ellos "El poeta", "Poemarbol", "Informe legal sobre la muerte de un poema", "Palabras a oscuras", "Las caras del héroe" y "Augurios de la mar", más ocho glosas que responden verso a verso a estrofas de José Martí y de José Lezama Lima.
-- [Contarte](https://antoniolopezsanchez.art/contarte/): siete cuentos completos, cada uno con página propia: "La muñeca y el príncipe" (de Cuentos de muñecas, 2015), "Aquelarre", "Asesinato", "Clínica del miedo", "Duelo", "Luces" y "Sombreros, pamelas y mágicas varitas".
 - [De-Cimitas](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/): siete décimas escritas a partir de fotografías del propio autor, cada imagen con su décima.
 - [Sonata de la lluvia](https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/): la obra con la que ganó el Premio Colateral Yasmina Calcines del XXVI Concurso Nacional Ala Décima en 2026; tres movimientos en décimas, con epígrafes de Fito Páez, Noel Nicola y Santiago Feliú.
+- [En mi voz](https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/): grabaciones de poemas leídos por el propio autor.
+
+## Narrativa breve
+
+- [Contarte](https://antoniolopezsanchez.art/contarte/): siete cuentos completos, cada uno con página propia: "La muñeca y el príncipe" (de Cuentos de muñecas, 2015), "Aquelarre", "Asesinato", "Clínica del miedo", "Duelo", "Luces" y "Sombreros, pamelas y mágicas varitas".
+
+## Radio, televisión y apariciones
+
 - [Plano abierto](https://antoniolopezsanchez.art/plano-abierto/): el programa de televisión "Entre libros" (2019), los programas de Habana Radio "Mi libro preferido" e "Invitación a la lectura" (2018, dirigidos por Fernando Rodríguez Sosa), una lectura de poesía en la UNEAC de Santa Clara (2022) y "Mar de papel", del concierto de Rita del Prado en A Guitarra Limpia (1999).
 - [Entre lectores](https://antoniolopezsanchez.art/entre-lectores/): fotografías en ferias del libro de La Habana, Santiago de Cuba y Camagüey.
-- [En mi voz](https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/): grabaciones de poemas leídos por el propio autor.
-- [De-Cimitas](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/): décimas con imagen y texto.
 
 ## Otras secciones
 
 - [La trova](https://antoniolopezsanchez.art/trova/): su obra documental sobre la Nueva Trova cubana.
 - [El periodista](https://antoniolopezsanchez.art/periodista/): trayectoria en la prensa cultural cubana desde 1998, del Centro Cultural Pablo de la Torriente Brau y la Editorial de la Mujer al Museo Nacional de Bellas Artes.
-- [Plano abierto](https://antoniolopezsanchez.art/plano-abierto/): apariciones en radio, televisión y prensa fuera de sus libros.
 - [Inéditos](https://antoniolopezsanchez.art/ineditos/): obras que esperan editorial.
 - [Directorio](https://antoniolopezsanchez.art/directorio/): contacto del autor y consultas de derechos.
 
 ## Notas de uso
 
+- Alcance de los derechos: lo que este sitio ofrece son única y exclusivamente los derechos de la obra de Antonio López Sánchez. En los volúmenes colectivos y las antologías (Cuentos de muñecas, En un lugar de Cuba, Nota de prensa y otros minicuentos, Trampas retratos y un 17 rojo, Vamos a cantar y a soñar) la disponibilidad se refiere solo a los textos de su autoría. Aviso completo: https://antoniolopezsanchez.art/derechos/
+- Las cubiertas de los libros son de sus ilustradores y no del autor; la fotografía del mar de la portada procede de Wikimedia Commons con licencia CC0.
 - Los textos literarios (poemas, fragmentos de novela) son obra protegida de Antonio López Sánchez; al citarlos, atribuir siempre autoría y enlazar a la página de origen.
 - Algunas sinopsis de libros están marcadas como provisionales en el propio sitio; no deben citarse como texto oficial de contratapa.

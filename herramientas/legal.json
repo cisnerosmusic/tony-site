@@ -1,6 +1,5 @@
 {
   "_nota": "Aviso de derechos, un bloque por idioma. Para añadir un idioma se copia el bloque, se traduce y se declara su ruta; gen-legal.py emite una página por cada uno y las enlaza entre sí con hreflang. Los títulos de los libros NO se traducen. La lista de obras colectivas se genera sola desde las fichas de los manifiestos, así que no hay que mantenerla aquí.",
-
   "es": {
     "ruta": "/derechos/",
     "lang": "es",
@@ -40,9 +39,14 @@
         ]
       },
       {
-        "titulo": "5. Versos y textos de otros autores",
+        "titulo": "5. Materiales que no son del autor",
         "parrafos": [
-          "Algunas obras publicadas aquí incorporan versos ajenos como epígrafe o como base de una glosa. Esos versos pertenecen a sus autores, se reproducen identificados y atribuidos, y quedan fuera de cualquier cesión que se acuerde sobre la obra que los acompaña."
+          "No todo lo que se ve en este sitio le pertenece, y conviene decirlo, porque afecta a lo que se puede ceder.",
+          "Versos de otros poetas. Algunas obras incorporan estrofas ajenas como epígrafe o como base de una glosa: José Martí, José Lezama Lima, Polito Ibáñez, Fito Páez, Noel Nicola y Santiago Feliú. Pertenecen a sus autores, se reproducen identificados y atribuidos, y quedan fuera de cualquier cesión sobre la obra que los acompaña.",
+          "Cubiertas de los libros. Son obra de sus ilustradores y diseñadores, acreditados en la ficha de cada título, y se reproducen aquí solo para identificar cada edición. Quien adquiera derechos sobre un texto no adquiere con él la cubierta de la edición cubana.",
+          "Fotografías de presentaciones, ferias y actos. Las tomaron terceros y los derechos son de quien las hizo. Se publican con el consentimiento del autor. Si alguien reconoce una foto suya y quiere ser acreditado o que se retire, basta con escribir.",
+          "Grabaciones de radio y televisión. Son de sus emisoras, productoras e intérpretes. Se conservan aquí como archivo de una trayectoria, no como material cedible.",
+          "La fotografía del mar de la portada procede de Wikimedia Commons, con licencia CC0. En cambio, las fotografías que acompañan a las De-Cimitas y a la Sonata de la lluvia sí son del autor y forman parte de la obra: la décima nace de la imagen."
         ]
       },
       {
@@ -51,13 +55,19 @@
           "Toda consulta sobre derechos, ediciones o traducciones fuera de Cuba se dirige a la representación editorial del autor, que lleva Ernesto Cisneros desde Miami."
         ],
         "enlaces": [
-          { "texto": "Representación editorial", "url": "https://ernestocisneros.art/es/representacion-literaria.html", "externo": true },
-          { "texto": "derechos@antoniolopezsanchez.art", "url": "mailto:derechos@antoniolopezsanchez.art" }
+          {
+            "texto": "Representación editorial",
+            "url": "https://ernestocisneros.art/es/representacion-literaria.html",
+            "externo": true
+          },
+          {
+            "texto": "derechos@antoniolopezsanchez.art",
+            "url": "mailto:derechos@antoniolopezsanchez.art"
+          }
         ]
       }
     ]
   },
-
   "en": {
     "ruta": "/en/rights/",
     "lang": "en",
@@ -97,9 +107,14 @@
         ]
       },
       {
-        "titulo": "5. Lines by other authors",
+        "titulo": "5. Material that does not belong to the author",
         "parrafos": [
-          "Some works published here carry lines by other poets as an epigraph or as the basis of a glosa. Those lines belong to their authors, are reproduced here identified and attributed, and fall outside any grant agreed over the work that accompanies them."
+          "Not everything on this site belongs to him, and that matters, because it affects what can be licensed.",
+          "Lines by other poets. Some works carry other people's stanzas as an epigraph or as the basis of a glosa: José Martí, José Lezama Lima, Polito Ibáñez, Fito Páez, Noel Nicola and Santiago Feliú. They belong to their authors, are reproduced here identified and attributed, and fall outside any grant over the work that accompanies them.",
+          "Book covers. They are the work of their illustrators and designers, credited on each title's page, and are shown here only to identify each edition. Acquiring rights to a text does not carry the cover of the Cuban edition with it.",
+          "Photographs of launches, book fairs and events. They were taken by third parties and the rights belong to whoever took them. They are published with the author's consent. If someone recognises a photograph of theirs and wants credit or removal, a message is enough.",
+          "Radio and television recordings. They belong to their stations, producers and performers. They are kept here as the archive of a career, not as licensable material.",
+          "The sea photograph on the home page comes from Wikimedia Commons under a CC0 licence. The photographs accompanying the De-Cimitas and Sonata de la lluvia, on the other hand, are the author's own and are part of the work: the décima is born from the image."
         ]
       },
       {
@@ -108,8 +123,15 @@
           "Any enquiry about rights, editions or translations outside Cuba goes to the author's literary representation, handled by Ernesto Cisneros from Miami."
         ],
         "enlaces": [
-          { "texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true },
-          { "texto": "derechos@antoniolopezsanchez.art", "url": "mailto:derechos@antoniolopezsanchez.art" }
+          {
+            "texto": "Literary representation",
+            "url": "https://ernestocisneros.art/literary-representation.html",
+            "externo": true
+          },
+          {
+            "texto": "derechos@antoniolopezsanchez.art",
+            "url": "mailto:derechos@antoniolopezsanchez.art"
+          }
         ]
       }
     ]
