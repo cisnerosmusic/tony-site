@@ -135,17 +135,13 @@ cuerpo 1,18rem, interlineado 1,95 y sangría de primera línea. Clases
 **Pendiente aquí:**
 
 - **Cuatro cuentos más**, pedidos al autor el 8 de septiembre.
-- **Proclama Real NO se publica. Decidido el 8 de septiembre de 2026.** El
-  minicuento finalista de El Dinosaurio existe y está localizado en el
-  material del autor, pero su texto no entra en el sitio: es una sátira
-  política frontal (se abole la palabra mañana porque el Rey se muere, y decir
-  "un mañana mejor" se castiga con la horca). Ernesto: *"es mejor no provocar
-  a los sensores"*. En Laureles se queda **solo la mención del premio**, que
-  ya está en su currículo público. El texto no está en este repositorio y no
-  debe entrar. Misma categoría que Palabra Nueva.
-- Queda por confirmar con el autor una discrepancia de fecha en ese premio: el
-  nombre de su archivo dice Dinosaurio 2014 y Laureles dice El Dinosaurio 2013
-  bajo el año 2014. Una de las dos está mal.
+- **Proclama Real no se publica.** Decisión del autor y de Ernesto, 8 de
+  septiembre de 2026. En Laureles se queda la mención del premio; el texto no
+  entra en este repositorio, que es público. Los motivos se hablan con
+  Ernesto, no se escriben aquí. Ver los innegociables de `AGENTS.md`.
+- Fecha de ese premio **resuelta el 8 de septiembre**: el autor confirma que
+  el evento fue en **2014**, no 2013 como decía el currículo largo. Corregido
+  en Laureles. Si aparece 2013 en algún otro sitio, es el error viejo.
 - Cuidado con los cuentos de los **dos libros de cuentos realistas por salir**:
   esos son inéditos y solo entran si él lo autoriza expresamente.
 

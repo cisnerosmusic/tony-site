@@ -72,11 +72,13 @@ Y al revés, para las instancias que construyen: **si dais un hallazgo sin núme
 ## Innegociables
 
 - **Sin raya larga** en ningún texto público del sitio. Se usa guion.
-- **Hay textos del autor que existen y no se publican, por su seguridad.** No es pudor editorial: Antonio vive en Cuba y el sitio lleva su nombre y su correo. Van dos, y la lista puede crecer:
-  - Su columna de diez años en **Palabra Nueva**, la revista de la Arquidiócesis de La Habana. Lo pidió él: *"es un poco subversivo a los ojos actuales y no quiero resingancia"*.
-  - El minicuento **Proclama Real**, finalista de El Dinosaurio. Sátira política frontal. Decidido por Ernesto el 8 de septiembre de 2026: *"es mejor no provocar a los sensores"*. En Laureles se queda la mención del premio, que ya está en su currículo público; el texto no.
+- **Hay material del autor que existe y que, por decisión suya y de Ernesto, no se publica.** Esta lista se respeta y no se revisa sin preguntarles a ellos dos. Hoy son dos entradas y puede crecer:
+  - Su columna en **Palabra Nueva**. No se menciona en el sitio.
+  - El minicuento **Proclama Real**. En Laureles se queda la mención del premio, que ya está en su currículo público; el texto no entra en este repositorio.
 
-  La regla general: **cuando un material toque lo político, lo militar o lo religioso, se para y se pregunta.** Ni el asistente ni Ernesto, desde Miami, pueden medir el riesgo que corre él allí. Ante la duda, el dato se retira y se consulta.
+  **Este archivo es público**, así que aquí va la lista y no los motivos. El porqué de cada caso se habla con Ernesto; escribirlo aquí sería publicar por la puerta de atrás justo lo que se decidió no publicar.
+
+  La regla general: **si un material toca lo político, lo militar o lo religioso, se para y se pregunta antes de subirlo.** Ni el asistente ni Ernesto, desde Miami, pueden medir lo que arriesga el autor allí. Ante la duda, se retira y se consulta.
 - **Los textos literarios se publican siempre en su español original.** Se traduce el aparato (navegación, fichas, presentaciones, SEO), nunca poemas ni fragmentos.
 - **Las obras inéditas de Tony no entran en este repositorio, que es público.** Solo sinopsis y fragmentos que él elija. Publicarlas les quitaría la condición de inéditas ante concursos y editoriales.
 - **El mecanismo de cobro, la custodia de fondos y cualquier detalle fiscal o contractual de la representación no se documentan aquí.** Van en la documentación privada del estudio.
