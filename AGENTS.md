@@ -72,6 +72,11 @@ Y al revés, para las instancias que construyen: **si dais un hallazgo sin núme
 ## Innegociables
 
 - **Sin raya larga** en ningún texto público del sitio. Se usa guion.
+- **Hay textos del autor que existen y no se publican, por su seguridad.** No es pudor editorial: Antonio vive en Cuba y el sitio lleva su nombre y su correo. Van dos, y la lista puede crecer:
+  - Su columna de diez años en **Palabra Nueva**, la revista de la Arquidiócesis de La Habana. Lo pidió él: *"es un poco subversivo a los ojos actuales y no quiero resingancia"*.
+  - El minicuento **Proclama Real**, finalista de El Dinosaurio. Sátira política frontal. Decidido por Ernesto el 8 de septiembre de 2026: *"es mejor no provocar a los sensores"*. En Laureles se queda la mención del premio, que ya está en su currículo público; el texto no.
+
+  La regla general: **cuando un material toque lo político, lo militar o lo religioso, se para y se pregunta.** Ni el asistente ni Ernesto, desde Miami, pueden medir el riesgo que corre él allí. Ante la duda, el dato se retira y se consulta.
 - **Los textos literarios se publican siempre en su español original.** Se traduce el aparato (navegación, fichas, presentaciones, SEO), nunca poemas ni fragmentos.
 - **Las obras inéditas de Tony no entran en este repositorio, que es público.** Solo sinopsis y fragmentos que él elija. Publicarlas les quitaría la condición de inéditas ante concursos y editoriales.
 - **El mecanismo de cobro, la custodia de fondos y cualquier detalle fiscal o contractual de la representación no se documentan aquí.** Van en la documentación privada del estudio.

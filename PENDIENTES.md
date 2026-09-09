@@ -135,10 +135,17 @@ cuerpo 1,18rem, interlineado 1,95 y sangría de primera línea. Clases
 **Pendiente aquí:**
 
 - **Cuatro cuentos más**, pedidos al autor el 8 de septiembre.
-- **Proclama real**, el minicuento finalista del Concurso El Dinosaurio 2013
-  del Centro Onelio, que aparece en Laureles bajo 2014. El autor lo va a
-  mandar. Cuando llegue, entra en Contarte y **Laureles enlaza a él**, que es
-  la primera vez que un premio va a poder apuntar al texto premiado.
+- **Proclama Real NO se publica. Decidido el 8 de septiembre de 2026.** El
+  minicuento finalista de El Dinosaurio existe y está localizado en el
+  material del autor, pero su texto no entra en el sitio: es una sátira
+  política frontal (se abole la palabra mañana porque el Rey se muere, y decir
+  "un mañana mejor" se castiga con la horca). Ernesto: *"es mejor no provocar
+  a los sensores"*. En Laureles se queda **solo la mención del premio**, que
+  ya está en su currículo público. El texto no está en este repositorio y no
+  debe entrar. Misma categoría que Palabra Nueva.
+- Queda por confirmar con el autor una discrepancia de fecha en ese premio: el
+  nombre de su archivo dice Dinosaurio 2014 y Laureles dice El Dinosaurio 2013
+  bajo el año 2014. Una de las dos está mal.
 - Cuidado con los cuentos de los **dos libros de cuentos realistas por salir**:
   esos son inéditos y solo entran si él lo autoriza expresamente.
 
