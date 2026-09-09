@@ -33,6 +33,11 @@
   ],
   "galeria": [
     {
+      "img": "/img/libros/convertida-volante.webp",
+      "alt": "Volante amarillo del conversatorio y presentación del libro en la Biblioteca Nacional",
+      "pie": "Volante del conversatorio en la Biblioteca Nacional de Cuba José Martí, jueves 10 de marzo de 2022, presentado por Yosvel Hernández Alén"
+    },
+    {
       "img": "/img/libros/convertida-bncjm-1.webp",
       "alt": "Presentación del libro en la sala de lectura de la Biblioteca Nacional, con el ejemplar en un atril",
       "pie": "Presentación en la Biblioteca Nacional de Cuba José Martí, con el musicógrafo e investigador Yosvel Hernández Alén, 10 de marzo de 2022"
@@ -61,6 +66,11 @@
       "img": "/img/libros/convertida-santaclara.webp",
       "alt": "Dos participantes en una mesa de presentación, uno sostiene el libro",
       "pie": "Presentación con Alexis Castañeda Pérez de Alejo en la 30 Feria Internacional del Libro, Santa Clara, mayo de 2022"
+    },
+    {
+      "img": "/img/libros/convertida-santiago.webp",
+      "alt": "Presentación del libro en un patio con columnas, ante el público sentado",
+      "pie": "Presentación en el Casa Granda, Santiago de Cuba"
     }
   ],
   "prensa": [

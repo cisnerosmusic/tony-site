@@ -26,7 +26,7 @@ FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
 NAV = [("/", "Portada"), ("/libros/", "Mis libros"), ("/ineditos/", "Inéditos"),
        ("/tinta-ciones/", "Tinta-ciones"), ("/trova/", "La trova"),
        ("/plano-abierto/", "Plano abierto"), ("/laureles/", "Laureles"), ("/periodista/", "El periodista"),
-       ("/directorio/", "Directorio")]
+       ("/entre-lectores/", "Entre lectores"), ("/directorio/", "Directorio")]
 
 def esc(t):
     return html.escape(t, quote=False)
