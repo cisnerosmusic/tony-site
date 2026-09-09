@@ -67,10 +67,10 @@
 
 <nav class="nav">
   <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
+  <ul class="nav-links" id="menu-principal">
     <li><a href="/libros/">Mis libros</a></li>
     <li><a href="/ineditos/">Inéditos</a></li>
     <li><a href="/tinta-ciones/">Tinta-ciones</a></li>
@@ -78,7 +78,7 @@
     <li><a href="/trova/">La trova</a></li>
     <li><a href="/plano-abierto/">Plano abierto</a></li>
     <li><a href="/laureles/">Laureles</a></li>
-    <li><a href="/periodista/" class="active">El periodista</a></li>
+    <li><a href="/periodista/" class="active" aria-current="page">El periodista</a></li>
     <li><a href="/directorio/">Directorio</a></li>
     <li><a href="/en/" lang="en" hreflang="en">EN</a></li>
   </ul>
@@ -227,6 +227,6 @@
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=7" defer></script>
+<script src="/app.js?v=8" defer></script>
 </body>
 </html>

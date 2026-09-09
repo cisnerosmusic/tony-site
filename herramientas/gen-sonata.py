@@ -22,14 +22,21 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 URL = DOMINIO + "/tinta-ciones/sonata-de-la-lluvia/"
 CSS = "?v=19"
-FUENTE = r"C:/Users/Ernesto/OneDrive/Imágenes/tony/DECIMITAS/SONATA DE LA LLUVIA.txt"
+FUENTE = os.path.join(RAIZ, "herramientas", "textos", "decimitas", "sonata-de-la-lluvia.txt")
 FOTO = "/img/decimitas/sonata-de-la-lluvia.webp"
 
 FIRMAS = ("Fito Páez", "Noel Nicola", "Santiago Feliú")
 
 
 def esc(t):
+    """Texto visible: se dejan las comillas como el autor las escribio."""
     return html.escape(t, quote=False)
+
+
+def esc_attr(t):
+    """Valor de atributo: aqui las comillas SI se escapan, o una comilla en
+    un titulo o en un alt parte el HTML en dos."""
+    return html.escape(t, quote=True)
 
 
 def movimientos(texto):
@@ -88,14 +95,17 @@ def main():
     D = ("Sonata de la lluvia, la obra con la que Antonio López Sánchez ganó el Premio Colateral "
          "Yasmina Calcines del XXVI Concurso Nacional Ala Décima: tres movimientos en décimas.")
 
-    datos = {"@context": "https://schema.org", "@type": "Poem",
+    # CreativeWork y no Poem: schema.org/Poem no existe, devuelve 404.
+    # El genero se declara aparte, que es como se dice "esto es poesia".
+    datos = {"@context": "https://schema.org", "@type": "CreativeWork",
              "name": "Sonata de la lluvia", "url": URL, "inLanguage": "es",
              "author": {"@id": f"{DOMINIO}/#antonio"},
+             "genre": "Poesía. Décima",
              "datePublished": "2026",
              "award": "Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima, 2026",
              "description": D,
              "image": DOMINIO + FOTO,
-             "hasPart": [{"@type": "Poem", "name": m["titulo"].capitalize(),
+             "hasPart": [{"@type": "CreativeWork", "genre": "Décima", "name": m["titulo"].capitalize(),
                           "position": i} for i, m in enumerate(movs, 1)]}
 
     pagina = f"""<!DOCTYPE html>
@@ -146,10 +156,10 @@ def main():
 
 <nav class="nav">
   <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
+  <ul class="nav-links" id="menu-principal">
 {navegacion.menu_html("/tinta-ciones/")}
   </ul>
 </nav>
@@ -188,7 +198,7 @@ def main():
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=7" defer></script>
+<script src="/app.js?v=8" defer></script>
 </body>
 </html>
 """

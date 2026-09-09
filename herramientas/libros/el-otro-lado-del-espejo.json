@@ -12,8 +12,8 @@
   "tira_sub": "Del lado de allá también se escribe",
   "cubierta": "/img/libros/espejo-cubierta.webp",
   "cubierta_alt": "Cubierta de El otro lado del espejo, ilustrada por Rainel Cabarroi",
-  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/(2017) El otro lado del espejo NOTA DE CONTRATAPA.txt",
-  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/(2017) El otro lado del espejo   CON VOZ Y VOTO.txt",
+  "contratapa": "libros/el-otro-lado-del-espejo/contratapa.txt",
+  "vyv": "libros/el-otro-lado-del-espejo/voz-y-voto.txt",
   "ficha": {
     "título": "El otro lado del espejo",
     "género": "Fantasía heroica",
@@ -25,17 +25,17 @@
   "fragmentos": [
     {
       "titulo": "I",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/01.txt",
+      "archivo": "libros/el-otro-lado-del-espejo/fragmento-1-i.txt",
       "tipo": "prosa"
     },
     {
       "titulo": "II",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/02.txt",
+      "archivo": "libros/el-otro-lado-del-espejo/fragmento-2-ii.txt",
       "tipo": "prosa"
     },
     {
       "titulo": "III",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2017) El otro lado del espejo/03.txt",
+      "archivo": "libros/el-otro-lado-del-espejo/fragmento-3-iii.txt",
       "tipo": "prosa"
     }
   ],

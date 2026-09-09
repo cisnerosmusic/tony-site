@@ -58,11 +58,11 @@
 
 <nav class="nav">
   <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
-    <li><a href="/libros/" class="active">Mis libros</a></li>
+  <ul class="nav-links" id="menu-principal">
+    <li><a href="/libros/" class="active" aria-current="page">Mis libros</a></li>
     <li><a href="/ineditos/">Inéditos</a></li>
     <li><a href="/tinta-ciones/">Tinta-ciones</a></li>
     <li><a href="/contarte/">Contarte</a></li>
@@ -412,6 +412,6 @@ viene el amor y nos damos</div>
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=7" defer></script>
+<script src="/app.js?v=8" defer></script>
 </body>
 </html>

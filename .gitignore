@@ -17,3 +17,7 @@
 # impeccable-ignore-end
 
 seed-roll.txt
+
+# Python
+__pycache__/
+*.pyc

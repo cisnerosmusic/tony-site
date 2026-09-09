@@ -10,8 +10,8 @@
   "tira_sub": "Mi entrega más oscura",
   "cubierta": "/img/libros/grimorium-cubierta.webp",
   "cubierta_alt": "Cubierta de Grimorium, ilustrada por Rainel Cabarroi",
-  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/(2018) Grimorium  NOTA DE CONTRATAPA.txt",
-  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/(2018) Grimorium  CON VOZ Y VOTO.txt",
+  "contratapa": "libros/grimorium/contratapa.txt",
+  "vyv": "libros/grimorium/voz-y-voto.txt",
   "ficha": {
     "título": "Grimorium",
     "género": "Horror",
@@ -22,17 +22,17 @@
   "fragmentos": [
     {
       "titulo": "Texto de Abdul Alhazred",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/04 Texto de Abdul Alhazred.txt",
+      "archivo": "libros/grimorium/fragmento-1-texto-de-abdul-alhazred.txt",
       "tipo": "prosa"
     },
     {
       "titulo": "Hesternus (I)",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/06 Hesternus   (I).txt",
+      "archivo": "libros/grimorium/fragmento-2-hesternus-i.txt",
       "tipo": "prosa"
     },
     {
       "titulo": "Grimorium vox (Archetypus scriptum)",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2018) Grimorium/07 Grimorium vox (Archetypus scriptum)   (I).txt",
+      "archivo": "libros/grimorium/fragmento-3-grimorium-vox-archetypus-scriptum.txt",
       "tipo": "prosa"
     }
   ],

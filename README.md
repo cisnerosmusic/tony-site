@@ -74,7 +74,7 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 
 ## SEO y AEO
 
-27 páginas indexables con títulos y descripciones únicos y en rango, Twitter Cards, 53 bloques JSON-LD válidos (`Person` con premios y `sameAs`, `WebSite`, 14 `Book`, `CollectionPage`/`ProfilePage`/`ContactPage` y `BreadcrumbList`), `llms.txt` con los datos citables del autor para motores de respuesta, `robots.txt` con permiso explícito a los bots de IA e IndexNow configurado.
+37 páginas indexables con títulos y descripciones únicos y en rango, Twitter Cards, JSON-LD válido en todas ellas (`Person` con premios y `sameAs`, `WebSite`, 14 `Book` con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `ItemList`, `AudioObject`, `CollectionPage`/`ProfilePage`/`ContactPage` y `BreadcrumbList`), `llms.txt` con los datos citables del autor para motores de respuesta, `robots.txt` con permiso explícito a los bots de IA e IndexNow configurado.
 
 Al publicar páginas nuevas: actualizar `sitemap.xml`, subir el número de versión de los assets (`?v=N` en `styles.css`, `fonts.css` y `app.js`) y relanzar el ping de IndexNow.
 

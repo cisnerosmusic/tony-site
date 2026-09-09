@@ -35,8 +35,10 @@ def seccion_de(ruta):
 def menu_html(activa, sangria="    "):
     filas = []
     for h, n in MENU:
-        clase = ' class="active"' if h == activa else ""
-        filas.append(f'{sangria}<li><a href="{h}"{clase}>{n}</a></li>')
+        # La clase pinta y aria-current informa: quien usa lector de pantalla
+        # tambien tiene que saber en que pagina esta.
+        marca = ' class="active" aria-current="page"' if h == activa else ""
+        filas.append(f'{sangria}<li><a href="{h}"{marca}>{n}</a></li>')
     filas.append(f'{sangria}<li><a href="/en/" lang="en" hreflang="en">EN</a></li>')
     return "\n".join(filas)
 

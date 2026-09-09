@@ -10,8 +10,8 @@
   "tira_sub": "Mi primer libro: la trova puesta por escrito",
   "cubierta": "/img/libros/nueva-trova-cubierta.webp",
   "cubierta_alt": "Cubierta de La canción de la Nueva Trova",
-  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/(2001) La canción de la Nueva Trova  NOTA CONTRATAPA.txt",
-  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/(2001) La canción de la Nueva Trova CON VOZ Y VOTO.txt",
+  "contratapa": "libros/la-cancion-de-la-nueva-trova/contratapa.txt",
+  "vyv": "libros/la-cancion-de-la-nueva-trova/voz-y-voto.txt",
   "ficha": {
     "título": "La canción de la Nueva Trova",
     "género": "Ensayos y entrevistas",
@@ -21,12 +21,12 @@
   "fragmentos": [
     {
       "titulo": "Introducción",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/06 Introducción PARA FRAGMENTOS.txt",
+      "archivo": "libros/la-cancion-de-la-nueva-trova/fragmento-1-introduccion.txt",
       "tipo": "prosa"
     },
     {
       "titulo": "Noel Nicola: seguir creyendo siempre",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2001) La canción de la Nueva Trova/23 Noel Nicola   Seguir creyendo siempre PARA FRAGMENTOS.txt",
+      "archivo": "libros/la-cancion-de-la-nueva-trova/fragmento-2-noel-nicola-seguir-creyendo-siempre.txt",
       "tipo": "prosa"
     }
   ],

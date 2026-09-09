@@ -25,3 +25,44 @@
     }
   });
 })();
+
+// El menú móvil, con teclado y con lector de pantalla. Antes era un onclick en
+// línea que solo alternaba una clase: quien navega con teclado no sabía si
+// estaba abierto ni podía cerrarlo, y quien usa lector de pantalla no se
+// enteraba de nada.
+(function () {
+  var boton = document.querySelector('.nav-hamburger');
+  var menu = document.getElementById('menu-principal');
+  if (!boton || !menu) return;
+
+  function estado(abierto) {
+    menu.classList.toggle('open', abierto);
+    boton.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+    var ingles = document.documentElement.lang === 'en';
+    boton.setAttribute('aria-label',
+      abierto ? (ingles ? 'Close menu' : 'Cerrar menú')
+              : (ingles ? 'Open menu' : 'Abrir menú'));
+  }
+
+  boton.addEventListener('click', function () {
+    estado(!menu.classList.contains('open'));
+  });
+
+  // Escape cierra y devuelve el foco al botón, que es donde estaba el usuario.
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      estado(false);
+      boton.focus();
+    }
+  });
+
+  // Al elegir una sección, el menú se aparta.
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('a')) estado(false);
+  });
+
+  // Si la ventana crece hasta que la barra vuelve a caber, se limpia el estado.
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 1080 && menu.classList.contains('open')) estado(false);
+  });
+})();

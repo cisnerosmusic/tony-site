@@ -28,9 +28,23 @@ FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
 
 
 def esc(t):
+    """Texto visible: se dejan las comillas como el autor las escribio."""
     return html.escape(t, quote=False)
 
+
+def esc_attr(t):
+    """Valor de atributo: aqui las comillas SI se escapan, o una comilla en
+    un titulo o en un alt parte el HTML en dos."""
+    return html.escape(t, quote=True)
+
+TEXTOS = os.path.join(RAIZ, "herramientas", "textos")
+
 def leer(ruta):
+    # Los manifiestos guardan rutas relativas a herramientas/textos/, para que
+    # el generador corra en cualquier maquina y el repositorio sea la fuente
+    # completa del sitio.
+    if not os.path.isabs(ruta):
+        ruta = os.path.join(TEXTOS, ruta.replace("/", os.sep))
     with open(ruta, encoding="utf-8") as f:
         return f.read().replace("\r\n", "\n").strip("\n")
 
@@ -86,13 +100,13 @@ def generar(manifiesto):
     volumenes = ""
     for v in m.get("volumenes", []):
         vw, vh = dims(v["img"])
-        volumenes += (f'<figure><img src="{v["img"]}" width="{vw}" height="{vh}" alt="{esc(v["alt"])}" loading="lazy">'
+        volumenes += (f'<figure><img src="{v["img"]}" width="{vw}" height="{vh}" alt="{esc_attr(v["alt"])}" loading="lazy">'
                       f'<figcaption><strong>{esc(v["titulo"])}</strong><br>{esc(v["pie"])}</figcaption></figure>\n')
 
     galeria = ""
     for g in m.get("galeria", []):
         gw, gh = dims(g["img"])
-        galeria += f'<figure><img src="{g["img"]}" width="{gw}" height="{gh}" alt="{esc(g["alt"])}" loading="lazy"><figcaption>{esc(g["pie"])}</figcaption></figure>\n'
+        galeria += f'<figure><img src="{g["img"]}" width="{gw}" height="{gh}" alt="{esc_attr(g["alt"])}" loading="lazy"><figcaption>{esc(g["pie"])}</figcaption></figure>\n'
 
     # Prensa: cada entrada puede ser texto suelto o una ficha con enlace. Ademas de
     # la lista visible, los articulos con URL se declaran como subjectOf del libro en
@@ -181,17 +195,17 @@ def generar(manifiesto):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(seo_titulo)}</title>
-<meta name="description" content="{esc(seo_desc)}">
+<meta name="description" content="{esc_attr(seo_desc)}">
 {FAVICON}
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="book">
 <meta property="og:url" content="{url}">
-<meta property="og:title" content="{esc(seo_titulo)}">
-<meta property="og:description" content="{esc(seo_desc)}">
+<meta property="og:title" content="{esc_attr(seo_titulo)}">
+<meta property="og:description" content="{esc_attr(seo_desc)}">
 <meta property="og:image" content="{DOMINIO}{m["cubierta"]}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{esc(seo_titulo)}">
-<meta name="twitter:description" content="{esc(seo_desc)}">
+<meta name="twitter:title" content="{esc_attr(seo_titulo)}">
+<meta name="twitter:description" content="{esc_attr(seo_desc)}">
 <meta name="twitter:image" content="{DOMINIO}{m["cubierta"]}">
 <meta property="og:locale" content="es_ES">
 <script type="application/ld+json">
@@ -232,10 +246,10 @@ def generar(manifiesto):
 
 <nav class="nav">
   <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
+  <ul class="nav-links" id="menu-principal">
 {menu_html}
   </ul>
 </nav>
@@ -249,7 +263,7 @@ def generar(manifiesto):
 <div class="section libro-pagina">
 
   <figure class="cubierta-dominante reveal reveal-right">
-    <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc(m["cubierta_alt"])}">
+    <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc_attr(m["cubierta_alt"])}">
   </figure>
 {descarga_html}
 {bloques}  <p style="margin-top:2rem;"><a href="/libros/" class="btn">Volver a Mis libros</a></p>
@@ -269,7 +283,7 @@ def generar(manifiesto):
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=7" defer></script>
+<script src="/app.js?v=8" defer></script>
 </body>
 </html>
 """

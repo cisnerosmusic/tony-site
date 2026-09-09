@@ -25,7 +25,14 @@ SALAS = {
 }
 
 def esc(t):
+    """Texto visible: se dejan las comillas como el autor las escribio."""
     return html.escape(t, quote=False)
+
+
+def esc_attr(t):
+    """Valor de atributo: aqui las comillas SI se escapan, o una comilla en
+    un titulo o en un alt parte el HTML en dos."""
+    return html.escape(t, quote=True)
 
 def bloque(g, sala, n):
     lado = "right" if n % 2 == 0 else "left"

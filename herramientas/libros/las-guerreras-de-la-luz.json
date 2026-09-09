@@ -12,8 +12,8 @@
   "tira_sub": "Mi primera novela, la de las primeras veces",
   "cubierta": "/img/libros/guerreras-cubierta.webp",
   "cubierta_alt": "Cubierta de Las guerreras de la luz, ilustrada por Rainel Cabarroi: empuñadura de espada con una rosa grabada en el pomo, sobre cuero verde",
-  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/(2011) Las guerreras de la luz NOTA DE CONTRATAPA.txt",
-  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/(2011) Las guerreras de la luz   CON VOZ Y VOTO OK.txt",
+  "contratapa": "libros/las-guerreras-de-la-luz/contratapa.txt",
+  "vyv": "libros/las-guerreras-de-la-luz/voz-y-voto.txt",
   "ficha": {
     "título": "Las guerreras de la luz",
     "género": "Fantasía heroica",
@@ -25,17 +25,17 @@
   "fragmentos": [
     {
       "titulo": "VII · Donde habla el colibrí",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/07 Donde habla el colibrí.txt",
+      "archivo": "libros/las-guerreras-de-la-luz/fragmento-1-vii-donde-habla-el-colibri.txt",
       "tipo": "prosa"
     },
     {
       "titulo": "XXXV · Cuenta la voz de Glajur",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/35 Cuenta la voz de Glajur.txt",
+      "archivo": "libros/las-guerreras-de-la-luz/fragmento-2-xxxv-cuenta-la-voz-de-glajur.txt",
       "tipo": "verso"
     },
     {
       "titulo": "XLVII · El ataque",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2011) Las guerreras de la luz/47 El ataque.txt",
+      "archivo": "libros/las-guerreras-de-la-luz/fragmento-3-xlvii-el-ataque.txt",
       "tipo": "prosa"
     }
   ],

@@ -38,9 +38,20 @@ FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
 import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 def esc(t):
+    """Texto visible: se dejan las comillas como el autor las escribio."""
     return html.escape(t, quote=False)
 
+
+def esc_attr(t):
+    """Valor de atributo: aqui las comillas SI se escapan, o una comilla en
+    un titulo o en un alt parte el HTML en dos."""
+    return html.escape(t, quote=True)
+
+TEXTOS = os.path.join(RAIZ, "herramientas", "textos")
+
 def leer(ruta):
+    if not os.path.isabs(ruta):
+        ruta = os.path.join(TEXTOS, ruta.replace("/", os.sep))
     with open(ruta, encoding="utf-8") as f:
         return f.read().replace("\r\n", "\n").strip("\n")
 
@@ -60,17 +71,17 @@ def cabeza(titulo_seo, desc, url, activa, imagen=None):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(titulo_seo)}</title>
-<meta name="description" content="{esc(desc)}">
+<meta name="description" content="{esc_attr(desc)}">
 {FAVICON}
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{url}">
-<meta property="og:title" content="{esc(titulo_seo)}">
-<meta property="og:description" content="{esc(desc)}">
+<meta property="og:title" content="{esc_attr(titulo_seo)}">
+<meta property="og:description" content="{esc_attr(desc)}">
 <meta property="og:image" content="{img}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{esc(titulo_seo)}">
-<meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:title" content="{esc_attr(titulo_seo)}">
+<meta name="twitter:description" content="{esc_attr(desc)}">
 <meta name="twitter:image" content="{img}">
 <meta property="og:locale" content="es_ES">
 <meta name="theme-color" content="#0a0c1f">
@@ -89,10 +100,10 @@ def menu(activa):
 
 <nav class="nav">
   <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
+  <ul class="nav-links" id="menu-principal">
 {filas}
   </ul>
 </nav>
@@ -113,7 +124,7 @@ def pie(activa):
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=7" defer></script>
+<script src="/app.js?v=8" defer></script>
 </body>
 </html>
 """

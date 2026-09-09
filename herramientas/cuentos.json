@@ -3,7 +3,7 @@
     "slug": "la-muneca-y-el-principe",
     "titulo": "La muñeca y el príncipe",
     "anio": "2014",
-    "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación)/09 La muñeca y el príncipe   (2014).txt",
+    "archivo": "cuentos/la-muneca-y-el-principe.txt",
     "linea": "Los juguetes de Pilar preparan su cumpleaños, y hace falta un príncipe.",
     "procedencia": {
       "texto": "Publicado en Cuentos de muñecas (¡A leer y a jugar!), compilación de Magaly Sánchez Ochoa, Editorial de la Mujer, 2015",
@@ -16,7 +16,7 @@
   {
     "slug": "aquelarre",
     "titulo": "Aquelarre",
-    "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/CUENTOS/AQUELARRE.txt",
+    "archivo": "cuentos/aquelarre.txt",
     "linea": "Seis amigas se reúnen en un apartamento. La velada termina en ritual.",
     "seo_titulo": "Aquelarre, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: seis amigas se reúnen en un apartamento de La Habana y la velada termina en ritual, con nueva líder."
@@ -24,7 +24,7 @@
   {
     "slug": "asesinato",
     "titulo": "Asesinato",
-    "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/CUENTOS/ASESINATO.txt",
+    "archivo": "cuentos/asesinato.txt",
     "linea": "La vecina de los bajos le tenía miedo al árbol. Un día bajó con gasolina.",
     "seo_titulo": "Asesinato, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: una vecina le teme al árbol de la acera y baja con gasolina y trapos. Lo que ocurre después lo ve un balcón."
@@ -32,7 +32,7 @@
   {
     "slug": "clinica-del-miedo",
     "titulo": "Clínica del miedo",
-    "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/CUENTOS/Clínica del miedo.txt",
+    "archivo": "cuentos/clinica-del-miedo.txt",
     "linea": "Un paciente se derrumba en el diván. Su miedo es a la claridad.",
     "seo_titulo": "Clínica del miedo, minicuento de Antonio López Sánchez",
     "seo_desc": "Minicuento completo de Antonio López Sánchez: un paciente confiesa su miedo en la consulta de un especialista muy paciente. Se lee en un minuto."
@@ -40,7 +40,7 @@
   {
     "slug": "duelo",
     "titulo": "Duelo",
-    "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/CUENTOS/DUELO.txt",
+    "archivo": "cuentos/duelo.txt",
     "linea": "Dos figuras frente a frente en la nieve. Hoy uno de los dos conocerá la gloria.",
     "seo_titulo": "Duelo, minicuento de Antonio López Sánchez",
     "seo_desc": "Minicuento completo de Antonio López Sánchez: dos figuras se enfrentan sobre la nieve y suena un disparo. Se lee en un minuto."
@@ -48,7 +48,7 @@
   {
     "slug": "luces",
     "titulo": "Luces",
-    "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/CUENTOS/LUCES.txt",
+    "archivo": "cuentos/luces.txt",
     "linea": "Vuelve la corriente, y con ella la lavadora, la manguera en alto y un cuento que no llega a escribirse.",
     "seo_titulo": "Luces, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: llega la electricidad y con ella la lavadora, la manguera en alto y un cuento que no llega a escribirse."
@@ -56,7 +56,7 @@
   {
     "slug": "sombreros-pamelas-y-magicas-varitas",
     "titulo": "Sombreros, pamelas y mágicas varitas",
-    "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/CUENTOS/Sombreros, pamelas y mágicas varitas.txt",
+    "archivo": "cuentos/sombreros-pamelas-y-magicas-varitas.txt",
     "linea": "A Brujito Sombrero lo despierta una sonata, y al otro lado de la verja pasa una varita mágica.",
     "seo_titulo": "Sombreros, pamelas y mágicas varitas, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: a Brujito Sombrero lo despierta una sonata de Scarlatti y al otro lado de la verja pasa una varita mágica."

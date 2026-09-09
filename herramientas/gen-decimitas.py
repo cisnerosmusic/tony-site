@@ -24,7 +24,14 @@ CSS = "?v=19"
 
 
 def esc(t):
+    """Texto visible: se dejan las comillas como el autor las escribio."""
     return html.escape(t, quote=False)
+
+
+def esc_attr(t):
+    """Valor de atributo: aqui las comillas SI se escapan, o una comilla en
+    un titulo o en un alt parte el HTML en dos."""
+    return html.escape(t, quote=True)
 
 
 def trocea(texto, titulos):
@@ -68,7 +75,7 @@ def pieza(d, cuerpo, n):
     lado = "right" if n % 2 == 0 else "left"
     partes = [f'  <article class="decimita reveal reveal-{lado}" id="{d["slug"]}">']
     partes.append(f'    <figure class="decimita-foto">')
-    partes.append(f'      <img src="{img}" width="{w}" height="{h}" alt="{esc(d["alt"])}" loading="lazy">')
+    partes.append(f'      <img src="{img}" width="{w}" height="{h}" alt="{esc_attr(d["alt"])}" loading="lazy">')
     partes.append(f'    </figure>')
     partes.append(f'    <div class="decimita-texto">')
     partes.append(f'      <h2 class="decimita-titulo">{esc(d["titulo"])}</h2>')
@@ -87,7 +94,8 @@ def pieza(d, cuerpo, n):
 
 def main():
     cfg = json.load(open(os.path.join(RAIZ, "herramientas", "decimitas.json"), encoding="utf-8"))
-    doc = open(cfg["documento"], encoding="utf-8").read()
+    doc = open(os.path.join(RAIZ, "herramientas", "textos",
+                            cfg["documento"].replace("/", os.sep)), encoding="utf-8").read()
     trozos = trocea(doc, {d["titulo_doc"] for d in cfg["decimitas"]})
 
     faltan = [d["titulo_doc"] for d in cfg["decimitas"] if d["titulo_doc"] not in trozos]
@@ -153,10 +161,10 @@ def main():
 
 <nav class="nav">
   <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
+  <ul class="nav-links" id="menu-principal">
 {navegacion.menu_html("/tinta-ciones/")}
   </ul>
 </nav>
@@ -209,7 +217,7 @@ def main():
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=7" defer></script>
+<script src="/app.js?v=8" defer></script>
 </body>
 </html>
 """

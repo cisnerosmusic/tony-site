@@ -10,7 +10,7 @@
   "tira_sub": "Poesía a seis manos",
   "cubierta": "/img/libros/trampas-cubierta.webp",
   "cubierta_alt": "Cubierta de Trampas, retratos y un 17 rojo, ilustrada por Juan Carlos García",
-  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2005) Trampas, retratos y un 17 rojo/(2005) Trampas, retratos y un 17 rojo   CON VOZ Y VOTO.txt",
+  "vyv": "libros/trampas-retratos-y-un-17-rojo/voz-y-voto.txt",
   "ficha": {
     "título": "Trampas, retratos y un 17 rojo",
     "autoría": "En coautoría con María del Carmen Mestas y Marcel Luerio",
@@ -22,7 +22,7 @@
   "fragmentos": [
     {
       "titulo": "Décimas: Retratos de mañana",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2005) Trampas, retratos y un 17 rojo/Décimas Retratos de mañana.txt",
+      "archivo": "libros/trampas-retratos-y-un-17-rojo/fragmento-1-decimas-retratos-de-manana.txt",
       "tipo": "verso"
     }
   ],

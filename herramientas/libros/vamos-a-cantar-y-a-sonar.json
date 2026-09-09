@@ -10,7 +10,7 @@
   "tira_sub": "Tres poemas míos para las voces pequeñas",
   "cubierta": "/img/libros/vamos-cubierta.webp",
   "cubierta_alt": "Cubierta de Vamos a cantar y a soñar, ilustrada por Juan Carlos García",
-  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/(2008) Vamos a cantas y a soñar (Compilación de Nerys Pupo) CON VOZ Y VOTO.txt",
+  "vyv": "libros/vamos-a-cantar-y-a-sonar/voz-y-voto.txt",
   "ficha": {
     "título": "Vamos a cantar y a soñar",
     "autoría": "Varios autores, compilación de Nerys Pupo",
@@ -23,17 +23,17 @@
   "fragmentos": [
     {
       "titulo": "Náufrago",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/001 Náufrago.txt",
+      "archivo": "libros/vamos-a-cantar-y-a-sonar/fragmento-1-naufrago.txt",
       "tipo": "verso"
     },
     {
       "titulo": "Tus ojos",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/003 Tus ojos.txt",
+      "archivo": "libros/vamos-a-cantar-y-a-sonar/fragmento-2-tus-ojos.txt",
       "tipo": "verso"
     },
     {
       "titulo": "Trovada de Grillo y Polimita",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2008) Vamos a cantar y a soñar (Compilación de Nerys Pupo)/Trovada de Grillo y Polimita.txt",
+      "archivo": "libros/vamos-a-cantar-y-a-sonar/fragmento-3-trovada-de-grillo-y-polimita.txt",
       "tipo": "verso"
     }
   ],

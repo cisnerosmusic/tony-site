@@ -17,9 +17,9 @@
       "pie": "Mi cuento de este libro, completo, en Contarte"
     }
   ],
-  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación)/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación).txt",
+  "contratapa": "libros/cuentos-de-munecas/contratapa.txt",
   "contratapa_titulo": "Sobre el libro",
-  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2015) Cuentos de muñecas (¡A leer y a jugar!) (Compilación)/(2015) Cuentos de muñecas (¡A leer y a jugar!) CON VOZ Y VOTO.txt",
+  "vyv": "libros/cuentos-de-munecas/voz-y-voto.txt",
   "ficha": {
     "título": "Cuentos de muñecas (¡A leer y a jugar!)",
     "autoría": "Varios autores, compilación de Magaly Sánchez Ochoa",

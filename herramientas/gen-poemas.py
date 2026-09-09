@@ -22,7 +22,14 @@ CSS = "?v=19"
 
 
 def esc(t):
+    """Texto visible: se dejan las comillas como el autor las escribio."""
     return html.escape(t, quote=False)
+
+
+def esc_attr(t):
+    """Valor de atributo: aqui las comillas SI se escapan, o una comilla en
+    un titulo o en un alt parte el HTML en dos."""
+    return html.escape(t, quote=True)
 
 
 def ancla(titulo):
@@ -63,10 +70,10 @@ def bloque(p, ficha, n):
 
 def main():
     cfg = json.load(open(os.path.join(RAIZ, "herramientas", "poemas.json"), encoding="utf-8"))
-    carpeta = cfg["carpeta"]
+    carpeta = os.path.join(RAIZ, "herramientas", "textos")
 
     def carga(ficha):
-        ruta = os.path.join(carpeta, ficha["archivo"] + ".txt")
+        ruta = os.path.join(carpeta, ficha["archivo"].replace("/", os.sep))
         return leer_poema.partes(open(ruta, encoding="utf-8").read())
 
     sueltos = [(carga(f), f) for f in cfg["sueltos"]]
@@ -133,10 +140,10 @@ def main():
 
 <nav class="nav">
   <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
+  <ul class="nav-links" id="menu-principal">
 ''', '''
   </ul>
 </nav>
@@ -174,7 +181,7 @@ def main():
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=7" defer></script>
+<script src="/app.js?v=8" defer></script>
 </body>
 </html>
 '''])}"""

@@ -10,8 +10,8 @@
   "tira_sub": "La mujer, cantada: mi ensayo sobre la trova",
   "cubierta": "/img/libros/convertida-cubierta.webp",
   "cubierta_alt": "Cubierta de Convertida en canción, ilustrada por Ramón Eduardo Haití",
-  "contratapa": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/(2019) Convertida en canción   TEXTO CONTRATAPA.txt",
-  "vyv": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/(2019) Convertida en canción   CON VOZ Y VOTO.txt",
+  "contratapa": "libros/convertida-en-cancion/contratapa.txt",
+  "vyv": "libros/convertida-en-cancion/voz-y-voto.txt",
   "ficha": {
     "título": "Convertida en canción (La imagen de la mujer en los textos de la Nueva Trova)",
     "género": "Ensayo",
@@ -22,12 +22,12 @@
   "fragmentos": [
     {
       "titulo": "Y el río cantando siempre",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/005 Y el río cantando siempre OK.txt",
+      "archivo": "libros/convertida-en-cancion/fragmento-1-y-el-rio-cantando-siempre.txt",
       "tipo": "prosa"
     },
     {
       "titulo": "IV · Lunas rotas",
-      "archivo": "C:/Users/Ernesto/OneDrive/Imágenes/tony/x/(2019) Convertida en canción/009 IV Lunas rotas OK.txt",
+      "archivo": "libros/convertida-en-cancion/fragmento-2-iv-lunas-rotas.txt",
       "tipo": "prosa"
     }
   ],

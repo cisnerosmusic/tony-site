@@ -37,15 +37,21 @@ def main(solo_comprobar=False):
                 continue
             p = os.path.join(base, f)
             t = io.open(p, encoding="utf-8").read()
-            if '<ul class="nav-links">' not in t:
+            if '<ul class="nav-links"' not in t:
                 continue
             revisadas += 1
             activa = navegacion.seccion_de(ruta_web(rel))
             # El pie solo marca pagina actual si es la portada de la seccion
             activa_pie = activa if rel.endswith("index.html") and ruta_web(rel) == activa else None
 
-            nuevo = re.sub(r'(<ul class="nav-links">\n).*?(\n  </ul>)',
-                           lambda m: m.group(1) + navegacion.menu_html(activa) + m.group(2), t, flags=re.S)
+            patron_menu = re.compile(r'(<ul class="nav-links"[^>]*>\n).*?(\n  </ul>)', re.S)
+            if not patron_menu.search(t):
+                # Sin esto, un cambio en el marcado del menu haria que el
+                # reemplazo no encajase y --comprobar diera un falso aprobado.
+                print("  AVISO, no encuentro el menu en:", rel)
+                continue
+            nuevo = patron_menu.sub(
+                lambda m: m.group(1) + navegacion.menu_html(activa) + m.group(2), t)
             nuevo = re.sub(r'(<nav class="footer-nav" aria-label="Secciones">\n).*?(\n  </nav>)',
                            lambda m: m.group(1) + navegacion.pie_html(activa_pie) + m.group(2), nuevo, flags=re.S)
             if nuevo != t:

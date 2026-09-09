@@ -141,7 +141,7 @@ Entre secciones puede ir `.banda-mar`, una banda de 42vh con la foto del mar, os
 
 **Un solo breakpoint, a 900px.** Ahí el split cae a una columna con la imagen a 48vh, la navegación se convierte en menú desplegable, `.libro-item` y `.ficha div` pasan a una columna, y los paddings se reducen a 1.5rem.
 
-**La regla de la hoja nueva.** Toda página de libro se genera con `herramientas/gen-libro.py` desde un manifiesto JSON (`herramientas/libros/<slug>.json`); su estructura es fija y en este orden: cubierta dominante, nota de contratapa, ficha, fragmentos, presentaciones, prensa, con voz y voto. No se maquetan páginas de libro a mano.
+**La regla de la hoja nueva.** Toda página de libro se genera con `herramientas/gen-libro.py` desde un manifiesto JSON (`herramientas/libros/<slug>.json`); su estructura es fija y en este orden: cubierta dominante, nota de contratapa, **con voz y voto**, fragmentos, presentaciones, prensa y **ficha**, que cierra. El autor pidió ese orden el 8 de septiembre de 2026: su comentario arriba, la ficha de datos al final. Los libros que salieron en varios tomos llevan además un bloque de volúmenes tras la contratapa. No se maquetan páginas de libro a mano.
 
 ## Elevation & Depth
 

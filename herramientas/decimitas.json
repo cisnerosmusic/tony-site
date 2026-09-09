@@ -1,8 +1,6 @@
 {
-  "documento": "C:/Users/Ernesto/OneDrive/Imágenes/tony/DECIMITAS/De-Cimitas.txt",
-
+  "documento": "decimitas/de-cimitas.txt",
   "_nota": "El emparejamiento imagen-texto va declarado a mano y no se adivina: los nombres no siempre coinciden (LABIOS DEL DESEO en el documento y LOS LABIOS DEL DESEO en la foto, Hada astral con espacio final). 'titulo_doc' es el encabezado tal como aparece en el documento del autor y sirve para cortar el texto; 'titulo' es como se lee en la pagina.",
-
   "decimitas": [
     {
       "slug": "en-cada-mundo",

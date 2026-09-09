@@ -1,31 +1,100 @@
 {
-  "carpeta": "C:/Users/Ernesto/OneDrive/Imágenes/tony/POEMAS TONY",
-
   "_nota": "Los titulos van escritos aqui a mano y no se derivan del archivo. En los originales estan en mayusculas, y pasarlos a minusculas por programa destroza los nombres propios y confunde el nombre de la serie con el del poema. Si se añade un poema, se escribe aqui su titulo tal como debe leerse.",
-
   "sueltos": [
-    { "archivo": "El poeta", "titulo": "El poeta" },
-    { "archivo": "POEMARBOL", "titulo": "Poemarbol" },
-    { "archivo": "INFORME LEGAL SOBRE LA MUERTE DE UN POEMA", "titulo": "Informe legal sobre la muerte de un poema" },
-    { "archivo": "32 Palabras a oscuras", "titulo": "Palabras a oscuras" },
-    { "archivo": "PARA UN PRÓXIMO GÉNESIS", "titulo": "Para un próximo génesis" },
-    { "archivo": "CULPA", "titulo": "Culpa" },
-    { "archivo": "El poema de Ana", "titulo": "El poema de Ana" },
-    { "archivo": "Díptico de ayer con pinos", "titulo": "Díptico de ayer con pinos" },
-    { "archivo": "LAS CARAS DEL HÉROE", "titulo": "Las caras del héroe" },
-    { "archivo": "DERROTA", "titulo": "Otra derrota" },
-    { "archivo": "MAR DE NOVIEMBRE", "titulo": "Augurios de la mar" },
-    { "archivo": "LA GUERRA Y LA PAZ", "titulo": "La guerra y la paz", "serie": "Díptico de combate" }
+    {
+      "archivo": "poemas/el-poeta.txt",
+      "titulo": "El poeta"
+    },
+    {
+      "archivo": "poemas/poemarbol.txt",
+      "titulo": "Poemarbol"
+    },
+    {
+      "archivo": "poemas/informe-legal-sobre-la-muerte-de-un-poema.txt",
+      "titulo": "Informe legal sobre la muerte de un poema"
+    },
+    {
+      "archivo": "poemas/palabras-a-oscuras.txt",
+      "titulo": "Palabras a oscuras"
+    },
+    {
+      "archivo": "poemas/para-un-proximo-genesis.txt",
+      "titulo": "Para un próximo génesis"
+    },
+    {
+      "archivo": "poemas/culpa.txt",
+      "titulo": "Culpa"
+    },
+    {
+      "archivo": "poemas/el-poema-de-ana.txt",
+      "titulo": "El poema de Ana"
+    },
+    {
+      "archivo": "poemas/diptico-de-ayer-con-pinos.txt",
+      "titulo": "Díptico de ayer con pinos"
+    },
+    {
+      "archivo": "poemas/las-caras-del-heroe.txt",
+      "titulo": "Las caras del héroe"
+    },
+    {
+      "archivo": "poemas/otra-derrota.txt",
+      "titulo": "Otra derrota"
+    },
+    {
+      "archivo": "poemas/augurios-de-la-mar.txt",
+      "titulo": "Augurios de la mar"
+    },
+    {
+      "archivo": "poemas/la-guerra-y-la-paz.txt",
+      "titulo": "La guerra y la paz",
+      "serie": "Díptico de combate"
+    }
   ],
-
   "glosas": [
-    { "archivo": "01 Glosa martiana a trazos de pincel con mujer desnuda", "titulo": "Glosa martiana con pincel y mujer desnuda", "numero": "I" },
-    { "archivo": "06 Glosa martiana a la caza de la poesía", "titulo": "Glosa martiana a la caza de la poesía", "numero": "VI" },
-    { "archivo": "17 Glosa martiana con tenencias", "titulo": "Glosa martiana con tenencias", "numero": "XVII" },
-    { "archivo": "21 Glosa martiana con autorretrato", "titulo": "Glosa martiana con autorretrato", "numero": "XXI" },
-    { "archivo": "04 (IV) Óleo de la madrugada", "titulo": "Óleo de la madrugada", "serie": "Glozama rima", "numero": "IV" },
-    { "archivo": "07 (VII) Mapa de las horas sobre realidad y persistencia", "titulo": "Mapa de las horas, sobre realidad y persistencia", "serie": "Glozama rima", "numero": "VII" },
-    { "archivo": "08 (VIII) Soledad con pájaro y poeta", "titulo": "Soledad con pájaro y poeta", "serie": "Glozama rima", "numero": "VIII" },
-    { "archivo": "14 (XIV) Bambú y mástil", "titulo": "Bambú y mástil", "serie": "Glozama rima", "numero": "XIV" }
+    {
+      "archivo": "poemas/glosa-martiana-con-pincel-y-mujer-desnuda.txt",
+      "titulo": "Glosa martiana con pincel y mujer desnuda",
+      "numero": "I"
+    },
+    {
+      "archivo": "poemas/glosa-martiana-a-la-caza-de-la-poesia.txt",
+      "titulo": "Glosa martiana a la caza de la poesía",
+      "numero": "VI"
+    },
+    {
+      "archivo": "poemas/glosa-martiana-con-tenencias.txt",
+      "titulo": "Glosa martiana con tenencias",
+      "numero": "XVII"
+    },
+    {
+      "archivo": "poemas/glosa-martiana-con-autorretrato.txt",
+      "titulo": "Glosa martiana con autorretrato",
+      "numero": "XXI"
+    },
+    {
+      "archivo": "poemas/oleo-de-la-madrugada.txt",
+      "titulo": "Óleo de la madrugada",
+      "serie": "Glozama rima",
+      "numero": "IV"
+    },
+    {
+      "archivo": "poemas/mapa-de-las-horas-sobre-realidad-y-persistencia.txt",
+      "titulo": "Mapa de las horas, sobre realidad y persistencia",
+      "serie": "Glozama rima",
+      "numero": "VII"
+    },
+    {
+      "archivo": "poemas/soledad-con-pajaro-y-poeta.txt",
+      "titulo": "Soledad con pájaro y poeta",
+      "serie": "Glozama rima",
+      "numero": "VIII"
+    },
+    {
+      "archivo": "poemas/bambu-y-mastil.txt",
+      "titulo": "Bambú y mástil",
+      "serie": "Glozama rima",
+      "numero": "XIV"
+    }
   ]
 }
