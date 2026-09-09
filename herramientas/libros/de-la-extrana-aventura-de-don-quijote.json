@@ -30,7 +30,13 @@
     "origen": "Del primer premio del concurso Reescribir El Quijote en Cuba, 2005"
   },
   "fragmentos": [],
-  "galeria": [],
+  "galeria": [
+    {
+      "img": "/img/libros/quijote-presentacion.webp",
+      "alt": "Mesa de presentación con el libro digital proyectado en una pantalla al fondo",
+      "pie": "Presentación del epub en el Palacio de Computación, 30 Feria Internacional del Libro, 2022"
+    }
+  ],
   "prensa": [],
   "referencias": [
     "https://www.ecured.cu/De_la_extra%C3%B1a_aventura_de_don_Quijote_por_lejanas_tierras_y_otros_sucesos_hasta_hoy_olvidados"
