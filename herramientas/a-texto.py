@@ -2,7 +2,8 @@
 # o en DOCX segun el dia. Deja un .txt junto al original, con la misma
 # separacion por parrafos que espera el generador de cuentos.
 #
-# Uso: python herramientas/a-texto.py "<carpeta>"
+# Uso: python herramientas/a-texto.py "<carpeta>" [--verso]
+# Con --verso se conservan las lineas en blanco, que en poesia separan estrofas.
 
 import os, re, sys, zipfile, html
 
@@ -87,13 +88,25 @@ def de_docx(ruta):
     return html.unescape(xml)
 
 
-def limpiar(t):
+def limpiar(t, verso=False):
+    """En prosa se descartan las lineas vacias, que solo son separacion.
+    En verso NO: el blanco entre estrofas es parte del poema. Se conserva uno."""
     t = t.replace("\u00a0", " ").replace("\r", "")
     lineas = [re.sub(r"[ \t]+", " ", l).strip() for l in t.split("\n")]
-    return "\n".join(l for l in lineas if l) + "\n"
+    if not verso:
+        return "\n".join(l for l in lineas if l) + "\n"
+    salida, blanco = [], False
+    for l in lineas:
+        if l:
+            salida.append(l); blanco = False
+        elif salida and not blanco:
+            salida.append(""); blanco = True
+    while salida and not salida[-1]:
+        salida.pop()
+    return "\n".join(salida) + "\n"
 
 
-def main(carpeta):
+def main(carpeta, verso=False):
     for f in sorted(os.listdir(carpeta)):
         p = os.path.join(carpeta, f)
         base, ext = os.path.splitext(f)
@@ -103,7 +116,7 @@ def main(carpeta):
             texto = de_docx(p)
         else:
             continue
-        texto = limpiar(texto)
+        texto = limpiar(texto, verso)
         destino = os.path.join(carpeta, base + ".txt")
         open(destino, "w", encoding="utf-8", newline="\n").write(texto)
         palabras = len(texto.split())
@@ -111,4 +124,4 @@ def main(carpeta):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], "--verso" in sys.argv)
