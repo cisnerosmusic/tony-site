@@ -192,6 +192,48 @@ python herramientas/version.py styles.css 22
 
 Existe porque hoy hubo que subir styles.css dos veces y son medio centenar de archivos. Y aprendió el mismo tropiezo que el comprobador: se reescribía sus propios comentarios, porque contenían la cadena que busca. Ahora se excluye.
 
+## 2 quater. El sitio en inglés, abierto el 9 de septiembre
+
+Ya no es solo la portada. Cinco páginas nuevas, generadas por `herramientas/gen-ingles.py` desde `herramientas/ingles.json`, más `/en/rights/`, que la sigue escribiendo `gen-legal.py` para que el aviso de derechos no pueda decir dos cosas distintas en dos idiomas.
+
+| URL | Qué es |
+|---|---|
+| `/en/` | portada, reordenada: la trova primero |
+| `/en/trova/` | los tres libros sobre la Nueva Trova, con el argumento de autoridad |
+| `/en/poetry/` | la poesía, y qué son una décima y una glosa |
+| `/en/fiction/` | las cinco novelas y el cuento breve |
+| `/en/author/` | biografía, premios y trayectoria periodística |
+
+**El orden lo fijó Ernesto el 9 de septiembre y no es el español.** Primero la investigación sobre la Nueva Trova, después la poesía, después la fantasía heroica. La razón está en `PRODUCT.md` y ahora también en la cabecera de `navegacion.py`, para que nadie lo "arregle" alineándolo con el español.
+
+**La regla que no se toca:** el aparato en inglés, la literatura en español. Ni un poema traducido.
+
+Tres decisiones de redacción que conviene conocer antes de tocar `ingles.json`:
+
+- **La autoridad se demuestra, no se declara.** Ernesto describió a Tony como probablemente el único no músico capaz de hablar con soltura de todo el tema. Es muy posible que sea cierto, pero es un superlativo que no se puede verificar y que ante un lector académico suena a folleto. La página dice en su lugar los hechos comprobables: tres libros en dieciocho años, las entrevistas, los especialistas que colaboran en *Trovadoras*, la licenciatura en Comunicación Social, y que además leyó sus poemas dentro del ciclo A Guitarra Limpia. El lector saca la conclusión solo, que es más fuerte.
+- **La décima se explica.** Un editor anglófono no sabe qué es, y sin eso la sección de poesía no se entiende. Se explican la forma y la glosa.
+- **El coste de traducir se dice en voz alta** en la página de narrativa. Fingir que no existe ante alguien que hace números todos los días resta credibilidad.
+
+**Navegación inglesa unificada.** Estaba escrita a mano dentro de `gen-legal.py`, la cuarta definición suelta del proyecto. Ahora vive en `navegacion.py` como `MENU_EN` y `PIE_EN`.
+
+**hreflang recíproco**, que es la única forma de que Google lo respete:
+
+| Español | Inglés |
+|---|---|
+| `/` | `/en/` |
+| `/trova/` | `/en/trova/` |
+| `/tinta-ciones/` | `/en/poetry/` |
+| `/periodista/` | `/en/author/` |
+| `/derechos/` | `/en/rights/` |
+
+`x-default` apunta siempre al español, y con esto queda cerrado el aviso de que faltaba. **`/en/fiction/` no lleva par a propósito**: `/libros/` son los catorce libros y esa página son solo las novelas, así que declararlos equivalentes sería mentir.
+
+**Lo que falta del inglés:**
+
+1. Fichas inglesas por libro. Hoy cada libro tiene su bloque dentro de la página de sección, que para un editor que escanea puede bastar. Si se quiere página propia, es ampliar `gen-ingles.py`.
+2. Los dos campos que pide un editor extranjero y no tenemos: **extensión** en páginas o palabras y **edad recomendada** de cada título. Hay que pedírselos a Tony: no se pueden inventar.
+3. **Muestras traducidas.** Las páginas ofrecen *sample translations on request* y hoy no existe ninguna. Si alguien las pide mañana, no hay qué mandar. Es el hueco más incómodo del sitio inglés.
+
 ## 3 ter. El comprobador, y por qué existe (9 de septiembre)
 
 Ernesto lo dejó dicho: *"cada vez que terminemos, habrá auditoría en ciclos, el pipe viene por ahí y será así siempre"*. Construir, auditar, corregir, volver a empezar.

@@ -58,6 +58,17 @@ Datos verificables del autor:
 - [Inéditos](https://antoniolopezsanchez.art/ineditos/): obras que esperan editorial.
 - [Directorio](https://antoniolopezsanchez.art/directorio/): contacto del autor y consultas de derechos.
 
+## En inglés · In English
+
+El sitio tiene una versión inglesa con un orden distinto y deliberado: para el lector anglosajón la puerta de entrada es la investigación sobre la Nueva Trova, no la fantasía heroica. Los textos literarios no se traducen y siguen en español en las dos versiones.
+
+- [Ala del Mar, English](https://antoniolopezsanchez.art/en/): portada en inglés.
+- [The Nueva Trova](https://antoniolopezsanchez.art/en/trova/): los tres libros sobre la Nueva Trova cubana, 2001 a 2019, presentados para editoriales universitarias y estudios de género y de música popular.
+- [Poetry](https://antoniolopezsanchez.art/en/poetry/): la poesía, qué es una décima y qué es una glosa, explicado para quien no lo conoce. Los poemas siguen en español.
+- [Fiction](https://antoniolopezsanchez.art/en/fiction/): novelas de fantasía heroica, horror y fantasía infantil, más el cuento breve.
+- [The author](https://antoniolopezsanchez.art/en/author/): biografía, premios y trayectoria periodística.
+- [Rights](https://antoniolopezsanchez.art/en/rights/): aviso de derechos en inglés.
+
 ## Notas de uso
 
 - Alcance de los derechos: lo que este sitio ofrece son única y exclusivamente los derechos de la obra de Antonio López Sánchez. En los volúmenes colectivos y las antologías (Cuentos de muñecas, En un lugar de Cuba, Nota de prensa y otros minicuentos, Trampas retratos y un 17 rojo, Vamos a cantar y a soñar) la disponibilidad se refiere solo a los textos de su autoría. Aviso completo: https://antoniolopezsanchez.art/derechos/

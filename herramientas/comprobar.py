@@ -158,6 +158,7 @@ def generado_al_dia():
                ["python", "herramientas/gen-sonata.py"],
                ["python", "herramientas/gen-farraluque.py"],
                ["python", "herramientas/gen-audios.py"],
+               ["python", "herramientas/gen-ingles.py"],
                ["python", "herramientas/gen-legal.py"]]
     for m in sorted(glob.glob(os.path.join(RAIZ, "herramientas", "libros", "*.json"))):
         ordenes.append(["python", "herramientas/gen-libro.py", os.path.relpath(m, RAIZ)])

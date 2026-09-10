@@ -53,3 +53,49 @@ def pie_html(activa, sangria="    "):
         else:
             filas.append(f'{sangria}<a href="{h}">{n}</a>')
     return "\n".join(filas)
+
+
+# ── El sitio en ingles ───────────────────────────────────────────────────
+#
+# No es el espanol traducido y no lleva las mismas secciones. El orden lo fijo
+# Ernesto el 9 de septiembre de 2026 y responde a un mercado distinto: para el
+# lector anglosajon la puerta de entrada es la investigacion sobre la Nueva
+# Trova, no la fantasia heroica. Esta razonado en PRODUCT.md.
+#
+# Estuvo escrito a mano dentro de gen-legal.py, que era la cuarta definicion
+# suelta de navegacion del proyecto. Vive aqui por lo mismo que la espanola.
+
+MENU_EN = [
+    ("/en/trova/", "The trova"),
+    ("/en/poetry/", "Poetry"),
+    ("/en/fiction/", "Fiction"),
+    ("/en/author/", "The author"),
+    ("/en/rights/", "Rights"),
+]
+
+PIE_EN = MENU_EN
+
+
+def seccion_en_de(ruta):
+    candidatas = [h for h, _ in MENU_EN if ruta.startswith(h)]
+    return max(candidatas, key=len) if candidatas else None
+
+
+def menu_en_html(activa, sangria="    "):
+    filas = []
+    for h, n in MENU_EN:
+        marca = ' class="active" aria-current="page"' if h == activa else ""
+        filas.append(f'{sangria}<li><a href="{h}"{marca}>{n}</a></li>')
+    filas.append(f'{sangria}<li><a href="/" lang="es" hreflang="es">ES</a></li>')
+    return "\n".join(filas)
+
+
+def pie_en_html(activa, sangria="    "):
+    filas = []
+    for h, n in PIE_EN:
+        if h == activa:
+            filas.append(f'{sangria}<span aria-current="page">{n}</span>')
+        else:
+            filas.append(f'{sangria}<a href="{h}">{n}</a>')
+    filas.append(f'{sangria}<a href="/" lang="es" hreflang="es">Sitio en español</a>')
+    return "\n".join(filas)

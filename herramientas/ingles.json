@@ -1,0 +1,384 @@
+{
+  "_nota": "Copia del sitio en ingles. La genera gen-ingles.py. Regla firme: el aparato va en ingles y la literatura se queda en español, siempre. Los titulos de los libros no se traducen; si hace falta, se glosa el sentido entre parentesis la primera vez. El orden de las secciones no es el del sitio español y no es un descuido: para el lector anglosajon la puerta de entrada es la investigacion sobre la Nueva Trova. Razonado en PRODUCT.md y decidido por Ernesto el 9 de septiembre de 2026.",
+
+  "paginas": [
+    {
+      "ruta": "/en/",
+      "titulo": "Ala del Mar",
+      "es_portada": true,
+      "subtitulo": "Antonio López Sánchez",
+      "oficio": "I am a writer and a poet and a journalist.",
+      "seo_titulo": "Antonio López Sánchez, Cuban writer, poet and journalist",
+      "seo_desc": "Cuban writer, poet and journalist. Two decades documenting the Nueva Trova, poetry in décima, and heroic fantasy. World rights available outside Cuba.",
+      "aviso_idioma": "Literary texts are always published in their original Spanish. Everything written about them is in English.",
+      "acciones": [
+        {"texto": "The trova", "url": "/en/trova/", "relleno": true},
+        {"texto": "Poetry", "url": "/en/poetry/"},
+        {"texto": "Fiction", "url": "/en/fiction/"},
+        {"texto": "Rights", "url": "/en/rights/"}
+      ],
+      "secciones": [
+        {
+          "titulo": "The house",
+          "alt": true,
+          "parrafos": [
+            "I live on an island, in a city, where the sea is more than a presence: it is the neighborhood. The blue of its waters, beyond a dream of horizon, drifts through verses, through kisses, through baseball teams (even when they lose), through almost every love and desire, and through memories and futures.",
+            "That is why this house is an Ala del Mar, a wing of the sea. A place that hopes to give away, in writing, all the luminous blue, and also the shadows, that surround a writer.",
+            "The Latin quote, a private gift with which I end my books, speaks of pleasure. The pleasure of writing, and of trying, as humanly and poetically as possible, to do it well. That way the gift can reach every person who arrives at my pages. Receive the warmest and bluest of welcomes. Like pages, the doors of this house stand open. Come in."
+          ],
+          "firma": "Antonio López Sánchez"
+        },
+        {
+          "titulo": "Three ways in",
+          "parrafos": [
+            "Fourteen published books across twenty-five years, in genres that rarely share a shelf. For a reader arriving in English, these are the three doors, in the order that makes sense from here."
+          ],
+          "puertas": [
+            {
+              "numero": "01",
+              "titulo": "The Nueva Trova",
+              "url": "/en/trova/",
+              "texto": "Three books published between 2001 and 2019 on the Cuban song movement that shaped several generations: a history told with its protagonists, a book of interviews with its women, and a study of how those women are written into the lyrics. Research, not memoir, by someone who was also inside the room."
+            },
+            {
+              "numero": "02",
+              "titulo": "Poetry",
+              "url": "/en/poetry/",
+              "texto": "Free verse and the décima, the ten-line Cuban stanza. Two national awards in 2026 alone. Published here complete, in Spanish, for the very large readership in the United States that reads poetry in that language and does not need it translated."
+            },
+            {
+              "numero": "03",
+              "titulo": "Fiction",
+              "url": "/en/fiction/",
+              "texto": "Heroic fantasy, horror and children's fantasy: five novels, one of them a five-volume illustrated saga, and a national award. The genre is enormous in English and the translation is the real cost. Sample chapters and reader reports available."
+            }
+          ]
+        },
+        {
+          "titulo": "Rights and representation",
+          "alt": true,
+          "ancla": "rights",
+          "parrafos": [
+            "My published books hold editorial exclusivity only within Cuba. <strong>World rights are available</strong> for editions and translations everywhere else.",
+            "Representation outside the island is handled personally by Ernesto Cisneros, from Miami. Publishers, agents, scouts and translators are welcome to write.",
+            "Rights offered here are Antonio López Sánchez's own work only. In collective volumes and anthologies, availability covers solely the texts he wrote."
+          ],
+          "enlaces": [
+            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true, "relleno": true},
+            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art"},
+            {"texto": "Full rights notice", "url": "/en/rights/"}
+          ]
+        }
+      ]
+    },
+
+    {
+      "ruta": "/en/trova/",
+      "titulo": "The Nueva Trova",
+      "subtitulo": "Twenty years documenting a song movement, from inside the room.",
+      "seo_titulo": "The Nueva Trova: three books by Antonio López Sánchez",
+      "seo_desc": "Three books on the Cuban Nueva Trova by Antonio López Sánchez, 2001 to 2019: a history with its protagonists, interviews with its women, and women in its lyrics.",
+      "secciones": [
+        {
+          "titulo": "What this is",
+          "parrafos": [
+            "The Nueva Trova is the Cuban song movement that emerged publicly in February 1967 and went on to define the sound and the argument of several generations: Silvio Rodríguez, Pablo Milanés, Noel Nicola, Vicente and Santiago Feliú, and the three waves of songwriters who followed them. It is studied in Latin American departments, in ethnomusicology and in cultural history, and it is short of primary sources written from within Cuba by someone who was there.",
+            "Between 2001 and 2019 Antonio López Sánchez published three books on it. He is not a musician. He is a journalist with a degree in Social Communication from the University of Havana who spent two decades interviewing the people who made this music, writing about their records in the Cuban cultural press, and, on occasion, reading his own poems on stage between their guitars.",
+            "The three books do not repeat each other. Each one asks a question the previous one left open."
+          ]
+        },
+        {
+          "titulo": "The books",
+          "alt": true,
+          "libros": [
+            {
+              "titulo": "La canción de la Nueva Trova",
+              "glosa": "The Song of the Nueva Trova",
+              "anio": "2001",
+              "editorial": "Atril Ediciones Musicales",
+              "genero": "Essays and interviews",
+              "url": "/libros/la-cancion-de-la-nueva-trova/",
+              "texto": "The author's first book, and a history of the movement told with the voices of its own protagonists, from its public appearance in February 1967 onwards. It reads the three successive waves of songwriters, what separates them and what they share, and it argues that the guitar remained the centre of gravity even when other instruments arrived. Written close enough to the source to carry testimony that exists nowhere else."
+            },
+            {
+              "titulo": "Trovadoras",
+              "glosa": "Women of the Trova",
+              "anio": "2008",
+              "editorial": "Editorial Oriente",
+              "genero": "Interviews",
+              "url": "/libros/trovadoras/",
+              "texto": "Working women songwriters speak about the place they, and the women before them, have held in Cuban song. Alongside them the book carries two specialists: Isabel Moya on gender and the musicographer Lino Betancourt. For a gender studies or Latin American music list this is a primary source in interview form, and there is very little like it in any language."
+            },
+            {
+              "titulo": "Convertida en canción",
+              "glosa": "Turned into Song: the image of women in the lyrics of the Nueva Trova",
+              "anio": "2019",
+              "editorial": "Editorial Capiro",
+              "genero": "Essay",
+              "url": "/libros/convertida-en-cancion/",
+              "texto": "Which woman are our troubadours singing to? Have the women in those sung portraits changed, or grown? The book reads the lyrics as a running argument with Cuban society and follows what they say about women entering public life, about sexuality inside and outside couples, about sex work, about breakups and infidelity, and about homosexual love. It is the most directly citable of the three for a university press, and the one that travels furthest from Cuba."
+            }
+          ]
+        },
+        {
+          "titulo": "Close to the song",
+          "parrafos": [
+            "The research was not done from a distance. The author was also invited into the movement's own spaces, and the site keeps the recordings that survive."
+          ],
+          "lista": [
+            "<em>La impúdica es la guitarra</em>, a concert in the A Guitarra Limpia cycle at the Centro Cultural Pablo de la Torriente Brau, Havana, 2000, where he read his poems between the songs.",
+            "Two radio programmes with Fernando Rodríguez Sosa on Habana Radio, 2018. The station is now entirely offline, and these survive in this archive and in the Internet Archive.",
+            "The television programme <em>Entre libros</em>, 2019.",
+            "Work in the Cuban music press: AM PM Magazine, La Jiribilla, El Caimán Barbudo, La Gaceta de Cuba, and the cultural sections of the magazines Mujeres and Muchacha from 2001 to 2010."
+          ],
+          "enlaces": [
+            {"texto": "Listen to the recordings", "url": "/plano-abierto/", "lang": "es"}
+          ]
+        },
+        {
+          "titulo": "For publishers and editors",
+          "alt": true,
+          "parrafos": [
+            "World rights outside Cuba are available for all three titles, separately or as a set. The three together make a twenty-year account of one movement, written from inside it, which is a stronger proposition than any of them alone.",
+            "These are the shortest books to bring into English on this list: essays and interviews rather than novels, and a subject with a defined academic readership. Sample translations, full manuscripts and reader reports are available on request."
+          ],
+          "enlaces": [
+            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art", "relleno": true},
+            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+          ]
+        }
+      ]
+    },
+
+    {
+      "ruta": "/en/poetry/",
+      "titulo": "Poetry",
+      "subtitulo": "Free verse and the décima, the ten-line Cuban stanza.",
+      "seo_titulo": "The poetry of Antonio López Sánchez, in Spanish",
+      "seo_desc": "Poems and décimas by Antonio López Sánchez, published complete in Spanish. Two Cuban national awards in 2026. Glosas answering José Martí and José Lezama Lima.",
+      "secciones": [
+        {
+          "titulo": "Read in Spanish, here, complete",
+          "parrafos": [
+            "There is a decision behind this section that is worth stating plainly. The poems are not translated, and there is no plan to translate them in order to publish them here. They are published complete, in Spanish, because a very large number of people in the United States read poetry in Spanish and are not well served by having it handed to them in English.",
+            "Everything written <em>about</em> the poems is in English. The poems themselves are in the language they were written in."
+          ],
+          "enlaces": [
+            {"texto": "Read the poems", "url": "/tinta-ciones/poemas-sueltos/", "lang": "es", "relleno": true},
+            {"texto": "Décimas with photographs", "url": "/tinta-ciones/de-cimitas/", "lang": "es"},
+            {"texto": "In the author's own voice", "url": "/tinta-ciones/en-mi-voz/", "lang": "es"}
+          ]
+        },
+        {
+          "titulo": "What a décima is",
+          "alt": true,
+          "parrafos": [
+            "Worth explaining, because it does not exist in English and it is central to what this poet does. The décima, or espinela, is a ten-line stanza in octosyllables with a fixed rhyme scheme, settled in Spain in the sixteenth century and naturalised in Cuba so completely that it became the country's oral and written verse form at once: sung in the countryside, improvised in competition, and written on the page by its most literary poets.",
+            "It is closed, difficult and popular at the same time. A good décima has to turn its argument inside ten lines and land on the last one. English has no equivalent, which is exactly why it is interesting to bring across.",
+            "The glosa goes one step further. The poet takes a stanza by another poet and answers it line by line, ending each of their own stanzas on one of the borrowed lines, in order, until the original is returned whole. Eight of the poems published here are glosas answering José Martí and José Lezama Lima. Those borrowed lines belong to their authors and are always printed apart, with the name of whoever wrote them."
+          ]
+        },
+        {
+          "titulo": "Recent awards",
+          "libros": [
+            {
+              "titulo": "Sonata de la lluvia",
+              "glosa": "Sonata of the Rain",
+              "anio": "2026",
+              "editorial": "Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima",
+              "genero": "Poetry, décima",
+              "url": "/tinta-ciones/sonata-de-la-lluvia/",
+              "texto": "Not a single poem but a sonata in three movements, one hundred and fifty lines of décima, each movement with its own tempo marking and its own epigraph borrowed from a Cuban songwriter. It can be read here in full."
+            },
+            {
+              "titulo": "Tres delirios y un desnudo",
+              "glosa": "Three Deliriums and a Nude",
+              "anio": "2026",
+              "editorial": "First Prize in Poetry, XXX Premio Farraluque de Literatura Erótica",
+              "genero": "Poetry, décima. For adult readers",
+              "url": "/laureles/tres-delirios-y-un-desnudo/",
+              "texto": "A triptych in twelve décimas. Literary erotica, written for adult readers, and formally the most demanding thing in this section: the erotic tradition and the strictest Spanish stanza in the same room."
+            },
+            {
+              "titulo": "Trampas, retratos y un 17 rojo",
+              "glosa": "Traps, Portraits and a Red 17",
+              "anio": "2005",
+              "editorial": "Editorial de la Mujer",
+              "genero": "Poetry, co-authored",
+              "url": "/libros/trampas-retratos-y-un-17-rojo/",
+              "texto": "The only poetry the author has published in book form, written with María del Carmen Mestas and Marcel Luerio. Rights available cover solely the poems he wrote. Five completed poetry collections remain unpublished."
+            }
+          ]
+        },
+        {
+          "titulo": "For publishers and editors",
+          "alt": true,
+          "parrafos": [
+            "Two things are available here, and they are not the same offer.",
+            "The first is a Spanish-language collection. Five finished manuscripts are unpublished and looking for a house, and no translation is involved. For a Spanish-language imprint in the United States or in Spain, this is a book that could be read this month.",
+            "The second is a bilingual edition. The décima is a formal problem worth an ambitious translator, and a facing-page edition is the honest way to publish it in English. Anyone interested in that conversation should write."
+          ],
+          "enlaces": [
+            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art", "relleno": true},
+            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+          ]
+        }
+      ]
+    },
+
+    {
+      "ruta": "/en/fiction/",
+      "titulo": "Fiction",
+      "subtitulo": "Heroic fantasy, horror, and fantasy for younger readers.",
+      "seo_titulo": "The fiction of Antonio López Sánchez: fantasy and horror",
+      "seo_desc": "Five novels by Antonio López Sánchez: heroic fantasy, horror and children's fantasy, including a five-volume illustrated saga and a Cuban national award.",
+      "secciones": [
+        {
+          "titulo": "The case, and the cost",
+          "parrafos": [
+            "Heroic fantasy in English is an enormous market and a crowded one, and there is no point pretending otherwise. What is uncommon is where these books come from. This is heroic fantasy written in Havana, published by Cuban houses, with women at the centre of it from the first novel onward, and it has almost no counterpart in what reaches English from the Caribbean.",
+            "The honest obstacle is the translation. These are novels, not essays, and a literary translation is expensive. Sample chapters, synopses and reader reports are available for anyone weighing that cost, and any conversation about co-funding a translation is welcome."
+          ]
+        },
+        {
+          "titulo": "The novels",
+          "alt": true,
+          "libros": [
+            {
+              "titulo": "Las guerreras de la luz",
+              "glosa": "The Warriors of the Light",
+              "anio": "2011",
+              "editorial": "Editorial de la Mujer",
+              "genero": "Heroic fantasy",
+              "premio": "Premio La Rosa Blanca 2012, awarded by UNEAC, the Cuban writers' and artists' union",
+              "url": "/libros/las-guerreras-de-la-luz/",
+              "texto": "The first novel, and the one that won the author his first national award."
+            },
+            {
+              "titulo": "El Escudo de Valnúss",
+              "glosa": "The Shield of Valnúss",
+              "anio": "2015",
+              "editorial": "Editorial de la Mujer",
+              "genero": "Heroic fantasy",
+              "url": "/libros/el-escudo-de-valnuss/",
+              "texto": "A saga published as a boxed set of five illustrated volumes, with artwork by Rainel Cabarroi. The most ambitious object in the catalogue and the one that most obviously wants a series deal rather than a single title."
+            },
+            {
+              "titulo": "El otro lado del espejo",
+              "glosa": "The Other Side of the Mirror",
+              "anio": "2017",
+              "editorial": "Editorial Gente Nueva",
+              "genero": "Heroic fantasy",
+              "premio": "Honourable mention, Concurso La Edad de Oro, 2014, while still unpublished",
+              "url": "/libros/el-otro-lado-del-espejo/",
+              "texto": "Recognised by the jury before it found a publisher."
+            },
+            {
+              "titulo": "Grimorium",
+              "anio": "2018",
+              "editorial": "Editorial Oriente",
+              "genero": "Horror",
+              "url": "/libros/grimorium/",
+              "texto": "The one departure from fantasy into outright horror."
+            },
+            {
+              "titulo": "Perdidos en un librero",
+              "glosa": "Lost in a Bookcase",
+              "anio": "2026",
+              "editorial": "Editorial Quisicuaba",
+              "genero": "Children's fantasy",
+              "url": "/libros/perdidos-en-un-librero/",
+              "texto": "The most recent book, published digitally, and the shortest route into this author for a children's list."
+            },
+            {
+              "titulo": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados",
+              "glosa": "Of the Strange Adventure of Don Quixote in Distant Lands, and Other Events Forgotten Until Now",
+              "anio": "2021",
+              "editorial": "Editorial Cubaliteraria",
+              "genero": "Fiction",
+              "url": "/libros/de-la-extrana-aventura-de-don-quijote/",
+              "texto": "Cervantes rewritten from Cuba. It grew out of the story that won the Reescribir El Quijote en Cuba competition in 2005."
+            }
+          ]
+        },
+        {
+          "titulo": "Short stories",
+          "parrafos": [
+            "Alongside the novels there is a body of short fiction, published complete on this site in Spanish: a psychiatrist's consulting room, a neighbour who decides to kill a tree, six friends who need to complete an ancient rite, a toy dragon in a child's bedroom.",
+            "Short fiction is often the cheapest way for a foreign publisher to test an author. Individual stories are available for magazine and anthology publication, in Spanish or in translation."
+          ],
+          "enlaces": [
+            {"texto": "Read the stories", "url": "/contarte/", "lang": "es"},
+            {"texto": "The full catalogue", "url": "/libros/", "lang": "es"}
+          ]
+        },
+        {
+          "titulo": "For publishers and editors",
+          "alt": true,
+          "parrafos": [
+            "World rights outside Cuba are available for every title above. Cuban editions hold exclusivity inside Cuba only, and that exclusivity is not affected by any agreement made here.",
+            "Five poetry collections and three story collections are finished and unpublished. Nothing has been offered anywhere outside Cuba."
+          ],
+          "enlaces": [
+            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art", "relleno": true},
+            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+          ]
+        }
+      ]
+    },
+
+    {
+      "ruta": "/en/author/",
+      "titulo": "The author",
+      "subtitulo": "Antonio López Sánchez. Havana, 1973.",
+      "seo_titulo": "Antonio López Sánchez: biography and record",
+      "seo_desc": "Cuban writer, poet and journalist born in Havana in 1973. Fourteen books, national awards, and two decades in the Cuban cultural press.",
+      "secciones": [
+        {
+          "titulo": "In short",
+          "parrafos": [
+            "Antonio López Sánchez was born in Havana on 16 January 1973. He holds a degree in Social Communication from the University of Havana, graduated from the ninth course of the Onelio Jorge Cardoso Centre for Literary Training in 2007, and completed the postgraduate programme Crítica con Arte at the José Martí International Institute of Journalism in 2022.",
+            "He has published fourteen books since 2001, across heroic fantasy, horror, children's literature, poetry, and essays and interviews on the Cuban Nueva Trova. He has spent his working life in the Cuban cultural press.",
+            "This site is his catalogue and his archive. It was built because a good deal of the work was scattered across publications that are disappearing: one of the radio stations that broadcast him is now entirely offline, and those programmes survive here and in the Internet Archive."
+          ]
+        },
+        {
+          "titulo": "Awards",
+          "alt": true,
+          "lista": [
+            "<strong>2026</strong>. First Prize in Poetry, XXX Premio Farraluque de Literatura Erótica, and an honourable mention in short fiction at the same competition.",
+            "<strong>2026</strong>. Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima.",
+            "<strong>2014</strong>. Honourable mention, Concurso La Edad de Oro, for the then unpublished novel <em>El otro lado del espejo</em>.",
+            "<strong>2013</strong>. Finalist, Concurso de Minicuentos El Dinosaurio.",
+            "<strong>2012</strong>. Premio La Rosa Blanca, awarded by UNEAC, for <em>Las guerreras de la luz</em>.",
+            "<strong>2005</strong>. First prize, Reescribir El Quijote en Cuba.",
+            "<strong>2002</strong>. Prize in written press, Concurso 26 de Julio, awarded by UPEC, the Cuban journalists' union."
+          ]
+        },
+        {
+          "titulo": "Journalism",
+          "parrafos": [
+            "Cultural sections of the magazines Mujeres and Muchacha, 2001 to 2010. Since then his work has appeared in La Jiribilla, La Gaceta de Cuba, El Caimán Barbudo, Juventud Rebelde, Alma Máter, AM PM Magazine, Cartelera and Cubaliteraria.",
+            "He has been editor in chief of the magazine Correo del libro, ran the book review section Pantallas de papel on the digital portal of the Cuban Institute of Radio and Television, and in 2023 was asked by the Cuban Book Institute to direct the special edition of El Cañonazo, the daily paper of the Havana International Book Fair, across its ten daily issues.",
+            "Since February 2026 he has again been part of the communications team at the National Museum of Fine Arts in Havana."
+          ],
+          "enlaces": [
+            {"texto": "Full record, in Spanish", "url": "/periodista/", "lang": "es"}
+          ]
+        },
+        {
+          "titulo": "Contact",
+          "alt": true,
+          "parrafos": [
+            "For readers, press and invitations, write to the author directly. For rights, editions and translations outside Cuba, write to his representation."
+          ],
+          "enlaces": [
+            {"texto": "Write to the author", "url": "mailto:antonio@antoniolopezsanchez.art", "relleno": true},
+            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art"},
+            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+          ]
+        }
+      ]
+    }
+  ]
+}

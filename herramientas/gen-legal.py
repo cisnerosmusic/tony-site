@@ -79,25 +79,14 @@ def pagina(clave, cfg, todos):
              "isPartOf": {"@id": f"{DOMINIO}/#sitio"},
              "about": {"@id": f"{DOMINIO}/#antonio"}}
 
-    # El menu completo solo existe en español; la pagina inglesa hereda el suyo.
+    # Las dos navegaciones salen de navegacion.py. La inglesa estuvo escrita
+    # a mano aqui y era la cuarta definicion suelta del proyecto.
     if d["lang"] == "es":
         menu = navegacion.menu_html(None)
         pie = navegacion.pie_html(None)
     else:
-        menu = ('    <li><a href="/libros/" lang="es">My books</a></li>\n'
-                '    <li><a href="/tinta-ciones/" lang="es">Tinta-ciones</a></li>\n'
-                '    <li><a href="/contarte/" lang="es">Contarte</a></li>\n'
-                '    <li><a href="/trova/" lang="es">The trova</a></li>\n'
-                '    <li><a href="/en/rights/" class="active" aria-current="page">Rights</a></li>\n'
-                '    <li><a href="/directorio/" lang="es">Contact</a></li>\n'
-                '    <li><a href="/" lang="es">ES</a></li>')
-        pie = ('    <a href="/en/">Home</a>\n'
-               '    <a href="/libros/" lang="es">My books</a>\n'
-               '    <a href="/tinta-ciones/" lang="es">Tinta-ciones</a>\n'
-               '    <a href="/contarte/" lang="es">Contarte</a>\n'
-               '    <a href="/trova/" lang="es">The trova</a>\n'
-               '    <span aria-current="page">Rights</span>\n'
-               '    <a href="/directorio/" lang="es">Contact</a>')
+        menu = navegacion.menu_en_html("/en/rights/")
+        pie = navegacion.pie_en_html("/en/rights/")
 
     etiqueta_menu = "Open menu" if d["lang"] == "en" else "Abrir menú"
     saltar = "Skip to content" if d["lang"] == "en" else "Saltar al contenido"
