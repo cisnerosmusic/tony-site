@@ -325,10 +325,9 @@ Cuando haya corriente en Alamar y pueda enviar:
 
 ## 6. Técnico, menor
 
-- **Repo público sin `LICENSE`**, con la obra literaria del autor dentro. Por defecto es "todos los derechos reservados", así que no hay agujero, pero conviene un archivo explícito: código libre, textos © Antonio López Sánchez.
-- **Secciones vacías en el sitemap**: `/tinta-ciones/de-cimitas/` e `/ineditos/` están indexadas casi sin contenido. Valorar `noindex` hasta que tengan material.
+- **`/ineditos/` sigue indexada casi sin contenido.** De-Cimitas ya tiene siete piezas, así que ese aviso caducó, pero Inéditos aún no tiene ni una sinopsis. Valorar `noindex` hasta que Tony mande material.
 - **`.nota-demo`**: la clase ya no marca contenido de demo, ahora lleva notas reales. Conviene renombrarla a `.nota` antes de que la plantilla se clone a otro artista, para que nadie la borre pensando que es andamiaje.
-- **Menú móvil, la deficiencia más repetida del sitio.** Las 28 páginas con hamburguesa carecen de `aria-expanded`, `aria-controls`, sincronización accesible del estado abierto y cerrado, y cierre con Escape. Hoy se abre con un `onclick` en línea que solo hace toggle de una clase. No impide usar el sitio, pero es lo que más se repite.
+- ~~Menú móvil sin accesibilidad~~ **RESUELTO**: las 42 páginas con hamburguesa llevan `aria-expanded` y `aria-controls`, el estado se sincroniza desde `app.js` y no queda ni un `onclick` en línea. `comprobar.py` lo vigila en cada tanda.
 - **Tarjetas sociales mal proporcionadas.** Las 14 páginas de libro declaran `twitter:card: summary_large_image` con la cubierta como imagen, y las cubiertas son verticales (640x961, ratio 0.67, cuando ese formato pide ~1.91). Las redes van a recortarlas por el centro y se pierden el título y el nombre del autor. O se pasan esas páginas a `summary`, o se genera una tarjeta horizontal por libro.
 - **No hay pruebas ni workflows de GitHub Actions.** El README declara cifras de Lighthouse excelentes y no hay razón para dudarlas, pero no son reproducibles desde el repositorio. Un workflow que corra Lighthouse CI y valide el JSON-LD en cada push cerraría ese hueco y serviría de red para el trabajo entre dos máquinas.
 - **`/novelas/` y `/poeta/` son redirecciones blandas**: `meta refresh` con `noindex` y canonical, que responden 200. Están correctas para lo que son y GitHub Pages no permite un 301 real, pero conviene saber que no son redirecciones de servidor.
