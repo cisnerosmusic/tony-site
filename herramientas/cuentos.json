@@ -4,7 +4,7 @@
     "titulo": "La muñeca y el príncipe",
     "anio": "2014",
     "archivo": "cuentos/la-muneca-y-el-principe.txt",
-    "linea": "Los juguetes de Pilar preparan su cumpleaños, y hace falta un príncipe.",
+    "linea": "En el cuarto de los juguetes de Pilar apareció un dragón. Pero hace falta un príncipe para enfrentarlo.",
     "procedencia": {
       "texto": "Publicado en Cuentos de muñecas (¡A leer y a jugar!), compilación de Magaly Sánchez Ochoa, Editorial de la Mujer, 2015",
       "libro": "/libros/cuentos-de-munecas/",
@@ -17,7 +17,7 @@
     "slug": "aquelarre",
     "titulo": "Aquelarre",
     "archivo": "cuentos/aquelarre.txt",
-    "linea": "Seis amigas se reúnen en un apartamento. La velada termina en ritual.",
+    "linea": "Seis singulares amigas necesitan completar un arcano rito para sobrevivir en el mundo actual.",
     "seo_titulo": "Aquelarre, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: seis amigas se reúnen en un apartamento de La Habana y la velada termina en ritual, con nueva líder."
   },
@@ -25,7 +25,7 @@
     "slug": "asesinato",
     "titulo": "Asesinato",
     "archivo": "cuentos/asesinato.txt",
-    "linea": "La vecina de los bajos le tenía miedo al árbol. Un día bajó con gasolina.",
+    "linea": "La vecina de los bajos le tenía miedo a un árbol. Y decidió matarlo...",
     "seo_titulo": "Asesinato, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: una vecina le teme al árbol de la acera y baja con gasolina y trapos. Lo que ocurre después lo ve un balcón."
   },
@@ -33,7 +33,7 @@
     "slug": "clinica-del-miedo",
     "titulo": "Clínica del miedo",
     "archivo": "cuentos/clinica-del-miedo.txt",
-    "linea": "Un paciente se derrumba en el diván. Su miedo es a la claridad.",
+    "linea": "Un paciente se derrumba en el diván de un singular especialista.",
     "seo_titulo": "Clínica del miedo, minicuento de Antonio López Sánchez",
     "seo_desc": "Minicuento completo de Antonio López Sánchez: un paciente confiesa su miedo en la consulta de un especialista muy paciente. Se lee en un minuto."
   },
@@ -41,7 +41,7 @@
     "slug": "duelo",
     "titulo": "Duelo",
     "archivo": "cuentos/duelo.txt",
-    "linea": "Dos figuras frente a frente en la nieve. Hoy uno de los dos conocerá la gloria.",
+    "linea": "Dos figuras frente a frente en la nieve. Un duelo con desiguales contendientes...",
     "seo_titulo": "Duelo, minicuento de Antonio López Sánchez",
     "seo_desc": "Minicuento completo de Antonio López Sánchez: dos figuras se enfrentan sobre la nieve y suena un disparo. Se lee en un minuto."
   },
@@ -49,7 +49,7 @@
     "slug": "luces",
     "titulo": "Luces",
     "archivo": "cuentos/luces.txt",
-    "linea": "Vuelve la corriente, y con ella la lavadora, la manguera en alto y un cuento que no llega a escribirse.",
+    "linea": "La literatura y la imaginación desbordante de un escritor contra la realidad cotidiana y la electricidad voluble.",
     "seo_titulo": "Luces, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: llega la electricidad y con ella la lavadora, la manguera en alto y un cuento que no llega a escribirse."
   },

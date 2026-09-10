@@ -480,6 +480,15 @@ a.libro-cubierta:hover img {
   color: var(--text-dim);
 }
 
+/* Variante para cuando lo que sigue al punto medio no es una etiqueta sino
+   una frase escrita por el autor: se lee, no se grita. */
+.lista-obras .meta.frase {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 /* ── Poesía ─────────────────────────────────── */
 /* .verso es la regla que sostiene toda la poesia del sitio: conserva los
    saltos de linea tal como los escribio el autor. Sin ella los versos se leen
@@ -938,3 +947,8 @@ a.libro-cubierta:hover img {
 }
 .legal-bloque .lista-obras { margin-top: 1.2rem; }
 .legal-enlaces { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.4rem; }
+
+/* En "Tres delirios y un desnudo" el autor escribe las decimas seguidas, sin
+   una linea en blanco entre ellas. El texto no se toca: la separacion entre
+   estrofas la pone aqui la hoja de estilos, que es su sitio. */
+.decima + .decima { margin-top: 1.7rem; }

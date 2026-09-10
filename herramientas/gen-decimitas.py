@@ -20,7 +20,7 @@ import navegacion
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 URL = DOMINIO + "/tinta-ciones/de-cimitas/"
-CSS = "?v=20"
+CSS = "?v=22"
 
 
 def esc(t):
@@ -179,7 +179,7 @@ def main():
   <div class="reveal reveal-right">
     <h2 class="section-title">Lo que mira la décima</h2>
     <div class="section-divider"></div>
-    <p class="section-text" style="margin-bottom:3rem;">Primero está la imagen. Después vienen los diez versos, que no la explican: le responden. Ninguna de las dos cosas se sostiene sin la otra, así que aquí van siempre juntas.</p>
+    <p class="section-text" style="margin-bottom:3rem;">Otro modo de hacer poesía es buscar la voz oculta, las historias que habitan detrás de una imagen. Aquí van mis fotos vistas y el poema que escucho en ellas.</p>
   </div>
 
 {piezas}

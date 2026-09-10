@@ -18,7 +18,7 @@ leer_poema = SourceFileLoader("leer_poema", os.path.join(
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 URL = DOMINIO + "/tinta-ciones/poemas-sueltos/"
-CSS = "?v=20"
+CSS = "?v=22"
 
 
 def esc(t):
@@ -150,7 +150,7 @@ def main():
 '''])}
 <header class="page-header">
   <h1>Poemas sueltos</h1>
-  <p>Versos que andan por su cuenta, fuera de todo libro.</p>
+  <p>Unos lienzos amplios para dibujar mis visiones.</p>
 </header>
 
 <main id="main">
@@ -161,7 +161,7 @@ def main():
   <div class="reveal reveal-right" style="margin-top:4.5rem;">
     <h2 class="section-title">Glosas</h2>
     <div class="section-divider"></div>
-    <p class="section-text" style="margin-bottom:3rem;">Glosar es tomar unos versos ajenos y contestarlos, verso a verso, hasta devolverlos al final. Los que abren cada una de estas décimas no son míos: son de José Martí y de José Lezama Lima, y van en su sitio, con su nombre.</p>
+    <p class="section-text" style="margin-bottom:3rem;">Las glosas a otros poetas son una práctica habitual entre decimistas. Aquí escojo dos enormes cumbres, José Martí y José Lezama Lima, para dialogar de algún modo con sus versos. Va en esta rimada habitación apenas un botón de muestra de un trabajo mucho mayor, que espera sus páginas. Entretanto, aquí van de regalo algunas de las Glosas Martianas y las Glozama Rimas.</p>
   </div>
 
 {cuerpo_glosas}

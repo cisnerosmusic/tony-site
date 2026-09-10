@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=20"
+CSS = "?v=22"
 
 # Calendario de Contarte. Cuadrado latino de 7x7: cada dia los cuentos salen en
 # otro orden, cada cuento pasa exactamente una vez por cada posicion a lo largo
@@ -232,8 +232,9 @@ def pagina_indice(cuentos):
   <div class="reveal reveal-right">
     <h2 class="section-title">Había una vez...</h2>
     <div class="section-divider"></div>
-    <p class="section-text" style="margin-bottom:1.5rem;">Con esas tres palabras empezó todo, y todavía funcionan. Aquí viven mis cuentos, cada uno en su propia habitación, para entrar a leerlos enteros.</p>
-    <p class="section-text" style="margin-bottom:3rem;">Algunos vienen de un libro y siguen perteneciéndole: desde su cuarto se puede ir al libro, y desde el libro se llega hasta aquí. Otros andan sueltos, esperando el suyo.</p>
+    <p class="section-text" style="margin-bottom:1.5rem;">Esas tres palabras ancestrales anuncian una historia. Aquí viven algunos de mis cuentos, cada uno con un sitio propio y con una mano extendida que invita a recorrerlos.</p>
+    <p class="section-text" style="margin-bottom:1.5rem;">Los hay libres, todavía sin asideros. Los hay que vienen de libros que esperan ver la luz. Algunos son risueños, otros oscuros. Pero todos están prestos a ofrecer su compañía.</p>
+    <p class="section-text" style="margin-bottom:3rem;">El cuento, ese duende que acompaña a la humanidad desde los albores de los tiempos, todavía regala magias, realidades y hasta miedos.</p>
   </div>
 
   <div class="cuento-lista">

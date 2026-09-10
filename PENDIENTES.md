@@ -155,6 +155,43 @@ Si esa página sale idéntica, se regeneran las 13 restantes. Si sale distinta, 
 
 `gen-libro.py` necesita Pillow (`pip install Pillow`): lee las dimensiones reales de cada imagen para emitir `width` y `height`, que es de donde sale el CLS 0 del sitio.
 
+## 2 ter. La tanda de Tony del 9 de septiembre por la noche
+
+Ernesto no pudo trabajar desde la Máquina 2, pero llegó una lista larga de correcciones de Tony. Todas aplicadas, y todas son suyas: aquí no se reescribió a nadie. Solo se corrigieron tres erratas de tecleo (`vdesbordante`, `un mano`, un espacio doble) y se puso mayúscula tras un punto.
+
+**Contarte.** Entradilla nueva de tres párrafos, y seis de las siete líneas de presentación de los cuentos. La séptima de su lista era la misma repetida.
+
+**Tinta-ciones.** Entradilla de las Glosas. Los textos largos que mandó para Poemas sueltos y De-Cimitas no cabían en el descriptor de la lista, que es una etiqueta corta en versalitas, así que sus palabras se repartieron: la parte descriptiva quedó en la lista y la parte evocadora donde se lee mejor, en el subtítulo de Poemas sueltos y en la entradilla de De-Cimitas. No se perdió ni una palabra.
+
+**Inéditos.** Subtítulo, entradilla nueva y las dos etiquetas. La frase de Fragmentos salía a gritos porque `.lista-obras .meta` va en mayúsculas: se le añadió la variante `.meta.frase`, en caja baja, para cuando lo que va ahí es una frase del autor y no una etiqueta.
+
+**Laureles.** Fuera el convocante y los nombres del jurado del Farraluque, como pidió. Solo se tocó esa entrada: en la del Dinosaurio, "Convocado" arranca la frase que sostiene las tres fechas de *Proclama Real*, que costaron trabajo.
+
+### Las dos obras del Farraluque, ya publicadas
+
+Sí las había mandado: estaban en `Imágenes/tony/OBRAS PREMIOS`. Las genera `herramientas/gen-farraluque.py` y viven en:
+
+- `/laureles/tres-delirios-y-un-desnudo/`, tríptico, 12 décimas
+- `/laureles/revelaciones/`, cuento, 2.818 palabras
+
+**Por qué bajo Laureles y no en Tinta-ciones y Contarte.** Es literatura erótica adulta y Contarte tiene cuentos infantiles en una rejilla que además se baraja cada día: tarde o temprano *Revelaciones* habría amanecido junto a *La muñeca y el príncipe*. Las dos páginas llevan `<meta name="rating" content="adult">`, que es la señal que entienden los buscadores, `isFamilyFriendly: false` en el JSON-LD y un aviso visible antes del texto. Si Tony las quiere además en sus salas naturales, se mueven, pero esa es una decisión suya.
+
+**Tres cosas que necesitan la palabra de Tony:**
+
+1. **El título.** En su mensaje escribió *Tres desnudos y un delirio*; su propio manuscrito dice *TRES DELIRIOS Y UN DESNUDO*, y así estaba ya en el sitio. Se dejó como está en el manuscrito. Que lo confirme.
+2. **`Revelaciones` no tiene puntos y aparte.** El original, tanto el .docx como el .txt, es un solo párrafo de 15.400 caracteres: en pantalla son 8,3 pantallas de texto seguido a 1280x800. No se le inventaron cortes. Si los quiere, los pone él.
+3. **"Estación La Gaveta".** Lo dijo con un "quizá", así que se puso como título de la sala dentro de `/ineditos/`, y el nombre de la sección en el menú y la URL siguen siendo Inéditos. Renombrar la sección entera toca menú, pie, sitemap y dirección en 44 páginas: se hace en cuanto lo confirme.
+
+**Derechos.** *Revelaciones* lleva un epígrafe de Silvio Rodríguez, así que entra en la lista de versos ajenos del `LICENSE` y de `/derechos/` y `/en/rights/`. Esa lista hay que revisarla cada vez que entra un texto nuevo con epígrafe.
+
+**Herramienta nueva.** `herramientas/version.py`, que sube el `?v=N` de un recurso en todo el sitio de una vez:
+
+```bash
+python herramientas/version.py styles.css 22
+```
+
+Existe porque hoy hubo que subir styles.css dos veces y son medio centenar de archivos. Y aprendió el mismo tropiezo que el comprobador: se reescribía sus propios comentarios, porque contenían la cadena que busca. Ahora se excluye.
+
 ## 3 ter. El comprobador, y por qué existe (9 de septiembre)
 
 Ernesto lo dejó dicho: *"cada vez que terminemos, habrá auditoría en ciclos, el pipe viene por ahí y será así siempre"*. Construir, auditar, corregir, volver a empezar.

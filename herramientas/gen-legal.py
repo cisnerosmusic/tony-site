@@ -21,7 +21,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=20"
+CSS = "?v=22"
 
 
 def esc(t):
