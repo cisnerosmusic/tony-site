@@ -96,8 +96,14 @@ def seccion_html(s, n):
     dentro = [f'  <div class="reveal reveal-{lado}">',
               f'    <h2 class="section-title">{esc(s["titulo"])}</h2>',
               '    <div class="section-divider"></div>']
-    for p in s.get("parrafos", []):
-        dentro.append(f'    <p class="section-text" style="margin-bottom:1.25rem;">{p}</p>')
+    # El ritmo de la portada española: 1,25 entre parrafos de un mismo bloque y
+    # 2 antes de lo que cierra la seccion (firma, lista o botones). Poner 1,25 a
+    # todos, que es lo que hacia esto al principio, aplana la pagina y le quita
+    # la respiracion antes de cada fila de acciones.
+    parrafos = s.get("parrafos", [])
+    for i, p in enumerate(parrafos):
+        margen = "2rem" if i == len(parrafos) - 1 else "1.25rem"
+        dentro.append(f'    <p class="section-text" style="margin-bottom:{margen};">{p}</p>')
     if s.get("firma"):
         dentro.append(f'    <p class="vyv-firma">{esc(s["firma"])}</p>')
     if s.get("lista"):
