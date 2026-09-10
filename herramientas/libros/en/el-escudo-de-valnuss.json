@@ -1,0 +1,37 @@
+{
+  "tira_sub": "Four protagonists, five books, one single story and a most unusual package...",
+  "seo_titulo": "El Escudo de Valnúss: a fantasy saga in five volumes",
+  "seo_desc": "El Escudo de Valnúss (Editorial de la Mujer, 2015), a heroic fantasy saga published as a boxed set of five illustrated volumes. Synopsis and excerpts.",
+  "cubierta_alt": "Cover of El Escudo de Valnúss, illustrated by Rainel Cabarroi",
+  "genero": "Heroic fantasy",
+  "contratapa_titulo": "Synopsis",
+  "volumenes_titulo": "The five books",
+  "contratapa": "libros/el-escudo-de-valnuss/contratapa.en.txt",
+  "vyv": "libros/el-escudo-de-valnuss/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "El Escudo de Valnúss (The Shield of Valnúss)",
+    "género": "Heroic fantasy",
+    "formato": "Boxed set of five volumes",
+    "cubierta": "Illustration of every cover and of the box: Rainel Cabarroi"
+  },
+  "volumenes": [
+    { "alt": "Cover of La magia de la aurora, volume 1 of El Escudo de Valnúss", "pie": "Feminine magic can do anything..." },
+    { "alt": "Cover of El rojo del mar, volume 2 of El Escudo de Valnúss", "pie": "The power of will and discipline..." },
+    { "alt": "Cover of Un fuego a toda vela, volume 3 of El Escudo de Valnúss", "pie": "Vengeance and love..." },
+    { "alt": "Cover of Campos de caballos, volume 4 of El Escudo de Valnúss", "pie": "Magic and evil..." },
+    { "alt": "Cover of Los cuatro talismanes, volume 5 of El Escudo de Valnúss", "pie": "The final battle..." }
+  ],
+  "galeria": [
+    {
+      "alt": "The five covers of the El Escudo de Valnúss boxed set",
+      "pie": "The five covers of the boxed set, illustrated by Rainel Cabarroi"
+    }
+  ],
+  "prensa": [
+    { "pie": "Interview by Iyaimí Palomares, Juventud Rebelde, 12 February 2016" }
+  ],
+  "catalogo": {
+    "glosa": "The Shield of Valnúss",
+    "sinopsis": "A sorceress, an undersea warrior, an enchanted steed and a corsair join forces against a sorcerer who has sown chaos in their worlds. Five books, one novel, published as an illustrated boxed set."
+  }
+}

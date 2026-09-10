@@ -1,0 +1,28 @@
+{
+  "tira_sub": "Poetry for six hands",
+  "seo_titulo": "Trampas, retratos y un 17 rojo: poetry, co-authored",
+  "seo_desc": "Trampas, retratos y un 17 rojo (Editorial de la Mujer, 2005), a co-authored poetry collection: free verse, haiku and erotic décimas. Excerpt in Spanish.",
+  "cubierta_alt": "Cover of Trampas, retratos y un 17 rojo, illustrated by Juan Carlos García",
+  "genero": "Poetry",
+  "vyv": "libros/trampas-retratos-y-un-17-rojo/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "Trampas, retratos y un 17 rojo (Traps, Portraits and a Red 17)",
+    "autoría": "Co-authored with María del Carmen Mestas and Marcel Luerio",
+    "género": "Poetry",
+    "cubierta": "Illustration by Juan Carlos García"
+  },
+  "galeria": [
+    {
+      "alt": "Antonio López Sánchez with María del Carmen Mestas and Marcel Luerio",
+      "pie": "With María del Carmen Mestas and Marcel Luerio"
+    },
+    {
+      "alt": "Launch of the collection at the Casa de la Poesía",
+      "pie": "Launch at the Casa de la Poesía, Havana, March 2005"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Traps, Portraits and a Red 17",
+    "sinopsis": "Three poets, three forms: free verse by María del Carmen Mestas, haiku by Marcel Luerio, and a sequence of erotic décimas by the author, Retratos de mañana. His only poetry collection to date."
+  }
+}

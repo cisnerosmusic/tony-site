@@ -1,0 +1,26 @@
+{
+  "tira_sub": "They write on the other side, too",
+  "seo_titulo": "El otro lado del espejo: a heroic fantasy novel",
+  "seo_desc": "El otro lado del espejo (Gente Nueva, 2017), heroic fantasy honoured at the Concurso La Edad de Oro. Back cover, three chapters in Spanish, the author's note.",
+  "cubierta_alt": "Cover of El otro lado del espejo, illustrated by Rainel Cabarroi",
+  "genero": "Heroic fantasy",
+  "premios": [
+    "Honourable mention, Concurso La Edad de Oro 2014"
+  ],
+  "contratapa": "libros/el-otro-lado-del-espejo/contratapa.en.txt",
+  "vyv": "libros/el-otro-lado-del-espejo/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "El otro lado del espejo (The Other Side of the Mirror)",
+    "género": "Heroic fantasy",
+    "cubierta": "Illustration by Rainel Cabarroi",
+    "premio": "Honourable mention, Concurso La Edad de Oro 2014"
+  },
+  "prensa": [
+    { "pie": "Interview by Iyaimí Palomares, Juventud Rebelde, 8 February 2019" }
+  ],
+  "catalogo": {
+    "glosa": "The Other Side of the Mirror",
+    "premio": "Honourable mention, La Edad de Oro 2014",
+    "sinopsis": "Could those who live on the other side of the mirror invade us? One of the last wizards of the Library travels across times and magical dimensions to save his love. Heroic fantasy in homage to Borges."
+  }
+}

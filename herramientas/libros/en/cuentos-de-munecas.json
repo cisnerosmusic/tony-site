@@ -1,0 +1,27 @@
+{
+  "tira_sub": "The dolls are in charge; I brought a prince",
+  "seo_titulo": "Cuentos de muñecas: stories with dolls as heroines",
+  "seo_desc": "Anthology compiled by Magaly Sánchez Ochoa (Editorial de la Mujer, 2015) with the story La muñeca y el príncipe, by Antonio López Sánchez.",
+  "cubierta_alt": "Cover of Cuentos de muñecas, illustrated by Alain R. Cuba",
+  "genero": "Children's literature",
+  "contratapa_titulo": "About the book",
+  "contratapa": "libros/cuentos-de-munecas/contratapa.en.txt",
+  "vyv": "libros/cuentos-de-munecas/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "Cuentos de muñecas (¡A leer y a jugar!) (Doll Stories: Let's Read and Play!)",
+    "autoría": "Various authors, compiled by Magaly Sánchez Ochoa",
+    "género": "Children's literature",
+    "cubierta": "Illustration by Alain R. Cuba",
+    "incluye": "La muñeca y el príncipe (The Doll and the Prince), by Antonio López Sánchez"
+  },
+  "lecturas": [
+    {
+      "texto": "Read La muñeca y el príncipe",
+      "pie": "My story from this book, complete and in Spanish, in the Contarte room of this site"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Doll Stories",
+    "sinopsis": "Stories and poems for children with dolls as their protagonists, compiled by Magaly Sánchez Ochoa. The author's first children's story, which gave birth to the characters of his later books."
+  }
+}

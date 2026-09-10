@@ -33,6 +33,9 @@
           "parrafos": [
             "Fourteen published books across twenty-five years, in genres that rarely share a shelf. For a reader arriving in English, these are the three doors, in the order that makes sense from here."
           ],
+          "enlaces": [
+            {"texto": "All fourteen books", "url": "/en/books/"}
+          ],
           "puertas": [
             {
               "numero": "01",
@@ -44,13 +47,13 @@
               "numero": "02",
               "titulo": "Poetry",
               "url": "/en/poetry/",
-              "texto": "Free verse and the décima, the ten-line Cuban stanza. Two national awards in 2026 alone. Published here complete, in Spanish, for the very large readership in the United States that reads poetry in that language and does not need it translated."
+              "texto": "Free verse and the décima, the ten-line Cuban stanza. Two awards in 2026 alone. Published here complete, in Spanish, for the very large readership in the United States that reads poetry in that language and does not need it translated."
             },
             {
               "numero": "03",
               "titulo": "Fiction",
               "url": "/en/fiction/",
-              "texto": "Heroic fantasy, horror and children's fantasy: five novels, one of them a five-volume illustrated saga, and a national award. The genre is enormous in English and the translation is the real cost. Sample chapters and reader reports available."
+              "texto": "Heroic fantasy, horror and children's fantasy: five novels, one of them a five-volume illustrated saga, and a national award. The genre is enormous in English and the translation is the real cost. Synopses and full manuscripts available on request."
             }
           ]
         },
@@ -82,7 +85,7 @@
         {
           "titulo": "What this is",
           "parrafos": [
-            "The Nueva Trova is the Cuban song movement that emerged publicly in February 1967 and went on to define the sound and the argument of several generations: Silvio Rodríguez, Pablo Milanés, Noel Nicola, Vicente and Santiago Feliú, and the three waves of songwriters who followed them. It is studied in Latin American departments, in ethnomusicology and in cultural history, and it is short of primary sources written from within Cuba by someone who was there.",
+            "The Nueva Trova is the Cuban song movement that emerged publicly in February 1967 and went on to define the sound and the argument of several generations: Silvio Rodríguez, Pablo Milanés, Noel Nicola, Vicente and Santiago Feliú, and the three waves of songwriters who followed them. It is studied in Latin American departments, in ethnomusicology and in cultural history.",
             "Between 2001 and 2019 Antonio López Sánchez published three books on it. He is not a musician. He is a journalist with a degree in Social Communication from the University of Havana who spent two decades interviewing the people who made this music, writing about their records in the Cuban cultural press, and, on occasion, reading his own poems on stage between their guitars.",
             "The three books do not repeat each other. Each one asks a question the previous one left open."
           ]
@@ -97,8 +100,8 @@
               "anio": "2001",
               "editorial": "Atril Ediciones Musicales",
               "genero": "Essays and interviews",
-              "url": "/libros/la-cancion-de-la-nueva-trova/",
-              "texto": "The author's first book, and a history of the movement told with the voices of its own protagonists, from its public appearance in February 1967 onwards. It reads the three successive waves of songwriters, what separates them and what they share, and it argues that the guitar remained the centre of gravity even when other instruments arrived. Written close enough to the source to carry testimony that exists nowhere else."
+              "url": "/en/books/la-cancion-de-la-nueva-trova/",
+              "texto": "The author's first book, and a history of the movement told with the voices of its own protagonists, from its public appearance in February 1967 onwards. It reads the three successive waves of songwriters, what separates them and what they share, and it argues that the guitar remained the centre of gravity even when other instruments arrived. Written close to the source, with interviews given by the founders themselves."
             },
             {
               "titulo": "Trovadoras",
@@ -106,7 +109,7 @@
               "anio": "2008",
               "editorial": "Editorial Oriente",
               "genero": "Interviews",
-              "url": "/libros/trovadoras/",
+              "url": "/en/books/trovadoras/",
               "texto": "Working women songwriters speak about the place they, and the women before them, have held in Cuban song. Alongside them the book carries two specialists: Isabel Moya on gender and the musicographer Lino Betancourt. For a gender studies or Latin American music list this is a primary source in interview form, and there is very little like it in any language."
             },
             {
@@ -115,7 +118,7 @@
               "anio": "2019",
               "editorial": "Editorial Capiro",
               "genero": "Essay",
-              "url": "/libros/convertida-en-cancion/",
+              "url": "/en/books/convertida-en-cancion/",
               "texto": "Which woman are our troubadours singing to? Have the women in those sung portraits changed, or grown? The book reads the lyrics as a running argument with Cuban society and follows what they say about women entering public life, about sexuality inside and outside couples, about sex work, about breakups and infidelity, and about homosexual love. It is the most directly citable of the three for a university press, and the one that travels furthest from Cuba."
             }
           ]
@@ -140,7 +143,7 @@
           "alt": true,
           "parrafos": [
             "World rights outside Cuba are available for all three titles, separately or as a set. The three together make a twenty-year account of one movement, written from inside it, which is a stronger proposition than any of them alone.",
-            "These are the shortest books to bring into English on this list: essays and interviews rather than novels, and a subject with a defined academic readership. Sample translations, full manuscripts and reader reports are available on request."
+            "These are the shortest books to bring into English on this list: essays and interviews rather than novels, and a subject with a defined academic readership. Full manuscripts and synopses are available on request."
           ],
           "enlaces": [
             {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art", "relleno": true},
@@ -155,7 +158,7 @@
       "titulo": "Poetry",
       "subtitulo": "Free verse and the décima, the ten-line Cuban stanza.",
       "seo_titulo": "The poetry of Antonio López Sánchez, in Spanish",
-      "seo_desc": "Poems and décimas by Antonio López Sánchez, published complete in Spanish. Two Cuban national awards in 2026. Glosas answering José Martí and José Lezama Lima.",
+      "seo_desc": "Poems and décimas by Antonio López Sánchez, published complete in Spanish. Two Cuban awards in 2026. Glosas answering José Martí and José Lezama Lima.",
       "secciones": [
         {
           "titulo": "Read in Spanish, here, complete",
@@ -205,8 +208,8 @@
               "anio": "2005",
               "editorial": "Editorial de la Mujer",
               "genero": "Poetry, co-authored",
-              "url": "/libros/trampas-retratos-y-un-17-rojo/",
-              "texto": "The only poetry the author has published in book form, written with María del Carmen Mestas and Marcel Luerio. Rights available cover solely the poems he wrote. Five completed poetry collections remain unpublished."
+              "url": "/en/books/trampas-retratos-y-un-17-rojo/",
+              "texto": "The author's only poetry collection to date, shared with María del Carmen Mestas, in free verse, and Marcel Luerio, in haiku. His own part is a sequence of erotic décimas. Rights available cover solely the poems he wrote. Five completed poetry collections remain unpublished."
             }
           ]
         },
@@ -236,8 +239,8 @@
         {
           "titulo": "The case, and the cost",
           "parrafos": [
-            "Heroic fantasy in English is an enormous market and a crowded one, and there is no point pretending otherwise. What is uncommon is where these books come from. This is heroic fantasy written in Havana, published by Cuban houses, with women at the centre of it from the first novel onward, and it has almost no counterpart in what reaches English from the Caribbean.",
-            "The honest obstacle is the translation. These are novels, not essays, and a literary translation is expensive. Sample chapters, synopses and reader reports are available for anyone weighing that cost, and any conversation about co-funding a translation is welcome."
+            "Heroic fantasy in English is an enormous market and a crowded one, and there is no point pretending otherwise. What is uncommon is where these books come from. This is heroic fantasy written in Havana, published by Cuban houses, with women at the centre of its first two sagas.",
+            "The honest obstacle is the translation. These are novels, not essays, and a literary translation is expensive. Synopses and full manuscripts are available for anyone weighing that cost, and any conversation about co-funding a translation is welcome."
           ]
         },
         {
@@ -251,8 +254,8 @@
               "editorial": "Editorial de la Mujer",
               "genero": "Heroic fantasy",
               "premio": "Premio La Rosa Blanca 2012, awarded by UNEAC, the Cuban writers' and artists' union",
-              "url": "/libros/las-guerreras-de-la-luz/",
-              "texto": "The first novel, and the one that won the author his first national award."
+              "url": "/en/books/las-guerreras-de-la-luz/",
+              "texto": "The first novel: a print run in the high thousands that sold well across Cuba without any promotion, and the Premio La Rosa Blanca of UNEAC."
             },
             {
               "titulo": "El Escudo de Valnúss",
@@ -260,7 +263,7 @@
               "anio": "2015",
               "editorial": "Editorial de la Mujer",
               "genero": "Heroic fantasy",
-              "url": "/libros/el-escudo-de-valnuss/",
+              "url": "/en/books/el-escudo-de-valnuss/",
               "texto": "A saga published as a boxed set of five illustrated volumes, with artwork by Rainel Cabarroi. The most ambitious object in the catalogue and the one that most obviously wants a series deal rather than a single title."
             },
             {
@@ -270,7 +273,7 @@
               "editorial": "Editorial Gente Nueva",
               "genero": "Heroic fantasy",
               "premio": "Honourable mention, Concurso La Edad de Oro, 2014, while still unpublished",
-              "url": "/libros/el-otro-lado-del-espejo/",
+              "url": "/en/books/el-otro-lado-del-espejo/",
               "texto": "Recognised by the jury before it found a publisher."
             },
             {
@@ -278,7 +281,7 @@
               "anio": "2018",
               "editorial": "Editorial Oriente",
               "genero": "Horror",
-              "url": "/libros/grimorium/",
+              "url": "/en/books/grimorium/",
               "texto": "The one departure from fantasy into outright horror."
             },
             {
@@ -287,7 +290,7 @@
               "anio": "2026",
               "editorial": "Editorial Quisicuaba",
               "genero": "Children's fantasy",
-              "url": "/libros/perdidos-en-un-librero/",
+              "url": "/en/books/perdidos-en-un-librero/",
               "texto": "The most recent book, published digitally, and the shortest route into this author for a children's list."
             },
             {
@@ -296,8 +299,8 @@
               "anio": "2021",
               "editorial": "Editorial Cubaliteraria",
               "genero": "Fiction",
-              "url": "/libros/de-la-extrana-aventura-de-don-quijote/",
-              "texto": "Cervantes rewritten from Cuba. It grew out of the story that won the Reescribir El Quijote en Cuba competition in 2005."
+              "url": "/en/books/de-la-extrana-aventura-de-don-quijote/",
+              "texto": "Cervantes rewritten from Cuba: swept away at the windmills, Don Quixote and Sancho land in 1990s Havana. It won the Reescribir El Quijote en Cuba competition in 2005, from a jury that included Leonardo Padura, and it can be read free in Spanish."
             }
           ]
         },
@@ -309,7 +312,7 @@
           ],
           "enlaces": [
             {"texto": "Read the stories", "url": "/contarte/", "lang": "es"},
-            {"texto": "The full catalogue", "url": "/libros/", "lang": "es"}
+            {"texto": "The full catalogue", "url": "/en/books/"}
           ]
         },
         {

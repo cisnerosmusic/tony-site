@@ -1,0 +1,35 @@
+{
+  "tira_sub": "Don Quixote on a different adventure.",
+  "seo_titulo": "De la extraña aventura de Don Quijote: Cervantes, from Cuba",
+  "seo_desc": "Don Quixote and Sancho land in 1990s Havana: the story that won Reescribir El Quijote en Cuba in 2005, published by Cubaliteraria in 2021. Free download.",
+  "cubierta_alt": "Cover of De la extraña aventura de Don Quijote, illustrated by Iván Batista",
+  "genero": "Fiction",
+  "premios": [
+    "First prize, Reescribir El Quijote en Cuba competition, 2005"
+  ],
+  "contratapa_titulo": "About the book",
+  "contratapa": "libros/de-la-extrana-aventura-de-don-quijote/contratapa.en.txt",
+  "vyv": "libros/de-la-extrana-aventura-de-don-quijote/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (Of the Strange Adventure of Don Quixote in Distant Lands, and Other Events Forgotten Until Now)",
+    "género": "Fiction",
+    "formato": "EPUB",
+    "cubierta": "Illustration by Iván Batista",
+    "origen": "From the first prize of the Reescribir El Quijote en Cuba competition, 2005"
+  },
+  "descarga": {
+    "texto": "Read the whole book (in Spanish)",
+    "pie": "Free download from Cubaliteraria, the house that published it"
+  },
+  "galeria": [
+    {
+      "alt": "Launch table with the digital book projected on a screen behind",
+      "pie": "Launch of the EPUB at the Palacio de Computación, 30th International Book Fair, 2022"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Of the Strange Adventure of Don Quixote in Distant Lands",
+    "premio": "First prize, Reescribir El Quijote en Cuba, 2005",
+    "sinopsis": "Swept up by a gale at the windmills of chapter eight, Don Quixote and Sancho Panza land in a Caribbean capital in the 1990s, where a young poet takes them in. The jury that awarded it included Leonardo Padura. Free to read in Spanish."
+  }
+}

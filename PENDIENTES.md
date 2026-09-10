@@ -230,9 +230,53 @@ Tres decisiones de redacción que conviene conocer antes de tocar `ingles.json`:
 
 **Lo que falta del inglés:**
 
-1. Fichas inglesas por libro. Hoy cada libro tiene su bloque dentro de la página de sección, que para un editor que escanea puede bastar. Si se quiere página propia, es ampliar `gen-ingles.py`.
+1. ~~Fichas inglesas por libro~~ **HECHO el 10 de septiembre**: cada libro tiene su página inglesa completa. Ver la sección siguiente.
 2. Los dos campos que pide un editor extranjero y no tenemos: **extensión** en páginas o palabras y **edad recomendada** de cada título. Hay que pedírselos a Tony: no se pueden inventar.
-3. **Muestras traducidas.** Las páginas ofrecen *sample translations on request* y hoy no existe ninguna. Si alguien las pide mañana, no hay qué mandar. Es el hueco más incómodo del sitio inglés.
+3. **Muestras traducidas.** No existe ninguna. El 10 de septiembre se quitó de las páginas la promesa de *sample translations* y la de *reader reports*, que tampoco existen: ahora solo se ofrece lo que hay, manuscritos completos y sinopsis. Si algún día se encarga una muestra, se vuelve a ofrecer. **Regla: el sitio inglés no promete nada que no se pueda mandar esa misma tarde.**
+
+## 2 quinquies. Las páginas de libro en inglés, y el terreno para los demás idiomas (10 de septiembre)
+
+Los catorce libros tienen su página en inglés, en `/en/books/<slug>/`, con los mismos bloques que la española: contratapa, *In my own words* (el "Con voz y voto"), fragmentos, presentaciones, prensa y ficha. Y un catálogo, `/en/books/`, agrupado en el orden del mercado inglés: trova, poesía, narrativa, volúmenes colectivos.
+
+**La arquitectura, que es lo que importa para el francés, el italiano y el portugués:**
+
+- **El español dejó de ser un caso especial.** Sus textos de interfaz salieron de `gen-libro.py` a `herramientas/idiomas.json`, y la página española sale idéntica a como salía. **Verificado:** al regenerar, las 14 páginas españolas cambiaron en 42 líneas, tres cada una, y las 42 son `hreflang`. Ni una línea más.
+- **Cada idioma es una capa**: `herramientas/libros/<idioma>/<slug>.json`, con solo lo traducible. Los textos largos traducidos van junto al original con sufijo: `contratapa.en.txt`, `voz-y-voto.en.txt`.
+- **Los fragmentos no se pueden traducir, y no por norma: la capa no tiene campo para ellos.** Se heredan del manifiesto y en las páginas que no son españolas salen con `lang="es"` y un aviso de por qué. La regla de la casa quedó impuesta por el código.
+- **Si a una capa le falta algo, el generador se para** y dice qué falta. Una página mitad en inglés y mitad en español es peor que no tenerla.
+- **El `hreflang` se calcula solo**: cada página enlaza con todas sus versiones existentes, más `x-default` al español.
+
+**Para añadir un idioma:** se copia el bloque `en` de `idiomas.json` y se traduce; se crea `herramientas/libros/<idioma>/` con catorce capas; se añade su menú en `navegacion.py` y se registra en `_POR_IDIOMA`. Nada más: ni una línea de `gen-libro.py`.
+
+**Uso:**
+
+```bash
+python herramientas/gen-libro.py herramientas/libros/<slug>.json   # el libro en todos sus idiomas
+python herramientas/gen-libro.py --catalogos                       # los catálogos que no son el español
+```
+
+**Decisiones de traducción que conviene no deshacer:**
+
+- **Los títulos no se traducen**, se glosan entre paréntesis en la ficha y en el catálogo: *Las guerreras de la luz (The Warriors of the Light)*.
+- **Los titulares de prensa no se traducen**: son del medio que los publicó.
+- **"Mi hermano"** hablando de Haití o de Alain Gutiérrez es figurado. En inglés, tal cual, parecería parentesco de sangre, así que se matiza.
+- **Leonardo Padura** formó parte del jurado que premió el Quijote de Tony en 2005. Sale del propio texto de Tony y ahora figura en el catálogo y en `/en/fiction/`. Es el dato más útil del sitio inglés para un editor anglófono.
+
+### Erratas en los textos españoles publicados
+
+Aparecieron al traducir. **No se han tocado**, porque son textos de Tony: esperan su visto bueno. En inglés se tradujo lo que quiso decir.
+
+| Archivo | Dice | Debería decir |
+|---|---|---|
+| `trovadoras/voz-y-voto.txt` | "en mi voy voto" | "en mi voz y voto" |
+| `trovadoras/voz-y-voto.txt` | "las entrevistan dejan" | "las entrevistas dejan" |
+| `trovadoras/voz-y-voto.txt` | "esos matices el retrato escrito" | "esos matices en el retrato escrito" |
+| `convertida-en-cancion/voz-y-voto.txt` | "El otro, sigue todavía espera." | "El otro sigue todavía en espera." |
+| `el-escudo-de-valnuss/voz-y-voto.txt` | "El Escudo de Valnús", "Rainel Caborroi" | "Valnúss", "Cabarroi" |
+| `grimorium/voz-y-voto.txt` | "Howard Philiphs Lovecraft", "en buena medida manera" | "Phillips", "en buena medida" |
+| `de-la-extrana-aventura-de-don-quijote/contratapa.txt` | "Rescribir", "por primera en la Isla", "en al año" | "Reescribir", "por primera vez", "en el año" |
+| `en-un-lugar-de-cuba/voz-y-voto.txt` | "que. muchos años" | "que, muchos años" |
+| `perdidos-en-un-librero/voz-y-voto.txt` y `cuentos-de-munecas/voz-y-voto.txt` | "Magalys" | "Magaly", como en la ficha y en el crédito del libro |
 
 ## 3 ter. El comprobador, y por qué existe (9 de septiembre)
 

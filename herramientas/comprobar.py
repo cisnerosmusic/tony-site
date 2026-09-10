@@ -162,6 +162,7 @@ def generado_al_dia():
                ["python", "herramientas/gen-legal.py"]]
     for m in sorted(glob.glob(os.path.join(RAIZ, "herramientas", "libros", "*.json"))):
         ordenes.append(["python", "herramientas/gen-libro.py", os.path.relpath(m, RAIZ)])
+    ordenes.append(["python", "herramientas/gen-libro.py", "--catalogos"])
     for o in ordenes:
         r = subprocess.run(o, cwd=RAIZ, capture_output=True, text=True)
         if r.returncode:

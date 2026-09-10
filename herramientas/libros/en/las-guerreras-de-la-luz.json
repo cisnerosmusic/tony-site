@@ -1,0 +1,56 @@
+{
+  "tira_sub": "My first novel, the novel of first times",
+  "seo_titulo": "Las guerreras de la luz: a heroic fantasy novel",
+  "seo_desc": "Las guerreras de la luz (Editorial de la Mujer, 2011), heroic fantasy and the Premio La Rosa Blanca of UNEAC. Back cover, excerpts and the author's note.",
+  "cubierta_alt": "Cover of Las guerreras de la luz, illustrated by Rainel Cabarroi: a sword hilt with a rose engraved on the pommel, on green leather",
+  "genero": "Heroic fantasy",
+  "premios": [
+    "Premio La Rosa Blanca 2012, Children's and Young People's Literature Section of UNEAC"
+  ],
+  "contratapa": "libros/las-guerreras-de-la-luz/contratapa.en.txt",
+  "vyv": "libros/las-guerreras-de-la-luz/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "Las guerreras de la luz (The Warriors of the Light)",
+    "género": "Heroic fantasy",
+    "cubierta": "Illustration by Rainel Cabarroi",
+    "premio": "La Rosa Blanca 2012, Children's and Young People's Literature Section of UNEAC, presented on 19 March 2013"
+  },
+  "galeria": [
+    {
+      "alt": "Launch of the book, with a copy on the table in front of the microphone",
+      "pie": "Launch at the Pabellón Cuba, Havana International Book Fair, 14 February 2012"
+    },
+    {
+      "alt": "Two people at the launch table with the book between them",
+      "pie": "At the launch table, Pabellón Cuba, February 2012"
+    },
+    {
+      "alt": "Audience seated during the book launch",
+      "pie": "The audience at the Pabellón Cuba launch, February 2012"
+    },
+    {
+      "alt": "Signing copies at an open-air table, surrounded by readers",
+      "pie": "Signing copies at the Sábado del Libro, August 2012"
+    },
+    {
+      "alt": "A square with readers queuing at the signing table",
+      "pie": "The queue of readers at the Sábado del Libro, August 2012"
+    },
+    {
+      "alt": "Antonio López Sánchez receives the Premio La Rosa Blanca",
+      "pie": "Receiving the Premio La Rosa Blanca, 19 March 2013"
+    },
+    {
+      "alt": "Presentation ceremony of the Premio La Rosa Blanca",
+      "pie": "The Premio La Rosa Blanca ceremony, UNEAC, 2013"
+    }
+  ],
+  "prensa": [
+    { "pie": "Interview by Alain Gutiérrez, Juventud Rebelde, 13 July 2012" }
+  ],
+  "catalogo": {
+    "glosa": "The Warriors of the Light",
+    "premio": "Premio La Rosa Blanca 2012, UNEAC",
+    "sinopsis": "A sorcerer from the far reaches of darkness tries to halt all life on a quiet island. A girl, Aria Musa, her friends and a magical hummingbird raise an army to fight him. The author's first novel."
+  }
+}

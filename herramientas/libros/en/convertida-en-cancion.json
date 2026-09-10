@@ -1,0 +1,55 @@
+{
+  "tira_sub": "Woman, in song: my essay on the trova",
+  "seo_titulo": "Convertida en canción: women in the lyrics of the Nueva Trova",
+  "seo_desc": "Convertida en canción (Capiro, 2019), an essay on the image of women in the lyrics of the Cuban Nueva Trova. Back cover, details and excerpts.",
+  "cubierta_alt": "Cover of Convertida en canción, illustrated by Ramón Eduardo Haití",
+  "genero": "Essay",
+  "contratapa": "libros/convertida-en-cancion/contratapa.en.txt",
+  "vyv": "libros/convertida-en-cancion/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "Convertida en canción. La imagen de la mujer en los textos de la Nueva Trova (Turned into Song: the image of women in the lyrics of the Nueva Trova)",
+    "género": "Essay",
+    "cubierta": "Illustration by Ramón Eduardo Haití"
+  },
+  "galeria": [
+    {
+      "alt": "Yellow flyer for the talk and book launch at the National Library",
+      "pie": "Flyer for the talk at the José Martí National Library of Cuba, Thursday 10 March 2022, presented by Yosvel Hernández Alén"
+    },
+    {
+      "alt": "Launch in the reading room of the National Library, with the book on a lectern",
+      "pie": "Launch at the José Martí National Library of Cuba, with the musicographer and researcher Yosvel Hernández Alén, 10 March 2022"
+    },
+    {
+      "alt": "Two participants seated at the microphones during the launch",
+      "pie": "At the table in the National Library, March 2022"
+    },
+    {
+      "alt": "Signing copies after the launch, surrounded by the audience",
+      "pie": "Afterwards, at the National Library, March 2022"
+    },
+    {
+      "alt": "Launch table in the José Lezama Lima room, with four participants and the books on display",
+      "pie": "Editorial Capiro launch in the José Lezama Lima room of the Colegio San Gerónimo, Havana International Book Fair, April 2022"
+    },
+    {
+      "alt": "Two of the participants at the launch table, one of them at the microphone",
+      "pie": "The launch table at the Havana International Book Fair, April 2022"
+    },
+    {
+      "alt": "Two participants at a launch table, one holding the book",
+      "pie": "Launch with Alexis Castañeda Pérez de Alejo at the 30th International Book Fair, Santa Clara, May 2022"
+    },
+    {
+      "alt": "Launch of the book in a colonnaded courtyard, before a seated audience",
+      "pie": "Launch at the Casa Granda, Santiago de Cuba"
+    }
+  ],
+  "prensa": [
+    { "pie": "Chronicle by Amalia Alejandra, Cubaliteraria, 25 April 2022" }
+  ],
+  "catalogo": {
+    "glosa": "Turned into Song",
+    "sinopsis": "Which woman are Cuban troubadours singing to? A reading of the Nueva Trova's lyrics on women in public life, sexuality, sex work, infidelity and homosexual love."
+  }
+}

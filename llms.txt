@@ -66,6 +66,7 @@ El sitio tiene una versión inglesa con un orden distinto y deliberado: para el 
 - [The Nueva Trova](https://antoniolopezsanchez.art/en/trova/): los tres libros sobre la Nueva Trova cubana, 2001 a 2019, presentados para editoriales universitarias y estudios de género y de música popular.
 - [Poetry](https://antoniolopezsanchez.art/en/poetry/): la poesía, qué es una décima y qué es una glosa, explicado para quien no lo conoce. Los poemas siguen en español.
 - [Fiction](https://antoniolopezsanchez.art/en/fiction/): novelas de fantasía heroica, horror y fantasía infantil, más el cuento breve.
+- [Books](https://antoniolopezsanchez.art/en/books/): los catorce libros en inglés, cada uno con su página: contratapa, nota del autor, fragmentos en español y ficha para editores.
 - [The author](https://antoniolopezsanchez.art/en/author/): biografía, premios y trayectoria periodística.
 - [Rights](https://antoniolopezsanchez.art/en/rights/): aviso de derechos en inglés.
 

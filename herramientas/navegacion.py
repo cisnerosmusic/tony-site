@@ -99,3 +99,23 @@ def pie_en_html(activa, sangria="    "):
             filas.append(f'{sangria}<a href="{h}">{n}</a>')
     filas.append(f'{sangria}<a href="/" lang="es" hreflang="es">Sitio en español</a>')
     return "\n".join(filas)
+
+
+# ── Por idioma ───────────────────────────────────────────────────────────
+#
+# Los generadores que escriben en varios idiomas piden el menu por codigo de
+# idioma, no por nombre de funcion. Un idioma nuevo añade arriba su MENU_xx y
+# sus dos funciones, y se registra en este diccionario. Nada mas.
+
+_POR_IDIOMA = {
+    "es": (menu_html, pie_html),
+    "en": (menu_en_html, pie_en_html),
+}
+
+
+def menu_de(lang, activa, sangria="    "):
+    return _POR_IDIOMA[lang][0](activa, sangria)
+
+
+def pie_de(lang, activa, sangria="    "):
+    return _POR_IDIOMA[lang][1](activa, sangria)

@@ -83,6 +83,8 @@ Y al revés, para las instancias que construyen: **si dais un hallazgo sin núme
 ## Innegociables
 
 - **Sin raya larga** en ningún texto público del sitio. Se usa guion.
+- **La literatura no se traduce.** Poemas, cuentos y fragmentos se publican siempre en su español original, en todos los idiomas del sitio. En las páginas de libro no hace falta recordarlo: las capas de idioma no tienen campo donde poner un fragmento traducido. Lo que se traduce es el aparato: contratapas, notas del autor, fichas, pies de foto y metadatos.
+- **El sitio en otro idioma no promete nada que no se pueda mandar esa misma tarde.** Hoy eso son manuscritos completos y sinopsis. Ni muestras traducidas ni informes de lectura mientras no existan.
 - **Hay material del autor que existe y que, por decisión suya y de Ernesto, no se publica.** Esta lista se respeta y no se revisa sin preguntarles a ellos dos. Hoy son dos entradas y puede crecer:
   - Su columna en **Palabra Nueva**. No se menciona en el sitio.
   - El minicuento **Proclama Real**. En Laureles se queda la mención del premio, que ya está en su currículo público; el texto no entra en este repositorio.

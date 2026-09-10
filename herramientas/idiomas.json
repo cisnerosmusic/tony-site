@@ -1,0 +1,114 @@
+{
+  "_nota": "Textos de interfaz de las paginas de libro, uno por idioma. El español tambien esta aqui y sale identico a como salia antes de que existiera este archivo: es un idioma mas, no un caso especial. Para añadir un idioma: se copia el bloque 'en', se traduce, se crea herramientas/libros/<idioma>/ con una capa por libro, y se registra su menu en navegacion.py. Los titulos de los libros NO se traducen. Los fragmentos NO se traducen: el esquema de la capa no tiene donde ponerlos, a proposito.",
+
+  "es": {
+    "lang": "es",
+    "locale": "es_ES",
+    "portada": "/",
+    "ruta_libros": "/libros/",
+    "catalogo_nombre": "Mis libros",
+    "volver": "Volver a Mis libros",
+    "saltar": "Saltar al contenido",
+    "abrir_menu": "Abrir menú",
+    "secciones_aria": "Secciones",
+    "facebook_aria": "Facebook de Antonio López Sánchez",
+    "desarrollado": "Desarrollado por",
+    "titulo_sufijo": " | Antonio López Sánchez",
+    "bloques": {
+      "contratapa": "Nota de contratapa",
+      "volumenes": "Los libros",
+      "vyv": "Con voz y voto",
+      "fragmentos": "Fragmentos",
+      "presentaciones": "Presentaciones",
+      "prensa": "Prensa",
+      "ficha": "Ficha"
+    },
+    "ficha_claves": {},
+    "derechos": "Disponibles para ediciones y traducciones fuera de Cuba",
+    "derechos_colectiva": "Disponibles para ediciones y traducciones fuera de Cuba, referidos solo a los textos de Antonio López Sánchez que este volumen colectivo incluye",
+    "consulta_derechos": "Consultas de derechos",
+    "representacion": "https://ernestocisneros.art/es/representacion-literaria.html",
+    "aviso_fragmentos": null
+  },
+
+  "en": {
+    "lang": "en",
+    "locale": "en_US",
+    "portada": "/en/",
+    "ruta_libros": "/en/books/",
+    "catalogo_nombre": "Books",
+    "volver": "Back to the catalogue",
+    "saltar": "Skip to content",
+    "abrir_menu": "Open menu",
+    "secciones_aria": "Sections",
+    "facebook_aria": "Antonio López Sánchez on Facebook",
+    "desarrollado": "Developed by",
+    "titulo_sufijo": " | Antonio López Sánchez",
+    "bloques": {
+      "contratapa": "Back cover",
+      "volumenes": "The books",
+      "vyv": "In my own words",
+      "fragmentos": "Excerpts",
+      "presentaciones": "Launches and signings",
+      "prensa": "Press",
+      "ficha": "Details"
+    },
+    "ficha_claves": {
+      "título": "title",
+      "género": "genre",
+      "editorial": "publisher",
+      "año": "year",
+      "cubierta": "cover",
+      "autoría": "authorship",
+      "incluye": "includes",
+      "formato": "format",
+      "origen": "origin",
+      "premio": "award",
+      "edición": "edition",
+      "derechos": "rights"
+    },
+    "derechos": "Available for editions and translations outside Cuba",
+    "derechos_colectiva": "Available for editions and translations outside Cuba, covering only the texts by Antonio López Sánchez that this collective volume includes",
+    "consulta_derechos": "Rights enquiries",
+    "representacion": "https://ernestocisneros.art/literary-representation.html",
+    "aviso_fragmentos": "Excerpts are published in their original Spanish, as all literary texts on this site are.",
+
+    "catalogo": {
+      "seo_titulo": "The books of Antonio López Sánchez",
+      "seo_desc": "Fourteen books by the Cuban writer Antonio López Sánchez: the Nueva Trova, poetry, heroic fantasy, horror and children's books. World rights outside Cuba.",
+      "titulo": "Books",
+      "subtitulo": "Fourteen published books, in the order that makes sense from outside Cuba.",
+      "intro": "Titles are kept in their original Spanish, with their meaning in brackets. Every page carries the back cover, the author's own note on the book, excerpts in Spanish, and full details for publishers.",
+      "ver": "See the book",
+      "cierre": {
+        "titulo": "Rights",
+        "texto": "World rights for editions and translations are available outside Cuba, where the author's publishers keep their exclusivity. Full manuscripts and synopses are available on request.",
+        "boton_correo": "Write about rights",
+        "boton_representacion": "Literary representation"
+      },
+      "grupos": [
+        {
+          "titulo": "The Nueva Trova",
+          "seccion": "/en/trova/",
+          "libros": ["la-cancion-de-la-nueva-trova", "trovadoras", "convertida-en-cancion"]
+        },
+        {
+          "titulo": "Poetry",
+          "seccion": "/en/poetry/",
+          "libros": ["trampas-retratos-y-un-17-rojo"]
+        },
+        {
+          "titulo": "Fiction",
+          "seccion": "/en/fiction/",
+          "libros": ["las-guerreras-de-la-luz", "el-escudo-de-valnuss", "el-otro-lado-del-espejo", "grimorium", "perdidos-en-un-librero", "de-la-extrana-aventura-de-don-quijote"]
+        },
+        {
+          "titulo": "Collective volumes",
+          "seccion": null,
+          "texto": "Anthologies and shared volumes that include texts by the author. Rights offered here cover only what he wrote, never the complete volume.",
+          "libros": ["en-un-lugar-de-cuba", "nota-de-prensa-y-otros-minicuentos", "vamos-a-cantar-y-a-sonar", "cuentos-de-munecas"]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "tira_sub": "My first book: the trova, set down in writing",
+  "seo_titulo": "La canción de la Nueva Trova: essays and interviews",
+  "seo_desc": "La canción de la Nueva Trova (Atril, 2001), the author's first book: a history of the Cuban Nueva Trova told with its founders. Excerpts in Spanish.",
+  "cubierta_alt": "Cover of La canción de la Nueva Trova",
+  "genero": "Essay",
+  "contratapa": "libros/la-cancion-de-la-nueva-trova/contratapa.en.txt",
+  "vyv": "libros/la-cancion-de-la-nueva-trova/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "La canción de la Nueva Trova (The Song of the Nueva Trova)",
+    "género": "Essays and interviews"
+  },
+  "galeria": [
+    {
+      "alt": "Launch of La canción de la Nueva Trova at Cubadisco 2001",
+      "pie": "Launch at Cubadisco, May 2001. Photo: Alain Gutiérrez Almeida"
+    },
+    {
+      "alt": "Presentation of the book at the University Book and Reading Festival",
+      "pie": "University Book and Reading Festival (FULL), Pabellón Cuba, 2007. Photo: Alain Gutiérrez Almeida"
+    }
+  ],
+  "catalogo": {
+    "glosa": "The Song of the Nueva Trova",
+    "sinopsis": "A history of the movement told with the voices of its founders, from its first public appearance in February 1967. The author's first book, born as his university thesis."
+  }
+}

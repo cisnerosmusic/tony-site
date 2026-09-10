@@ -1,0 +1,19 @@
+{
+  "tira_sub": "The adventure of getting lost among books.",
+  "seo_titulo": "Perdidos en un librero: a fantasy novel for children",
+  "seo_desc": "Perdidos en un librero (Editorial Quisicuaba, 2026), a children's fantasy novel in digital format, set inside the pages of a book of Cuban myths.",
+  "cubierta_alt": "Cover of Perdidos en un librero, illustrated by Alain R. Cuba",
+  "genero": "Children's fantasy",
+  "contratapa": "libros/perdidos-en-un-librero/contratapa.en.txt",
+  "vyv": "libros/perdidos-en-un-librero/voz-y-voto.en.txt",
+  "ficha": {
+    "título": "Perdidos en un librero (Lost in a Bookcase)",
+    "género": "Children's fantasy novel",
+    "formato": "EPUB and PDF",
+    "cubierta": "Illustration by Alain R. Cuba"
+  },
+  "catalogo": {
+    "glosa": "Lost in a Bookcase",
+    "sinopsis": "A wizard's hat, a fairy's wand, a horse, a doll and a scientist zombie get lost inside the books of a magic bookcase, and end up in the pages of Cuban mythology. The author's newest book."
+  }
+}
