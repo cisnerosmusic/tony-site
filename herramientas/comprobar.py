@@ -106,6 +106,18 @@ def datos_estructurados():
             for tipo in re.findall(r'"@type":\s*"([^"]+)"', b):
                 if tipo not in TIPOS_VALIDOS:
                     falla("tipo Schema inexistente", f"{rel(p)}: {tipo}")
+            # Search Console, 11 de septiembre de 2026: "Falta el campo mainEntity".
+            # Google exige en ProfilePage una Person u Organization con nombre, y
+            # evalua cada pagina por separado: un @id que apunta a la portada le
+            # llega sin name. La persona tiene que ir dentro de la propia pagina.
+            for n in (d if isinstance(d, list) else d.get("@graph", [d])):
+                if isinstance(n, dict) and n.get("@type") == "ProfilePage":
+                    me = n.get("mainEntity")
+                    if not (isinstance(me, dict)
+                            and me.get("@type") in ("Person", "Organization")
+                            and (me.get("name") or me.get("alternateName"))):
+                        falla("ProfilePage sin mainEntity",
+                              f"{rel(p)}: falta una Person con name dentro de la pagina")
 
 
 # ── 4. Titulos y descripciones: unicos y en rango ────────────────────────

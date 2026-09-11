@@ -288,7 +288,7 @@ Ernesto lo dejó dicho: *"cada vez que terminemos, habrá auditoría en ciclos, 
 python herramientas/comprobar.py
 ```
 
-Estado hoy: **42 páginas, 0 fallos, 0 avisos**.
+Estado al 11 de septiembre: **63 páginas, 0 fallos, 0 avisos**.
 
 Cada regla nació de un fallo real que cazó una auditoría, y en el archivo está anotado cuál. Ejemplo, el que más duele: `"Poem"` no es un tipo de schema.org, da 404, y estuvo publicado en el sitio hasta que la auditoría lo vio. Ahora hay una lista blanca de tipos y no puede volver a pasar.
 
@@ -301,6 +301,12 @@ Dos cosas que aprendió el propio comprobador el primer día:
 - La regla de "el generador reproduce su HTML" usaba `git status`, así que confundía *tener trabajo sin commitear* con *el generador ha dejado de reproducir la página*. Ahora compara el HTML antes y después de regenerar, que es lo único que se quería saber.
 
 Lo siguiente sería colgarlo de un GitHub Action, para que corra también cuando nadie se acuerde.
+
+**Regla añadida el 11 de septiembre, a raíz de un aviso de Search Console.** Google avisó de *"Falta el campo mainEntity"* en los datos de Página de perfil. Las dos páginas marcadas como `ProfilePage`, `/periodista/` y `/en/author/`, apuntaban al autor con `about` y un `@id` hacia la portada. Google exige `mainEntity` y evalúa cada página por separado, así que le llegaba una persona sin `name`, que también es obligatorio.
+
+Ahora las dos llevan la Person dentro. `/en/author/` la saca `gen-ingles.py` con `persona()`, que la lee del bloque de la portada. `/periodista/` está escrita a mano y lleva una copia de ese mismo bloque: **si cambia la Person de la portada (un `sameAs` nuevo, otro retrato), hay que actualizar también `/periodista/`**. La regla nueva de `comprobar.py` falla si un `ProfilePage` no trae la persona con nombre dentro de la propia página. Se probó en las dos direcciones: cazó `/en/author/` antes del arreglo y dio verde después.
+
+**Pendiente de Ernesto:** en Search Console, informe de Página de perfil, pulsar *Validar corrección*. Google tarda de unos días a un par de semanas en revalidar.
 
 ## 3 bis. El orden de trabajo para mañana, 9 de septiembre
 

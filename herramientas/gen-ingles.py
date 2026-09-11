@@ -157,6 +157,19 @@ def portada_hero(d):
 <div class="banda-mar reveal reveal-left" role="img" aria-label="The sea at dusk"></div>"""
 
 
+def persona():
+    # La Person vive una sola vez, en la portada. Se lee de alli para que el
+    # mainEntity de /en/author/ no pueda desviarse del original.
+    with open(os.path.join(RAIZ, "index.html"), encoding="utf-8") as f:
+        s = f.read()
+    for trozo in s.split('<script type="application/ld+json">')[1:]:
+        d = json.loads(trozo.split("</script>", 1)[0])
+        if d.get("@type") == "Person":
+            return {k: d[k] for k in ("@type", "@id", "name", "alternateName",
+                                      "url", "image", "sameAs") if k in d}
+    sys.exit("gen-ingles: no hay Person en index.html")
+
+
 def datos_estructurados(d, url):
     tipo = "ProfilePage" if d["ruta"] == "/en/author/" else (
         "WebPage" if not d.get("es_portada") else "WebSite")
@@ -168,6 +181,11 @@ def datos_estructurados(d, url):
         base["@id"] = f"{DOMINIO}/en/#site"
     else:
         base["isPartOf"] = {"@id": f"{DOMINIO}/#sitio"}
+    if tipo == "ProfilePage":
+        # Google exige mainEntity con la persona dentro de la propia pagina
+        # (Search Console, 11 de septiembre de 2026). about con un @id no basta.
+        base["mainEntity"] = persona()
+        del base["about"]
     return base
 
 
