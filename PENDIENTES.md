@@ -10,6 +10,41 @@ El 8 de septiembre, además, **se reescribió `DESIGN.md`**, que documentaba con
 
 El 8 de septiembre se revisó el repositorio entero y **se corrigió el rumbo del producto en `PRODUCT.md`**: el público de esta web no es Cuba. Allí Tony ya tiene editoriales y circuito; la web se construyó para el afuera, y su lector de mayor valor es el editor, agente o traductor extranjero. De ahí salen los pendientes nuevos de la sección 1, que son los que más pagan. Lee `PRODUCT.md` antes de tocar nada: la jerarquía de la obra ahora depende del idioma.
 
+## Revisión del 12 de septiembre de 2026 (evaluado en `388a033`)
+
+Medida contra el código y contra el sitio en vivo, no contra estos documentos. **No se tocó nada del sitio**: esto es el informe, los arreglos van en una tanda aparte.
+
+### Lo que está bien, con su número
+
+- Lo publicado coincide byte a byte con el repositorio: **0 diferencias en 63 páginas**.
+- Las **60 URLs del sitemap responden 200**. `http` y `www` redirigen con 301 al dominio. El 404 responde 404.
+- **`hreflang` recíproco en 40 páginas, 0 problemas.** Todas las canónicas apuntan a sí mismas.
+- **Cero peticiones a terceros.** Ninguna imagen pasa de 300 KB; 5,8 MB de imágenes en total.
+- Ningún secreto ni dato del acuerdo privado en el repositorio. *Proclama Real* y *Palabra Nueva* solo aparecen por su título en `AGENTS.md`, como manda la regla.
+- `comprobar.py`: 63 páginas, 0 fallos, 0 avisos.
+- Lighthouse móvil, portada y `/en/books/las-guerreras-de-la-luz/`: **buenas prácticas 100, SEO 100, navegación agéntica 100, accesibilidad 96.**
+
+### Hallazgos, de más a menos urgente
+
+1. **Accesibilidad: el enlace "Index01" del pie se distingue solo por el color.** `styles.css:698`, `.footer-copy a { color: var(--gold); }`, sin subrayado. Contraste de **1,03:1** con el texto que lo rodea, cuando el mínimo es 3:1 (WCAG 1.4.1). Está en 60 páginas y es el único suspenso de Lighthouse: por él la accesibilidad es 96 y no 100. Arreglo: subrayarlo.
+2. **Seis cubiertas del catálogo español declaran una proporción que no es la suya.** Todas en `libros/index.html`, que es a mano. Guerreras declara 640×985 y mide 900×1360; trampas, lugar, nota-prensa, vamos y muñecas, igual, con desvíos de hasta el 10 % (vamos declara 0,707 y mide 0,781). El navegador reserva un hueco que no es y la maqueta se mueve al cargar. **El comprobador no lo mira: regla nueva**, proporción declarada igual a la real.
+3. **Rendimiento en la primera visita.** Medido en el peor caso, `/en/books/las-guerreras-de-la-luz/`, con Slow 4G, CPU ×4, móvil de 412 px y caché vacía: **LCP 3.672 ms** (bueno es menos de 2.500), CLS 0. El 82 % es la descarga de la cubierta: `img/libros/guerreras-cubierta.webp` mide **900×1360 y 231 KB**, cuando las otras trece miden 640 de ancho y entre 38 y 135 KB, y se muestra a 302×456. Tampoco lleva `fetchpriority="high"`. Con caché caliente el LCP es de 372 ms. Arreglo: recomprimir esa cubierta a 640 de ancho y dar `fetchpriority="high"` a la cubierta dominante desde `gen-libro.py`.
+4. **`app.js:21` fuerza un reflujo en la carga.** Mide `getBoundingClientRect()` de cada `.reveal` justo después de añadir clases a otros, y el navegador vuelve a maquetar la página entera en cada vuelta: **179 ms con CPU ×4**. Arreglo: tomar la altura de la propia entrada del `IntersectionObserver` en vez de medir a mano.
+5. **El `lastmod` del sitemap es falso en 41 de 60 URLs**: la fecha es anterior al último commit que cambió la página. Es lo que pasa con un sitemap mantenido a mano. **Regla nueva**, o mejor: generarlo desde git.
+6. **La documentación miente en cinco sitios.**
+   - `README.md:11` presume de 100/100/100/100 en escritorio y 99/100/100/100 en móvil. Hoy la accesibilidad da 96 (hallazgo 1), y el rendimiento no se ha vuelto a medir con Lighthouse. No debe citarse hasta medirlo de nuevo.
+   - `README.md:36` y `:77` dicen "40 páginas, 37 URLs". Son 63 y 60.
+   - La tabla de generadores del README tiene 6 de 9: faltan `gen-farraluque.py`, `gen-ingles.py` y `gen-legal.py`, y no dice nada de `idiomas.json` ni de las capas por idioma.
+   - Este archivo, sección 1, cita las constantes `REPRESENTACION` y `SALIDA_DERECHOS` de `gen-libro.py`, que ya no existen: desde el 10 de septiembre la página de representación vive en `idiomas.json`.
+   - Este archivo dice "Estado al 8 de septiembre", "?v=19" (va por 22), "Eso se acaba cuando el punto 3 esté resuelto" (ya lo está), "Hoy `/en/` es solo la portada" (hay 21 páginas inglesas) y "40 páginas HTML".
+7. **`.claude/launch.json` está versionado** en un repositorio público. Es la configuración del servidor local de pruebas; no rompe nada, pero sobra. Fuera del repositorio y al `.gitignore`.
+8. **El 404 de las rutas inglesas sale en español**: `/en/no-existe/` da "Página no encontrada" con `lang="es"`. GitHub Pages solo admite un 404, así que la salida es hacerlo bilingüe.
+9. **Menores.** El JSON-LD `Person` de la portada recoge la mención de La Edad de Oro pero no la del Farraluque en cuento. Laureles pone La Rosa Blanca en 2013 (año de entrega) y `/en/author/` en 2012 (año del premio). GitHub Pages sirve con `max-age=600` y sin HSTS, cosa que no se controla desde aquí. Sigue sin GitHub Actions.
+
+### Lo que no se pudo medir
+
+El rendimiento con Lighthouse: la herramienta de esta sesión no lo incluye. Las cifras del hallazgo 3 son trazas con la red y la CPU estranguladas en el propio navegador, que no son directamente comparables con la puntuación simulada de Lighthouse. Por eso el 99 del README no se da ni por bueno ni por malo: se retira hasta volver a medirlo.
+
 ## 0. La tarde del 8 de septiembre: entró el contenido
 
 Por la mañana el sitio era una casa bien construida y medio vacía. Por la tarde
