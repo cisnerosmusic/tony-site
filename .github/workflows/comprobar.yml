@@ -1,0 +1,32 @@
+# Pasa herramientas/comprobar.py en cada push a main.
+#
+# Es el mismo ritual que se hace a mano antes de cerrar una tanda, pero ahora
+# corre tambien cuando nadie se acuerda, y sirve de red entre las dos maquinas
+# que construyen el sitio: si una sube algo que rompe una regla, se ve en rojo.
+
+name: Comprobar el sitio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # gen-sitemap.py saca la fecha de cada pagina de la historia de git,
+          # asi que hace falta la historia entera y no solo el ultimo commit.
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Pillow lee las medidas reales de las imagenes: la usan los generadores
+      # y la regla de medidas del comprobador.
+      - run: pip install Pillow
+
+      - run: python herramientas/comprobar.py
