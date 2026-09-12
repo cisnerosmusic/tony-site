@@ -171,7 +171,8 @@ def generado_al_dia():
                ["python", "herramientas/gen-farraluque.py"],
                ["python", "herramientas/gen-audios.py"],
                ["python", "herramientas/gen-ingles.py"],
-               ["python", "herramientas/gen-legal.py"]]
+               ["python", "herramientas/gen-legal.py"],
+               ["python", "herramientas/gen-404.py"]]
     for m in sorted(glob.glob(os.path.join(RAIZ, "herramientas", "libros", "*.json"))):
         ordenes.append(["python", "herramientas/gen-libro.py", os.path.relpath(m, RAIZ)])
     ordenes.append(["python", "herramientas/gen-libro.py", "--catalogos"])
@@ -230,6 +231,46 @@ def navegacion_alineada():
         falla("navegacion desalineada", r.stdout.strip().splitlines()[-1] if r.stdout else "")
 
 
+# ── 9. Las medidas declaradas de cada imagen son las del archivo ─────────
+# La revision del 12 de septiembre de 2026 encontro seis cubiertas del
+# catalogo español, que se escribe a mano, con el width y el height de otra
+# imagen: el navegador reservaba un hueco que no era y la maqueta se movia al
+# cargar. Se compara la proporcion y no los pixeles, porque una imagen puede
+# declararse a otro tamaño siempre que no se deforme.
+def medidas_reales():
+    from PIL import Image
+    cache = {}
+    for p in paginas():
+        for tag in re.findall(r"<img [^>]*>", leer(p)):
+            s = re.search(r'src="(/[^"]+)"', tag)
+            w = re.search(r'width="(\d+)"', tag)
+            h = re.search(r'height="(\d+)"', tag)
+            if not (s and w and h):
+                continue
+            f = os.path.join(RAIZ, s.group(1).lstrip("/"))
+            if not os.path.exists(f):
+                continue
+            if f not in cache:
+                with Image.open(f) as im:
+                    cache[f] = im.size
+            rw, rh = cache[f]
+            if abs(int(w.group(1)) / int(h.group(1)) - rw / rh) > 0.01:
+                falla("medidas de imagen falsas",
+                      f"{rel(p)}: {s.group(1)} declara {w.group(1)}x{h.group(1)} y mide {rw}x{rh}")
+
+
+# ── 10. El sitemap esta al dia ───────────────────────────────────────────
+# Se escribia a mano, y la misma revision encontro el lastmod atrasado en 41
+# de 60 URLs. Ahora lo escribe gen-sitemap.py desde la historia de git; aqui
+# solo se comprueba que se haya regenerado despues del ultimo cambio.
+def sitemap_al_dia():
+    r = subprocess.run(["python", "herramientas/gen-sitemap.py", "--comprobar"],
+                       cwd=RAIZ, capture_output=True, text=True)
+    if r.returncode:
+        falla("sitemap desactualizado",
+              (r.stdout.strip().splitlines() or ["regenera con gen-sitemap.py"])[-1])
+
+
 def main():
     enlaces_rotos()
     sitemap_cuadra()
@@ -238,7 +279,9 @@ def main():
     versiones()
     higiene()
     navegacion_alineada()
+    medidas_reales()
     generado_al_dia()
+    sitemap_al_dia()
 
     if avisos:
         print(f"\nAVISOS ({len(avisos)}), no bloquean:")

@@ -21,7 +21,7 @@ import navegacion
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 URL = DOMINIO + "/tinta-ciones/sonata-de-la-lluvia/"
-CSS = "?v=22"
+CSS = "?v=23"
 FUENTE = os.path.join(RAIZ, "herramientas", "textos", "decimitas", "sonata-de-la-lluvia.txt")
 FOTO = "/img/decimitas/sonata-de-la-lluvia.webp"
 
@@ -198,7 +198,7 @@ def main():
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=8" defer></script>
+<script src="/app.js?v=9" defer></script>
 </body>
 </html>
 """

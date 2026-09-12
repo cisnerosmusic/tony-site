@@ -221,7 +221,8 @@ Esquinas vivas en todo: radio 0 en botones, cubiertas, fichas y contenedores. La
 ### Do:
 - Usa el oro como único acento, y cámbiale la opacidad antes de pensar en otro color.
 - Deja respirar: 80px de padding vertical en secciones de escritorio, prosa a 62-70ch.
-- Pon `width` y `height` en toda imagen. El CLS de este sitio es 0 y así se queda.
+- Pon `width` y `height` en toda imagen, **con la proporción real del archivo**. Si no coinciden, el navegador reserva un hueco que no es y la maqueta salta al cargar. El comprobador falla cuando no coinciden.
+- Un enlace dentro de un texto se distingue por algo más que el color: va subrayado. El oro sobre el texto atenuado del pie no se distingue por luminancia, y un enlace que solo se reconoce por su color falla la WCAG 1.4.1.
 - Envuelve los bloques nuevos en `.reveal reveal-left` o `.reveal reveal-right`, alternando el lado.
 - Sube el `?v=N` de `styles.css`, `fonts.css` y `app.js` al publicar cambios.
 - Genera las páginas de libro con `gen-libro.py`.

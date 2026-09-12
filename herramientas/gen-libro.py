@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=22"
+CSS = "?v=23"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -175,6 +175,8 @@ def generar_idioma(m, lang, disponibles):
 
     slug, titulo = m["slug"], m["titulo"]
     url = DOMINIO + ruta_libro(lang, slug)
+    # La cubierta es la imagen principal de la pagina y sale con
+    # fetchpriority="high", para que el navegador la pida antes que el resto.
     cw, ch = dims(m["cubierta"])
 
     contratapa = prosa_a_html(leer(T("contratapa"))) if m.get("contratapa") else ""
@@ -403,7 +405,7 @@ def generar_idioma(m, lang, disponibles):
 <div class="section libro-pagina">
 
   <figure class="cubierta-dominante reveal reveal-right">
-    <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc_attr(T("cubierta_alt"))}">
+    <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc_attr(T("cubierta_alt"))}" fetchpriority="high">
   </figure>
 {descarga_html}
 {bloques}  <p style="margin-top:2rem;"><a href="{L["ruta_libros"]}" class="btn">{L["volver"]}</a></p>
@@ -413,7 +415,7 @@ def generar_idioma(m, lang, disponibles):
 
 {pie_pagina(L).replace("{pie}", nav_html)}
 
-<script src="/app.js?v=8" defer></script>
+<script src="/app.js?v=9" defer></script>
 </body>
 </html>
 """
@@ -590,7 +592,7 @@ def catalogos():
 
 {pie_pagina(L).replace("{pie}", navegacion.pie_de(lang, None))}
 
-<script src="/app.js?v=8" defer></script>
+<script src="/app.js?v=9" defer></script>
 </body>
 </html>
 """

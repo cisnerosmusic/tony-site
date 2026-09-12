@@ -695,7 +695,22 @@ a.libro-cubierta:hover img {
   letter-spacing: 0.1em;
   color: var(--text-dim);
 }
-.footer-copy a { color: var(--gold); }
+/* El enlace va subrayado, no solo en oro: sobre el texto atenuado del pie el
+   oro no se distingue por luminancia, y un enlace que solo se reconoce por el
+   color falla la WCAG 1.4.1. Lo cazo Lighthouse el 12 de septiembre de 2026. */
+.footer-copy a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+/* El 404 es uno solo para todo el sitio, porque GitHub Pages no admite otro, y
+   lleva los dos idiomas. Un script en su <head> marca <html class="en"> cuando
+   la ruta empieza por /en/, y esto oculta el idioma que no toca. Sin script se
+   ve el español, que es el idioma por defecto. */
+html.en .solo-es,
+html:not(.en) .solo-en { display: none !important; }
 
 /* ── Responsive ─────────────────────────────── */
 /* La barra lleva nueve secciones mas el idioma. Medido en el navegador: a

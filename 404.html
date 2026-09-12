@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, follow">
 <title>Página no encontrada | Ala del Mar</title>
+<script>
+  // Antes de pintar: si el error viene de la zona inglesa, la pagina habla ingles.
+  if (location.pathname === '/en' || location.pathname.indexOf('/en/') === 0) {
+    document.documentElement.lang = 'en';
+    document.documentElement.className = 'en';
+    document.title = 'Page not found | Ala del Mar';
+  }
+</script>
 <meta name="description" content="Esta página no existe en Ala del Mar, la casa de Antonio López Sánchez.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -13,13 +21,14 @@
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css?v=5">
-<link rel="stylesheet" href="/styles.css?v=22">
+<link rel="stylesheet" href="/styles.css?v=23">
 </head>
 <body>
 
-<a class="salto" href="#main">Saltar al contenido</a>
+<a class="salto solo-es" href="#main">Saltar al contenido</a>
+<a class="salto solo-en" href="#main">Skip to content</a>
 
-<nav class="nav">
+<nav class="nav solo-es">
   <a href="/" class="nav-logo">Ala del Mar</a>
   <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
@@ -37,13 +46,27 @@
     <li><a href="/en/" lang="en" hreflang="en">EN</a></li>
   </ul>
 </nav>
+<nav class="nav solo-en">
+  <a href="/en/" class="nav-logo">Ala del Mar</a>
+  <button class="nav-hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-principal-en">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="menu-principal-en">
+    <li><a href="/en/trova/">The trova</a></li>
+    <li><a href="/en/poetry/">Poetry</a></li>
+    <li><a href="/en/fiction/">Fiction</a></li>
+    <li><a href="/en/author/">The author</a></li>
+    <li><a href="/en/rights/">Rights</a></li>
+    <li><a href="/" lang="es" hreflang="es">ES</a></li>
+  </ul>
+</nav>
 
+<main id="main">
+<div class="solo-es">
 <header class="page-header">
   <h1>Esta página se perdió en el librero</h1>
   <p>La dirección que buscabas no existe en esta casa, o cambió de habitación.</p>
 </header>
-
-<main id="main">
 <div class="section" style="text-align:center;">
   <p class="section-text" style="margin:0 auto 2.5rem;">Puedes volver a la portada o entrar directamente a los libros, que son la puerta principal.</p>
   <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
@@ -52,10 +75,25 @@
     <a href="/tinta-ciones/" class="btn">Tinta-ciones</a>
   </div>
 </div>
+</div>
+<div class="solo-en">
+<header class="page-header">
+  <h1>This page got lost in the bookcase</h1>
+  <p>The address you were looking for does not exist in this house, or it has moved to another room.</p>
+</header>
+<div class="section" style="text-align:center;">
+  <p class="section-text" style="margin:0 auto 2.5rem;">You can go back to the home page, or straight to the books. For a reader arriving in English, the Nueva Trova is the best way in.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+    <a href="/en/" class="btn btn-filled">Home</a>
+    <a href="/en/books/" class="btn">Books</a>
+    <a href="/en/trova/" class="btn">The trova</a>
+  </div>
+</div>
+</div>
 </main>
 
 <footer class="footer">
-  <nav class="footer-nav" aria-label="Secciones">
+  <nav class="footer-nav solo-es" aria-label="Secciones">
     <a href="/libros/">Mis libros</a>
     <a href="/ineditos/">Inéditos</a>
     <a href="/tinta-ciones/">Tinta-ciones</a>
@@ -67,10 +105,18 @@
     <a href="/directorio/">Directorio</a>
     <a href="/derechos/">Derechos</a>
   </nav>
+  <nav class="footer-nav solo-en" aria-label="Sections">
+    <a href="/en/trova/">The trova</a>
+    <a href="/en/poetry/">Poetry</a>
+    <a href="/en/fiction/">Fiction</a>
+    <a href="/en/author/">The author</a>
+    <a href="/en/rights/">Rights</a>
+    <a href="/" lang="es" hreflang="es">Sitio en español</a>
+  </nav>
   <p class="footer-lema">bene scriptus</p>
   <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
 </footer>
 
-<script src="/app.js?v=8" defer></script>
+<script src="/app.js?v=9" defer></script>
 </body>
 </html>

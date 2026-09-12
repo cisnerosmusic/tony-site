@@ -49,7 +49,7 @@ Se construye, una instancia evaluadora audita, se corrige, y vuelta a empezar. N
 
 De ahí sale `herramientas/comprobar.py`. Cada regla suya nació de un fallo real que encontró una auditoría, y está anotado cuál. La idea es sencilla: **lo que una máquina puede comprobar sola no debe gastar la atención de nadie**. La auditoría humana o de otra instancia queda libre para lo que sí necesita criterio, que es el sitio, no la sintaxis.
 
-Comprueba hoy enlaces rotos, sitemap contra páginas indexables, JSON-LD válido, con tipos que existan de verdad y, en las páginas de perfil, con la persona dentro (`mainEntity`, que Google exige), títulos y descripciones únicos y en rango, una sola versión de CSS y JS, rutas absolutas de una máquina concreta, raya larga en texto público, imágenes sin `alt`, `target="_blank"` sin `noopener`, el menú y su script, la navegación alineada, y que los generadores sigan reproduciendo su HTML. Sale con código 1 si algo falla, así que puede colgarse de un workflow.
+Comprueba hoy enlaces rotos, sitemap contra páginas indexables y **sitemap al día**, JSON-LD válido, con tipos que existan de verdad y, en las páginas de perfil, con la persona dentro (`mainEntity`, que Google exige), títulos y descripciones únicos y en rango, una sola versión de CSS y JS, rutas absolutas de una máquina concreta, raya larga en texto público, imágenes sin `alt` y **con medidas que no son las del archivo**, `target="_blank"` sin `noopener`, el menú y su script, la navegación alineada, y que los generadores sigan reproduciendo su HTML. Sale con código 1 si algo falla, y **corre solo en cada push** con GitHub Actions (`.github/workflows/comprobar.yml`): si la marca sale en rojo, alguien dejó una regla rota.
 
 **Cuando la auditoría encuentre algo que el comprobador podría haber cazado, se arregla el fallo y se añade la regla en el mismo commit.** Ese es el modo en que el ciclo se hace más barato cada vuelta.
 
@@ -96,9 +96,11 @@ Y al revés, para las instancias que construyen: **si dais un hallazgo sin núme
 - **Las obras inéditas de Tony no entran en este repositorio, que es público.** Solo sinopsis y fragmentos que él elija. Publicarlas les quitaría la condición de inéditas ante concursos y editoriales.
 - **El mecanismo de cobro, la custodia de fondos y cualquier detalle fiscal o contractual de la representación no se documentan aquí.** Van en la documentación privada del estudio.
 - **Las páginas de libro no se maquetan a mano**: se generan con `herramientas/gen-libro.py` desde su manifiesto.
-- **Toda gestión de derechos fuera de Cuba va a dos destinos y ningún otro**, en cualquier idioma: la página de representación de Ernesto Cisneros y `derechos@antoniolopezsanchez.art`. Viven en tres constantes al inicio de `gen-libro.py`.
+- **Toda gestión de derechos fuera de Cuba va a dos destinos y ningún otro**, en cualquier idioma: la página de representación de Ernesto Cisneros y `derechos@antoniolopezsanchez.art`. El correo vive en `DERECHOS_EMAIL`, en `gen-libro.py`; la página de representación, en el idioma de quien lee, en `herramientas/idiomas.json`.
 - **Los colores de texto son sólidos, sin alfa.** Es lo que rompió el contraste una vez. Ver `DESIGN.md`.
-- Al cambiar `styles.css`, `fonts.css` o `app.js`, subir su `?v=N` en las páginas **y en el generador**.
+- **El sitemap tampoco se edita a mano**: lo escribe `herramientas/gen-sitemap.py` desde las páginas y la historia de git, y el comprobador falla si no está al día.
+- Al cambiar `styles.css`, `fonts.css` o `app.js`, se sube su `?v=N` con `python herramientas/version.py <recurso> <número>`, que lo cambia a la vez en todas las páginas y en todos los generadores.
+- **Sin cifras de rendimiento publicadas mientras el sitio siga en construcción.** Decisión de Ernesto, 12 de septiembre de 2026: se mide y se publica al terminar la versión inglesa, no antes. Ni en el README ni en ningún otro documento.
 
 ## Material que llega del autor
 
@@ -137,12 +139,6 @@ Cada página marca su región así, y **todo lo que hay dentro lo escribe el scr
 Fuera de los marcadores no se toca nada, así que el resto de la página se sigue editando a mano. Correr el generador dos veces no cambia nada, está comprobado. Si corriges una fecha, se corrige en el JSON y aparece bien en las dos salas a la vez: es justamente lo que evita que deriven.
 
 Cuando toque resolver los cuentos, se hace igual, con su propio manifiesto.
-
-## Estado frágil, mientras dure
-
-`gen-libro.py` **no corre desde un clon limpio**: las rutas de texto de los manifiestos apuntan al OneDrive de la Máquina 1. Por eso las 14 páginas de libro llevan hoy cambios aplicados a mano con la cadena exacta que el generador sabe emitir.
-
-Están sincronizadas, pero es frágil: si alguien toca el generador sin poder ejecutarlo, el HTML y el generador divergen en silencio. El procedimiento para arreglarlo y verificarlo está en `PENDIENTES.md`, sección 3, y **solo se puede hacer desde la Máquina 1**.
 
 ## Git en cada máquina
 

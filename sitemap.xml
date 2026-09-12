@@ -1,69 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://antoniolopezsanchez.art/</loc><lastmod>2026-09-06</lastmod>
+    <loc>https://antoniolopezsanchez.art/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/"/>
   </url>
   <url>
-    <loc>https://antoniolopezsanchez.art/en/</loc><lastmod>2026-09-06</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/"/>
+    <loc>https://antoniolopezsanchez.art/contarte/</loc>
+    <lastmod>2026-09-12</lastmod>
   </url>
-  <url><loc>https://antoniolopezsanchez.art/libros/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/el-escudo-de-valnuss/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/el-otro-lado-del-espejo/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/grimorium/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/perdidos-en-un-librero/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/de-la-extrana-aventura-de-don-quijote/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/la-cancion-de-la-nueva-trova/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/trampas-retratos-y-un-17-rojo/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/en-un-lugar-de-cuba/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/nota-de-prensa-y-otros-minicuentos/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/trovadoras/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/vamos-a-cantar-y-a-sonar/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/cuentos-de-munecas/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/libros/convertida-en-cancion/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/ineditos/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/tinta-ciones/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/trova/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/plano-abierto/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/entre-lectores/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/contarte/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/contarte/la-muneca-y-el-principe/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/contarte/aquelarre/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/contarte/asesinato/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/contarte/clinica-del-miedo/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/contarte/duelo/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/contarte/luces/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/contarte/sombreros-pamelas-y-magicas-varitas/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/laureles/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/laureles/tres-delirios-y-un-desnudo/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/laureles/revelaciones/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/periodista/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/directorio/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/derechos/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/rights/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/trova/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/poetry/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/fiction/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/author/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/convertida-en-cancion/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/cuentos-de-munecas/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/de-la-extrana-aventura-de-don-quijote/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/el-escudo-de-valnuss/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/el-otro-lado-del-espejo/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/en-un-lugar-de-cuba/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/grimorium/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/la-cancion-de-la-nueva-trova/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/las-guerreras-de-la-luz/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/nota-de-prensa-y-otros-minicuentos/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/perdidos-en-un-librero/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/trampas-retratos-y-un-17-rojo/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/trovadoras/</loc><lastmod>2026-09-10</lastmod></url>
-  <url><loc>https://antoniolopezsanchez.art/en/books/vamos-a-cantar-y-a-sonar/</loc><lastmod>2026-09-10</lastmod></url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/contarte/aquelarre/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/contarte/asesinato/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/contarte/clinica-del-miedo/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/contarte/duelo/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/contarte/la-muneca-y-el-principe/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/contarte/luces/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/contarte/sombreros-pamelas-y-magicas-varitas/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/derechos/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/derechos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/rights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/derechos/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/directorio/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/entre-lectores/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/ineditos/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/laureles/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/laureles/revelaciones/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/laureles/tres-delirios-y-un-desnudo/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/convertida-en-cancion/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/convertida-en-cancion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/convertida-en-cancion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/convertida-en-cancion/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/cuentos-de-munecas/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/cuentos-de-munecas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/cuentos-de-munecas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/cuentos-de-munecas/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/de-la-extrana-aventura-de-don-quijote/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/de-la-extrana-aventura-de-don-quijote/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/de-la-extrana-aventura-de-don-quijote/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/de-la-extrana-aventura-de-don-quijote/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/el-escudo-de-valnuss/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/el-escudo-de-valnuss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/el-escudo-de-valnuss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/el-escudo-de-valnuss/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/el-otro-lado-del-espejo/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/el-otro-lado-del-espejo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/el-otro-lado-del-espejo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/el-otro-lado-del-espejo/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/en-un-lugar-de-cuba/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/en-un-lugar-de-cuba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/en-un-lugar-de-cuba/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/en-un-lugar-de-cuba/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/grimorium/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/grimorium/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/grimorium/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/grimorium/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/la-cancion-de-la-nueva-trova/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/la-cancion-de-la-nueva-trova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/la-cancion-de-la-nueva-trova/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/la-cancion-de-la-nueva-trova/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/las-guerreras-de-la-luz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/nota-de-prensa-y-otros-minicuentos/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/nota-de-prensa-y-otros-minicuentos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/nota-de-prensa-y-otros-minicuentos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/nota-de-prensa-y-otros-minicuentos/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/perdidos-en-un-librero/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/perdidos-en-un-librero/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/perdidos-en-un-librero/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/perdidos-en-un-librero/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/trampas-retratos-y-un-17-rojo/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/trampas-retratos-y-un-17-rojo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/trampas-retratos-y-un-17-rojo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/trampas-retratos-y-un-17-rojo/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/trovadoras/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/trovadoras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/trovadoras/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/trovadoras/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/libros/vamos-a-cantar-y-a-sonar/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/vamos-a-cantar-y-a-sonar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/vamos-a-cantar-y-a-sonar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/vamos-a-cantar-y-a-sonar/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/periodista/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/periodista/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/author/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/periodista/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/plano-abierto/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/tinta-ciones/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/trova/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/trova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/trova/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/trova/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/author/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/author/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/periodista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/periodista/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/convertida-en-cancion/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/convertida-en-cancion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/convertida-en-cancion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/convertida-en-cancion/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/cuentos-de-munecas/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/cuentos-de-munecas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/cuentos-de-munecas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/cuentos-de-munecas/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/de-la-extrana-aventura-de-don-quijote/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/de-la-extrana-aventura-de-don-quijote/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/de-la-extrana-aventura-de-don-quijote/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/de-la-extrana-aventura-de-don-quijote/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/el-escudo-de-valnuss/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/el-escudo-de-valnuss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/el-escudo-de-valnuss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/el-escudo-de-valnuss/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/el-otro-lado-del-espejo/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/el-otro-lado-del-espejo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/el-otro-lado-del-espejo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/el-otro-lado-del-espejo/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/en-un-lugar-de-cuba/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/en-un-lugar-de-cuba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/en-un-lugar-de-cuba/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/en-un-lugar-de-cuba/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/grimorium/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/grimorium/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/grimorium/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/grimorium/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/la-cancion-de-la-nueva-trova/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/la-cancion-de-la-nueva-trova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/la-cancion-de-la-nueva-trova/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/la-cancion-de-la-nueva-trova/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/las-guerreras-de-la-luz/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/las-guerreras-de-la-luz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/nota-de-prensa-y-otros-minicuentos/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/nota-de-prensa-y-otros-minicuentos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/nota-de-prensa-y-otros-minicuentos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/nota-de-prensa-y-otros-minicuentos/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/perdidos-en-un-librero/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/perdidos-en-un-librero/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/perdidos-en-un-librero/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/perdidos-en-un-librero/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/trampas-retratos-y-un-17-rojo/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/trampas-retratos-y-un-17-rojo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/trampas-retratos-y-un-17-rojo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/trampas-retratos-y-un-17-rojo/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/trovadoras/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/trovadoras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/trovadoras/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/trovadoras/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/vamos-a-cantar-y-a-sonar/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/vamos-a-cantar-y-a-sonar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/vamos-a-cantar-y-a-sonar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/vamos-a-cantar-y-a-sonar/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/fiction/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/poetry/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/rights/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/derechos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/rights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/derechos/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/trova/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/trova/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/trova/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/trova/"/>
+  </url>
 </urlset>

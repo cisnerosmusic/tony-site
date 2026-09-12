@@ -7,6 +7,7 @@
 # Quedan fuera a proposito:
 #   /en/                paginas en ingles, con su propia navegacion
 #   /novelas/, /poeta/  redirecciones blandas, sin cabecera ni pie
+#   /404.html           lo escribe gen-404.py, con los dos idiomas
 #
 # Uso: python herramientas/unificar-nav.py [--comprobar]
 
@@ -16,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FUERA = ("en/", "novelas/", "poeta/")
+FUERA = ("en/", "novelas/", "poeta/", "404.html")
 
 
 def ruta_web(rel):

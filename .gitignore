@@ -21,3 +21,6 @@ seed-roll.txt
 # Python
 __pycache__/
 *.pyc
+
+# Configuracion local de las herramientas del asistente: no es del sitio
+.claude/
