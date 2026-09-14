@@ -1,5 +1,7 @@
 # Ala del Mar · Antonio López Sánchez
 
+[![Comprobar el sitio](https://github.com/cisnerosmusic/tony-site/actions/workflows/comprobar.yml/badge.svg)](https://github.com/cisnerosmusic/tony-site/actions/workflows/comprobar.yml)
+
 Sitio oficial del escritor cubano **Antonio López Sánchez** (La Habana, 1973): novelista, poeta y periodista cultural. En vivo en **[antoniolopezsanchez.art](https://antoniolopezsanchez.art)**.
 
 La casa se llama *Ala del Mar* por la fórmula con que el autor cierra sus libros desde Alamar, el barrio habanero frente al mar donde vive y escribe: *"Hallado en Ala del Mar, [fecha]. bene scriptus"*.
@@ -21,7 +23,7 @@ Base heredada del template propio de Index01 ([impulses-art-site](https://github
 | `/` | Portada: la casa, el autor y su bienvenida |
 | `/libros/` | Los 14 libros publicados, cada uno con su propia página |
 | `/ineditos/` | Obras que esperan editorial |
-| `/tinta-ciones/` | Poesía: `poemas-sueltos/` (20 poemas), `de-cimitas/` (7 piezas de foto y décima), `sonata-de-la-lluvia/`, `en-mi-voz/` |
+| `/tinta-ciones/` | Poesía: `poemas-sueltos/` (20 poemas, 8 de ellos glosas), `de-cimitas/` (7 piezas de foto y décima), `sonata-de-la-lluvia/`, `en-mi-voz/` |
 | `/contarte/` | Los cuentos, uno por página, con orden rotatorio diario |
 | `/trova/` | Su obra documental sobre la Nueva Trova |
 | `/plano-abierto/` | Radio, televisión y grabaciones |
@@ -63,6 +65,8 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 
 Auxiliares: `navegacion.py`, que es la **única** definición del menú y del pie en cada idioma; `unificar-nav.py`, que la aplica a las páginas escritas a mano; `comprobar.py`, que verifica el sitio entero; `version.py`, que sube el `?v=N` de un recurso en todas las páginas a la vez; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
 
+Siguen escritas a mano la portada, el catálogo español `/libros/`, Inéditos, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), Laureles, El periodista, Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
+
 Al terminar cualquier cambio:
 
 ```bash
@@ -92,7 +96,7 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 
 ## SEO y AEO
 
-60 URLs indexables, con títulos y descripciones únicos y en rango, canónicas propias y Twitter Cards. JSON-LD válido en todas: `Person` con premios y `sameAs`, `WebSite`, `Book` por cada libro y en cada idioma, con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `ItemList`, `AudioObject`, `CollectionPage`, `ProfilePage` con la persona dentro, `ContactPage` y `BreadcrumbList`.
+60 URLs indexables, con títulos y descripciones únicos y en rango, canónicas propias y Twitter Cards. JSON-LD válido en todas: `Person` con premios y `sameAs`, `WebSite`, `Book` por cada libro y en cada idioma, con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `CreativeWork` para los poemas, las décimas, la Sonata y las obras del Farraluque, `NewsArticle` para cada pieza de prensa, `ItemList`, `AudioObject`, `CollectionPage`, `ProfilePage` con la persona dentro, `ContactPage` y `BreadcrumbList`.
 
 `hreflang` recíproco en las 40 páginas que tienen pareja de idioma, con `x-default` al español, y los mismos alternates en `sitemap.xml`. `llms.txt` con los datos citables del autor para motores de respuesta, `robots.txt` con permiso explícito a los bots de IA e IndexNow configurado.
 
