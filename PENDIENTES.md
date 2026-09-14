@@ -31,20 +31,7 @@ Cuando esto esté, se mide el rendimiento y se publican los resultados.
 1. **El título del poema del Farraluque.** Su mensaje decía *Tres desnudos y un delirio*; su manuscrito dice *Tres delirios y un desnudo*, y así está publicado.
 2. **`Revelaciones` es un solo párrafo** de 15.400 caracteres, tal como está en el .docx. No se le inventaron puntos y aparte: si los quiere, los pone él.
 3. **"Estación La Gaveta".** Lo dijo con un "quizá", así que es el título de la sala dentro de `/ineditos/`; la sección y su URL siguen siendo Inéditos. Renombrarla toca menú, pie y sitemap en todo el sitio: se hace en cuanto lo confirme.
-4. **Erratas en sus textos publicados.** Aparecieron al traducir al inglés y no se han tocado, porque son suyos. En inglés se tradujo lo que quiso decir.
-
-   | Archivo, en `herramientas/textos/libros/` | Dice | Debería decir |
-   |---|---|---|
-   | `trovadoras/voz-y-voto.txt` | "en mi voy voto" | "en mi voz y voto" |
-   | `trovadoras/voz-y-voto.txt` | "las entrevistan dejan" | "las entrevistas dejan" |
-   | `trovadoras/voz-y-voto.txt` | "esos matices el retrato escrito" | "esos matices en el retrato escrito" |
-   | `convertida-en-cancion/voz-y-voto.txt` | "El otro, sigue todavía espera." | "El otro sigue todavía en espera." |
-   | `el-escudo-de-valnuss/voz-y-voto.txt` | "El Escudo de Valnús", "Rainel Caborroi" | "Valnúss", "Cabarroi" |
-   | `grimorium/voz-y-voto.txt` | "Howard Philiphs Lovecraft", "en buena medida manera" | "Phillips", "en buena medida" |
-   | `de-la-extrana-aventura-de-don-quijote/contratapa.txt` | "Rescribir", "por primera en la Isla", "en al año" | "Reescribir", "por primera vez", "en el año" |
-   | `en-un-lugar-de-cuba/voz-y-voto.txt` | "que. muchos años" | "que, muchos años" |
-   | `perdidos-en-un-librero/voz-y-voto.txt` y `cuentos-de-munecas/voz-y-voto.txt` | "Magalys" | "Magaly", como en la ficha y en el crédito del libro |
-
+4. **Erratas en sus textos publicados: corregidas 12 de 14 el 14 de septiembre**, con el visto bueno de Ernesto, en *Trovadoras*, *Convertida en canción*, *El Escudo de Valnúss*, *Grimorium*, *De la extraña aventura de Don Quijote* y *En un lugar de Cuba*. **Queda una sin resolver**: en los "Con voz y voto" de *Perdidos en un librero* y de *Cuentos de muñecas* Tony escribe "Magalys", mientras el crédito del libro dice "Magaly Sánchez Ochoa". Ni Ernesto sabe cuál es la grafía buena de su nombre, y puede que Tony tampoco. No se toca hasta que alguien lo confirme con una fuente, por ejemplo la página de créditos del libro impreso.
 5. **Dos cuentos retenidos**, *Cantar el cuento III* y *La urna del tío*: el autor los marcó como parte de libros en proceso editorial.
 6. **El corte de *Aviso***, del concierto de Rita del Prado: pidió dejar solo desde donde él dice «esto se llama aviso». Hay dos cortes candidatos esperando que los escuche.
 7. **Extensión y edad recomendada de cada título**, que es lo primero que pregunta una editorial extranjera y no se puede inventar.
