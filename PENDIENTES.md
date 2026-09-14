@@ -40,13 +40,9 @@ Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AG
 
 ## 3. Espera la decisión de Ernesto
 
-- **`--gold-dim` en los bordes de los botones** da 2,80:1 contra el fondo, bajo el 3:1 que pide la WCAG 1.4.11 a los límites de un control. Subir su alfa de 0,5 a 0,55 lo lleva a 3,14:1 con un cambio casi imperceptible.
-- **La animación de entrada de la portada**: el nombre, el lema y los botones aparecen fundidos cuando `app.js` los activa, y eso retrasa la pantalla completa en móvil. Arreglo posible: que lo visible al abrir salga directo y el efecto quede para los bloques de más abajo.
 - **Tarjetas sociales de los libros**: las catorce páginas usan `summary_large_image` con la cubierta, que es vertical, y las redes la recortan por el centro. O se pasan a `summary`, o se genera una tarjeta horizontal por libro.
 - **`noindex` en `/ineditos/`** mientras no tenga ni una sinopsis.
 - **Dos campos más en la ficha de cada libro**, que pide un editor extranjero: derechos ya vendidos, además de los disponibles, y si existe muestra traducida.
-- **Search Console**: si no está hecho, pulsar *Validar corrección* en el informe de Página de perfil.
-- **Ping de IndexNow** para las URLs nuevas.
 - **Verificar el dominio en la cuenta de GitHub.** Lo tiene que hacer Ernesto; son unos minutos. En la configuración de Pages de la cuenta `cisnerosmusic` se añade `antoniolopezsanchez.art`, GitHub da un registro TXT, se pega en el DNS del dominio y se pulsa verificar. Protege contra que otra cuenta de GitHub se quede con el dominio si algún día el sitio se despublica mientras el DNS sigue apuntando a GitHub.
 - **Formulario de consultas de derechos con Formspree**, en lugar del correo: daría historial de consultas y filtro de spam, a cambio de un servicio de terceros, que el sitio hoy no tiene. Recomendación: no, mientras el correo `derechos@` baste.
 

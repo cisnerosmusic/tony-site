@@ -12,7 +12,12 @@
 // forzado en la carga.
 (function () {
   var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)) {
+  // Las animaciones son solo de escritorio. En telefono y tablet, o si la
+  // persona pidio menos movimiento, todo aparece directo y no se observa nada.
+  // Es la misma consulta que apaga las transiciones en styles.css, y las dos
+  // tienen que decir lo mismo. Decision de Ernesto, 14 de septiembre de 2026.
+  var sinAnimacion = window.matchMedia('(max-width: 1080px), (hover: none), (prefers-reduced-motion: reduce)').matches;
+  if (sinAnimacion || !('IntersectionObserver' in window)) {
     els.forEach(function (el) { el.classList.add('visible'); });
     return;
   }

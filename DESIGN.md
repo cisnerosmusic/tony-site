@@ -212,9 +212,10 @@ Esquinas vivas en todo: radio 0 en botones, cubiertas, fichas y contenedores. La
 - Centrado sobre noche profunda con hairline superior: índice de las 8 secciones en Cinzel 0.65rem ALTAS, iconos sociales en SVG inline, lema *bene scriptus* en Cormorant itálica oro tenue, y dos líneas de copyright y crédito en Space Mono tenue.
 
 ### Motion
+- **Solo en escritorio.** En teléfono y tablet (hasta 1080 px, la misma frontera que el menú de hamburguesa, o cualquier pantalla sin ratón) no hay ni una animación ni una transición: todo aparece directo. Decisión de Ernesto, 14 de septiembre de 2026: el teléfono se agiliza siempre. Lo que sigue describe el escritorio.
 - **El único motion del mundo** es la aparición lateral de bloques: `.reveal` entra desde ±60px en X con opacidad 0, y `app.js` le pone `.visible` cuando el `IntersectionObserver` lo ve asomar (threshold 0, rootMargin -8% abajo). Transición de 0.9s. Los bloques más altos que 1.2 viewports se muestran directos, porque un capítulo completo nunca alcanzaría el umbral y el contenido largo jamás debe poder quedar invisible. Sin `IntersectionObserver` todo se muestra.
 - El segundo y último movimiento es el `breathe` del `.section-divider`.
-- Con `prefers-reduced-motion: reduce` se apagan el reveal, el breathe y el scroll suave.
+- En teléfono, en tablet y con `prefers-reduced-motion: reduce` se apaga todo: el reveal, el breathe, las transiciones y el scroll suave. La consulta vive en `styles.css` y en `app.js`, y tiene que ser la misma en los dos.
 
 ## Do's and Don'ts
 

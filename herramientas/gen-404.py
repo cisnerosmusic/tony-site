@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSS = "?v=24"
+CSS = "?v=25"
 
 IDIOMA = {
     "es": {
@@ -133,7 +133,7 @@ def main():
   <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
 </footer>
 
-<script src="/app.js?v=9" defer></script>
+<script src="/app.js?v=10" defer></script>
 </body>
 </html>
 """

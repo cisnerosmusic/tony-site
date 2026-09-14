@@ -770,10 +770,17 @@ html:not(.en) .solo-en { display: none !important; }
 .reveal-left { transform: translateX(-60px); }
 .reveal.visible { opacity: 1; transform: translateX(0); }
 
-@media (prefers-reduced-motion: reduce) {
+/* Las animaciones son solo de escritorio. En telefono y tablet (la misma
+   frontera que el menu de hamburguesa, 1080 px, o cualquier pantalla sin
+   raton) y cuando la persona pidio menos movimiento, no hay ni una: ni la
+   aparicion de bloques, ni el divisor que respira, ni transiciones, ni scroll
+   suave. Todo aparece directo. Decision de Ernesto, 14 de septiembre de 2026:
+   el telefono se agiliza siempre. app.js usa la misma consulta para no
+   observar nada; si se cambia aqui, se cambia alli. */
+@media (max-width: 1080px), (hover: none), (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .reveal-right, .reveal-left { opacity: 1; transform: none; transition: none; }
-  .section-divider { animation: none; }
+  .reveal, .reveal-right, .reveal-left { opacity: 1; transform: none; will-change: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

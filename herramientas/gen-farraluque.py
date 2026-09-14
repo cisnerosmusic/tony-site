@@ -27,7 +27,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=24"
+CSS = "?v=25"
 RETRATO = "/img/retrato.webp"
 PREMIO = "XXX Premio Farraluque de Literatura Erótica, 2026"
 
@@ -170,7 +170,7 @@ def envoltura(titulo, subtitulo, T, D, datos, migas, cuerpo, tipo="article"):
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=9" defer></script>
+<script src="/app.js?v=10" defer></script>
 </body>
 </html>
 """

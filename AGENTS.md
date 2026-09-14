@@ -136,6 +136,8 @@ No son tareas, así que no viven en `PENDIENTES.md`. Son decisiones tomadas, cas
 **Diseño**
 - **El texto cumple AAA**, no solo AA. Una web casi toda navy dispara el atenuado automático de muchos monitores, y con AA el aparato se volvía negro sobre negro.
 - **Los enlaces dentro de un texto van subrayados**, no solo en oro. Ver `DESIGN.md`.
+- **Animaciones solo en escritorio.** En teléfono y tablet, hasta 1080 px o en cualquier pantalla sin ratón, no hay ni una: todo aparece directo. Decisión de Ernesto, 14 de septiembre de 2026: el teléfono se agiliza siempre. La consulta está en `styles.css` y en `app.js`, y tiene que ser la misma en los dos.
+- **El borde de los botones (`--gold-dim`) se queda como está.** Da 2,80:1 contra el fondo, bajo el 3:1 que la WCAG 1.4.11 pide a los límites de un control, pero el texto del botón va a 12:1 y el botón se reconoce y se usa sin problema. Decisión de Ernesto, 14 de septiembre de 2026: no se vuelve a proponer.
 
 **Mantenimiento**
 - **La Person del autor vive en la portada.** `/en/author/` la lee de ahí, pero `/periodista/` lleva una copia escrita a mano: si cambia la de la portada, se actualiza también la de `/periodista/`.

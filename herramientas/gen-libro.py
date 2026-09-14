@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=24"
+CSS = "?v=25"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -415,7 +415,7 @@ def generar_idioma(m, lang, disponibles):
 
 {pie_pagina(L).replace("{pie}", nav_html)}
 
-<script src="/app.js?v=9" defer></script>
+<script src="/app.js?v=10" defer></script>
 </body>
 </html>
 """
@@ -592,7 +592,7 @@ def catalogos():
 
 {pie_pagina(L).replace("{pie}", navegacion.pie_de(lang, None))}
 
-<script src="/app.js?v=9" defer></script>
+<script src="/app.js?v=10" defer></script>
 </body>
 </html>
 """
