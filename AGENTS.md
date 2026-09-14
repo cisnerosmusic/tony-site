@@ -32,12 +32,12 @@ Un hallazgo que se queda en una sesión está perdido. Un hallazgo escrito en `P
 
 1. `git pull`. Puede haber commits de la otra máquina, y los hay a menudo.
 2. Lee `PRODUCT.md`. La jerarquía de la obra depende del idioma y no es intuitiva.
-3. Lee `PENDIENTES.md`. Ahí está el estado real, con números y procedimientos.
+3. Lee `PENDIENTES.md`: es la lista de lo que queda por hacer, y nada más.
 
 **Al terminar:**
 
 1. **Pasa el comprobador.** `python herramientas/comprobar.py`. No se cierra una tanda con fallos abiertos.
-2. Escribe en `PENDIENTES.md` lo que quedó hecho y lo que quedó abierto, con datos verificables (rutas, cifras, comandos), no con impresiones.
+2. **Borra de `PENDIENTES.md` lo que quedó hecho** y añade lo que quedó abierto, con datos verificables (rutas, cifras, comandos), no con impresiones. Lo hecho no se apunta ahí: vive en el historial de git, y por eso el mensaje del commit explica el porqué. Si lo hecho dejó una decisión que no hay que deshacer, va a la sección de decisiones de este archivo.
 3. Commit con mensaje que explique **por qué**, no solo qué.
 4. Empuja. Un commit local no existe para las demás instancias.
 
@@ -92,7 +92,6 @@ Y al revés, para las instancias que construyen: **si dais un hallazgo sin núme
   **Este archivo es público**, así que aquí va la lista y no los motivos. El porqué de cada caso se habla con Ernesto; escribirlo aquí sería publicar por la puerta de atrás justo lo que se decidió no publicar.
 
   La regla general: **si un material toca lo político, lo militar o lo religioso, se para y se pregunta antes de subirlo.** Ni el asistente ni Ernesto, desde Miami, pueden medir lo que arriesga el autor allí. Ante la duda, se retira y se consulta.
-- **Los textos literarios se publican siempre en su español original.** Se traduce el aparato (navegación, fichas, presentaciones, SEO), nunca poemas ni fragmentos.
 - **Las obras inéditas de Tony no entran en este repositorio, que es público.** Solo sinopsis y fragmentos que él elija. Publicarlas les quitaría la condición de inéditas ante concursos y editoriales.
 - **El mecanismo de cobro, la custodia de fondos y cualquier detalle fiscal o contractual de la representación no se documentan aquí.** Van en la documentación privada del estudio.
 - **Las páginas de libro no se maquetan a mano**: se generan con `herramientas/gen-libro.py` desde su manifiesto.
@@ -101,6 +100,48 @@ Y al revés, para las instancias que construyen: **si dais un hallazgo sin núme
 - **El sitemap tampoco se edita a mano**: lo escribe `herramientas/gen-sitemap.py` desde las páginas y la historia de git, y el comprobador falla si no está al día.
 - Al cambiar `styles.css`, `fonts.css` o `app.js`, se sube su `?v=N` con `python herramientas/version.py <recurso> <número>`, que lo cambia a la vez en todas las páginas y en todos los generadores.
 - **Sin cifras de rendimiento publicadas mientras el sitio siga en construcción.** Decisión de Ernesto, 12 de septiembre de 2026: se mide y se publica al terminar la versión inglesa, no antes. Ni en el README ni en ningún otro documento.
+
+## Decisiones que no se deshacen
+
+No son tareas, así que no viven en `PENDIENTES.md`. Son decisiones tomadas, casi todas con Tony o con Ernesto, que alguien podría "arreglar" de buena fe dentro de un mes. Si una te parece un error, pregunta antes de tocarla.
+
+**Derechos**
+- **Solo se ofrece la obra de Antonio.** En los cinco volúmenes colectivos, la frase de la ficha cambia sola, porque se detecta por el campo `autoría`, y la lista de colectivos de `/derechos/` se lee de ese mismo campo: catálogo y aviso legal no pueden contradecirse. Decisión de Ernesto, 9 de septiembre de 2026.
+- **La zona inglesa enlaza la página inglesa de representación**: el mismo destino, en el idioma de quien lee.
+- **El dossier de derechos no se duplica aquí.** El sitio de Tony es la casa y el catálogo; el de Ernesto, el negocio.
+- **El aviso de derechos es una declaración clara, no asesoría legal.** Antes de firmar una cesión, abogado.
+
+**Contenido**
+- **Las tres fechas de *Proclama Real* no son una errata**: escrita en 2009, concurso El Dinosaurio 2013, fallo dado a conocer en 2014. Ya se "corrigió" una vez por error y hubo que revertirlo.
+- **Los títulos de poema van escritos a mano en el manifiesto.** En los originales vienen en mayúsculas, y bajarlos por programa rompe los nombres propios y confunde el nombre de la serie con el del poema.
+- **La lista de versos ajenos** del `LICENSE` y de `/derechos/` se revisa cada vez que entra un texto con epígrafe.
+- **Las dos obras del Farraluque viven en Laureles**, no en Tinta-ciones ni en Contarte: son literatura erótica adulta, y Contarte tiene cuentos infantiles en una rejilla que se baraja cada día. Llevan `<meta name="rating" content="adult">`, `isFamilyFriendly: false` y un aviso visible antes del texto.
+- **Inéditos vacía está bien.** No se rellena con relleno.
+- **El bloque de Prensa es de piezas firmadas en medios identificables.** Por eso se descartaron el 8 de septiembre un vídeo de booktuber sobre *Las guerreras de la luz* y una reseña de *Grimorium* en un blog que ya no existe.
+- **Habana Radio está caída entera**: sus reseñas y programas se enlazan en la copia del Internet Archive.
+- **Los diplomas del Farraluque no se publican como imagen**, porque eran fotos de folios. Sus datos están como texto en Laureles.
+
+**Inglés y demás idiomas**
+- **El orden inglés es otro: trova, poesía, narrativa.** Decisión de Ernesto, 9 de septiembre de 2026, razonada en `PRODUCT.md` y en la cabecera de `navegacion.py`.
+- **La autoridad se demuestra con hechos comprobables**, no se declara con superlativos.
+- **La décima y la glosa se explican**, porque un editor anglófono no sabe qué son.
+- **El coste de traducir se dice en voz alta** a quien hace números.
+- **Los títulos no se traducen**: se glosan entre paréntesis en la ficha y en el catálogo.
+- **Los titulares de prensa no se traducen**: son del medio.
+- **"Mi hermano"**, cuando Tony habla de Ramón Eduardo Haití o de Alain Gutiérrez, es figurado: en inglés se matiza para que no parezca parentesco.
+- **Leonardo Padura estaba en el jurado** que premió el Quijote de Tony en 2005. Sale de su propio texto y es el dato más citable del sitio inglés.
+- **"Ala del Mar" y "bene scriptus" no se traducen.**
+- **Ruso descartado**: Cinzel y Space Mono no tienen cirílico. Francés, italiano y portugués caben en las fuentes actuales.
+
+**Diseño**
+- **El texto cumple AAA**, no solo AA. Una web casi toda navy dispara el atenuado automático de muchos monitores, y con AA el aparato se volvía negro sobre negro.
+- **Los enlaces dentro de un texto van subrayados**, no solo en oro. Ver `DESIGN.md`.
+
+**Mantenimiento**
+- **La Person del autor vive en la portada.** `/en/author/` la lee de ahí, pero `/periodista/` lleva una copia escrita a mano: si cambia la de la portada, se actualiza también la de `/periodista/`.
+- **El meta `msvalidate.01` de la portada no se quita**: Bing revalida la propiedad periódicamente.
+- **`a-texto.py` usa striprtf.** Hubo un parser propio y se comía texto. Para textos del autor no se improvisa un conversor, y el resultado se compara con el original antes de publicar.
+- **`/novelas/` y `/poeta/` son redirecciones blandas**, con `meta refresh`, `noindex` y canonical, porque GitHub Pages no permite un 301 real.
 
 ## Material que llega del autor
 

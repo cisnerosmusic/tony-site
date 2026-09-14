@@ -108,7 +108,7 @@ Orden de autoridad cuando dos documentos se contradigan: la voluntad del autor, 
 
 ## Pendientes
 
-El trabajo por delante, las decisiones tomadas y lo que espera la palabra del autor están en [PENDIENTES.md](PENDIENTES.md).
+Lo que queda por hacer, y lo que espera la palabra de Tony o la decisión de Ernesto, está en [PENDIENTES.md](PENDIENTES.md). Las decisiones que no hay que deshacer están en [AGENTS.md](AGENTS.md), y lo ya hecho, en el historial de git.
 
 ## Créditos
 
