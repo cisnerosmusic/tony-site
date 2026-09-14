@@ -30,7 +30,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=23"
+CSS = "?v=24"
 RETRATO = "/img/retrato.webp"
 
 # Paginas que si tienen una equivalente de verdad en español. El hreflang solo
@@ -149,7 +149,7 @@ def portada_hero(d):
       <div class="hero-acciones">
         {acciones}
       </div>
-      <p class="nota-demo" style="margin-top:2rem;">{esc(d["aviso_idioma"])}</p>
+      <p class="nota" style="margin-top:2rem;">{esc(d["aviso_idioma"])}</p>
     </div>
   </div>
 </div>

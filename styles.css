@@ -360,7 +360,10 @@ a.libro-cubierta:hover img {
   max-width: 62ch;
 }
 
-.nota-demo {
+/* Notas pequeñas del autor o del sitio. Se llamaba .nota-demo, heredado de
+   la plantilla de Index01, donde marcaba texto de relleno; aqui lleva notas
+   reales, y el nombre invitaba a borrarlas al clonar la plantilla. */
+.nota {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   letter-spacing: 0.06em;

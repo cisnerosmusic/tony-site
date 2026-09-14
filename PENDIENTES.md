@@ -47,11 +47,11 @@ Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AG
 - **Dos campos más en la ficha de cada libro**, que pide un editor extranjero: derechos ya vendidos, además de los disponibles, y si existe muestra traducida.
 - **Search Console**: si no está hecho, pulsar *Validar corrección* en el informe de Página de perfil.
 - **Ping de IndexNow** para las URLs nuevas.
-- Opcionales: **Formspree** para las consultas de derechos, y **verificar el dominio en la cuenta de GitHub** con un registro TXT.
+- **Verificar el dominio en la cuenta de GitHub.** Lo tiene que hacer Ernesto; son unos minutos. En la configuración de Pages de la cuenta `cisnerosmusic` se añade `antoniolopezsanchez.art`, GitHub da un registro TXT, se pega en el DNS del dominio y se pulsa verificar. Protege contra que otra cuenta de GitHub se quede con el dominio si algún día el sitio se despublica mientras el DNS sigue apuntando a GitHub.
+- **Formulario de consultas de derechos con Formspree**, en lugar del correo: daría historial de consultas y filtro de spam, a cambio de un servicio de terceros, que el sitio hoy no tiene. Recomendación: no, mientras el correo `derechos@` baste.
 
 ## 4. Técnico
 
-- **Renombrar `.nota-demo` a `.nota`**. Ya no marca contenido de demo, sino notas reales. Hay que hacerlo antes de clonar la plantilla para otro artista, para que nadie la borre pensando que es andamiaje.
 - **Francés, italiano y portugués**, después del inglés. El procedimiento está en el README, sección Idiomas.
 
 ## 5. Fuera de este repositorio

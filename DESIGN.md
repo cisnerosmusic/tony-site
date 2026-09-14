@@ -205,7 +205,7 @@ Esquinas vivas en todo: radio 0 en botones, cubiertas, fichas y contenedores. La
 ### Galería (.galeria)
 - Grid `repeat(auto-fit, minmax(14rem, 1fr))`, imágenes con hairline y pies en Space Mono tenue de 0.65rem.
 
-### Nota (.nota-demo)
+### Nota (.nota)
 - Space Mono 0.65rem en texto tenue. **El nombre engaña:** ya no marca contenido de demostración, ahora lleva notas reales al lector (el aviso de que los textos literarios se publican en su español original). Está pendiente renombrarla a `.nota` antes de clonar la plantilla a otro artista. No la borres pensando que es andamiaje.
 
 ### Pie (.footer)

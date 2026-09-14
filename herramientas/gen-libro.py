@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=23"
+CSS = "?v=24"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -195,7 +195,7 @@ def generar_idioma(m, lang, disponibles):
             frags.append(f'<h3 class="fragmento-titulo"{la}>{esc(f["titulo"])}</h3>\n<div class="fragmento"{la}>{prosa_a_html(chr(10).join(lineas))}</div>')
     fragmentos = "\n".join(frags)
     if fragmentos and L["aviso_fragmentos"]:
-        fragmentos = f'<p class="nota-demo">{esc(L["aviso_fragmentos"])}</p>\n' + fragmentos
+        fragmentos = f'<p class="nota">{esc(L["aviso_fragmentos"])}</p>\n' + fragmentos
 
     ficha_items = dict(m["ficha"]) if es else {
         k: o.get("ficha", {}).get(k, v) for k, v in m["ficha"].items()}
