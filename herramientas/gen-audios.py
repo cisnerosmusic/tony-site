@@ -34,6 +34,21 @@ def esc_attr(t):
     un titulo o en un alt parte el HTML en dos."""
     return html.escape(t, quote=True)
 
+def rotulo(g):
+    """Como se anuncia una grabacion. Dos de los poemas no tienen titulo, asi
+    que se los nombra por su primer verso; van en cursiva y con puntos
+    suspensivos para que no se lean como un titulo que no existe. Lo pidio el
+    autor el 20 de septiembre de 2026."""
+    if g.get("sin_titulo"):
+        return f'<em>{esc(g["titulo"])}…</em>'
+    return esc(g["titulo"])
+
+
+def nombre_llano(g):
+    """El mismo rotulo sin marcado, para el JSON-LD y los atributos."""
+    return g["titulo"] + "…" if g.get("sin_titulo") else g["titulo"]
+
+
 def bloque(g, sala, n):
     lado = "right" if n % 2 == 0 else "left"
     canonica = g["canonica"]
@@ -44,7 +59,7 @@ def bloque(g, sala, n):
         ruta, nombre = SALAS[canonica][1], SALAS[canonica][2]
         pie = f'{esc(g["frase"])} · <a href="{ruta}">dónde y cuándo, en {nombre}</a>'
     return (f'  <article class="audio-item reveal reveal-{lado}">\n'
-            f'    <h3>{esc(g["titulo"])}</h3>\n'
+            f'    <h3>{rotulo(g)}</h3>\n'
             f'    <p class="audio-meta">{pie}</p>\n'
             f'    <audio controls preload="none" src="{g["archivo"]}">\n'
             f'      Tu navegador no reproduce audio; puedes <a href="{g["archivo"]}">descargar la grabación</a>.\n'
@@ -54,7 +69,7 @@ def bloque(g, sala, n):
 def datos(g):
     # El AudioObject se declara una sola vez, en la sala canonica.
     d = {"@context": "https://schema.org", "@type": "AudioObject",
-         "name": g["titulo"], "contentUrl": DOMINIO + g["archivo"],
+         "name": nombre_llano(g), "contentUrl": DOMINIO + g["archivo"],
          "encodingFormat": "audio/mpeg", "inLanguage": "es",
          "creator": {"@id": DOMINIO + "/#antonio"}}
     if g.get("duracion"): d["duration"] = g["duracion"]

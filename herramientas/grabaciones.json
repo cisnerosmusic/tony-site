@@ -6,7 +6,10 @@
     "frase": "Poema en mi voz",
     "ficha": "Poema en la voz del autor",
     "canonica": "en-mi-voz",
-    "salas": ["en-mi-voz"]
+    "salas": [
+      "en-mi-voz"
+    ],
+    "duracion": "PT1M37S"
   },
   {
     "id": "luna-callada",
@@ -15,7 +18,96 @@
     "frase": "Poema en mi voz",
     "ficha": "Poema en la voz del autor",
     "canonica": "en-mi-voz",
-    "salas": ["en-mi-voz"]
+    "salas": [
+      "en-mi-voz"
+    ],
+    "duracion": "PT1M21S"
+  },
+  {
+    "id": "capricornio-personal",
+    "titulo": "Capricornio personal (autorretrato con mitología)",
+    "archivo": "/audio/capricornio-personal.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "duracion": "PT1M24S",
+    "canonica": "en-mi-voz",
+    "salas": [
+      "en-mi-voz"
+    ]
+  },
+  {
+    "id": "defensa-del-escritor",
+    "titulo": "Defensa del escritor",
+    "archivo": "/audio/defensa-del-escritor.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "duracion": "PT1M20S",
+    "canonica": "en-mi-voz",
+    "salas": [
+      "en-mi-voz"
+    ]
+  },
+  {
+    "id": "desnudo-con-fruta",
+    "titulo": "Desnudo con fruta",
+    "archivo": "/audio/desnudo-con-fruta.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "duracion": "PT40S",
+    "canonica": "en-mi-voz",
+    "salas": [
+      "en-mi-voz"
+    ]
+  },
+  {
+    "id": "idas",
+    "titulo": "Idas",
+    "archivo": "/audio/idas.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "duracion": "PT1M31S",
+    "canonica": "en-mi-voz",
+    "salas": [
+      "en-mi-voz"
+    ]
+  },
+  {
+    "id": "juglar",
+    "titulo": "Juglar",
+    "archivo": "/audio/juglar.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "duracion": "PT45S",
+    "canonica": "en-mi-voz",
+    "salas": [
+      "en-mi-voz"
+    ]
+  },
+  {
+    "id": "no-vamos-a-olvidar",
+    "titulo": "No vamos a olvidar",
+    "archivo": "/audio/no-vamos-a-olvidar.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "duracion": "PT53S",
+    "canonica": "en-mi-voz",
+    "salas": [
+      "en-mi-voz"
+    ],
+    "sin_titulo": true
+  },
+  {
+    "id": "yo-soy",
+    "titulo": "Yo soy",
+    "archivo": "/audio/yo-soy.mp3",
+    "frase": "Poema en mi voz",
+    "ficha": "Poema en la voz del autor",
+    "duracion": "PT40S",
+    "canonica": "en-mi-voz",
+    "salas": [
+      "en-mi-voz"
+    ],
+    "sin_titulo": true
   },
   {
     "id": "lectura-uneac-santa-clara-2022",
@@ -26,7 +118,10 @@
     "duracion": "PT11M22S",
     "fecha": "2022-05-18",
     "canonica": "plano-abierto",
-    "salas": ["plano-abierto", "en-mi-voz"]
+    "salas": [
+      "plano-abierto",
+      "en-mi-voz"
+    ]
   },
   {
     "id": "mar-de-papel-1999",
@@ -37,6 +132,9 @@
     "duracion": "PT1M5S",
     "fecha": "1999-04-03",
     "canonica": "plano-abierto",
-    "salas": ["plano-abierto", "en-mi-voz"]
+    "salas": [
+      "plano-abierto",
+      "en-mi-voz"
+    ]
   }
 ]
