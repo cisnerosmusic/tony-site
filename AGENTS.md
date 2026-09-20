@@ -113,6 +113,8 @@ No son tareas, así que no viven en `PENDIENTES.md`. Son decisiones tomadas, cas
 
 **Contenido**
 - **Las tres fechas de *Proclama Real* no son una errata**: escrita en 2009, concurso El Dinosaurio 2013, fallo dado a conocer en 2014. Ya se "corrigió" una vez por error y hubo que revertirlo.
+- **Los poemas no llevan fecha.** Los originales de Tony la traen al pie, y `herramientas/leer-poema.py` la sigue separando del cuerpo, precisamente para que ninguna se cuele entre los versos; pero no sale a la página. Decisión de Ernesto, 20 de septiembre de 2026. Si alguna vez se quiere volver a enseñar, el dato está entero en `colofon` y solo hay que imprimirlo.
+- **El bloque de cada libro se llama *Sinopsis***, en español, y *Synopsis* en inglés. El rótulo vive en `herramientas/idiomas.json`; la clave interna sigue siendo `contratapa`, porque es el nombre del archivo de texto en cada manifiesto. La única excepción es *Cuentos de muñecas*: es un volumen colectivo y su nota no resume un libro de Tony, sino que explica la compilación, así que mantiene **Sobre el libro**.
 - **Los títulos de poema van escritos a mano en el manifiesto.** En los originales vienen en mayúsculas, y bajarlos por programa rompe los nombres propios y confunde el nombre de la serie con el del poema.
 - **La lista de versos ajenos** del `LICENSE` y de `/derechos/` se revisa cada vez que entra un texto con epígrafe.
 - **Las dos obras del Farraluque viven en Laureles**, no en Tinta-ciones ni en Contarte: son literatura erótica adulta, y Contarte tiene cuentos infantiles en una rejilla que se baraja cada día. Llevan `<meta name="rating" content="adult">`, `isFamilyFriendly: false` y un aviso visible antes del texto.

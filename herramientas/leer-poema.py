@@ -12,6 +12,14 @@ import os, re, sys, io, json
 
 POETAS = ("José Martí", "José Lezama Lima", "Jose Marti", "Lezama Lima")
 FECHA = re.compile(r"\b(1[89]\d{2}|20\d{2})\b")
+MES = re.compile(r"\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|"
+                 r"septiembre|octubre|noviembre|diciembre)\b", re.IGNORECASE)
+
+
+def linea_de_fecha(l):
+    """Una linea corta que solo carga fecha: con año, o con nombre de mes."""
+    l = l.strip()
+    return bool(l) and len(l) < 45 and bool(FECHA.search(l) or MES.search(l))
 
 
 def partes(texto):
@@ -61,6 +69,20 @@ def partes(texto):
     ultimas = [k for k in range(len(cuerpo) - 1, max(-1, len(cuerpo) - 5), -1) if cuerpo[k].strip()]
     corte = next((k for k in ultimas if FECHA.search(cuerpo[k]) and len(cuerpo[k].strip()) < 45), None)
     if corte is not None:
+        # El autor fecha a veces en dos tiempos: "1997 MAYO 15" y debajo "2002
+        # FEBRERO 25", o parte la fecha en "15 y Junio" y, tras un blanco,
+        # "2015". Hallada una, se sigue subiendo mientras arriba haya mas
+        # lineas de fecha, para que ninguna se quede colada entre los versos.
+        k = corte - 1
+        while k >= 0:
+            if not cuerpo[k].strip():
+                k -= 1
+                continue
+            if linea_de_fecha(cuerpo[k]):
+                corte = k
+                k -= 1
+                continue
+            break
         colofon = [l.strip() for l in cuerpo[corte:] if l.strip()]
         cuerpo = cuerpo[:corte]
         while cuerpo and not cuerpo[-1]:

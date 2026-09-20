@@ -27,7 +27,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=25"
+CSS = "?v=27"
 RETRATO = "/img/retrato.webp"
 PREMIO = "XXX Premio Farraluque de Literatura Erótica, 2026"
 

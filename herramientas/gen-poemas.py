@@ -18,7 +18,7 @@ leer_poema = SourceFileLoader("leer_poema", os.path.join(
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 URL = DOMINIO + "/tinta-ciones/poemas-sueltos/"
-CSS = "?v=25"
+CSS = "?v=27"
 
 
 def esc(t):
@@ -39,7 +39,7 @@ def ancla(titulo):
 
 
 def bloque(p, ficha, n):
-    """Un poema: titulo, epigrafe ajeno si lo hay, versos, colofon y firma.
+    """Un poema: titulo, epigrafe ajeno si lo hay, versos y firma.
     El titulo viene del manifiesto, escrito a mano; del archivo solo salen los
     versos, que son lo que no se puede tocar."""
     principal = ficha["titulo"]
@@ -61,8 +61,9 @@ def bloque(p, ficha, n):
         partes.append('  </blockquote>')
     cuerpo = "\n".join(esc(l) for l in p["cuerpo"]).strip("\n")
     partes.append(f'  <div class="verso poema-cuerpo">{cuerpo}</div>')
-    if p["colofon"]:
-        partes.append(f'  <p class="poema-colofon">{esc(" · ".join(p["colofon"]))}</p>')
+    # El colofon de fecha no sale a la pagina. Se sigue leyendo, y por eso el
+    # lector lo separa, para que ninguna fecha se quede colada al final de los
+    # versos; pero un poema no se presenta con la fecha en que se escribio.
     partes.append('  <p class="vyv-firma">ALS</p>')
     partes.append('</article>')
     return "\n".join(partes)

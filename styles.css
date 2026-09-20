@@ -443,6 +443,13 @@ a.libro-cubierta:hover img {
 }
 
 /* ── Ficha (dl) ─────────────────────────────── */
+/* La ficha no pasa de 860 px, como la lista de premios y de trayectoria, y
+   tenga o no una cubierta al lado. Sin este tope, al quitar la rejilla de dos
+   columnas de /periodista/ las lineas separadoras de cada fila se estiraban a
+   1104 px y quedaban mas largas que el resto del aparato de su propia pagina.
+   El texto de los valores ya estaba limitado aparte, en .ficha dd. */
+.ficha { max-width: 860px; }
+
 .ficha div {
   display: grid;
   grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr);
@@ -562,13 +569,6 @@ a.libro-cubierta:hover img {
   font-weight: 300;
   line-height: 1.95;
   color: var(--text-primary);
-}
-.poema-colofon {
-  margin-top: 1.6rem;
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.1em;
-  color: var(--text-dim);
 }
 .poema-credito {
   font-family: var(--font-mono);

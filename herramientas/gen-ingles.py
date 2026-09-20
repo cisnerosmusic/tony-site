@@ -30,7 +30,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=25"
+CSS = "?v=27"
 RETRATO = "/img/retrato.webp"
 
 # Paginas que si tienen una equivalente de verdad en español. El hreflang solo
