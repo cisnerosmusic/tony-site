@@ -1,0 +1,105 @@
+{
+  "_nota": "La sala de Ineditos. Cada novela lleva sinopsis, Con voz y voto y los fragmentos que el autor eligio; nunca la obra entera, que perderia su condicion de inedita ante concursos y editoriales. La linea de cada tarjeta es la primera frase de su sinopsis, tal cual: no se escribe copia nueva. Lo genera herramientas/gen-ineditos.py.",
+  "frase": "Las páginas que esperan.",
+  "sala_titulo": "Estación La Gaveta",
+  "presentacion": "ineditos/presentacion.txt",
+  "seo_titulo": "Inéditos: las páginas que esperan | Antonio López Sánchez",
+  "seo_desc": "Cuatro novelas inéditas de Antonio López Sánchez: Preguntas, Mis diarios de cama, Sonidos y Palabras. Sinopsis, fragmentos y la voz del autor sobre cada una.",
+  "novelas": [
+    {
+      "slug": "preguntas",
+      "titulo": "Preguntas. Un día en la vida de Juan Pérez",
+      "genero": "Novela",
+      "linea": "La novela hace un recorrido a través de una jornada en la vida de Juan Pérez.",
+      "sinopsis": "ineditos/preguntas/sinopsis.txt",
+      "vyv": "ineditos/preguntas/voz-y-voto.txt",
+      "fragmentos": [
+        {
+          "titulo": "Preludio",
+          "archivo": "ineditos/preguntas/fragmento-1.txt"
+        },
+        {
+          "titulo": "I. Amanecer sin dolor",
+          "archivo": "ineditos/preguntas/fragmento-2.txt"
+        }
+      ],
+      "seo_titulo": "Preguntas, novela inédita | Antonio López Sánchez",
+      "seo_desc": "Una jornada en la vida de Juan Pérez, periodista en la capital de una isla de las Antillas. Sinopsis, preludio y primer capítulo de la novela inédita."
+    },
+    {
+      "slug": "mis-diarios-de-cama",
+      "titulo": "Mis diarios de cama",
+      "genero": "Novela · para lectores adultos",
+      "adultos": true,
+      "linea": "En las varias ocasiones en que enfrente una de las mayores y más humanas pruebas de amor de su vida, Ana Paula registrará por escrito todo lo que le acontece.",
+      "sinopsis": "ineditos/mis-diarios-de-cama/sinopsis.txt",
+      "vyv": "ineditos/mis-diarios-de-cama/voz-y-voto.txt",
+      "fragmentos": [
+        {
+          "titulo": "18 de septiembre de 2004",
+          "archivo": "ineditos/mis-diarios-de-cama/fragmento-1.txt"
+        },
+        {
+          "titulo": "14 de mayo de 2020",
+          "archivo": "ineditos/mis-diarios-de-cama/fragmento-2.txt"
+        }
+      ],
+      "seo_titulo": "Mis diarios de cama, novela inédita | Antonio López Sánchez",
+      "seo_desc": "Ana Paula anota en sus diarios de cama los años más duros de su vida. Sinopsis y dos entradas de la novela inédita de Antonio López Sánchez, para adultos."
+    },
+    {
+      "slug": "sonidos",
+      "titulo": "Sonidos",
+      "genero": "Novela de horror",
+      "linea": "Un muy rico noble inglés del siglo XIX, dotado de un oído verdaderamente único y excepcional, se obsesiona por encontrar el sonido perfecto.",
+      "sinopsis": "ineditos/sonidos/sinopsis.txt",
+      "vyv": "ineditos/sonidos/voz-y-voto.txt",
+      "lugar": true,
+      "fragmentos": [
+        {
+          "titulo": "Lebruit (II). La música",
+          "archivo": "ineditos/sonidos/fragmento-1.txt"
+        },
+        {
+          "titulo": "Samantha y Adelle (I)",
+          "archivo": "ineditos/sonidos/fragmento-2.txt"
+        },
+        {
+          "titulo": "Josepe Andoni Fortabat Caden (I)",
+          "archivo": "ineditos/sonidos/fragmento-3.txt"
+        }
+      ],
+      "seo_titulo": "Sonidos, novela inédita de horror | Antonio López Sánchez",
+      "seo_desc": "Un noble inglés del siglo XIX busca el sonido perfecto en la muerte y el dolor. Sinopsis y tres fragmentos de la novela inédita de horror de Antonio López Sánchez."
+    },
+    {
+      "slug": "palabras",
+      "titulo": "Palabras",
+      "genero": "Novela de fantasía",
+      "linea": "Dos civilizaciones, desde un hogar extinto, persiguen a un fugitivo, mientras se hacen la guerra y destruyen dimensiones a su paso.",
+      "sinopsis": "ineditos/palabras/sinopsis.txt",
+      "vyv": "ineditos/palabras/voz-y-voto.txt",
+      "lugar": true,
+      "fragmentos": [
+        {
+          "titulo": "Davolas y andaras (I)",
+          "archivo": "ineditos/palabras/fragmento-1.txt"
+        },
+        {
+          "titulo": "De barro, de tiempo, de páginas (I)",
+          "archivo": "ineditos/palabras/fragmento-2.txt"
+        },
+        {
+          "titulo": "Gemas y regresos (I)",
+          "archivo": "ineditos/palabras/fragmento-3.txt"
+        },
+        {
+          "titulo": "Gemas y regresos (II)",
+          "archivo": "ineditos/palabras/fragmento-4.txt"
+        }
+      ],
+      "seo_titulo": "Palabras, novela inédita de fantasía | Antonio López Sánchez",
+      "seo_desc": "Dos civilizaciones persiguen al Maestro Astrom hasta la Tierra. Fragmentos de la novela inédita de Antonio López Sánchez, precuela de El otro lado del espejo."
+    }
+  ]
+}

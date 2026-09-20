@@ -165,6 +165,7 @@ def versiones():
 def generado_al_dia():
     antes = {rel(p): leer(p) for p in paginas()}
     ordenes = [["python", "herramientas/gen-cuento.py"],
+               ["python", "herramientas/gen-ineditos.py"],
                ["python", "herramientas/gen-poemas.py"],
                ["python", "herramientas/gen-decimitas.py"],
                ["python", "herramientas/gen-sonata.py"],

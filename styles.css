@@ -435,6 +435,15 @@ a.libro-cubierta:hover img {
   .volumen-cabeza img { max-width: 11rem; }
 }
 
+/* El lugar y el tiempo con que abre una escena, como en una novela impresa:
+   en cursiva, apagado, y junto, no partido en parrafos de prosa. */
+.fragmento-lugar {
+  font-style: italic;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+
 .fragmento-titulo {
   font-family: var(--font-body);
   font-size: 1.15rem;

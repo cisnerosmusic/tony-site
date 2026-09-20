@@ -36,12 +36,12 @@ Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AG
    - prensa de los diez libros que no la tienen;
    - fotos de presentaciones;
    - la foto de escritor oficial, si hace la sesión.
-10. **Inéditos**: qué sinopsis y fragmentos quiere enseñar de sus cinco poemarios y tres libros de cuentos terminados.
+10. **Inéditos**: entraron las cuatro novelas que mandó. Si quiere enseñar también algo de sus poemarios y libros de cuentos inéditos, falta que lo mande.
+11. **Erratas dudosas en los Inéditos**, que no se tocaron por si son a propósito: en *Mis diarios de cama*, el archivo de la entrada 8 dice «20 de septiembre de 2004» y el texto «18» (se publicó el 18), y «María con la mala noticia de su mamá al final murió», donde parece faltar un «de que»; en *Preguntas*, «un tangente homenaje» y «desde las páginas de novela»; en *Palabras*, «A esas respuestas [...] se intentó responder», donde quizá quiso decir «preguntas».
 
 ## 3. Espera la decisión de Ernesto
 
 - **Tarjetas sociales de los libros**: las catorce páginas usan `summary_large_image` con la cubierta, que es vertical, y las redes la recortan por el centro. O se pasan a `summary`, o se genera una tarjeta horizontal por libro.
-- **`noindex` en `/ineditos/`** mientras no tenga ni una sinopsis.
 - **Dos campos más en la ficha de cada libro**, que pide un editor extranjero: derechos ya vendidos, además de los disponibles, y si existe muestra traducida.
 - **Verificar el dominio en la cuenta de GitHub.** Lo tiene que hacer Ernesto; son unos minutos. En la configuración de Pages de la cuenta `cisnerosmusic` se añade `antoniolopezsanchez.art`, GitHub da un registro TXT, se pega en el DNS del dominio y se pulsa verificar. Protege contra que otra cuenta de GitHub se quede con el dominio si algún día el sitio se despublica mientras el DNS sigue apuntando a GitHub.
 - **Formulario de consultas de derechos con Formspree**, en lugar del correo: daría historial de consultas y filtro de spam, a cambio de un servicio de terceros, que el sitio hoy no tiene. Recomendación: no, mientras el correo `derechos@` baste.
