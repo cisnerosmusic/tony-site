@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSS = "?v=28"
+CSS = "?v=29"
 
 IDIOMA = {
     "es": {

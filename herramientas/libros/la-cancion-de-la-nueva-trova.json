@@ -1,5 +1,6 @@
 {
   "slug": "la-cancion-de-la-nueva-trova",
+  "seccion": "/trova/",
   "titulo": "La canción de la Nueva Trova",
   "genero": "Ensayo",
   "genero_frase": "libro de ensayos y entrevistas",
@@ -7,7 +8,7 @@
   "editorial": "Atril Ediciones Musicales",
   "premios": [],
   "descripcion": "La canción de la Nueva Trova (Atril Ediciones Musicales, 2001), primer libro de Antonio López Sánchez: ensayos y entrevistas sobre la Nueva Trova cubana, con sinopsis, ficha, fragmentos, presentaciones y el comentario del autor.",
-  "tira_sub": "Mi primer libro: la trova puesta por escrito",
+  "tira_sub": "Las voces de la historia",
   "cubierta": "/img/libros/nueva-trova-cubierta.webp",
   "cubierta_alt": "Cubierta de La canción de la Nueva Trova",
   "contratapa": "libros/la-cancion-de-la-nueva-trova/contratapa.txt",
@@ -35,6 +36,11 @@
       "img": "/img/libros/nueva-trova-pres-1.webp",
       "alt": "Presentación de La canción de la Nueva Trova en Cubadisco 2001",
       "pie": "Presentación en Cubadisco, mayo de 2001. Foto: Alain Gutiérrez Almeida"
+    },
+    {
+      "img": "/img/libros/nueva-trova-pres-3.webp",
+      "alt": "Firmando un ejemplar en una mesa, ante el trovador Augusto Blanca, en Cubadisco 2001",
+      "pie": "Con el trovador Augusto Blanca. Cubadisco 2001. Foto: Alain Gutiérrez Almeida"
     },
     {
       "img": "/img/libros/nueva-trova-pres-2.webp",

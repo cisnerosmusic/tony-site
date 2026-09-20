@@ -1,5 +1,5 @@
 {
-  "tira_sub": "My first book: the trova, set down in writing",
+  "tira_sub": "The voices behind the history",
   "seo_titulo": "La canción de la Nueva Trova: essays and interviews",
   "seo_desc": "La canción de la Nueva Trova (Atril, 2001), the author's first book: a history of the Cuban Nueva Trova told with its founders. Excerpts in Spanish.",
   "cubierta_alt": "Cover of La canción de la Nueva Trova",
@@ -16,12 +16,16 @@
       "pie": "Launch at Cubadisco, May 2001. Photo: Alain Gutiérrez Almeida"
     },
     {
+      "alt": "Signing a copy at a table for the troubadour Augusto Blanca, at Cubadisco 2001",
+      "pie": "With the troubadour Augusto Blanca. Cubadisco 2001. Photo: Alain Gutiérrez Almeida"
+    },
+    {
       "alt": "Presentation of the book at the University Book and Reading Festival",
       "pie": "University Book and Reading Festival (FULL), Pabellón Cuba, 2007. Photo: Alain Gutiérrez Almeida"
     }
   ],
   "catalogo": {
     "glosa": "The Song of the Nueva Trova",
-    "sinopsis": "A history of the movement told with the voices of its founders, from its first public appearance in February 1967. The author's first book, born as his university thesis."
+    "sinopsis": "The unrepeatable memory of a first book. Essays and interviews on how the Cuban Nueva Trova was born and where it went."
   }
 }

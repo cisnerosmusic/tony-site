@@ -113,6 +113,20 @@ _POR_IDIOMA = {
 }
 
 
+_MENUS = {"es": MENU, "en": MENU_EN}
+
+
+def nombre_de(lang, ruta):
+    """Como se llama una seccion en su idioma. Lo usan las paginas de libro
+    para decir de que sala cuelgan sin repetir aqui el nombre: los tres libros
+    de la trova cuelgan de /trova/, no del catalogo, y el camino de miga y el
+    boton de volver tienen que decirlo con las mismas palabras que el menu."""
+    for h, n in _MENUS[lang]:
+        if h == ruta:
+            return n
+    return None
+
+
 def menu_de(lang, activa, sangria="    "):
     return _POR_IDIOMA[lang][0](activa, sangria)
 

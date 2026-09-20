@@ -136,6 +136,9 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--gold);
   margin-bottom: 1rem;
 }
+/* Los cuentos entran sin linea de presentacion: titulo y al texto. Sin esto,
+   el margen del h1 dejaba un hueco de 1 rem debajo del titulo. */
+.page-header h1:last-child { margin-bottom: 0; }
 
 .page-header p {
   font-size: 1.1rem;
@@ -395,6 +398,28 @@ a.libro-cubierta:hover img {
 .cubierta-dominante img {
   border: 1px solid var(--line-bright);
   box-shadow: 0 14px 50px rgba(0, 0, 0, 0.55);
+}
+
+/* Cada tomo de una obra en varios volumenes: la portada y, a su lado, la
+   sinopsis de ese tomo. Debajo, a todo el ancho, su fragmento. En telefono la
+   portada se pone encima y no se estira: una cubierta a 327 px de ancho se
+   comeria la pantalla entera antes de llegar al texto. */
+.volumen-cabeza {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+.volumen-cabeza img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+.volumen-cabeza p { margin-bottom: 1rem; }
+.volumen-cabeza p:last-child { margin-bottom: 0; }
+@media (max-width: 900px) {
+  .volumen-cabeza { grid-template-columns: 1fr; gap: 1.5rem; }
+  .volumen-cabeza img { max-width: 11rem; }
 }
 
 .fragmento-titulo {

@@ -10,37 +10,61 @@
   "tira_sub": "Cuatro protagonistas, cinco libros, una sola historia y un empaque singular...",
   "cubierta": "/img/libros/valnuss-cubierta.webp",
   "cubierta_alt": "Cubierta de El Escudo de Valnúss, ilustrada por Rainel Cabarroi",
-  "volumenes_titulo": "Los cinco libros",
   "volumenes": [
     {
       "img": "/img/libros/valnuss-1-aurora.webp",
       "alt": "Cubierta de La magia de la aurora, tomo 1 de El Escudo de Valnúss",
       "titulo": "La magia de la aurora",
-      "pie": "La magia femenina lo puede todo..."
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-1-sinopsis.txt",
+      "fragmento": {
+        "capitulo": "IV",
+        "archivo": "libros/el-escudo-de-valnuss/volumen-1-fragmento.txt",
+        "tipo": "prosa"
+      }
     },
     {
       "img": "/img/libros/valnuss-2-rojo.webp",
       "alt": "Cubierta de El rojo del mar, tomo 2 de El Escudo de Valnúss",
       "titulo": "El rojo del mar",
-      "pie": "El poder de la voluntad y la disciplina..."
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-2-sinopsis.txt",
+      "fragmento": {
+        "capitulo": "IV",
+        "archivo": "libros/el-escudo-de-valnuss/volumen-2-fragmento.txt",
+        "tipo": "prosa"
+      }
     },
     {
       "img": "/img/libros/valnuss-3-fuego.webp",
       "alt": "Cubierta de Un fuego a toda vela, tomo 3 de El Escudo de Valnúss",
       "titulo": "Un fuego a toda vela",
-      "pie": "La venganza y el amor..."
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-3-sinopsis.txt",
+      "fragmento": {
+        "capitulo": "IV",
+        "archivo": "libros/el-escudo-de-valnuss/volumen-3-fragmento.txt",
+        "tipo": "prosa"
+      }
     },
     {
       "img": "/img/libros/valnuss-4-caballos.webp",
       "alt": "Cubierta de Campos de caballos, tomo 4 de El Escudo de Valnúss",
       "titulo": "Campos de caballos",
-      "pie": "La magia y el mal..."
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-4-sinopsis.txt",
+      "fragmento": {
+        "capitulo": "I",
+        "archivo": "libros/el-escudo-de-valnuss/volumen-4-fragmento.txt",
+        "tipo": "prosa"
+      }
     },
     {
       "img": "/img/libros/valnuss-5-talismanes.webp",
       "alt": "Cubierta de Los cuatro talismanes, tomo 5 de El Escudo de Valnúss",
       "titulo": "Los cuatro talismanes",
-      "pie": "La batalla final..."
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-5-sinopsis.txt",
+      "fragmento": {
+        "capitulo": "VII",
+        "archivo": "libros/el-escudo-de-valnuss/volumen-5-fragmento.txt",
+        "tipo": "prosa"
+      }
     }
   ],
   "contratapa": "libros/el-escudo-de-valnuss/contratapa.txt",
@@ -53,20 +77,6 @@
     "formato": "Estuche con cinco volúmenes",
     "cubierta": "Ilustración de todas las portadas y del estuche: Rainel Cabarroi"
   },
-  "fragmentos": [
-    {
-      "titulo": "De La magia de la aurora",
-      "archivo": "libros/el-escudo-de-valnuss/fragmento-1-de-la-magia-de-la-aurora.txt",
-      "tipo": "prosa"
-    }
-  ],
-  "galeria": [
-    {
-      "img": "/img/libros/valnuss-portadas.webp",
-      "alt": "Las cinco portadas del estuche de El Escudo de Valnúss",
-      "pie": "Las cinco portadas del estuche, ilustradas por Rainel Cabarroi"
-    }
-  ],
   "prensa": [
     {
       "titulo": "Escudo de pura magia",

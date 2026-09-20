@@ -7,7 +7,7 @@
     "portada": "/",
     "ruta_libros": "/libros/",
     "catalogo_nombre": "Mis libros",
-    "volver": "Volver a Mis libros",
+    "volver": "Volver a {}",
     "saltar": "Saltar al contenido",
     "abrir_menu": "Abrir menú",
     "secciones_aria": "Secciones",
@@ -21,7 +21,8 @@
       "fragmentos": "Fragmentos",
       "presentaciones": "Presentaciones",
       "prensa": "Prensa",
-      "ficha": "Ficha"
+      "ficha": "Ficha",
+      "capitulo": "Capítulo {}"
     },
     "ficha_claves": {},
     "derechos": "Disponibles para ediciones y traducciones fuera de Cuba",
@@ -37,7 +38,7 @@
     "portada": "/en/",
     "ruta_libros": "/en/books/",
     "catalogo_nombre": "Books",
-    "volver": "Back to the catalogue",
+    "volver": "Back to {}",
     "saltar": "Skip to content",
     "abrir_menu": "Open menu",
     "secciones_aria": "Sections",
@@ -51,7 +52,8 @@
       "fragmentos": "Excerpts",
       "presentaciones": "Launches and signings",
       "prensa": "Press",
-      "ficha": "Details"
+      "ficha": "Details",
+      "capitulo": "Chapter {}"
     },
     "ficha_claves": {
       "título": "title",

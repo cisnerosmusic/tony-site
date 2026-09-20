@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=28"
+CSS = "?v=29"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -121,6 +121,11 @@ def validar(m, o, lang):
     for k in ("galeria", "volumenes", "prensa", "lecturas"):
         if len(o.get(k, [])) != len(m.get(k, [])):
             falta.append(f"{k} ({len(o.get(k, []))} de {len(m.get(k, []))})")
+    # Cada tomo lleva su propia sinopsis, y una sinopsis es aparato: se
+    # traduce. El fragmento no aparece aqui porque nunca se traduce.
+    for i, v in enumerate(m.get("volumenes", [])):
+        if v.get("sinopsis") and not o.get("volumenes", [{}] * (i + 1))[i].get("sinopsis"):
+            falta.append(f"volumenes[{i}].sinopsis")
     if "catalogo" in IDIOMAS[lang] and not o.get("catalogo", {}).get("sinopsis"):
         falta.append("catalogo.sinopsis")
     if falta:
@@ -182,17 +187,25 @@ def generar_idioma(m, lang, disponibles):
     contratapa = prosa_a_html(leer(T("contratapa"))) if m.get("contratapa") else ""
     vyv = prosa_a_html(leer(T("vyv"))) if m.get("vyv") else ""
 
-    frags = []
-    for f in m.get("fragmentos", []):
+    def cuerpo_fragmento(f, titulo_f, titulo_espanol=True):
+        """Un fragmento con su titulo. El texto nunca se traduce, asi que en
+        una pagina que no es española sale marcado con lang="es". El titulo,
+        en cambio, depende: el de los fragmentos sueltos lo escribe el autor
+        en español y va marcado; el de un tomo es "Chapter IV", ya traducido,
+        y marcarlo diria que esta en español cuando no lo esta."""
+        lt = la if titulo_espanol else ""
         cuerpo = leer(f["archivo"])
         if f["tipo"] == "verso":
-            frags.append(f'<h3 class="fragmento-titulo"{la}>{esc(f["titulo"])}</h3>\n<div class="fragmento-verso"{la}>{esc(cuerpo)}</div>')
-        else:
-            # quita las dos primeras lineas si son numero de capitulo y titulo repetido
-            lineas = cuerpo.split("\n")
-            while lineas and (lineas[0].strip().isupper() or lineas[0].strip().rstrip("IVXLC.").strip() == "" ) and len(lineas[0].strip()) < 60:
-                lineas.pop(0)
-            frags.append(f'<h3 class="fragmento-titulo"{la}>{esc(f["titulo"])}</h3>\n<div class="fragmento"{la}>{prosa_a_html(chr(10).join(lineas))}</div>')
+            return (f'<h3 class="fragmento-titulo"{lt}>{esc(titulo_f)}</h3>\n'
+                    f'<div class="fragmento-verso"{la}>{esc(cuerpo)}</div>')
+        # quita las dos primeras lineas si son numero de capitulo y titulo repetido
+        lineas = cuerpo.split("\n")
+        while lineas and (lineas[0].strip().isupper() or lineas[0].strip().rstrip("IVXLC.").strip() == "" ) and len(lineas[0].strip()) < 60:
+            lineas.pop(0)
+        return (f'<h3 class="fragmento-titulo"{lt}>{esc(titulo_f)}</h3>\n'
+                f'<div class="fragmento"{la}>{prosa_a_html(chr(10).join(lineas))}</div>')
+
+    frags = [cuerpo_fragmento(f, f["titulo"]) for f in m.get("fragmentos", [])]
     fragmentos = "\n".join(frags)
     if fragmentos and L["aviso_fragmentos"]:
         fragmentos = f'<p class="nota">{esc(L["aviso_fragmentos"])}</p>\n' + fragmentos
@@ -222,15 +235,33 @@ def generar_idioma(m, lang, disponibles):
             filas.append(f'<div><dt>{esc(etiqueta)}</dt><dd>{esc(v)}</dd></div>')
     ficha = "\n".join(filas)
 
-    # Volumenes: para las obras que salieron como juego de varios tomos, cada
-    # portada con su titulo y la linea que el autor le puso. El titulo de cada
-    # tomo no se traduce; su pie y su texto alternativo, si.
-    volumenes = ""
+    # Volumenes: las obras que salieron como juego de varios tomos llevan una
+    # sala por tomo, y en ese orden, que es el que pidio el autor el 20 de
+    # septiembre de 2026: portada, sinopsis y fragmento. Antes eran las cinco
+    # portadas juntas en una rejilla y, mucho mas abajo, un solo bloque con
+    # todos los fragmentos seguidos; el autor lo llamo "la longaniza".
+    #
+    # El titulo de cada tomo no se traduce: es el nombre del libro. Su texto
+    # alternativo y su sinopsis, si; el fragmento, nunca.
+    volumenes = []
     for i, v in enumerate(m.get("volumenes", [])):
         tv = v if es else {**v, **o["volumenes"][i]}
         vw, vh = dims(v["img"])
-        volumenes += (f'<figure><img src="{v["img"]}" width="{vw}" height="{vh}" alt="{esc_attr(tv["alt"])}" loading="lazy">'
-                      f'<figcaption><strong{la}>{esc(v["titulo"])}</strong><br>{esc(tv["pie"])}</figcaption></figure>\n')
+        cuerpo = (f'    <div class="volumen-cabeza">\n'
+                  f'      <img src="{v["img"]}" width="{vw}" height="{vh}" alt="{esc_attr(tv["alt"])}" loading="lazy">\n'
+                  f'      <div>{prosa_a_html(leer(tv["sinopsis"]))}</div>\n'
+                  f'    </div>\n')
+        if v.get("fragmento"):
+            # El aviso de por que el fragmento sigue en español se da una sola
+            # vez, en el primer tomo que lo lleva, y no cinco veces seguidas.
+            if L["aviso_fragmentos"] and not any("class=\"nota\"" in c for _, _, c in volumenes):
+                cuerpo += f'    <p class="nota">{esc(L["aviso_fragmentos"])}</p>\n'
+            cuerpo += cuerpo_fragmento(
+                v["fragmento"],
+                L["bloques"]["capitulo"].format(v["fragmento"]["capitulo"]),
+                titulo_espanol=False) + "\n"
+        nombre = f'<span{la}>{esc(v["titulo"])}</span>' if la else esc(v["titulo"])
+        volumenes.append((f'volumen-{i + 1}', nombre, cuerpo))
 
     galeria = ""
     for i, g in enumerate(m.get("galeria", [])):
@@ -284,9 +315,23 @@ def generar_idioma(m, lang, disponibles):
             for u, txt, pie_b, fuera in salidas)
         descarga_html = '\n  <p class="descarga reveal reveal-left">\n' + botones + '  </p>\n'
 
-    # Una pagina de libro cuelga del catalogo pero no ES el catalogo: el menu la
+    # De que sala cuelga el libro. Casi todos cuelgan del catalogo, pero los
+    # tres de la trova cuelgan de /trova/, que es donde se los presenta: el
+    # menu, el camino de miga y el boton del final tienen que llevar los tres
+    # al mismo sitio. En español lo dice el manifiesto, con su campo "seccion";
+    # en los demas idiomas ya lo decia el catalogo de ese idioma, por grupos.
+    # Antes estaba escrito "/libros/" a mano y desde un libro de trova se
+    # volvia al catalogo general, que no es de donde se habia entrado.
+    casa = (m.get("seccion") or L["ruta_libros"]) if es else (
+        seccion_del_libro(lang, slug) or L["ruta_libros"])
+    casa_nombre = navegacion.nombre_de(lang, casa) or L["catalogo_nombre"]
+    # En el camino de miga el nombre va como en el menu, que es un rotulo. En
+    # el boton va dentro de una frase, y en ingles "Back to The trova" chirria:
+    # ahi el articulo baja a minuscula.
+    casa_en_frase = ("the " + casa_nombre[4:]) if casa_nombre.startswith("The ") else casa_nombre
+    # Una pagina de libro cuelga de su sala pero no ES la sala: el menu la
     # marca activa y el pie no marca ninguna pagina como actual.
-    activa = "/libros/" if es else seccion_del_libro(lang, slug)
+    activa = casa
     menu_html = navegacion.menu_de(lang, activa)
     nav_html = navegacion.pie_de(lang, None)
 
@@ -314,9 +359,10 @@ def generar_idioma(m, lang, disponibles):
     B = L["bloques"]
     piezas = [
         ("contratapa", T("contratapa_titulo", B["contratapa"]), contratapa),
-        ("volumenes", T("volumenes_titulo", B["volumenes"]),
-         f'    <div class="galeria">\n{volumenes}    </div>' if volumenes else ""),
         ("vyv", B["vyv"], (vyv + '\n    <p class="vyv-firma">ALS</p>') if vyv else ""),
+        # Cada tomo, con su portada, su sinopsis y su fragmento, detras de la
+        # voz del autor sobre la obra entera y delante de todo lo demas.
+        *volumenes,
         ("fragmentos", B["fragmentos"], fragmentos),
         ("presentaciones", B["presentaciones"], f'    <div class="galeria">\n{galeria}    </div>' if galeria else ""),
         ("prensa", B["prensa"], f'    <ul class="lista-obras">\n{prensa}\n    </ul>' if prensa else ""),
@@ -371,7 +417,7 @@ def generar_idioma(m, lang, disponibles):
   "@type": "BreadcrumbList",
   "itemListElement": [
     {{ "@type": "ListItem", "position": 1, "name": "Ala del Mar", "item": "{DOMINIO}{L["portada"]}" }},
-    {{ "@type": "ListItem", "position": 2, "name": "{L["catalogo_nombre"]}", "item": "{DOMINIO}{L["ruta_libros"]}" }},
+    {{ "@type": "ListItem", "position": 2, "name": "{casa_nombre}", "item": "{DOMINIO}{casa}" }},
     {{ "@type": "ListItem", "position": 3, "name": {json.dumps(titulo, ensure_ascii=False)}, "item": "{url}" }}
   ]
 }}
@@ -408,7 +454,7 @@ def generar_idioma(m, lang, disponibles):
     <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc_attr(T("cubierta_alt"))}" fetchpriority="high">
   </figure>
 {descarga_html}
-{bloques}  <p style="margin-top:2rem;"><a href="{L["ruta_libros"]}" class="btn">{L["volver"]}</a></p>
+{bloques}  <p style="margin-top:2rem;"><a href="{casa}" class="btn">{L["volver"].format(casa_en_frase)}</a></p>
 
 </div>
 </main>

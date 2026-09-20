@@ -19,6 +19,16 @@ import navegacion
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FUERA = ("en/", "novelas/", "poeta/", "404.html")
 
+# Las paginas de libro tampoco: aqui la seccion se deduce de la direccion, y
+# la de un libro no siempre la dice su direccion. Los tres de la trova viven
+# en /libros/<slug>/ porque son libros, pero se presentan en /trova/ y es ahi
+# a donde devuelven; quien lo decide es el campo "seccion" de su manifiesto.
+# Repetir aqui esa decision seria tener el dato en dos sitios. No se pierde
+# vigilancia: comprobar.py vuelve a correr gen-libro.py y compara el HTML, asi
+# que un menu que derive de su generador sigue saltando.
+def es_pagina_de_libro(rel):
+    return rel.startswith("libros/") and rel != "libros/index.html"
+
 
 def ruta_web(rel):
     d = os.path.dirname(rel)
@@ -34,7 +44,7 @@ def main(solo_comprobar=False):
             if not f.endswith(".html"):
                 continue
             rel = os.path.relpath(os.path.join(base, f), RAIZ).replace("\\", "/")
-            if any(rel.startswith(x) for x in FUERA):
+            if any(rel.startswith(x) for x in FUERA) or es_pagina_de_libro(rel):
                 continue
             p = os.path.join(base, f)
             t = io.open(p, encoding="utf-8").read()
