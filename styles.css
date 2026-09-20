@@ -613,8 +613,13 @@ a.libro-cubierta:hover img {
 }
 .laurel-item p { color: var(--text-secondary); font-weight: 300; line-height: 1.8; max-width: 62ch; }
 @media (max-width: 900px) {
-  .laurel-item { grid-template-columns: 56px 1fr; gap: 1rem; }
-  .laurel-anio { font-size: 1.1rem; }
+  /* El año se pone encima del texto, como el rotulo de la ficha, y no en una
+     columna estrecha a la derecha. En /laureles/ los años son todos de cuatro
+     cifras y cabian; en la trayectoria de /periodista/ hay nueve como "2024 y
+     2025" o "2001 a 2010", que en esa columna se partian en dos lineas contra
+     el margen y dejaban al texto 255 px de los 327 de la pantalla. */
+  .laurel-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .laurel-anio { font-size: 1.1rem; text-align: left; padding-top: 0; }
 }
 
 /* ── En mi voz (audio) ──────────────────────── */
