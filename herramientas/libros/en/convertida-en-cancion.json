@@ -1,5 +1,4 @@
 {
-  "tira_sub": "The woman sung in verse",
   "seo_titulo": "Convertida en canción: women in the lyrics of the Nueva Trova",
   "seo_desc": "Convertida en canción (Capiro, 2019), an essay on the image of women in the lyrics of the Cuban Nueva Trova. Synopsis, details and excerpts.",
   "cubierta_alt": "Cover of Convertida en canción, illustrated by Ramón Eduardo Haití",
@@ -46,7 +45,9 @@
     }
   ],
   "prensa": [
-    { "pie": "Chronicle by Amalia Alejandra, Cubaliteraria, 25 April 2022" }
+    {
+      "pie": "Chronicle by Amalia Alejandra, Cubaliteraria, 25 April 2022"
+    }
   ],
   "catalogo": {
     "glosa": "Turned into Song",

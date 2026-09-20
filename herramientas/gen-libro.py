@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=29"
+CSS = "?v=30"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -104,7 +104,7 @@ def capa(slug, lang):
 def validar(m, o, lang):
     """Se para si la capa no cubre todo lo que el manifiesto dice en español."""
     falta = []
-    for k in ("tira_sub", "seo_titulo", "seo_desc", "cubierta_alt", "genero"):
+    for k in ("seo_titulo", "seo_desc", "cubierta_alt", "genero"):
         if not o.get(k):
             falta.append(k)
     for k in ("contratapa", "vyv", "contratapa_titulo", "volumenes_titulo", "descarga"):
@@ -254,6 +254,10 @@ def generar_idioma(m, lang, disponibles):
         if v.get("fragmento"):
             # El aviso de por que el fragmento sigue en español se da una sola
             # vez, en el primer tomo que lo lleva, y no cinco veces seguidas.
+            # Cada fragmento se anuncia con el mismo rotulo que el bloque de
+            # fragmentos de los demas libros, para que se sepa que lo que
+            # sigue ya es la obra y no el aparato. Lo pidio Tony.
+            cuerpo += f'    <p class="volumen-rotulo">{esc(L["bloques"]["fragmentos"])}</p>\n'
             if L["aviso_fragmentos"] and not any("class=\"nota\"" in c for _, _, c in volumenes):
                 cuerpo += f'    <p class="nota">{esc(L["aviso_fragmentos"])}</p>\n'
             cuerpo += cuerpo_fragmento(
@@ -444,7 +448,6 @@ def generar_idioma(m, lang, disponibles):
 
 <header class="page-header">
   <h1{la}>{esc(titulo)}</h1>
-  <p>{esc(T("tira_sub"))}</p>
 </header>
 
 <main id="main">

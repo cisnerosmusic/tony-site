@@ -417,6 +417,19 @@ a.libro-cubierta:hover img {
 }
 .volumen-cabeza p { margin-bottom: 1rem; }
 .volumen-cabeza p:last-child { margin-bottom: 0; }
+/* El rotulo que anuncia el fragmento de cada tomo: como el de la ficha,
+   dorado y en mayusculas de maquina, porque es aparato y no obra. */
+.volumen-rotulo {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 2.8rem;
+}
+.volumen-rotulo + .nota { margin-top: 0.6rem; }
+.volumen-rotulo + .fragmento-titulo,
+.volumen-rotulo + .nota + .fragmento-titulo { margin-top: 0.5rem; }
 @media (max-width: 900px) {
   .volumen-cabeza { grid-template-columns: 1fr; gap: 1.5rem; }
   .volumen-cabeza img { max-width: 11rem; }

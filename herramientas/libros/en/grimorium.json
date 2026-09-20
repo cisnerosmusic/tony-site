@@ -1,5 +1,4 @@
 {
-  "tira_sub": "My darkest offering",
   "seo_titulo": "Grimorium: a horror novel by Antonio López Sánchez",
   "seo_desc": "Grimorium (Editorial Oriente, 2018), a horror novel in homage to Lovecraft: three parallel stories around a forbidden book. Synopsis and excerpts.",
   "cubierta_alt": "Cover of Grimorium, illustrated by Rainel Cabarroi",
@@ -12,8 +11,12 @@
     "cubierta": "Illustration by Rainel Cabarroi"
   },
   "prensa": [
-    { "pie": "Interview by Iyaimí Palomares, Juventud Rebelde, 8 February 2019" },
-    { "pie": "Habana Radio, 2019. The original site is down, and the link goes to the Internet Archive copy" }
+    {
+      "pie": "Interview by Iyaimí Palomares, Juventud Rebelde, 8 February 2019"
+    },
+    {
+      "pie": "Habana Radio, 2019. The original site is down, and the link goes to the Internet Archive copy"
+    }
   ],
   "catalogo": {
     "sinopsis": "Three parallel stories, set in different times, whose protagonists pursue the same forbidden book and its ancient, terrifying mystery. Horror built on atmosphere, in homage to Lovecraft."
