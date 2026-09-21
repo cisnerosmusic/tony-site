@@ -311,7 +311,7 @@
             "Short fiction is often the cheapest way for a foreign publisher to test an author. Individual stories are available for magazine and anthology publication, in Spanish or in translation."
           ],
           "enlaces": [
-            {"texto": "Read the stories", "url": "/contarte/", "lang": "es"},
+            {"texto": "Read the stories", "url": "/en/stories/"},
             {"texto": "The full catalogue", "url": "/en/books/"}
           ]
         },

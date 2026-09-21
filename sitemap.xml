@@ -9,35 +9,59 @@
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/contarte/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/contarte/aquelarre/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/aquelarre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/aquelarre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/aquelarre/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/contarte/asesinato/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/asesinato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/asesinato/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/asesinato/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/contarte/clinica-del-miedo/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/clinica-del-miedo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/clinica-del-miedo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/clinica-del-miedo/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/contarte/duelo/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/duelo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/duelo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/duelo/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/contarte/la-muneca-y-el-principe/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/la-muneca-y-el-principe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/la-muneca-y-el-principe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/la-muneca-y-el-principe/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/contarte/luces/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/luces/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/luces/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/luces/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/contarte/sombreros-pamelas-y-magicas-varitas/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/sombreros-pamelas-y-magicas-varitas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/sombreros-pamelas-y-magicas-varitas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/sombreros-pamelas-y-magicas-varitas/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/derechos/</loc>
@@ -383,6 +407,62 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/derechos/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/rights/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/derechos/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/stories/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/stories/aquelarre/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/aquelarre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/aquelarre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/aquelarre/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/stories/asesinato/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/asesinato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/asesinato/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/asesinato/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/stories/clinica-del-miedo/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/clinica-del-miedo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/clinica-del-miedo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/clinica-del-miedo/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/stories/duelo/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/duelo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/duelo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/duelo/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/stories/la-muneca-y-el-principe/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/la-muneca-y-el-principe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/la-muneca-y-el-principe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/la-muneca-y-el-principe/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/stories/luces/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/luces/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/luces/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/luces/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/stories/sombreros-pamelas-y-magicas-varitas/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/contarte/sombreros-pamelas-y-magicas-varitas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/stories/sombreros-pamelas-y-magicas-varitas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/contarte/sombreros-pamelas-y-magicas-varitas/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/en/trova/</loc>

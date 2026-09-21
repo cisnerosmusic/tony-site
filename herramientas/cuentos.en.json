@@ -1,0 +1,64 @@
+{
+  "_nota": "Capa inglesa de Contarte. Trae solo el aparato: la entrada de la sala, la linea de cada cuento, su procedencia y los metadatos. Los cuentos y sus titulos se quedan en español y salen marcados con lang=es.",
+  "ruta": "/en/stories/",
+  "h1": "Stories",
+  "frase": "Contarte: the room where the stories live.",
+  "h2": "Once upon a time...",
+  "intro": [
+    "Those ancient words announce a story. Some of my stories live here, each with a place of its own and a hand held out, inviting you in.",
+    "Some are free, still unattached. Some come from books waiting to see the light. Some are cheerful, others dark. But all of them are ready to keep you company.",
+    "The story, that sprite that has kept humanity company since the dawn of time, still gives away magic, realities and even fears."
+  ],
+  "aviso": "The stories are published in their original Spanish, as all literary texts on this site are.",
+  "leer": "Read the story",
+  "volver": "Back to Stories",
+  "migas": "Stories",
+  "ver_ficha": "See the details of {}",
+  "seo_titulo": "Stories by Antonio López Sánchez, in Spanish",
+  "seo_desc": "Seven complete stories by the Cuban writer Antonio López Sánchez, published in their original Spanish, each with a page of its own.",
+  "cuentos": {
+    "la-muneca-y-el-principe": {
+      "significado": "The Doll and the Prince",
+      "linea": "A dragon has appeared in Pilar's toy room. But it will take a prince to face it.",
+      "procedencia": "Published in Cuentos de muñecas (¡A leer y a jugar!), edited by Magaly Sánchez Ochoa, Editorial de la Mujer, 2015",
+      "seo_titulo": "La muñeca y el príncipe, a story by Antonio López Sánchez",
+      "seo_desc": "A complete children's story by Antonio López Sánchez, in Spanish: Pilar's toys prepare her birthday, and a prince is needed. From Cuentos de muñecas, 2015."
+    },
+    "aquelarre": {
+      "significado": "Coven",
+      "linea": "Six very special friends must complete an arcane rite to survive in today's world.",
+      "seo_titulo": "Aquelarre, a story by Antonio López Sánchez",
+      "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: six friends meet in a Havana apartment, and the evening ends in a ritual with a new leader."
+    },
+    "asesinato": {
+      "significado": "Murder",
+      "linea": "The downstairs neighbour was afraid of a tree. So she decided to kill it...",
+      "seo_titulo": "Asesinato, a story by Antonio López Sánchez",
+      "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: a neighbour fears the tree on the pavement and goes down with petrol and rags. A balcony sees the rest."
+    },
+    "clinica-del-miedo": {
+      "significado": "Clinic of Fear",
+      "linea": "A patient breaks down on the couch of a most unusual specialist.",
+      "seo_titulo": "Clínica del miedo, a flash story by Antonio López Sánchez",
+      "seo_desc": "A complete flash story by Antonio López Sánchez, in Spanish: a patient confesses his fear to a very patient specialist. It reads in a minute."
+    },
+    "duelo": {
+      "significado": "Duel",
+      "linea": "Two figures face each other in the snow. A duel between unequal opponents...",
+      "seo_titulo": "Duelo, a flash story by Antonio López Sánchez",
+      "seo_desc": "A complete flash story by Antonio López Sánchez, in Spanish: two figures face each other on the snow, and a shot rings out. It reads in a minute."
+    },
+    "luces": {
+      "significado": "Lights",
+      "linea": "A writer's literature and overflowing imagination against everyday reality and a fickle power supply.",
+      "seo_titulo": "Luces, a story by Antonio López Sánchez",
+      "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: the power comes back, and with it the washing machine, the hose held high and a story never written."
+    },
+    "sombreros-pamelas-y-magicas-varitas": {
+      "significado": "Hats, Sun Hats and Magic Wands",
+      "linea": "Brujito Sombrero is woken by a sonata, and on the other side of the fence a magic wand goes by.",
+      "seo_titulo": "Sombreros, pamelas y mágicas varitas, a story in Spanish",
+      "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: Brujito Sombrero is woken by a Scarlatti sonata, and a magic wand passes beyond the fence."
+    }
+  }
+}

@@ -10,7 +10,6 @@ Lo que queda por hacer, y nada más.
 
 Hay salas que solo existen en español. En todas, la literatura se queda en español y lo que se traduce es el aparato:
 
-1. **Contarte**: la entradilla y la línea de presentación de cada cuento.
 2. **Tinta-ciones por dentro**: Poemas sueltos, De-Cimitas, Sonata de la lluvia y En mi voz. Hoy `/en/poetry/` explica la poesía y enlaza a las salas españolas.
 3. **Laureles**: hoy los premios en inglés viven dentro de `/en/author/`. Decidir si merecen página propia, con las dos obras del Farraluque.
 4. **Plano abierto**: las grabaciones, con su ficha en inglés.
