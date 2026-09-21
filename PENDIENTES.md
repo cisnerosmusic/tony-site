@@ -15,7 +15,6 @@ Hay salas que solo existen en español. En todas, la literatura se queda en espa
 3. **Laureles**: hoy los premios en inglés viven dentro de `/en/author/`. Decidir si merecen página propia, con las dos obras del Farraluque.
 4. **Plano abierto**: las grabaciones, con su ficha en inglés.
 5. **Entre lectores, Directorio e Inéditos.**
-6. **"Books" en el menú inglés**, sí o no. Hoy al catálogo se llega desde la portada, desde las secciones y desde cada libro. Decide Ernesto.
 
 Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AGENTS.md`.
 
@@ -43,9 +42,6 @@ Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AG
 
 ## 3. Espera la decisión de Ernesto
 
-- **Las tarjetas de `/trova/`**: Tony pidió quitar el texto bajo cada libro y a la vez mandó tres textos nuevos para esos mismos sitios. Se aplicó lo primero; los tres textos viven solo en el catálogo inglés. Si se quieren de vuelta en español, son tres líneas.
-- **Dos grabaciones viejas de En mi voz**, *Clase de Literatura* y *Luna Callada*, siguen en estéreo a 328 kbps (4 y 3,3 MB). Con el tratamiento de las nuevas, 96 kbps mono, bajarían a poco más de 1 MB cada una.
-- **La nota del pie de En mi voz**: «Más grabaciones van llegando; algún día, también videoclips». Lo primero ya se cumplió; lo de los videoclips sigue siendo una promesa. Quitarla o ajustarla.
 - ***Cuentos de muñecas*** es el único libro cuyo primer bloque no se llama Sinopsis sino «Sobre el libro», porque es un volumen colectivo y su nota explica la compilación. Si se prefiere uniformidad total, se cambia.
 
 - **Tarjetas sociales de los libros**: las catorce páginas usan `summary_large_image` con la cubierta, que es vertical, y las redes la recortan por el centro. O se pasan a `summary`, o se genera una tarjeta horizontal por libro.

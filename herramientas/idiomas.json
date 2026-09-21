@@ -101,7 +101,7 @@
         },
         {
           "titulo": "Fiction",
-          "seccion": "/en/fiction/",
+          "seccion": "/en/books/",
           "libros": ["las-guerreras-de-la-luz", "el-escudo-de-valnuss", "el-otro-lado-del-espejo", "grimorium", "perdidos-en-un-librero", "de-la-extrana-aventura-de-don-quijote"]
         },
         {

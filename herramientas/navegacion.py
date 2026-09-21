@@ -68,7 +68,10 @@ def pie_html(activa, sangria="    "):
 MENU_EN = [
     ("/en/trova/", "The trova"),
     ("/en/poetry/", "Poetry"),
-    ("/en/fiction/", "Fiction"),
+    # "Books" y no "Fiction": decision de Ernesto, 21 de septiembre de 2026.
+    # El catalogo entero cabe en el menu y la ficcion sigue teniendo su
+    # pagina, /en/fiction/, enlazada desde la portada inglesa.
+    ("/en/books/", "Books"),
     ("/en/author/", "The author"),
     ("/en/rights/", "Rights"),
 ]

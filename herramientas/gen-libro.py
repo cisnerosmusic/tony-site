@@ -618,7 +618,7 @@ def catalogos():
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="menu-principal">
-{navegacion.menu_de(lang, None)}
+{navegacion.menu_de(lang, L["ruta_libros"])}
   </ul>
 </nav>
 
@@ -639,7 +639,7 @@ def catalogos():
 
 </main>
 
-{pie_pagina(L).replace("{pie}", navegacion.pie_de(lang, None))}
+{pie_pagina(L).replace("{pie}", navegacion.pie_de(lang, L["ruta_libros"]))}
 
 <script src="/app.js?v=10" defer></script>
 </body>

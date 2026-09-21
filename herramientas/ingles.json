@@ -14,7 +14,7 @@
       "acciones": [
         {"texto": "The trova", "url": "/en/trova/", "relleno": true},
         {"texto": "Poetry", "url": "/en/poetry/"},
-        {"texto": "Fiction", "url": "/en/fiction/"},
+        {"texto": "Books", "url": "/en/books/"},
         {"texto": "Rights", "url": "/en/rights/"}
       ],
       "secciones": [
