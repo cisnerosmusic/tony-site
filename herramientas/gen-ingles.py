@@ -41,6 +41,9 @@ PAREJAS = {
     "/en/trova/": "/trova/",
     "/en/poetry/": "/tinta-ciones/",
     "/en/author/": "/periodista/",
+    "/en/poetry/in-my-voice/": "/tinta-ciones/en-mi-voz/",
+    "/en/author/on-record/": "/plano-abierto/",
+    "/en/books/among-readers/": "/entre-lectores/",
 }
 
 
@@ -91,6 +94,78 @@ def bloque_puerta(d):
             '  </article>')
 
 
+def dims(rel):
+    from PIL import Image
+    with Image.open(os.path.join(RAIZ, rel.lstrip("/"))) as im:
+        return im.size
+
+
+def bloque_galeria(fotos):
+    """Un album de fotos con su pie, como las galerias del sitio español."""
+    filas = []
+    for f in fotos:
+        w, h = dims(f["img"])
+        filas.append(f'    <figure><img src="{f["img"]}" width="{w}" height="{h}" alt="{esc_attr(f["alt"])}" '
+                     f'loading="lazy"><figcaption>{esc(f["pie"])}</figcaption></figure>')
+    return '  <div class="galeria reveal reveal-left">\n' + "\n".join(filas) + '\n  </div>'
+
+
+def articulo_medio(titulo, meta, cuerpo, n):
+    lado = "right" if n % 2 == 0 else "left"
+    return (f'  <article class="audio-item reveal reveal-{lado}">\n'
+            f'    <h3>{titulo}</h3>\n'
+            f'    <p class="audio-meta">{meta}</p>\n'
+            f'{cuerpo}'
+            f'  </article>')
+
+
+def reproductor(src, capa):
+    return (f'    <audio controls preload="none" src="{src}">\n'
+            f'      {capa["sin_audio"].format(src)}\n'
+            f'    </audio>\n')
+
+
+def bloque_medios(items, capa):
+    """Grabaciones y videos escritos en la propia pagina: los de radio y
+    television que en español viven a mano en Plano abierto."""
+    salida = []
+    for n, m in enumerate(items):
+        la = f' lang="{m["lang"]}"' if m.get("lang") else ""
+        titulo = f'<span{la}>{esc(m["titulo"])}</span>' if la else esc(m["titulo"])
+        if m["tipo"] == "audio":
+            cuerpo = reproductor(m["src"], capa)
+        elif m["tipo"] == "video":
+            cuerpo = (f'    <video controls preload="none" poster="{m["poster"]}" width="{m["ancho"]}" height="{m["alto"]}">\n'
+                      f'      <source src="{m["src"]}" type="video/mp4">\n'
+                      f'      {m["sin_video"].format(m["src"])}\n'
+                      f'    </video>\n')
+        else:
+            cuerpo = f'    <p><a href="{m["url"]}" target="_blank" rel="noopener" class="btn">{esc(m["boton"])}</a></p>\n'
+        salida.append(articulo_medio(titulo, esc(m["meta"]), cuerpo, n))
+    return "\n\n".join(salida)
+
+
+def bloque_grabaciones(sala, capa):
+    """Las grabaciones de una sala, leidas de grabaciones.json, que es donde
+    viven una sola vez; la capa inglesa trae solo sus textos. Como en
+    español, la ficha larga va en la sala canonica y la otra remite a ella."""
+    todas = json.load(open(os.path.join(RAIZ, "herramientas", "grabaciones.json"), encoding="utf-8"))
+    salida = []
+    for n, g in enumerate(x for x in todas if sala in x["salas"]):
+        t = capa["grabaciones"][g["id"]]
+        nombre = t.get("titulo", g["titulo"])
+        titulo = esc(nombre) if "titulo" in t else f'<span lang="es">{esc(nombre)}</span>'
+        if g.get("sin_titulo"):
+            titulo = f'<em lang="es">{esc(g["titulo"])}…</em>'
+        if g["canonica"] == sala:
+            meta = esc(t["ficha"])
+        else:
+            c = capa["salas"][g["canonica"]]
+            meta = f'{esc(t["frase"])} · <a href="{c["ruta"]}">{esc(capa["donde"].format(c["nombre"]))}</a>'
+        salida.append(articulo_medio(titulo, meta, reproductor(g["archivo"], capa), n))
+    return "\n\n".join(salida)
+
+
 def seccion_html(s, n):
     lado = "right" if n % 2 == 0 else "left"
     dentro = [f'  <div class="reveal reveal-{lado}">',
@@ -124,6 +199,21 @@ def seccion_html(s, n):
     for d in s.get("puertas", []):
         dentro.append("")
         dentro.append(bloque_puerta(d))
+    if s.get("galeria") or s.get("medios") or s.get("grabaciones"):
+        capa = json.load(open(os.path.join(RAIZ, "herramientas", "grabaciones.en.json"), encoding="utf-8"))
+        if s.get("figura"):
+            f = s["figura"]
+            w, h = dims(f["img"])
+            dentro += ["", f'  <figure class="reveal reveal-right" style="max-width:420px;margin:0 0 2.5rem;">',
+                       f'    <img src="{f["img"]}" width="{w}" height="{h}" alt="{esc_attr(f["alt"])}" loading="lazy">',
+                       f'    <figcaption class="audio-meta" style="margin-top:0.7rem;">{esc(f["pie"])}</figcaption>',
+                       '  </figure>']
+        if s.get("galeria"):
+            dentro += ["", bloque_galeria(s["galeria"])]
+        if s.get("medios"):
+            dentro += ["", bloque_medios(s["medios"], capa)]
+        if s.get("grabaciones"):
+            dentro += ["", bloque_grabaciones(s["grabaciones"], capa)]
 
     ancla = f' id="{s["ancla"]}"' if s.get("ancla") else ""
     cuerpo = f'<div class="section"{ancla}>\n' + "\n".join(dentro) + '\n</div>'

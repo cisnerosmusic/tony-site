@@ -182,7 +182,7 @@ La regla, decidida con Ernesto el 8 de septiembre de 2026:
 
 No es contenido duplicado: el archivo tiene una sola URL, y la página que lo rodea es distinta en cada sala. Lo que sí haría daño es declarar dos veces el mismo `AudioObject` o repetir la descripción larga, porque parte la señal entre dos URLs.
 
-Y sobre todo, **el dato vive una sola vez**. La fuente es `herramientas/grabaciones.json`: cada grabación con su título, su ficha larga, su frase corta, su sala canónica y la lista de salas donde aparece. `herramientas/gen-audios.py` la reparte.
+Y sobre todo, **el dato vive una sola vez**. La fuente es `herramientas/grabaciones.json`: cada grabación con su título, su ficha larga, su frase corta, su sala canónica y la lista de salas donde aparece. `herramientas/gen-audios.py` la reparte en las salas españolas. En inglés las pinta `gen-ingles.py`, leyendo el mismo `grabaciones.json` y su capa `grabaciones.en.json`, que trae solo los textos: el título, solo cuando es descriptivo, porque el de un poema no se traduce.
 
 Cada página marca su región así, y **todo lo que hay dentro lo escribe el script**:
 

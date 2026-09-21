@@ -76,7 +76,10 @@
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/entre-lectores/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/entre-lectores/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/among-readers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/entre-lectores/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/ineditos/</loc>
@@ -248,7 +251,10 @@
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/plano-abierto/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/plano-abierto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/author/on-record/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/plano-abierto/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/tinta-ciones/</loc>
@@ -267,6 +273,9 @@
   <url>
     <loc>https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/</loc>
     <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/in-my-voice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/</loc>
@@ -304,6 +313,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/periodista/"/>
   </url>
   <url>
+    <loc>https://antoniolopezsanchez.art/en/author/on-record/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/author/on-record/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/plano-abierto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/plano-abierto/"/>
+  </url>
+  <url>
     <loc>https://antoniolopezsanchez.art/en/awards/</loc>
     <lastmod>2026-09-21</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/laureles/"/>
@@ -330,6 +346,13 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/libros/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/libros/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/books/among-readers/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/books/among-readers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/entre-lectores/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/entre-lectores/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/en/books/convertida-en-cancion/</loc>
@@ -446,6 +469,13 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/decimitas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/poetry/in-my-voice/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/in-my-voice/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/en/poetry/poems/</loc>

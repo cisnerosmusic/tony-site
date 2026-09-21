@@ -540,30 +540,34 @@ def catalogos():
                 cuerpo = '<div class="section-alt">\n' + cuerpo + '\n</div>'
             secciones.append(cuerpo)
 
-        # Las novelas ineditas no son parte del catalogo, que es de libros
-        # publicados, pero es aqui donde las busca quien viene a por derechos:
-        # un bloque corto que lleva a su sala, justo antes del de derechos.
+        # Bloques cortos al final, cada uno con su boton: las novelas ineditas,
+        # que no son parte del catalogo de libros publicados pero es aqui donde
+        # las busca quien viene a por derechos, y el album de lectores, como
+        # cierra el catalogo español. Los fondos siguen alternando despues de
+        # los grupos, y el bloque de derechos cae en el que le toque.
+        alterno = len(C["grupos"]) % 2 == 1
         ineditos = ""
-        if C.get("ineditos"):
-            k = C["ineditos"]
-            ineditos = f"""
-
-<div class="section">
-  <div class="reveal reveal-right">
-    <h2 class="section-title">{esc(k["titulo"])}</h2>
-    <div class="section-divider"></div>
-    <p class="section-text" style="margin-bottom:2rem;">{esc(k["texto"])}</p>
-    <a href="{k["url"]}" class="btn">{esc(k["boton"])}</a>
-  </div>
-</div>"""
+        for clave in ("ineditos", "lectores"):
+            if not C.get(clave):
+                continue
+            k = C[clave]
+            bloque_f = (f'<div class="section">\n  <div class="reveal reveal-right">\n'
+                        f'    <h2 class="section-title">{esc(k["titulo"])}</h2>\n'
+                        f'    <div class="section-divider"></div>\n'
+                        f'    <p class="section-text" style="margin-bottom:2rem;">{esc(k["texto"])}</p>\n'
+                        f'    <a href="{k["url"]}" class="btn">{esc(k["boton"])}</a>\n  </div>\n</div>')
+            if alterno:
+                bloque_f = '<div class="section-alt">\n' + bloque_f + '\n</div>'
+            ineditos += "\n\n" + bloque_f
+            alterno = not alterno
 
         cierre = ""
         if C.get("cierre"):
             k = C["cierre"]
+            abre, cierra = ('<div class="section-alt">\n', '\n</div>') if alterno else ("", "")
             cierre = f"""
 
-<div class="section-alt">
-<div class="section">
+{abre}<div class="section">
   <div class="reveal reveal-right">
     <h2 class="section-title">{esc(k["titulo"])}</h2>
     <div class="section-divider"></div>
@@ -573,8 +577,7 @@ def catalogos():
       <a href="{L["representacion"]}" target="_blank" rel="noopener" class="btn">{esc(k["boton_representacion"])}</a>
     </div>
   </div>
-</div>
-</div>"""
+</div>{cierra}"""
 
         datos = {"@context": "https://schema.org", "@type": "CollectionPage",
                  "name": C["seo_titulo"], "description": C["seo_desc"], "url": url,

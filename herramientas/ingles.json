@@ -135,7 +135,7 @@
             "Work in the Cuban music press: AM PM Magazine, La Jiribilla, El Caimán Barbudo, La Gaceta de Cuba, and the cultural sections of the magazines Mujeres and Muchacha from 2001 to 2010."
           ],
           "enlaces": [
-            {"texto": "Listen to the recordings", "url": "/plano-abierto/", "lang": "es"}
+            {"texto": "Listen to the recordings", "url": "/en/author/on-record/"}
           ]
         },
         {
@@ -169,7 +169,7 @@
           "enlaces": [
             {"texto": "Read the poems", "url": "/en/poetry/poems/", "relleno": true},
             {"texto": "Décimas with photographs", "url": "/en/poetry/decimitas/"},
-            {"texto": "In the author's own voice", "url": "/tinta-ciones/en-mi-voz/", "lang": "es"}
+            {"texto": "In the author's own voice", "url": "/en/poetry/in-my-voice/"}
           ]
         },
         {
@@ -376,6 +376,97 @@
             {"texto": "Write to the author", "url": "mailto:antonio@antoniolopezsanchez.art", "relleno": true},
             {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art"},
             {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+          ]
+        }
+      ]
+    },
+    {
+      "ruta": "/en/poetry/in-my-voice/",
+      "titulo": "In my voice",
+      "subtitulo": "Poems recorded and read by me: the sound room of the poetry.",
+      "seo_titulo": "Poems read by Antonio López Sánchez, in his own voice",
+      "seo_desc": "Nine poems read by the Cuban poet Antonio López Sánchez in his own voice, in Spanish, and two recordings in public: the UNEAC in Santa Clara and the Centro Pablo.",
+      "secciones": [
+        {
+          "titulo": "The poems, aloud",
+          "parrafos": [
+            "A poem is only finished when someone hears it. These are poems in the voice of the man who wrote them, recorded in Spanish, the language they were written in."
+          ],
+          "grabaciones": "en-mi-voz"
+        }
+      ]
+    },
+    {
+      "ruta": "/en/author/on-record/",
+      "titulo": "On record",
+      "subtitulo": "Radio, television and press beyond the books.",
+      "seo_titulo": "Antonio López Sánchez on radio and television",
+      "seo_desc": "Radio and television appearances of the Cuban writer Antonio López Sánchez, and his poems read in public, recorded in Spanish between 1999 and 2022.",
+      "secciones": [
+        {
+          "titulo": "Not everything fits in a book",
+          "parrafos": [
+            "Radio and television recordings, and what was said about me where a whole book would not fit. They are all in Spanish."
+          ]
+        },
+        {
+          "titulo": "On television",
+          "medios": [
+            {"tipo": "video", "titulo": "Entre libros", "lang": "es", "meta": "Television programme, 25 May 2019 · fourteen minutes", "src": "/video/entre-libros-2019.mp4", "poster": "/img/entre-libros-poster.webp", "ancho": 720, "alto": 480, "sin_video": "Your browser cannot play this video; you can <a href=\"{}\">download the recording</a>."},
+            {"tipo": "enlace", "titulo": "Conociendo al periodista Antonio López Sánchez", "lang": "es", "meta": "Video interview, on the occasion of the XXX Premio Nacional Emilio Ballagas, where I was one of the guests", "url": "https://youtu.be/PJkZVXQkwnA", "boton": "Watch the interview"}
+          ]
+        },
+        {
+          "titulo": "On the radio",
+          "alt": true,
+          "figura": {"img": "/img/album/en-la-radio.webp", "alt": "Two people wearing headphones at the microphones in a radio booth", "pie": "On the radio, from the Havana International Book Fair"},
+          "medios": [
+            {"tipo": "audio", "titulo": "Mi libro preferido", "lang": "es", "meta": "Habana Radio, 17 April 2018 · directed and presented by the journalist and literary critic Fernando Rodríguez Sosa · thirty-one minutes", "src": "/audio/mi-libro-preferido-2018.mp3"},
+            {"tipo": "audio", "titulo": "Invitación a la lectura", "lang": "es", "meta": "Habana Radio, 16 May 2018 · directed and presented by the journalist and literary critic Fernando Rodríguez Sosa · thirty minutes", "src": "/audio/invitacion-a-la-lectura-2018.mp3"}
+          ]
+        },
+        {
+          "titulo": "Read aloud",
+          "grabaciones": "plano-abierto"
+        },
+        {
+          "titulo": "No recording at hand",
+          "alt": true,
+          "lista": [
+            "<strong lang=\"es\">Hablar de poesía</strong> <span class=\"meta\">· Radio Ciudad de La Habana, 2000 · a programme devoted entirely to my poetry · the recording is being traced</span>",
+            "<strong lang=\"es\">La impúdica es la guitarra</strong> <span class=\"meta\">· cassette recorded live with several trova singers, Centro Pablo de la Torriente Brau, 2000 · with poems of mine</span>",
+            "<strong lang=\"es\">Más que sobrevivir</strong> <span class=\"meta\">· cassette by the trova singer Rita del Prado, 1999 · with poems of mine</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "ruta": "/en/books/among-readers/",
+      "titulo": "Among readers",
+      "subtitulo": "Book fairs, signings and booksellers.",
+      "seo_titulo": "Antonio López Sánchez among his readers",
+      "seo_desc": "Book fairs, signings and booksellers: photographs of the Cuban writer Antonio López Sánchez with his readers in Havana, Santiago de Cuba and Camagüey.",
+      "secciones": [
+        {
+          "titulo": "Books end up in other hands",
+          "parrafos": [
+            "A book is not finished when I write it, nor when it is printed. It is finished when someone opens it. These are fairs, tables, queues and booksellers, who know more about this than anyone."
+          ],
+          "galeria": [
+            {"img": "/img/album/libreras-habana-2.webp", "alt": "Two people holding copies of the book at a fair", "pie": "With booksellers, who know more about this than anyone. Havana Book Fair"},
+            {"img": "/img/album/libreras-habana-1.webp", "alt": "Copies in hand, next to a fair's sales table", "pie": "Havana International Book Fair"},
+            {"img": "/img/album/libreras-santiago.webp", "alt": "Several people posing with copies of the book in the street", "pie": "Book Fair in Santiago de Cuba"},
+            {"img": "/img/album/firma-santiago.webp", "alt": "Signing a copy held in one hand, out in the street", "pie": "Signing books in Santiago de Cuba"},
+            {"img": "/img/album/firma-camaguey.webp", "alt": "Signing copies at a table, in front of a bookshop door", "pie": "Signing at the 33rd International Book Fair, Camagüey, March 2025"},
+            {"img": "/img/album/cartel-camaguey.webp", "alt": "Standing beside the poster of the 33rd International Book Fair in Camagüey", "pie": "The 33rd International Book Fair, Camagüey"},
+            {"img": "/img/album/mis-libros-mesa.webp", "alt": "Arms open before a table covered with copies", "pie": "My books"},
+            {"img": "/img/album/onelio-panel.webp", "alt": "A long table with several participants during a panel of readings and debates", "pie": "Organised by the Onelio Jorge Cardoso Centre for Literary Training"},
+            {"img": "/img/album/onelio-cartel.webp", "alt": "Poster for the series Los onelianos cuentan, with a portrait of the author", "pie": "Los onelianos cuentan, readings and debates with graduates of the Onelio Centre, Book Fair 2022"},
+            {"img": "/img/album/don-alejo.webp", "alt": "Portrait in front of a large poster of Alejo Carpentier's face", "pie": "With Don Alejo Carpentier, Havana Book Fair"},
+            {"img": "/img/album/el-gato.webp", "alt": "A tabby cat resting on a copy of Convertida en canción", "pie": "Even the cat reads my books"}
+          ],
+          "enlaces": [
+            {"texto": "Books", "url": "/en/books/"}
           ]
         }
       ]

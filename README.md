@@ -60,7 +60,7 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-laureles.py` | Laureles, los premios, en cada idioma | `laureles.json`, `laureles.<idioma>.json` |
 | `gen-farraluque.py` | las dos obras del Farraluque, en Laureles, en cada idioma | sus `.txt` en `textos/laureles/`, `farraluque.<idioma>.json` |
 | `gen-audios.py` | las grabaciones, repartidas a las salas que las reclaman | `grabaciones.json` |
-| `gen-ingles.py` | las páginas de sección inglesas | `ingles.json` |
+| `gen-ingles.py` | las páginas de sección inglesas, y En mi voz, Plano abierto y Entre lectores en inglés | `ingles.json`, `grabaciones.en.json` |
 | `gen-legal.py` | `/derechos/` y `/en/rights/` | `legal.json` |
 | `gen-404.py` | el 404, en los dos idiomas | `navegacion.py` |
 | `gen-tarjetas.py` | la postal de cada libro para redes, 1200 x 630: cubierta a la izquierda, título a la derecha | `libros/<slug>.json` y las cubiertas |

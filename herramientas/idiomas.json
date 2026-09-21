@@ -92,6 +92,12 @@
         "boton": "See the unpublished novels",
         "url": "/en/unpublished/"
       },
+      "lectores": {
+        "titulo": "Among readers",
+        "texto": "These books have gone out into the street: book fairs, signing tables, queues and booksellers. There is a story there too.",
+        "boton": "See the photographs",
+        "url": "/en/books/among-readers/"
+      },
       "cierre": {
         "titulo": "Rights",
         "texto": "World rights for editions and translations are available outside Cuba, where the author's publishers keep their exclusivity. Full manuscripts and synopses are available on request.",

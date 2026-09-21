@@ -1,0 +1,29 @@
+{
+  "_nota": "Capa inglesa de grabaciones.json. Por cada grabacion, su frase corta y su ficha larga en ingles; el titulo solo cuando es descriptivo, porque el titulo de un poema no se traduce. La usa gen-ingles.py para En mi voz y Plano abierto en ingles.",
+  "salas": {
+    "plano-abierto": {"ruta": "/en/author/on-record/", "nombre": "On record"},
+    "en-mi-voz": {"ruta": "/en/poetry/in-my-voice/", "nombre": "In my voice"}
+  },
+  "donde": "where and when, in {}",
+  "sin_audio": "Your browser cannot play this audio; you can <a href=\"{}\">download the recording</a>.",
+  "grabaciones": {
+    "clase-de-literatura": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "luna-callada": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "capricornio-personal": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "defensa-del-escritor": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "desnudo-con-fruta": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "idas": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "juglar": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "no-vamos-a-olvidar": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "yo-soy": {"frase": "A poem in my voice", "ficha": "A poem in the author's voice"},
+    "lectura-uneac-santa-clara-2022": {
+      "titulo": "Poetry reading at the UNEAC in Santa Clara",
+      "frase": "Eleven minutes of my poems read aloud, in Santa Clara, May 2022",
+      "ficha": "18 May 2022 · invited as a poet by the Union of Writers and Artists of Cuba, at the 30th International Book Fair in the provinces · eleven minutes"
+    },
+    "mar-de-papel-1999": {
+      "frase": "My poem at Rita del Prado's concert, Centro Pablo, 1999",
+      "ficha": "From the concert Más que sobrevivir by the trova singer Rita del Prado, in the A Guitarra Limpia series at the Centro Cultural Pablo de la Torriente Brau, 3 April 1999, where I was a guest"
+    }
+  }
+}

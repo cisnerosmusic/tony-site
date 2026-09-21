@@ -8,11 +8,10 @@ Lo que queda por hacer, y nada más.
 
 ## 1. Terminar el inglés
 
-Hay salas que solo existen en español. En todas, la literatura se queda en español y lo que se traduce es el aparato:
+Todas las salas tienen ya su versión inglesa salvo dos, por decisión y no por olvido:
 
-2. **En mi voz**, la sala sonora de Tinta-ciones. Poemas sueltos, De-Cimitas y la Sonata ya están en inglés; En mi voz va con Plano abierto, porque las dos las reparte `gen-audios.py`.
-4. **Plano abierto**: las grabaciones, con su ficha en inglés.
-5. **Entre lectores y Directorio.**
+1. **Directorio.** En inglés sería redundante: `/en/author/` tiene su bloque de contacto y `/en/rights/` cubre los derechos. Propuesta pendiente de Ernesto: no hacerla.
+2. **El periodista.** Su pareja inglesa es `/en/author/`, que resume la trayectoria y enlaza la ficha española completa. Se revisa cuando llegue la lista de cambios de Tony para esa página.
 
 Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AGENTS.md`.
 
