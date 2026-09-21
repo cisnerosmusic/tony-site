@@ -24,11 +24,17 @@
 <meta name="twitter:image" content="https://antoniolopezsanchez.art/img/retrato.webp">
 <meta property="og:locale" content="es_ES">
 <meta name="theme-color" content="#0a0c1f">
+<!-- El retrato es el elemento mayor de la primera pantalla, asi que su
+     precarga va la primera de todas. Estaba detras de las dos fuentes y de
+     fonts.css, y el navegador tardaba 485 ms en empezar a pedirlo. -->
+<link rel="preload" as="image" href="/img/retrato.webp" fetchpriority="high">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
+<!-- La cursiva del lema tambien se lee en la primera pantalla, y no se
+     descubria hasta que llegaba fonts.css, mas de un segundo despues. -->
+<link rel="preload" href="/fonts/cormorant-garamond-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css?v=5">
-<link rel="preload" as="image" href="/img/retrato.webp" fetchpriority="high">
-<link rel="stylesheet" href="/styles.css?v=31">
+<link rel="stylesheet" href="/styles.css?v=32">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

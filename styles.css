@@ -232,6 +232,10 @@ img { max-width: 100%; height: auto; display: block; }
 .lema {
   font-family: var(--font-body);
   font-style: italic;
+  /* Es un span dentro del h1, asi que heredaba la negrita del titular y pedia
+     una cursiva de 700 que el sitio no tiene: el navegador la fabricaba
+     engordando la de 400, y en una garamond eso se ve emborronado. */
+  font-weight: 400;
   font-size: 1.3rem;
   color: var(--text-secondary);
   letter-spacing: 0.06em;
