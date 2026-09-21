@@ -37,9 +37,16 @@ Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AG
    - fotos de presentaciones;
    - la foto de escritor oficial, si hace la sesión.
 10. **Inéditos**: entraron las cuatro novelas que mandó. Si quiere enseñar también algo de sus poemarios y libros de cuentos inéditos, falta que lo mande.
+12. **El periodista**: anunció una lista de cambios («hay que hacerle mil cosas») y los trabajos periodísticos que quiere enseñar. Se espera la lista antes de tocar la página.
+13. **Los segundos fragmentos de Valnúss**: cada tomo lleva uno, como pidió. El segundo de cada tomo está en su material (`OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/`, archivos 016, 026, 039, 042 y 059) por si los quiere.
 11. **Erratas dudosas en los Inéditos**, que no se tocaron por si son a propósito: en *Mis diarios de cama*, el archivo de la entrada 8 dice «20 de septiembre de 2004» y el texto «18» (se publicó el 18), y «María con la mala noticia de su mamá al final murió», donde parece faltar un «de que»; en *Preguntas*, «un tangente homenaje» y «desde las páginas de novela»; en *Palabras*, «A esas respuestas [...] se intentó responder», donde quizá quiso decir «preguntas».
 
 ## 3. Espera la decisión de Ernesto
+
+- **Las tarjetas de `/trova/`**: Tony pidió quitar el texto bajo cada libro y a la vez mandó tres textos nuevos para esos mismos sitios. Se aplicó lo primero; los tres textos viven solo en el catálogo inglés. Si se quieren de vuelta en español, son tres líneas.
+- **Dos grabaciones viejas de En mi voz**, *Clase de Literatura* y *Luna Callada*, siguen en estéreo a 328 kbps (4 y 3,3 MB). Con el tratamiento de las nuevas, 96 kbps mono, bajarían a poco más de 1 MB cada una.
+- **La nota del pie de En mi voz**: «Más grabaciones van llegando; algún día, también videoclips». Lo primero ya se cumplió; lo de los videoclips sigue siendo una promesa. Quitarla o ajustarla.
+- ***Cuentos de muñecas*** es el único libro cuyo primer bloque no se llama Sinopsis sino «Sobre el libro», porque es un volumen colectivo y su nota explica la compilación. Si se prefiere uniformidad total, se cambia.
 
 - **Tarjetas sociales de los libros**: las catorce páginas usan `summary_large_image` con la cubierta, que es vertical, y las redes la recortan por el centro. O se pasan a `summary`, o se genera una tarjeta horizontal por libro.
 - **Dos campos más en la ficha de cada libro**, que pide un editor extranjero: derechos ya vendidos, además de los disponibles, y si existe muestra traducida.
