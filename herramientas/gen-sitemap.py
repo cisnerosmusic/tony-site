@@ -47,7 +47,12 @@ def generar():
     hoy = datetime.date.today().isoformat()
     # Una sola llamada para saber que esta sin commitear, con los archivos
     # nuevos uno a uno (sin -uall git daria la carpeta y no el archivo).
-    sucios = {l[3:].strip('"') for l in git("status", "--porcelain", "--untracked-files=all").splitlines()}
+    # Sucio es lo que cambia de contenido, no lo que marca git status: en Windows,
+    # con core.autocrlf, status marca paginas que solo difieren en el fin de
+    # linea, y les ponia la fecha de hoy. git diff compara el contenido ya
+    # normalizado. Arreglado el 21 de septiembre de 2026 desde la Maquina 2.
+    sucios = set(git("-c", "core.quotepath=off", "diff", "--name-only", "HEAD").splitlines())
+    sucios |= set(git("-c", "core.quotepath=off", "ls-files", "--others", "--exclude-standard").splitlines())
     filas = []
     for rel, t in paginas():
         if rel in sucios:

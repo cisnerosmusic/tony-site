@@ -1,0 +1,20 @@
+# Lo que GitHub Pages NO publica en antoniolopezsanchez.art.
+#
+# El repositorio es publico en GitHub, pero el dominio solo tiene que servir el
+# sitio. Sin esta lista, Jekyll publicaba tambien los documentos de trabajo
+# (y renderizaba DESIGN.md y PRODUCT.md como /DESIGN.html y /PRODUCT.html) y la
+# carpeta herramientas/ entera, bajo el nombre del autor y abiertos a los
+# rastreadores de IA que invita robots.txt. Detectado el 10 de septiembre de
+# 2026, cerrado el 21.
+#
+# Un documento o una carpeta nueva que no sea parte del sitio se anade aqui.
+# herramientas/comprobar.py falla si algun .md de la raiz, herramientas/ o
+# fonts/originales/ se quedan fuera de esta lista.
+exclude:
+  - AGENTS.md
+  - DESIGN.md
+  - PENDIENTES.md
+  - PRODUCT.md
+  - README.md
+  - herramientas
+  - fonts/originales

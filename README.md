@@ -12,6 +12,10 @@ Sitio estático: HTML, CSS y JS propios, sin frameworks, sin dependencias en tie
 
 El sitio sigue en construcción. Las mediciones de rendimiento se harán y se publicarán cuando esté terminada la versión inglesa.
 
+## Qué publica el dominio
+
+El repositorio es público en GitHub, pero **antoniolopezsanchez.art solo sirve el sitio**. `_config.yml` deja fuera de la publicación los documentos de trabajo (este README, `AGENTS.md`, `PENDIENTES.md`, `PRODUCT.md` y `DESIGN.md`), la carpeta `herramientas/` y `fonts/originales/`. El comprobador falla si un documento nuevo de la raíz se queda fuera de esa lista. Se sirven, a propósito, `LICENSE`, `robots.txt`, `llms.txt`, `sitemap.xml` y la clave de IndexNow.
+
 ## Mundo visual
 
 Base heredada del template propio de Index01 ([impulses-art-site](https://github.com/cisnerosmusic/impulses-art-site)), adaptado a esta casa: fondos azul noche en varias tonalidades (`#0a0c1f` a `#252860`), acento en oro (`#d4a030`), Cinzel para los nombres y títulos, Cormorant Garamond para la lectura y Space Mono para el aparato. Navegación fija con desenfoque, aparición lateral de bloques, retrato del autor a sangre en la portada y una banda de mar entre secciones. El sistema completo, con sus tokens y sus reglas, está en [DESIGN.md](DESIGN.md).
@@ -22,7 +26,7 @@ Base heredada del template propio de Index01 ([impulses-art-site](https://github
 |------|-----------|
 | `/` | Portada: la casa, el autor y su bienvenida |
 | `/libros/` | Los 14 libros publicados, cada uno con su propia página |
-| `/ineditos/` | Obras que esperan editorial |
+| `/ineditos/` | Obras que esperan editorial: cuatro novelas, cada una con su sinopsis, su Con voz y voto y los fragmentos que eligió el autor, nunca íntegras |
 | `/tinta-ciones/` | Poesía: `poemas-sueltos/` (20 poemas, 8 de ellos glosas), `de-cimitas/` (7 piezas de foto y décima), `sonata-de-la-lluvia/`, `en-mi-voz/` |
 | `/contarte/` | Los cuentos, uno por página, con orden rotatorio diario |
 | `/trova/` | Su obra documental sobre la Nueva Trova |
@@ -32,11 +36,11 @@ Base heredada del template propio de Index01 ([impulses-art-site](https://github
 | `/entre-lectores/` | Álbum de ferias y firmas; se llega solo desde Mis libros |
 | `/directorio/` | Contacto del autor y consultas de derechos |
 | `/derechos/` | Aviso de derechos |
-| `/en/` | La zona inglesa: portada, `trova/`, `poetry/`, `fiction/`, `author/`, `rights/` y `books/`, con los catorce libros. En otro orden que el español, a propósito: ver [PRODUCT.md](PRODUCT.md) |
+| `/en/` | La zona inglesa, en otro orden que el español a propósito (ver [PRODUCT.md](PRODUCT.md)): portada, `trova/`, `poetry/` (con `poems/`, `decimitas/`, `sonata-de-la-lluvia/` e `in-my-voice/`), `books/` (los catorce libros y `among-readers/`), `stories/` (los siete cuentos), `unpublished/` (las cuatro novelas), `awards/` (con las dos obras del Farraluque), `author/` (con `on-record/`, que es Plano abierto), `fiction/` y `rights/` |
 
 Archivos de raíz: `index.html`, `styles.css`, `app.js`, `fonts.css`, `robots.txt`, `sitemap.xml`, `llms.txt`, `404.html` (uno solo para todo el sitio, en español o en inglés según la ruta), `CNAME`, el favicon en archivos reales (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`) y la clave de IndexNow. Recursos en `fonts/`, `img/`, `audio/` y `video/`.
 
-**63 páginas; 60 URLs en el sitemap.** No entran el 404 ni las dos redirecciones blandas, `/novelas/` y `/poeta/`.
+**89 páginas; 86 URLs en el sitemap.** No entran el 404 ni las dos redirecciones blandas, `/novelas/` y `/poeta/`.
 
 ## Idiomas
 
@@ -70,6 +74,8 @@ Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cab
 
 Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista, Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
 
+Requisitos: Python 3 y `pip install Pillow fonttools brotli`, las mismas dependencias que instala GitHub Actions.
+
 Al terminar cualquier cambio:
 
 ```bash
@@ -92,16 +98,16 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 - **La atribución es sagrada.** Varios poemas glosan o citan a otros autores (José Martí, Lezama Lima, Silvio Rodríguez, Polito Ibáñez, Fito Páez, Noel Nicola, Santiago Feliú). Esos versos salen siempre en bloque aparte y con la firma de quien los escribió, nunca corridos con los del autor.
 - **En verso no se normaliza nada.** Los espacios múltiples dentro del verso son puntuación del autor y las sangrías marcan dónde abre cada décima. Se conservan tal cual, con `white-space: pre-wrap`.
 - **Un texto vive una sola vez.** Si una pieza pertenece a dos salas, se repite el enlace o el reproductor, nunca el texto ni el marcado de datos.
-- **Hay material que existe y no se publica**, por decisión del autor y de Ernesto. La lista está en los innegociables de `AGENTS.md` y no se revisa sin preguntarles.
+- **Hay material que existe y no se publica**, por decisión del autor y de Ernesto. La lista no está en este repositorio, que es público: la conocen el autor y Ernesto. Ver los innegociables de `AGENTS.md`.
 - **Mayúscula inicial** en nombres propios, premios y editoriales.
 - Las **obras inéditas** se presentan solo con sinopsis y fragmentos, nunca íntegras.
 - Las sinopsis marcadas como provisionales se sustituirán por el texto oficial del autor.
 
 ## SEO y AEO
 
-60 URLs indexables, con títulos y descripciones únicos y en rango, canónicas propias y Twitter Cards. JSON-LD válido en todas: `Person` con premios y `sameAs`, `WebSite`, `Book` por cada libro y en cada idioma, con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `CreativeWork` para los poemas, las décimas, la Sonata y las obras del Farraluque, `NewsArticle` para cada pieza de prensa, `ItemList`, `AudioObject`, `CollectionPage`, `ProfilePage` con la persona dentro, `ContactPage` y `BreadcrumbList`.
+86 URLs indexables, con títulos y descripciones únicos y en rango, canónicas propias y Twitter Cards. JSON-LD válido en todas: `Person` con premios y `sameAs`, `WebSite`, `Book` por cada libro y en cada idioma, con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `CreativeWork` para los poemas, las décimas, la Sonata y las obras del Farraluque, `NewsArticle` para cada pieza de prensa, `ItemList`, `AudioObject`, `CollectionPage`, `ProfilePage` con la persona dentro, `ContactPage` y `BreadcrumbList`.
 
-`hreflang` recíproco en las 40 páginas que tienen pareja de idioma, con `x-default` al español, y los mismos alternates en `sitemap.xml`. `llms.txt` con los datos citables del autor para motores de respuesta, `robots.txt` con permiso explícito a los bots de IA e IndexNow configurado.
+`hreflang` recíproco en las 84 páginas que tienen pareja de idioma, con `x-default` al español, y los mismos alternates en `sitemap.xml`. `llms.txt` con los datos citables del autor para motores de respuesta, `robots.txt` con permiso explícito a los bots de IA e IndexNow configurado.
 
 ## Cómo se trabaja aquí
 

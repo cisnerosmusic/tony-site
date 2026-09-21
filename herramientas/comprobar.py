@@ -307,6 +307,25 @@ def sitemap_al_dia():
               (r.stdout.strip().splitlines() or ["regenera con gen-sitemap.py"])[-1])
 
 
+# ── 12. El dominio solo sirve el sitio ───────────────────────────────────
+# Auditoria del 10 de septiembre de 2026, cerrada el 21: sin _config.yml,
+# GitHub Pages servia en el dominio AGENTS.md, PENDIENTES.md, herramientas/
+# y hasta /DESIGN.html. Todo .md de la raiz, herramientas y fonts/originales
+# tienen que estar en su lista de exclusion.
+def publicacion_acotada():
+    ruta = os.path.join(RAIZ, "_config.yml")
+    if not os.path.exists(ruta):
+        falla("dominio sin acotar", "no existe _config.yml: el dominio serviria los documentos")
+        return
+    with open(ruta, encoding="utf-8") as f:
+        texto = f.read()
+    excluidos = {l.strip()[2:].strip().strip("/") for l in texto.splitlines() if l.strip().startswith("- ")}
+    exigidos = {f for f in os.listdir(RAIZ) if f.endswith(".md")} | {"herramientas", "fonts/originales"}
+    faltan = sorted(exigidos - excluidos)
+    if faltan:
+        falla("dominio sin acotar", "_config.yml no excluye: " + ", ".join(faltan))
+
+
 def main():
     enlaces_rotos()
     sitemap_cuadra()
@@ -319,6 +338,7 @@ def main():
     fuentes_completas()
     generado_al_dia()
     sitemap_al_dia()
+    publicacion_acotada()
 
     if avisos:
         print(f"\nAVISOS ({len(avisos)}), no bloquean:")

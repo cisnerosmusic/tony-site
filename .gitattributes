@@ -1,0 +1,18 @@
+# Todo el texto del repositorio se guarda y se saca con LF, en las dos maquinas.
+# Sin esto, la Maquina 2 (Windows, core.autocrlf=true) veia una veintena de HTML
+# "modificados" cada vez que un generador escribia LF, sin un solo cambio de
+# contenido, y eso engana a quien verifica con git status.
+* text=auto eol=lf
+
+# Binarios: que git no intente convertirles nada.
+*.webp binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.ico binary
+*.mp3 binary
+*.mp4 binary
+*.woff2 binary
+*.woff binary
+*.ttf binary
+*.otf binary

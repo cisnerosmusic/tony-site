@@ -49,7 +49,7 @@ Se construye, una instancia evaluadora audita, se corrige, y vuelta a empezar. N
 
 De ahí sale `herramientas/comprobar.py`. Cada regla suya nació de un fallo real que encontró una auditoría, y está anotado cuál. La idea es sencilla: **lo que una máquina puede comprobar sola no debe gastar la atención de nadie**. La auditoría humana o de otra instancia queda libre para lo que sí necesita criterio, que es el sitio, no la sintaxis.
 
-Comprueba hoy enlaces rotos, sitemap contra páginas indexables y **sitemap al día**, JSON-LD válido, con tipos que existan de verdad y, en las páginas de perfil, con la persona dentro (`mainEntity`, que Google exige), títulos y descripciones únicos y en rango, una sola versión de CSS y JS, rutas absolutas de una máquina concreta, raya larga en texto público, imágenes sin `alt` y **con medidas que no son las del archivo**, `target="_blank"` sin `noopener`, el menú y su script, la navegación alineada, y que los generadores sigan reproduciendo su HTML. Sale con código 1 si algo falla, y **corre solo en cada push** con GitHub Actions (`.github/workflows/comprobar.yml`): si la marca sale en rojo, alguien dejó una regla rota.
+Comprueba hoy enlaces rotos, sitemap contra páginas indexables y **sitemap al día**, JSON-LD válido, con tipos que existan de verdad y, en las páginas de perfil, con la persona dentro (`mainEntity`, que Google exige), títulos y descripciones únicos y en rango, una sola versión de CSS y JS, rutas absolutas de una máquina concreta, raya larga en texto público, imágenes sin `alt` y **con medidas que no son las del archivo**, `target="_blank"` sin `noopener`, el menú y su script, la navegación alineada, que `_config.yml` deje fuera de la publicación los documentos y las herramientas, y que los generadores sigan reproduciendo su HTML. Sale con código 1 si algo falla, y **corre solo en cada push** con GitHub Actions (`.github/workflows/comprobar.yml`): si la marca sale en rojo, alguien dejó una regla rota.
 
 **Cuando la auditoría encuentre algo que el comprobador podría haber cazado, se arregla el fallo y se añade la regla en el mismo commit.** Ese es el modo en que el ciclo se hace más barato cada vuelta.
 
@@ -85,18 +85,13 @@ Y al revés, para las instancias que construyen: **si dais un hallazgo sin núme
 - **Sin raya larga** en ningún texto público del sitio. Se usa guion.
 - **La literatura no se traduce.** Poemas, cuentos y fragmentos se publican siempre en su español original, en todos los idiomas del sitio. En las páginas de libro no hace falta recordarlo: las capas de idioma no tienen campo donde poner un fragmento traducido. Lo que se traduce es el aparato: contratapas, notas del autor, fichas, pies de foto y metadatos.
 - **El sitio en otro idioma no promete nada que no se pueda mandar esa misma tarde.** Hoy eso son manuscritos completos y sinopsis. Ni muestras traducidas ni informes de lectura mientras no existan.
-- **Hay material del autor que existe y que, por decisión suya y de Ernesto, no se publica.** Esta lista se respeta y no se revisa sin preguntarles a ellos dos. Hoy son dos entradas y puede crecer:
-  - Su columna en **Palabra Nueva**. No se menciona en el sitio.
-  - El minicuento **Proclama Real**. En Laureles se queda la mención del premio, que ya está en su currículo público; el texto no entra en este repositorio.
-
-  **Este archivo es público**, así que aquí va la lista y no los motivos. El porqué de cada caso se habla con Ernesto; escribirlo aquí sería publicar por la puerta de atrás justo lo que se decidió no publicar.
-
-  La regla general: **si un material toca lo político, lo militar o lo religioso, se para y se pregunta antes de subirlo.** Ni el asistente ni Ernesto, desde Miami, pueden medir lo que arriesga el autor allí. Ante la duda, se retira y se consulta.
+- **Hay material del autor que existe y que, por decisión suya y de Ernesto, no se publica.** La lista **no vive en este repositorio**: es público en GitHub, y cualquier título que se escriba aquí se lee desde fuera, con motivos o sin ellos. La conocen el autor y Ernesto. La regla operativa, que sí es para todos: **ningún texto nuevo del autor se sube sin que Ernesto lo haya confirmado en esa misma sesión**, y cualquier material de tema político, militar o religioso se para y se consulta antes de tocarlo. Ante la duda, no se sube.
 - **Las obras inéditas de Tony no entran en este repositorio, que es público.** Solo sinopsis y fragmentos que él elija. Publicarlas les quitaría la condición de inéditas ante concursos y editoriales.
 - **El mecanismo de cobro, la custodia de fondos y cualquier detalle fiscal o contractual de la representación no se documentan aquí.** Van en la documentación privada del estudio.
 - **Las páginas de libro no se maquetan a mano**: se generan con `herramientas/gen-libro.py` desde su manifiesto.
 - **Toda gestión de derechos fuera de Cuba va a dos destinos y ningún otro**, en cualquier idioma: la página de representación de Ernesto Cisneros y `derechos@antoniolopezsanchez.art`. El correo vive en `DERECHOS_EMAIL`, en `gen-libro.py`; la página de representación, en el idioma de quien lee, en `herramientas/idiomas.json`.
 - **Los colores de texto son sólidos, sin alfa.** Es lo que rompió el contraste una vez. Ver `DESIGN.md`.
+- **El dominio solo sirve el sitio.** `_config.yml` deja fuera de la publicación los documentos de trabajo (todos los `.md` de la raíz), `herramientas/` y `fonts/originales/`. El repositorio es público en GitHub, pero lo que no es el sitio no tiene por qué estar además en antoniolopezsanchez.art, bajo el nombre del autor y abierto a los rastreadores de IA que invita `robots.txt`. Hasta el 21 de septiembre de 2026 el dominio servía este archivo, PENDIENTES.md, los textos de `herramientas/textos/` y hasta `/DESIGN.html`, que Jekyll renderizaba por su cuenta. Un documento o una carpeta nueva que no sea parte del sitio se añade a esa lista, y el comprobador falla si falta.
 - **El sitemap tampoco se edita a mano**: lo escribe `herramientas/gen-sitemap.py` desde las páginas y la historia de git, y el comprobador falla si no está al día.
 - Al cambiar `styles.css`, `fonts.css` o `app.js`, se sube su `?v=N` con `python herramientas/version.py <recurso> <número>`, que lo cambia a la vez en todas las páginas y en todos los generadores.
 - **Sin cifras de rendimiento publicadas mientras el sitio siga en construcción.** Decisión de Ernesto, 12 de septiembre de 2026: se mide y se publica al terminar la versión inglesa, no antes. Ni en el README ni en ningún otro documento.
@@ -195,7 +190,13 @@ Fuera de los marcadores no se toca nada, así que el resto de la página se sigu
 
 Cuando toque resolver los cuentos, se hace igual, con su propio manifiesto.
 
-## Git en cada máquina
+## Cada máquina
+
+**Dependencias.** Los generadores y el comprobador necesitan Python 3 y `pip install Pillow fonttools brotli`, las mismas que instala GitHub Actions. Sin `fonttools`, el comprobador revienta en la regla de las fuentes: le pasó a la Máquina 2 el 21 de septiembre de 2026.
+
+**Fin de línea.** `.gitattributes` fija LF para todo el texto del repositorio en las dos máquinas. Antes, en la Máquina 2 (Windows, `core.autocrlf=true`), cada regeneración dejaba una veintena de HTML marcados como modificados sin un solo cambio de contenido, y eso engaña a quien verifica con `git status`.
+
+### Git
 
 No hay identidad de git global configurada, y es a propósito: Ernesto mantiene dos identidades separadas, la personal y artística y la de Index01. Una global las mezclaría sin avisar en cualquier repo nuevo.
 

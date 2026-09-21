@@ -11,7 +11,7 @@ import os, re, sys, zipfile, html
 def de_rtf(bruto):
     """RTF a texto con la libreria striprtf.
 
-    Aqui hubo un parser propio y se comio texto de verdad: en Proclama Real
+    Aqui hubo un parser propio y se comio texto de verdad: en un cuento
     perdio las dos primeras palabras, y en tres cuentos partio los titulos
     acentuados. Para textos literarios del autor no se improvisa un conversor:
     se usa uno probado y se compara el resultado contra el original."""
