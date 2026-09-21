@@ -55,7 +55,9 @@ def alternos(rutas):
     return t + f'<link rel="alternate" hreflang="x-default" href="{DOMINIO}{rutas["es"]}">\n'
 
 
-def cabeza(lang, titulo, desc, url, tipo_og="article", imagen=None, rutas=None):
+def cabeza(lang, titulo, desc, url, tipo_og="article", imagen=None, rutas=None, adultos=False):
+    """adultos=True añade <meta name="rating" content="adult">, la señal que
+    los buscadores entienden para la literatura erotica."""
     L = IDIOMAS[lang]
     img = imagen or f"{DOMINIO}/img/retrato.webp"
     locale = f'<meta property="og:locale" content="{L["locale"]}">'
@@ -68,7 +70,7 @@ def cabeza(lang, titulo, desc, url, tipo_og="article", imagen=None, rutas=None):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(titulo)}</title>
 <meta name="description" content="{esc_attr(desc)}">
-{FAVICON}
+{'<meta name="rating" content="adult">' + chr(10) if adultos else ""}{FAVICON}
 <link rel="canonical" href="{url}">
 {alternos(rutas or {})}<meta property="og:type" content="{tipo_og}">
 <meta property="og:url" content="{url}">

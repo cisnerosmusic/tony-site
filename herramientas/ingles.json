@@ -199,7 +199,7 @@
               "anio": "2026",
               "editorial": "First Prize in Poetry, XXX Premio Farraluque de Literatura Erótica",
               "genero": "Poetry, décima. For adult readers",
-              "url": "/laureles/tres-delirios-y-un-desnudo/",
+              "url": "/en/awards/tres-delirios-y-un-desnudo/",
               "texto": "A triptych in twelve décimas. Literary erotica, written for adult readers, and formally the most demanding thing in this section: the erotic tradition and the strictest Spanish stanza in the same room."
             },
             {
@@ -348,14 +348,11 @@
         {
           "titulo": "Awards",
           "alt": true,
-          "lista": [
-            "<strong>2026</strong>. First Prize in Poetry, XXX Premio Farraluque de Literatura Erótica, and an honourable mention in short fiction at the same competition.",
-            "<strong>2026</strong>. Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima.",
-            "<strong>2014</strong>. Honourable mention, Concurso La Edad de Oro, for the then unpublished novel <em>El otro lado del espejo</em>.",
-            "<strong>2014</strong>. Finalist, Concurso de Minicuentos El Dinosaurio 2013, whose result was announced in 2014.",
-            "<strong>2013</strong>. Premio La Rosa Blanca 2012, awarded by UNEAC, for <em>Las guerreras de la luz</em>.",
-            "<strong>2005</strong>. First prize, Reescribir El Quijote en Cuba.",
-            "<strong>2002</strong>. Prize in written press, Concurso 26 de Julio, awarded by UPEC, the Cuban journalists' union."
+          "parrafos": [
+            "Seven awards and honourable mentions between 2002 and 2026, among them the Premio La Rosa Blanca of UNEAC for <em>Las guerreras de la luz</em> and, in 2026 alone, the First Prize in Poetry of the Premio Farraluque and the Premio Colateral Yasmina Calcines."
+          ],
+          "enlaces": [
+            {"texto": "All the awards", "url": "/en/awards/"}
           ]
         },
         {

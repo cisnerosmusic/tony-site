@@ -115,15 +115,24 @@
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/laureles/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/laureles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/awards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/laureles/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/laureles/revelaciones/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/laureles/revelaciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/awards/revelaciones/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/laureles/revelaciones/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/laureles/tres-delirios-y-un-desnudo/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/laureles/tres-delirios-y-un-desnudo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/awards/tres-delirios-y-un-desnudo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/laureles/tres-delirios-y-un-desnudo/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/libros/</loc>
@@ -293,6 +302,27 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/author/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/periodista/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/periodista/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/awards/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/laureles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/awards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/laureles/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/awards/revelaciones/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/laureles/revelaciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/awards/revelaciones/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/laureles/revelaciones/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/awards/tres-delirios-y-un-desnudo/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/laureles/tres-delirios-y-un-desnudo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/awards/tres-delirios-y-un-desnudo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/laureles/tres-delirios-y-un-desnudo/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/en/books/</loc>

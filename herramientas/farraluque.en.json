@@ -1,0 +1,24 @@
+{
+  "_nota": "Capa inglesa de las dos obras del Farraluque. Solo el aparato: los textos, sus titulos, el subtitulo del poema y el epigrafe se quedan en español, marcados con lang=es.",
+  "ruta": "/en/awards/",
+  "migas": "Awards",
+  "volver": "Back to Awards",
+  "aviso": "A work of erotic literature, written for adult readers.",
+  "aviso_idioma": "Published in its original Spanish, as all literary texts on this site are.",
+  "premio": "XXX Premio Farraluque de Literatura Erótica, 2026",
+  "poema": {
+    "premio_frase": "With it I won the First Prize in Poetry at the {premio}.",
+    "genero": "Poetry. Décima. Erotic literature",
+    "award": "First Prize in Poetry, {premio}",
+    "seo_titulo": "Tres delirios y un desnudo, by Antonio López Sánchez",
+    "seo_desc": "Tres delirios y un desnudo (Three Deliriums and a Nude), a triptych in décimas: First Prize in Poetry, XXX Premio Farraluque, 2026. In Spanish."
+  },
+  "cuento": {
+    "subtitulo": "A Sunday, and a decision already made.",
+    "premio_frase": "It received an honourable mention in short fiction at the {premio}.",
+    "genero": "Erotic literature",
+    "award": "Honourable mention in short fiction, {premio}",
+    "seo_titulo": "Revelaciones, a story by Antonio López Sánchez",
+    "seo_desc": "Revelaciones (Revelations), a story by Antonio López Sánchez: a woman skips Mass to keep an appointment. Honourable mention, Premio Farraluque 2026."
+  }
+}

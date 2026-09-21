@@ -18,12 +18,16 @@
 #     exactos, o sea cuatro decimas. Se agrupan de diez en diez, que es la
 #     forma de la decima, no una edicion del texto.
 #
+# Idiomas. Las obras no se traducen nunca. La capa inglesa,
+# farraluque.en.json, trae solo el aparato; la version inglesa sale en
+# /en/awards/<obra>/.
+#
 # Uso: python herramientas/gen-farraluque.py
 
 import json, os, sys, html, re
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import navegacion
+import pagina
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
@@ -85,66 +89,52 @@ def delirios():
     return subtitulo.capitalize(), partes
 
 
-def envoltura(titulo, subtitulo, T, D, datos, migas, cuerpo, tipo="article"):
-    pasos = "".join(
-        f'\n    {{ "@type": "ListItem", "position": {i}, "name": "{n}", "item": "{u}" }},'
-        for i, (n, u) in enumerate(migas, 1)).rstrip(",")
-    return f"""<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{T}</title>
-<meta name="description" content="{D}">
-<meta name="rating" content="adult">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="canonical" href="{datos['url']}">
-<meta property="og:type" content="{tipo}">
-<meta property="og:url" content="{datos['url']}">
-<meta property="og:title" content="{T}">
-<meta property="og:description" content="{D}">
-<meta property="og:image" content="{DOMINIO}{RETRATO}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{T}">
-<meta name="twitter:description" content="{D}">
-<meta name="twitter:image" content="{DOMINIO}{RETRATO}">
-<meta property="og:locale" content="es_ES">
-<meta name="theme-color" content="#0a0c1f">
-<link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
-<link rel="stylesheet" href="/styles.css{CSS}">
-<script type="application/ld+json">
-{json.dumps(datos, ensure_ascii=False, indent=2)}
-</script>
-<script type="application/ld+json">
-{{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{pasos}
-  ]
-}}
-</script>
-</head>
-<body>
 
-<a class="salto" href="#main">Saltar al contenido</a>
+ES = {
+    "ruta": "/laureles/",
+    "migas": "Laureles",
+    "volver": "Volver a Laureles",
+    "aviso": AVISO,
+    "aviso_idioma": None,
+    "premio": PREMIO,
+    "poema": {
+        "premio_frase": "Con ella gané el Primer Premio en Poesía del {premio}.",
+        "genero": "Poesía. Décima. Literatura erótica",
+        "award": "Primer Premio en Poesía, {premio}",
+        "seo_titulo": "Tres delirios y un desnudo, de Antonio López Sánchez",
+        "seo_desc": ("Tres delirios y un desnudo, de Antonio López Sánchez: tríptico en décimas, "
+                     "Primer Premio de Poesía del XXX Premio Farraluque, 2026."),
+    },
+    "cuento": {
+        "subtitulo": "Un domingo, y una decisión ya tomada.",
+        "premio_frase": "Obtuvo Mención en Cuento en el {premio}.",
+        "genero": "Literatura erótica",
+        "award": "Mención en Cuento, {premio}",
+        "seo_titulo": "Revelaciones, un cuento de Antonio López Sánchez",
+        "seo_desc": ("Revelaciones, cuento de Antonio López Sánchez: una mujer falta a misa "
+                     "para acudir a una cita. Mención en el XXX Premio Farraluque, 2026."),
+    },
+}
 
-<nav class="nav">
-  <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="menu-principal">
-{navegacion.menu_html("/laureles/")}
-  </ul>
-</nav>
 
+def envoltura(lang, V, slug, titulo, subtitulo, T, D, datos, cuerpo, capas, sub_es=False, tipo="article"):
+    L = pagina.IDIOMAS[lang]
+    es = lang == "es"
+    la = "" if es else ' lang="es"'
+    url = datos["url"]
+    # El subtitulo del poema es parte de la obra y se queda en español; el
+    # del cuento es aparato y va en el idioma de la pagina.
+    la_sub = la if sub_es else ""
+    migas = [("Ala del Mar", DOMINIO + L["portada"]), (V["migas"], DOMINIO + V["ruta"]), (titulo, url)]
+    return (pagina.cabeza(lang, T, D, url, tipo_og=tipo, imagen=DOMINIO + RETRATO,
+                          rutas={l: c["ruta"] + slug + "/" for l, c in capas.items()}, adultos=True)
+            + '<script type="application/ld+json">\n' + json.dumps(datos, ensure_ascii=False, indent=2) + '\n</script>\n'
+            + pagina.migas(migas)
+            + pagina.menu(lang, "/laureles/" if es else "/en/author/")
+            + f"""
 <header class="page-header">
-  <h1>{esc(titulo)}</h1>
-  <p>{esc(subtitulo)}</p>
+  <h1{la}>{esc(titulo)}</h1>
+  <p{la_sub}>{esc(subtitulo)}</p>
 </header>
 
 <main id="main">
@@ -153,115 +143,97 @@ def envoltura(titulo, subtitulo, T, D, datos, migas, cuerpo, tipo="article"):
 {cuerpo}
 
   <p class="vyv-firma" style="margin-top:2.5rem;">ALS</p>
-  <p style="margin-top:2.5rem;"><a href="/laureles/" class="btn">Volver a Laureles</a></p>
+  <p style="margin-top:2.5rem;"><a href="{V["ruta"]}" class="btn">{esc(V["volver"])}</a></p>
 
 </div>
 </main>
-
-<footer class="footer">
-  <nav class="footer-nav" aria-label="Secciones">
-{navegacion.pie_html(None)}
-  </nav>
-  <div class="footer-socials">
-    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
-  </div>
-  <p class="footer-lema">bene scriptus</p>
-  <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
-  <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
-</footer>
-
-<script src="/app.js?v=10" defer></script>
-</body>
-</html>
 """
+            + pagina.pie(lang, None))
 
 
-def escribe(carpeta, pagina, resumen):
-    destino = os.path.join(RAIZ, "laureles", carpeta, "index.html")
-    os.makedirs(os.path.dirname(destino), exist_ok=True)
-    with open(destino, "w", encoding="utf-8", newline="") as f:
-        f.write(pagina)
-    print(f"escrito: laureles/{carpeta}/ · {resumen}")
+def aviso_de(V, frase):
+    enlace = f'<a href="{V["ruta"]}">{esc(V["premio"])}</a>'
+    t = (f'  <p class="sonata-premio reveal reveal-left">{esc(V["aviso"])} '
+         + frase.replace("{premio}", enlace) + '</p>')
+    if V.get("aviso_idioma"):
+        t += f'\n\n  <p class="nota" style="margin-bottom:2rem;">{esc(V["aviso_idioma"])}</p>'
+    return t
 
 
-def poema():
-    url = f"{DOMINIO}/laureles/tres-delirios-y-un-desnudo/"
+def poema(lang, V, capas):
+    es = lang == "es"
+    la = "" if es else ' lang="es"'
+    P = V["poema"]
+    slug = "tres-delirios-y-un-desnudo"
+    url = f"{DOMINIO}{V['ruta']}{slug}/"
     subtitulo, partes = delirios()
-    piezas = [f'  <p class="sonata-premio reveal reveal-left">{esc(AVISO)} '
-              f'Con ella gané el Primer Premio en Poesía del '
-              f'<a href="/laureles/">{esc(PREMIO)}</a>.</p>']
+    piezas = [aviso_de(V, P["premio_frase"])]
     for n, p in enumerate(partes):
         lado = "right" if n % 2 == 0 else "left"
         ident = p["nombre"].lower().replace(" ", "-")
         piezas.append(
-            f'  <section class="mov reveal reveal-{lado}" id="{ident}">\n'
+            f'  <section class="mov reveal reveal-{lado}" id="{ident}"{la}>\n'
             f'    <p class="mov-numero">{esc(p["nombre"])}</p>\n'
             f'    <h2 class="mov-titulo">{esc(p["sub"])}</h2>\n'
             + "\n".join(f'    <div class="verso poema-cuerpo decima">'
                         + "\n".join(esc(v) for v in d) + '</div>' for d in p["decimas"])
             + '\n  </section>')
 
-    T = "Tres delirios y un desnudo, de Antonio López Sánchez"
-    D = ("Tres delirios y un desnudo, de Antonio López Sánchez: tríptico en décimas, "
-         "Primer Premio de Poesía del XXX Premio Farraluque, 2026.")
     datos = {"@context": "https://schema.org", "@type": "CreativeWork",
              "name": "Tres delirios y un desnudo", "url": url, "inLanguage": "es",
              "author": {"@id": f"{DOMINIO}/#antonio"},
-             "genre": "Poesía. Décima. Literatura erótica",
+             "genre": P["genero"],
              "datePublished": "2026",
              "isFamilyFriendly": False,
-             "award": f"Primer Premio en Poesía, {PREMIO}",
-             "description": D,
+             "award": P["award"].replace("{premio}", V["premio"]),
+             "description": P["seo_desc"],
              "hasPart": [{"@type": "CreativeWork", "genre": "Décima",
                           "name": p["sub"], "position": i}
                          for i, p in enumerate(partes, 1)]}
-    migas = [("Ala del Mar", DOMINIO + "/"), ("Laureles", DOMINIO + "/laureles/"),
-             ("Tres delirios y un desnudo", url)]
-    escribe("tres-delirios-y-un-desnudo",
-            envoltura("Tres delirios y un desnudo", subtitulo + ".", T, D, datos,
-                      migas, "\n\n".join(piezas)),
-            f"{len(partes)} delirios, {sum(len(p['decimas']) for p in partes)} décimas")
+    destino = pagina.escribe(V["ruta"] + slug, envoltura(
+        lang, V, slug, "Tres delirios y un desnudo", subtitulo + ".", P["seo_titulo"], P["seo_desc"],
+        datos, "\n\n".join(piezas), capas, sub_es=True))
+    print(f"escrito: {destino} · {len(partes)} delirios, {sum(len(p['decimas']) for p in partes)} décimas")
 
 
-def cuento():
-    url = f"{DOMINIO}/laureles/revelaciones/"
+def cuento(lang, V, capas):
+    es = lang == "es"
+    la = "" if es else ' lang="es"'
+    C = V["cuento"]
+    slug = "revelaciones"
+    url = f"{DOMINIO}{V['ruta']}{slug}/"
     ls = sin_cabecera(lee("revelaciones.txt"), "REVELACIONES")
     epi = [l.strip() for l in ls[:2]]
     firma = ls[2].strip()
     assert firma == "Silvio Rodríguez", f"esperaba la firma del epigrafe, vino: {firma}"
     parrafos = [l.strip() for l in ls[3:] if l.strip()]
 
-    cuerpo = (f'  <p class="sonata-premio reveal reveal-left">{esc(AVISO)} '
-              f'Obtuvo Mención en Cuento en el '
-              f'<a href="/laureles/">{esc(PREMIO)}</a>.</p>\n\n'
-              '  <blockquote class="poema-epigrafe reveal reveal-right">\n'
+    cuerpo = (aviso_de(V, C["premio_frase"]) + '\n\n'
+              f'  <blockquote class="poema-epigrafe reveal reveal-right"{la}>\n'
               '    <div class="verso">' + "\n".join(esc(l) for l in epi) + '</div>\n'
               f'    <cite>{esc(firma)}</cite>\n'
               '  </blockquote>\n\n'
-              '  <div class="cuento-texto reveal reveal-right">\n'
+              f'  <div class="cuento-texto reveal reveal-right"{la}>\n'
               + "\n".join(f"    <p>{esc(p)}</p>" for p in parrafos)
               + '\n  </div>')
 
-    T = "Revelaciones, un cuento de Antonio López Sánchez"
-    D = ("Revelaciones, cuento de Antonio López Sánchez: una mujer falta a misa "
-         "para acudir a una cita. Mención en el XXX Premio Farraluque, 2026.")
     datos = {"@context": "https://schema.org", "@type": "ShortStory",
              "name": "Revelaciones", "url": url, "inLanguage": "es",
              "author": {"@id": f"{DOMINIO}/#antonio"},
-             "genre": "Literatura erótica",
+             "genre": C["genero"],
              "datePublished": "2026",
              "isFamilyFriendly": False,
-             "award": f"Mención en Cuento, {PREMIO}",
-             "description": D,
+             "award": C["award"].replace("{premio}", V["premio"]),
+             "description": C["seo_desc"],
              "wordCount": sum(len(p.split()) for p in parrafos)}
-    migas = [("Ala del Mar", DOMINIO + "/"), ("Laureles", DOMINIO + "/laureles/"),
-             ("Revelaciones", url)]
-    escribe("revelaciones",
-            envoltura("Revelaciones", "Un domingo, y una decisión ya tomada.",
-                      T, D, datos, migas, cuerpo),
-            f"{len(parrafos)} párrafo(s), {datos['wordCount']} palabras")
+    destino = pagina.escribe(V["ruta"] + slug, envoltura(
+        lang, V, slug, "Revelaciones", C["subtitulo"], C["seo_titulo"], C["seo_desc"],
+        datos, cuerpo, capas))
+    print(f"escrito: {destino} · {len(parrafos)} párrafo(s), {datos['wordCount']} palabras")
 
 
 if __name__ == "__main__":
-    poema()
-    cuento()
+    capas = {"es": ES, **pagina.lenguas_con_capa("farraluque")}
+    for lang, V in capas.items():
+        poema(lang, V, capas)
+        cuento(lang, V, capas)
