@@ -10,7 +10,7 @@ Lo que queda por hacer, y nada más.
 
 Hay salas que solo existen en español. En todas, la literatura se queda en español y lo que se traduce es el aparato:
 
-2. **Tinta-ciones por dentro**: Poemas sueltos, De-Cimitas, Sonata de la lluvia y En mi voz. Hoy `/en/poetry/` explica la poesía y enlaza a las salas españolas.
+2. **En mi voz**, la sala sonora de Tinta-ciones. Poemas sueltos, De-Cimitas y la Sonata ya están en inglés; En mi voz va con Plano abierto, porque las dos las reparte `gen-audios.py`.
 3. **Laureles**: hoy los premios en inglés viven dentro de `/en/author/`. Decidir si merecen página propia, con las dos obras del Farraluque.
 4. **Plano abierto**: las grabaciones, con su ficha en inglés.
 5. **Entre lectores y Directorio.**

@@ -54,9 +54,9 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-libro.py` | las 14 fichas de libro en cada idioma, y los catálogos que no son el español | `libros/<slug>.json`, `libros/<idioma>/<slug>.json`, `idiomas.json` |
 | `gen-cuento.py` | Contarte y la página de cada cuento, en cada idioma | `cuentos.json`, `cuentos.<idioma>.json` |
 | `gen-ineditos.py` | Inéditos y la página de cada novela inédita, en cada idioma | `ineditos.json`, `ineditos.<idioma>.json` |
-| `gen-poemas.py` | Poemas sueltos | `poemas.json` |
-| `gen-decimitas.py` | De-Cimitas | `decimitas.json` |
-| `gen-sonata.py` | Sonata de la lluvia | su `.txt` |
+| `gen-poemas.py` | Poemas sueltos, en cada idioma | `poemas.json`, `poemas.<idioma>.json` |
+| `gen-decimitas.py` | De-Cimitas, en cada idioma | `decimitas.json`, `decimitas.<idioma>.json` |
+| `gen-sonata.py` | Sonata de la lluvia, en cada idioma | su `.txt`, `sonata.<idioma>.json` |
 | `gen-farraluque.py` | las dos obras del Farraluque, en Laureles | sus `.txt` en `textos/laureles/` |
 | `gen-audios.py` | las grabaciones, repartidas a las salas que las reclaman | `grabaciones.json` |
 | `gen-ingles.py` | las páginas de sección inglesas | `ingles.json` |
@@ -65,7 +65,7 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-tarjetas.py` | la postal de cada libro para redes, 1200 x 630: cubierta a la izquierda, título a la derecha | `libros/<slug>.json` y las cubiertas |
 | `gen-sitemap.py` | `sitemap.xml`, con la fecha real de cada página según git y sus alternates por idioma | las propias páginas |
 
-Auxiliares: `subset-fuentes.py`, que recorta las fuentes servidas desde `fonts/originales/` a lo que el sitio escribe de verdad; `navegacion.py`, que es la **única** definición del menú y del pie en cada idioma; `unificar-nav.py`, que la aplica a las páginas escritas a mano; `comprobar.py`, que verifica el sitio entero; `version.py`, que sube el `?v=N` de un recurso en todas las páginas a la vez; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
+Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cabecera, menú, pie y camino de miga), que usan los generadores de poesía; `subset-fuentes.py`, que recorta las fuentes servidas desde `fonts/originales/` a lo que el sitio escribe de verdad; `navegacion.py`, que es la **única** definición del menú y del pie en cada idioma; `unificar-nav.py`, que la aplica a las páginas escritas a mano; `comprobar.py`, que verifica el sitio entero; `version.py`, que sube el `?v=N` de un recurso en todas las páginas a la vez; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
 
 Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), Laureles, El periodista, Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
 

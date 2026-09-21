@@ -1,0 +1,27 @@
+{
+  "_nota": "Capa inglesa de De-Cimitas. Solo el aparato: textos de la sala y descripcion de cada foto. Las decimas y sus titulos se quedan en español, marcados con lang=es.",
+  "ruta": "/en/poetry/decimitas/",
+  "frase": "A photograph, and ten lines that answer it.",
+  "titulo_sala": "What the décima sees",
+  "entrada": "Another way of making poetry is to look for the hidden voice, the stories that live behind an image. Here are photographs of mine, and the poem I hear in each of them.",
+  "aviso": "The décimas are published in their original Spanish, as all literary texts on this site are. A décima is the ten-line stanza of Cuban poetry and song.",
+  "titulo_mayor": "One that outgrew its frame",
+  "entrada_mayor": "It began like the others, looking at a photograph. But it grew three movements, each with its own tempo, and no longer fitted in ten lines. It has a room of its own.",
+  "sonata_sinopsis": "Three movements in décimas: a prelude, a downpour and what remains afterwards. With Fito Páez, Noel Nicola and Santiago Feliú looking in on each.",
+  "sonata_nota": "It won me the {premio} in 2026.",
+  "sonata_boton": "Read the sonata",
+  "sonata_alt": "Sunset over the Malecón sea wall, with the sun breaking through the clouds",
+  "premios_url": "/en/author/",
+  "migas": ["Poetry", "De-Cimitas"],
+  "seo_titulo": "De-Cimitas: décimas with photographs by Antonio López Sánchez",
+  "seo_desc": "Décimas by the Cuban poet Antonio López Sánchez written from his own photographs: each image with its décima, in a single piece. In Spanish.",
+  "alts": {
+    "en-cada-mundo": "Waves breaking on the rocks of the coast, under a cloudy sky",
+    "hada-astral": "A dragonfly with transparent wings resting against a dark background",
+    "senal": "A triangular road sign with a 100 m plate, a pink bikini top hanging from the post",
+    "labios-del-deseo": "Three green-skinned fruits, one of them split open to show its orange flesh",
+    "para-nadie": "A trail of sand across the handwritten pages of an open notebook",
+    "lagarto": "A dried-up lizard lying on the grass",
+    "baraja-rota": "A seven of clubs from a Spanish deck, torn in half and lying on the ground"
+  }
+}

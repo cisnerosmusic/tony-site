@@ -250,7 +250,10 @@
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/decimitas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/</loc>
@@ -258,11 +261,17 @@
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/poems/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/sonata-de-la-lluvia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/trova/</loc>
@@ -400,6 +409,27 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/poetry/decimitas/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/decimitas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/poetry/poems/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/poems/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/poetry/sonata-de-la-lluvia/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/poetry/sonata-de-la-lluvia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/en/rights/</loc>

@@ -9,18 +9,43 @@
 # encabezados; el emparejamiento con la foto va declarado en el manifiesto,
 # porque los nombres no siempre coinciden.
 #
+# Idiomas. Las decimas no se traducen nunca. La capa inglesa, decimitas.en.json,
+# trae los textos de la sala y la descripcion de cada foto, y la version
+# inglesa sale en /en/poetry/decimitas/.
+#
 # Uso: python herramientas/gen-decimitas.py
 
 import json, os, sys, html
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import navegacion
+import pagina
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-URL = DOMINIO + "/tinta-ciones/de-cimitas/"
 CSS = "?v=33"
+
+ES = {
+    "ruta": "/tinta-ciones/de-cimitas/",
+    "frase": "Una foto y diez versos que le contestan.",
+    "titulo_sala": "Lo que mira la décima",
+    "entrada": "Otro modo de hacer poesía es buscar la voz oculta, las historias que habitan detrás de una imagen. Aquí van mis fotos vistas y el poema que escucho en ellas.",
+    "aviso": None,
+    "titulo_mayor": "Una que se salió del cuadro",
+    "entrada_mayor": "Empezó como las demás, mirando una foto. Pero le crecieron tres movimientos, cada uno con su tempo, y ya no cabía en diez versos. Tiene cuarto propio.",
+    "sonata_sinopsis": "Tres movimientos en décimas: un preludio, un aguacero y lo que queda después. Con Fito Páez, Noel Nicola y Santiago Feliú asomados a cada uno.",
+    "sonata_nota": "Con ella gané el {premio} en 2026.",
+    "sonata_boton": "Leer la sonata",
+    "sonata_alt": "Atardecer sobre el muro del malecón, con el sol abriéndose paso entre las nubes",
+    "premios_url": "/laureles/",
+    "migas": ["Tinta-ciones", "De-Cimitas"],
+    "seo_titulo": "De-Cimitas: décimas con imagen de Antonio López Sánchez",
+    "seo_desc": ("Décimas del poeta cubano Antonio López Sánchez escritas a partir de sus propias "
+                 "fotografías: cada imagen con su décima, en una sola pieza."),
+}
+
+# El nombre del premio es nombre propio: no se traduce en ninguna lengua.
+PREMIO = "Premio Colateral Yasmina Calcines"
 
 
 def esc(t):
@@ -68,16 +93,16 @@ def dims(rel):
         return im.size
 
 
-def pieza(d, cuerpo, n):
+def pieza(d, cuerpo, n, alt, la=""):
     img = f"/img/decimitas/{d['slug']}.webp"
     w, h = dims(img)
     epi, firma, versos = separa_epigrafe(cuerpo)
     lado = "right" if n % 2 == 0 else "left"
     partes = [f'  <article class="decimita reveal reveal-{lado}" id="{d["slug"]}">']
     partes.append(f'    <figure class="decimita-foto">')
-    partes.append(f'      <img src="{img}" width="{w}" height="{h}" alt="{esc_attr(d["alt"])}" loading="lazy">')
+    partes.append(f'      <img src="{img}" width="{w}" height="{h}" alt="{esc_attr(alt)}" loading="lazy">')
     partes.append(f'    </figure>')
-    partes.append(f'    <div class="decimita-texto">')
+    partes.append(f'    <div class="decimita-texto"{la}>')
     partes.append(f'      <h2 class="decimita-titulo">{esc(d["titulo"])}</h2>')
     if epi:
         partes.append('      <blockquote class="poema-epigrafe">')
@@ -92,6 +117,74 @@ def pieza(d, cuerpo, n):
     return "\n".join(partes)
 
 
+def pagina_decimitas(lang, V, cfg, trozos, capas):
+    L = pagina.IDIOMAS[lang]
+    es = lang == "es"
+    la = "" if es else ' lang="es"'
+    url = DOMINIO + V["ruta"]
+    seccion = "/tinta-ciones/" if es else "/en/poetry/"
+    sonata = capas[lang]["_sonata_ruta"]
+
+    piezas = "\n\n".join(pieza(d, trozos[d["titulo_doc"]], i,
+                               d["alt"] if es else V["alts"][d["slug"]], la)
+                         for i, d in enumerate(cfg["decimitas"]))
+
+    lista = {"@context": "https://schema.org", "@type": "ItemList",
+             "name": "De-Cimitas de Antonio López Sánchez" if es else V["seo_titulo"],
+             "itemListElement": [{"@type": "ListItem", "position": i, "name": d["titulo"]}
+                                 for i, d in enumerate(cfg["decimitas"], 1)]}
+
+    margen = "1.5rem" if V.get("aviso") else "3rem"
+    aviso = f'\n    <p class="nota" style="margin-bottom:3rem;">{esc(V["aviso"])}</p>' if V.get("aviso") else ""
+    nota = V["sonata_nota"].replace(
+        "{premio}", f'<a href="{V["premios_url"]}">{esc(PREMIO)}</a>')
+
+    return (pagina.cabeza(lang, V["seo_titulo"], V["seo_desc"], url,
+                          imagen=f"{DOMINIO}/img/decimitas/baraja-rota.webp",
+                          rutas={l: c["ruta"] for l, c in capas.items()})
+            + '<script type="application/ld+json">\n' + json.dumps(lista, ensure_ascii=False, indent=2) + '\n</script>\n'
+            + pagina.migas([("Ala del Mar", DOMINIO + L["portada"]), (V["migas"][0], DOMINIO + seccion), (V["migas"][1], url)])
+            + pagina.menu(lang, seccion)
+            + f"""
+<header class="page-header">
+  <h1>De-Cimitas</h1>
+  <p>{esc(V["frase"])}</p>
+</header>
+
+<main id="main">
+<div class="section">
+  <div class="reveal reveal-right">
+    <h2 class="section-title">{esc(V["titulo_sala"])}</h2>
+    <div class="section-divider"></div>
+    <p class="section-text" style="margin-bottom:{margen};">{esc(V["entrada"])}</p>{aviso}
+  </div>
+
+{piezas}
+
+  <div class="reveal reveal-right" style="margin-top:4.5rem;">
+    <h2 class="section-title">{esc(V["titulo_mayor"])}</h2>
+    <div class="section-divider"></div>
+    <p class="section-text" style="margin-bottom:2.5rem;">{esc(V["entrada_mayor"])}</p>
+  </div>
+
+  <article class="decimita decimita-mayor reveal reveal-left" id="sonata-de-la-lluvia">
+    <figure class="decimita-foto">
+      <img src="/img/decimitas/sonata-de-la-lluvia.webp" width="720" height="540" alt="{esc_attr(V["sonata_alt"])}" loading="lazy">
+    </figure>
+    <div class="decimita-texto">
+      <h2 class="decimita-titulo"{la}>Sonata de la lluvia</h2>
+      <p class="libro-sinopsis">{esc(V["sonata_sinopsis"])}</p>
+      <p class="decimita-nota">{nota}</p>
+      <p style="margin-top:1.4rem;"><a href="{sonata}" class="btn">{esc(V["sonata_boton"])}</a></p>
+    </div>
+  </article>
+
+</div>
+</main>
+"""
+            + pagina.pie(lang, None))
+
+
 def main():
     cfg = json.load(open(os.path.join(RAIZ, "herramientas", "decimitas.json"), encoding="utf-8"))
     doc = open(os.path.join(RAIZ, "herramientas", "textos",
@@ -102,129 +195,19 @@ def main():
     if faltan:
         print("SIN TEXTO en el documento:", faltan); sys.exit(1)
 
-    piezas = "\n\n".join(pieza(d, trozos[d["titulo_doc"]], i)
-                         for i, d in enumerate(cfg["decimitas"]))
-
-    lista = {"@context": "https://schema.org", "@type": "ItemList",
-             "name": "De-Cimitas de Antonio López Sánchez",
-             "itemListElement": [{"@type": "ListItem", "position": i, "name": d["titulo"]}
-                                 for i, d in enumerate(cfg["decimitas"], 1)]}
-
-    T = "De-Cimitas: décimas con imagen de Antonio López Sánchez"
-    D = ("Décimas del poeta cubano Antonio López Sánchez escritas a partir de sus propias "
-         "fotografías: cada imagen con su décima, en una sola pieza.")
-
-    pagina = f"""<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{T}</title>
-<meta name="description" content="{D}">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="canonical" href="{URL}">
-<meta property="og:type" content="article">
-<meta property="og:url" content="{URL}">
-<meta property="og:title" content="{T}">
-<meta property="og:description" content="{D}">
-<meta property="og:image" content="{DOMINIO}/img/decimitas/baraja-rota.webp">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{T}">
-<meta name="twitter:description" content="{D}">
-<meta name="twitter:image" content="{DOMINIO}/img/decimitas/baraja-rota.webp">
-<meta property="og:locale" content="es_ES">
-<meta name="theme-color" content="#0a0c1f">
-<link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
-<link rel="stylesheet" href="/styles.css{CSS}">
-<script type="application/ld+json">
-{json.dumps(lista, ensure_ascii=False, indent=2)}
-</script>
-<script type="application/ld+json">
-{{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {{ "@type": "ListItem", "position": 1, "name": "Ala del Mar", "item": "{DOMINIO}/" }},
-    {{ "@type": "ListItem", "position": 2, "name": "Tinta-ciones", "item": "{DOMINIO}/tinta-ciones/" }},
-    {{ "@type": "ListItem", "position": 3, "name": "De-Cimitas", "item": "{URL}" }}
-  ]
-}}
-</script>
-</head>
-<body>
-
-<a class="salto" href="#main">Saltar al contenido</a>
-
-<nav class="nav">
-  <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="menu-principal">
-{navegacion.menu_html("/tinta-ciones/")}
-  </ul>
-</nav>
-
-<header class="page-header">
-  <h1>De-Cimitas</h1>
-  <p>Una foto y diez versos que le contestan.</p>
-</header>
-
-<main id="main">
-<div class="section">
-  <div class="reveal reveal-right">
-    <h2 class="section-title">Lo que mira la décima</h2>
-    <div class="section-divider"></div>
-    <p class="section-text" style="margin-bottom:3rem;">Otro modo de hacer poesía es buscar la voz oculta, las historias que habitan detrás de una imagen. Aquí van mis fotos vistas y el poema que escucho en ellas.</p>
-  </div>
-
-{piezas}
-
-  <div class="reveal reveal-right" style="margin-top:4.5rem;">
-    <h2 class="section-title">Una que se salió del cuadro</h2>
-    <div class="section-divider"></div>
-    <p class="section-text" style="margin-bottom:2.5rem;">Empezó como las demás, mirando una foto. Pero le crecieron tres movimientos, cada uno con su tempo, y ya no cabía en diez versos. Tiene cuarto propio.</p>
-  </div>
-
-  <article class="decimita decimita-mayor reveal reveal-left" id="sonata-de-la-lluvia">
-    <figure class="decimita-foto">
-      <img src="/img/decimitas/sonata-de-la-lluvia.webp" width="720" height="540" alt="Atardecer sobre el muro del malecón, con el sol abriéndose paso entre las nubes" loading="lazy">
-    </figure>
-    <div class="decimita-texto">
-      <h2 class="decimita-titulo">Sonata de la lluvia</h2>
-      <p class="libro-sinopsis">Tres movimientos en décimas: un preludio, un aguacero y lo que queda después. Con Fito Páez, Noel Nicola y Santiago Feliú asomados a cada uno.</p>
-      <p class="decimita-nota">Con ella gané el <a href="/laureles/">Premio Colateral Yasmina Calcines</a> en 2026.</p>
-      <p style="margin-top:1.4rem;"><a href="/tinta-ciones/sonata-de-la-lluvia/" class="btn">Leer la sonata</a></p>
-    </div>
-  </article>
-
-</div>
-</main>
-
-<footer class="footer">
-  <nav class="footer-nav" aria-label="Secciones">
-{navegacion.pie_html(None)}
-  </nav>
-  <div class="footer-socials">
-    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
-  </div>
-  <p class="footer-lema">bene scriptus</p>
-  <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
-  <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
-</footer>
-
-<script src="/app.js?v=10" defer></script>
-</body>
-</html>
-"""
-    destino = os.path.join(RAIZ, "tinta-ciones", "de-cimitas", "index.html")
-    with open(destino, "w", encoding="utf-8", newline="") as f:
-        f.write(pagina)
-    print(f"escrito: {os.path.relpath(destino, RAIZ)} · {len(cfg['decimitas'])} de-cimitas")
+    capas = {"es": ES, **pagina.lenguas_con_capa("decimitas")}
+    # La sonata tiene pagina propia en cada idioma que tenga su capa; donde no,
+    # la tarjeta lleva a la española.
+    sonatas = {"es": "/tinta-ciones/sonata-de-la-lluvia/"}
+    sonatas.update({l: c["ruta"] for l, c in pagina.lenguas_con_capa("sonata").items()})
+    for lang, V in capas.items():
+        falta_alt = [d["slug"] for d in cfg["decimitas"] if lang != "es" and d["slug"] not in V["alts"]]
+        if falta_alt:
+            sys.exit(f"decimitas.{lang}.json sin descripcion para: {', '.join(falta_alt)}")
+        V["_sonata_ruta"] = sonatas.get(lang, sonatas["es"])
+    for lang, V in capas.items():
+        destino = pagina.escribe(V["ruta"], pagina_decimitas(lang, V, cfg, trozos, capas))
+        print(f"escrito: {destino} · {len(cfg['decimitas'])} de-cimitas")
 
 
 if __name__ == "__main__":

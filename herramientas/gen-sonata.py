@@ -10,22 +10,45 @@
 # espacios marca donde arranca cada decima de la tirada. Todo eso se conserva
 # tal cual y se muestra con white-space: pre-wrap.
 #
+# Idiomas. La obra no se traduce nunca. La capa inglesa, sonata.en.json, trae
+# solo el aparato, y la version inglesa sale en /en/poetry/sonata-de-la-lluvia/.
+#
 # Uso: python herramientas/gen-sonata.py
 
 import json, os, sys, html, re
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import navegacion
+import pagina
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-URL = DOMINIO + "/tinta-ciones/sonata-de-la-lluvia/"
 CSS = "?v=33"
 FUENTE = os.path.join(RAIZ, "herramientas", "textos", "decimitas", "sonata-de-la-lluvia.txt")
 FOTO = "/img/decimitas/sonata-de-la-lluvia.webp"
 
 FIRMAS = ("Fito Páez", "Noel Nicola", "Santiago Feliú")
+
+# El nombre del premio y del concurso son nombres propios: no se traducen.
+PREMIO = "Premio Colateral Yasmina Calcines"
+PREMIO_COMPLETO = "Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima, 2026"
+
+ES = {
+    "ruta": "/tinta-ciones/sonata-de-la-lluvia/",
+    "frase": "Tres movimientos en décimas.",
+    "aviso": None,
+    "foto_alt": "Atardecer sobre el muro del malecón, con el sol abriéndose paso entre las nubes",
+    "premio": "Con esta obra gané el {premio}, del XXVI Concurso Nacional Ala Décima, en 2026.",
+    "premios_url": "/laureles/",
+    "volver": "Volver a De-Cimitas",
+    "volver_url": "/tinta-ciones/de-cimitas/",
+    "migas": ["Tinta-ciones", "De-Cimitas", "Sonata de la lluvia"],
+    "migas_urls": ["/tinta-ciones/", "/tinta-ciones/de-cimitas/"],
+    "genero": "Poesía. Décima",
+    "seo_titulo": "Sonata de la lluvia, de Antonio López Sánchez",
+    "seo_desc": ("Sonata de la lluvia, de Antonio López Sánchez: tres movimientos en décimas, "
+                 "premiada en el XXVI Concurso Nacional Ala Décima."),
+}
 
 
 def esc(t):
@@ -69,16 +92,14 @@ def movimientos(texto):
     return salida
 
 
-def main():
-    texto = open(FUENTE, encoding="utf-8").read()
-    movs = movimientos(texto)
-    assert len(movs) == 3, f"esperaba 3 movimientos, encontre {len(movs)}"
-    with Image.open(os.path.join(RAIZ, FOTO.lstrip("/"))) as im:
-        fw, fh = im.size
-
+def pagina_sonata(lang, V, movs, fw, fh, capas):
+    L = pagina.IDIOMAS[lang]
+    es = lang == "es"
+    la = "" if es else ' lang="es"'
+    url = DOMINIO + V["ruta"]
     piezas = []
     for n, m in enumerate(movs):
-        p = [f'  <section class="mov reveal reveal-{"right" if n % 2 == 0 else "left"}" id="mov-{m["numero"].lower()}">']
+        p = [f'  <section class="mov reveal reveal-{"right" if n % 2 == 0 else "left"}" id="mov-{m["numero"].lower()}"{la}>']
         p.append(f'    <p class="mov-numero">{esc(m["numero"])} · <span class="mov-tempo">{esc(m["tempo"])}</span></p>')
         p.append(f'    <h2 class="mov-titulo">{esc(m["titulo"].capitalize())}</h2>')
         if m["firma"]:
@@ -91,123 +112,67 @@ def main():
         piezas.append("\n".join(p))
     cuerpo = "\n\n".join(piezas)
 
-    T = "Sonata de la lluvia, de Antonio López Sánchez"
-    D = ("Sonata de la lluvia, de Antonio López Sánchez: tres movimientos en décimas, "
-         "premiada en el XXVI Concurso Nacional Ala Décima.")
-
     # CreativeWork y no Poem: schema.org/Poem no existe, devuelve 404.
     # El genero se declara aparte, que es como se dice "esto es poesia".
     datos = {"@context": "https://schema.org", "@type": "CreativeWork",
-             "name": "Sonata de la lluvia", "url": URL, "inLanguage": "es",
+             "name": "Sonata de la lluvia", "url": url, "inLanguage": "es",
              "author": {"@id": f"{DOMINIO}/#antonio"},
-             "genre": "Poesía. Décima",
+             "genre": V["genero"],
              "datePublished": "2026",
-             "award": "Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima, 2026",
-             "description": D,
+             "award": PREMIO_COMPLETO,
+             "description": V["seo_desc"],
              "image": DOMINIO + FOTO,
              "hasPart": [{"@type": "CreativeWork", "genre": "Décima", "name": m["titulo"].capitalize(),
                           "position": i} for i, m in enumerate(movs, 1)]}
 
-    pagina = f"""<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{T}</title>
-<meta name="description" content="{D}">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="canonical" href="{URL}">
-<meta property="og:type" content="article">
-<meta property="og:url" content="{URL}">
-<meta property="og:title" content="{T}">
-<meta property="og:description" content="{D}">
-<meta property="og:image" content="{DOMINIO}{FOTO}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{T}">
-<meta name="twitter:description" content="{D}">
-<meta name="twitter:image" content="{DOMINIO}{FOTO}">
-<meta property="og:locale" content="es_ES">
-<meta name="theme-color" content="#0a0c1f">
-<link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
-<link rel="stylesheet" href="/styles.css{CSS}">
-<script type="application/ld+json">
-{json.dumps(datos, ensure_ascii=False, indent=2)}
-</script>
-<script type="application/ld+json">
-{{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {{ "@type": "ListItem", "position": 1, "name": "Ala del Mar", "item": "{DOMINIO}/" }},
-    {{ "@type": "ListItem", "position": 2, "name": "Tinta-ciones", "item": "{DOMINIO}/tinta-ciones/" }},
-    {{ "@type": "ListItem", "position": 3, "name": "De-Cimitas", "item": "{DOMINIO}/tinta-ciones/de-cimitas/" }},
-    {{ "@type": "ListItem", "position": 4, "name": "Sonata de la lluvia", "item": "{URL}" }}
-  ]
-}}
-</script>
-</head>
-<body>
+    premio = V["premio"].replace("{premio}", f'<a href="{V["premios_url"]}">{esc(PREMIO)}</a>')
+    aviso = f'  <p class="nota" style="margin-bottom:2rem;">{esc(V["aviso"])}</p>\n\n' if V.get("aviso") else ""
+    migas = [("Ala del Mar", DOMINIO + L["portada"])]
+    migas += [(n, DOMINIO + u) for n, u in zip(V["migas"][:2], V["migas_urls"])]
+    migas.append((V["migas"][2], url))
 
-<a class="salto" href="#main">Saltar al contenido</a>
-
-<nav class="nav">
-  <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="menu-principal">
-{navegacion.menu_html("/tinta-ciones/")}
-  </ul>
-</nav>
-
+    return (pagina.cabeza(lang, V["seo_titulo"], V["seo_desc"], url, imagen=DOMINIO + FOTO,
+                          rutas={l: c["ruta"] for l, c in capas.items()})
+            + '<script type="application/ld+json">\n' + json.dumps(datos, ensure_ascii=False, indent=2) + '\n</script>\n'
+            + pagina.migas(migas)
+            + pagina.menu(lang, V["migas_urls"][0])
+            + f"""
 <header class="page-header">
-  <h1>Sonata de la lluvia</h1>
-  <p>Tres movimientos en décimas.</p>
+  <h1{la}>Sonata de la lluvia</h1>
+  <p>{esc(V["frase"])}</p>
 </header>
 
 <main id="main">
 <div class="section cuento">
 
   <figure class="sonata-foto reveal reveal-right">
-    <img src="{FOTO}" width="{fw}" height="{fh}" alt="Atardecer sobre el muro del malecón, con el sol abriéndose paso entre las nubes" loading="lazy">
+    <img src="{FOTO}" width="{fw}" height="{fh}" alt="{esc_attr(V["foto_alt"])}" loading="lazy">
   </figure>
 
-  <p class="sonata-premio reveal reveal-left">Con esta obra gané el <a href="/laureles/">Premio Colateral Yasmina Calcines</a>, del XXVI Concurso Nacional Ala Décima, en 2026.</p>
+  <p class="sonata-premio reveal reveal-left">{premio}</p>
 
-{cuerpo}
+{aviso}{cuerpo}
 
   <p class="vyv-firma" style="margin-top:2.5rem;">ALS</p>
-  <p style="margin-top:2.5rem;"><a href="/tinta-ciones/de-cimitas/" class="btn">Volver a De-Cimitas</a></p>
+  <p style="margin-top:2.5rem;"><a href="{V["volver_url"]}" class="btn">{esc(V["volver"])}</a></p>
 
 </div>
 </main>
-
-<footer class="footer">
-  <nav class="footer-nav" aria-label="Secciones">
-{navegacion.pie_html(None)}
-  </nav>
-  <div class="footer-socials">
-    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
-  </div>
-  <p class="footer-lema">bene scriptus</p>
-  <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
-  <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
-</footer>
-
-<script src="/app.js?v=10" defer></script>
-</body>
-</html>
 """
-    destino = os.path.join(RAIZ, "tinta-ciones", "sonata-de-la-lluvia", "index.html")
-    os.makedirs(os.path.dirname(destino), exist_ok=True)
-    with open(destino, "w", encoding="utf-8", newline="") as f:
-        f.write(pagina)
-    versos = sum(len([l for l in m["versos"] if l.strip()]) for m in movs)
-    print(f"escrito: tinta-ciones/sonata-de-la-lluvia/ · 3 movimientos, {versos} versos")
+            + pagina.pie(lang, None))
+
+
+def main():
+    texto = open(FUENTE, encoding="utf-8").read()
+    movs = movimientos(texto)
+    assert len(movs) == 3, f"esperaba 3 movimientos, encontre {len(movs)}"
+    with Image.open(os.path.join(RAIZ, FOTO.lstrip("/"))) as im:
+        fw, fh = im.size
+    capas = {"es": ES, **pagina.lenguas_con_capa("sonata")}
+    for lang, V in capas.items():
+        destino = pagina.escribe(V["ruta"], pagina_sonata(lang, V, movs, fw, fh, capas))
+        versos = sum(len([l for l in m["versos"] if l.strip()]) for m in movs)
+        print(f"escrito: {destino} · 3 movimientos, {versos} versos")
 
 
 if __name__ == "__main__":

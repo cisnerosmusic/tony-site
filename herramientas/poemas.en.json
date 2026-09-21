@@ -1,0 +1,13 @@
+{
+  "_nota": "Capa inglesa de Poemas sueltos. Solo el aparato: los poemas, sus titulos, series y epigrafes se quedan en español y salen marcados con lang=es.",
+  "ruta": "/en/poetry/poems/",
+  "h1": "Poems",
+  "frase": "Wide canvases on which to draw my visions.",
+  "aviso": "Poems are published in their original Spanish, as all literary texts on this site are.",
+  "glosas_titulo": "Glosas",
+  "glosas_texto": "Glosas on other poets are a common practice among décima writers. Here I chose two towering peaks, José Martí and José Lezama Lima, to hold a kind of dialogue with their verses. This rhymed room holds only a small sample of a much larger body of work that is still waiting for its pages. In the meantime, here, as a gift, are some of the Glosas Martianas and the Glozama Rimas.",
+  "glosas_nota": "A glosa takes a stanza by another poet and closes each of its own décimas with one of that stanza's lines, in order.",
+  "migas": ["Poetry", "Poems"],
+  "seo_titulo": "Poems by Antonio López Sánchez, in Spanish",
+  "seo_desc": "{} poems by the Cuban poet Antonio López Sánchez in their original Spanish, among them eight glosas on lines by José Martí and José Lezama Lima."
+}

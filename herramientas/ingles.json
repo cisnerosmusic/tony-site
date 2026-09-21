@@ -167,8 +167,8 @@
             "Everything written <em>about</em> the poems is in English. The poems themselves are in the language they were written in."
           ],
           "enlaces": [
-            {"texto": "Read the poems", "url": "/tinta-ciones/poemas-sueltos/", "lang": "es", "relleno": true},
-            {"texto": "Décimas with photographs", "url": "/tinta-ciones/de-cimitas/", "lang": "es"},
+            {"texto": "Read the poems", "url": "/en/poetry/poems/", "relleno": true},
+            {"texto": "Décimas with photographs", "url": "/en/poetry/decimitas/"},
             {"texto": "In the author's own voice", "url": "/tinta-ciones/en-mi-voz/", "lang": "es"}
           ]
         },
@@ -190,7 +190,7 @@
               "anio": "2026",
               "editorial": "Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima",
               "genero": "Poetry, décima",
-              "url": "/tinta-ciones/sonata-de-la-lluvia/",
+              "url": "/en/poetry/sonata-de-la-lluvia/",
               "texto": "Not a single poem but a sonata in three movements, one hundred and fifty lines of décima, each movement with its own tempo marking and its own epigraph borrowed from a Cuban songwriter. It can be read here in full."
             },
             {
