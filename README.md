@@ -53,7 +53,7 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 |---|---|---|
 | `gen-libro.py` | las 14 fichas de libro en cada idioma, y los catálogos que no son el español | `libros/<slug>.json`, `libros/<idioma>/<slug>.json`, `idiomas.json` |
 | `gen-cuento.py` | Contarte y la página de cada cuento | `cuentos.json` |
-| `gen-ineditos.py` | Inéditos y la página de cada novela inédita | `ineditos.json` |
+| `gen-ineditos.py` | Inéditos y la página de cada novela inédita, en cada idioma | `ineditos.json`, `ineditos.<idioma>.json` |
 | `gen-poemas.py` | Poemas sueltos | `poemas.json` |
 | `gen-decimitas.py` | De-Cimitas | `decimitas.json` |
 | `gen-sonata.py` | Sonata de la lluvia | su `.txt` |

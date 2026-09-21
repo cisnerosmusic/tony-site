@@ -14,7 +14,7 @@ Hay salas que solo existen en español. En todas, la literatura se queda en espa
 2. **Tinta-ciones por dentro**: Poemas sueltos, De-Cimitas, Sonata de la lluvia y En mi voz. Hoy `/en/poetry/` explica la poesía y enlaza a las salas españolas.
 3. **Laureles**: hoy los premios en inglés viven dentro de `/en/author/`. Decidir si merecen página propia, con las dos obras del Farraluque.
 4. **Plano abierto**: las grabaciones, con su ficha en inglés.
-5. **Entre lectores, Directorio e Inéditos.**
+5. **Entre lectores y Directorio.**
 
 Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AGENTS.md`.
 

@@ -1,5 +1,6 @@
-# Genera la sala de Ineditos: /ineditos/ y una pagina por novela,
-# /ineditos/<slug>/, desde herramientas/ineditos.json.
+# Genera la sala de Ineditos en cada idioma: /ineditos/ y una pagina por
+# novela, /ineditos/<slug>/, desde herramientas/ineditos.json; y su version
+# inglesa, /en/unpublished/, desde la capa herramientas/ineditos.en.json.
 #
 # Una novela inedita se enseña como un libro del catalogo, con la misma
 # maqueta y los mismos rotulos: sinopsis, Con voz y voto, fragmentos y ficha.
@@ -8,6 +9,11 @@
 # De cada obra entra solo lo que el autor eligio. Nunca la novela entera: la
 # haria perder su condicion de inedita ante concursos y editoriales, y esa es
 # una regla del repositorio, escrita en AGENTS.md.
+#
+# Idiomas. Como en las paginas de libro, la capa trae solo el aparato:
+# presentacion, sinopsis, Con voz y voto, lineas de tarjeta y metadatos. Los
+# titulos y los fragmentos no se traducen nunca, y en la pagina inglesa salen
+# marcados con lang="es".
 #
 # Uso: python herramientas/gen-ineditos.py
 
@@ -19,21 +25,27 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 CSS = "?v=33"
-URL_SALA = DOMINIO + "/ineditos/"
-
-# El mismo destino de derechos que las paginas de libro, leido del mismo
-# sitio: si cambia, cambia en todas a la vez.
-ES = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))["es"]
 DERECHOS_EMAIL = "derechos@antoniolopezsanchez.art"
-
-# Mismo aviso y mismo lugar que las obras eroticas del Farraluque.
-AVISO_ADULTOS = "Novela con pasajes de sexo explícito, escrita para lectores adultos."
+IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
 
 FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">')
 
 TEXTOS = os.path.join(RAIZ, "herramientas", "textos")
+
+# Lo que en español estaba escrito aqui. En los demas idiomas lo trae la capa.
+ES = {
+    "ruta": "/ineditos/",
+    "h1": "Inéditos",
+    "entrar": "Entrar a la novela",
+    "volver": "Volver a Inéditos",
+    "migas": "Inéditos",
+    "bloques": {"sinopsis": "Sinopsis", "vyv": "Con voz y voto", "fragmentos": "Fragmentos", "ficha": "Ficha"},
+    "ficha": {"estado": "estado", "estado_valor": "Inédita", "genero": "género", "derechos": "derechos"},
+    # Mismo aviso y mismo lugar que las obras eroticas del Farraluque.
+    "aviso_adultos": "Novela con pasajes de sexo explícito, escrita para lectores adultos.",
+}
 
 
 def esc(t):
@@ -90,10 +102,23 @@ def migas(items):
                                        for i, (n, u) in enumerate(items, 1)]})
 
 
-def cabeza(titulo, desc, url, tipo_og):
+def alternos(rutas):
+    """hreflang reciproco entre las versiones de una pagina, y x-default al
+    español, como en las paginas de libro."""
+    if len(rutas) < 2:
+        return ""
+    t = "".join(f'<link rel="alternate" hreflang="{l}" href="{DOMINIO}{r}">\n' for l, r in rutas.items())
+    return t + f'<link rel="alternate" hreflang="x-default" href="{DOMINIO}{rutas["es"]}">\n'
+
+
+def cabeza(lang, titulo, desc, url, tipo_og, rutas):
+    L = IDIOMAS[lang]
     img = f"{DOMINIO}/img/retrato.webp"
+    locale = f'<meta property="og:locale" content="{L["locale"]}">'
+    if lang != "es":
+        locale += '\n<meta property="og:locale:alternate" content="es_ES">'
     return f"""<!DOCTYPE html>
-<html lang="es">
+<html lang="{L["lang"]}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,7 +126,7 @@ def cabeza(titulo, desc, url, tipo_og):
 <meta name="description" content="{esc_attr(desc)}">
 {FAVICON}
 <link rel="canonical" href="{url}">
-<meta property="og:type" content="{tipo_og}">
+{alternos(rutas)}<meta property="og:type" content="{tipo_og}">
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{esc_attr(titulo)}">
 <meta property="og:description" content="{esc_attr(desc)}">
@@ -110,7 +135,7 @@ def cabeza(titulo, desc, url, tipo_og):
 <meta name="twitter:title" content="{esc_attr(titulo)}">
 <meta name="twitter:description" content="{esc_attr(desc)}">
 <meta name="twitter:image" content="{img}">
-<meta property="og:locale" content="es_ES">
+{locale}
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
@@ -119,36 +144,41 @@ def cabeza(titulo, desc, url, tipo_og):
 """
 
 
-def menu():
+def menu(lang):
+    L = IDIOMAS[lang]
+    # En ingles Ineditos no tiene entrada propia en el menu: son libros, y se
+    # llega desde el catalogo, que es la entrada que se enciende.
+    activa = "/ineditos/" if lang == "es" else L["ruta_libros"]
     return f"""</head>
 <body>
 
-<a class="salto" href="#main">Saltar al contenido</a>
+<a class="salto" href="#main">{L["saltar"]}</a>
 
 <nav class="nav">
-  <a href="/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+  <a href="{L["portada"]}" class="nav-logo">Ala del Mar</a>
+  <button class="nav-hamburger" type="button" aria-label="{L["abrir_menu"]}" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="menu-principal">
-{navegacion.menu_html("/ineditos/")}
+{navegacion.menu_de(lang, activa)}
   </ul>
 </nav>
 """
 
 
-def pie(activa):
+def pie(lang, activa):
+    L = IDIOMAS[lang]
     return f"""
 <footer class="footer">
-  <nav class="footer-nav" aria-label="Secciones">
-{navegacion.pie_html(activa)}
+  <nav class="footer-nav" aria-label="{L["secciones_aria"]}">
+{navegacion.pie_de(lang, activa)}
   </nav>
   <div class="footer-socials">
-    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Facebook de Antonio López Sánchez"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="{L["facebook_aria"]}"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
   </div>
   <p class="footer-lema">bene scriptus</p>
   <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
-  <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
+  <p class="footer-copy">{L["desarrollado"]} <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
 <script src="/app.js?v=10" defer></script>
@@ -163,89 +193,113 @@ def bloque(id_, titulo, cuerpo, lado):
             f'    <div class="section-divider"></div>\n{cuerpo}\n  </section>\n\n')
 
 
-def pagina_novela(n):
-    url = f"{URL_SALA}{n['slug']}/"
-    frags = "\n".join(f'<h3 class="fragmento-titulo">{esc(f["titulo"])}</h3>\n'
-                      f'<div class="fragmento">{cuerpo_fragmento(leer(f["archivo"]), n.get("lugar", False))}</div>'
+def rutas_de(capas, slug=None):
+    return {l: V["ruta"] + (f"{slug}/" if slug else "") for l, V in capas.items()}
+
+
+def pagina_novela(lang, V, n, capas):
+    """n es la novela en español; su capa, si no es español, en V["novelas"]."""
+    L = IDIOMAS[lang]
+    es = lang == "es"
+    t = n if es else {**n, **V["novelas"][n["slug"]]}
+    la = "" if es else ' lang="es"'
+    url = f"{DOMINIO}{V['ruta']}{n['slug']}/"
+    B = V["bloques"]
+
+    frags = "\n".join(f'<h3 class="fragmento-titulo"{la}>{esc(f["titulo"])}</h3>\n'
+                      f'<div class="fragmento"{la}>{cuerpo_fragmento(leer(f["archivo"]), n.get("lugar", False))}</div>'
                       for f in n["fragmentos"])
-    derechos = (f'{esc(ES["derechos"])}. <a href="{ES["representacion"]}">{esc(ES["consulta_derechos"])}</a> '
+    if L["aviso_fragmentos"]:
+        frags = f'<p class="nota">{esc(L["aviso_fragmentos"])}</p>\n' + frags
+    F = V["ficha"]
+    derechos = (f'{esc(L["derechos"])}. <a href="{L["representacion"]}">{esc(L["consulta_derechos"])}</a> '
                 f'· <a href="mailto:{DERECHOS_EMAIL}">{DERECHOS_EMAIL}</a>')
     ficha = ('    <dl class="ficha">\n'
-             '<div><dt>estado</dt><dd>Inédita</dd></div>\n'
-             f'<div><dt>género</dt><dd>{esc(n["genero"].split(" · ")[0])}</dd></div>\n'
-             f'<div><dt>derechos</dt><dd>{derechos}</dd></div>\n'
+             f'<div><dt>{esc(F["estado"])}</dt><dd>{esc(F["estado_valor"])}</dd></div>\n'
+             f'<div><dt>{esc(F["genero"])}</dt><dd>{esc(t["genero"].split(" · ")[0])}</dd></div>\n'
+             f'<div><dt>{esc(F["derechos"])}</dt><dd>{derechos}</dd></div>\n'
              '    </dl>')
 
-    piezas = [("sinopsis", "Sinopsis", prosa_a_html(leer(n["sinopsis"]))),
-              ("vyv", "Con voz y voto", prosa_a_html(leer(n["vyv"])) + '\n    <p class="vyv-firma">ALS</p>'),
-              ("fragmentos", "Fragmentos", frags),
-              ("ficha", "Ficha", ficha)]
-    cuerpo = "".join(bloque(i, t, c, "left" if k % 2 == 0 else "right")
-                     for k, (i, t, c) in enumerate(piezas))
-    aviso = (f'  <p class="sonata-premio reveal reveal-left">{esc(AVISO_ADULTOS)}</p>\n\n'
+    piezas = [("sinopsis", B["sinopsis"], prosa_a_html(leer(t["sinopsis"]))),
+              ("vyv", B["vyv"], prosa_a_html(leer(t["vyv"])) + '\n    <p class="vyv-firma">ALS</p>'),
+              ("fragmentos", B["fragmentos"], frags),
+              ("ficha", B["ficha"], ficha)]
+    cuerpo = "".join(bloque(i, ti, c, "left" if k % 2 == 0 else "right")
+                     for k, (i, ti, c) in enumerate(piezas))
+    aviso = (f'  <p class="sonata-premio reveal reveal-left">{esc(V["aviso_adultos"])}</p>\n\n'
              if n.get("adultos") else "")
 
     datos = {"@context": "https://schema.org", "@type": "Book",
              "name": n["titulo"], "url": url, "inLanguage": "es",
-             "genre": n["genero"].split(" · ")[0],
+             "genre": t["genero"].split(" · ")[0],
              "author": {"@id": f"{DOMINIO}/#antonio"},
-             "description": n["seo_desc"]}
+             "description": t["seo_desc"]}
 
-    return (cabeza(n["seo_titulo"], n["seo_desc"], url, "book")
+    return (cabeza(lang, t["seo_titulo"], t["seo_desc"], url, "book", rutas_de(capas, n["slug"]))
             + jsonld(datos)
-            + migas([("Ala del Mar", DOMINIO + "/"), ("Inéditos", URL_SALA), (n["titulo"], url)])
-            + menu()
+            + migas([("Ala del Mar", DOMINIO + L["portada"]), (V["migas"], DOMINIO + V["ruta"]), (n["titulo"], url)])
+            + menu(lang)
             + f"""
 <header class="page-header">
-  <h1>{esc(n["titulo"])}</h1>
+  <h1{la}>{esc(n["titulo"])}</h1>
 </header>
 
 <main id="main">
 <div class="section libro-pagina">
 
-{aviso}{cuerpo}  <p style="margin-top:2rem;"><a href="/ineditos/" class="btn">Volver a Inéditos</a></p>
+{aviso}{cuerpo}  <p style="margin-top:2rem;"><a href="{V['ruta']}" class="btn">{esc(V["volver"])}</a></p>
 
 </div>
 </main>
 """
-            + pie(None))
+            + pie(lang, None))
 
 
-def pagina_sala(cfg):
+def pagina_sala(lang, V, cfg, capas):
+    L = IDIOMAS[lang]
+    es = lang == "es"
+    la = "" if es else ' lang="es"'
+    url_sala = DOMINIO + V["ruta"]
+
     def tarjeta(n):
+        t = n if es else {**n, **V["novelas"][n["slug"]]}
+        enlace = f'{V["ruta"]}{n["slug"]}/'
+        # Fuera del español el titulo se queda en español, con su sentido
+        # entre parentesis, como en el catalogo.
+        sentido = "" if es else f' <span class="libro-meta">({esc(t["significado"])})</span>'
         return (f'  <article class="cuento-ficha reveal reveal-right">\n'
-                f'    <h3 class="libro-titulo"><a href="/ineditos/{n["slug"]}/">{esc(n["titulo"])}</a></h3>\n'
-                f'    <p class="libro-meta">{esc(n["genero"])}</p>\n'
-                f'    <p class="libro-sinopsis">{esc(n["linea"])}</p>\n'
-                f'    <p style="margin-top:1.2rem;"><a href="/ineditos/{n["slug"]}/" class="btn">Entrar a la novela</a></p>\n'
+                f'    <h3 class="libro-titulo"><a href="{enlace}"{la}>{esc(n["titulo"])}</a>{sentido}</h3>\n'
+                f'    <p class="libro-meta">{esc(t["genero"])}</p>\n'
+                f'    <p class="libro-sinopsis">{esc(t["linea"])}</p>\n'
+                f'    <p style="margin-top:1.2rem;"><a href="{enlace}" class="btn">{esc(V["entrar"])}</a></p>\n'
                 f'  </article>')
 
-    parrafos = [l.strip() for l in leer(cfg["presentacion"]).split("\n") if l.strip()]
+    parrafos = [l.strip() for l in leer(V["presentacion"]).split("\n") if l.strip()]
     presentacion = "\n".join(
         f'    <p class="section-text" style="margin-bottom:{"3rem" if i == len(parrafos) - 1 else "1.25rem"};">{esc(p)}</p>'
         for i, p in enumerate(parrafos))
 
     lista = {"@context": "https://schema.org", "@type": "CollectionPage",
-             "name": cfg["seo_titulo"], "description": cfg["seo_desc"], "url": URL_SALA,
-             "inLanguage": "es", "isPartOf": {"@id": f"{DOMINIO}/#sitio"},
+             "name": V["seo_titulo"], "description": V["seo_desc"], "url": url_sala,
+             "inLanguage": L["lang"], "isPartOf": {"@id": f"{DOMINIO}/#sitio"},
              "mainEntity": {"@type": "ItemList", "itemListElement": [
-                 {"@type": "ListItem", "position": i, "url": f"{URL_SALA}{n['slug']}/", "name": n["titulo"]}
+                 {"@type": "ListItem", "position": i, "url": f"{url_sala}{n['slug']}/", "name": n["titulo"]}
                  for i, n in enumerate(cfg["novelas"], 1)]}}
 
-    return (cabeza(cfg["seo_titulo"], cfg["seo_desc"], URL_SALA, "website")
+    return (cabeza(lang, V["seo_titulo"], V["seo_desc"], url_sala, "website", rutas_de(capas))
             + jsonld(lista)
-            + migas([("Ala del Mar", DOMINIO + "/"), ("Inéditos", URL_SALA)])
-            + menu()
+            + migas([("Ala del Mar", DOMINIO + L["portada"]), (V["migas"], url_sala)])
+            + menu(lang)
             + f"""
 <header class="page-header">
-  <h1>Inéditos</h1>
-  <p>{esc(cfg["frase"])}</p>
+  <h1>{esc(V["h1"])}</h1>
+  <p>{esc(V["frase"])}</p>
 </header>
 
 <main id="main">
 <div class="section">
   <div class="reveal reveal-right">
-    <h2 class="section-title">{esc(cfg["sala_titulo"])}</h2>
+    <h2 class="section-title">{esc(V["sala_titulo"])}</h2>
     <div class="section-divider"></div>
 {presentacion}
   </div>
@@ -257,20 +311,33 @@ def pagina_sala(cfg):
 </div>
 </main>
 """
-            + pie("/ineditos/"))
+            + pie(lang, "/ineditos/" if es else None))
 
 
 def main():
     cfg = json.load(open(os.path.join(RAIZ, "herramientas", "ineditos.json"), encoding="utf-8"))
-    for n in cfg["novelas"]:
-        destino = os.path.join(RAIZ, "ineditos", n["slug"], "index.html")
-        os.makedirs(os.path.dirname(destino), exist_ok=True)
-        with open(destino, "w", encoding="utf-8", newline="") as f:
-            f.write(pagina_novela(n))
-        print("escrito:", os.path.relpath(destino, RAIZ))
-    with open(os.path.join(RAIZ, "ineditos", "index.html"), "w", encoding="utf-8", newline="") as f:
-        f.write(pagina_sala(cfg))
-    print(f"escrito: ineditos/index.html con {len(cfg['novelas'])} novela(s)")
+    capas = {"es": {**ES, **{k: cfg[k] for k in ("frase", "sala_titulo", "presentacion", "seo_titulo", "seo_desc")}}}
+    for lang in IDIOMAS:
+        if lang.startswith("_") or lang == "es":
+            continue
+        ruta = os.path.join(RAIZ, "herramientas", f"ineditos.{lang}.json")
+        if os.path.exists(ruta):
+            V = json.load(open(ruta, encoding="utf-8"))
+            faltan = [n["slug"] for n in cfg["novelas"] if n["slug"] not in V["novelas"]]
+            if faltan:
+                sys.exit(f"ineditos.{lang}.json no trae: {', '.join(faltan)}")
+            capas[lang] = V
+
+    for lang, V in capas.items():
+        base = os.path.join(RAIZ, V["ruta"].strip("/").replace("/", os.sep))
+        for n in cfg["novelas"]:
+            destino = os.path.join(base, n["slug"], "index.html")
+            os.makedirs(os.path.dirname(destino), exist_ok=True)
+            with open(destino, "w", encoding="utf-8", newline="") as f:
+                f.write(pagina_novela(lang, V, n, capas))
+        with open(os.path.join(base, "index.html"), "w", encoding="utf-8", newline="") as f:
+            f.write(pagina_sala(lang, V, cfg, capas))
+        print(f"escrito: {V['ruta']} con {len(cfg['novelas'])} novela(s)")
 
 
 if __name__ == "__main__":

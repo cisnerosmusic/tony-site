@@ -1,0 +1,54 @@
+{
+  "_nota": "Capa inglesa de la sala de Ineditos. Trae solo lo traducible: el aparato (presentacion, sinopsis, Con voz y voto, lineas de tarjeta y metadatos) y los textos de interfaz. Los titulos de las novelas y de los fragmentos, y los fragmentos mismos, se quedan en español y salen marcados con lang=es.",
+  "ruta": "/en/unpublished/",
+  "h1": "Unpublished",
+  "frase": "The pages that wait.",
+  "sala_titulo": "The Drawer Station",
+  "presentacion": "ineditos/presentacion.en.txt",
+  "seo_titulo": "Unpublished novels by Antonio López Sánchez",
+  "seo_desc": "Four unpublished novels by the Cuban writer Antonio López Sánchez: synopses, excerpts in Spanish and the author's notes. Rights available outside Cuba.",
+  "entrar": "Read about the novel",
+  "volver": "Back to Unpublished",
+  "migas": "Unpublished",
+  "bloques": {"sinopsis": "Synopsis", "vyv": "In my own words", "fragmentos": "Excerpts", "ficha": "Details"},
+  "ficha": {"estado": "status", "estado_valor": "Unpublished", "genero": "genre", "derechos": "rights"},
+  "aviso_adultos": "A novel with sexually explicit passages, written for adult readers.",
+  "novelas": {
+    "preguntas": {
+      "significado": "Questions. A Day in the Life of Juan Pérez",
+      "genero": "Novel",
+      "linea": "A single day can fit in a novel. Even if, at times, the questions overflow.",
+      "sinopsis": "ineditos/preguntas/sinopsis.en.txt",
+      "vyv": "ineditos/preguntas/voz-y-voto.en.txt",
+      "seo_titulo": "Preguntas, an unpublished novel | Antonio López Sánchez",
+      "seo_desc": "One day in the life of Juan Pérez, a journalist in the capital of an Antillean island. Synopsis, prelude and first chapter of an unpublished Cuban novel."
+    },
+    "mis-diarios-de-cama": {
+      "significado": "My Bedside Diaries",
+      "genero": "Novel · for adult readers",
+      "linea": "A woman's diary, with her duties, her loves, her sorrows. A novel told in the first person by its own protagonist.",
+      "sinopsis": "ineditos/mis-diarios-de-cama/sinopsis.en.txt",
+      "vyv": "ineditos/mis-diarios-de-cama/voz-y-voto.en.txt",
+      "seo_titulo": "Mis diarios de cama, an unpublished novel | Antonio López Sánchez",
+      "seo_desc": "Ana Paula records the hardest years of her life in her bedside diaries. Synopsis and two entries of an unpublished Cuban novel, for adult readers."
+    },
+    "sonidos": {
+      "significado": "Sounds",
+      "genero": "Horror novel",
+      "linea": "The search for the perfect sound breeds a murderer in the nineteenth century, and unleashes a story of horrors and deaths that will echo into the present, and perhaps the future.",
+      "sinopsis": "ineditos/sonidos/sinopsis.en.txt",
+      "vyv": "ineditos/sonidos/voz-y-voto.en.txt",
+      "seo_titulo": "Sonidos, an unpublished horror novel | Antonio López Sánchez",
+      "seo_desc": "A nineteenth-century English nobleman seeks the perfect sound in death and pain. Synopsis and three excerpts of an unpublished Cuban horror novel."
+    },
+    "palabras": {
+      "significado": "Words",
+      "genero": "Fantasy novel",
+      "linea": "A pursuit across several dimensions leads to the Library. Past and present will cross their lines. Ambition will crave power. Minutes may be centuries, but love will remain untouched.",
+      "sinopsis": "ineditos/palabras/sinopsis.en.txt",
+      "vyv": "ineditos/palabras/voz-y-voto.en.txt",
+      "seo_titulo": "Palabras, an unpublished fantasy novel | Antonio López Sánchez",
+      "seo_desc": "Two civilizations pursue Master Astrom to Earth. Excerpts of an unpublished fantasy novel, a prequel to El otro lado del espejo, by Antonio López Sánchez."
+    }
+  }
+}

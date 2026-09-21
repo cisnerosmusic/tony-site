@@ -57,22 +57,37 @@
   <url>
     <loc>https://antoniolopezsanchez.art/ineditos/</loc>
     <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/ineditos/mis-diarios-de-cama/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/mis-diarios-de-cama/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/mis-diarios-de-cama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/mis-diarios-de-cama/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/ineditos/palabras/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/palabras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/palabras/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/palabras/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/ineditos/preguntas/</loc>
     <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/preguntas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/preguntas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/preguntas/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/ineditos/sonidos/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/sonidos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/sonidos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/sonidos/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/laureles/</loc>
@@ -375,5 +390,40 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/trova/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/trova/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/trova/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/unpublished/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/unpublished/mis-diarios-de-cama/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/mis-diarios-de-cama/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/mis-diarios-de-cama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/mis-diarios-de-cama/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/unpublished/palabras/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/palabras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/palabras/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/palabras/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/unpublished/preguntas/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/preguntas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/preguntas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/preguntas/"/>
+  </url>
+  <url>
+    <loc>https://antoniolopezsanchez.art/en/unpublished/sonidos/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://antoniolopezsanchez.art/ineditos/sonidos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/unpublished/sonidos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antoniolopezsanchez.art/ineditos/sonidos/"/>
   </url>
 </urlset>

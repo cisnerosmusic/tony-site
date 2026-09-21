@@ -540,6 +540,23 @@ def catalogos():
                 cuerpo = '<div class="section-alt">\n' + cuerpo + '\n</div>'
             secciones.append(cuerpo)
 
+        # Las novelas ineditas no son parte del catalogo, que es de libros
+        # publicados, pero es aqui donde las busca quien viene a por derechos:
+        # un bloque corto que lleva a su sala, justo antes del de derechos.
+        ineditos = ""
+        if C.get("ineditos"):
+            k = C["ineditos"]
+            ineditos = f"""
+
+<div class="section">
+  <div class="reveal reveal-right">
+    <h2 class="section-title">{esc(k["titulo"])}</h2>
+    <div class="section-divider"></div>
+    <p class="section-text" style="margin-bottom:2rem;">{esc(k["texto"])}</p>
+    <a href="{k["url"]}" class="btn">{esc(k["boton"])}</a>
+  </div>
+</div>"""
+
         cierre = ""
         if C.get("cierre"):
             k = C["cierre"]
@@ -638,7 +655,7 @@ def catalogos():
   </div>
 </div>
 
-{chr(10).join(chr(10) + s for s in secciones).lstrip(chr(10))}{cierre}
+{chr(10).join(chr(10) + s for s in secciones).lstrip(chr(10))}{ineditos}{cierre}
 
 </main>
 

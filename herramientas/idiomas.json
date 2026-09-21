@@ -84,8 +84,14 @@
       "seo_desc": "Fourteen books by the Cuban writer Antonio López Sánchez: the Nueva Trova, poetry, heroic fantasy, horror and children's books. World rights outside Cuba.",
       "titulo": "Books",
       "subtitulo": "Fourteen published books, in the order that makes sense from outside Cuba.",
-      "intro": "Titles are kept in their original Spanish, with their meaning in brackets. Every page carries the back cover, the author's own note on the book, excerpts in Spanish, and full details for publishers.",
+      "intro": "Titles are kept in their original Spanish, with their meaning in brackets. Every page carries the synopsis, the author's own note on the book, excerpts in Spanish, and full details for publishers.",
       "ver": "See the book",
+      "ineditos": {
+        "titulo": "Unpublished novels",
+        "texto": "Four novels that have not yet found a publisher: a single day in the life of a journalist, a woman's bedside diaries, a Gothic horror story and a fantasy prequel to El otro lado del espejo. Each has its synopsis, excerpts in Spanish and the author's own note.",
+        "boton": "See the unpublished novels",
+        "url": "/en/unpublished/"
+      },
       "cierre": {
         "titulo": "Rights",
         "texto": "World rights for editions and translations are available outside Cuba, where the author's publishers keep their exclusivity. Full manuscripts and synopses are available on request.",
