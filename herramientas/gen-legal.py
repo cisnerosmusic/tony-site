@@ -115,7 +115,7 @@ def pagina(clave, cfg, todos):
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=5">
+<link rel="stylesheet" href="/fonts.css?v=6">
 <link rel="stylesheet" href="/styles.css{CSS}">
 <script type="application/ld+json">
 {json.dumps(datos, ensure_ascii=False, indent=2)}

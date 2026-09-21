@@ -9,6 +9,7 @@
 # Sale con codigo 1 si algo falla, para poder colgarlo de un workflow.
 
 import json, os, re, sys, glob, io, subprocess
+import html as html_lib
 
 # La consola de Windows va en cp1252 y revienta con cualquier simbolo:
 # el comprobador no puede fallar por como imprime.
@@ -260,7 +261,33 @@ def medidas_reales():
                       f"{rel(p)}: {s.group(1)} declara {w.group(1)}x{h.group(1)} y mide {rw}x{rh}")
 
 
-# ── 10. El sitemap esta al dia ───────────────────────────────────────────
+# ── 10. Las fuentes recortadas tienen todo lo que el sitio escribe ───────
+# Las servidas se recortan con herramientas/subset-fuentes.py, que quita 52 KB
+# de glifos y funciones OpenType que nadie usa. El riesgo de recortar es
+# publicar manana un texto con un caracter que no quedo dentro: saldria un
+# cuadrito, o peor, la letra de otra fuente. Aqui se comprueba al reves, que
+# es lo barato: se junta cada caracter visible del sitio y se busca en el
+# cmap de cada archivo servido.
+def fuentes_completas():
+    from fontTools.ttLib import TTFont
+    usados = set()
+    for p in paginas():
+        t = leer(p)
+        t = re.sub(r"<script.*?</script>|<style.*?</style>", " ", t, flags=re.S)
+        t = re.sub(r"<[^>]+>", " ", t)
+        usados |= {c for c in html_lib.unescape(t) if ord(c) >= 32}
+    for f in sorted(glob.glob(os.path.join(RAIZ, "fonts", "*.woff2"))):
+        with TTFont(f) as tf:
+            tiene = set()
+            for tabla in tf["cmap"].tables:
+                tiene |= set(tabla.cmap)
+        faltan = sorted(c for c in usados if ord(c) not in tiene)
+        if faltan:
+            falla("fuente sin glifos",
+                  f"{os.path.basename(f)} no tiene: " + " ".join(faltan[:12]))
+
+
+# ── 11. El sitemap esta al dia ───────────────────────────────────────────
 # Se escribia a mano, y la misma revision encontro el lastmod atrasado en 41
 # de 60 URLs. Ahora lo escribe gen-sitemap.py desde la historia de git; aqui
 # solo se comprueba que se haya regenerado despues del ultimo cambio.
@@ -281,6 +308,7 @@ def main():
     higiene()
     navegacion_alineada()
     medidas_reales()
+    fuentes_completas()
     generado_al_dia()
     sitemap_al_dia()
 

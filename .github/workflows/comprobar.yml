@@ -27,6 +27,6 @@ jobs:
 
       # Pillow lee las medidas reales de las imagenes: la usan los generadores
       # y la regla de medidas del comprobador.
-      - run: pip install Pillow
+      - run: pip install Pillow fonttools brotli
 
       - run: python herramientas/comprobar.py
