@@ -148,6 +148,7 @@ No son tareas, así que no viven en `PENDIENTES.md`. Son decisiones tomadas, cas
 
 **Mantenimiento**
 - **La Person del autor vive en la portada.** `/en/author/` la lee de ahí, pero `/periodista/` lleva una copia escrita a mano: si cambia la de la portada, se actualiza también la de `/periodista/`.
+- **El TXT `_github-pages-challenge-cisnerosmusic` del DNS no se borra.** Es la verificación del dominio en la cuenta `cisnerosmusic` de GitHub, hecha el 21 de septiembre de 2026: impide que otra cuenta se quede con el dominio si el sitio se despublica mientras el DNS sigue apuntando a GitHub. El DNS está en get.art. Si el sitio se muda a otro alojamiento, se puede quitar después de mover el DNS, nunca antes.
 - **El meta `msvalidate.01` de la portada no se quita**: Bing revalida la propiedad periódicamente.
 - **`a-texto.py` usa striprtf.** Hubo un parser propio y se comía texto. Para textos del autor no se improvisa un conversor, y el resultado se compara con el original antes de publicar.
 - **`/novelas/` y `/poeta/` son redirecciones blandas**, con `meta refresh`, `noindex` y canonical, porque GitHub Pages no permite un 301 real.
