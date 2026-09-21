@@ -813,6 +813,12 @@ html:not(.en) .solo-en { display: none !important; }
   .libro-item { grid-template-columns: 1fr; }
   .libro-cubierta { max-width: 13rem; }
   .ficha div { grid-template-columns: 1fr; gap: 0.3rem; }
+  /* La foto del mar es de 1920 px y pesa 135 KB, medida de escritorio. Por
+     debajo de 900 px se sirve una de 1100 y 42 KB: es una foto desenfocada
+     de agua, donde esa diferencia no se ve ni en una pantalla de triple
+     densidad. Noventa y tres kilobytes menos en la conexion de quien lee
+     desde Cuba, que es de quien hay que acordarse aqui. */
+  .banda-mar { background-image: url('/img/mar2-1100.webp'); }
   .banda-mar { min-height: 34vh; }
 }
 

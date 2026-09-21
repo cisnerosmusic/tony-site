@@ -18,7 +18,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=32"
+CSS = "?v=33"
 URL_SALA = DOMINIO + "/ineditos/"
 
 # El mismo destino de derechos que las paginas de libro, leido del mismo
