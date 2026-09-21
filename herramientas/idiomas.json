@@ -27,6 +27,8 @@
     "ficha_claves": {},
     "derechos": "Disponibles para ediciones y traducciones fuera de Cuba",
     "derechos_colectiva": "Disponibles para ediciones y traducciones fuera de Cuba, referidos solo a los textos de Antonio López Sánchez que este volumen colectivo incluye",
+    "postal_alt": "{}, de Antonio López Sánchez",
+    "postal_alt_colectiva": "{}, con textos de Antonio López Sánchez",
     "consulta_derechos": "Consultas de derechos",
     "representacion": "https://ernestocisneros.art/es/representacion-literaria.html",
     "aviso_fragmentos": null
@@ -71,6 +73,8 @@
     },
     "derechos": "Available for editions and translations outside Cuba",
     "derechos_colectiva": "Available for editions and translations outside Cuba, covering only the texts by Antonio López Sánchez that this collective volume includes",
+    "postal_alt": "{}, by Antonio López Sánchez",
+    "postal_alt_colectiva": "{}, with texts by Antonio López Sánchez",
     "consulta_derechos": "Rights enquiries",
     "representacion": "https://ernestocisneros.art/literary-representation.html",
     "aviso_fragmentos": "Excerpts are published in their original Spanish, as all literary texts on this site are.",

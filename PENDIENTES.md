@@ -44,7 +44,6 @@ Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AG
 
 - ***Cuentos de muñecas*** es el único libro cuyo primer bloque no se llama Sinopsis sino «Sobre el libro», porque es un volumen colectivo y su nota explica la compilación. Si se prefiere uniformidad total, se cambia.
 
-- **Tarjetas sociales de los libros**: las catorce páginas usan `summary_large_image` con la cubierta, que es vertical, y las redes la recortan por el centro. O se pasan a `summary`, o se genera una tarjeta horizontal por libro.
 - **Dos campos más en la ficha de cada libro**, que pide un editor extranjero: derechos ya vendidos, además de los disponibles, y si existe muestra traducida.
 - **Verificar el dominio en la cuenta de GitHub.** Lo tiene que hacer Ernesto; son unos minutos. En la configuración de Pages de la cuenta `cisnerosmusic` se añade `antoniolopezsanchez.art`, GitHub da un registro TXT, se pega en el DNS del dominio y se pulsa verificar. Protege contra que otra cuenta de GitHub se quede con el dominio si algún día el sitio se despublica mientras el DNS sigue apuntando a GitHub.
 - **Formulario de consultas de derechos con Formspree**, en lugar del correo: daría historial de consultas y filtro de spam, a cambio de un servicio de terceros, que el sitio hoy no tiene. Recomendación: no, mientras el correo `derechos@` baste.

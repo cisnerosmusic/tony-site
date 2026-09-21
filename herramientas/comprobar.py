@@ -74,6 +74,13 @@ def enlaces_rotos():
                 fisico = os.path.join(fisico, "index.html")
             if not os.path.exists(fisico):
                 falla("enlace roto", f"{rel(p)} apunta a {destino}")
+        # La imagen que sale al compartir la pagina va en un content="", no en
+        # un src, y se escapaba de esta regla: un libro nuevo sin su postal
+        # (gen-tarjetas.py) se compartiria con la tarjeta vacia sin que nada
+        # avisara.
+        for m in re.finditer(r'content="' + re.escape(DOMINIO) + r'(/[^"]+\.(?:jpg|jpeg|png|webp))"', t):
+            if not os.path.exists(os.path.join(RAIZ, m.group(1).strip("/").replace("/", os.sep))):
+                falla("imagen social inexistente", f"{rel(p)} apunta a {m.group(1)}")
 
 
 # ── 2. El sitemap y las paginas indexables tienen que coincidir ──────────

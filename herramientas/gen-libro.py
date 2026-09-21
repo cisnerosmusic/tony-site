@@ -394,11 +394,14 @@ def generar_idioma(m, lang, disponibles):
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{esc_attr(seo_titulo)}">
 <meta property="og:description" content="{esc_attr(seo_desc)}">
-<meta property="og:image" content="{DOMINIO}{m["cubierta"]}">
+<meta property="og:image" content="{DOMINIO}/img/tarjetas/{slug}.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc_attr(L["postal_alt_colectiva" if colectiva else "postal_alt"].format(titulo))}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc_attr(seo_titulo)}">
 <meta name="twitter:description" content="{esc_attr(seo_desc)}">
-<meta name="twitter:image" content="{DOMINIO}{m["cubierta"]}">
+<meta name="twitter:image" content="{DOMINIO}/img/tarjetas/{slug}.jpg">
 {locale}
 <script type="application/ld+json">
 {{
