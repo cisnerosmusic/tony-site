@@ -49,6 +49,7 @@ Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AG
 ## 4. Técnico
 
 - **Francés, italiano y portugués**, después del inglés. El procedimiento está en el README, sección Idiomas.
+- **Fundir `fonts.css` dentro de `styles.css`.** Hoy son dos hojas que bloquean el pintado en todas las páginas, y las fuentes no se descubren hasta que llega la primera. Es una hoja menos por página para siempre; a cambio toca los once generadores y las páginas escritas a mano. Medido el 20 de septiembre de 2026, después de recortar las fuentes: FCP 1.057 ms y LCP 1.507 ms de mediana en tres pasadas de Lighthouse móvil sobre el sitio vivo. Cualquier cambio se compara contra esas cifras, y hace falta que mejore más que el ruido entre pasadas, que es de unos 50 ms.
 
 ## 5. Fuera de este repositorio
 
