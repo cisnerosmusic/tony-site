@@ -1,5 +1,5 @@
 {
-  "_nota": "La sala de Ineditos. Cada novela lleva sinopsis, Con voz y voto y los fragmentos que el autor eligio; nunca la obra entera, que perderia su condicion de inedita ante concursos y editoriales. La linea de cada tarjeta es la primera frase de su sinopsis, tal cual: no se escribe copia nueva. Lo genera herramientas/gen-ineditos.py.",
+  "_nota": "La sala de Ineditos. Cada novela lleva sinopsis, Con voz y voto y los fragmentos que el autor eligio; nunca la obra entera, que perderia su condicion de inedita ante concursos y editoriales. La linea de cada tarjeta es la primera frase de su sinopsis, tal cual, salvo que el autor escriba otra: no se inventa copia nueva. Lo genera herramientas/gen-ineditos.py.",
   "frase": "Las páginas que esperan.",
   "sala_titulo": "Estación La Gaveta",
   "presentacion": "ineditos/presentacion.txt",
@@ -10,7 +10,7 @@
       "slug": "preguntas",
       "titulo": "Preguntas. Un día en la vida de Juan Pérez",
       "genero": "Novela",
-      "linea": "La novela hace un recorrido a través de una jornada en la vida de Juan Pérez.",
+      "linea": "Un día también cabe en una novela. Aunque a veces se desborden las preguntas.",
       "sinopsis": "ineditos/preguntas/sinopsis.txt",
       "vyv": "ineditos/preguntas/voz-y-voto.txt",
       "fragmentos": [
@@ -31,7 +31,7 @@
       "titulo": "Mis diarios de cama",
       "genero": "Novela · para lectores adultos",
       "adultos": true,
-      "linea": "En las varias ocasiones en que enfrente una de las mayores y más humanas pruebas de amor de su vida, Ana Paula registrará por escrito todo lo que le acontece.",
+      "linea": "El diario de una mujer, con sus deberes, sus amores, sus pesares. Una novela narrada en primera persona por su propia protagonista.",
       "sinopsis": "ineditos/mis-diarios-de-cama/sinopsis.txt",
       "vyv": "ineditos/mis-diarios-de-cama/voz-y-voto.txt",
       "fragmentos": [
