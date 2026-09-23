@@ -1,0 +1,62 @@
+{
+  "_nota": "Capa italiana de grabaciones.json. Por cada grabacion, su frase corta y su ficha larga en italiano; el titulo solo cuando es descriptivo, porque el titulo de un poema no se traduce. La usa gen-idioma.py para La mia voce y Campo lungo en italiano.",
+  "salas": {
+    "plano-abierto": {
+      "ruta": "/it/autore/campo-lungo/",
+      "nombre": "Campo lungo"
+    },
+    "en-mi-voz": {
+      "ruta": "/it/poesia/la-mia-voce/",
+      "nombre": "La mia voce"
+    }
+  },
+  "donde": "dove e quando, in {}",
+  "sin_audio": "Il tuo browser non può riprodurre questo audio; puoi <a href=\"{}\">scaricare la registrazione</a>.",
+  "grabaciones": {
+    "clase-de-literatura": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "luna-callada": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "capricornio-personal": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "defensa-del-escritor": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "desnudo-con-fruta": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "idas": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "juglar": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "no-vamos-a-olvidar": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "yo-soy": {
+      "frase": "Una poesia nella mia voce",
+      "ficha": "Una poesia nella voce dell'autore"
+    },
+    "lectura-uneac-santa-clara-2022": {
+      "titulo": "Lettura di poesia all'UNEAC di Santa Clara",
+      "frase": "Undici minuti delle mie poesie lette ad alta voce, a Santa Clara, maggio 2022",
+      "ficha": "18 maggio 2022 · invitato come poeta dall'Unione degli scrittori e artisti di Cuba, durante la 30ª Fiera internazionale del libro in provincia · undici minuti"
+    },
+    "mar-de-papel-1999": {
+      "frase": "La mia poesia al concerto di Rita del Prado, Centro Pablo, 1999",
+      "ficha": "Estratto dal concerto Más que sobrevivir della cantante di trova Rita del Prado, nel ciclo A Guitarra Limpia al Centro Cultural Pablo de la Torriente Brau, il 3 aprile 1999, dove ero invitato"
+    }
+  }
+}

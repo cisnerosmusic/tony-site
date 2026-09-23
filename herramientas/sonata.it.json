@@ -1,0 +1,23 @@
+{
+  "_nota": "Capa italiana de Sonata de la lluvia. Solo el aparato: la obra, sus movimientos, tempos y epigrafes se quedan en español, marcados con lang=es.",
+  "ruta": "/it/poesia/sonata-de-la-lluvia/",
+  "frase": "Tre movimenti in décimas.",
+  "aviso": "La sonata è pubblicata nel suo spagnolo originale, come tutti i testi letterari di questo sito.",
+  "foto_alt": "Tramonto sul muraglione del Malecón, il sole che buca le nuvole",
+  "premio": "Quest'opera mi è valsa il {premio} del 26° Concurso Nacional Ala Décima, nel 2026.",
+  "premios_url": "/it/premi/",
+  "volver": "Torna a De-Cimitas",
+  "volver_url": "/it/poesia/decimitas/",
+  "migas": [
+    "Poesia",
+    "De-Cimitas",
+    "Sonata de la lluvia"
+  ],
+  "migas_urls": [
+    "/it/poesia/",
+    "/it/poesia/decimitas/"
+  ],
+  "genero": "Poesia. Décima",
+  "seo_titulo": "Sonata de la lluvia, una poesia in décimas di Antonio López Sánchez",
+  "seo_desc": "Sonata de la lluvia (Sonata della pioggia), di Antonio López Sánchez: tre movimenti in décimas, premiata al 26° Concurso Nacional Ala Décima. In spagnolo."
+}

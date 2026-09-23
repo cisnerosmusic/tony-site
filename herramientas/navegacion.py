@@ -68,6 +68,35 @@ MENU_FR = [
 PIE_FR = MENU_FR
 
 
+# ── El sitio en italiano y en portugues ───────────────
+#
+# Mismo orden que el ingles y el frances, y por la misma razon. "Trova" no se
+# traduce en ningun idioma: es el nombre del movimiento.
+
+MENU_IT = [
+    ("/it/trova/", "La trova"),
+    ("/it/poesia/", "Poesia"),
+    ("/it/libri/", "Libri"),
+    ("/it/autore/", "L'autore"),
+    ("/it/diritti/", "Diritti"),
+]
+
+PIE_IT = MENU_IT
+
+# El portugues se escribe pensando en Brasil, que es el mercado grande, pero se
+# declara "pt" y no "pt-BR": un hreflang regional dejaria fuera a Portugal.
+
+MENU_PT = [
+    ("/pt/trova/", "A trova"),
+    ("/pt/poesia/", "Poesia"),
+    ("/pt/livros/", "Livros"),
+    ("/pt/autor/", "O autor"),
+    ("/pt/direitos/", "Direitos"),
+]
+
+PIE_PT = MENU_PT
+
+
 
 
 # ── Por idioma ───────────────────────────────────────────────────────────
@@ -116,6 +145,22 @@ IDIOMAS = {
         "portada": "/fr/",
         "etiqueta": "FR",
         "pie_nombre": "Site en français",
+        "pie_idiomas": True,
+    },
+    "it": {
+        "menu": MENU_IT,
+        "pie": PIE_IT,
+        "portada": "/it/",
+        "etiqueta": "IT",
+        "pie_nombre": "Sito in italiano",
+        "pie_idiomas": True,
+    },
+    "pt": {
+        "menu": MENU_PT,
+        "pie": PIE_PT,
+        "portada": "/pt/",
+        "etiqueta": "PT",
+        "pie_nombre": "Site em português",
         "pie_idiomas": True,
     },
 }

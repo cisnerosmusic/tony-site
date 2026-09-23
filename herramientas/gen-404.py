@@ -57,6 +57,26 @@ IDIOMA = {
         "botones": [("/fr/", "Accueil", True), ("/fr/livres/", "Livres", False),
                     ("/fr/trova/", "La trova", False)],
     },
+    "it": {
+        "clase": "solo-it", "portada": "/it/", "saltar": "Vai al contenuto",
+        "abrir": "Apri il menu", "menu": "menu-principal-it", "secciones": "Sezioni",
+        "titulo": "Pagina non trovata | Ala del Mar",
+        "h1": "Questa pagina si è persa nella libreria",
+        "sub": "L'indirizzo che cercavi non esiste in questa casa, o ha cambiato stanza.",
+        "texto": "Puoi tornare alla pagina iniziale, o andare dritto ai libri. Per un lettore che arriva in italiano, la Nueva Trova è la porta migliore.",
+        "botones": [("/it/", "Pagina iniziale", True), ("/it/libri/", "Libri", False),
+                    ("/it/trova/", "La trova", False)],
+    },
+    "pt": {
+        "clase": "solo-pt", "portada": "/pt/", "saltar": "Ir para o conteúdo",
+        "abrir": "Abrir o menu", "menu": "menu-principal-pt", "secciones": "Seções",
+        "titulo": "Página não encontrada | Ala del Mar",
+        "h1": "Esta página se perdeu na estante",
+        "sub": "O endereço que você procurava não existe nesta casa, ou mudou de cômodo.",
+        "texto": "Você pode voltar à página inicial, ou ir direto aos livros. Para quem chega em português, a Nueva Trova é a melhor entrada.",
+        "botones": [("/pt/", "Página inicial", True), ("/pt/livros/", "Livros", False),
+                    ("/pt/trova/", "A trova", False)],
+    },
 }
 
 # El español no necesita rama: es lo que se ve si el script no hace nada.

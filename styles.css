@@ -834,9 +834,13 @@ a.libro-cubierta:hover img {
    defecto. Un idioma nuevo añade su clase a la primera regla y su propia
    linea debajo. */
 html.en .solo-es,
-html.fr .solo-es { display: none !important; }
+html.fr .solo-es,
+html.it .solo-es,
+html.pt .solo-es { display: none !important; }
 html:not(.en) .solo-en { display: none !important; }
 html:not(.fr) .solo-fr { display: none !important; }
+html:not(.it) .solo-it { display: none !important; }
+html:not(.pt) .solo-pt { display: none !important; }
 
 /* ── Responsive ─────────────────────────────── */
 /* La barra lleva nueve secciones mas el idioma. Medido en el navegador: a

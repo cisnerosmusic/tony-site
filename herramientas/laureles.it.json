@@ -1,0 +1,47 @@
+{
+  "_nota": "Capa italiana de Laureles. Mismos premios, mismo orden, mismos años que laureles.json; los enlaces llevan a las paginas italianas. Los nombres de los premios y de los concursos son nombres propios y se quedan en español.",
+  "ruta": "/it/premi/",
+  "seccion": "/it/autore/",
+  "h1": "Premi",
+  "frase": "I premi che il mestiere ha lasciato per strada. Non scrivo per loro, ma quando arrivano sono i benvenuti.",
+  "nota": "Ho ricevuto anche riconoscimenti per lavori premiati in festival nazionali di giornalismo, e da qualche parte fra le mie carte deve essere rimasto un alloro o due.",
+  "seo_titulo": "I premi dello scrittore cubano Antonio López Sánchez",
+  "seo_desc": "Premi dello scrittore cubano Antonio López Sánchez: Premio La Rosa Blanca dell'UNEAC, Reescribir El Quijote en Cuba, Premio Farraluque 2026 e Ala Décima 2026.",
+  "premios": [
+    {
+      "anio": "2026",
+      "titulo": "Primo Premio di Poesia, XXX Premio Farraluque de Literatura Erótica",
+      "texto": "Per <a href=\"/it/premi/tres-delirios-y-un-desnudo/\" lang=\"es\">Tres delirios y un desnudo</a>, che si può leggere qui per intero. Allo stesso concorso, una menzione per la narrativa a <a href=\"/it/premi/revelaciones/\" lang=\"es\">Revelaciones</a>."
+    },
+    {
+      "anio": "2026",
+      "titulo": "Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima",
+      "texto": "Per <a href=\"/it/poesia/sonata-de-la-lluvia/\" lang=\"es\">Sonata de la lluvia</a>, che si può leggere qui per intero, al concorso di poesia organizzato dal Grupo Ala Décima e dal Centro Iberoamericano de la Décima y el Verso Improvisado."
+    },
+    {
+      "anio": "2014",
+      "titulo": "Menzione, Concurso La Edad de Oro",
+      "texto": "Dell'Editorial Gente Nueva, per il romanzo fantasy <a href=\"/it/libri/el-otro-lado-del-espejo/\" lang=\"es\">El otro lado del espejo</a>, allora inedito."
+    },
+    {
+      "anio": "2014",
+      "titulo": "Finalista, Concurso de Minicuentos El Dinosaurio 2013",
+      "texto": "Organizzato dal Centro de Formación Literaria Onelio Jorge Cardoso, per <em lang=\"es\">Proclama Real</em>, scritto nel 2009. L'esito è stato reso noto nel 2014."
+    },
+    {
+      "anio": "2013",
+      "titulo": "Premio La Rosa Blanca 2012 al miglior testo",
+      "texto": "Assegnato dalla Sezione di letteratura per l'infanzia e la gioventù dell'UNEAC, l'Unione degli scrittori cubani, per il romanzo <a href=\"/it/libri/las-guerreras-de-la-luz/\" lang=\"es\">Las guerreras de la luz</a>."
+    },
+    {
+      "anio": "2005",
+      "titulo": "Primo Premio, Reescribir El Quijote en Cuba",
+      "texto": "Sotto l'egida dell'ambasciata di Spagna a Cuba, per <a href=\"/it/libri/de-la-extrana-aventura-de-don-quijote/\" lang=\"es\">De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados</a>, pubblicato nell'antologia <a href=\"/it/libri/en-un-lugar-de-cuba/\" lang=\"es\">En un lugar de Cuba de cuyo nombre quiero acordarme</a> e, nel 2021, in libro digitale."
+    },
+    {
+      "anio": "2002",
+      "titulo": "Premio di carta stampata, Concurso 26 de Julio",
+      "texto": "Dell'Unione dei giornalisti cubani (UPEC), all'Editorial de la Mujer, per l'articolo <em lang=\"es\">Digo que yo no soy un hombre puro</em>."
+    }
+  ]
+}

@@ -255,5 +255,229 @@
         }
       ]
     }
+  },
+  "it": {
+    "lang": "it",
+    "locale": "it_IT",
+    "portada": "/it/",
+    "ruta_libros": "/it/libri/",
+    "catalogo_nombre": "Libri",
+    "volver": "Torna a {}",
+    "saltar": "Vai al contenuto",
+    "abrir_menu": "Apri il menu",
+    "secciones_aria": "Sezioni",
+    "facebook_aria": "Antonio López Sánchez su Facebook",
+    "desarrollado": "Sviluppato da",
+    "titulo_sufijo": " | Antonio López Sánchez",
+    "bloques": {
+      "contratapa": "Sinossi",
+      "volumenes": "I volumi",
+      "vyv": "Con parole mie",
+      "fragmentos": "Estratti",
+      "presentaciones": "Incontri e firmacopie",
+      "prensa": "Stampa",
+      "ficha": "Scheda",
+      "capitulo": "Capitolo {}"
+    },
+    "ficha_claves": {
+      "título": "titolo",
+      "género": "genere",
+      "editorial": "editore",
+      "año": "anno",
+      "cubierta": "copertina",
+      "autoría": "autori",
+      "incluye": "contiene",
+      "formato": "formato",
+      "origen": "origine",
+      "premio": "premio",
+      "edición": "edizione",
+      "derechos": "diritti"
+    },
+    "derechos": "Disponibile per edizioni e traduzioni fuori da Cuba",
+    "derechos_colectiva": "Disponibile per edizioni e traduzioni fuori da Cuba, soltanto per i testi di Antonio López Sánchez contenuti in questo volume collettivo",
+    "postal_alt": "{}, di Antonio López Sánchez",
+    "postal_alt_colectiva": "{}, con testi di Antonio López Sánchez",
+    "consulta_derechos": "Richieste di diritti",
+    "representacion": "https://ernestocisneros.art/literary-representation.html",
+    "aviso_fragmentos": "Gli estratti sono pubblicati nel loro spagnolo originale, come tutti i testi letterari di questo sito.",
+    "catalogo": {
+      "seo_titulo": "I libri di Antonio López Sánchez",
+      "seo_desc": "Quattordici libri di Antonio López Sánchez: la Nueva Trova, la poesia, il fantasy, l'horror e la letteratura per ragazzi. Diritti mondiali fuori da Cuba.",
+      "titulo": "Libri",
+      "subtitulo": "Quattordici libri pubblicati, nell'ordine che ha senso visto da fuori.",
+      "intro": "I titoli restano nel loro spagnolo originale, con il significato fra parentesi. Ogni pagina porta la sinossi, la nota dell'autore sul suo libro, estratti in spagnolo e la scheda completa per un editore.",
+      "ver": "Vedi il libro",
+      "ineditos": {
+        "titulo": "Romanzi inediti",
+        "texto": "Quattro romanzi che non hanno ancora trovato un editore: una sola giornata nella vita di un giornalista, i diari da comodino di una donna, una storia di horror gotico e un prequel fantastico di El otro lado del espejo. Ognuno con la sua sinossi, i suoi estratti in spagnolo e la nota dell'autore.",
+        "boton": "Vedi i romanzi inediti",
+        "url": "/it/inediti/"
+      },
+      "lectores": {
+        "titulo": "Tra i lettori",
+        "texto": "Questi libri sono usciti per strada: fiere, tavoli di firmacopie, code e librai. Anche lì c'è una storia.",
+        "boton": "Vedi le fotografie",
+        "url": "/it/libri/tra-i-lettori/"
+      },
+      "cierre": {
+        "titulo": "Diritti",
+        "texto": "I diritti mondiali di edizione e traduzione sono disponibili fuori da Cuba, dove gli editori dell'autore mantengono la loro esclusiva. Manoscritti completi e sinossi si inviano su richiesta.",
+        "boton_correo": "Scrivere per i diritti",
+        "boton_representacion": "Rappresentanza letteraria"
+      },
+      "grupos": [
+        {
+          "titulo": "La Nueva Trova",
+          "seccion": "/it/trova/",
+          "libros": [
+            "la-cancion-de-la-nueva-trova",
+            "trovadoras",
+            "convertida-en-cancion"
+          ]
+        },
+        {
+          "titulo": "Poesia",
+          "seccion": "/it/poesia/",
+          "libros": [
+            "trampas-retratos-y-un-17-rojo"
+          ]
+        },
+        {
+          "titulo": "Narrativa",
+          "seccion": "/it/libri/",
+          "libros": [
+            "las-guerreras-de-la-luz",
+            "el-escudo-de-valnuss",
+            "el-otro-lado-del-espejo",
+            "grimorium",
+            "perdidos-en-un-librero",
+            "de-la-extrana-aventura-de-don-quijote"
+          ]
+        },
+        {
+          "titulo": "Volumi collettivi",
+          "seccion": null,
+          "texto": "Antologie e volumi condivisi che contengono testi dell'autore. I diritti qui offerti coprono soltanto ciò che ha scritto lui, mai il volume intero.",
+          "libros": [
+            "en-un-lugar-de-cuba",
+            "nota-de-prensa-y-otros-minicuentos",
+            "vamos-a-cantar-y-a-sonar",
+            "cuentos-de-munecas"
+          ]
+        }
+      ]
+    }
+  },
+  "pt": {
+    "lang": "pt",
+    "locale": "pt_BR",
+    "portada": "/pt/",
+    "ruta_libros": "/pt/livros/",
+    "catalogo_nombre": "Livros",
+    "volver": "Voltar a {}",
+    "saltar": "Ir para o conteúdo",
+    "abrir_menu": "Abrir o menu",
+    "secciones_aria": "Seções",
+    "facebook_aria": "Antonio López Sánchez no Facebook",
+    "desarrollado": "Desenvolvido por",
+    "titulo_sufijo": " | Antonio López Sánchez",
+    "bloques": {
+      "contratapa": "Sinopse",
+      "volumenes": "Os volumes",
+      "vyv": "Com minhas palavras",
+      "fragmentos": "Trechos",
+      "presentaciones": "Encontros e sessões de autógrafos",
+      "prensa": "Imprensa",
+      "ficha": "Ficha",
+      "capitulo": "Capítulo {}"
+    },
+    "ficha_claves": {
+      "título": "título",
+      "género": "gênero",
+      "editorial": "editora",
+      "año": "ano",
+      "cubierta": "capa",
+      "autoría": "autoria",
+      "incluye": "contém",
+      "formato": "formato",
+      "origen": "origem",
+      "premio": "prêmio",
+      "edición": "edição",
+      "derechos": "direitos"
+    },
+    "derechos": "Disponível para edições e traduções fora de Cuba",
+    "derechos_colectiva": "Disponível para edições e traduções fora de Cuba, somente para os textos de Antonio López Sánchez que este volume coletivo contém",
+    "postal_alt": "{}, de Antonio López Sánchez",
+    "postal_alt_colectiva": "{}, com textos de Antonio López Sánchez",
+    "consulta_derechos": "Consultas de direitos",
+    "representacion": "https://ernestocisneros.art/literary-representation.html",
+    "aviso_fragmentos": "Os trechos são publicados no seu espanhol original, como todos os textos literários deste site.",
+    "catalogo": {
+      "seo_titulo": "Os livros de Antonio López Sánchez",
+      "seo_desc": "Quatorze livros de Antonio López Sánchez: a Nueva Trova, a poesia, a fantasia, o horror e a literatura infantojuvenil. Direitos mundiais fora de Cuba.",
+      "titulo": "Livros",
+      "subtitulo": "Quatorze livros publicados, na ordem que faz sentido visto de fora.",
+      "intro": "Os títulos ficam no seu espanhol original, com o sentido entre parênteses. Cada página traz a sinopse, a nota do autor sobre o seu livro, trechos em espanhol e a ficha completa para um editor.",
+      "ver": "Ver o livro",
+      "ineditos": {
+        "titulo": "Romances inéditos",
+        "texto": "Quatro romances que ainda não encontraram editora: um único dia na vida de um jornalista, os diários de cabeceira de uma mulher, uma história de horror gótico e uma prequela fantástica de El otro lado del espejo. Cada um com sua sinopse, seus trechos em espanhol e a nota do autor.",
+        "boton": "Ver os romances inéditos",
+        "url": "/pt/ineditos/"
+      },
+      "lectores": {
+        "titulo": "Entre leitores",
+        "texto": "Estes livros saíram para a rua: feiras, mesas de autógrafos, filas e livreiras. Aí também há uma história.",
+        "boton": "Ver as fotografias",
+        "url": "/pt/livros/entre-leitores/"
+      },
+      "cierre": {
+        "titulo": "Direitos",
+        "texto": "Os direitos mundiais de edição e tradução estão disponíveis fora de Cuba, onde as editoras do autor mantêm sua exclusividade. Manuscritos completos e sinopses são enviados a pedido.",
+        "boton_correo": "Escrever sobre direitos",
+        "boton_representacion": "Representação literária"
+      },
+      "grupos": [
+        {
+          "titulo": "A Nueva Trova",
+          "seccion": "/pt/trova/",
+          "libros": [
+            "la-cancion-de-la-nueva-trova",
+            "trovadoras",
+            "convertida-en-cancion"
+          ]
+        },
+        {
+          "titulo": "Poesia",
+          "seccion": "/pt/poesia/",
+          "libros": [
+            "trampas-retratos-y-un-17-rojo"
+          ]
+        },
+        {
+          "titulo": "Ficção",
+          "seccion": "/pt/livros/",
+          "libros": [
+            "las-guerreras-de-la-luz",
+            "el-escudo-de-valnuss",
+            "el-otro-lado-del-espejo",
+            "grimorium",
+            "perdidos-en-un-librero",
+            "de-la-extrana-aventura-de-don-quijote"
+          ]
+        },
+        {
+          "titulo": "Volumes coletivos",
+          "seccion": null,
+          "texto": "Antologias e volumes compartilhados que contêm textos do autor. Os direitos aqui oferecidos cobrem somente o que ele escreveu, nunca o volume inteiro.",
+          "libros": [
+            "en-un-lugar-de-cuba",
+            "nota-de-prensa-y-otros-minicuentos",
+            "vamos-a-cantar-y-a-sonar",
+            "cuentos-de-munecas"
+          ]
+        }
+      ]
+    }
   }
 }

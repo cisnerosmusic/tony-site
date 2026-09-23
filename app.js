@@ -48,7 +48,9 @@
   var ETIQUETA = {
     es: ['Abrir menú', 'Cerrar menú'],
     en: ['Open menu', 'Close menu'],
-    fr: ['Ouvrir le menu', 'Fermer le menu']
+    fr: ['Ouvrir le menu', 'Fermer le menu'],
+    it: ['Apri il menu', 'Chiudi il menu'],
+    pt: ['Abrir o menu', 'Fechar o menu']
   };
 
   document.querySelectorAll('.nav-hamburger').forEach(function (boton) {

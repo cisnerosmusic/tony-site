@@ -1,0 +1,62 @@
+{
+  "_nota": "Capa portuguesa de grabaciones.json. Por cada grabacion, su frase corta y su ficha larga en portugues; el titulo solo cuando es descriptivo, porque el titulo de un poema no se traduce. La usa gen-idioma.py para Na minha voz y Plano aberto en portugues.",
+  "salas": {
+    "plano-abierto": {
+      "ruta": "/pt/autor/plano-aberto/",
+      "nombre": "Plano aberto"
+    },
+    "en-mi-voz": {
+      "ruta": "/pt/poesia/na-minha-voz/",
+      "nombre": "Na minha voz"
+    }
+  },
+  "donde": "onde e quando, em {}",
+  "sin_audio": "Seu navegador não consegue reproduzir este áudio; você pode <a href=\"{}\">baixar a gravação</a>.",
+  "grabaciones": {
+    "clase-de-literatura": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "luna-callada": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "capricornio-personal": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "defensa-del-escritor": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "desnudo-con-fruta": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "idas": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "juglar": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "no-vamos-a-olvidar": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "yo-soy": {
+      "frase": "Um poema na minha voz",
+      "ficha": "Um poema na voz do autor"
+    },
+    "lectura-uneac-santa-clara-2022": {
+      "titulo": "Leitura de poesia na UNEAC de Santa Clara",
+      "frase": "Onze minutos dos meus poemas lidos em voz alta, em Santa Clara, maio de 2022",
+      "ficha": "18 de maio de 2022 · convidado como poeta pela União dos escritores e artistas de Cuba, durante a 30ª Feira internacional do livro na província · onze minutos"
+    },
+    "mar-de-papel-1999": {
+      "frase": "Meu poema no show de Rita del Prado, Centro Pablo, 1999",
+      "ficha": "Trecho do show Más que sobrevivir da trovadora Rita del Prado, no ciclo A Guitarra Limpia no Centro Cultural Pablo de la Torriente Brau, em 3 de abril de 1999, onde eu era convidado"
+    }
+  }
+}
