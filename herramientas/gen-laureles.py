@@ -37,8 +37,9 @@ def pagina_laureles(lang, V, capas):
              "inLanguage": L["lang"], "isPartOf": {"@id": f"{DOMINIO}/#sitio"},
              "about": {"@id": f"{DOMINIO}/#antonio"}}
     # En ingles los premios cuelgan de The author, que es donde un editor
-    # extranjero los busca; en español, Laureles tiene entrada propia.
-    activa = "/laureles/" if es else "/en/author/"
+    # extranjero los busca; en español, Laureles tiene entrada propia. Cada
+    # idioma lo dice en su capa, que es lo que permite que haya un tercero.
+    activa = V["seccion"]
     return (pagina.cabeza(lang, V["seo_titulo"], V["seo_desc"], url, tipo_og="profile",
                           rutas={l: c["ruta"] for l, c in capas.items()})
             + '<script type="application/ld+json">\n' + json.dumps(datos, ensure_ascii=False, indent=2) + '\n</script>\n'

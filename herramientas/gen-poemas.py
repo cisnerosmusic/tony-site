@@ -75,6 +75,7 @@ def bloque(p, ficha, n, la=""):
 
 ES = {
     "ruta": "/tinta-ciones/poemas-sueltos/",
+    "seccion": "/tinta-ciones/",
     "h1": "Poemas sueltos",
     "frase": "Unos lienzos amplios para dibujar mis visiones.",
     "aviso": None,
@@ -103,7 +104,7 @@ def pagina_poemas(lang, V, sueltos, glosas, capas):
              "itemListElement": [
                  {"@type": "ListItem", "position": i, "name": t}
                  for i, t in enumerate(titulos, 1)]}
-    seccion = "/tinta-ciones/" if es else "/en/poetry/"
+    seccion = V["seccion"]
     aviso = (f'\n  <p class="nota" style="margin-bottom:3rem;">{esc(V["aviso"])}</p>\n' if V.get("aviso") else "")
     nota_glosa = (f'\n    <p class="nota" style="margin-bottom:3rem;">{esc(V["glosas_nota"])}</p>' if V.get("glosas_nota") else "")
     margen_glosas = "1.5rem" if V.get("glosas_nota") else "3rem"

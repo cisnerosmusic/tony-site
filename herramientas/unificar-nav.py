@@ -62,9 +62,9 @@ def main(solo_comprobar=False):
                 print("  AVISO, no encuentro el menu en:", rel)
                 continue
             nuevo = patron_menu.sub(
-                lambda m: m.group(1) + navegacion.menu_html(activa) + m.group(2), t)
+                lambda m: m.group(1) + navegacion.menu_de("es", activa) + m.group(2), t)
             nuevo = re.sub(r'(<nav class="footer-nav" aria-label="Secciones">\n).*?(\n  </nav>)',
-                           lambda m: m.group(1) + navegacion.pie_html(activa_pie) + m.group(2), nuevo, flags=re.S)
+                           lambda m: m.group(1) + navegacion.pie_de("es", activa_pie) + m.group(2), nuevo, flags=re.S)
             if nuevo != t:
                 tocadas.append(rel)
                 if not solo_comprobar:

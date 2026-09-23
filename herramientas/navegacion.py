@@ -27,34 +27,6 @@ MENU = [
 PIE = MENU + [("/derechos/", "Derechos")]
 
 
-def seccion_de(ruta):
-    """Que seccion esta activa para una pagina. Una subpagina marca a su madre:
-    /tinta-ciones/en-mi-voz/ enciende Tinta-ciones."""
-    candidatas = [h for h, _ in MENU if ruta.startswith(h)]
-    return max(candidatas, key=len) if candidatas else None
-
-
-def menu_html(activa, sangria="    "):
-    filas = []
-    for h, n in MENU:
-        # La clase pinta y aria-current informa: quien usa lector de pantalla
-        # tambien tiene que saber en que pagina esta.
-        marca = ' class="active" aria-current="page"' if h == activa else ""
-        filas.append(f'{sangria}<li><a href="{h}"{marca}>{n}</a></li>')
-    filas.append(f'{sangria}<li><a href="/en/" lang="en" hreflang="en">EN</a></li>')
-    return "\n".join(filas)
-
-
-def pie_html(activa, sangria="    "):
-    filas = []
-    for h, n in PIE:
-        if h == activa:
-            filas.append(f'{sangria}<span aria-current="page">{n}</span>')
-        else:
-            filas.append(f'{sangria}<a href="{h}">{n}</a>')
-    return "\n".join(filas)
-
-
 # ── El sitio en ingles ───────────────────────────────────────────────────
 #
 # No es el espanol traducido y no lleva las mismas secciones. El orden lo fijo
@@ -79,29 +51,6 @@ MENU_EN = [
 PIE_EN = MENU_EN
 
 
-def seccion_en_de(ruta):
-    candidatas = [h for h, _ in MENU_EN if ruta.startswith(h)]
-    return max(candidatas, key=len) if candidatas else None
-
-
-def menu_en_html(activa, sangria="    "):
-    filas = []
-    for h, n in MENU_EN:
-        marca = ' class="active" aria-current="page"' if h == activa else ""
-        filas.append(f'{sangria}<li><a href="{h}"{marca}>{n}</a></li>')
-    filas.append(f'{sangria}<li><a href="/" lang="es" hreflang="es">ES</a></li>')
-    return "\n".join(filas)
-
-
-def pie_en_html(activa, sangria="    "):
-    filas = []
-    for h, n in PIE_EN:
-        if h == activa:
-            filas.append(f'{sangria}<span aria-current="page">{n}</span>')
-        else:
-            filas.append(f'{sangria}<a href="{h}">{n}</a>')
-    filas.append(f'{sangria}<a href="/" lang="es" hreflang="es">Sitio en español</a>')
-    return "\n".join(filas)
 
 
 # ── Por idioma ───────────────────────────────────────────────────────────
@@ -110,13 +59,49 @@ def pie_en_html(activa, sangria="    "):
 # idioma, no por nombre de funcion. Un idioma nuevo añade arriba su MENU_xx y
 # sus dos funciones, y se registra en este diccionario. Nada mas.
 
-_POR_IDIOMA = {
-    "es": (menu_html, pie_html),
-    "en": (menu_en_html, pie_en_html),
+# Un idioma se declara aqui entero y nada mas: su menu, su pie, su portada, la
+# etiqueta con que los demas lo enlazan y como se llama su sitio en el pie.
+#
+# El español y el ingles eran dos parejas de funciones casi iguales, con el
+# enlace al otro idioma clavado dentro. Eso es justo lo que impedia que hubiera
+# un tercero: con cinco idiomas, cada menu tiene que enlazar a los otros
+# cuatro, y no se puede escribir a mano veinte veces. Ahora el enlace de
+# idiomas se arma solo, en el orden en que estan declarados aqui.
+#
+# Con dos idiomas la salida es identica a la de antes, byte a byte: se
+# comprobo con un diff de las 117 paginas antes de tocar nada mas.
+
+IDIOMAS = {
+    "es": {
+        "menu": MENU,
+        "pie": PIE,
+        "portada": "/",
+        "etiqueta": "ES",
+        # El pie español no enlaza a los demas idiomas y el ingles si. Es como
+        # estaba. Cuando entren el frances, el italiano y el portugues habra
+        # que decidir si los cinco pies se igualan.
+        "pie_idiomas": None,
+    },
+    "en": {
+        "menu": MENU_EN,
+        "pie": PIE_EN,
+        "portada": "/en/",
+        "etiqueta": "EN",
+        "pie_idiomas": "Sitio en español",
+    },
 }
 
 
-_MENUS = {"es": MENU, "en": MENU_EN}
+def _otros(lang):
+    """Los demas idiomas, en el orden del registro."""
+    return [(l, d) for l, d in IDIOMAS.items() if l != lang]
+
+
+def seccion_de(ruta, lang="es"):
+    """Que seccion esta activa para una pagina. Una subpagina marca a su madre:
+    /tinta-ciones/en-mi-voz/ enciende Tinta-ciones."""
+    candidatas = [h for h, _ in IDIOMAS[lang]["menu"] if ruta.startswith(h)]
+    return max(candidatas, key=len) if candidatas else None
 
 
 def nombre_de(lang, ruta):
@@ -124,15 +109,34 @@ def nombre_de(lang, ruta):
     para decir de que sala cuelgan sin repetir aqui el nombre: los tres libros
     de la trova cuelgan de /trova/, no del catalogo, y el camino de miga y el
     boton de volver tienen que decirlo con las mismas palabras que el menu."""
-    for h, n in _MENUS[lang]:
+    for h, n in IDIOMAS[lang]["menu"]:
         if h == ruta:
             return n
     return None
 
 
 def menu_de(lang, activa, sangria="    "):
-    return _POR_IDIOMA[lang][0](activa, sangria)
+    filas = []
+    for h, n in IDIOMAS[lang]["menu"]:
+        # La clase pinta y aria-current informa: quien usa lector de pantalla
+        # tambien tiene que saber en que pagina esta.
+        marca = ' class="active" aria-current="page"' if h == activa else ""
+        filas.append(f'{sangria}<li><a href="{h}"{marca}>{n}</a></li>')
+    for l, d in _otros(lang):
+        filas.append(f'{sangria}<li><a href="{d["portada"]}" lang="{l}" '
+                     f'hreflang="{l}">{d["etiqueta"]}</a></li>')
+    return "\n".join(filas)
 
 
 def pie_de(lang, activa, sangria="    "):
-    return _POR_IDIOMA[lang][1](activa, sangria)
+    filas = []
+    for h, n in IDIOMAS[lang]["pie"]:
+        if h == activa:
+            filas.append(f'{sangria}<span aria-current="page">{n}</span>')
+        else:
+            filas.append(f'{sangria}<a href="{h}">{n}</a>')
+    if IDIOMAS[lang]["pie_idiomas"]:
+        for l, d in _otros(lang):
+            filas.append(f'{sangria}<a href="{d["portada"]}" lang="{l}" '
+                         f'hreflang="{l}">{IDIOMAS[lang]["pie_idiomas"]}</a>')
+    return "\n".join(filas)

@@ -92,6 +92,7 @@ def delirios():
 
 ES = {
     "ruta": "/laureles/",
+    "seccion": "/laureles/",
     "migas": "Laureles",
     "volver": "Volver a Laureles",
     "aviso": AVISO,
@@ -130,7 +131,7 @@ def envoltura(lang, V, slug, titulo, subtitulo, T, D, datos, cuerpo, capas, sub_
                           rutas={l: c["ruta"] + slug + "/" for l, c in capas.items()}, adultos=True)
             + '<script type="application/ld+json">\n' + json.dumps(datos, ensure_ascii=False, indent=2) + '\n</script>\n'
             + pagina.migas(migas)
-            + pagina.menu(lang, "/laureles/" if es else "/en/author/")
+            + pagina.menu(lang, V["seccion"])
             + f"""
 <header class="page-header">
   <h1{la}>{esc(titulo)}</h1>

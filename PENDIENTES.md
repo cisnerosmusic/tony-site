@@ -48,7 +48,10 @@ Se mide el rendimiento y se publican las cifras cuando cierre la lista de cambio
 
 ## 4. Técnico
 
-- **Francés, italiano y portugués**, después del inglés. El procedimiento está en el README, sección Idiomas.
+- **Francés, italiano y portugués.** El código ya está listo: desde el 22 de septiembre de 2026 ningún generador sabe cuál es el segundo idioma, y añadir uno es escribir datos (ver `AGENTS.md`). Lo que queda es de tres clases:
+  1. **Escribir unas 995 cadenas por idioma**: 382 la zona propia (`zona.<idioma>.json`), 245 las catorce capas de libro, el resto aparato corto. El procedimiento está en el README, sección Idiomas.
+  2. **Decidir el selector de idiomas.** Con dos, el menú lleva un enlace al otro y ya. Con cinco lleva cuatro, y el pie español no enlaza idiomas mientras el inglés sí. Hay que decidir si se convierte en un desplegable, si los cinco pies se igualan y en qué orden van.
+  3. **La `Ÿ` no está en las fuentes**, y tampoco en los originales que bajamos de Google: habría que rebajarlos con el rango `latin-ext`. En francés solo aparece en topónimos raros, y el comprobador la cazaría el día que se colara, así que no bloquea.
 - **Fundir `fonts.css` dentro de `styles.css`.** Hoy son dos hojas que bloquean el pintado en todas las páginas, y las fuentes no se descubren hasta que llega la primera. Es una hoja menos por página para siempre; a cambio toca los once generadores y las páginas escritas a mano. Medido el 20 de septiembre de 2026, después de recortar las fuentes: FCP 1.057 ms y LCP 1.507 ms de mediana en tres pasadas de Lighthouse móvil sobre el sitio vivo. Cualquier cambio se compara contra esas cifras, y hace falta que mejore más que el ruido entre pasadas, que es de unos 50 ms.
 
 - **La prensa de Juventud Rebelde es frágil.** Las tres entrevistas enlazadas (2012, 2016 y 2019) respondieron de forma intermitente el 21 de septiembre de 2026: dos no cargaban, la portada del diario tampoco, y la tercera sí. Solo la de 2016 tiene copia en el Internet Archive. Si el diario cae como cayó Habana Radio, se pierden dos de las tres. Hay que guardarlas en el Archive (`web.archive.org/save/`) en cuanto respondan y, si caen, enlazar la copia. Es mandar URLs públicas a un servicio de terceros: lo decide Ernesto.

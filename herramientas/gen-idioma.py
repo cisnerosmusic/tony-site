@@ -1,50 +1,52 @@
-# Genera el sitio en ingles desde herramientas/ingles.json.
+# Genera las paginas propias de un idioma extranjero, las que no salen de
+# ninguna sala española: su portada, sus paginas de seccion y su concentrador.
+# Hoy, en ingles:
 #
 #   /en/           portada
 #   /en/trova/     la investigacion sobre la Nueva Trova
 #   /en/poetry/    la poesia
 #   /en/fiction/   novela y cuento
-#   /en/author/    biografia y hoja de servicios
+#   /en/author/    el concentrador de toda la obra
 #
 # /en/rights/ NO se genera aqui: la escribe gen-legal.py junto con la version
 # española, para que el aviso de derechos no pueda decir dos cosas distintas.
 #
-# La regla del sitio, que no se negocia: el aparato va en ingles y la
-# literatura se queda en español. Ni un poema traducido.
+# Se llamaba gen-ingles.py y leia ingles.json. Desde el 22 de septiembre de
+# 2026 lee una zona por idioma, herramientas/zona.<idioma>.json, y todo lo que
+# antes estaba escrito dentro (las parejas de hreflang, el orden de los grupos
+# del catalogo, los rotulos, el alt de la banda de mar) es dato de esa zona.
+# El plan son cinco idiomas: español, ingles, frances, italiano y portugues, y
+# con el generador atado a uno solo el segundo se habria escrito tres veces.
+#
+# Añadir un idioma es, entonces: su bloque en idiomas.json, su menu en
+# navegacion.py, su zona.<idioma>.json y las capas de cada sala. Ni una linea
+# de codigo.
+#
+# La regla del sitio, que no se negocia: el aparato se traduce y la literatura
+# se queda en español. Ni un poema traducido, en ningun idioma.
 #
 # El orden de las secciones no es el del sitio español y no es un descuido.
 # Para el lector anglosajon la puerta de entrada es la investigacion sobre la
 # trova, no la fantasia heroica. Lo decidio Ernesto el 9 de septiembre de 2026
-# y esta razonado en PRODUCT.md.
+# y esta razonado en PRODUCT.md. Cada idioma puede tener el suyo.
 #
 # No se inventa ni una clase de CSS: las fichas de libro y las tres puertas de
 # la portada reutilizan .laurel-item, que ya es una rejilla de etiqueta dorada
 # a la izquierda y contenido a la derecha.
 #
-# Uso: python herramientas/gen-ingles.py
+# Uso: python herramientas/gen-idioma.py
 
 import json, os, sys, html
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
+# El marco comun se importa con alias porque aqui hay una funcion pagina().
+import pagina as marco
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 CSS = "?v=36"
 RETRATO = "/img/retrato.webp"
-
-# Paginas que si tienen una equivalente de verdad en español. El hreflang solo
-# vale si es reciproco y si las dos paginas hablan de lo mismo: /en/fiction/ no
-# esta aqui porque /libros/ son los catorce libros y esa son solo las novelas.
-PAREJAS = {
-    "/en/": "/",
-    "/en/trova/": "/trova/",
-    "/en/poetry/": "/tinta-ciones/",
-    "/en/author/": "/periodista/",
-    "/en/poetry/in-my-voice/": "/tinta-ciones/en-mi-voz/",
-    "/en/author/on-record/": "/plano-abierto/",
-    "/en/books/among-readers/": "/entre-lectores/",
-}
 
 
 def esc(t):
@@ -79,7 +81,7 @@ def bloque_libro(l):
         p.append(f'      <p class="libro-meta">{esc(l["premio"])}</p>')
     p.append(f'      <p class="section-text">{l["texto"]}</p>')
     if l.get("url"):
-        p.append(f'      <p style="margin-top:1rem;"><a href="{esc_attr(l["url"])}" class="btn">See the book</a></p>')
+        p.append(f'      <p style="margin-top:1rem;"><a href="{esc_attr(l["url"])}" class="btn">{esc(L()["catalogo"]["ver"])}</a></p>')
     p += ['    </div>', '  </article>']
     return "\n".join(p)
 
@@ -101,7 +103,20 @@ def _manifiesto(*partes):
 
 # Los textos de interfaz ingleses y, sobre todo, el catalogo con sus grupos:
 # el concentrador se arma desde ahi, no desde una lista escrita aparte.
-EN = _manifiesto("idiomas.json")["en"]
+IDIOMAS = _manifiesto("idiomas.json")
+
+# El idioma que se esta escribiendo y su zona. Los fija main() en cada pasada.
+LANG = "en"
+Z = {}
+
+
+def L():
+    """Los textos de interfaz del idioma en curso."""
+    return IDIOMAS[LANG]
+
+
+def _portada():
+    return navegacion.IDIOMAS[LANG]["portada"]
 
 
 def fila_obra(url, titulo, meta="", linea="", espanol=True):
@@ -134,8 +149,8 @@ def obras_libros():
     """Los catorce libros, por generos y en el orden que pidio Ernesto el 22 de
     septiembre de 2026: primero la ficcion, despues los libros de entrevistas e
     investigacion, y al final poesia y volumenes colectivos."""
-    grupos = {g["titulo"]: g for g in EN["catalogo"]["grupos"]}
-    orden = ["Fiction", "The Nueva Trova", "Poetry", "Collective volumes"]
+    grupos = {g["titulo"]: g for g in L()["catalogo"]["grupos"]}
+    orden = Z["orden_libros"]
     faltan = set(grupos) - set(orden)
     if faltan:
         sys.exit(f"grupos del catalogo ingles sin sitio en el concentrador: {sorted(faltan)}")
@@ -146,11 +161,11 @@ def obras_libros():
         filas = []
         for slug in g["libros"]:
             m = _manifiesto("libros", slug + ".json")
-            c = _manifiesto("libros", "en", slug + ".json")
+            c = _manifiesto("libros", LANG, slug + ".json")
             glosa = c.get("catalogo", {}).get("glosa")
             titulo = m["titulo"] + (f" ({glosa})" if glosa else "")
             meta = " · ".join(x for x in (m.get("anio"), c.get("genero"), m.get("editorial")) if x)
-            filas.append(fila_obra(EN["ruta_libros"] + slug + "/", titulo, meta))
+            filas.append(fila_obra(L()["ruta_libros"] + slug + "/", titulo, meta))
         out.append(lista_obras(filas))
     return "\n".join(out)
 
@@ -159,7 +174,7 @@ def obras_periodismo():
     """Los veintidos trabajos de prensa. Solo tienen pagina española, asi que
     el enlace sale marcado: lo que se traduce es la linea, no el titular."""
     cfg = _manifiesto("periodismo.json")
-    capa = _manifiesto("periodismo.en.json")
+    capa = _manifiesto(f"periodismo.{LANG}.json")
     out = []
     for g in cfg["grupos"]:
         suyos = [t for t in cfg["trabajos"] if t["grupo"] == g["clave"]]
@@ -181,7 +196,7 @@ def obras_periodismo():
 
 def obras_cuentos():
     cuentos = _manifiesto("cuentos.json")
-    capa = _manifiesto("cuentos.en.json")
+    capa = _manifiesto(f"cuentos.{LANG}.json")
     filas = []
     for c in cuentos:
         t = capa["cuentos"][c["slug"]]
@@ -193,28 +208,27 @@ def obras_cuentos():
 def obras_poemas():
     """Poemas y glosas. No tienen pagina propia: viven todos en la sala, cada
     uno con su ancla, y el ancla la calcula pagina.py."""
-    import pagina
     p = _manifiesto("poemas.json")
-    capa = _manifiesto("poemas.en.json")
+    capa = _manifiesto(f"poemas.{LANG}.json")
     out = []
-    for clave, nombre in (("sueltos", "Poems"), ("glosas", "Glosas")):
+    for clave in ("sueltos", "glosas"):
+        nombre = Z["rotulos_poemas"][clave]
         out.append(rotulo(nombre, capa["glosas_texto"] if clave == "glosas" else ""))
-        out.append(lista_obras([fila_obra(f'{capa["ruta"]}#{pagina.ancla(x["titulo"])}', x["titulo"])
+        out.append(lista_obras([fila_obra(f'{capa["ruta"]}#{marco.ancla(x["titulo"])}', x["titulo"])
                                 for x in p[clave]], densa=True))
     return "\n".join(out)
 
 
 def obras_decimitas():
-    import pagina
     cfg = _manifiesto("decimitas.json")
-    capa = _manifiesto("decimitas.en.json")
+    capa = _manifiesto(f"decimitas.{LANG}.json")
     filas = [fila_obra(f'{capa["ruta"]}#{d["slug"]}', d["titulo"]) for d in cfg["decimitas"]]
     return lista_obras(filas, densa=True)
 
 
 def obras_ineditos():
     cfg = _manifiesto("ineditos.json")
-    capa = _manifiesto("ineditos.en.json")
+    capa = _manifiesto(f"ineditos.{LANG}.json")
     filas = []
     for n in cfg["novelas"]:
         t = capa["novelas"][n["slug"]]
@@ -344,7 +358,7 @@ def seccion_html(s, n):
         dentro.append("")
         dentro.append(bloque_puerta(d))
     if s.get("galeria") or s.get("medios") or s.get("grabaciones"):
-        capa = json.load(open(os.path.join(RAIZ, "herramientas", "grabaciones.en.json"), encoding="utf-8"))
+        capa = json.load(open(os.path.join(RAIZ, "herramientas", f"grabaciones.{LANG}.json"), encoding="utf-8"))
         if s.get("figura"):
             f = s["figura"]
             w, h = dims(f["img"])
@@ -388,7 +402,7 @@ def portada_hero(d):
   </div>
 </div>
 
-<div class="banda-mar reveal reveal-left" role="img" aria-label="The sea at dusk"></div>"""
+<div class="banda-mar reveal reveal-left" role="img" aria-label="{esc_attr(Z["banda_mar_alt"])}"></div>"""
 
 
 def persona():
@@ -401,18 +415,18 @@ def persona():
         if d.get("@type") == "Person":
             return {k: d[k] for k in ("@type", "@id", "name", "alternateName",
                                       "url", "image", "sameAs") if k in d}
-    sys.exit("gen-ingles: no hay Person en index.html")
+    sys.exit("gen-idioma: no hay Person en index.html")
 
 
 def datos_estructurados(d, url):
-    tipo = "ProfilePage" if d["ruta"] == "/en/author/" else (
+    tipo = "ProfilePage" if d["ruta"] == Z["ruta_autor"] else (
         "WebPage" if not d.get("es_portada") else "WebSite")
     base = {"@context": "https://schema.org", "@type": tipo,
             "name": d["seo_titulo"], "description": d["seo_desc"],
-            "url": url, "inLanguage": "en",
+            "url": url, "inLanguage": LANG,
             "about": {"@id": f"{DOMINIO}/#antonio"}}
     if d.get("es_portada"):
-        base["@id"] = f"{DOMINIO}/en/#site"
+        base["@id"] = f"{DOMINIO}{_portada()}#site"
     else:
         base["isPartOf"] = {"@id": f"{DOMINIO}/#sitio"}
     if tipo == "ProfilePage":
@@ -424,7 +438,7 @@ def datos_estructurados(d, url):
 
 
 def migas(d, url):
-    pasos = [("Ala del Mar", DOMINIO + "/en/")]
+    pasos = [("Ala del Mar", DOMINIO + _portada())]
     if not d.get("es_portada"):
         pasos.append((d["titulo"], url))
     filas = "".join(
@@ -442,9 +456,9 @@ def pagina(d):
     T, D = d["seo_titulo"], d["seo_desc"]
 
     alternos = ""
-    if d["ruta"] in PAREJAS:
-        es = DOMINIO + PAREJAS[d["ruta"]]
-        alternos = (f'\n<link rel="alternate" hreflang="en" href="{url}">'
+    if d["ruta"] in Z["parejas"]:
+        es = DOMINIO + Z["parejas"][d["ruta"]]
+        alternos = (f'\n<link rel="alternate" hreflang="{LANG}" href="{url}">'
                     f'\n<link rel="alternate" hreflang="es" href="{es}">'
                     f'\n<link rel="alternate" hreflang="x-default" href="{es}">')
 
@@ -455,7 +469,7 @@ def pagina(d):
                     f'  <p>{esc(d["subtitulo"])}</p>\n</header>')
 
     secciones = "\n\n".join(seccion_html(s, n) for n, s in enumerate(d.get("secciones", [])))
-    activa = navegacion.seccion_en_de(d["ruta"])
+    activa = navegacion.seccion_de(d["ruta"], LANG)
 
     cuerpo_main = f'<main id="main">\n\n{secciones}\n\n</main>'
     if d.get("es_portada"):
@@ -463,7 +477,7 @@ def pagina(d):
         cabecera = ""
 
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="{L()["lang"]}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -496,15 +510,15 @@ def pagina(d):
 </head>
 <body>
 
-<a class="salto" href="#main">Skip to content</a>
+<a class="salto" href="#main">{esc(L()["saltar"])}</a>
 
 <nav class="nav">
-  <a href="/en/" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-principal">
+  <a href="{_portada()}" class="nav-logo">Ala del Mar</a>
+  <button class="nav-hamburger" type="button" aria-label="{esc_attr(L()["abrir_menu"])}" aria-expanded="false" aria-controls="menu-principal">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="menu-principal">
-{navegacion.menu_en_html(activa)}
+{navegacion.menu_de(LANG, activa)}
   </ul>
 </nav>
 
@@ -513,7 +527,7 @@ def pagina(d):
 
 <footer class="footer">
   <nav class="footer-nav" aria-label="Sections">
-{navegacion.pie_en_html(activa)}
+{navegacion.pie_de(LANG, activa)}
   </nav>
   <div class="footer-socials">
     <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Antonio López Sánchez on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
@@ -530,14 +544,25 @@ def pagina(d):
 
 
 def main():
-    cfg = json.load(open(os.path.join(RAIZ, "herramientas", "ingles.json"), encoding="utf-8"))
-    for d in cfg["paginas"]:
-        destino = os.path.join(RAIZ, d["ruta"].strip("/").replace("/", os.sep), "index.html")
-        os.makedirs(os.path.dirname(destino), exist_ok=True)
-        with open(destino, "w", encoding="utf-8", newline="") as f:
-            f.write(pagina(d))
-        n = len(d.get("secciones", []))
-        print(f"escrito: {d['ruta']} · {n} secciones")
+    global LANG, Z
+    # Una zona por idioma: herramientas/zona.<idioma>.json. El español no
+    # tiene, porque sus paginas de seccion estan escritas a mano.
+    zonas = marco.lenguas_con_capa("zona")
+    if not zonas:
+        sys.exit("no hay ninguna zona: falta herramientas/zona.<idioma>.json")
+    for lang, cfg in zonas.items():
+        LANG, Z = lang, cfg
+        if lang not in IDIOMAS:
+            sys.exit(f"zona.{lang}.json existe pero {lang} no esta en idiomas.json")
+        if lang not in navegacion.IDIOMAS:
+            sys.exit(f"zona.{lang}.json existe pero {lang} no tiene menu en navegacion.py")
+        for d in cfg["paginas"]:
+            destino = os.path.join(RAIZ, d["ruta"].strip("/").replace("/", os.sep), "index.html")
+            os.makedirs(os.path.dirname(destino), exist_ok=True)
+            with open(destino, "w", encoding="utf-8", newline="") as f:
+                f.write(pagina(d))
+            n = len(d.get("secciones", []))
+            print(f"escrito: {d['ruta']} · {n} secciones")
 
 
 if __name__ == "__main__":

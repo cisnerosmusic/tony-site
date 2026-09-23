@@ -222,7 +222,7 @@ def generado_al_dia():
                ["python", "herramientas/gen-llms.py"],
                ["python", "herramientas/gen-portada.py"],
                ["python", "herramientas/gen-audios.py"],
-               ["python", "herramientas/gen-ingles.py"],
+               ["python", "herramientas/gen-idioma.py"],
                ["python", "herramientas/gen-legal.py"],
                ["python", "herramientas/gen-404.py"]]
     for m in sorted(glob.glob(os.path.join(RAIZ, "herramientas", "libros", "*.json"))):

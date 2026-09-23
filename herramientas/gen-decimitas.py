@@ -27,6 +27,7 @@ CSS = "?v=36"
 
 ES = {
     "ruta": "/tinta-ciones/de-cimitas/",
+    "seccion": "/tinta-ciones/",
     "frase": "Una foto y diez versos que le contestan.",
     "titulo_sala": "Lo que mira la décima",
     "entrada": "Otro modo de hacer poesía es buscar la voz oculta, las historias que habitan detrás de una imagen. Aquí van mis fotos vistas y el poema que escucho en ellas.",
@@ -148,7 +149,7 @@ def pagina_decimitas(lang, V, cfg, trozos, capas):
     es = lang == "es"
     la = "" if es else ' lang="es"'
     url = DOMINIO + V["ruta"]
-    seccion = "/tinta-ciones/" if es else "/en/poetry/"
+    seccion = V["seccion"]
     sonata = capas[lang]["_sonata_ruta"]
 
     piezas = "\n\n".join(pieza(d, trozos[d["titulo_doc"]], i,

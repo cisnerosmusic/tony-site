@@ -151,6 +151,12 @@ No son tareas, así que no viven en `PENDIENTES.md`. Son decisiones tomadas, cas
 - **Los diplomas del Farraluque no se publican como imagen**, porque eran fotos de folios. Sus datos están como texto en Laureles.
 
 **Inglés y demás idiomas**
+- **Ningún generador sabe cuál es el segundo idioma.** Hasta el 22 de septiembre de 2026, el inglés estaba escrito dentro del código: dos parejas de funciones de navegación casi iguales con el enlace al otro idioma clavado dentro, un `if es else "/en/poetry/"` en cuatro generadores, y `gen-ingles.py` leyendo `ingles.json` con trece rutas `/en/` a mano. Con cinco idiomas eso se habría escrito cuatro veces. Ahora:
+  - `navegacion.IDIOMAS` declara cada idioma entero (menú, pie, portada, etiqueta) y **el enlace entre idiomas se arma solo**: cada menú enlaza a todos los demás del registro.
+  - La sección de menú que enciende cada sala es un dato de su capa (`seccion`), no un `if`.
+  - `gen-idioma.py` (antes `gen-ingles.py`) escribe **una zona por idioma**, desde `herramientas/zona.<idioma>.json`, y de ahí salen las parejas de `hreflang`, el orden de los grupos del catálogo, los rótulos y el alt de la banda de mar.
+
+  **Añadir un idioma es escribir datos y ninguna línea de código.** Comprobado: se registró un francés mínimo en memoria y salió su portada entera, con su menú, su `hreflang`, su JSON-LD y el selector con ES y EN. Y la reforma no movió ni un byte de las 117 páginas: se comparó una a una antes y después.
 - **El orden inglés es otro: trova, poesía, narrativa.** Decisión de Ernesto, 9 de septiembre de 2026, razonada en `PRODUCT.md` y en la cabecera de `navegacion.py`.
 - **La autoridad se demuestra con hechos comprobables**, no se declara con superlativos.
 - **La décima y la glosa se explican**, porque un editor anglófono no sabe qué son.

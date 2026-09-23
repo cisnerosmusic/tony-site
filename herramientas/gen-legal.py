@@ -23,6 +23,11 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 CSS = "?v=36"
 
+# Aqui hay una funcion que se llama pagina(), asi que el marco comun no se
+# puede importar con su nombre: de idiomas.json solo hacen falta las etiquetas
+# de interfaz, y se leen directamente.
+IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
+
 
 def esc(t):
     return html.escape(t, quote=False)
@@ -79,17 +84,22 @@ def pagina(clave, cfg, todos):
              "isPartOf": {"@id": f"{DOMINIO}/#sitio"},
              "about": {"@id": f"{DOMINIO}/#antonio"}}
 
-    # Las dos navegaciones salen de navegacion.py. La inglesa estuvo escrita
-    # a mano aqui y era la cuarta definicion suelta del proyecto.
-    if d["lang"] == "es":
-        menu = navegacion.menu_html(None)
-        pie = navegacion.pie_html(None)
-    else:
-        menu = navegacion.menu_en_html("/en/rights/")
-        pie = navegacion.pie_en_html("/en/rights/")
+    # La navegacion sale de navegacion.py. La inglesa estuvo escrita a mano
+    # aqui y era la cuarta definicion suelta del proyecto.
+    #
+    # En español el aviso de derechos no esta en el menu de arriba, solo en el
+    # pie, asi que no enciende ninguna seccion; en los demas idiomas si. Lo
+    # dice la propia ruta del aviso, no el codigo del idioma: con cinco
+    # idiomas, un "if es" por cada diferencia vuelve a ser inmanejable.
+    lang = d["lang"]
+    activa = navegacion.seccion_de(d["ruta"], lang)
+    menu = navegacion.menu_de(lang, activa)
+    pie = navegacion.pie_de(lang, activa)
 
-    etiqueta_menu = "Open menu" if d["lang"] == "en" else "Abrir menú"
-    saltar = "Skip to content" if d["lang"] == "en" else "Saltar al contenido"
+    # Las etiquetas de interfaz viven en idiomas.json desde que hay capas, y un
+    # idioma nuevo las trae ahi con todo lo demas.
+    etiqueta_menu = IDIOMAS[lang]["abrir_menu"]
+    saltar = IDIOMAS[lang]["saltar"]
 
     return f"""<!DOCTYPE html>
 <html lang="{d["lang"]}">

@@ -1,6 +1,7 @@
 {
   "_nota": "Laureles: los premios del autor. Genera /laureles/ y su version en cada idioma con capa (laureles.<idioma>.json). Los textos admiten enlaces y cursivas; en cada idioma enlazan a las paginas de ese idioma. La capa tiene que traer los mismos premios, en el mismo orden y con los mismos años: el generador se para si no.",
   "ruta": "/laureles/",
+  "seccion": "/laureles/",
   "h1": "Laureles",
   "frase": "Los premios que ha ido dejando el oficio. No escribo para ellos, pero cuando llegan, se agradecen.",
   "nota": "También he recibido estímulos por trabajos premiados en Festivales Nacionales de Prensa, y algún laurel más andará traspapelado entre mis cuartillas.",

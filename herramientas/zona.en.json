@@ -1,6 +1,27 @@
 {
-  "_nota": "Copia del sitio en ingles. La genera gen-ingles.py. Regla firme: el aparato va en ingles y la literatura se queda en español, siempre. Los titulos de los libros no se traducen; si hace falta, se glosa el sentido entre parentesis la primera vez. El orden de las secciones no es el del sitio español y no es un descuido: para el lector anglosajon la puerta de entrada es la investigacion sobre la Nueva Trova. Razonado en PRODUCT.md y decidido por Ernesto el 9 de septiembre de 2026.",
-
+  "_nota": "Zona inglesa completa: las paginas propias de la version inglesa, que no salen de ninguna sala española. Un idioma nuevo es una copia de este archivo con su codigo, zona.<idioma>.json, mas su bloque en idiomas.json y en navegacion.py. El generador no cambia.",
+  "lang": "en",
+  "parejas": {
+    "/en/": "/",
+    "/en/trova/": "/trova/",
+    "/en/poetry/": "/tinta-ciones/",
+    "/en/author/": "/periodista/",
+    "/en/poetry/in-my-voice/": "/tinta-ciones/en-mi-voz/",
+    "/en/author/on-record/": "/plano-abierto/",
+    "/en/books/among-readers/": "/entre-lectores/"
+  },
+  "ruta_autor": "/en/author/",
+  "banda_mar_alt": "The sea at dusk",
+  "orden_libros": [
+    "Fiction",
+    "The Nueva Trova",
+    "Poetry",
+    "Collective volumes"
+  ],
+  "rotulos_poemas": {
+    "sueltos": "Poems",
+    "glosas": "Glosas"
+  },
   "paginas": [
     {
       "ruta": "/en/",
@@ -12,10 +33,23 @@
       "seo_desc": "Cuban writer, poet and journalist. Two decades documenting the Nueva Trova, poetry in décima, and heroic fantasy. World rights available outside Cuba.",
       "aviso_idioma": "Literary texts are always published in their original Spanish. Everything written about them is in English.",
       "acciones": [
-        {"texto": "The trova", "url": "/en/trova/", "relleno": true},
-        {"texto": "Poetry", "url": "/en/poetry/"},
-        {"texto": "Books", "url": "/en/books/"},
-        {"texto": "Rights", "url": "/en/rights/"}
+        {
+          "texto": "The trova",
+          "url": "/en/trova/",
+          "relleno": true
+        },
+        {
+          "texto": "Poetry",
+          "url": "/en/poetry/"
+        },
+        {
+          "texto": "Books",
+          "url": "/en/books/"
+        },
+        {
+          "texto": "Rights",
+          "url": "/en/rights/"
+        }
       ],
       "secciones": [
         {
@@ -34,7 +68,10 @@
             "Fourteen published books across twenty-five years, in genres that rarely share a shelf. For a reader arriving in English, these are the three doors, in the order that makes sense from here."
           ],
           "enlaces": [
-            {"texto": "All fourteen books", "url": "/en/books/"}
+            {
+              "texto": "All fourteen books",
+              "url": "/en/books/"
+            }
           ],
           "puertas": [
             {
@@ -67,14 +104,24 @@
             "Rights offered here are Antonio López Sánchez's own work only. In collective volumes and anthologies, availability covers solely the texts he wrote."
           ],
           "enlaces": [
-            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true, "relleno": true},
-            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art"},
-            {"texto": "Full rights notice", "url": "/en/rights/"}
+            {
+              "texto": "Literary representation",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true,
+              "relleno": true
+            },
+            {
+              "texto": "Write about rights",
+              "url": "mailto:derechos@antoniolopezsanchez.art"
+            },
+            {
+              "texto": "Full rights notice",
+              "url": "/en/rights/"
+            }
           ]
         }
       ]
     },
-
     {
       "ruta": "/en/trova/",
       "titulo": "The Nueva Trova",
@@ -135,7 +182,10 @@
             "Work in the Cuban music press: AM PM Magazine, La Jiribilla, El Caimán Barbudo, La Gaceta de Cuba, and the cultural sections of the magazines Mujeres and Muchacha from 2001 to 2010."
           ],
           "enlaces": [
-            {"texto": "Listen to the recordings", "url": "/en/author/on-record/"}
+            {
+              "texto": "Listen to the recordings",
+              "url": "/en/author/on-record/"
+            }
           ]
         },
         {
@@ -146,13 +196,20 @@
             "These are the shortest books to bring into English on this list: essays and interviews rather than novels, and a subject with a defined academic readership. Full manuscripts and synopses are available on request."
           ],
           "enlaces": [
-            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art", "relleno": true},
-            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+            {
+              "texto": "Write about rights",
+              "url": "mailto:derechos@antoniolopezsanchez.art",
+              "relleno": true
+            },
+            {
+              "texto": "Literary representation",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true
+            }
           ]
         }
       ]
     },
-
     {
       "ruta": "/en/poetry/",
       "titulo": "Poetry",
@@ -167,9 +224,19 @@
             "Everything written <em>about</em> the poems is in English. The poems themselves are in the language they were written in."
           ],
           "enlaces": [
-            {"texto": "Read the poems", "url": "/en/poetry/poems/", "relleno": true},
-            {"texto": "Décimas with photographs", "url": "/en/poetry/decimitas/"},
-            {"texto": "In the author's own voice", "url": "/en/poetry/in-my-voice/"}
+            {
+              "texto": "Read the poems",
+              "url": "/en/poetry/poems/",
+              "relleno": true
+            },
+            {
+              "texto": "Décimas with photographs",
+              "url": "/en/poetry/decimitas/"
+            },
+            {
+              "texto": "In the author's own voice",
+              "url": "/en/poetry/in-my-voice/"
+            }
           ]
         },
         {
@@ -222,13 +289,20 @@
             "The second is a bilingual edition. The décima is a formal problem worth an ambitious translator, and a facing-page edition is the honest way to publish it in English. Anyone interested in that conversation should write."
           ],
           "enlaces": [
-            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art", "relleno": true},
-            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+            {
+              "texto": "Write about rights",
+              "url": "mailto:derechos@antoniolopezsanchez.art",
+              "relleno": true
+            },
+            {
+              "texto": "Literary representation",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true
+            }
           ]
         }
       ]
     },
-
     {
       "ruta": "/en/fiction/",
       "titulo": "Fiction",
@@ -311,8 +385,14 @@
             "Short fiction is often the cheapest way for a foreign publisher to test an author. Individual stories are available for magazine and anthology publication, in Spanish or in translation."
           ],
           "enlaces": [
-            {"texto": "Read the stories", "url": "/en/stories/"},
-            {"texto": "The full catalogue", "url": "/en/books/"}
+            {
+              "texto": "Read the stories",
+              "url": "/en/stories/"
+            },
+            {
+              "texto": "The full catalogue",
+              "url": "/en/books/"
+            }
           ]
         },
         {
@@ -323,13 +403,20 @@
             "Five poetry collections and three story collections are finished and unpublished. Nothing has been offered anywhere outside Cuba."
           ],
           "enlaces": [
-            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art", "relleno": true},
-            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+            {
+              "texto": "Write about rights",
+              "url": "mailto:derechos@antoniolopezsanchez.art",
+              "relleno": true
+            },
+            {
+              "texto": "Literary representation",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true
+            }
           ]
         }
       ]
     },
-
     {
       "ruta": "/en/author/",
       "titulo": "The author",
@@ -353,8 +440,14 @@
             "We are open to offers to translate any part of it, into any language: a single book, the whole fiction, the three volumes on the Nueva Trova, the poetry, the stories or the unpublished novels. Rights for editions and translations outside Cuba are free, and the enquiry goes to the author's literary representation."
           ],
           "enlaces": [
-            {"texto": "Rights and how they work", "url": "/en/rights/"},
-            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art"}
+            {
+              "texto": "Rights and how they work",
+              "url": "/en/rights/"
+            },
+            {
+              "texto": "Write about rights",
+              "url": "mailto:derechos@antoniolopezsanchez.art"
+            }
           ]
         },
         {
@@ -383,7 +476,11 @@
             "<strong>1998</strong> <span class=\"meta frase\">Graduates in Social Communication from the University of Havana.</span>"
           ],
           "enlaces": [
-            {"texto": "The full record, in Spanish", "url": "/periodista/", "lang": "es"}
+            {
+              "texto": "The full record, in Spanish",
+              "url": "/periodista/",
+              "lang": "es"
+            }
           ]
         },
         {
@@ -393,7 +490,10 @@
             "Seven awards and honourable mentions between 2002 and 2026, among them the Premio La Rosa Blanca of UNEAC for <em>Las guerreras de la luz</em> and, in 2026 alone, the First Prize in Poetry of the Premio Farraluque and the Premio Colateral Yasmina Calcines."
           ],
           "enlaces": [
-            {"texto": "All the awards", "url": "/en/awards/"}
+            {
+              "texto": "All the awards",
+              "url": "/en/awards/"
+            }
           ]
         },
         {
@@ -403,7 +503,10 @@
           ],
           "obras": "libros",
           "enlaces": [
-            {"texto": "The catalogue, with covers", "url": "/en/books/"}
+            {
+              "texto": "The catalogue, with covers",
+              "url": "/en/books/"
+            }
           ]
         },
         {
@@ -422,7 +525,10 @@
           ],
           "obras": "cuentos",
           "enlaces": [
-            {"texto": "The story room", "url": "/en/stories/"}
+            {
+              "texto": "The story room",
+              "url": "/en/stories/"
+            }
           ]
         },
         {
@@ -433,7 +539,10 @@
           ],
           "obras": "poemas",
           "enlaces": [
-            {"texto": "The poetry room", "url": "/en/poetry/poems/"}
+            {
+              "texto": "The poetry room",
+              "url": "/en/poetry/poems/"
+            }
           ]
         },
         {
@@ -443,9 +552,18 @@
           ],
           "obras": "decimitas",
           "enlaces": [
-            {"texto": "See them with their photographs", "url": "/en/poetry/decimitas/"},
-            {"texto": "Sonata de la lluvia", "url": "/en/poetry/sonata-de-la-lluvia/"},
-            {"texto": "Poems in his own voice", "url": "/en/poetry/in-my-voice/"}
+            {
+              "texto": "See them with their photographs",
+              "url": "/en/poetry/decimitas/"
+            },
+            {
+              "texto": "Sonata de la lluvia",
+              "url": "/en/poetry/sonata-de-la-lluvia/"
+            },
+            {
+              "texto": "Poems in his own voice",
+              "url": "/en/poetry/in-my-voice/"
+            }
           ]
         },
         {
@@ -456,7 +574,10 @@
           ],
           "obras": "ineditos",
           "enlaces": [
-            {"texto": "The unpublished room", "url": "/en/unpublished/"}
+            {
+              "texto": "The unpublished room",
+              "url": "/en/unpublished/"
+            }
           ]
         },
         {
@@ -465,9 +586,20 @@
             "For readers, press and invitations, write to the author directly. For rights, editions and translations outside Cuba, write to his representation. Nothing on this site has been translated yet, and every part of it is open to an offer."
           ],
           "enlaces": [
-            {"texto": "Write to the author", "url": "mailto:antonio@antoniolopezsanchez.art", "relleno": true},
-            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art"},
-            {"texto": "Literary representation", "url": "https://ernestocisneros.art/literary-representation.html", "externo": true}
+            {
+              "texto": "Write to the author",
+              "url": "mailto:antonio@antoniolopezsanchez.art",
+              "relleno": true
+            },
+            {
+              "texto": "Write about rights",
+              "url": "mailto:derechos@antoniolopezsanchez.art"
+            },
+            {
+              "texto": "Literary representation",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true
+            }
           ]
         }
       ]
@@ -504,17 +636,50 @@
         {
           "titulo": "On television",
           "medios": [
-            {"tipo": "video", "titulo": "Entre libros", "lang": "es", "meta": "Television programme, 25 May 2019 · fourteen minutes", "src": "/video/entre-libros-2019.mp4", "poster": "/img/entre-libros-poster.webp", "ancho": 720, "alto": 480, "sin_video": "Your browser cannot play this video; you can <a href=\"{}\">download the recording</a>."},
-            {"tipo": "enlace", "titulo": "Conociendo al periodista Antonio López Sánchez", "lang": "es", "meta": "Video interview, on the occasion of the XXX Premio Nacional Emilio Ballagas, where I was one of the guests", "url": "https://youtu.be/PJkZVXQkwnA", "boton": "Watch the interview"}
+            {
+              "tipo": "video",
+              "titulo": "Entre libros",
+              "lang": "es",
+              "meta": "Television programme, 25 May 2019 · fourteen minutes",
+              "src": "/video/entre-libros-2019.mp4",
+              "poster": "/img/entre-libros-poster.webp",
+              "ancho": 720,
+              "alto": 480,
+              "sin_video": "Your browser cannot play this video; you can <a href=\"{}\">download the recording</a>."
+            },
+            {
+              "tipo": "enlace",
+              "titulo": "Conociendo al periodista Antonio López Sánchez",
+              "lang": "es",
+              "meta": "Video interview, on the occasion of the XXX Premio Nacional Emilio Ballagas, where I was one of the guests",
+              "url": "https://youtu.be/PJkZVXQkwnA",
+              "boton": "Watch the interview"
+            }
           ]
         },
         {
           "titulo": "On the radio",
           "alt": true,
-          "figura": {"img": "/img/album/en-la-radio.webp", "alt": "Two people wearing headphones at the microphones in a radio booth", "pie": "On the radio, from the Havana International Book Fair"},
+          "figura": {
+            "img": "/img/album/en-la-radio.webp",
+            "alt": "Two people wearing headphones at the microphones in a radio booth",
+            "pie": "On the radio, from the Havana International Book Fair"
+          },
           "medios": [
-            {"tipo": "audio", "titulo": "Mi libro preferido", "lang": "es", "meta": "Habana Radio, 17 April 2018 · directed and presented by the journalist and literary critic Fernando Rodríguez Sosa · thirty-one minutes", "src": "/audio/mi-libro-preferido-2018.mp3"},
-            {"tipo": "audio", "titulo": "Invitación a la lectura", "lang": "es", "meta": "Habana Radio, 16 May 2018 · directed and presented by the journalist and literary critic Fernando Rodríguez Sosa · thirty minutes", "src": "/audio/invitacion-a-la-lectura-2018.mp3"}
+            {
+              "tipo": "audio",
+              "titulo": "Mi libro preferido",
+              "lang": "es",
+              "meta": "Habana Radio, 17 April 2018 · directed and presented by the journalist and literary critic Fernando Rodríguez Sosa · thirty-one minutes",
+              "src": "/audio/mi-libro-preferido-2018.mp3"
+            },
+            {
+              "tipo": "audio",
+              "titulo": "Invitación a la lectura",
+              "lang": "es",
+              "meta": "Habana Radio, 16 May 2018 · directed and presented by the journalist and literary critic Fernando Rodríguez Sosa · thirty minutes",
+              "src": "/audio/invitacion-a-la-lectura-2018.mp3"
+            }
           ]
         },
         {
@@ -545,20 +710,67 @@
             "A book is not finished when I write it, nor when it is printed. It is finished when someone opens it. These are fairs, tables, queues and booksellers, who know more about this than anyone."
           ],
           "galeria": [
-            {"img": "/img/album/libreras-habana-2.webp", "alt": "Two people holding copies of the book at a fair", "pie": "With booksellers, who know more about this than anyone. Havana Book Fair"},
-            {"img": "/img/album/libreras-habana-1.webp", "alt": "Copies in hand, next to a fair's sales table", "pie": "Havana International Book Fair"},
-            {"img": "/img/album/libreras-santiago.webp", "alt": "Several people posing with copies of the book in the street", "pie": "Book Fair in Santiago de Cuba"},
-            {"img": "/img/album/firma-santiago.webp", "alt": "Signing a copy held in one hand, out in the street", "pie": "Signing books in Santiago de Cuba"},
-            {"img": "/img/album/firma-camaguey.webp", "alt": "Signing copies at a table, in front of a bookshop door", "pie": "Signing at the 33rd International Book Fair, Camagüey, March 2025"},
-            {"img": "/img/album/cartel-camaguey.webp", "alt": "Standing beside the poster of the 33rd International Book Fair in Camagüey", "pie": "The 33rd International Book Fair, Camagüey"},
-            {"img": "/img/album/mis-libros-mesa.webp", "alt": "Arms open before a table covered with copies", "pie": "My books"},
-            {"img": "/img/album/onelio-panel.webp", "alt": "A long table with several participants during a panel of readings and debates", "pie": "Organised by the Onelio Jorge Cardoso Centre for Literary Training"},
-            {"img": "/img/album/onelio-cartel.webp", "alt": "Poster for the series Los onelianos cuentan, with a portrait of the author", "pie": "Los onelianos cuentan, readings and debates with graduates of the Onelio Centre, Book Fair 2022"},
-            {"img": "/img/album/don-alejo.webp", "alt": "Portrait in front of a large poster of Alejo Carpentier's face", "pie": "With Don Alejo Carpentier, Havana Book Fair"},
-            {"img": "/img/album/el-gato.webp", "alt": "A tabby cat resting on a copy of Convertida en canción", "pie": "Even the cat reads my books"}
+            {
+              "img": "/img/album/libreras-habana-2.webp",
+              "alt": "Two people holding copies of the book at a fair",
+              "pie": "With booksellers, who know more about this than anyone. Havana Book Fair"
+            },
+            {
+              "img": "/img/album/libreras-habana-1.webp",
+              "alt": "Copies in hand, next to a fair's sales table",
+              "pie": "Havana International Book Fair"
+            },
+            {
+              "img": "/img/album/libreras-santiago.webp",
+              "alt": "Several people posing with copies of the book in the street",
+              "pie": "Book Fair in Santiago de Cuba"
+            },
+            {
+              "img": "/img/album/firma-santiago.webp",
+              "alt": "Signing a copy held in one hand, out in the street",
+              "pie": "Signing books in Santiago de Cuba"
+            },
+            {
+              "img": "/img/album/firma-camaguey.webp",
+              "alt": "Signing copies at a table, in front of a bookshop door",
+              "pie": "Signing at the 33rd International Book Fair, Camagüey, March 2025"
+            },
+            {
+              "img": "/img/album/cartel-camaguey.webp",
+              "alt": "Standing beside the poster of the 33rd International Book Fair in Camagüey",
+              "pie": "The 33rd International Book Fair, Camagüey"
+            },
+            {
+              "img": "/img/album/mis-libros-mesa.webp",
+              "alt": "Arms open before a table covered with copies",
+              "pie": "My books"
+            },
+            {
+              "img": "/img/album/onelio-panel.webp",
+              "alt": "A long table with several participants during a panel of readings and debates",
+              "pie": "Organised by the Onelio Jorge Cardoso Centre for Literary Training"
+            },
+            {
+              "img": "/img/album/onelio-cartel.webp",
+              "alt": "Poster for the series Los onelianos cuentan, with a portrait of the author",
+              "pie": "Los onelianos cuentan, readings and debates with graduates of the Onelio Centre, Book Fair 2022"
+            },
+            {
+              "img": "/img/album/don-alejo.webp",
+              "alt": "Portrait in front of a large poster of Alejo Carpentier's face",
+              "pie": "With Don Alejo Carpentier, Havana Book Fair"
+            },
+            {
+              "img": "/img/album/el-gato.webp",
+              "alt": "A tabby cat resting on a copy of Convertida en canción",
+              "pie": "Even the cat reads my books"
+            }
           ],
           "enlaces": [
-            {"texto": "Books", "url": "/en/books/"}
+            {
+              "texto": "Books",
+              "url": "/en/books/"
+            }
           ]
         }
       ]

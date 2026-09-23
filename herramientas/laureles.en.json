@@ -1,6 +1,7 @@
 {
   "_nota": "Capa inglesa de Laureles. Mismos premios, mismo orden, mismos años que laureles.json; los enlaces llevan a las paginas inglesas. Los nombres de los premios y de los concursos son nombres propios y se quedan en español.",
   "ruta": "/en/awards/",
+  "seccion": "/en/author/",
   "h1": "Awards",
   "frase": "The prizes the craft has left along the way. I don't write for them, but when they come, they are welcome.",
   "nota": "I have also received recognitions for work awarded at national press festivals, and a laurel or two must still be lost among my papers.",

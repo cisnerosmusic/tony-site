@@ -47,7 +47,8 @@ Archivos de raíz: `index.html`, `styles.css`, `app.js`, `fonts.css`, `robots.tx
 - **Los textos literarios se publican siempre en su español original**, en todos los idiomas del sitio. Se traduce el aparato: navegación, contratapas, notas del autor, fichas, pies de foto y metadatos.
 - **La zona inglesa no es la española traducida.** En español abre la fantasía heroica; en inglés, la investigación sobre la Nueva Trova, luego la poesía y luego la narrativa.
 - **Las páginas de libro son el mismo generador para todos los idiomas.** Los textos de interfaz de cada idioma están en `herramientas/idiomas.json`, y lo traducido de cada libro, en una capa: `herramientas/libros/<idioma>/<slug>.json`. Esas capas no tienen campo para los fragmentos, así que un fragmento traducido no puede colarse.
-- **Añadir un idioma**: su bloque en `idiomas.json`, su menú en `herramientas/navegacion.py`, las catorce capas de libro y una capa por sala (`cuentos`, `poemas`, `decimitas`, `sonata`, `farraluque`, `ineditos`, `laureles`, `grabaciones` y `periodismo`), con el nombre `herramientas/<sala>.<idioma>.json`. No hace falta tocar ningún generador: cada uno publica la sala en los idiomas que tengan capa, y se salta los que no.
+- **Añadir un idioma es escribir datos, nunca código.** Hacen falta cuatro cosas: su bloque en `idiomas.json`, su menú en `herramientas/navegacion.py`, su zona `herramientas/zona.<idioma>.json` (la portada y las páginas de sección propias, que no salen de ninguna sala española), y las capas: catorce de libro en `herramientas/libros/<idioma>/` y una por sala (`cuentos`, `poemas`, `decimitas`, `sonata`, `farraluque`, `ineditos`, `laureles`, `grabaciones` y `periodismo`), con el nombre `herramientas/<sala>.<idioma>.json`. Cada generador publica la sala en los idiomas que tengan capa y se salta los que no, y el enlace entre idiomas del menú se arma solo.
+- **Son unas 995 cadenas por idioma**, de las cuales 382 son las ocho páginas propias de la zona y 245 las capas de libro. El resto es aparato corto.
 
 ## Añadir contenido
 
@@ -65,7 +66,7 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-farraluque.py` | las dos obras del Farraluque, en Laureles, en cada idioma | sus `.txt` en `textos/laureles/`, `farraluque.<idioma>.json` |
 | `gen-periodismo.py` | la página de cada trabajo de prensa y el archivo dentro de `/periodista/` | `periodismo.json`, sus `.txt` en `textos/periodismo/` |
 | `gen-audios.py` | las grabaciones, repartidas a las salas que las reclaman | `grabaciones.json` |
-| `gen-ingles.py` | las páginas de sección inglesas, y En mi voz, Plano abierto y Entre lectores en inglés | `ingles.json`, `grabaciones.en.json` |
+| `gen-idioma.py` | las páginas propias de cada idioma extranjero: su portada, sus secciones y su concentrador | `zona.<idioma>.json` y todos los manifiestos |
 | `gen-legal.py` | `/derechos/` y `/en/rights/` | `legal.json` |
 | `gen-404.py` | el 404, en los dos idiomas | `navegacion.py` |
 | `gen-tarjetas.py` | la postal de cada libro para redes, 1200 x 630: cubierta a la izquierda, título a la derecha | `libros/<slug>.json` y las cubiertas |
