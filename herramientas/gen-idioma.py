@@ -393,7 +393,7 @@ def seccion_html(s, n):
 def portada_hero(d):
     acciones = "\n        ".join(boton(a) for a in d["acciones"])
     return f"""<div class="split">
-  <div class="split-image" style="background-image:url('{RETRATO}');" role="img" aria-label="Antonio López Sánchez over Havana Bay"></div>
+  <div class="split-image" style="background-image:url('{RETRATO}');" role="img" aria-label="{esc_attr(Z["retrato_alt"])}"></div>
   <div class="split-content">
     <div class="reveal reveal-right">
       <h1>
