@@ -843,10 +843,12 @@ html:not(.it) .solo-it { display: none !important; }
 html:not(.pt) .solo-pt { display: none !important; }
 
 /* ── Responsive ─────────────────────────────── */
-/* La barra lleva nueve secciones mas el idioma. Medido en el navegador: a
-   tamano completo pide 1033px, que en un portatil de 1280 solo deja 6px de
-   margen. Entre 1081 y 1440 se aprieta el espaciado y baja a 809px, con lo que
-   cabe holgada; por debajo de 1081 pasa a hamburguesa. */
+/* La barra española lleva nueve secciones mas los cuatro idiomas. Medido en el
+   navegador el 23 de septiembre de 2026, ya con los cinco idiomas: a tamano
+   completo pide 1123px, que en 1441 deja 85px de margen sobre el logo, y en
+   1600, 244px. Entre 1081 y 1440 se aprieta el espaciado y baja a 874px, con lo
+   que cabe holgada; por debajo de 1081 pasa a hamburguesa. Un idioma mas ya no
+   cabria a 1441: ahi habria que decidir el selector desplegable. */
 @media (max-width: 1440px) and (min-width: 1081px) {
   .nav { padding: 1.25rem 2rem; }
   .nav-links { --nav-gap: 1.15rem; }

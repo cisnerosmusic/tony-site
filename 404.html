@@ -18,6 +18,16 @@
     document.documentElement.className = 'fr';
     document.title = 'Page introuvable | Ala del Mar';
   }
+  if (zona === 'it') {
+    document.documentElement.lang = 'it';
+    document.documentElement.className = 'it';
+    document.title = 'Pagina non trovata | Ala del Mar';
+  }
+  if (zona === 'pt') {
+    document.documentElement.lang = 'pt';
+    document.documentElement.className = 'pt';
+    document.title = 'Página não encontrada | Ala del Mar';
+  }
 </script>
 <meta name="description" content="Esta página no existe en Ala del Mar, la casa de Antonio López Sánchez.">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -27,13 +37,15 @@
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css?v=6">
-<link rel="stylesheet" href="/styles.css?v=38">
+<link rel="stylesheet" href="/styles.css?v=39">
 </head>
 <body>
 
 <a class="salto solo-es" href="#main">Saltar al contenido</a>
 <a class="salto solo-en" href="#main">Skip to content</a>
 <a class="salto solo-fr" href="#main">Aller au contenu</a>
+<a class="salto solo-it" href="#main">Vai al contenuto</a>
+<a class="salto solo-pt" href="#main">Ir para o conteúdo</a>
 
 <nav class="nav solo-es">
   <a href="/" class="nav-logo">Ala del Mar</a>
@@ -52,6 +64,8 @@
     <li><a href="/directorio/">Directorio</a></li>
     <li class="nav-idioma nav-idioma-primero"><a href="/en/" lang="en" hreflang="en">EN</a></li>
     <li class="nav-idioma"><a href="/fr/" lang="fr" hreflang="fr">FR</a></li>
+    <li class="nav-idioma"><a href="/it/" lang="it" hreflang="it">IT</a></li>
+    <li class="nav-idioma"><a href="/pt/" lang="pt" hreflang="pt">PT</a></li>
   </ul>
 </nav>
 <nav class="nav solo-en">
@@ -67,6 +81,8 @@
     <li><a href="/en/rights/">Rights</a></li>
     <li class="nav-idioma nav-idioma-primero"><a href="/" lang="es" hreflang="es">ES</a></li>
     <li class="nav-idioma"><a href="/fr/" lang="fr" hreflang="fr">FR</a></li>
+    <li class="nav-idioma"><a href="/it/" lang="it" hreflang="it">IT</a></li>
+    <li class="nav-idioma"><a href="/pt/" lang="pt" hreflang="pt">PT</a></li>
   </ul>
 </nav>
 <nav class="nav solo-fr">
@@ -82,6 +98,42 @@
     <li><a href="/fr/droits/">Droits</a></li>
     <li class="nav-idioma nav-idioma-primero"><a href="/" lang="es" hreflang="es">ES</a></li>
     <li class="nav-idioma"><a href="/en/" lang="en" hreflang="en">EN</a></li>
+    <li class="nav-idioma"><a href="/it/" lang="it" hreflang="it">IT</a></li>
+    <li class="nav-idioma"><a href="/pt/" lang="pt" hreflang="pt">PT</a></li>
+  </ul>
+</nav>
+<nav class="nav solo-it">
+  <a href="/it/" class="nav-logo">Ala del Mar</a>
+  <button class="nav-hamburger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principal-it">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="menu-principal-it">
+    <li><a href="/it/trova/">La trova</a></li>
+    <li><a href="/it/poesia/">Poesia</a></li>
+    <li><a href="/it/libri/">Libri</a></li>
+    <li><a href="/it/autore/">L'autore</a></li>
+    <li><a href="/it/diritti/">Diritti</a></li>
+    <li class="nav-idioma nav-idioma-primero"><a href="/" lang="es" hreflang="es">ES</a></li>
+    <li class="nav-idioma"><a href="/en/" lang="en" hreflang="en">EN</a></li>
+    <li class="nav-idioma"><a href="/fr/" lang="fr" hreflang="fr">FR</a></li>
+    <li class="nav-idioma"><a href="/pt/" lang="pt" hreflang="pt">PT</a></li>
+  </ul>
+</nav>
+<nav class="nav solo-pt">
+  <a href="/pt/" class="nav-logo">Ala del Mar</a>
+  <button class="nav-hamburger" type="button" aria-label="Abrir o menu" aria-expanded="false" aria-controls="menu-principal-pt">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="menu-principal-pt">
+    <li><a href="/pt/trova/">A trova</a></li>
+    <li><a href="/pt/poesia/">Poesia</a></li>
+    <li><a href="/pt/livros/">Livros</a></li>
+    <li><a href="/pt/autor/">O autor</a></li>
+    <li><a href="/pt/direitos/">Direitos</a></li>
+    <li class="nav-idioma nav-idioma-primero"><a href="/" lang="es" hreflang="es">ES</a></li>
+    <li class="nav-idioma"><a href="/en/" lang="en" hreflang="en">EN</a></li>
+    <li class="nav-idioma"><a href="/fr/" lang="fr" hreflang="fr">FR</a></li>
+    <li class="nav-idioma"><a href="/it/" lang="it" hreflang="it">IT</a></li>
   </ul>
 </nav>
 
@@ -128,6 +180,34 @@
   </div>
 </div>
 </div>
+<div class="solo-it">
+<header class="page-header">
+  <h1>Questa pagina si è persa nella libreria</h1>
+  <p>L'indirizzo che cercavi non esiste in questa casa, o ha cambiato stanza.</p>
+</header>
+<div class="section" style="text-align:center;">
+  <p class="section-text" style="margin:0 auto 2.5rem;">Puoi tornare alla pagina iniziale, o andare dritto ai libri. Per un lettore che arriva in italiano, la Nueva Trova è la porta migliore.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+    <a href="/it/" class="btn btn-filled">Pagina iniziale</a>
+    <a href="/it/libri/" class="btn">Libri</a>
+    <a href="/it/trova/" class="btn">La trova</a>
+  </div>
+</div>
+</div>
+<div class="solo-pt">
+<header class="page-header">
+  <h1>Esta página se perdeu na estante</h1>
+  <p>O endereço que você procurava não existe nesta casa, ou mudou de cômodo.</p>
+</header>
+<div class="section" style="text-align:center;">
+  <p class="section-text" style="margin:0 auto 2.5rem;">Você pode voltar à página inicial, ou ir direto aos livros. Para quem chega em português, a Nueva Trova é a melhor entrada.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+    <a href="/pt/" class="btn btn-filled">Página inicial</a>
+    <a href="/pt/livros/" class="btn">Livros</a>
+    <a href="/pt/trova/" class="btn">A trova</a>
+  </div>
+</div>
+</div>
 </main>
 
 <footer class="footer">
@@ -151,6 +231,8 @@
     <a href="/en/rights/">Rights</a>
     <a href="/" lang="es" hreflang="es">Sitio en español</a>
     <a href="/fr/" lang="fr" hreflang="fr">Site en français</a>
+    <a href="/it/" lang="it" hreflang="it">Sito in italiano</a>
+    <a href="/pt/" lang="pt" hreflang="pt">Site em português</a>
   </nav>
   <nav class="footer-nav solo-fr" aria-label="Sections">
     <a href="/fr/trova/">La trova</a>
@@ -160,6 +242,30 @@
     <a href="/fr/droits/">Droits</a>
     <a href="/" lang="es" hreflang="es">Sitio en español</a>
     <a href="/en/" lang="en" hreflang="en">Site in English</a>
+    <a href="/it/" lang="it" hreflang="it">Sito in italiano</a>
+    <a href="/pt/" lang="pt" hreflang="pt">Site em português</a>
+  </nav>
+  <nav class="footer-nav solo-it" aria-label="Sezioni">
+    <a href="/it/trova/">La trova</a>
+    <a href="/it/poesia/">Poesia</a>
+    <a href="/it/libri/">Libri</a>
+    <a href="/it/autore/">L'autore</a>
+    <a href="/it/diritti/">Diritti</a>
+    <a href="/" lang="es" hreflang="es">Sitio en español</a>
+    <a href="/en/" lang="en" hreflang="en">Site in English</a>
+    <a href="/fr/" lang="fr" hreflang="fr">Site en français</a>
+    <a href="/pt/" lang="pt" hreflang="pt">Site em português</a>
+  </nav>
+  <nav class="footer-nav solo-pt" aria-label="Seções">
+    <a href="/pt/trova/">A trova</a>
+    <a href="/pt/poesia/">Poesia</a>
+    <a href="/pt/livros/">Livros</a>
+    <a href="/pt/autor/">O autor</a>
+    <a href="/pt/direitos/">Direitos</a>
+    <a href="/" lang="es" hreflang="es">Sitio en español</a>
+    <a href="/en/" lang="en" hreflang="en">Site in English</a>
+    <a href="/fr/" lang="fr" hreflang="fr">Site en français</a>
+    <a href="/it/" lang="it" hreflang="it">Sito in italiano</a>
   </nav>
   <p class="footer-lema">bene scriptus</p>
   <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>

@@ -16,7 +16,7 @@ Datos verificables del autor:
 - Toda la obra de Antonio López Sánchez está escrita en español y **ninguna parte de ella está traducida**. No existe edición en inglés ni en ningún otro idioma, y no hay muestra traducida.
 - Lo que este sitio ofrece a un editor extranjero es el original: manuscritos completos y sinopsis, que se mandan el mismo día en que se piden.
 - Se aceptan ofertas de traducción a cualquier idioma y para cualquier zona de la obra: un libro suelto, la narrativa entera, los tres volúmenes sobre la Nueva Trova, la poesía, los cuentos o las novelas inéditas. Las consultas van a derechos@antoniolopezsanchez.art y a la representación literaria.
-- Por eso los sitios en inglés y en francés traducen solo el aparato (sinopsis, notas del autor, fichas, pies de foto y metadatos) y publican siempre los textos literarios en su español original, marcados como tales.
+- Por eso los sitios en inglés, francés, italiano y portugués traducen solo el aparato (sinopsis, notas del autor, fichas, pies de foto y metadatos) y publican siempre los textos literarios en su español original, marcados como tales.
 
 ## Libros publicados
 
@@ -158,7 +158,7 @@ Datos verificables del autor:
 
 ## En inglés · In English
 
-El sitio tiene una versión inglesa con un orden distinto y deliberado: para el lector anglosajón la puerta de entrada es la investigación sobre la Nueva Trova, no la fantasía heroica. Los textos literarios no se traducen y siguen en español en las tres versiones.
+El sitio tiene una versión inglesa con un orden distinto y deliberado: para el lector anglosajón la puerta de entrada es la investigación sobre la Nueva Trova, no la fantasía heroica. Los textos literarios no se traducen y siguen en español en las cinco versiones.
 
 - [Ala del Mar, English](https://antoniolopezsanchez.art/en/): portada en inglés.
 - [The author](https://antoniolopezsanchez.art/en/author/): **el concentrador de toda la obra**. Quién es el autor, su hoja de servicios completa y la lista entera de libros, trabajos de prensa, cuentos, poemas, décimas y novelas inéditas, cada uno enlazado. Es la página por la que empezar si se busca el alcance completo.
@@ -179,7 +179,7 @@ El sitio tiene una versión inglesa con un orden distinto y deliberado: para el 
 
 ## En francés · En français
 
-El sitio tiene también una versión francesa, con el mismo orden que la inglesa y por la misma razón: para quien llega de fuera, la puerta de entrada es la investigación sobre la Nueva Trova. Los textos literarios no se traducen y siguen en español en las tres versiones.
+El sitio tiene también una versión francesa, con el mismo orden que la inglesa y por la misma razón: para quien llega de fuera, la puerta de entrada es la investigación sobre la Nueva Trova. Los textos literarios no se traducen y siguen en español en las cinco versiones.
 
 - [Ala del Mar, français](https://antoniolopezsanchez.art/fr/): portada en francés.
 - [L'auteur](https://antoniolopezsanchez.art/fr/auteur/): **el concentrador de toda la obra** en francés. Quién es el autor, su hoja de servicios completa y la lista entera de libros, trabajos de prensa, cuentos, poemas, décimas y novelas inéditas, cada uno enlazado.
@@ -197,6 +197,48 @@ El sitio tiene también una versión francesa, con el mismo orden que la inglesa
 - [Plan large](https://antoniolopezsanchez.art/fr/auteur/plan-large/): radio, televisión y lecturas en público.
 - [Parmi les lecteurs](https://antoniolopezsanchez.art/fr/livres/parmi-les-lecteurs/): ferias, firmas y libreras.
 - [Droits](https://antoniolopezsanchez.art/fr/droits/): aviso de derechos en francés.
+
+## En italiano · In italiano
+
+El sitio tiene también una versión italiana, con el mismo orden que la inglesa y por la misma razón: para quien llega de fuera, la puerta de entrada es la investigación sobre la Nueva Trova. Los textos literarios no se traducen y siguen en español en las cinco versiones.
+
+- [Ala del Mar, italiano](https://antoniolopezsanchez.art/it/): portada en italiano.
+- [L'autore](https://antoniolopezsanchez.art/it/autore/): **el concentrador de toda la obra** en italiano. Quién es el autor, su hoja de servicios completa y la lista entera de libros, trabajos de prensa, cuentos, poemas, décimas y novelas inéditas, cada uno enlazado.
+- [La Nueva Trova](https://antoniolopezsanchez.art/it/trova/): los tres libros sobre la Nueva Trova cubana, 2001 a 2019, presentados para editoriales universitarias y estudios de género y de música popular.
+- [Libri](https://antoniolopezsanchez.art/it/libri/): los catorce libros, cada uno con su página: sinopsis, nota del autor, fragmentos en español y ficha para editores.
+- [Narrativa](https://antoniolopezsanchez.art/it/narrativa/): novelas de fantasía heroica, horror y fantasía infantil, más el cuento breve.
+- [Poesia](https://antoniolopezsanchez.art/it/poesia/): la poesía, qué es una décima y qué es una glosa, explicado para quien no lo conoce.
+- [Poesie](https://antoniolopezsanchez.art/it/poesia/poesie/): los poemas y las glosas, en español.
+- [De-Cimitas](https://antoniolopezsanchez.art/it/poesia/decimitas/): las décimas con sus fotografías.
+- [Sonata de la lluvia](https://antoniolopezsanchez.art/it/poesia/sonata-de-la-lluvia/): la obra premiada en 2026, en tres movimientos.
+- [La mia voce](https://antoniolopezsanchez.art/it/poesia/la-mia-voce/): los poemas leídos por el autor.
+- [Racconti](https://antoniolopezsanchez.art/it/racconti/): los cuentos completos, en español.
+- [Inediti](https://antoniolopezsanchez.art/it/inediti/): las novelas inéditas, con sinopsis y fragmentos.
+- [Premi](https://antoniolopezsanchez.art/it/premi/): los premios, y las dos obras del Premio Farraluque, que se pueden leer enteras.
+- [Campo lungo](https://antoniolopezsanchez.art/it/autore/campo-lungo/): radio, televisión y lecturas en público.
+- [Tra i lettori](https://antoniolopezsanchez.art/it/libri/tra-i-lettori/): ferias, firmas y libreras.
+- [Diritti](https://antoniolopezsanchez.art/it/diritti/): aviso de derechos en italiano.
+
+## En portugués · Em português
+
+El sitio tiene también una versión portuguesa, con el mismo orden que la inglesa y por la misma razón: para quien llega de fuera, la puerta de entrada es la investigación sobre la Nueva Trova. Los textos literarios no se traducen y siguen en español en las cinco versiones. La versión portuguesa se escribe pensando en Brasil, que es el mercado grande, pero se declara pt y no pt-BR, para no dejar fuera a Portugal.
+
+- [Ala del Mar, português](https://antoniolopezsanchez.art/pt/): portada en portugués.
+- [O autor](https://antoniolopezsanchez.art/pt/autor/): **el concentrador de toda la obra** en portugués. Quién es el autor, su hoja de servicios completa y la lista entera de libros, trabajos de prensa, cuentos, poemas, décimas y novelas inéditas, cada uno enlazado.
+- [A Nueva Trova](https://antoniolopezsanchez.art/pt/trova/): los tres libros sobre la Nueva Trova cubana, 2001 a 2019, presentados para editoriales universitarias y estudios de género y de música popular.
+- [Livros](https://antoniolopezsanchez.art/pt/livros/): los catorce libros, cada uno con su página: sinopsis, nota del autor, fragmentos en español y ficha para editores.
+- [Ficção](https://antoniolopezsanchez.art/pt/ficcao/): novelas de fantasía heroica, horror y fantasía infantil, más el cuento breve.
+- [Poesia](https://antoniolopezsanchez.art/pt/poesia/): la poesía, qué es una décima y qué es una glosa, explicado para quien no lo conoce.
+- [Poemas](https://antoniolopezsanchez.art/pt/poesia/poemas/): los poemas y las glosas, en español.
+- [De-Cimitas](https://antoniolopezsanchez.art/pt/poesia/decimitas/): las décimas con sus fotografías.
+- [Sonata de la lluvia](https://antoniolopezsanchez.art/pt/poesia/sonata-de-la-lluvia/): la obra premiada en 2026, en tres movimientos.
+- [Na minha voz](https://antoniolopezsanchez.art/pt/poesia/na-minha-voz/): los poemas leídos por el autor.
+- [Contos](https://antoniolopezsanchez.art/pt/contos/): los cuentos completos, en español.
+- [Inéditos](https://antoniolopezsanchez.art/pt/ineditos/): las novelas inéditas, con sinopsis y fragmentos.
+- [Prêmios](https://antoniolopezsanchez.art/pt/premios/): los premios, y las dos obras del Premio Farraluque, que se pueden leer enteras.
+- [Plano aberto](https://antoniolopezsanchez.art/pt/autor/plano-aberto/): radio, televisión y lecturas en público.
+- [Entre leitores](https://antoniolopezsanchez.art/pt/livros/entre-leitores/): ferias, firmas y libreras.
+- [Direitos](https://antoniolopezsanchez.art/pt/direitos/): aviso de derechos en portugués.
 
 ## Notas de uso
 
