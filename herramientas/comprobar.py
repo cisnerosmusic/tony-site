@@ -115,7 +115,39 @@ def anclas():
                 falla("ancla inexistente", f"{rel(p)} apunta a {destino}#{frag}")
 
 
-# ── 1c. hreflang reciproco: si A dice que B es su version en otro idioma,
+# ── 1c. Cada pagina se declara canonica de si misma ──────────────────────
+def canonicas():
+    """Cada pagina indexable se declara canonica de si misma.
+
+    Una canonica equivocada no rompe nada: la pagina se ve igual, no da 404 y
+    ningun enlace falla. Solo hace que el buscador indexe otra en su lugar, y
+    eso no se nota hasta que alguien mira por que una seccion entera no
+    aparece. Con cinco idiomas hay 257 canonicas y ninguna la vigilaba.
+
+    Lo pregunto una auditoria externa el 23 de septiembre de 2026, sin
+    comprobarlo: estaban bien las 257. La regla existe para que sigan
+    estandolo.
+
+    Las dos redirecciones blandas son la excepcion y van declaradas: apuntan a
+    su destino a proposito, que es justo lo que debe hacer una redireccion."""
+    REDIRECCIONES = {"novelas/index.html": "/libros/",
+                     "poeta/index.html": "/tinta-ciones/"}
+    for p in paginas():
+        t = leer(p)
+        r = rel(p)
+        m = re.search(r'rel="canonical" href="([^"]+)"', t)
+        if not m:
+            if "noindex" not in t:
+                falla("sin canonica", r)
+            continue
+        propia = DOMINIO + (url_de(p) or "/")
+        esperada = DOMINIO + REDIRECCIONES[r] if r in REDIRECCIONES else propia
+        if m.group(1) != esperada:
+            falla("canonica equivocada",
+                  f"{r} se declara canonica de {m.group(1)} y deberia ser {esperada}")
+
+
+# ── 1d. hreflang reciproco: si A dice que B es su version en otro idioma,
 # B tiene que decir lo mismo, y las dos tienen que nombrar a todas las demas.
 #
 # El 23 de septiembre de 2026, con el frances ya publicado, las ocho paginas
@@ -460,6 +492,7 @@ def publicacion_acotada():
 def main():
     enlaces_rotos()
     anclas()
+    canonicas()
     hreflang_reciproco()
     sitemap_cuadra()
     datos_estructurados()
