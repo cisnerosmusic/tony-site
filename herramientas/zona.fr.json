@@ -305,6 +305,7 @@
     },
     {
       "ruta": "/fr/fiction/",
+      "hermana_de": "fiction",
       "titulo": "Fiction",
       "subtitulo": "Fantasy héroïque, horreur, et fantasy pour les plus jeunes.",
       "seo_titulo": "La fiction d'Antonio López Sánchez : fantasy et horreur",

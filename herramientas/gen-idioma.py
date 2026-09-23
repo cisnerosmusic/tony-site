@@ -115,6 +115,9 @@ Z = {}
 # dice a los buscadores que la otra no existe. Lo fija main() antes de escribir.
 ZONAS = {}
 HERMANAS = {}
+# Y las que no tienen equivalente español, agrupadas por el campo "hermana_de"
+# de la pagina: son hermanas entre ellas y de nadie mas.
+HERMANAS_SUELTAS = {}
 
 
 def L():
@@ -472,6 +475,16 @@ def pagina(d):
         alternos = "".join(f'\n<link rel="alternate" hreflang="{l}" href="{DOMINIO}{r}">'
                            for l, r in rutas.items())
         alternos += f'\n<link rel="alternate" hreflang="x-default" href="{DOMINIO}{es}">'
+    elif d.get("hermana_de"):
+        # Paginas que no tienen equivalente español y si lo tienen entre ellas:
+        # hoy /en/fiction/ y /fr/fiction/, que son la misma pagina en dos
+        # idiomas y estuvieron sin decirselo. Sin x-default, porque no hay
+        # version por defecto a la que mandar a quien no hable ninguna.
+        rutas = dict(HERMANAS_SUELTAS[d["hermana_de"]])
+        propia = rutas.pop(LANG)
+        alternos = f'\n<link rel="alternate" hreflang="{LANG}" href="{DOMINIO}{propia}">'
+        alternos += "".join(f'\n<link rel="alternate" hreflang="{l}" href="{DOMINIO}{r}">'
+                            for l, r in rutas.items())
 
     if d.get("es_portada"):
         cabecera = portada_hero(d)
@@ -560,7 +573,7 @@ def pagina(d):
 
 
 def main():
-    global LANG, Z, ZONAS, HERMANAS
+    global LANG, Z, ZONAS, HERMANAS, HERMANAS_SUELTAS
     # Una zona por idioma: herramientas/zona.<idioma>.json. El español no
     # tiene, porque sus paginas de seccion estan escritas a mano.
     zonas = marco.lenguas_con_capa("zona")
@@ -570,10 +583,13 @@ def main():
     # Quien es hermana de quien: se agrupa por la ruta española, que es la
     # unica clave que todos los idiomas comparten.
     ZONAS = zonas
-    HERMANAS = {}
+    HERMANAS, HERMANAS_SUELTAS = {}, {}
     for lang, cfg in zonas.items():
         for propia, es in cfg["parejas"].items():
             HERMANAS.setdefault(es, {})[lang] = propia
+        for d in cfg["paginas"]:
+            if d.get("hermana_de"):
+                HERMANAS_SUELTAS.setdefault(d["hermana_de"], {})[lang] = d["ruta"]
 
     for lang, cfg in zonas.items():
         LANG, Z = lang, cfg

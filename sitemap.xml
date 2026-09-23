@@ -157,6 +157,8 @@
   <url>
     <loc>https://antoniolopezsanchez.art/fr/fiction/</loc>
     <lastmod>2026-09-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://antoniolopezsanchez.art/fr/fiction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/fiction/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/fr/inedits/</loc>
@@ -1001,6 +1003,8 @@
   <url>
     <loc>https://antoniolopezsanchez.art/en/fiction/</loc>
     <lastmod>2026-09-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antoniolopezsanchez.art/en/fiction/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://antoniolopezsanchez.art/fr/fiction/"/>
   </url>
   <url>
     <loc>https://antoniolopezsanchez.art/en/poetry/</loc>

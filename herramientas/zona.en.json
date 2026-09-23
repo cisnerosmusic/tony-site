@@ -305,6 +305,7 @@
     },
     {
       "ruta": "/en/fiction/",
+      "hermana_de": "fiction",
       "titulo": "Fiction",
       "subtitulo": "Heroic fantasy, horror, and fantasy for younger readers.",
       "seo_titulo": "The fiction of Antonio López Sánchez: fantasy and horror",

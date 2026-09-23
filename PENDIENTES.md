@@ -6,9 +6,9 @@ Lo que queda por hacer, y nada más.
 - **Las decisiones que no hay que deshacer** están en `AGENTS.md`.
 - **Cuando algo se termina, se borra de esta lista en el mismo commit que lo cierra.**
 
-## 1. Terminar el inglés
+## 1. Terminar el inglés y el francés
 
-De las 116 páginas indexables, 92 tienen pareja de idioma. Las 24 que no la tienen son el archivo de prensa (22) y el Directorio, las dos por decisión y no por olvido:
+De las 163 páginas indexables, 140 tienen pareja de idioma. Las 23 que no la tienen son el archivo de prensa (22) y el Directorio, las dos por decisión y no por olvido:
 
 1. **Directorio.** En inglés sería redundante: `/en/author/` tiene su bloque de contacto y `/en/rights/` cubre los derechos. Propuesta pendiente de Ernesto: no hacerla.
 2. **El archivo de prensa.** Los veintidós trabajos solo tienen página española, y ahí seguirán mientras los textos no se traduzcan. Lo que sí está en inglés es su aparato: el concentrador `/en/author/` lista los veintidós con su medio, su fecha y una línea en inglés que dice de qué va cada uno, y enlaza la página española marcada como tal. La capa es `herramientas/periodismo.en.json`, así que el día que se quieran veintidós páginas inglesas el texto ya está escrito.
@@ -48,10 +48,10 @@ Se mide el rendimiento y se publican las cifras cuando cierre la lista de cambio
 
 ## 4. Técnico
 
-- **Francés, italiano y portugués.** El código ya está listo: desde el 22 de septiembre de 2026 ningún generador sabe cuál es el segundo idioma, y añadir uno es escribir datos (ver `AGENTS.md`). Lo que queda es de tres clases:
-  1. **Escribir unas 995 cadenas por idioma**: 382 la zona propia (`zona.<idioma>.json`), 245 las catorce capas de libro, el resto aparato corto. El procedimiento está en el README, sección Idiomas.
-  2. **Decidir el selector de idiomas.** Con dos, el menú lleva un enlace al otro y ya. Con cinco lleva cuatro, y el pie español no enlaza idiomas mientras el inglés sí. Hay que decidir si se convierte en un desplegable, si los cinco pies se igualan y en qué orden van.
-  3. **La `Ÿ` no está en las fuentes**, y tampoco en los originales que bajamos de Google: habría que rebajarlos con el rango `latin-ext`. En francés solo aparece en topónimos raros, y el comprobador la cazaría el día que se colara, así que no bloquea.
+- **Italiano y portugués.** El francés está publicado desde el 23 de septiembre de 2026 y sirve de patrón: son 1047 cadenas por idioma, 382 la zona propia (`zona.<idioma>.json`), 245 las catorce capas de libro, el resto aparato corto. El procedimiento está en el README, sección Idiomas, y la cifra del francés coincide exactamente con la del inglés, que es la forma barata de ver que no falta nada. Lo que queda por decidir:
+  1. **El selector de idiomas.** Con tres, el menú ya lleva dos enlaces y el pie extranjero, dos más. Con cinco lleva cuatro, y el pie español sigue sin enlazar idiomas mientras el inglés y el francés sí. Hay que decidir si se convierte en un desplegable, si los cinco pies se igualan y en qué orden van. Con el francés vivo ya se puede mirar en pantalla en vez de imaginarlo.
+  2. **La página francesa de representación literaria no existe** en `ernestocisneros-site`, y `idiomas.json` apunta de momento a la inglesa. Es un enlace correcto, pero no está en el idioma de quien lee. Lo mismo hará falta en italiano y en portugués.
+  3. **La `Ÿ` no está en las fuentes**, y tampoco en los originales que bajamos de Google: habría que rebajarlos con el rango `latin-ext`. En francés solo aparece en topónimos raros, no aparece en ninguna de las 1047 cadenas escritas, y el comprobador la cazaría el día que se colara, así que no bloquea.
 - **Fundir `fonts.css` dentro de `styles.css`.** Hoy son dos hojas que bloquean el pintado en todas las páginas, y las fuentes no se descubren hasta que llega la primera. Es una hoja menos por página para siempre; a cambio toca los once generadores y las páginas escritas a mano. Medido el 20 de septiembre de 2026, después de recortar las fuentes: FCP 1.057 ms y LCP 1.507 ms de mediana en tres pasadas de Lighthouse móvil sobre el sitio vivo. Cualquier cambio se compara contra esas cifras, y hace falta que mejore más que el ruido entre pasadas, que es de unos 50 ms.
 
 - **La prensa de Juventud Rebelde es frágil.** Las tres entrevistas enlazadas (2012, 2016 y 2019) respondieron de forma intermitente el 21 de septiembre de 2026: dos no cargaban, la portada del diario tampoco, y la tercera sí. Solo la de 2016 tiene copia en el Internet Archive. Si el diario cae como cayó Habana Radio, se pierden dos de las tres. Hay que guardarlas en el Archive (`web.archive.org/save/`) en cuanto respondan y, si caen, enlazar la copia. Es mandar URLs públicas a un servicio de terceros: lo decide Ernesto.

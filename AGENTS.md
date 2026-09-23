@@ -102,7 +102,7 @@ No son tareas, así que no viven en `PENDIENTES.md`. Son decisiones tomadas, cas
 
 **Derechos**
 - **Solo se ofrece la obra de Antonio.** En los cinco volúmenes colectivos, la frase de la ficha cambia sola, porque se detecta por el campo `autoría`, y la lista de colectivos de `/derechos/` se lee de ese mismo campo: catálogo y aviso legal no pueden contradecirse. Decisión de Ernesto, 9 de septiembre de 2026.
-- **La zona inglesa enlaza la página inglesa de representación**: el mismo destino, en el idioma de quien lee.
+- **Cada zona enlaza la página de representación en su idioma**: el mismo destino, en la lengua de quien lee. La francesa todavía no existe en `ernestocisneros-site` y `idiomas.json` apunta de momento a la inglesa: está apuntado en `PENDIENTES.md`.
 - **El dossier de derechos no se duplica aquí.** El sitio de Tony es la casa y el catálogo; el de Ernesto, el negocio.
 - **El aviso de derechos es una declaración clara, no asesoría legal.** Antes de firmar una cesión, abogado.
 
@@ -156,7 +156,7 @@ No son tareas, así que no viven en `PENDIENTES.md`. Son decisiones tomadas, cas
   - La sección de menú que enciende cada sala es un dato de su capa (`seccion`), no un `if`.
   - `gen-idioma.py` (antes `gen-ingles.py`) escribe **una zona por idioma**, desde `herramientas/zona.<idioma>.json`, y de ahí salen las parejas de `hreflang`, el orden de los grupos del catálogo, los rótulos y el alt de la banda de mar.
 
-  **Añadir un idioma es escribir datos y ninguna línea de código.** Comprobado: se registró un francés mínimo en memoria y salió su portada entera, con su menú, su `hreflang`, su JSON-LD y el selector con ES y EN. Y la reforma no movió ni un byte de las 117 páginas: se comparó una a una antes y después.
+  **Añadir un idioma es, casi todo, escribir datos.** El francés se construyó entero el 23 de septiembre de 2026 y salió con su menú, su `hreflang`, su JSON-LD y el selector, desde 1047 cadenas y sin tocar ninguno de los generadores de sala. Pero cuatro sitios seguían atados a dos idiomas, y eso solo se ve cuando nace el tercero: el `hreflang` de `gen-idioma.py` emparejaba cada página solo con la española, así que la francesa y la inglesa se declaraban inexistentes entre sí; `unificar-nav.py` excluía `"en/"` escrito a mano y le plantó el menú español a las veintitantas páginas de `/fr/`; `gen-404.py`, su CSS y `app.js` conocían dos idiomas; y `gen-llms.py` tenía la zona inglesa clavada. Ya están hechos lista. **La lección, para el italiano y el portugués: lo que se probó con dos no está probado.** El cuarto idioma volverá a enseñar algo.
 - **El orden inglés es otro: trova, poesía, narrativa.** Decisión de Ernesto, 9 de septiembre de 2026, razonada en `PRODUCT.md` y en la cabecera de `navegacion.py`.
 - **La autoridad se demuestra con hechos comprobables**, no se declara con superlativos.
 - **La décima y la glosa se explican**, porque un editor anglófono no sabe qué son.
