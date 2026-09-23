@@ -16,7 +16,7 @@ Datos verificables del autor:
 - Toda la obra de Antonio López Sánchez está escrita en español y **ninguna parte de ella está traducida**. No existe edición en inglés ni en ningún otro idioma, y no hay muestra traducida.
 - Lo que este sitio ofrece a un editor extranjero es el original: manuscritos completos y sinopsis, que se mandan el mismo día en que se piden.
 - Se aceptan ofertas de traducción a cualquier idioma y para cualquier zona de la obra: un libro suelto, la narrativa entera, los tres volúmenes sobre la Nueva Trova, la poesía, los cuentos o las novelas inéditas. Las consultas van a derechos@antoniolopezsanchez.art y a la representación literaria.
-- Por eso el sitio en inglés traduce solo el aparato (sinopsis, notas del autor, fichas, pies de foto y metadatos) y publica siempre los textos literarios en su español original, marcados como tales.
+- Por eso los sitios en inglés y en francés traducen solo el aparato (sinopsis, notas del autor, fichas, pies de foto y metadatos) y publican siempre los textos literarios en su español original, marcados como tales.
 
 ## Libros publicados
 
@@ -158,7 +158,7 @@ Datos verificables del autor:
 
 ## En inglés · In English
 
-El sitio tiene una versión inglesa con un orden distinto y deliberado: para el lector anglosajón la puerta de entrada es la investigación sobre la Nueva Trova, no la fantasía heroica. Los textos literarios no se traducen y siguen en español en las dos versiones.
+El sitio tiene una versión inglesa con un orden distinto y deliberado: para el lector anglosajón la puerta de entrada es la investigación sobre la Nueva Trova, no la fantasía heroica. Los textos literarios no se traducen y siguen en español en las tres versiones.
 
 - [Ala del Mar, English](https://antoniolopezsanchez.art/en/): portada en inglés.
 - [The author](https://antoniolopezsanchez.art/en/author/): **el concentrador de toda la obra**. Quién es el autor, su hoja de servicios completa y la lista entera de libros, trabajos de prensa, cuentos, poemas, décimas y novelas inéditas, cada uno enlazado. Es la página por la que empezar si se busca el alcance completo.
@@ -176,6 +176,27 @@ El sitio tiene una versión inglesa con un orden distinto y deliberado: para el 
 - [On record](https://antoniolopezsanchez.art/en/author/on-record/): radio, televisión y lecturas en público.
 - [Among readers](https://antoniolopezsanchez.art/en/books/among-readers/): ferias, firmas y libreras.
 - [Rights](https://antoniolopezsanchez.art/en/rights/): aviso de derechos en inglés.
+
+## En francés · En français
+
+El sitio tiene también una versión francesa, con el mismo orden que la inglesa y por la misma razón: para quien llega de fuera, la puerta de entrada es la investigación sobre la Nueva Trova. Los textos literarios no se traducen y siguen en español en las tres versiones.
+
+- [Ala del Mar, français](https://antoniolopezsanchez.art/fr/): portada en francés.
+- [L'auteur](https://antoniolopezsanchez.art/fr/auteur/): **el concentrador de toda la obra** en francés. Quién es el autor, su hoja de servicios completa y la lista entera de libros, trabajos de prensa, cuentos, poemas, décimas y novelas inéditas, cada uno enlazado.
+- [La Nueva Trova](https://antoniolopezsanchez.art/fr/trova/): los tres libros sobre la Nueva Trova cubana, 2001 a 2019, presentados para editoriales universitarias y estudios de género y de música popular.
+- [Livres](https://antoniolopezsanchez.art/fr/livres/): los catorce libros, cada uno con su página: sinopsis, nota del autor, fragmentos en español y ficha para editores.
+- [Fiction](https://antoniolopezsanchez.art/fr/fiction/): novelas de fantasía heroica, horror y fantasía infantil, más el cuento breve.
+- [Poésie](https://antoniolopezsanchez.art/fr/poesie/): la poesía, qué es una décima y qué es una glosa, explicado para quien no lo conoce.
+- [Poèmes](https://antoniolopezsanchez.art/fr/poesie/poemes/): los poemas y las glosas, en español.
+- [De-Cimitas](https://antoniolopezsanchez.art/fr/poesie/decimitas/): las décimas con sus fotografías.
+- [Sonata de la lluvia](https://antoniolopezsanchez.art/fr/poesie/sonata-de-la-lluvia/): la obra premiada en 2026, en tres movimientos.
+- [De ma voix](https://antoniolopezsanchez.art/fr/poesie/de-ma-voix/): los poemas leídos por el autor.
+- [Récits](https://antoniolopezsanchez.art/fr/recits/): los cuentos completos, en español.
+- [Inédits](https://antoniolopezsanchez.art/fr/inedits/): las novelas inéditas, con sinopsis y fragmentos.
+- [Prix](https://antoniolopezsanchez.art/fr/prix/): los premios, y las dos obras del Premio Farraluque, que se pueden leer enteras.
+- [Plan large](https://antoniolopezsanchez.art/fr/auteur/plan-large/): radio, televisión y lecturas en público.
+- [Parmi les lecteurs](https://antoniolopezsanchez.art/fr/livres/parmi-les-lecteurs/): ferias, firmas y libreras.
+- [Droits](https://antoniolopezsanchez.art/fr/droits/): aviso de derechos en francés.
 
 ## Notas de uso
 

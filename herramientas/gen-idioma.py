@@ -45,7 +45,7 @@ import pagina as marco
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=36"
+CSS = "?v=37"
 RETRATO = "/img/retrato.webp"
 
 
@@ -108,6 +108,13 @@ IDIOMAS = _manifiesto("idiomas.json")
 # El idioma que se esta escribiendo y su zona. Los fija main() en cada pasada.
 LANG = "en"
 Z = {}
+
+# Todas las zonas, y el indice de hermanas por ruta española. Con dos idiomas
+# bastaba con emparejar cada pagina con su española; con tres o mas, la
+# francesa tambien tiene que declararse hermana de la inglesa, o cada una le
+# dice a los buscadores que la otra no existe. Lo fija main() antes de escribir.
+ZONAS = {}
+HERMANAS = {}
 
 
 def L():
@@ -457,10 +464,14 @@ def pagina(d):
 
     alternos = ""
     if d["ruta"] in Z["parejas"]:
-        es = DOMINIO + Z["parejas"][d["ruta"]]
-        alternos = (f'\n<link rel="alternate" hreflang="{LANG}" href="{url}">'
-                    f'\n<link rel="alternate" hreflang="es" href="{es}">'
-                    f'\n<link rel="alternate" hreflang="x-default" href="{es}">')
+        es = Z["parejas"][d["ruta"]]
+        # La propia primero, luego el español, luego las demas: el orden que ya
+        # tenia el ingles cuando era el unico idioma extranjero.
+        rutas = {LANG: d["ruta"], "es": es}
+        rutas.update(HERMANAS[es])
+        alternos = "".join(f'\n<link rel="alternate" hreflang="{l}" href="{DOMINIO}{r}">'
+                           for l, r in rutas.items())
+        alternos += f'\n<link rel="alternate" hreflang="x-default" href="{DOMINIO}{es}">'
 
     if d.get("es_portada"):
         cabecera = portada_hero(d)
@@ -470,6 +481,12 @@ def pagina(d):
 
     secciones = "\n\n".join(seccion_html(s, n) for n, s in enumerate(d.get("secciones", [])))
     activa = navegacion.seccion_de(d["ruta"], LANG)
+
+    # El locale de la pagina y el de todos los demas idiomas del sitio.
+    locales = f'<meta property="og:locale" content="{L()["locale"]}">'
+    for l in IDIOMAS:
+        if not l.startswith("_") and l != LANG:
+            locales += f'\n<meta property="og:locale:alternate" content="{IDIOMAS[l]["locale"]}">'
 
     cuerpo_main = f'<main id="main">\n\n{secciones}\n\n</main>'
     if d.get("es_portada"):
@@ -496,8 +513,7 @@ def pagina(d):
 <meta name="twitter:title" content="{esc_attr(T)}">
 <meta name="twitter:description" content="{esc_attr(D)}">
 <meta name="twitter:image" content="{DOMINIO}{RETRATO}">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="es_ES">
+{locales}
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
@@ -526,30 +542,39 @@ def pagina(d):
 {cuerpo_main}
 
 <footer class="footer">
-  <nav class="footer-nav" aria-label="Sections">
+  <nav class="footer-nav" aria-label="{esc_attr(L()["secciones_aria"])}">
 {navegacion.pie_de(LANG, activa)}
   </nav>
   <div class="footer-socials">
-    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="Antonio López Sánchez on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="{esc_attr(L()["facebook_aria"])}"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
   </div>
   <p class="footer-lema">bene scriptus</p>
   <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
-  <p class="footer-copy">Developed by <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
+  <p class="footer-copy">{esc(L()["desarrollado"])} <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=10" defer></script>
+<script src="/app.js?v=11" defer></script>
 </body>
 </html>
 """
 
 
 def main():
-    global LANG, Z
+    global LANG, Z, ZONAS, HERMANAS
     # Una zona por idioma: herramientas/zona.<idioma>.json. El español no
     # tiene, porque sus paginas de seccion estan escritas a mano.
     zonas = marco.lenguas_con_capa("zona")
     if not zonas:
         sys.exit("no hay ninguna zona: falta herramientas/zona.<idioma>.json")
+
+    # Quien es hermana de quien: se agrupa por la ruta española, que es la
+    # unica clave que todos los idiomas comparten.
+    ZONAS = zonas
+    HERMANAS = {}
+    for lang, cfg in zonas.items():
+        for propia, es in cfg["parejas"].items():
+            HERMANAS.setdefault(es, {})[lang] = propia
+
     for lang, cfg in zonas.items():
         LANG, Z = lang, cfg
         if lang not in IDIOMAS:

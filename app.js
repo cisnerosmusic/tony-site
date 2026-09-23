@@ -39,9 +39,18 @@
 // enteraba de nada.
 //
 // Cada hamburguesa gobierna el menú que nombra en aria-controls. Casi todas
-// las páginas tienen una sola; el 404 tiene dos, la española y la inglesa, y
-// solo se ve la del idioma de la ruta.
+// las páginas tienen una sola; el 404 tiene una por idioma, y solo se ve la de
+// la zona de donde viene el error.
+//
+// La etiqueta del botón se lee con lector de pantalla y tiene que estar en el
+// idioma de la página: un idioma nuevo añade aquí su pareja.
 (function () {
+  var ETIQUETA = {
+    es: ['Abrir menú', 'Cerrar menú'],
+    en: ['Open menu', 'Close menu'],
+    fr: ['Ouvrir le menu', 'Fermer le menu']
+  };
+
   document.querySelectorAll('.nav-hamburger').forEach(function (boton) {
     var menu = document.getElementById(boton.getAttribute('aria-controls'));
     if (!menu) return;
@@ -49,10 +58,8 @@
     function estado(abierto) {
       menu.classList.toggle('open', abierto);
       boton.setAttribute('aria-expanded', abierto ? 'true' : 'false');
-      var ingles = document.documentElement.lang === 'en';
-      boton.setAttribute('aria-label',
-        abierto ? (ingles ? 'Close menu' : 'Cerrar menú')
-                : (ingles ? 'Open menu' : 'Abrir menú'));
+      var par = ETIQUETA[document.documentElement.lang] || ETIQUETA.es;
+      boton.setAttribute('aria-label', abierto ? par[1] : par[0]);
     }
 
     boton.addEventListener('click', function () {

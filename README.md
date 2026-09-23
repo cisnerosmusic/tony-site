@@ -10,7 +10,7 @@ La casa se llama *Ala del Mar* por la fórmula con que el autor cierra sus libro
 
 Sitio estático: HTML, CSS y JS propios, sin frameworks, sin dependencias en tiempo de ejecución y **sin una sola petición a terceros** (tipografías, imágenes y audio autohospedados). Alojado en GitHub Pages con dominio propio y HTTPS forzado.
 
-El sitio sigue en construcción. Las mediciones de rendimiento se harán y se publicarán cuando esté terminada la versión inglesa.
+El sitio sigue en construcción. Las mediciones de rendimiento se harán y se publicarán cuando estén terminadas las versiones en otros idiomas.
 
 ## Qué publica el dominio
 
@@ -37,18 +37,20 @@ Base heredada del template propio de Index01 ([impulses-art-site](https://github
 | `/directorio/` | Contacto del autor y consultas de derechos |
 | `/derechos/` | Aviso de derechos |
 | `/en/` | La zona inglesa, en otro orden que el español a propósito (ver [PRODUCT.md](PRODUCT.md)): portada, `trova/`, `poetry/` (con `poems/`, `decimitas/`, `sonata-de-la-lluvia/` e `in-my-voice/`), `books/` (los catorce libros y `among-readers/`), `stories/` (los once cuentos), `unpublished/` (las cuatro novelas), `awards/` (con las dos obras del Farraluque), `author/` (el concentrador de toda la obra, con `on-record/`, que es Plano abierto), `fiction/` y `rights/` |
+| `/fr/` | La zona francesa, con el mismo orden que la inglesa y las mismas piezas: portada, `trova/`, `poesie/` (con `poemes/`, `decimitas/`, `sonata-de-la-lluvia/` y `de-ma-voix/`), `livres/` (los catorce libros y `parmi-les-lecteurs/`), `recits/`, `inedits/`, `prix/`, `auteur/` (el concentrador, con `plan-large/`, que es Plano abierto), `fiction/` y `droits/` |
 
-Archivos de raíz: `index.html`, `styles.css`, `app.js`, `fonts.css`, `robots.txt`, `sitemap.xml`, `llms.txt`, `404.html` (uno solo para todo el sitio, en español o en inglés según la ruta), `CNAME`, el favicon en archivos reales (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`) y la clave de IndexNow. Recursos en `fonts/`, `img/`, `audio/` y `video/`.
+Archivos de raíz: `index.html`, `styles.css`, `app.js`, `fonts.css`, `robots.txt`, `sitemap.xml`, `llms.txt`, `404.html` (uno solo para todo el sitio, en el idioma de la zona de donde viene el error), `CNAME`, el favicon en archivos reales (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`) y la clave de IndexNow. Recursos en `fonts/`, `img/`, `audio/` y `video/`.
 
-**119 páginas; 116 URLs en el sitemap.** No entran el 404 ni las dos redirecciones blandas, `/novelas/` y `/poeta/`.
+**166 páginas; 163 URLs en el sitemap.** No entran el 404 ni las dos redirecciones blandas, `/novelas/` y `/poeta/`.
 
 ## Idiomas
 
 - **Los textos literarios se publican siempre en su español original**, en todos los idiomas del sitio. Se traduce el aparato: navegación, contratapas, notas del autor, fichas, pies de foto y metadatos.
-- **La zona inglesa no es la española traducida.** En español abre la fantasía heroica; en inglés, la investigación sobre la Nueva Trova, luego la poesía y luego la narrativa.
+- **Hoy son tres: español, inglés y francés.** El plan son cinco; faltan el italiano y el portugués.
+- **Las zonas extranjeras no son la española traducida.** En español abre la fantasía heroica; en inglés y en francés, la investigación sobre la Nueva Trova, luego la poesía y luego la narrativa. Cada idioma puede tener su propio orden: lo declara su zona.
 - **Las páginas de libro son el mismo generador para todos los idiomas.** Los textos de interfaz de cada idioma están en `herramientas/idiomas.json`, y lo traducido de cada libro, en una capa: `herramientas/libros/<idioma>/<slug>.json`. Esas capas no tienen campo para los fragmentos, así que un fragmento traducido no puede colarse.
 - **Añadir un idioma es escribir datos, nunca código.** Hacen falta cuatro cosas: su bloque en `idiomas.json`, su menú en `herramientas/navegacion.py`, su zona `herramientas/zona.<idioma>.json` (la portada y las páginas de sección propias, que no salen de ninguna sala española), y las capas: catorce de libro en `herramientas/libros/<idioma>/` y una por sala (`cuentos`, `poemas`, `decimitas`, `sonata`, `farraluque`, `ineditos`, `laureles`, `grabaciones` y `periodismo`), con el nombre `herramientas/<sala>.<idioma>.json`. Cada generador publica la sala en los idiomas que tengan capa y se salta los que no, y el enlace entre idiomas del menú se arma solo.
-- **Son unas 995 cadenas por idioma**, de las cuales 382 son las ocho páginas propias de la zona y 245 las capas de libro. El resto es aparato corto.
+- **Son 1047 cadenas por idioma**, de las cuales 382 son las ocho páginas propias de la zona y 245 las capas de libro. El resto es aparato corto. El inglés y el francés dan exactamente la misma cifra, que es la forma barata de ver que no falta nada.
 
 ## Añadir contenido
 
@@ -67,8 +69,8 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-periodismo.py` | la página de cada trabajo de prensa y el archivo dentro de `/periodista/` | `periodismo.json`, sus `.txt` en `textos/periodismo/` |
 | `gen-audios.py` | las grabaciones, repartidas a las salas que las reclaman | `grabaciones.json` |
 | `gen-idioma.py` | las páginas propias de cada idioma extranjero: su portada, sus secciones y su concentrador | `zona.<idioma>.json` y todos los manifiestos |
-| `gen-legal.py` | `/derechos/` y `/en/rights/` | `legal.json` |
-| `gen-404.py` | el 404, en los dos idiomas | `navegacion.py` |
+| `gen-legal.py` | el aviso de derechos en cada idioma: `/derechos/`, `/en/rights/`, `/fr/droits/` | `legal.json` |
+| `gen-404.py` | el 404, en todos los idiomas a la vez | `navegacion.py` |
 | `gen-tarjetas.py` | la postal de cada libro para redes, 1200 x 630: cubierta a la izquierda, título a la derecha | `libros/<slug>.json` y las cubiertas |
 | `gen-portada.py` | el Índice de la casa, dentro de la portada | `portada.json` y `navegacion.py` |
 | `gen-llms.py` | `llms.txt`, el mapa del sitio para los modelos de lenguaje | `llms.json` y todos los manifiestos |
@@ -78,7 +80,7 @@ Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cab
 
 Siguen escritas a mano la portada (salvo el Índice de la casa, que escribe `gen-portada.py`), el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
 
-**Una obra nueva aparece sola en tres sitios**: en su sala, en el concentrador inglés `/en/author/` y en `llms.txt`. Los tres leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás. El Índice de la casa de la portada no cuenta obras, solo salas, y se para si deja de coincidir con el menú.
+**Una obra nueva aparece sola en cuatro sitios**: en su sala, en el concentrador inglés `/en/author/`, en el francés `/fr/auteur/` y en `llms.txt`. Los tres leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás. El Índice de la casa de la portada no cuenta obras, solo salas, y se para si deja de coincidir con el menú.
 
 Requisitos: Python 3 y `pip install Pillow fonttools brotli`, las mismas dependencias que instala GitHub Actions.
 
@@ -111,13 +113,13 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 
 ## SEO y AEO
 
-116 URLs indexables, con títulos y descripciones únicos y en rango, canónicas propias y Twitter Cards. JSON-LD válido en todas: `Person` con premios y `sameAs`, `WebSite`, `Book` por cada libro y en cada idioma, con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `CreativeWork` para los poemas, las décimas, la Sonata y las obras del Farraluque, `NewsArticle` para cada pieza de prensa, `ItemList`, `AudioObject`, `CollectionPage`, `ProfilePage` con la persona dentro, `ContactPage` y `BreadcrumbList`.
+163 URLs indexables, con títulos y descripciones únicos y en rango, canónicas propias y Twitter Cards. JSON-LD válido en todas: `Person` con premios y `sameAs`, `WebSite`, `Book` por cada libro y en cada idioma, con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `CreativeWork` para los poemas, las décimas, la Sonata y las obras del Farraluque, `NewsArticle` para cada pieza de prensa, `ItemList`, `AudioObject`, `CollectionPage`, `ProfilePage` con la persona dentro, `ContactPage` y `BreadcrumbList`.
 
-`hreflang` recíproco en las 92 páginas que tienen pareja de idioma, con `x-default` al español, y los mismos alternates en `sitemap.xml`. Las 24 que no la tienen son el archivo de prensa, que solo existe en español, y el Directorio.
+`hreflang` recíproco en las 138 páginas que tienen pareja de idioma, con `x-default` al español, y los mismos alternates en `sitemap.xml`. Cada una enlaza a todas sus hermanas, no solo a la española. Las 25 que no tienen pareja son el archivo de prensa, que solo existe en español, y el Directorio.
 
 `llms.txt` es el mapa para los motores de respuesta: datos citables del autor, la declaración de que nada está traducido y la lista entera de libros, premios, poemas, décimas, cuentos, trabajos de prensa y novelas inéditas, con su dirección. **No se escribe a mano**: lo genera `herramientas/gen-llms.py` desde los mismos manifiestos que el sitio, y el comprobador falla si se queda atrás. `robots.txt` da permiso explícito a los bots de IA, e IndexNow está configurado.
 
-En inglés, `/en/author/` es el concentrador: la biografía, la hoja de servicios completa y toda la obra en una sola página, por géneros y con cada pieza enlazada. Las listas salen de los manifiestos, así que una obra nueva aparece ahí sola.
+En inglés y en francés, `/en/author/` y `/fr/auteur/` son el concentrador: la biografía, la hoja de servicios completa y toda la obra en una sola página, por géneros y con cada pieza enlazada. Las listas salen de los manifiestos, así que una obra nueva aparece ahí sola.
 
 ## Cómo se trabaja aquí
 

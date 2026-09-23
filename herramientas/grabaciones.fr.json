@@ -1,21 +1,54 @@
 {
   "_nota": "Capa francesa de grabaciones.json. Por cada grabacion, su frase corta y su ficha larga en frances; el titulo solo cuando es descriptivo, porque el titulo de un poema no se traduce. La usa gen-idioma.py para De ma voix y Sur les ondes en frances.",
   "salas": {
-    "plano-abierto": {"ruta": "/fr/auteur/sur-les-ondes/", "nombre": "Sur les ondes"},
-    "en-mi-voz": {"ruta": "/fr/poesie/de-ma-voix/", "nombre": "De ma voix"}
+    "plano-abierto": {
+      "ruta": "/fr/auteur/plan-large/",
+      "nombre": "Plan large"
+    },
+    "en-mi-voz": {
+      "ruta": "/fr/poesie/de-ma-voix/",
+      "nombre": "De ma voix"
+    }
   },
   "donde": "où et quand, en {}",
   "sin_audio": "Votre navigateur ne peut pas lire cet audio ; vous pouvez <a href=\"{}\">télécharger l'enregistrement</a>.",
   "grabaciones": {
-    "clase-de-literatura": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
-    "luna-callada": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
-    "capricornio-personal": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
-    "defensa-del-escritor": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
-    "desnudo-con-fruta": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
-    "idas": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
-    "juglar": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
-    "no-vamos-a-olvidar": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
-    "yo-soy": {"frase": "Un poème dans ma voix", "ficha": "Un poème dans la voix de l'auteur"},
+    "clase-de-literatura": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
+    "luna-callada": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
+    "capricornio-personal": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
+    "defensa-del-escritor": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
+    "desnudo-con-fruta": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
+    "idas": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
+    "juglar": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
+    "no-vamos-a-olvidar": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
+    "yo-soy": {
+      "frase": "Un poème dans ma voix",
+      "ficha": "Un poème dans la voix de l'auteur"
+    },
     "lectura-uneac-santa-clara-2022": {
       "titulo": "Lecture de poésie à l'UNEAC de Santa Clara",
       "frase": "Onze minutes de mes poèmes lus à voix haute, à Santa Clara, mai 2022",

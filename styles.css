@@ -816,11 +816,15 @@ a.libro-cubierta:hover img {
 }
 
 /* El 404 es uno solo para todo el sitio, porque GitHub Pages no admite otro, y
-   lleva los dos idiomas. Un script en su <head> marca <html class="en"> cuando
-   la ruta empieza por /en/, y esto oculta el idioma que no toca. Sin script se
-   ve el español, que es el idioma por defecto. */
+   lleva todos los idiomas. Un script en su <head> marca <html class="en"> o
+   <html class="fr"> segun la zona de donde viene el error, y esto oculta los
+   idiomas que no tocan. Sin script se ve el español, que es el idioma por
+   defecto. Un idioma nuevo añade su clase a la primera regla y su propia
+   linea debajo. */
 html.en .solo-es,
+html.fr .solo-es { display: none !important; }
 html:not(.en) .solo-en { display: none !important; }
+html:not(.fr) .solo-fr { display: none !important; }
 
 /* ── Responsive ─────────────────────────────── */
 /* La barra lleva nueve secciones mas el idioma. Medido en el navegador: a

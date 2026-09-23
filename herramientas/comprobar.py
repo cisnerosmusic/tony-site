@@ -173,12 +173,18 @@ def metadatos():
             falla("sin title", rel(p)); continue
         if not md:
             falla("sin description", rel(p)); continue
-        titulos[mt.group(1).strip()] += 1
-        descripciones[md.group(1).strip()] += 1
-        if len(mt.group(1)) > 65:
-            avisa("title largo", f"{rel(p)}: {len(mt.group(1))} caracteres")
-        if len(md.group(1)) > 165:
-            avisa("description larga", f"{rel(p)}: {len(md.group(1))} caracteres")
+        # Se mide el texto, no el marcado: en el atributo, cada apostrofo
+        # ocupa seis caracteres (&#x27;) y el buscador lee uno. Con el frances,
+        # que eliso en casi cada frase, eso inflaba veinte descripciones
+        # perfectamente cortas.
+        titulo = html_lib.unescape(mt.group(1)).strip()
+        desc = html_lib.unescape(md.group(1)).strip()
+        titulos[titulo] += 1
+        descripciones[desc] += 1
+        if len(titulo) > 65:
+            avisa("title largo", f"{rel(p)}: {len(titulo)} caracteres")
+        if len(desc) > 165:
+            avisa("description larga", f"{rel(p)}: {len(desc)} caracteres")
         if len(re.findall(r"<h1[ >]", t)) != 1:
             falla("h1 no unico", rel(p))
     for x, n in list(titulos.items()) + list(descripciones.items()):

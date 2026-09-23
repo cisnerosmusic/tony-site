@@ -135,5 +135,73 @@
         ]
       }
     ]
+  },
+  "fr": {
+    "ruta": "/fr/droits/",
+    "lang": "fr",
+    "titulo": "Droits",
+    "subtitulo": "Ce que ce site propose, et ce qu'il ne propose pas.",
+    "seo_titulo": "Avis de droits | Antonio López Sánchez",
+    "seo_desc": "Portée des droits proposés sur le site d'Antonio López Sánchez : son œuvre propre uniquement. Dans les volumes collectifs, seulement les textes qu'il a écrits.",
+    "intro": "Cet avis explique, en termes simples, quels droits sont proposés par ce site et lesquels ne le sont pas. Il ne remplace pas un contrat : toute cession effective se convient séparément et par écrit.",
+    "secciones": [
+      {
+        "titulo": "1. À qui appartient l'œuvre",
+        "parrafos": [
+          "Les textes littéraires publiés sur ce site, romans, récits, poèmes, décimas, essais et journalisme, sont l'œuvre d'Antonio López Sánchez et lui appartiennent. Leur reproduction, totale ou partielle, sur quelque support que ce soit, exige son autorisation écrite expresse.",
+          "Le design, le code et les systèmes qui font marcher ce site appartiennent à Index01, qui l'a construit. Ce sont des choses distinctes, sous licences distinctes."
+        ]
+      },
+      {
+        "titulo": "2. Portée de ce qui est proposé",
+        "parrafos": [
+          "Les droits que ce site déclare disponibles sont, uniquement et exclusivement, ceux que détient Antonio López Sánchez sur sa propre œuvre.",
+          "Aucun droit appartenant à un autre auteur, illustrateur, compilateur, préfacier, traducteur ou éditeur n'est ici proposé, négocié ni géré."
+        ]
+      },
+      {
+        "titulo": "3. Volumes collectifs, anthologies et compilations",
+        "parrafos": [
+          "Plusieurs des titres présentés sur ce site sont des volumes partagés avec d'autres auteurs, ou des compilations dirigées par des tiers. Dans chacun de ces cas, sans exception, la disponibilité des droits ne concerne que les textes écrits par Antonio López Sánchez que le volume contient.",
+          "Jamais le volume entier, ni les contributions des autres auteurs, ni le travail de qui l'a compilé, dirigé ou illustré.",
+          "La ligne de droits de chacune de ces pages de livre le dit exactement. Les titres concernés aujourd'hui sont :"
+        ],
+        "lista_colectivas": true
+      },
+      {
+        "titulo": "4. Territoire",
+        "parrafos": [
+          "Les livres publiés sont sous exclusivité éditoriale avec leurs éditeurs à l'intérieur de Cuba. Les droits d'édition et de traduction dans le reste du monde sont disponibles, avec la portée décrite ci-dessus."
+        ]
+      },
+      {
+        "titulo": "5. Matériel qui n'appartient pas à l'auteur",
+        "parrafos": [
+          "Tout sur ce site ne lui appartient pas, et cela compte, parce que cela touche à ce qui peut être cédé.",
+          "Des vers d'autres poètes. Certaines œuvres portent les strophes d'autrui en épigraphe ou comme base d'une glosa : José Martí, José Lezama Lima, Jorge Luis Borges, Silvio Rodríguez, Polito Ibáñez, Fito Páez, Noel Nicola, Santiago Feliú et Carlos Varela. Elles appartiennent à leurs auteurs, sont reproduites ici identifiées et attribuées, et restent hors de toute cession portant sur l'œuvre qui les accompagne.",
+          "Les couvertures de livres. Elles sont l'œuvre de leurs illustrateurs et graphistes, crédités sur la page de chaque titre, et ne sont montrées ici que pour identifier chaque édition. Acquérir les droits d'un texte n'emporte pas avec eux la couverture de l'édition cubaine.",
+          "Les photographies de lancements, de salons et d'événements. Elles ont été prises par des tiers et les droits appartiennent à qui les a prises. Elles sont publiées avec l'accord de l'auteur. Si quelqu'un reconnaît une de ses photographies et souhaite un crédit ou son retrait, un message suffit.",
+          "Les enregistrements de radio et de télévision. Ils appartiennent à leurs stations, producteurs et interprètes. Ils sont conservés ici comme les archives d'un parcours, non comme du matériel cessible.",
+          "La photographie de la mer de la page d'accueil vient de Wikimedia Commons sous licence CC0. Les photographies qui accompagnent les De-Cimitas et Sonata de la lluvia, en revanche, sont celles de l'auteur et font partie de l'œuvre : la décima naît de l'image."
+        ]
+      },
+      {
+        "titulo": "6. Où écrire",
+        "parrafos": [
+          "Toute demande concernant les droits, les éditions ou les traductions hors de Cuba va à la représentation littéraire de l'auteur, assurée par Ernesto Cisneros depuis Miami."
+        ],
+        "enlaces": [
+          {
+            "texto": "Représentation littéraire",
+            "url": "https://ernestocisneros.art/literary-representation.html",
+            "externo": true
+          },
+          {
+            "texto": "derechos@antoniolopezsanchez.art",
+            "url": "mailto:derechos@antoniolopezsanchez.art"
+          }
+        ]
+      }
+    ]
   }
 }

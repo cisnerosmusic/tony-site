@@ -1,15 +1,17 @@
 # Genera /404.html, que es uno solo para todo el sitio: GitHub Pages sirve
 # siempre ese archivo, venga el error de donde venga, y no admite un 404 por
-# carpeta. Asi que la pagina lleva los dos idiomas.
+# carpeta. Asi que la pagina lleva todos los idiomas a la vez.
 #
-# Un script minimo en el <head>, antes de pintar nada, mira si la ruta empieza
-# por /en/ y en ese caso marca <html lang="en" class="en"> y cambia el titulo.
-# styles.css oculta el idioma que no toca (.solo-es, .solo-en). Sin JavaScript
-# se ve el español, que es el idioma por defecto.
+# Un script minimo en el <head>, antes de pintar nada, mira de que zona viene
+# la ruta y marca <html lang="xx" class="xx"> y el titulo que toca. styles.css
+# oculta los idiomas que no tocan (.solo-es, .solo-en, .solo-fr). Sin
+# JavaScript se ve el español, que es el idioma por defecto.
 #
-# Los dos menus y los dos pies salen de navegacion.py, como en el resto del
+# Todos los menus y todos los pies salen de navegacion.py, como en el resto del
 # sitio, para que el 404 no pueda desalinearse. Cada hamburguesa gobierna el
 # menu que nombra en aria-controls, y app.js las cablea por separado.
+#
+# Un idioma nuevo se añade en IDIOMA, mas sus dos lineas en styles.css.
 #
 # Todas las rutas son absolutas desde la raiz: este archivo se sirve en
 # cualquier direccion, y una ruta relativa se romperia.
@@ -22,7 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSS = "?v=36"
+CSS = "?v=37"
 
 IDIOMA = {
     "es": {
@@ -39,12 +41,26 @@ IDIOMA = {
         "abrir": "Open menu", "menu": "menu-principal-en", "secciones": "Sections",
         "h1": "This page got lost in the bookcase",
         "sub": "The address you were looking for does not exist in this house, or it has moved to another room.",
+        "titulo": "Page not found | Ala del Mar",
         "texto": "You can go back to the home page, or straight to the books. For a reader arriving in English, the Nueva Trova is the best way in.",
         # El mismo orden que el resto del sitio ingles: la trova primero.
         "botones": [("/en/", "Home", True), ("/en/books/", "Books", False),
                     ("/en/trova/", "The trova", False)],
     },
+    "fr": {
+        "clase": "solo-fr", "portada": "/fr/", "saltar": "Aller au contenu",
+        "abrir": "Ouvrir le menu", "menu": "menu-principal-fr", "secciones": "Sections",
+        "titulo": "Page introuvable | Ala del Mar",
+        "h1": "Cette page s'est perdue dans la bibliothèque",
+        "sub": "L'adresse que vous cherchiez n'existe pas dans cette maison, ou elle a changé de pièce.",
+        "texto": "Vous pouvez revenir à la page d'accueil, ou aller droit aux livres. Pour un lecteur qui arrive en français, la Nueva Trova est la meilleure entrée.",
+        "botones": [("/fr/", "Accueil", True), ("/fr/livres/", "Livres", False),
+                    ("/fr/trova/", "La trova", False)],
+    },
 }
+
+# El español no necesita rama: es lo que se ve si el script no hace nada.
+EXTRANJEROS = [l for l in IDIOMA if l != "es"]
 
 
 def bloque_nav(lang):
@@ -88,6 +104,19 @@ def bloque_pie(lang):
 
 
 def main():
+    ramas = "\n".join(
+        f"""  if (zona === '{IDIOMA[l]["portada"].strip("/")}') {{
+    document.documentElement.lang = '{l}';
+    document.documentElement.className = '{l}';
+    document.title = {IDIOMA[l]["titulo"]!r};
+  }}""" for l in EXTRANJEROS)
+    saltos = "\n".join(
+        f'<a class="salto {IDIOMA[l]["clase"]}" href="#main">{IDIOMA[l]["saltar"]}</a>'
+        for l in IDIOMA)
+    navs = "\n".join(bloque_nav(l) for l in IDIOMA)
+    cuerpos = "\n".join(bloque_cuerpo(l) for l in IDIOMA)
+    pies = "\n".join(bloque_pie(l) for l in IDIOMA)
+
     pagina = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -96,12 +125,9 @@ def main():
 <meta name="robots" content="noindex, follow">
 <title>Página no encontrada | Ala del Mar</title>
 <script>
-  // Antes de pintar: si el error viene de la zona inglesa, la pagina habla ingles.
-  if (location.pathname === '/en' || location.pathname.indexOf('/en/') === 0) {{
-    document.documentElement.lang = 'en';
-    document.documentElement.className = 'en';
-    document.title = 'Page not found | Ala del Mar';
-  }}
+  // Antes de pintar: la pagina habla el idioma de la zona de donde viene el error.
+  var zona = location.pathname.split('/')[1];
+{ramas}
 </script>
 <meta name="description" content="Esta página no existe en Ala del Mar, la casa de Antonio López Sánchez.">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -115,31 +141,27 @@ def main():
 </head>
 <body>
 
-<a class="salto solo-es" href="#main">{IDIOMA["es"]["saltar"]}</a>
-<a class="salto solo-en" href="#main">{IDIOMA["en"]["saltar"]}</a>
+{saltos}
 
-{bloque_nav("es")}
-{bloque_nav("en")}
+{navs}
 
 <main id="main">
-{bloque_cuerpo("es")}
-{bloque_cuerpo("en")}
+{cuerpos}
 </main>
 
 <footer class="footer">
-{bloque_pie("es")}
-{bloque_pie("en")}
+{pies}
   <p class="footer-lema">bene scriptus</p>
   <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
 </footer>
 
-<script src="/app.js?v=10" defer></script>
+<script src="/app.js?v=11" defer></script>
 </body>
 </html>
 """
     with open(os.path.join(RAIZ, "404.html"), "w", encoding="utf-8", newline="") as f:
         f.write(pagina)
-    print("escrito: 404.html · español y ingles, segun la ruta")
+    print("escrito: 404.html · " + ", ".join(IDIOMA) + ", segun la ruta")
 
 
 if __name__ == "__main__":

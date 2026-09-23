@@ -5,7 +5,7 @@
 # las que se editan a mano. Correrlo dos veces no cambia nada.
 #
 # Quedan fuera a proposito:
-#   /en/                paginas en ingles, con su propia navegacion
+#   /en/, /fr/...       las zonas extranjeras, con su propia navegacion
 #   /novelas/, /poeta/  redirecciones blandas, sin cabecera ni pie
 #   /404.html           lo escribe gen-404.py, con los dos idiomas
 #
@@ -17,7 +17,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FUERA = ("en/", "novelas/", "poeta/", "404.html")
+# Las zonas extranjeras se leen del registro de idiomas, no se escriben aqui.
+# Estaba puesto "en/" a mano y el dia que nacio el frances esta herramienta le
+# planto el menu español a las veintitantas paginas de /fr/.
+_ZONAS = tuple(d["portada"].lstrip("/")
+               for l, d in navegacion.IDIOMAS.items() if l != "es")
+FUERA = _ZONAS + ("novelas/", "poeta/", "404.html")
 
 # Las paginas de libro tampoco: aqui la seccion se deduce de la direccion, y
 # la de un libro no siempre la dice su direccion. Los tres de la trova viven

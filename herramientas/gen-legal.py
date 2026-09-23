@@ -21,7 +21,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=36"
+CSS = "?v=37"
 
 # Aqui hay una funcion que se llama pagina(), asi que el marco comun no se
 # puede importar con su nombre: de idiomas.json solo hacen falta las etiquetas
@@ -172,7 +172,7 @@ def pagina(clave, cfg, todos):
   <p class="footer-copy">Desarrollado por <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
 </footer>
 
-<script src="/app.js?v=10" defer></script>
+<script src="/app.js?v=11" defer></script>
 </body>
 </html>
 """

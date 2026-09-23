@@ -127,7 +127,12 @@ def main():
           f'- [La trova]({D}/trova/): {E["trova"]}',
           f'- [Directorio]({D}/directorio/): {E["directorio"]}']
 
-    L += ["", S["ingles"], "", P["ingles_entrada"], ""] + [f"- {x}" for x in P["ingles"]]
+    # Una zona por idioma extranjero, en el orden en que estan declaradas.
+    # Estaba escrito para el ingles y solo para el ingles ("ingles_entrada",
+    # "ingles"); el dia que nacio el frances, llms.txt le decia a los modelos
+    # que el sitio tenia dos idiomas.
+    for z in P["zonas"]:
+        L += ["", "## " + z["titulo"], "", z["entrada"], ""] + [f"- {x}" for x in z["paginas"]]
 
     L += ["", S["notas"], ""] + [f"- {x}" for x in P["notas"]]
 

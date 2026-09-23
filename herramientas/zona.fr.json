@@ -1,0 +1,779 @@
+{
+  "_nota": "Zona francesa completa: las paginas propias de la version francesa, que no salen de ninguna sala española. Misma forma que zona.en.json. El generador no cambia.",
+  "lang": "fr",
+  "parejas": {
+    "/fr/": "/",
+    "/fr/trova/": "/trova/",
+    "/fr/poesie/": "/tinta-ciones/",
+    "/fr/auteur/": "/periodista/",
+    "/fr/poesie/de-ma-voix/": "/tinta-ciones/en-mi-voz/",
+    "/fr/auteur/plan-large/": "/plano-abierto/",
+    "/fr/livres/parmi-les-lecteurs/": "/entre-lectores/"
+  },
+  "ruta_autor": "/fr/auteur/",
+  "banda_mar_alt": "La mer au crépuscule",
+  "orden_libros": [
+    "Fiction",
+    "La Nueva Trova",
+    "Poésie",
+    "Volumes collectifs"
+  ],
+  "rotulos_poemas": {
+    "sueltos": "Poèmes",
+    "glosas": "Glosas"
+  },
+  "paginas": [
+    {
+      "ruta": "/fr/",
+      "titulo": "Ala del Mar",
+      "es_portada": true,
+      "subtitulo": "Antonio López Sánchez",
+      "oficio": "Je suis écrivain, poète et journaliste.",
+      "seo_titulo": "Antonio López Sánchez, écrivain, poète et journaliste cubain",
+      "seo_desc": "Écrivain, poète et journaliste cubain. Vingt ans à documenter la Nueva Trova, la poésie en décimas et la fantasy héroïque. Droits mondiaux disponibles hors de Cuba.",
+      "aviso_idioma": "Les textes littéraires sont toujours publiés dans leur espagnol d'origine. Tout ce qui est écrit à leur sujet est en français.",
+      "acciones": [
+        {
+          "texto": "La trova",
+          "url": "/fr/trova/",
+          "relleno": true
+        },
+        {
+          "texto": "Poésie",
+          "url": "/fr/poesie/"
+        },
+        {
+          "texto": "Livres",
+          "url": "/fr/livres/"
+        },
+        {
+          "texto": "Droits",
+          "url": "/fr/droits/"
+        }
+      ],
+      "secciones": [
+        {
+          "titulo": "La maison",
+          "alt": true,
+          "parrafos": [
+            "Je vis sur une île, dans une ville, où la mer est plus qu'une présence : elle est le quartier. Le bleu de ses eaux, par-delà un rêve d'horizon, passe dans les vers, dans les baisers, dans les équipes de baseball (même quand elles perdent), dans presque tous les amours et tous les désirs, et dans les souvenirs comme dans les avenirs.",
+            "Voilà pourquoi cette maison est une Ala del Mar, une aile de la mer. Un lieu qui espère offrir, par écrit, tout le bleu lumineux, et aussi les ombres, qui entourent un écrivain.",
+            "La citation latine, don intime par lequel je termine mes livres, parle de plaisir. Le plaisir d'écrire, et d'essayer, aussi humainement et poétiquement que possible, de bien le faire. Ainsi le don peut atteindre chaque personne qui arrive à mes pages. Recevez la plus chaleureuse et la plus bleue des bienvenues. Comme des pages, les portes de cette maison sont ouvertes. Entrez."
+          ],
+          "firma": "Antonio López Sánchez"
+        },
+        {
+          "titulo": "Trois entrées",
+          "parrafos": [
+            "Quatorze livres publiés en vingt-cinq ans, dans des genres qui partagent rarement la même étagère. Pour un lecteur qui arrive en français, voici les trois portes, dans l'ordre qui a du sens vu d'ici."
+          ],
+          "enlaces": [
+            {
+              "texto": "Les quatorze livres",
+              "url": "/fr/livres/"
+            }
+          ],
+          "puertas": [
+            {
+              "numero": "01",
+              "titulo": "La Nueva Trova",
+              "url": "/fr/trova/",
+              "texto": "Trois livres publiés entre 2001 et 2019 sur le mouvement de la chanson cubaine qui a façonné plusieurs générations : une histoire racontée avec ses protagonistes, un livre d'entretiens avec ses femmes, et une étude de la façon dont ces femmes sont écrites dans les paroles. De la recherche, pas des mémoires, par quelqu'un qui était aussi dans la salle."
+            },
+            {
+              "numero": "02",
+              "titulo": "Poésie",
+              "url": "/fr/poesie/",
+              "texto": "Le vers libre et la décima, la strophe cubaine de dix vers. Deux prix pour la seule année 2026. Publiés ici en entier, en espagnol, pour le très large lectorat qui lit la poésie dans cette langue et n'a pas besoin qu'on la lui traduise."
+            },
+            {
+              "numero": "03",
+              "titulo": "Fiction",
+              "url": "/fr/fiction/",
+              "texto": "Fantasy héroïque, horreur et fantasy pour la jeunesse : cinq romans, dont une saga illustrée en cinq volumes, et un prix national. Le genre est immense en français et la traduction est le vrai coût. Synopsis et manuscrits complets sur demande."
+            }
+          ]
+        },
+        {
+          "titulo": "Droits et représentation",
+          "alt": true,
+          "ancla": "droits",
+          "parrafos": [
+            "Mes livres publiés ne sont sous exclusivité éditoriale qu'à Cuba. <strong>Les droits mondiaux sont disponibles</strong> pour des éditions et des traductions partout ailleurs.",
+            "La représentation hors de l'île est assurée personnellement par Ernesto Cisneros, depuis Miami. Éditeurs, agents, scouts et traducteurs sont invités à écrire.",
+            "Les droits proposés ici ne portent que sur l'œuvre propre d'Antonio López Sánchez. Dans les volumes collectifs et les anthologies, la disponibilité ne couvre que les textes qu'il a écrits."
+          ],
+          "enlaces": [
+            {
+              "texto": "Représentation littéraire",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true,
+              "relleno": true
+            },
+            {
+              "texto": "Écrire pour les droits",
+              "url": "mailto:derechos@antoniolopezsanchez.art"
+            },
+            {
+              "texto": "Avis de droits complet",
+              "url": "/fr/droits/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ruta": "/fr/trova/",
+      "titulo": "La Nueva Trova",
+      "subtitulo": "Vingt ans à documenter un mouvement de la chanson, depuis l'intérieur.",
+      "seo_titulo": "La Nueva Trova : trois livres d'Antonio López Sánchez",
+      "seo_desc": "Trois livres d'Antonio López Sánchez sur la Nueva Trova cubaine, 2001 à 2019 : une histoire avec ses protagonistes, des entretiens, les femmes dans ses paroles.",
+      "secciones": [
+        {
+          "titulo": "De quoi il s'agit",
+          "parrafos": [
+            "La Nueva Trova est le mouvement de la chanson cubaine apparu publiquement en février 1967, qui a ensuite défini le son et l'argument de plusieurs générations : Silvio Rodríguez, Pablo Milanés, Noel Nicola, Vicente et Santiago Feliú, et les trois vagues d'auteurs-compositeurs qui les ont suivis. Il est étudié dans les départements d'études latino-américaines, en ethnomusicologie et en histoire culturelle.",
+            "Entre 2001 et 2019, Antonio López Sánchez a publié trois livres à son sujet. Il n'est pas musicien. Il est journaliste, diplômé en communication sociale de l'Université de La Havane, et il a passé deux décennies à interviewer ceux qui ont fait cette musique, à écrire sur leurs disques dans la presse culturelle cubaine et, à l'occasion, à lire ses propres poèmes sur scène entre leurs guitares.",
+            "Les trois livres ne se répètent pas. Chacun pose une question que le précédent avait laissée ouverte."
+          ]
+        },
+        {
+          "titulo": "Les livres",
+          "alt": true,
+          "libros": [
+            {
+              "titulo": "La canción de la Nueva Trova",
+              "glosa": "La chanson de la Nueva Trova",
+              "anio": "2001",
+              "editorial": "Atril Ediciones Musicales",
+              "genero": "Essais et entretiens",
+              "url": "/fr/livres/la-cancion-de-la-nueva-trova/",
+              "texto": "Le premier livre de l'auteur, et une histoire du mouvement racontée avec les voix de ses propres protagonistes, depuis son apparition publique en février 1967. Il lit les trois vagues successives d'auteurs-compositeurs, ce qui les sépare et ce qu'ils partagent, et soutient que la guitare est restée le centre de gravité même lorsque d'autres instruments sont arrivés. Écrit au plus près de la source, avec des entretiens donnés par les fondateurs eux-mêmes."
+            },
+            {
+              "titulo": "Trovadoras",
+              "glosa": "Les femmes de la trova",
+              "anio": "2008",
+              "editorial": "Editorial Oriente",
+              "genero": "Entretiens",
+              "url": "/fr/livres/trovadoras/",
+              "texto": "Des autrices-compositrices en activité parlent de la place qu'elles, et les femmes avant elles, ont occupée dans la chanson cubaine. À leurs côtés, le livre porte deux spécialistes : Isabel Moya sur le genre et le musicographe Lino Betancourt. Pour un catalogue d'études de genre ou de musique latino-américaine, c'est une source primaire sous forme d'entretiens, et il existe très peu d'équivalents dans quelque langue que ce soit."
+            },
+            {
+              "titulo": "Convertida en canción",
+              "glosa": "Devenue chanson : l'image des femmes dans les paroles de la Nueva Trova",
+              "anio": "2019",
+              "editorial": "Editorial Capiro",
+              "genero": "Essai",
+              "url": "/fr/livres/convertida-en-cancion/",
+              "texto": "À quelle femme nos troubadours chantent-ils ? Les femmes de ces portraits chantés ont-elles changé, ou grandi ? Le livre lit les paroles comme un débat continu avec la société cubaine et suit ce qu'elles disent de l'entrée des femmes dans la vie publique, de la sexualité dans le couple et hors de lui, du travail du sexe, des ruptures et de l'infidélité, et de l'amour homosexuel. C'est le plus directement citable des trois pour une presse universitaire, et celui qui voyage le plus loin de Cuba."
+            }
+          ]
+        },
+        {
+          "titulo": "Au plus près de la chanson",
+          "parrafos": [
+            "La recherche ne s'est pas faite à distance. L'auteur a aussi été invité dans les propres espaces du mouvement, et le site conserve les enregistrements qui subsistent."
+          ],
+          "lista": [
+            "<em>La impúdica es la guitarra</em>, un concert du cycle A Guitarra Limpia au Centro Cultural Pablo de la Torriente Brau, La Havane, 2000, où il a lu ses poèmes entre les chansons.",
+            "Deux émissions de radio avec Fernando Rodríguez Sosa sur Habana Radio, 2018. La station est aujourd'hui entièrement hors ligne, et elles subsistent dans ces archives et dans l'Internet Archive.",
+            "L'émission de télévision <em>Entre libros</em>, 2019.",
+            "Des travaux dans la presse musicale cubaine : AM PM Magazine, La Jiribilla, El Caimán Barbudo, La Gaceta de Cuba, et les pages culturelles des revues Mujeres et Muchacha de 2001 à 2010."
+          ],
+          "enlaces": [
+            {
+              "texto": "Écouter les enregistrements",
+              "url": "/fr/auteur/plan-large/"
+            }
+          ]
+        },
+        {
+          "titulo": "Pour les éditeurs",
+          "alt": true,
+          "parrafos": [
+            "Les droits mondiaux hors de Cuba sont disponibles pour les trois titres, séparément ou en bloc. Les trois ensemble forment un compte rendu de vingt ans d'un même mouvement, écrit depuis l'intérieur, ce qui est une proposition plus forte que chacun d'eux isolément.",
+            "Ce sont les livres les plus courts à faire passer en français dans ce catalogue : des essais et des entretiens plutôt que des romans, et un sujet au lectorat universitaire défini. Manuscrits complets et synopsis sur demande."
+          ],
+          "enlaces": [
+            {
+              "texto": "Écrire pour les droits",
+              "url": "mailto:derechos@antoniolopezsanchez.art",
+              "relleno": true
+            },
+            {
+              "texto": "Représentation littéraire",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ruta": "/fr/poesie/",
+      "titulo": "Poésie",
+      "subtitulo": "Le vers libre et la décima, la strophe cubaine de dix vers.",
+      "seo_titulo": "La poésie d'Antonio López Sánchez, en espagnol",
+      "seo_desc": "Poèmes et décimas d'Antonio López Sánchez, publiés en entier en espagnol. Deux prix cubains en 2026. Des glosas qui répondent à José Martí et José Lezama Lima.",
+      "secciones": [
+        {
+          "titulo": "À lire en espagnol, ici, en entier",
+          "parrafos": [
+            "Il y a derrière cette section une décision qui mérite d'être dite franchement. Les poèmes ne sont pas traduits, et il n'est pas prévu de les traduire pour les publier ici. Ils sont publiés en entier, en espagnol, parce que la poésie en espagnol a des lecteurs partout et qu'on ne les sert pas bien en la leur tendant dans une autre langue.",
+            "Tout ce qui est écrit <em>sur</em> les poèmes est en français. Les poèmes eux-mêmes sont dans la langue où ils ont été écrits."
+          ],
+          "enlaces": [
+            {
+              "texto": "Lire les poèmes",
+              "url": "/fr/poesie/poemes/",
+              "relleno": true
+            },
+            {
+              "texto": "Décimas avec photographies",
+              "url": "/fr/poesie/decimitas/"
+            },
+            {
+              "texto": "Dans la voix de l'auteur",
+              "url": "/fr/poesie/de-ma-voix/"
+            }
+          ]
+        },
+        {
+          "titulo": "Ce qu'est une décima",
+          "alt": true,
+          "parrafos": [
+            "Cela mérite une explication, car la forme n'existe pas en français et elle est au centre de ce que fait ce poète. La décima, ou espinela, est une strophe de dix octosyllabes à rimes fixes, établie en Espagne au seizième siècle et naturalisée à Cuba si complètement qu'elle est devenue à la fois le vers oral et le vers écrit du pays : chantée à la campagne, improvisée en joute, et écrite sur la page par ses poètes les plus littéraires.",
+            "Elle est fermée, difficile et populaire en même temps. Une bonne décima doit retourner son argument à l'intérieur de dix vers et se poser sur le dernier. Le français n'a pas d'équivalent, et c'est exactement pour cela qu'il est intéressant de la faire passer.",
+            "La glosa va un pas plus loin. Le poète prend une strophe d'un autre poète et lui répond vers à vers, en terminant chacune de ses propres strophes sur l'un des vers empruntés, dans l'ordre, jusqu'à rendre l'original entier. Huit des poèmes publiés ici sont des glosas qui répondent à José Martí et à José Lezama Lima. Ces vers empruntés appartiennent à leurs auteurs et sont toujours imprimés à part, avec le nom de qui les a écrits."
+          ]
+        },
+        {
+          "titulo": "Prix récents",
+          "libros": [
+            {
+              "titulo": "Sonata de la lluvia",
+              "glosa": "Sonate de la pluie",
+              "anio": "2026",
+              "editorial": "Premio Colateral Yasmina Calcines, XXVIe Concours national Ala Décima",
+              "genero": "Poésie, décima",
+              "url": "/fr/poesie/sonata-de-la-lluvia/",
+              "texto": "Non pas un poème isolé mais une sonate en trois mouvements, cent cinquante vers de décima, chaque mouvement avec son indication de tempo et son épigraphe empruntée à un auteur-compositeur cubain. Elle peut être lue ici en entier."
+            },
+            {
+              "titulo": "Tres delirios y un desnudo",
+              "glosa": "Trois délires et un nu",
+              "anio": "2026",
+              "editorial": "Premier prix de poésie, XXXe Premio Farraluque de Literatura Erótica",
+              "genero": "Poésie, décima. Pour un lectorat adulte",
+              "url": "/fr/prix/tres-delirios-y-un-desnudo/",
+              "texto": "Un triptyque en douze décimas. Littérature érotique, écrite pour un lectorat adulte, et formellement ce qu'il y a de plus exigeant dans cette section : la tradition érotique et la plus stricte des strophes espagnoles dans la même pièce."
+            },
+            {
+              "titulo": "Trampas, retratos y un 17 rojo",
+              "glosa": "Pièges, portraits et un 17 rouge",
+              "anio": "2005",
+              "editorial": "Editorial de la Mujer",
+              "genero": "Poésie, en coauteur",
+              "url": "/fr/livres/trampas-retratos-y-un-17-rojo/",
+              "texto": "Le seul recueil de poésie de l'auteur à ce jour, partagé avec María del Carmen Mestas, en vers libre, et Marcel Luerio, en haïku. Sa part à lui est une suite de décimas érotiques. Les droits proposés ne couvrent que les poèmes qu'il a écrits. Cinq recueils de poésie achevés restent inédits."
+            }
+          ]
+        },
+        {
+          "titulo": "Pour les éditeurs",
+          "alt": true,
+          "parrafos": [
+            "Deux choses sont disponibles ici, et ce ne sont pas la même offre.",
+            "La première est un recueil en langue espagnole. Cinq manuscrits achevés sont inédits et cherchent une maison, et aucune traduction n'est en jeu. Pour un label hispanophone, c'est un livre qui pourrait être lu ce mois-ci.",
+            "La seconde est une édition bilingue. La décima est un problème formel qui mérite un traducteur ambitieux, et une édition en regard est la façon honnête de la publier en français. Qui s'intéresse à cette conversation est invité à écrire."
+          ],
+          "enlaces": [
+            {
+              "texto": "Écrire pour les droits",
+              "url": "mailto:derechos@antoniolopezsanchez.art",
+              "relleno": true
+            },
+            {
+              "texto": "Représentation littéraire",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ruta": "/fr/fiction/",
+      "titulo": "Fiction",
+      "subtitulo": "Fantasy héroïque, horreur, et fantasy pour les plus jeunes.",
+      "seo_titulo": "La fiction d'Antonio López Sánchez : fantasy et horreur",
+      "seo_desc": "Cinq romans d'Antonio López Sánchez : fantasy héroïque, horreur et fantasy pour la jeunesse, dont une saga illustrée en cinq volumes et un prix national cubain.",
+      "secciones": [
+        {
+          "titulo": "L'argument, et le coût",
+          "parrafos": [
+            "La fantasy héroïque est un marché immense et encombré, et il ne sert à rien de prétendre le contraire. Ce qui est rare, c'est d'où viennent ces livres. C'est de la fantasy héroïque écrite à La Havane, publiée par des maisons cubaines, avec des femmes au centre de ses deux premières sagas.",
+            "L'obstacle honnête est la traduction. Ce sont des romans, pas des essais, et une traduction littéraire coûte cher. Synopsis et manuscrits complets sont à la disposition de qui pèse ce coût, et toute conversation sur un cofinancement de traduction est la bienvenue."
+          ]
+        },
+        {
+          "titulo": "Les romans",
+          "alt": true,
+          "libros": [
+            {
+              "titulo": "Las guerreras de la luz",
+              "glosa": "Les guerrières de la lumière",
+              "anio": "2011",
+              "editorial": "Editorial de la Mujer",
+              "genero": "Fantasy héroïque",
+              "premio": "Premio La Rosa Blanca 2012, décerné par l'UNEAC, l'union des écrivains et des artistes de Cuba",
+              "url": "/fr/livres/las-guerreras-de-la-luz/",
+              "texto": "Le premier roman : un tirage de plusieurs milliers d'exemplaires qui s'est bien vendu dans toute l'île sans aucune promotion, et le Premio La Rosa Blanca de l'UNEAC."
+            },
+            {
+              "titulo": "El Escudo de Valnúss",
+              "glosa": "Le Bouclier de Valnúss",
+              "anio": "2015",
+              "editorial": "Editorial de la Mujer",
+              "genero": "Fantasy héroïque",
+              "url": "/fr/livres/el-escudo-de-valnuss/",
+              "texto": "Une saga publiée en coffret de cinq volumes illustrés, avec des dessins de Rainel Cabarroi. L'objet le plus ambitieux du catalogue et celui qui appelle le plus évidemment un contrat de série plutôt qu'un titre isolé."
+            },
+            {
+              "titulo": "El otro lado del espejo",
+              "glosa": "De l'autre côté du miroir",
+              "anio": "2017",
+              "editorial": "Editorial Gente Nueva",
+              "genero": "Fantasy héroïque",
+              "premio": "Mention d'honneur, Concurso La Edad de Oro, 2014, alors qu'il était encore inédit",
+              "url": "/fr/livres/el-otro-lado-del-espejo/",
+              "texto": "Reconnu par le jury avant même d'avoir trouvé un éditeur."
+            },
+            {
+              "titulo": "Grimorium",
+              "anio": "2018",
+              "editorial": "Editorial Oriente",
+              "genero": "Horreur",
+              "url": "/fr/livres/grimorium/",
+              "texto": "Le seul écart de la fantasy vers l'horreur pure."
+            },
+            {
+              "titulo": "Perdidos en un librero",
+              "glosa": "Perdus dans une bibliothèque",
+              "anio": "2026",
+              "editorial": "Editorial Quisicuaba",
+              "genero": "Fantasy pour la jeunesse",
+              "url": "/fr/livres/perdidos-en-un-librero/",
+              "texto": "Le livre le plus récent, publié sous forme numérique, et la porte la plus courte vers cet auteur pour un catalogue jeunesse."
+            },
+            {
+              "titulo": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados",
+              "glosa": "De l'étrange aventure de Don Quichotte en de lointaines contrées, et d'autres faits oubliés jusqu'à ce jour",
+              "anio": "2021",
+              "editorial": "Editorial Cubaliteraria",
+              "genero": "Récit",
+              "url": "/fr/livres/de-la-extrana-aventura-de-don-quijote/",
+              "texto": "Cervantès réécrit depuis Cuba : emportés devant les moulins, Don Quichotte et Sancho atterrissent dans La Havane des années 1990. Le texte a remporté le concours Reescribir El Quijote en Cuba en 2005, devant un jury qui comptait Leonardo Padura, et il se lit librement en espagnol."
+            }
+          ]
+        },
+        {
+          "titulo": "Les récits",
+          "parrafos": [
+            "À côté des romans, il y a un ensemble de récits brefs, publiés en entier sur ce site en espagnol : le cabinet d'un psychiatre, une voisine qui décide de tuer un arbre, six amis qui doivent accomplir un rite ancien, un dragon en jouet dans une chambre d'enfant.",
+            "Le récit bref est souvent la façon la moins coûteuse, pour un éditeur étranger, d'essayer un auteur. Les textes sont disponibles à l'unité pour une revue ou une anthologie, en espagnol ou en traduction."
+          ],
+          "enlaces": [
+            {
+              "texto": "Lire les récits",
+              "url": "/fr/recits/"
+            },
+            {
+              "texto": "Le catalogue complet",
+              "url": "/fr/livres/"
+            }
+          ]
+        },
+        {
+          "titulo": "Pour les éditeurs",
+          "alt": true,
+          "parrafos": [
+            "Les droits mondiaux hors de Cuba sont disponibles pour tous les titres ci-dessus. Les éditions cubaines ne sont exclusives qu'à l'intérieur de Cuba, et cette exclusivité n'est affectée par aucun accord conclu ici.",
+            "Cinq recueils de poésie et trois recueils de récits sont achevés et inédits. Rien n'a été proposé où que ce soit hors de Cuba."
+          ],
+          "enlaces": [
+            {
+              "texto": "Écrire pour les droits",
+              "url": "mailto:derechos@antoniolopezsanchez.art",
+              "relleno": true
+            },
+            {
+              "texto": "Représentation littéraire",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ruta": "/fr/auteur/",
+      "titulo": "L'auteur",
+      "subtitulo": "Antonio López Sánchez. La Havane, 1973. Tout ce qu'il a écrit, en un seul endroit.",
+      "seo_titulo": "Antonio López Sánchez : l'œuvre complète",
+      "seo_desc": "Écrivain, poète et journaliste cubain, La Havane 1973. Quatorze livres, vingt-deux textes de presse, des récits, des poèmes et quatre romans inédits.",
+      "secciones": [
+        {
+          "titulo": "En bref",
+          "parrafos": [
+            "Antonio López Sánchez est né à La Havane le 16 janvier 1973. Il est diplômé en communication sociale de l'Université de La Havane, sorti de la neuvième promotion du Centre de formation littéraire Onelio Jorge Cardoso en 2007, et il a suivi le programme de troisième cycle Crítica con Arte à l'Institut international de journalisme José Martí en 2022.",
+            "Il a publié quatorze livres depuis 2001, en fantasy héroïque, horreur, littérature de jeunesse, poésie, et essais et entretiens sur la Nueva Trova cubaine. Il a passé sa vie professionnelle dans la presse culturelle cubaine, et il vit et écrit à Alamar, le quartier de La Havane qui fait face à la mer.",
+            "Cette page est l'index de l'œuvre entière : les livres, le journalisme, les récits, les poèmes et les romans qui cherchent encore un éditeur. Chaque entrée mène à la page où le texte se lit en entier."
+          ]
+        },
+        {
+          "titulo": "Tout ici est en espagnol",
+          "alt": true,
+          "parrafos": [
+            "L'œuvre entière d'Antonio López Sánchez est écrite en espagnol, et rien n'en a encore été traduit. Il n'existe aucune édition française d'aucun livre, ni aucun extrait traduit : ce que ce site offre à un éditeur, c'est l'original, complet et prêt à être envoyé.",
+            "Nous sommes ouverts aux offres de traduction, pour n'importe quelle partie et vers n'importe quelle langue : un seul livre, toute la fiction, les trois volumes sur la Nueva Trova, la poésie, les récits ou les romans inédits. Les droits d'édition et de traduction hors de Cuba sont libres, et la demande va à la représentation littéraire de l'auteur."
+          ],
+          "enlaces": [
+            {
+              "texto": "Les droits, et comment ils marchent",
+              "url": "/fr/droits/"
+            },
+            {
+              "texto": "Écrire pour les droits",
+              "url": "mailto:derechos@antoniolopezsanchez.art"
+            }
+          ]
+        },
+        {
+          "titulo": "Parcours",
+          "parrafos": [
+            "Trente ans dans la presse culturelle cubaine, dans l'ordre où les archives le gardent."
+          ],
+          "lista": [
+            "<strong>2026</strong> <span class=\"meta frase\">Depuis février, de nouveau dans l'équipe de communication du Musée national des beaux-arts, La Havane.</span>",
+            "<strong>2024 et 2025</strong> <span class=\"meta frase\">Travail de presse pour le site de la Chambre cubaine du livre pendant les Foires internationales du livre de La Havane.</span>",
+            "<strong>2023</strong> <span class=\"meta frase\">De juillet à décembre, équipe de communication du Musée national des beaux-arts.</span>",
+            "<strong>2023</strong> <span class=\"meta frase\">À la demande de l'Institut cubain du livre, dirige l'édition spéciale de <em lang=\"es\">El Cañonazo</em>, le quotidien de la Foire internationale du livre de La Havane, et ses dix numéros quotidiens pendant l'événement.</span>",
+            "<strong>2022</strong> <span class=\"meta frase\">Achève le programme de troisième cycle Crítica con Arte à l'Institut international de journalisme José Martí.</span>",
+            "<strong>2020 à 2022</strong> <span class=\"meta frase\">Équipe de promotion et de communication de la Chambre cubaine du livre ; entre autres fonctions, rédacteur en chef de la revue <em lang=\"es\">Correo del libro</em>.</span>",
+            "<strong>2019</strong> <span class=\"meta frase\">Travail de presse pour le <em lang=\"es\">Diario del Festival</em> pendant le 61e Festival international du nouveau cinéma latino-américain.</span>",
+            "<strong>2019 à 2021</strong> <span class=\"meta frase\">Responsable de <em lang=\"es\">Pantallas de papel</em>, la rubrique de critique de livres du portail numérique En vivo, de l'Institut cubain de radio et télévision.</span>",
+            "<strong>2018</strong> <span class=\"meta frase\">À partir de novembre, collabore à Cubaliteraria : entretiens avec des écrivains, critiques de livres et textes littéraires.</span>",
+            "<strong>2018</strong> <span class=\"meta frase\">Collabore à AM PM Magazine : écrits sur la musique, critiques de livres sur la musique cubaine et de disques d'artistes cubains.</span>",
+            "<strong>2018 à 2021</strong> <span class=\"meta frase\">Collaborateur de la rubrique littéraire de la revue <em lang=\"es\">Cartelera</em>, avec des critiques d'auteurs cubains.</span>",
+            "<strong>2015 à 2017</strong> <span class=\"meta frase\">Journaliste pour la Chambre cubaine du livre sur le projet Cuisine et culture alimentaire ; collaborateur régulier de Cubapaladar et de la revue Artechef.</span>",
+            "<strong>2014 à 2015</strong> <span class=\"meta frase\">Rédacteur à la revue <em lang=\"es\">Pionero</em>, Casa Editora Abril.</span>",
+            "<strong>2001 à 2010</strong> <span class=\"meta frase\">Membre de l'équipe éditoriale de l'Editorial de la Mujer : la revue <em lang=\"es\">Mujeres</em>, le tabloïd <em lang=\"es\">Muchacha</em> et le site Mujeres en Internet.</span>",
+            "<strong>2002</strong> <span class=\"meta frase\">À partir de cette année, publie régulièrement dans des médias numériques : La Jiribilla, La Ventana de Casa de las Américas, le site de l'Association Hermanos Saíz, Caminos du Centre mémorial Martin Luther King Jr., Canto de Todos et Esquife, surtout sur des sujets culturels.</span>",
+            "<strong>1998</strong> <span class=\"meta frase\">À partir de cette année, publie dans La Calle del Medio, Alma Máter, La Gaceta, El Caimán Barbudo, Juventud Rebelde, El Correo de Cuba, La Corchea, le journal Cubadisco et le supplément littéraire El Tintero.</span>",
+            "<strong>1998 à 2000</strong> <span class=\"meta frase\">Membre de l'équipe du Centre culturel Pablo de la Torriente Brau : attaché de presse, coordinateur du cycle mensuel de concerts <em lang=\"es\">A guitarra limpia</em>, et rédacteur du Boletín Memoria.</span>",
+            "<strong>1998</strong> <span class=\"meta frase\">Diplômé en communication sociale de l'Université de La Havane.</span>"
+          ],
+          "enlaces": [
+            {
+              "texto": "Le parcours complet, en espagnol",
+              "url": "/periodista/",
+              "lang": "es"
+            }
+          ]
+        },
+        {
+          "titulo": "Prix",
+          "alt": true,
+          "parrafos": [
+            "Sept prix et mentions d'honneur entre 2002 et 2026, parmi lesquels le Premio La Rosa Blanca de l'UNEAC pour <em>Las guerreras de la luz</em> et, pour la seule année 2026, le Premier prix de poésie du Premio Farraluque et le Premio Colateral Yasmina Calcines."
+          ],
+          "enlaces": [
+            {
+              "texto": "Tous les prix",
+              "url": "/fr/prix/"
+            }
+          ]
+        },
+        {
+          "titulo": "Les livres",
+          "parrafos": [
+            "Quatorze livres publiés, à partir de 2001. La fiction d'abord, puis les trois volumes d'entretiens et de recherche sur la Nueva Trova, puis la poésie et les volumes collectifs où il a des textes. Chaque page porte le synopsis, la note de l'auteur, des extraits et la fiche qu'un éditeur demande."
+          ],
+          "obras": "libros",
+          "enlaces": [
+            {
+              "texto": "Le catalogue, avec les couvertures",
+              "url": "/fr/livres/"
+            }
+          ]
+        },
+        {
+          "titulo": "Le journalisme",
+          "alt": true,
+          "parrafos": [
+            "Vingt-deux textes signés, d'un entretien de 1994 avec l'auteur-compositeur Carlos Varela à un texte de 2021 sur les guitares électriques dans la trova. Entretiens, critiques de livres et essais, presque tous avec la musique à proximité.",
+            "Ces pages n'existent qu'en espagnol. La ligne sous chaque titre dit de quoi il s'agit."
+          ],
+          "obras": "periodismo"
+        },
+        {
+          "titulo": "Les récits",
+          "parrafos": [
+            "Onze récits complets, chacun avec sa propre page. Certains viennent de livres publiés, d'autres de livres encore chez leur éditeur, d'autres n'appartiennent encore à personne."
+          ],
+          "obras": "cuentos",
+          "enlaces": [
+            {
+              "texto": "La salle des récits",
+              "url": "/fr/recits/"
+            }
+          ]
+        },
+        {
+          "titulo": "Les poèmes",
+          "alt": true,
+          "parrafos": [
+            "Douze poèmes et huit glosas. La glosa est une vieille forme espagnole : le poète prend une strophe de quelqu'un d'autre et écrit quatre strophes de dix vers, chacune finissant sur l'un de ses vers."
+          ],
+          "obras": "poemas",
+          "enlaces": [
+            {
+              "texto": "La salle de la poésie",
+              "url": "/fr/poesie/poemes/"
+            }
+          ]
+        },
+        {
+          "titulo": "Les De-Cimitas",
+          "parrafos": [
+            "Vingt décimas écrites à partir des photographies de l'auteur, chaque image et ses dix vers publiés comme une seule pièce. La décima est la strophe de dix vers de la poésie et de la chanson cubaines. L'une d'elles a débordé la forme et a sa propre salle, Sonata de la lluvia, en trois mouvements."
+          ],
+          "obras": "decimitas",
+          "enlaces": [
+            {
+              "texto": "Les voir avec leurs photographies",
+              "url": "/fr/poesie/decimitas/"
+            },
+            {
+              "texto": "Sonata de la lluvia",
+              "url": "/fr/poesie/sonata-de-la-lluvia/"
+            },
+            {
+              "texto": "Des poèmes dans sa propre voix",
+              "url": "/fr/poesie/de-ma-voix/"
+            }
+          ]
+        },
+        {
+          "titulo": "Les romans inédits",
+          "alt": true,
+          "parrafos": [
+            "Quatre romans achevés qui n'ont pas encore trouvé d'éditeur. Chacun a son synopsis, la note de l'auteur et les extraits qu'il a choisis. Les manuscrits complets peuvent être envoyés le jour même de la demande."
+          ],
+          "obras": "ineditos",
+          "enlaces": [
+            {
+              "texto": "La salle des inédits",
+              "url": "/fr/inedits/"
+            }
+          ]
+        },
+        {
+          "titulo": "Contact",
+          "parrafos": [
+            "Pour les lecteurs, la presse et les invitations, écrivez directement à l'auteur. Pour les droits, les éditions et les traductions hors de Cuba, écrivez à sa représentation. Rien sur ce site n'a encore été traduit, et chaque partie est ouverte à une offre."
+          ],
+          "enlaces": [
+            {
+              "texto": "Écrire à l'auteur",
+              "url": "mailto:antonio@antoniolopezsanchez.art",
+              "relleno": true
+            },
+            {
+              "texto": "Écrire pour les droits",
+              "url": "mailto:derechos@antoniolopezsanchez.art"
+            },
+            {
+              "texto": "Représentation littéraire",
+              "url": "https://ernestocisneros.art/literary-representation.html",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ruta": "/fr/poesie/de-ma-voix/",
+      "titulo": "De ma voix",
+      "subtitulo": "Des poèmes enregistrés et lus par moi : la salle sonore de la poésie.",
+      "seo_titulo": "Des poèmes lus par Antonio López Sánchez, dans sa propre voix",
+      "seo_desc": "Neuf poèmes lus en espagnol par le poète cubain Antonio López Sánchez, et deux enregistrements en public : l'UNEAC à Santa Clara et le Centro Pablo.",
+      "secciones": [
+        {
+          "titulo": "Les poèmes, à voix haute",
+          "parrafos": [
+            "Un poème n'est achevé que lorsque quelqu'un l'entend. Voici des poèmes dans la voix de celui qui les a écrits, enregistrés en espagnol, la langue où ils ont été écrits."
+          ],
+          "grabaciones": "en-mi-voz"
+        }
+      ]
+    },
+    {
+      "ruta": "/fr/auteur/plan-large/",
+      "titulo": "Plan large",
+      "subtitulo": "Radio, télévision et presse, au-delà des livres.",
+      "seo_titulo": "Antonio López Sánchez à la radio et à la télévision",
+      "seo_desc": "Passages à la radio et à la télévision de l'écrivain cubain Antonio López Sánchez, et ses poèmes lus en public, enregistrés en espagnol entre 1999 et 2022.",
+      "secciones": [
+        {
+          "titulo": "Tout ne tient pas dans un livre",
+          "parrafos": [
+            "Des enregistrements de radio et de télévision, et ce qu'on a dit de moi là où un livre entier n'aurait pas tenu. Tout est en espagnol."
+          ]
+        },
+        {
+          "titulo": "À la télévision",
+          "medios": [
+            {
+              "tipo": "video",
+              "titulo": "Entre libros",
+              "lang": "es",
+              "meta": "Émission de télévision, 25 mai 2019 · quatorze minutes",
+              "src": "/video/entre-libros-2019.mp4",
+              "poster": "/img/entre-libros-poster.webp",
+              "ancho": 720,
+              "alto": 480,
+              "sin_video": "Votre navigateur ne peut pas lire cette vidéo ; vous pouvez <a href=\"{}\">télécharger l'enregistrement</a>."
+            },
+            {
+              "tipo": "enlace",
+              "titulo": "Conociendo al periodista Antonio López Sánchez",
+              "lang": "es",
+              "meta": "Entretien filmé, à l'occasion du XXXe Premio Nacional Emilio Ballagas, où j'étais l'un des invités",
+              "url": "https://youtu.be/PJkZVXQkwnA",
+              "boton": "Voir l'entretien"
+            }
+          ]
+        },
+        {
+          "titulo": "À la radio",
+          "alt": true,
+          "figura": {
+            "img": "/img/album/en-la-radio.webp",
+            "alt": "Deux personnes casque aux oreilles devant les micros d'un studio de radio",
+            "pie": "À la radio, depuis la Foire internationale du livre de La Havane"
+          },
+          "medios": [
+            {
+              "tipo": "audio",
+              "titulo": "Mi libro preferido",
+              "lang": "es",
+              "meta": "Habana Radio, 17 avril 2018 · dirigée et présentée par le journaliste et critique littéraire Fernando Rodríguez Sosa · trente et une minutes",
+              "src": "/audio/mi-libro-preferido-2018.mp3"
+            },
+            {
+              "tipo": "audio",
+              "titulo": "Invitación a la lectura",
+              "lang": "es",
+              "meta": "Habana Radio, 16 mai 2018 · dirigée et présentée par le journaliste et critique littéraire Fernando Rodríguez Sosa · trente minutes",
+              "src": "/audio/invitacion-a-la-lectura-2018.mp3"
+            }
+          ]
+        },
+        {
+          "titulo": "Lus à voix haute",
+          "grabaciones": "plano-abierto"
+        },
+        {
+          "titulo": "Sans enregistrement sous la main",
+          "alt": true,
+          "lista": [
+            "<strong lang=\"es\">Hablar de poesía</strong> <span class=\"meta\">· Radio Ciudad de La Habana, 2000 · une émission entièrement consacrée à ma poésie · l'enregistrement est en cours de recherche</span>",
+            "<strong lang=\"es\">La impúdica es la guitarra</strong> <span class=\"meta\">· cassette enregistrée en public avec plusieurs trovadores, Centro Pablo de la Torriente Brau, 2000 · avec des poèmes de moi</span>",
+            "<strong lang=\"es\">Más que sobrevivir</strong> <span class=\"meta\">· cassette de la trovadora Rita del Prado, 1999 · avec des poèmes de moi</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "ruta": "/fr/livres/parmi-les-lecteurs/",
+      "titulo": "Parmi les lecteurs",
+      "subtitulo": "Salons du livre, signatures et libraires.",
+      "seo_titulo": "Antonio López Sánchez parmi ses lecteurs",
+      "seo_desc": "Salons du livre, signatures et libraires : photographies de l'écrivain cubain Antonio López Sánchez avec ses lecteurs à La Havane, Santiago de Cuba et Camagüey.",
+      "secciones": [
+        {
+          "titulo": "Les livres finissent dans d'autres mains",
+          "parrafos": [
+            "Un livre n'est pas achevé quand je l'écris, ni quand on l'imprime. Il est achevé quand quelqu'un l'ouvre. Voici des salons, des tables, des files d'attente et des libraires, qui en savent là-dessus plus que quiconque."
+          ],
+          "galeria": [
+            {
+              "img": "/img/album/libreras-habana-2.webp",
+              "alt": "Deux personnes tenant des exemplaires du livre dans un salon",
+              "pie": "Avec des libraires, qui en savent là-dessus plus que quiconque. Foire du livre de La Havane"
+            },
+            {
+              "img": "/img/album/libreras-habana-1.webp",
+              "alt": "Des exemplaires en main, à côté de la table de vente d'un salon",
+              "pie": "Foire internationale du livre de La Havane"
+            },
+            {
+              "img": "/img/album/libreras-santiago.webp",
+              "alt": "Plusieurs personnes posant avec des exemplaires du livre dans la rue",
+              "pie": "Foire du livre de Santiago de Cuba"
+            },
+            {
+              "img": "/img/album/firma-santiago.webp",
+              "alt": "Signature d'un exemplaire tenu à la main, dans la rue",
+              "pie": "Signatures à Santiago de Cuba"
+            },
+            {
+              "img": "/img/album/firma-camaguey.webp",
+              "alt": "Signature d'exemplaires à une table, devant la porte d'une librairie",
+              "pie": "Signatures à la 33e Foire internationale du livre, Camagüey, mars 2025"
+            },
+            {
+              "img": "/img/album/cartel-camaguey.webp",
+              "alt": "Debout à côté de l'affiche de la 33e Foire internationale du livre de Camagüey",
+              "pie": "La 33e Foire internationale du livre, Camagüey"
+            },
+            {
+              "img": "/img/album/mis-libros-mesa.webp",
+              "alt": "Bras ouverts devant une table couverte d'exemplaires",
+              "pie": "Mes livres"
+            },
+            {
+              "img": "/img/album/onelio-panel.webp",
+              "alt": "Une longue table avec plusieurs participants pendant un panel de lectures et de débats",
+              "pie": "Organisé par le Centre de formation littéraire Onelio Jorge Cardoso"
+            },
+            {
+              "img": "/img/album/onelio-cartel.webp",
+              "alt": "Affiche du cycle Los onelianos cuentan, avec un portrait de l'auteur",
+              "pie": "Los onelianos cuentan, lectures et débats avec les diplômés du Centre Onelio, Foire du livre 2022"
+            },
+            {
+              "img": "/img/album/don-alejo.webp",
+              "alt": "Portrait devant une grande affiche du visage d'Alejo Carpentier",
+              "pie": "Avec Don Alejo Carpentier, Foire du livre de La Havane"
+            },
+            {
+              "img": "/img/album/el-gato.webp",
+              "alt": "Un chat tigré posé sur un exemplaire de Convertida en canción",
+              "pie": "Même le chat lit mes livres"
+            }
+          ],
+          "enlaces": [
+            {
+              "texto": "Livres",
+              "url": "/fr/livres/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
