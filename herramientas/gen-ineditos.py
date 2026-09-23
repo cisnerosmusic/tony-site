@@ -24,7 +24,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=34"
+CSS = "?v=35"
 DERECHOS_EMAIL = "derechos@antoniolopezsanchez.art"
 IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
 

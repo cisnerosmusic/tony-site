@@ -16,7 +16,29 @@ def de_rtf(bruto):
     acentuados. Para textos literarios del autor no se improvisa un conversor:
     se usa uno probado y se compara el resultado contra el original."""
     from striprtf.striprtf import rtf_to_text
-    return rtf_to_text(bruto.decode("cp1252", errors="replace"), errors="ignore")
+    return sin_griego(rtf_to_text(bruto.decode("cp1252", errors="replace"), errors="ignore"))
+
+
+def sin_griego(t):
+    """Repara los acentos que salen en alfabeto griego.
+
+    Algunos RTF de Tony declaran cp1252 pero traen tipografias con juego de
+    caracteres griego, y striprtf resuelve los escapes \\'xx por ahi: en el
+    trabajo de la Orquesta Aragon, «cumpleaños» salia «cumpleaρos» y «década»,
+    «dιcada». El byte es el correcto, solo esta leido con la tabla equivocada,
+    asi que se vuelve a codificar en cp1253 y se lee en cp1252.
+
+    No toca nada mas: si el texto no trae letras griegas, esta funcion es la
+    identidad. Y si alguna vez el autor escribe griego de verdad, saltara a la
+    vista al comparar con el original, que es lo que manda AGENTS.md."""
+    def una(c):
+        if "Ͱ" <= c <= "Ͽ":
+            try:
+                return c.encode("cp1253").decode("cp1252")
+            except (UnicodeEncodeError, UnicodeDecodeError):
+                return c
+        return c
+    return "".join(una(c) for c in t)
 
 
 def de_rtf_casero(bruto):

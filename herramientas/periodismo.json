@@ -1,0 +1,351 @@
+{
+  "_nota": "El archivo de prensa de Tony. El orden dentro de cada grupo es el del manifiesto. 'medio' y 'fecha' salen del nombre del archivo que manda el autor, que es dato y no ruido; donde no venian, el campo se queda vacio y la ficha lo calla en vez de inventarlo. 'subtitulos' y 'preguntas' son lineas exactas del documento: el generador se para si no las encuentra, porque adivinar un intertitulo por su largo acaba convirtiendo un verso en un titular.",
+  "seccion": {
+    "titulo": "La firma al pie",
+    "entrada": [
+      "Treinta años de trabajos firmados. Entrevistas, reseñas y crónicas, casi todas con música cerca, escritas para revistas y sitios donde he ido dejando la letra.",
+      "Algunas piezas nacieron para un número concreto y ahí se quedaron. Otras se escribieron por el gusto de defender a alguien que lo merecía. Aquí están, completas."
+    ]
+  },
+  "grupos": [
+    {
+      "clave": "entrevistas",
+      "titulo": "Entrevistas",
+      "entrada": "Conversaciones con trovadores, pintores, músicos y fotógrafos, de 1994 a 2010."
+    },
+    {
+      "clave": "resenas",
+      "titulo": "Reseñas",
+      "entrada": "Libros leídos y contados: música, humor, policial y literatura cubana."
+    },
+    {
+      "clave": "cronicas",
+      "titulo": "Crónicas y ensayos",
+      "entrada": "Aniversarios, homenajes y recuentos. Casi todos con una guitarra dentro."
+    }
+  ],
+  "trabajos": [
+    {
+      "slug": "carlos-varela-el-riesgo-de-buscar",
+      "grupo": "entrevistas",
+      "antetitulo": "Carlos Varela",
+      "titulo": "El riesgo de buscar",
+      "medio": "Proyecto Voces, Facultad de Comunicación de la Universidad de La Habana",
+      "fecha": "1994",
+      "archivo": "periodismo/carlos-varela-el-riesgo-de-buscar.txt",
+      "nota": "La presente entrevista con el trovador Carlos Varela fue realizada a raíz del lanzamiento de su disco Como los peces por allá por el ya lejano 1994. Originalmente fue destinada a la publicación Voces, de la Facultad de Comunicación de la Universidad de la Habana, que nunca llegó a dejar oír su voz y por diversas razones permaneció inédita hasta hoy. Luego de algunos años y discos del trovador pero tomando en cuenta la validez que todavía mantiene en sus opiniones sobre diversos temas, creo que todavía vale la pena publicarla y darla a conocer para los amigos ¿y porqué no? los enemigos del gnomo Carlitos.",
+      "dialogo": true,
+      "linea": "Una conversación de 1994, recién salido Como los peces, que se quedó inédita porque la revista que la encargó nunca llegó a salir.",
+      "seo_titulo": "Carlos Varela: el riesgo de buscar | Entrevista de 1994",
+      "seo_desc": "Entrevista inédita de Antonio López Sánchez al trovador Carlos Varela en 1994, a la salida del disco Como los peces. Se publica aquí por primera vez."
+    },
+    {
+      "slug": "ramon-haiti-colores-al-desnudo",
+      "grupo": "entrevistas",
+      "antetitulo": "Ramón Eduardo Haití",
+      "titulo": "Colores al desnudo",
+      "medio": "Revista Muchacha",
+      "fecha": "diciembre de 2005",
+      "archivo": "periodismo/ramon-haiti-colores-al-desnudo.txt",
+      "preguntas": [
+        "¿Por qué pintas con espátula y no con pincel? ¿Qué significa la espátula?",
+        "Tienes mucha relación con el impresionismo.¿Cuál es el motivo?",
+        "Cuando comenzaste esta línea de trabajo, experimentabas con rostros. Ahora pintas mujeres de cuerpo entero. ¿Cuál la razón del tránsito? ¿Cómo llegas del rostro a los cuerpos?",
+        "¿Y el desnudo?",
+        "¿Qué te traen a la mente estos nombres en cuanto a influencias, deseos, en fin... Vincent Van Goth...?",
+        "¿Pablo Picasso...?",
+        "¿Carlos Enríquez...?",
+        "¿Wifredo Lam...?",
+        "Uno muy importante: ¿Ramón Haití Eduardo?",
+        "¿Y a Ramón Eduardo Haití?"
+      ],
+      "linea": "El pintor cuenta cómo encontró la espátula buscando otra cosa, por qué sus rostros no tienen sexo y qué le roba a Van Gogh, a Lam y a su propio padre.",
+      "seo_titulo": "Ramón Eduardo Haití: colores al desnudo | Entrevista",
+      "seo_desc": "Entrevista de Antonio López Sánchez al pintor cubano Ramón Eduardo Haití: la espátula, los rostros sin sexo, el desnudo y sus maestros. Revista Muchacha, 2005."
+    },
+    {
+      "slug": "hipnosis-rebeldes-con-causa",
+      "grupo": "entrevistas",
+      "antetitulo": "Hipnosis",
+      "titulo": "Rebeldes con causa",
+      "medio": "Revista Muchacha",
+      "fecha": "noviembre de 2005",
+      "archivo": "periodismo/hipnosis-rebeldes-con-causa.txt",
+      "preguntas": [
+        "¿Porqué rockeras?",
+        "Tienes tres mujeres en la banda. ¿Cómo te va en el medio rockero donde no abundan las mujeres?",
+        "Hablemos del público, ¿cómo fueron las primeras presentaciones en directo, cómo se quedan cuando ven tantas mujeres en escena?",
+        "Fanny, para terminar, su tuvieras la oportunidad de hablar para, no sé, trescientas mil mujeres e invitarlas a que hagan rock, ¿qué les dirías?."
+      ],
+      "linea": "Tarde en el Patio de María con la directora de Hipnosis, una banda de metal con tres mujeres dentro, en un medio donde no abundan.",
+      "seo_titulo": "Hipnosis: rebeldes con causa | Entrevista de A. López Sánchez",
+      "seo_desc": "Entrevista de Antonio López Sánchez a Fanny Tachín, directora del grupo cubano de metal Hipnosis, en el Patio de María. Revista Muchacha, 2005."
+    },
+    {
+      "slug": "palabras-desde-una-flauta",
+      "grupo": "entrevistas",
+      "titulo": "Palabras desde una flauta",
+      "medio": "Revista Muchacha",
+      "fecha": "junio de 2009",
+      "archivo": "periodismo/palabras-desde-una-flauta.txt",
+      "credito": "Fotos: Miguel Gutiérrez",
+      "linea": "Una flautista recién graduada del ISA ensaya al amanecer en una esquina de La Habana, y la entrevista decide contestarse con lo que ella toca.",
+      "seo_titulo": "Palabras desde una flauta | Entrevista de A. López Sánchez",
+      "seo_desc": "Entrevista de Antonio López Sánchez a la flautista cubana Yailín Martínez Hierrezuelo, contada al ritmo de lo que toca. Revista Muchacha, junio de 2009."
+    },
+    {
+      "slug": "la-trova-canta-a-dos-lentes",
+      "grupo": "entrevistas",
+      "titulo": "La trova canta a dos lentes",
+      "medio": "La Jiribilla",
+      "fecha": "marzo de 2010",
+      "archivo": "periodismo/la-trova-canta-a-dos-lentes.txt",
+      "subtitulos": [
+        "Alain Gutiérrez: Trabajo para mañana.",
+        "Kaloian Santos: Hacer sentimientos."
+      ],
+      "preguntas": [
+        "¿Alain, cuál es tu retrato de la trova?",
+        "¿Cómo se oye a través del lente?",
+        "¿Santiago, el Festival…?",
+        "Para Amalia, que no pudo estar pero te envió las palabras al catálogo, una frase.",
+        "¿Un retrato de la trova?",
+        "Si no eres un músico frustrado, ¿prefieres cantar desde el lente?"
+      ],
+      "linea": "Dos fotógrafos, Alain Gutiérrez y Kaloian Santos, explican cómo se retrata un sonido.",
+      "seo_titulo": "La trova canta a dos lentes | Entrevista de A. López Sánchez",
+      "seo_desc": "Entrevista de Antonio López Sánchez a los fotógrafos cubanos Alain Gutiérrez y Kaloian Santos sobre su exposición dedicada a la trova. La Jiribilla, 2010."
+    },
+    {
+      "slug": "el-loquito-locuras-de-pincel",
+      "grupo": "resenas",
+      "titulo": "Locuras de pincel",
+      "fecha": "junio de 2014",
+      "archivo": "periodismo/el-loquito-locuras-de-pincel.txt",
+      "linea": "El Loquito de René de la Nuez vuelve en una antología de Axel Li, y con él toda una estirpe de humor gráfico que decía lo que no se decía.",
+      "seo_titulo": "Locuras de pincel | Sobre El Loquito, de Axel Li",
+      "seo_desc": "Reseña de Antonio López Sánchez sobre El Loquito: (re)visiones, de Axel Li, y el personaje de René de la Nuez en la historia del humor gráfico cubano."
+    },
+    {
+      "slug": "el-verde-de-las-canicas",
+      "grupo": "resenas",
+      "titulo": "¿El verde de la desesperanza?",
+      "fecha": "agosto de 2014",
+      "archivo": "periodismo/el-verde-de-las-canicas.txt",
+      "linea": "Una novela de Marvelys Marrero entra en la infancia sin endulzarla, y sale avisando de la desesperanza.",
+      "seo_titulo": "¿El verde de la desesperanza? | Sobre Marvelys Marrero",
+      "seo_desc": "Reseña de Antonio López Sánchez sobre El verde de las canicas, novela de Marvelys Marrero Fleites publicada por la Editorial Letras Cubanas."
+    },
+    {
+      "slug": "sonar-en-cubano",
+      "grupo": "resenas",
+      "antetitulo": "Entrevistas con música",
+      "titulo": "Para sonar en buen cubano",
+      "archivo": "periodismo/sonar-en-cubano.txt",
+      "linea": "Sonar en cubano reúne las entrevistas a músicos que fueron saliendo en La Gaceta de Cuba, de Juan Formell a Orishas.",
+      "seo_titulo": "Para sonar en buen cubano | Sobre Sonar en cubano",
+      "seo_desc": "Reseña de Antonio López Sánchez sobre Sonar en cubano. Músicos en La Gaceta de Cuba, compilación de Norberto Codina y Arturo Arango, Editorial Oriente."
+    },
+    {
+      "slug": "palabras-sin-velo",
+      "grupo": "resenas",
+      "titulo": "A velo descubierto las palabras",
+      "fecha": "junio de 2014",
+      "archivo": "periodismo/palabras-sin-velo.txt",
+      "linea": "Helen Hernández Hormilla entrevista a escritoras cubanas, y de paso hay que explicar qué es y qué no es el feminismo.",
+      "seo_titulo": "A velo descubierto las palabras | Sobre Palabras sin velo",
+      "seo_desc": "Reseña de Antonio López Sánchez sobre Palabras sin velo, de Helen Hernández Hormilla: entrevistas a escritoras cubanas, Editorial Caminos."
+    },
+    {
+      "slug": "un-siglo-de-jazz-en-cuba",
+      "grupo": "resenas",
+      "antetitulo": "Leonardo Acosta y el jazz en Cuba",
+      "titulo": "Una historia de un siglo",
+      "fecha": "marzo de 2014",
+      "archivo": "periodismo/un-siglo-de-jazz-en-cuba.txt",
+      "linea": "Leonardo Acosta cuenta cien años de jazz en la isla, y las Ediciones Museo de la Música lo ponen en las manos que hacía falta.",
+      "seo_titulo": "Una historia de un siglo | Sobre Un siglo de jazz en Cuba",
+      "seo_desc": "Reseña de Antonio López Sánchez sobre Un siglo de jazz en Cuba, de Leonardo Acosta, Premio Nacional de Literatura, en Ediciones Museo de la Música."
+    },
+    {
+      "slug": "isla-en-negro",
+      "grupo": "resenas",
+      "antetitulo": "Páginas en negro",
+      "titulo": "Una isla de crimen y enigma",
+      "fecha": "junio de 2014",
+      "archivo": "periodismo/isla-en-negro.txt",
+      "linea": "Una antología de Leopoldo Luis y Rafael Grillo intenta devolver a la isla el cuento policial que el Periodo Especial dejó sin revistas.",
+      "seo_titulo": "Una isla de crimen y enigma | Sobre Isla en negro",
+      "seo_desc": "Reseña de Antonio López Sánchez sobre Isla en negro, antología de relato policial cubano al cuidado de Leopoldo Luis y Rafael Grillo, Editorial Abril."
+    },
+    {
+      "slug": "aqui-esta-zumbado",
+      "grupo": "resenas",
+      "titulo": "¡Salud, maestro H. Zumbado!",
+      "fecha": "mayo de 2013",
+      "archivo": "periodismo/aqui-esta-zumbado.txt",
+      "linea": "Reseña escrita como si fuera un programa de televisión, para un maestro del humor que se merecía esa broma.",
+      "seo_titulo": "¡Salud, maestro H. Zumbado! | Sobre Aquí está Zumbado",
+      "seo_desc": "Reseña de Antonio López Sánchez sobre Aquí está Zumbado, del humorista cubano Héctor Zumbado, escrita en forma de programa de televisión."
+    },
+    {
+      "slug": "la-musica-en-cuba",
+      "grupo": "resenas",
+      "antetitulo": "Alejo Carpentier",
+      "titulo": "Sonando la lira y el bongó",
+      "fecha": "mayo de 2013",
+      "archivo": "periodismo/la-musica-en-cuba.txt",
+      "linea": "La música en Cuba vuelve a las librerías con el capítulo final que el propio Carpentier había suprimido.",
+      "seo_titulo": "Sonando la lira y el bongó | Sobre La música en Cuba",
+      "seo_desc": "Reseña de Antonio López Sánchez sobre La música en Cuba - Temas de la lira y el bongó, de Alejo Carpentier, en Ediciones Museo de la Música."
+    },
+    {
+      "slug": "memorias-del-subdesarrollo",
+      "grupo": "cronicas",
+      "antetitulo": "40 años de un estreno",
+      "titulo": "La persistencia de las memorias y del subdesarrollo",
+      "medio": "La Jiribilla",
+      "fecha": "agosto de 2008",
+      "archivo": "periodismo/memorias-del-subdesarrollo.txt",
+      "epigrafe": {
+        "versos": [
+          "y Memorias del Subdesarrollo sigue gustando aún",
+          "es extraño que a los 20 años, no se apagó su luz"
+        ],
+        "autor": "Carlos Varela"
+      },
+      "linea": "Cuarenta años del estreno de la película de Titón, y una jornada entera discutiendo por qué sigue tan vigente.",
+      "seo_titulo": "La persistencia de las memorias y del subdesarrollo",
+      "seo_desc": "Crónica de Antonio López Sánchez sobre el homenaje a los 40 años del estreno de Memorias del subdesarrollo, de Tomás Gutiérrez Alea. La Jiribilla, 2008."
+    },
+    {
+      "slug": "orquesta-aragon-los-75-del-futuro",
+      "grupo": "cronicas",
+      "antetitulo": "Orquesta Aragón",
+      "titulo": "Los 75 del futuro",
+      "medio": "La Jiribilla",
+      "fecha": "enero de 2015",
+      "archivo": "periodismo/orquesta-aragon-los-75-del-futuro.txt",
+      "dedicatoria": [
+        "Para Gladys Egües.",
+        "Porque este cumpleaños también es suyo."
+      ],
+      "linea": "Setenta y cinco años de la charanga, contados desde un niño de diez que vio a Oscar de León y no entendió lo que dijo su padre.",
+      "seo_titulo": "Orquesta Aragón: los 75 del futuro | A. López Sánchez",
+      "seo_desc": "Crónica de Antonio López Sánchez por los 75 años de la Orquesta Aragón, contada desde una anécdota de infancia. La Jiribilla, enero de 2015."
+    },
+    {
+      "slug": "una-trova-es-con-guitarra",
+      "grupo": "cronicas",
+      "antetitulo": "Una trova es con guitarra…",
+      "titulo": "Y otra seguirá sonando",
+      "medio": "La Jiribilla",
+      "fecha": "mayo de 2012",
+      "archivo": "periodismo/una-trova-es-con-guitarra.txt",
+      "subtitulos": [
+        "La luz que en guitarras arde",
+        "Seis sonoros sentimientos",
+        "Pues siempre que se toque con el corazón…",
+        "Un ahora con cuerdas para mil islas"
+      ],
+      "linea": "Un recorrido por la guitarra de la trova cubana, de Sindo Garay al filin, de la Nueva Trova a los conjuntos de ahora.",
+      "seo_titulo": "Una trova es con guitarra, y otra seguirá sonando",
+      "seo_desc": "Ensayo de Antonio López Sánchez sobre la guitarra en la trova cubana, de Sindo Garay y Guyún al filin y la Nueva Trova. La Jiribilla, mayo de 2012."
+    },
+    {
+      "slug": "cesar-portillo-al-cesar-lo-que-es-del-filin",
+      "grupo": "cronicas",
+      "antetitulo": "90 cumpleaños de César Portillo de la Luz",
+      "titulo": "Al César, lo que es del filin",
+      "medio": "La Jiribilla",
+      "fecha": "noviembre de 2012",
+      "archivo": "periodismo/cesar-portillo-al-cesar-lo-que-es-del-filin.txt",
+      "subtitulos": [
+        "Cuando la canción fue un grito de alegría.",
+        "¿Nuevo filin para una vieja trova?",
+        "El filin, como el romerillo, te conserva la salud."
+      ],
+      "linea": "Noventa cumpleaños del hombre que hizo de la guitarra del filin una lengua propia.",
+      "seo_titulo": "Al César, lo que es del filin | Sobre César Portillo de la Luz",
+      "seo_desc": "Crónica de Antonio López Sánchez por los 90 años de César Portillo de la Luz, y el lugar de su guitarra en el filin. La Jiribilla, noviembre de 2012."
+    },
+    {
+      "slug": "juan-formell-trovar-con-los-pies",
+      "grupo": "cronicas",
+      "antetitulo": "Juan Formell",
+      "titulo": "Trovar con los pies y bailar con la cabeza",
+      "medio": "La Jiribilla",
+      "fecha": "diciembre de 2012",
+      "archivo": "periodismo/juan-formell-trovar-con-los-pies.txt",
+      "subtitulos": [
+        "Es que esta vida está llena de matices…",
+        "Que de mis recuerdos, yo sí quiero hablar.",
+        "Existir me interesa más que soñar.",
+        "Hay muchas cosas, pero sólo te voy a decir así…"
+      ],
+      "linea": "Los Van Van cumplen años, y aquí se defiende lo que casi nunca se le reconoce a Formell: que también es un trovador.",
+      "seo_titulo": "Juan Formell: trovar con los pies y bailar con la cabeza",
+      "seo_desc": "Ensayo de Antonio López Sánchez sobre lo que Juan Formell y Los Van Van deben a la trova cubana, con Padura y Radamés Giro. La Jiribilla, 2012."
+    },
+    {
+      "slug": "santiago-feliu-medio-vinilo",
+      "grupo": "cronicas",
+      "antetitulo": "Santiago Feliú",
+      "titulo": "En su primer medio vinilo",
+      "medio": "La Jiribilla",
+      "fecha": "junio de 2012",
+      "archivo": "periodismo/santiago-feliu-medio-vinilo.txt",
+      "subtitulos": [
+        "Fue en el ochenta.",
+        "Se acaban los noventa, necesitamos opciones.",
+        "La vida es otra cosa, si la paciencia gana"
+      ],
+      "linea": "Cincuenta años del trovador, contados disco a disco, desde el Vida hasta el último de la década.",
+      "seo_titulo": "Santiago Feliú en su primer medio vinilo",
+      "seo_desc": "Crónica de Antonio López Sánchez por los 50 años del trovador cubano Santiago Feliú, recorrida disco a disco. La Jiribilla, junio de 2012."
+    },
+    {
+      "slug": "trova-electrica",
+      "grupo": "cronicas",
+      "titulo": "Trova eléctrica (y fregada)",
+      "medio": "La Jiribilla",
+      "fecha": "septiembre de 2021",
+      "archivo": "periodismo/trova-electrica.txt",
+      "linea": "Lista hecha fregando: las guitarras eléctricas que se colaron en la trova cubana, del GES a Habana Abierta.",
+      "seo_titulo": "Trova eléctrica (y fregada) | A. López Sánchez",
+      "seo_desc": "Recuento de Antonio López Sánchez sobre las guitarras eléctricas en la trova cubana, del Grupo de Experimentación Sonora a Habana Abierta. La Jiribilla, 2021."
+    },
+    {
+      "slug": "los-diez-discos-de-trova",
+      "grupo": "cronicas",
+      "titulo": "Los diez (y tantos) discos de trova que debes escuchar",
+      "medio": "AM:PM",
+      "archivo": "periodismo/los-diez-discos-de-trova.txt",
+      "subtitulos": [
+        "Amargas verdades, lágrimas negras y buenas canciones",
+        "Ese sentimiento que se llama amor",
+        "Fue en los 80, por si se olvida…",
+        "Década especial, borrón, y siglo nuevo"
+      ],
+      "linea": "Qué discos poner a quien acaba de asomarse a la trova cubana, sabiendo que la lista va a molestar a alguien.",
+      "seo_titulo": "Los diez (y tantos) discos de trova que debes escuchar",
+      "seo_desc": "Selección de Antonio López Sánchez de los discos imprescindibles de la trova cubana, de la trova tradicional al filin y la Nueva Trova. Revista AM:PM."
+    },
+    {
+      "slug": "trova-cubana-con-nombres-y-apellidos",
+      "grupo": "cronicas",
+      "antetitulo": "Trova cubana",
+      "titulo": "De historias, nombres y apellidos",
+      "archivo": "periodismo/trova-cubana-con-nombres-y-apellidos.txt",
+      "subtitulos": [
+        "Trova Tradicional: la raíz",
+        "Con sentimiento, llega el filin",
+        "Nueva Trova: nuevos tiempos y una sola Trova."
+      ],
+      "nota_final": "(Para la confección de este trabajo se han utilizado algunos fragmentos del libro de ensayos y entrevistas “Son de la trova”, del autor, actualmente en proceso editorial por la casa Letras Cubanas.)",
+      "linea": "Trova tradicional, filin y Nueva Trova no son lo mismo, y aquí se ordena quién es quién y por qué.",
+      "seo_titulo": "Trova cubana: de historias, nombres y apellidos",
+      "seo_desc": "Ensayo de Antonio López Sánchez que ordena los conceptos de la trova cubana: trova tradicional, filin y Nueva Trova, con nombres y fechas."
+    }
+  ]
+}

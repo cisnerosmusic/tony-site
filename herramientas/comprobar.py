@@ -179,6 +179,7 @@ def generado_al_dia():
                ["python", "herramientas/gen-decimitas.py"],
                ["python", "herramientas/gen-sonata.py"],
                ["python", "herramientas/gen-farraluque.py"],
+               ["python", "herramientas/gen-periodismo.py"],
                ["python", "herramientas/gen-audios.py"],
                ["python", "herramientas/gen-ingles.py"],
                ["python", "herramientas/gen-legal.py"],

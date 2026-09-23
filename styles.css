@@ -927,6 +927,96 @@ html:not(.en) .solo-en { display: none !important; }
   .cuento-texto p { font-size: 1.1rem; line-height: 1.85; }
 }
 
+/* ======================= EL ARCHIVO DE PRENSA =======================
+   Los trabajos periodisticos se leen como los cuentos, asi que reusan
+   .cuento-texto. Lo propio de la prensa es el aparato: el antetitulo sobre
+   el titular, la linea de medio y fecha, los intertitulos y, en las
+   entrevistas, la pregunta separada de la respuesta. */
+
+.page-antetitulo {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.9rem;
+}
+
+.periodismo-ficha,
+.periodismo-credito {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+}
+.periodismo-credito { margin-bottom: 2.4rem; }
+.periodismo-ficha:last-of-type { margin-bottom: 2.4rem; }
+
+/* La entradilla que el autor escribio para presentar un trabajo antiguo. */
+.periodismo-nota {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  border-left: 1px solid var(--line-bright);
+  padding-left: 1.4rem;
+  text-indent: 0;
+  margin: 0 0 2.6rem;
+}
+.periodismo-nota-final {
+  margin: 2.6rem 0 0;
+  font-size: 0.98rem;
+}
+
+.periodismo-sub {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin: 2.8rem 0 1.4rem;
+}
+
+.periodismo-pregunta {
+  font-family: var(--font-body);
+  font-size: 1.12rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.8;
+  /* Oro pleno y no --gold-dim: esto es texto de lectura y tiene que cumplir
+     AAA. El oro da 8,17:1 sobre el fondo; el atenuado, 2,80:1. */
+  color: var(--gold);
+  text-indent: 0;
+  margin: 2rem 0 0.8rem;
+}
+
+.periodismo-texto .periodismo-sub + p,
+.periodismo-texto .periodismo-pregunta + p,
+.periodismo-texto .periodismo-nota + p { text-indent: 0; }
+
+.periodismo-grupo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+.periodismo-grupo-entrada {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .periodismo-pregunta { font-size: 1.05rem; }
+}
+
 /* ── Contarte: la lista que rota cada dia ────── */
 /* Es flex para que el orden del dia se aplique con 'order' sin mover el HTML,
    asi el orden del documento sigue siendo estable para buscadores y lectores

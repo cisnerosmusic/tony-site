@@ -63,6 +63,7 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-sonata.py` | Sonata de la lluvia, en cada idioma | su `.txt`, `sonata.<idioma>.json` |
 | `gen-laureles.py` | Laureles, los premios, en cada idioma | `laureles.json`, `laureles.<idioma>.json` |
 | `gen-farraluque.py` | las dos obras del Farraluque, en Laureles, en cada idioma | sus `.txt` en `textos/laureles/`, `farraluque.<idioma>.json` |
+| `gen-periodismo.py` | la página de cada trabajo de prensa y el archivo dentro de `/periodista/` | `periodismo.json`, sus `.txt` en `textos/periodismo/` |
 | `gen-audios.py` | las grabaciones, repartidas a las salas que las reclaman | `grabaciones.json` |
 | `gen-ingles.py` | las páginas de sección inglesas, y En mi voz, Plano abierto y Entre lectores en inglés | `ingles.json`, `grabaciones.en.json` |
 | `gen-legal.py` | `/derechos/` y `/en/rights/` | `legal.json` |
@@ -72,7 +73,7 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 
 Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cabecera, menú, pie y camino de miga), que usan los generadores de poesía; `subset-fuentes.py`, que recorta las fuentes servidas desde `fonts/originales/` a lo que el sitio escribe de verdad; `navegacion.py`, que es la **única** definición del menú y del pie en cada idioma; `unificar-nav.py`, que la aplica a las páginas escritas a mano; `comprobar.py`, que verifica el sitio entero; `version.py`, que sube el `?v=N` de un recurso en todas las páginas a la vez; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
 
-Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista, Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
+Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
 
 Requisitos: Python 3 y `pip install Pillow fonttools brotli`, las mismas dependencias que instala GitHub Actions.
 
