@@ -333,16 +333,57 @@
     {
       "ruta": "/en/author/",
       "titulo": "The author",
-      "subtitulo": "Antonio López Sánchez. Havana, 1973.",
-      "seo_titulo": "Antonio López Sánchez: biography and record",
-      "seo_desc": "Cuban writer, poet and journalist born in Havana in 1973. Fourteen books, national awards, and two decades in the Cuban cultural press.",
+      "subtitulo": "Antonio López Sánchez. Havana, 1973. Everything he has written, in one place.",
+      "seo_titulo": "Antonio López Sánchez: the complete work",
+      "seo_desc": "Cuban writer, poet and journalist, Havana 1973. Fourteen books, twenty-two press pieces, stories, poems and four unpublished novels, all listed and linked.",
       "secciones": [
         {
           "titulo": "In short",
           "parrafos": [
             "Antonio López Sánchez was born in Havana on 16 January 1973. He holds a degree in Social Communication from the University of Havana, graduated from the ninth course of the Onelio Jorge Cardoso Centre for Literary Training in 2007, and completed the postgraduate programme Crítica con Arte at the José Martí International Institute of Journalism in 2022.",
-            "He has published fourteen books since 2001, across heroic fantasy, horror, children's literature, poetry, and essays and interviews on the Cuban Nueva Trova. He has spent his working life in the Cuban cultural press.",
-            "This site is his catalogue and his archive. It was built because a good deal of the work was scattered across publications that are disappearing: one of the radio stations that broadcast him is now entirely offline, and those programmes survive here and in the Internet Archive."
+            "He has published fourteen books since 2001, across heroic fantasy, horror, children's literature, poetry, and essays and interviews on the Cuban Nueva Trova. He has spent his working life in the Cuban cultural press, and he lives and writes in Alamar, the Havana district facing the sea.",
+            "This page is the index of the whole body of work: the books, the journalism, the stories, the poems and the novels still looking for a publisher. Every entry links to the page where it can be read in full."
+          ]
+        },
+        {
+          "titulo": "Everything here is in Spanish",
+          "alt": true,
+          "parrafos": [
+            "The whole of Antonio López Sánchez's work is written in Spanish, and none of it has been translated yet. There is no English edition of any book, and no translated sample: what this site offers a publisher is the original, complete and ready to send.",
+            "We are open to offers to translate any part of it, into any language: a single book, the whole fiction, the three volumes on the Nueva Trova, the poetry, the stories or the unpublished novels. Rights for editions and translations outside Cuba are free, and the enquiry goes to the author's literary representation."
+          ],
+          "enlaces": [
+            {"texto": "Rights and how they work", "url": "/en/rights/"},
+            {"texto": "Write about rights", "url": "mailto:derechos@antoniolopezsanchez.art"}
+          ]
+        },
+        {
+          "titulo": "Record",
+          "parrafos": [
+            "Thirty years in the Cuban cultural press, in the order the files keep it."
+          ],
+          "lista": [
+            "<strong>2026</strong> <span class=\"meta frase\">Since February, again part of the communications team at the National Museum of Fine Arts, Havana.</span>",
+            "<strong>2024 and 2025</strong> <span class=\"meta frase\">Press work for the website of the Cuban Book Chamber during the Havana International Book Fairs.</span>",
+            "<strong>2023</strong> <span class=\"meta frase\">From July to December, communications team at the National Museum of Fine Arts.</span>",
+            "<strong>2023</strong> <span class=\"meta frase\">At the request of the Cuban Book Institute, directs the special edition of <em lang=\"es\">El Cañonazo</em>, the daily paper of the Havana International Book Fair, and its ten daily issues during the event.</span>",
+            "<strong>2022</strong> <span class=\"meta frase\">Completes the postgraduate programme Crítica con Arte at the José Martí International Institute of Journalism.</span>",
+            "<strong>2020 to 2022</strong> <span class=\"meta frase\">Promotion and communications team of the Cuban Book Chamber; among other duties, editor in chief of the magazine <em lang=\"es\">Correo del libro</em>.</span>",
+            "<strong>2019</strong> <span class=\"meta frase\">Press work for the <em lang=\"es\">Diario del Festival</em> during the 61st International Festival of New Latin American Cinema.</span>",
+            "<strong>2019 to 2021</strong> <span class=\"meta frase\">In charge of <em lang=\"es\">Pantallas de papel</em>, the book review section of the digital portal En vivo, of the Cuban Institute of Radio and Television.</span>",
+            "<strong>2018</strong> <span class=\"meta frase\">From November, contributes to Cubaliteraria: interviews with writers, book reviews and literary texts.</span>",
+            "<strong>2018</strong> <span class=\"meta frase\">Contributes to AM PM Magazine: music writing, reviews of books on Cuban music and of records by Cuban artists.</span>",
+            "<strong>2018 to 2021</strong> <span class=\"meta frase\">Contributor to the literature section of the magazine <em lang=\"es\">Cartelera</em>, with reviews of Cuban authors.</span>",
+            "<strong>2015 to 2017</strong> <span class=\"meta frase\">Journalist for the Cuban Book Chamber on the Cooking and Food Culture project; regular contributor to Cubapaladar and the magazine Artechef.</span>",
+            "<strong>2014 to 2015</strong> <span class=\"meta frase\">Staff writer at the magazine <em lang=\"es\">Pionero</em>, Casa Editora Abril.</span>",
+            "<strong>2001 to 2010</strong> <span class=\"meta frase\">Part of the editorial team at Editorial de la Mujer: the magazine <em lang=\"es\">Mujeres</em>, the tabloid <em lang=\"es\">Muchacha</em> and the site Mujeres en Internet.</span>",
+            "<strong>2002</strong> <span class=\"meta frase\">From this year, publishes regularly in digital outlets: La Jiribilla, La Ventana of Casa de las Américas, the site of the Hermanos Saíz Association, Caminos of the Martin Luther King Jr. Memorial Centre, Canto de Todos and Esquife, mostly on cultural subjects.</span>",
+            "<strong>1998</strong> <span class=\"meta frase\">From this year, publishes in La Calle del Medio, Alma Máter, La Gaceta, El Caimán Barbudo, Juventud Rebelde, El Correo de Cuba, La Corchea, the paper Cubadisco and the literary supplement El Tintero.</span>",
+            "<strong>1998 to 2000</strong> <span class=\"meta frase\">On the staff of the Pablo de la Torriente Brau Cultural Centre: press officer, coordinator of the monthly concert series <em lang=\"es\">A guitarra limpia</em>, and editor of the Boletín Memoria.</span>",
+            "<strong>1998</strong> <span class=\"meta frase\">Graduates in Social Communication from the University of Havana.</span>"
+          ],
+          "enlaces": [
+            {"texto": "The full record, in Spanish", "url": "/periodista/", "lang": "es"}
           ]
         },
         {
@@ -356,21 +397,72 @@
           ]
         },
         {
-          "titulo": "Journalism",
+          "titulo": "The books",
           "parrafos": [
-            "Cultural sections of the magazines Mujeres and Muchacha, 2001 to 2010. Since then his work has appeared in La Jiribilla, La Gaceta de Cuba, El Caimán Barbudo, Juventud Rebelde, Alma Máter, AM PM Magazine, Cartelera and Cubaliteraria.",
-            "He has been editor in chief of the magazine Correo del libro, ran the book review section Pantallas de papel on the digital portal of the Cuban Institute of Radio and Television, and in 2023 was asked by the Cuban Book Institute to direct the special edition of El Cañonazo, the daily paper of the Havana International Book Fair, across its ten daily issues.",
-            "Since February 2026 he has again been part of the communications team at the National Museum of Fine Arts in Havana."
+            "Fourteen published books, from 2001 onwards. Fiction first, then the three volumes of interviews and research on the Nueva Trova, then poetry and the collective volumes he has texts in. Each page carries the synopsis, the author's own note, excerpts and the details a publisher asks for."
           ],
+          "obras": "libros",
           "enlaces": [
-            {"texto": "Full record, in Spanish", "url": "/periodista/", "lang": "es"}
+            {"texto": "The catalogue, with covers", "url": "/en/books/"}
+          ]
+        },
+        {
+          "titulo": "The journalism",
+          "alt": true,
+          "parrafos": [
+            "Twenty-two signed pieces, from a 1994 interview with the singer-songwriter Carlos Varela to a 2021 piece on electric guitars in the trova. Interviews, book reviews and essays, almost all of them with music nearby.",
+            "These pages exist only in Spanish. The line under each title says what it is about."
+          ],
+          "obras": "periodismo"
+        },
+        {
+          "titulo": "The stories",
+          "parrafos": [
+            "Eleven complete stories, each with a page of its own. Some come from published books, some from books still with their publisher, some belong to nobody yet."
+          ],
+          "obras": "cuentos",
+          "enlaces": [
+            {"texto": "The story room", "url": "/en/stories/"}
+          ]
+        },
+        {
+          "titulo": "The poems",
+          "alt": true,
+          "parrafos": [
+            "Twelve poems and eight glosas. A glosa is an old Spanish form: the poet takes a stanza by someone else and writes four ten-line stanzas, each ending in one of its lines."
+          ],
+          "obras": "poemas",
+          "enlaces": [
+            {"texto": "The poetry room", "url": "/en/poetry/poems/"}
+          ]
+        },
+        {
+          "titulo": "The De-Cimitas",
+          "parrafos": [
+            "Twenty décimas written from the author's own photographs, each image and its ten lines published as a single piece. A décima is the ten-line stanza of Cuban poetry and song. One of them outgrew the form and has a room of its own, Sonata de la lluvia, in three movements."
+          ],
+          "obras": "decimitas",
+          "enlaces": [
+            {"texto": "See them with their photographs", "url": "/en/poetry/decimitas/"},
+            {"texto": "Sonata de la lluvia", "url": "/en/poetry/sonata-de-la-lluvia/"},
+            {"texto": "Poems in his own voice", "url": "/en/poetry/in-my-voice/"}
+          ]
+        },
+        {
+          "titulo": "The unpublished novels",
+          "alt": true,
+          "parrafos": [
+            "Four finished novels that have not yet found a publisher. Each has its synopsis, the author's own note and the excerpts he chose. The complete manuscripts can be sent the same day they are asked for."
+          ],
+          "obras": "ineditos",
+          "enlaces": [
+            {"texto": "The unpublished room", "url": "/en/unpublished/"}
           ]
         },
         {
           "titulo": "Contact",
-          "alt": true,
           "parrafos": [
-            "For readers, press and invitations, write to the author directly. For rights, editions and translations outside Cuba, write to his representation."
+            "For readers, press and invitations, write to the author directly. For rights, editions and translations outside Cuba, write to his representation. Nothing on this site has been translated yet, and every part of it is open to an offer."
           ],
           "enlaces": [
             {"texto": "Write to the author", "url": "mailto:antonio@antoniolopezsanchez.art", "relleno": true},

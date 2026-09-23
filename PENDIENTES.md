@@ -8,14 +8,12 @@ Lo que queda por hacer, y nada más.
 
 ## 1. Terminar el inglés
 
-Todas las salas tienen ya su versión inglesa salvo dos, por decisión y no por olvido:
+De las 116 páginas indexables, 92 tienen pareja de idioma. Las 24 que no la tienen son el archivo de prensa (22) y el Directorio, las dos por decisión y no por olvido:
 
 1. **Directorio.** En inglés sería redundante: `/en/author/` tiene su bloque de contacto y `/en/rights/` cubre los derechos. Propuesta pendiente de Ernesto: no hacerla.
-2. **El periodista.** Su pareja inglesa es `/en/author/`, que resume la trayectoria y enlaza la ficha española completa. Se revisa cuando llegue la lista de cambios de Tony para esa página.
+2. **El archivo de prensa.** Los veintidós trabajos solo tienen página española, y ahí seguirán mientras los textos no se traduzcan. Lo que sí está en inglés es su aparato: el concentrador `/en/author/` lista los veintidós con su medio, su fecha y una línea en inglés que dice de qué va cada uno, y enlaza la página española marcada como tal. La capa es `herramientas/periodismo.en.json`, así que el día que se quieran veintidós páginas inglesas el texto ya está escrito.
 
-Y una tercera, nueva y de otro tamaño: **el archivo de prensa**. Los veintidós trabajos de `/periodista/<slug>/` están solo en español. Los textos no se traducen nunca, así que en inglés sería el aparato: la línea de cada ficha, el grupo y los metadatos, con una capa `herramientas/periodismo.en.json`. Son veintidós páginas más y sirven para enseñarle a un editor extranjero el alcance crítico del autor. Decisión pendiente de Ernesto: hacerlo o dejarlo en español.
-
-Cuando esté, se mide el rendimiento y se publican las cifras. Antes no: ver `AGENTS.md`.
+Se mide el rendimiento y se publican las cifras cuando cierre la lista de cambios de Tony para El periodista. Antes no: ver `AGENTS.md`.
 
 ## 2. Espera la palabra de Tony
 

@@ -27,20 +27,20 @@ Base heredada del template propio de Index01 ([impulses-art-site](https://github
 | `/` | Portada: la casa, el autor y su bienvenida |
 | `/libros/` | Los 14 libros publicados, cada uno con su propia página |
 | `/ineditos/` | Obras que esperan editorial: cuatro novelas, cada una con su sinopsis, su Con voz y voto y los fragmentos que eligió el autor, nunca íntegras |
-| `/tinta-ciones/` | Poesía: `poemas-sueltos/` (20 poemas, 8 de ellos glosas), `de-cimitas/` (7 piezas de foto y décima), `sonata-de-la-lluvia/`, `en-mi-voz/` |
-| `/contarte/` | Los cuentos, uno por página, con orden rotatorio diario |
+| `/tinta-ciones/` | Poesía: `poemas-sueltos/` (12 poemas y 8 glosas), `de-cimitas/` (20 piezas de foto y décima, con aviso para lectores adultos), `sonata-de-la-lluvia/`, `en-mi-voz/` |
+| `/contarte/` | Los 11 cuentos, uno por página, con orden rotatorio diario |
 | `/trova/` | Su obra documental sobre la Nueva Trova |
 | `/plano-abierto/` | Radio, televisión y grabaciones |
 | `/laureles/` | Los premios, y las dos obras premiadas en el Farraluque 2026, para lectores adultos: `tres-delirios-y-un-desnudo/` y `revelaciones/` |
-| `/periodista/` | Ficha y trayectoria en la prensa cultural cubana |
+| `/periodista/` | Ficha, trayectoria y el archivo de prensa: 22 trabajos firmados, cada uno con su página |
 | `/entre-lectores/` | Álbum de ferias y firmas; se llega solo desde Mis libros |
 | `/directorio/` | Contacto del autor y consultas de derechos |
 | `/derechos/` | Aviso de derechos |
-| `/en/` | La zona inglesa, en otro orden que el español a propósito (ver [PRODUCT.md](PRODUCT.md)): portada, `trova/`, `poetry/` (con `poems/`, `decimitas/`, `sonata-de-la-lluvia/` e `in-my-voice/`), `books/` (los catorce libros y `among-readers/`), `stories/` (los siete cuentos), `unpublished/` (las cuatro novelas), `awards/` (con las dos obras del Farraluque), `author/` (con `on-record/`, que es Plano abierto), `fiction/` y `rights/` |
+| `/en/` | La zona inglesa, en otro orden que el español a propósito (ver [PRODUCT.md](PRODUCT.md)): portada, `trova/`, `poetry/` (con `poems/`, `decimitas/`, `sonata-de-la-lluvia/` e `in-my-voice/`), `books/` (los catorce libros y `among-readers/`), `stories/` (los once cuentos), `unpublished/` (las cuatro novelas), `awards/` (con las dos obras del Farraluque), `author/` (el concentrador de toda la obra, con `on-record/`, que es Plano abierto), `fiction/` y `rights/` |
 
 Archivos de raíz: `index.html`, `styles.css`, `app.js`, `fonts.css`, `robots.txt`, `sitemap.xml`, `llms.txt`, `404.html` (uno solo para todo el sitio, en español o en inglés según la ruta), `CNAME`, el favicon en archivos reales (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`) y la clave de IndexNow. Recursos en `fonts/`, `img/`, `audio/` y `video/`.
 
-**89 páginas; 86 URLs en el sitemap.** No entran el 404 ni las dos redirecciones blandas, `/novelas/` y `/poeta/`.
+**119 páginas; 116 URLs en el sitemap.** No entran el 404 ni las dos redirecciones blandas, `/novelas/` y `/poeta/`.
 
 ## Idiomas
 
@@ -69,11 +69,14 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-legal.py` | `/derechos/` y `/en/rights/` | `legal.json` |
 | `gen-404.py` | el 404, en los dos idiomas | `navegacion.py` |
 | `gen-tarjetas.py` | la postal de cada libro para redes, 1200 x 630: cubierta a la izquierda, título a la derecha | `libros/<slug>.json` y las cubiertas |
+| `gen-llms.py` | `llms.txt`, el mapa del sitio para los modelos de lenguaje | `llms.json` y todos los manifiestos |
 | `gen-sitemap.py` | `sitemap.xml`, con la fecha real de cada página según git y sus alternates por idioma | las propias páginas |
 
 Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cabecera, menú, pie y camino de miga), que usan los generadores de poesía; `subset-fuentes.py`, que recorta las fuentes servidas desde `fonts/originales/` a lo que el sitio escribe de verdad; `navegacion.py`, que es la **única** definición del menú y del pie en cada idioma; `unificar-nav.py`, que la aplica a las páginas escritas a mano; `comprobar.py`, que verifica el sitio entero; `version.py`, que sube el `?v=N` de un recurso en todas las páginas a la vez; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
 
-Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
+Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas.
+
+**Una obra nueva aparece sola en tres sitios**: en su sala, en el concentrador inglés `/en/author/` y en `llms.txt`. Los tres leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
 
 Requisitos: Python 3 y `pip install Pillow fonttools brotli`, las mismas dependencias que instala GitHub Actions.
 
@@ -106,9 +109,13 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 
 ## SEO y AEO
 
-86 URLs indexables, con títulos y descripciones únicos y en rango, canónicas propias y Twitter Cards. JSON-LD válido en todas: `Person` con premios y `sameAs`, `WebSite`, `Book` por cada libro y en cada idioma, con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `CreativeWork` para los poemas, las décimas, la Sonata y las obras del Farraluque, `NewsArticle` para cada pieza de prensa, `ItemList`, `AudioObject`, `CollectionPage`, `ProfilePage` con la persona dentro, `ContactPage` y `BreadcrumbList`.
+116 URLs indexables, con títulos y descripciones únicos y en rango, canónicas propias y Twitter Cards. JSON-LD válido en todas: `Person` con premios y `sameAs`, `WebSite`, `Book` por cada libro y en cada idioma, con `sameAs` a EcuRed y `subjectOf` a la prensa, `ShortStory` por cuento, `CreativeWork` para los poemas, las décimas, la Sonata y las obras del Farraluque, `NewsArticle` para cada pieza de prensa, `ItemList`, `AudioObject`, `CollectionPage`, `ProfilePage` con la persona dentro, `ContactPage` y `BreadcrumbList`.
 
-`hreflang` recíproco en las 84 páginas que tienen pareja de idioma, con `x-default` al español, y los mismos alternates en `sitemap.xml`. `llms.txt` con los datos citables del autor para motores de respuesta, `robots.txt` con permiso explícito a los bots de IA e IndexNow configurado.
+`hreflang` recíproco en las 92 páginas que tienen pareja de idioma, con `x-default` al español, y los mismos alternates en `sitemap.xml`. Las 24 que no la tienen son el archivo de prensa, que solo existe en español, y el Directorio.
+
+`llms.txt` es el mapa para los motores de respuesta: datos citables del autor, la declaración de que nada está traducido y la lista entera de libros, premios, poemas, décimas, cuentos, trabajos de prensa y novelas inéditas, con su dirección. **No se escribe a mano**: lo genera `herramientas/gen-llms.py` desde los mismos manifiestos que el sitio, y el comprobador falla si se queda atrás. `robots.txt` da permiso explícito a los bots de IA, e IndexNow está configurado.
+
+En inglés, `/en/author/` es el concentrador: la biografía, la hoja de servicios completa y toda la obra en una sola página, por géneros y con cada pieza enlazada. Las listas salen de los manifiestos, así que una obra nueva aparece ahí sola.
 
 ## Cómo se trabaja aquí
 

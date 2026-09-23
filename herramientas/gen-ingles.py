@@ -30,7 +30,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=35"
+CSS = "?v=36"
 RETRATO = "/img/retrato.webp"
 
 # Paginas que si tienen una equivalente de verdad en español. El hreflang solo
@@ -92,6 +92,148 @@ def bloque_puerta(d):
             f'      <p class="section-text">{d["texto"]}</p>\n'
             '    </div>\n'
             '  </article>')
+
+
+def _manifiesto(*partes):
+    with open(os.path.join(RAIZ, "herramientas", *partes), encoding="utf-8") as f:
+        return json.load(f)
+
+
+# Los textos de interfaz ingleses y, sobre todo, el catalogo con sus grupos:
+# el concentrador se arma desde ahi, no desde una lista escrita aparte.
+EN = _manifiesto("idiomas.json")["en"]
+
+
+def fila_obra(url, titulo, meta="", linea="", espanol=True):
+    """Una obra en el concentrador: titulo enlazado, etiqueta y, si la hay, una
+    linea en ingles. Los titulos no se traducen nunca, asi que van marcados con
+    lang=es aunque la pagina este en ingles."""
+    la = ' lang="es"' if espanol else ""
+    fila = (f'      <li>\n'
+            f'        <strong{la}><a href="{esc_attr(url)}">{esc(titulo)}</a></strong>')
+    if meta:
+        fila += f' <span class="meta">{esc(meta)}</span>'
+    if linea:
+        fila += f'\n        <span class="obra-linea">{esc(linea)}</span>'
+    return fila + '\n      </li>'
+
+
+def lista_obras(filas, densa=False):
+    clase = "lista-obras lista-obras-densa" if densa else "lista-obras"
+    return f'    <ul class="{clase}">\n' + "\n".join(filas) + '\n    </ul>'
+
+
+def rotulo(titulo, nota=""):
+    p = [f'    <h3 class="obras-grupo">{esc(titulo)}</h3>']
+    if nota:
+        p.append(f'    <p class="obras-grupo-entrada">{esc(nota)}</p>')
+    return "\n".join(p)
+
+
+def obras_libros():
+    """Los catorce libros, por generos y en el orden que pidio Ernesto el 22 de
+    septiembre de 2026: primero la ficcion, despues los libros de entrevistas e
+    investigacion, y al final poesia y volumenes colectivos."""
+    grupos = {g["titulo"]: g for g in EN["catalogo"]["grupos"]}
+    orden = ["Fiction", "The Nueva Trova", "Poetry", "Collective volumes"]
+    faltan = set(grupos) - set(orden)
+    if faltan:
+        sys.exit(f"grupos del catalogo ingles sin sitio en el concentrador: {sorted(faltan)}")
+    out = []
+    for nombre in orden:
+        g = grupos[nombre]
+        out.append(rotulo(nombre, g.get("texto", "")))
+        filas = []
+        for slug in g["libros"]:
+            m = _manifiesto("libros", slug + ".json")
+            c = _manifiesto("libros", "en", slug + ".json")
+            glosa = c.get("catalogo", {}).get("glosa")
+            titulo = m["titulo"] + (f" ({glosa})" if glosa else "")
+            meta = " · ".join(x for x in (m.get("anio"), c.get("genero"), m.get("editorial")) if x)
+            filas.append(fila_obra(EN["ruta_libros"] + slug + "/", titulo, meta))
+        out.append(lista_obras(filas))
+    return "\n".join(out)
+
+
+def obras_periodismo():
+    """Los veintidos trabajos de prensa. Solo tienen pagina española, asi que
+    el enlace sale marcado: lo que se traduce es la linea, no el titular."""
+    cfg = _manifiesto("periodismo.json")
+    capa = _manifiesto("periodismo.en.json")
+    out = []
+    for g in cfg["grupos"]:
+        suyos = [t for t in cfg["trabajos"] if t["grupo"] == g["clave"]]
+        if not suyos:
+            continue
+        out.append(rotulo(capa["grupos"][g["clave"]]))
+        filas = []
+        for t in suyos:
+            fecha = capa["fechas"].get(t.get("fecha", ""), t.get("fecha", ""))
+            medio = capa["medios"].get(t.get("medio", ""), t.get("medio", ""))
+            meta = " · ".join(x for x in (medio, fecha) if x)
+            linea = capa["trabajos"].get(t["slug"])
+            if not linea:
+                sys.exit(f"periodismo.en.json sin línea para {t['slug']}")
+            filas.append(fila_obra(f"/periodista/{t['slug']}/", t["titulo"], meta, linea))
+        out.append(lista_obras(filas))
+    return "\n".join(out)
+
+
+def obras_cuentos():
+    cuentos = _manifiesto("cuentos.json")
+    capa = _manifiesto("cuentos.en.json")
+    filas = []
+    for c in cuentos:
+        t = capa["cuentos"][c["slug"]]
+        titulo = c["titulo"] + (f" ({t['significado']})" if t.get("significado") else "")
+        filas.append(fila_obra(capa["ruta"] + c["slug"] + "/", titulo, "", t["linea"]))
+    return lista_obras(filas)
+
+
+def obras_poemas():
+    """Poemas y glosas. No tienen pagina propia: viven todos en la sala, cada
+    uno con su ancla, y el ancla la calcula pagina.py."""
+    import pagina
+    p = _manifiesto("poemas.json")
+    capa = _manifiesto("poemas.en.json")
+    out = []
+    for clave, nombre in (("sueltos", "Poems"), ("glosas", "Glosas")):
+        out.append(rotulo(nombre, capa["glosas_texto"] if clave == "glosas" else ""))
+        out.append(lista_obras([fila_obra(f'{capa["ruta"]}#{pagina.ancla(x["titulo"])}', x["titulo"])
+                                for x in p[clave]], densa=True))
+    return "\n".join(out)
+
+
+def obras_decimitas():
+    import pagina
+    cfg = _manifiesto("decimitas.json")
+    capa = _manifiesto("decimitas.en.json")
+    filas = [fila_obra(f'{capa["ruta"]}#{d["slug"]}', d["titulo"]) for d in cfg["decimitas"]]
+    return lista_obras(filas, densa=True)
+
+
+def obras_ineditos():
+    cfg = _manifiesto("ineditos.json")
+    capa = _manifiesto("ineditos.en.json")
+    filas = []
+    for n in cfg["novelas"]:
+        t = capa["novelas"][n["slug"]]
+        filas.append(fila_obra(capa["ruta"] + n["slug"] + "/", n["titulo"],
+                               t.get("genero", ""), t.get("linea", "")))
+    return lista_obras(filas)
+
+
+def bloque_obras(clave):
+    """Las listas del concentrador. Todas salen de los manifiestos que ya
+    existen: si entra un libro, un cuento o un trabajo, aparece aqui solo.
+    Escribirlas a mano en ingles.json seria tener el dato dos veces, y el
+    segundo envejeceria sin que nadie lo notara."""
+    hacer = {"libros": obras_libros, "periodismo": obras_periodismo,
+             "cuentos": obras_cuentos, "poemas": obras_poemas,
+             "decimitas": obras_decimitas, "ineditos": obras_ineditos}
+    if clave not in hacer:
+        sys.exit(f"tipo de obras desconocido: {clave}")
+    return hacer[clave]()
 
 
 def dims(rel):
@@ -186,6 +328,8 @@ def seccion_html(s, n):
         for x in s["lista"]:
             dentro.append(f'      <li>{x}</li>')
         dentro.append('    </ul>')
+    if s.get("obras"):
+        dentro.append(bloque_obras(s["obras"]))
     if s.get("enlaces"):
         dentro.append('    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.6rem;">')
         for e in s["enlaces"]:

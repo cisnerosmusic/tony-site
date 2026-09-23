@@ -83,6 +83,24 @@ def enlaces_rotos():
                 falla("imagen social inexistente", f"{rel(p)} apunta a {m.group(1)}")
 
 
+# ── 1b. Anclas que no existen en la pagina de destino ────────────────────
+# Desde que /en/author/ es un concentrador, hay cuarenta enlaces que apuntan a
+# un poema o a una decima dentro de su sala, no a una pagina. Un titulo que
+# cambie mueve el ancla y el enlace se queda mudo: no da 404, simplemente no
+# lleva a ninguna parte, que es peor porque no se nota.
+def anclas():
+    for p in paginas():
+        for m in re.finditer(r'href="(/[^"#]*)#([^"]+)"', leer(p)):
+            destino, frag = m.group(1), m.group(2)
+            f = os.path.join(RAIZ, destino.strip("/").replace("/", os.sep))
+            if destino.endswith("/") or not os.path.splitext(destino)[1]:
+                f = os.path.join(f, "index.html")
+            if not os.path.exists(f):
+                continue          # eso ya lo canta la regla de enlaces rotos
+            if f'id="{frag}"' not in leer(f):
+                falla("ancla inexistente", f"{rel(p)} apunta a {destino}#{frag}")
+
+
 # ── 2. El sitemap y las paginas indexables tienen que coincidir ──────────
 def sitemap_cuadra():
     t = leer(os.path.join(RAIZ, "sitemap.xml"))
@@ -171,7 +189,11 @@ def versiones():
 # trabajo sin commitear es normal, que un generador ya no reproduzca su
 # pagina no lo es.
 def generado_al_dia():
-    antes = {rel(p): leer(p) for p in paginas()}
+    # llms.txt entra aqui aunque no sea HTML: es el mapa que leen los modelos de
+    # lenguaje, no lo mira nadie, y por eso paso doce dias diciendo que Contarte
+    # tenia siete cuentos cuando ya eran once.
+    extra = [os.path.join(RAIZ, "llms.txt")]
+    antes = {rel(p): leer(p) for p in list(paginas()) + extra}
     ordenes = [["python", "herramientas/gen-cuento.py"],
                ["python", "herramientas/gen-ineditos.py"],
                ["python", "herramientas/gen-laureles.py"],
@@ -180,6 +202,7 @@ def generado_al_dia():
                ["python", "herramientas/gen-sonata.py"],
                ["python", "herramientas/gen-farraluque.py"],
                ["python", "herramientas/gen-periodismo.py"],
+               ["python", "herramientas/gen-llms.py"],
                ["python", "herramientas/gen-audios.py"],
                ["python", "herramientas/gen-ingles.py"],
                ["python", "herramientas/gen-legal.py"],
@@ -191,10 +214,10 @@ def generado_al_dia():
         r = subprocess.run(o, cwd=RAIZ, capture_output=True, text=True)
         if r.returncode:
             falla("generador con error", f"{' '.join(o[1:])}: {r.stderr.strip()[:120]}")
-    despues = {rel(p): leer(p) for p in paginas()}
+    despues = {rel(p): leer(p) for p in list(paginas()) + extra}
     sucios = [k for k, v in despues.items() if antes.get(k) != v]
     if sucios:
-        falla("HTML desactualizado", "regenerar cambia: " + ", ".join(sucios[:6]))
+        falla("generado desactualizado", "regenerar cambia: " + ", ".join(sucios[:6]))
 
 
 # ── 7. Higiene que la auditoria ya pillo una vez ─────────────────────────
@@ -329,6 +352,7 @@ def publicacion_acotada():
 
 def main():
     enlaces_rotos()
+    anclas()
     sitemap_cuadra()
     datos_estructurados()
     metadatos()

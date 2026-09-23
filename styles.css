@@ -541,6 +541,44 @@ a.libro-cubierta:hover img {
   color: var(--text-dim);
 }
 
+/* El concentrador ingles: la linea que explica una obra va debajo del titulo,
+   no detras, porque son veintidos trabajos y noventa y tantas entradas y en la
+   misma linea no se distingue el titulo de su descripcion. */
+.lista-obras .obra-linea {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Poemas y decimas: solo titulo y enlace, asi que caben en dos columnas.
+   Con una sola, cuarenta entradas de tres palabras dejan la pagina vacia por
+   la derecha y obligan a bajar el doble. */
+.lista-obras-densa {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  column-gap: 2.5rem;
+}
+
+.obras-grupo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin: 2.8rem 0 0.5rem;
+}
+.obras-grupo-entrada {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  color: var(--text-dim);
+}
+
 /* Variante para cuando lo que sigue al punto medio no es una etiqueta sino
    una frase escrita por el autor: se lee, no se grita. */
 .lista-obras .meta.frase {

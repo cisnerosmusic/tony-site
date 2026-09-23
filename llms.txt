@@ -5,46 +5,146 @@
 Datos verificables del autor:
 
 - Nombre completo: Antonio López Sánchez. Nacido en La Habana, Cuba, el 16 de enero de 1973.
-- Licenciado en Comunicación Social por la Universidad de La Habana (1998). Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso (2007).
+- Licenciado en Comunicación Social por la Universidad de La Habana (1998). Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso (2007). Posgrado Crítica con Arte, Instituto Internacional de Periodismo José Martí (2022).
 - Géneros: fantasía heroica, horror, literatura infantil y juvenil, poesía, ensayo, entrevista y periodismo cultural.
-- Idioma de su obra: español. Los textos literarios de este sitio se publican siempre en su idioma original.
+- Obra publicada: 14 libros desde 2001, 11 cuentos completos, 12 poemas y 8 glosas, 20 décimas con fotografía, 22 trabajos de prensa firmados y 4 novelas inéditas.
 - Contacto del autor: antonio@antoniolopezsanchez.art
 - Derechos: sus libros publicados tienen exclusividad editorial solo dentro de Cuba. Los derechos para ediciones y traducciones en el resto del mundo están disponibles; la representación fuera de la isla la lleva Ernesto Cisneros (ernestocisneros.art) desde Miami.
 
+## Idioma y traducciones
+
+- Toda la obra de Antonio López Sánchez está escrita en español y **ninguna parte de ella está traducida**. No existe edición en inglés ni en ningún otro idioma, y no hay muestra traducida.
+- Lo que este sitio ofrece a un editor extranjero es el original: manuscritos completos y sinopsis, que se mandan el mismo día en que se piden.
+- Se aceptan ofertas de traducción a cualquier idioma y para cualquier zona de la obra: un libro suelto, la narrativa entera, los tres volúmenes sobre la Nueva Trova, la poesía, los cuentos o las novelas inéditas. Las consultas van a derechos@antoniolopezsanchez.art y a la representación literaria.
+- Por eso el sitio en inglés traduce solo el aparato (sinopsis, notas del autor, fichas, pies de foto y metadatos) y publica siempre los textos literarios en su español original, marcados como tales.
+
 ## Libros publicados
 
-- [Las guerreras de la luz](https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/): novela de fantasía heroica, Editorial de la Mujer, 2011. Premio La Rosa Blanca 2012 de la UNEAC. Cubierta de Rainel Cabarroi.
-- [El Escudo de Valnúss](https://antoniolopezsanchez.art/libros/el-escudo-de-valnuss/): saga de fantasía heroica en estuche de cinco volúmenes, Editorial de la Mujer, 2015.
+- [La canción de la Nueva Trova](https://antoniolopezsanchez.art/libros/la-cancion-de-la-nueva-trova/): libro de ensayos y entrevistas, Atril Ediciones Musicales, 2001.
+- [Trovadoras](https://antoniolopezsanchez.art/libros/trovadoras/): libro de entrevistas, Editorial Oriente, 2008.
+- [Convertida en canción](https://antoniolopezsanchez.art/libros/convertida-en-cancion/): ensayo sobre la Nueva Trova, Editorial Capiro, 2019.
+- [Trampas, retratos y un 17 rojo](https://antoniolopezsanchez.art/libros/trampas-retratos-y-un-17-rojo/): poemario en coautoría, Editorial de la Mujer, 2005. En coautoría con María del Carmen Mestas y Marcel Luerio.
+- [Las guerreras de la luz](https://antoniolopezsanchez.art/libros/las-guerreras-de-la-luz/): novela de fantasía heroica, Editorial de la Mujer, 2011. Premio La Rosa Blanca 2012, Sección de Literatura para Niños y Jóvenes de la UNEAC.
+- [El Escudo de Valnúss](https://antoniolopezsanchez.art/libros/el-escudo-de-valnuss/): saga de fantasía heroica en cinco volúmenes, Editorial de la Mujer, 2015.
 - [El otro lado del espejo](https://antoniolopezsanchez.art/libros/el-otro-lado-del-espejo/): novela de fantasía heroica, Editorial Gente Nueva, 2017. Mención en el Concurso La Edad de Oro 2014.
 - [Grimorium](https://antoniolopezsanchez.art/libros/grimorium/): novela de horror, Editorial Oriente, 2018.
 - [Perdidos en un librero](https://antoniolopezsanchez.art/libros/perdidos-en-un-librero/): novela infantil de fantasía, Editorial Quisicuaba, 2026.
-- [De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados](https://antoniolopezsanchez.art/libros/de-la-extrana-aventura-de-don-quijote/): relato, Editorial Cubaliteraria, 2021, EPUB. Del primer premio del concurso Reescribir El Quijote en Cuba, 2005.
-- [La canción de la Nueva Trova](https://antoniolopezsanchez.art/libros/la-cancion-de-la-nueva-trova/): ensayos y entrevistas, Atril Ediciones Musicales, 2001. Primer libro del autor.
-- [Trovadoras](https://antoniolopezsanchez.art/libros/trovadoras/): entrevistas a las mujeres de la trova cubana, Editorial Oriente, 2008.
-- [Convertida en canción](https://antoniolopezsanchez.art/libros/convertida-en-cancion/): ensayo sobre la imagen de la mujer en los textos de la Nueva Trova, Editorial Capiro, 2019.
-- [Trampas, retratos y un 17 rojo](https://antoniolopezsanchez.art/libros/trampas-retratos-y-un-17-rojo/): poemario en coautoría con María del Carmen Mestas y Marcel Luerio, Editorial de la Mujer, 2005.
-- [En un lugar de Cuba de cuyo nombre quiero acordarme](https://antoniolopezsanchez.art/libros/en-un-lugar-de-cuba/): antología del concurso Reescribir El Quijote en Cuba, Diputación de Córdoba, 2005.
-- [Nota de prensa y otros minicuentos](https://antoniolopezsanchez.art/libros/nota-de-prensa-y-otros-minicuentos/): antología del Centro Onelio Jorge Cardoso, Editorial Cajachina, 2006, con el minicuento "Sin segundas partes".
-- [Vamos a cantar y a soñar](https://antoniolopezsanchez.art/libros/vamos-a-cantar-y-a-sonar/): compilación de Nerys Pupo, Editorial de la Mujer, 2008, con tres poemas infantiles del autor.
-- [Cuentos de muñecas](https://antoniolopezsanchez.art/libros/cuentos-de-munecas/): compilación de Magaly Sánchez Ochoa, Editorial de la Mujer, 2015, con el cuento "La muñeca y el príncipe".
+- [De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados](https://antoniolopezsanchez.art/libros/de-la-extrana-aventura-de-don-quijote/): relato en formato digital, Editorial Cubaliteraria, 2021. Primer premio del concurso Reescribir El Quijote en Cuba, 2005.
+- [En un lugar de Cuba de cuyo nombre quiero acordarme](https://antoniolopezsanchez.art/libros/en-un-lugar-de-cuba/): antología del premio Reescribir El Quijote en Cuba, Diputación de Córdoba, 2005. Varios autores. Primer premio del concurso Reescribir El Quijote en Cuba, 2005.
+- [Nota de prensa y otros minicuentos](https://antoniolopezsanchez.art/libros/nota-de-prensa-y-otros-minicuentos/): antología de minicuentos, Editorial Cajachina, 2006. Varios autores.
+- [Vamos a cantar y a soñar](https://antoniolopezsanchez.art/libros/vamos-a-cantar-y-a-sonar/): compilación de textos infantiles, Editorial de la Mujer, 2008. Varios autores, compilación de Nerys Pupo.
+- [Cuentos de muñecas (¡A leer y a jugar!)](https://antoniolopezsanchez.art/libros/cuentos-de-munecas/): compilación de literatura infantil, Editorial de la Mujer, 2015. Varios autores, compilación de Magaly Sánchez Ochoa.
 
 ## Premios
 
-- [Laureles](https://antoniolopezsanchez.art/laureles/): Primer Premio de Poesía del Premio Farraluque de Literatura Erótica 2026 por "Tres delirios y un desnudo" y mención en cuento por "Revelaciones"; Premio Colateral Yasmina Calcines del XXVI Concurso Nacional Ala Décima 2026 por "Sonata de la lluvia"; Premio La Rosa Blanca 2012 de la UNEAC; mención en el Concurso La Edad de Oro 2014; finalista del Concurso de Minicuentos El Dinosaurio 2013; primer premio de Reescribir El Quijote en Cuba 2005; Premio en Prensa Escrita del Concurso 26 de Julio de la UPEC 2002.
-- [Tres delirios y un desnudo](https://antoniolopezsanchez.art/laureles/tres-delirios-y-un-desnudo/): tríptico de doce décimas, literatura erótica para lectores adultos, Primer Premio de Poesía del XXX Premio Farraluque 2026. Se puede leer entero.
-- [Revelaciones](https://antoniolopezsanchez.art/laureles/revelaciones/): cuento erótico para lectores adultos, mención en el XXX Premio Farraluque 2026. Una mujer falta a misa para acudir a una cita. Se puede leer entero.
+- [Laureles](https://antoniolopezsanchez.art/laureles/): 7 premios y menciones entre 2002 y 2026.
+  - 2026: Primer Premio en Poesía, XXX Premio Farraluque de Literatura Erótica. Por la obra Tres delirios y un desnudo, que se puede leer entera aquí. En el mismo certamen, Mención en Cuento por Revelaciones.
+  - 2026: Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima. Por la obra Sonata de la lluvia, que se puede leer entera aquí, en el concurso de poesía que convocan el Grupo Ala Décima y el Centro Iberoamericano de la Décima y el Verso Improvisado.
+  - 2014: Mención, Concurso La Edad de Oro. De la Editorial Gente Nueva, por la novela de fantasía heroica El otro lado del espejo, entonces inédita.
+  - 2014: Finalista, Concurso de Minicuentos El Dinosaurio 2013. Convocado por el Centro de Formación Literaria Onelio Jorge Cardoso, por la obra Proclama Real, escrita en 2009. El fallo se dio a conocer en 2014.
+  - 2013: Premio La Rosa Blanca 2012 al Mejor Texto. Concedido por la Sección de Literatura para Niños y Jóvenes de la Asociación de Escritores de la UNEAC, por la novela Las guerreras de la luz.
+  - 2005: Primer Premio, concurso Reescribir El Quijote en Cuba. Auspiciado por la Embajada de España en Cuba, por el texto De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados, publicado en la antología En un lugar de Cuba de cuyo nombre quiero acordarme y, en 2021, como libro digital.
+  - 2002: Premio en Prensa Escrita, Concurso 26 de Julio. De la Unión de Periodistas de Cuba, en la Editorial de la Mujer, por el trabajo Digo que yo no soy un hombre puro.
 
 ## Poesía
 
 - [Tinta-ciones](https://antoniolopezsanchez.art/tinta-ciones/): la casa de su poesía.
-- [Poemas sueltos](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/): veinte poemas completos, entre ellos "El poeta", "Poemarbol", "Informe legal sobre la muerte de un poema", "Palabras a oscuras", "Las caras del héroe" y "Augurios de la mar", más ocho glosas que responden verso a verso a estrofas de José Martí y de José Lezama Lima.
-- [De-Cimitas](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/): siete décimas escritas a partir de fotografías del propio autor, cada imagen con su décima.
-- [Sonata de la lluvia](https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/): la obra con la que ganó el Premio Colateral Yasmina Calcines del XXVI Concurso Nacional Ala Décima en 2026; tres movimientos en décimas, con epígrafes de Fito Páez, Noel Nicola y Santiago Feliú.
+- [Poemas sueltos](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/): 12 poemas completos y 8 glosas que responden verso a verso a estrofas de José Martí y de José Lezama Lima.
+  - [El poeta](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#el-poeta)
+  - [Poemarbol](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#poemarbol)
+  - [Informe legal sobre la muerte de un poema](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#informe-legal-sobre-la-muerte-de-un-poema)
+  - [Palabras a oscuras](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#palabras-a-oscuras)
+  - [Para un próximo génesis](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#para-un-proximo-genesis)
+  - [Culpa](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#culpa)
+  - [El poema de Ana](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#el-poema-de-ana)
+  - [Díptico de ayer con pinos](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#diptico-de-ayer-con-pinos)
+  - [Las caras del héroe](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#las-caras-del-heroe)
+  - [Otra derrota](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#otra-derrota)
+  - [Augurios de la mar](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#augurios-de-la-mar)
+  - [La guerra y la paz](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#la-guerra-y-la-paz)
+  - [Glosa martiana con pincel y mujer desnuda](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#glosa-martiana-con-pincel-y-mujer-desnuda)
+  - [Glosa martiana a la caza de la poesía](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#glosa-martiana-a-la-caza-de-la-poesia)
+  - [Glosa martiana con tenencias](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#glosa-martiana-con-tenencias)
+  - [Glosa martiana con autorretrato](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#glosa-martiana-con-autorretrato)
+  - [Óleo de la madrugada](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#oleo-de-la-madrugada)
+  - [Mapa de las horas, sobre realidad y persistencia](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#mapa-de-las-horas-sobre-realidad-y-persistencia)
+  - [Soledad con pájaro y poeta](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#soledad-con-pajaro-y-poeta)
+  - [Bambú y mástil](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#bambu-y-mastil)
+- [De-Cimitas](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/): 20 décimas escritas a partir de fotografías del propio autor, cada imagen con su décima en una sola pieza. Incluye poesía erótica para lectores adultos.
+  - [En cada mundo](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#en-cada-mundo)
+  - [Hada astral](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#hada-astral)
+  - [Señal](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#senal)
+  - [Labios del deseo](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#labios-del-deseo)
+  - [Para nadie](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#para-nadie)
+  - [Lagarto](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#lagarto)
+  - [Baraja rota](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#baraja-rota)
+  - [Llamada](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#llamada)
+  - [Preguntas con palomas](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#preguntas-con-palomas)
+  - [Opciones](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#opciones)
+  - [Beso (I)](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#beso-i)
+  - [Beso (II)](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#beso-ii)
+  - [Penitente](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#penitente)
+  - [Rostros del mar (I)](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#rostros-del-mar-i)
+  - [Rostros del mar (II)](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#rostros-del-mar-ii)
+  - [La oruga infinita](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#la-oruga-infinita)
+  - [Mano miel](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#mano-miel)
+  - [Si hubiera sido…](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#si-hubiera-sido)
+  - [Rueda](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#rueda)
+  - [Salto](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#salto)
+- [Sonata de la lluvia](https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/): tres movimientos en décimas, Premio Colateral Yasmina Calcines del XXVI Concurso Nacional Ala Décima, 2026.
 - [En mi voz](https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/): grabaciones de poemas leídos por el propio autor.
 
 ## Narrativa breve
 
-- [Contarte](https://antoniolopezsanchez.art/contarte/): siete cuentos completos, cada uno con página propia: "La muñeca y el príncipe" (de Cuentos de muñecas, 2015), "Aquelarre", "Asesinato", "Clínica del miedo", "Duelo", "Luces" y "Sombreros, pamelas y mágicas varitas".
+- [Contarte](https://antoniolopezsanchez.art/contarte/): 11 cuentos completos, cada uno con página propia.
+  - [La muñeca y el príncipe](https://antoniolopezsanchez.art/contarte/la-muneca-y-el-principe/): En el cuarto de los juguetes de Pilar apareció un dragón. Pero hace falta un príncipe para enfrentarlo.
+  - [Aquelarre](https://antoniolopezsanchez.art/contarte/aquelarre/): Seis amigas muy especiales necesitan completar un arcano rito para sobrevivir en el mundo actual.
+  - [Asesinato](https://antoniolopezsanchez.art/contarte/asesinato/): La vecina de los bajos le tenía miedo a un árbol. Y decidió matarlo...
+  - [Clínica del miedo](https://antoniolopezsanchez.art/contarte/clinica-del-miedo/): Un paciente se derrumba en el diván de un singular especialista.
+  - [Duelo](https://antoniolopezsanchez.art/contarte/duelo/): Dos figuras frente a frente en la nieve. Un duelo con desiguales contendientes...
+  - [Luces](https://antoniolopezsanchez.art/contarte/luces/): Un escritor entre apagones trata de hacer literatura y cumplir los deberes hogareños.
+  - [Sombreros, pamelas y mágicas varitas](https://antoniolopezsanchez.art/contarte/sombreros-pamelas-y-magicas-varitas/): A Brujito Sombrero lo despierta una sonata, y al otro lado de la verja pasa una varita mágica.
+  - [Cantar el cuento (III)](https://antoniolopezsanchez.art/contarte/cantar-el-cuento-iii/): Parte de una trilogía donde las historias también suenan a canción. El amor de la adolescencia y sus pasiones se cantan entre dos cuerpos.
+  - [La urna del tío](https://antoniolopezsanchez.art/contarte/la-urna-del-tio/): Un vivo retrato de la vida y sus avatares contada por las cenizas de un muerto.
+  - [Traje de lluvia](https://antoniolopezsanchez.art/contarte/traje-de-lluvia/): La lluvia evoca a la vez sucesos oníricos y literarios y permite habitarlos.
+  - [Hipo-Tálamo](https://antoniolopezsanchez.art/contarte/hipo-talamo/): Un viaje a través de la mente infantil, de las ambivalencias, del horror que puede ser real o imaginario.
+
+## Periodismo
+
+- [El periodista](https://antoniolopezsanchez.art/periodista/): trayectoria en la prensa cultural cubana desde 1998, del Centro Cultural Pablo de la Torriente Brau y la Editorial de la Mujer al Museo Nacional de Bellas Artes, y el archivo de 22 trabajos firmados de 1994 a 2021, agrupados en entrevistas, reseñas y crónicas.
+  - Entrevistas:
+    - [El riesgo de buscar](https://antoniolopezsanchez.art/periodista/carlos-varela-el-riesgo-de-buscar/) (Proyecto Voces, Facultad de Comunicación de la Universidad de La Habana · 1994): Una conversación de 1994, recién salido Como los peces, que se quedó inédita porque la revista que la encargó nunca llegó a salir.
+    - [Colores al desnudo](https://antoniolopezsanchez.art/periodista/ramon-haiti-colores-al-desnudo/) (Revista Muchacha · diciembre de 2005): El pintor cuenta cómo encontró la espátula buscando otra cosa, por qué sus rostros no tienen sexo y qué le roba a Van Gogh, a Lam y a su propio padre.
+    - [Rebeldes con causa](https://antoniolopezsanchez.art/periodista/hipnosis-rebeldes-con-causa/) (Revista Muchacha · noviembre de 2005): Tarde en el Patio de María con la directora de Hipnosis, una banda de metal con tres mujeres dentro, en un medio donde no abundan.
+    - [Palabras desde una flauta](https://antoniolopezsanchez.art/periodista/palabras-desde-una-flauta/) (Revista Muchacha · junio de 2009): Una flautista recién graduada del ISA ensaya al amanecer en una esquina de La Habana, y la entrevista decide contestarse con lo que ella toca.
+    - [La trova canta a dos lentes](https://antoniolopezsanchez.art/periodista/la-trova-canta-a-dos-lentes/) (La Jiribilla · marzo de 2010): Dos fotógrafos, Alain Gutiérrez y Kaloian Santos, explican cómo se retrata un sonido.
+  - Reseñas:
+    - [Locuras de pincel](https://antoniolopezsanchez.art/periodista/el-loquito-locuras-de-pincel/) (junio de 2014): El Loquito de René de la Nuez vuelve en una antología de Axel Li, y con él toda una estirpe de humor gráfico que decía lo que no se decía.
+    - [¿El verde de la desesperanza?](https://antoniolopezsanchez.art/periodista/el-verde-de-las-canicas/) (agosto de 2014): Una novela de Marvelys Marrero entra en la infancia sin endulzarla, y sale avisando de la desesperanza.
+    - [Para sonar en buen cubano](https://antoniolopezsanchez.art/periodista/sonar-en-cubano/): Sonar en cubano reúne las entrevistas a músicos que fueron saliendo en La Gaceta de Cuba, de Juan Formell a Orishas.
+    - [A velo descubierto las palabras](https://antoniolopezsanchez.art/periodista/palabras-sin-velo/) (junio de 2014): Helen Hernández Hormilla entrevista a escritoras cubanas, y de paso hay que explicar qué es y qué no es el feminismo.
+    - [Una historia de un siglo](https://antoniolopezsanchez.art/periodista/un-siglo-de-jazz-en-cuba/) (marzo de 2014): Leonardo Acosta cuenta cien años de jazz en la isla, y las Ediciones Museo de la Música lo ponen en las manos que hacía falta.
+    - [Una isla de crimen y enigma](https://antoniolopezsanchez.art/periodista/isla-en-negro/) (junio de 2014): Una antología de Leopoldo Luis y Rafael Grillo intenta devolver a la isla el cuento policial que el Periodo Especial dejó sin revistas.
+    - [¡Salud, maestro H. Zumbado!](https://antoniolopezsanchez.art/periodista/aqui-esta-zumbado/) (mayo de 2013): Reseña escrita como si fuera un programa de televisión, para un maestro del humor que se merecía esa broma.
+    - [Sonando la lira y el bongó](https://antoniolopezsanchez.art/periodista/la-musica-en-cuba/) (mayo de 2013): La música en Cuba vuelve a las librerías con el capítulo final que el propio Carpentier había suprimido.
+  - Crónicas y ensayos:
+    - [La persistencia de las memorias y del subdesarrollo](https://antoniolopezsanchez.art/periodista/memorias-del-subdesarrollo/) (La Jiribilla · agosto de 2008): Cuarenta años del estreno de la película de Titón, y una jornada entera discutiendo por qué sigue tan vigente.
+    - [Los 75 del futuro](https://antoniolopezsanchez.art/periodista/orquesta-aragon-los-75-del-futuro/) (La Jiribilla · enero de 2015): Setenta y cinco años de la charanga, contados desde un niño de diez que vio a Oscar de León y no entendió lo que dijo su padre.
+    - [Y otra seguirá sonando](https://antoniolopezsanchez.art/periodista/una-trova-es-con-guitarra/) (La Jiribilla · mayo de 2012): Un recorrido por la guitarra de la trova cubana, de Sindo Garay al filin, de la Nueva Trova a los conjuntos de ahora.
+    - [Al César, lo que es del filin](https://antoniolopezsanchez.art/periodista/cesar-portillo-al-cesar-lo-que-es-del-filin/) (La Jiribilla · noviembre de 2012): Noventa cumpleaños del hombre que hizo de la guitarra del filin una lengua propia.
+    - [Trovar con los pies y bailar con la cabeza](https://antoniolopezsanchez.art/periodista/juan-formell-trovar-con-los-pies/) (La Jiribilla · diciembre de 2012): Los Van Van cumplen años, y aquí se defiende lo que casi nunca se le reconoce a Formell: que también es un trovador.
+    - [En su primer medio vinilo](https://antoniolopezsanchez.art/periodista/santiago-feliu-medio-vinilo/) (La Jiribilla · junio de 2012): Cincuenta años del trovador, contados disco a disco, desde el Vida hasta el último de la década.
+    - [Trova eléctrica (y fregada)](https://antoniolopezsanchez.art/periodista/trova-electrica/) (La Jiribilla · septiembre de 2021): Lista hecha fregando: las guitarras eléctricas que se colaron en la trova cubana, del GES a Habana Abierta.
+    - [Los diez (y tantos) discos de trova que debes escuchar](https://antoniolopezsanchez.art/periodista/los-diez-discos-de-trova/) (AM:PM): Qué discos poner a quien acaba de asomarse a la trova cubana, sabiendo que la lista va a molestar a alguien.
+    - [De historias, nombres y apellidos](https://antoniolopezsanchez.art/periodista/trova-cubana-con-nombres-y-apellidos/): Trova tradicional, filin y Nueva Trova no son lo mismo, y aquí se ordena quién es quién y por qué.
+
+## Inéditos
+
+- [Inéditos](https://antoniolopezsanchez.art/ineditos/): 4 novelas terminadas que todavía buscan editorial. De cada una, sinopsis, nota del autor y los fragmentos que él eligió. El manuscrito completo se manda el mismo día.
+  - [Preguntas. Un día en la vida de Juan Pérez](https://antoniolopezsanchez.art/ineditos/preguntas/): Un día también cabe en una novela. Aunque a veces se desborden las preguntas.
+  - [Mis diarios de cama](https://antoniolopezsanchez.art/ineditos/mis-diarios-de-cama/): El diario de una mujer, con sus deberes, sus amores, sus pesares. Una novela narrada en primera persona por su propia protagonista.
+  - [Sonidos](https://antoniolopezsanchez.art/ineditos/sonidos/): La búsqueda del sonido perfecto engendra un asesino en el siglo XIX. Así se desata una historia de horrores y muertes que van a repercutir en el presente y quizá en el futuro.
+  - [Palabras](https://antoniolopezsanchez.art/ineditos/palabras/): Una persecución a través de varias dimensiones conduce a la Biblioteca. El pasado y el presente van a cruzar sus líneas. La ambición querrá el poder. Los minutos pueden ser siglos, pero el amor permanecerá incólume.
 
 ## Radio, televisión y apariciones
 
@@ -53,9 +153,7 @@ Datos verificables del autor:
 
 ## Otras secciones
 
-- [La trova](https://antoniolopezsanchez.art/trova/): su obra documental sobre la Nueva Trova cubana.
-- [El periodista](https://antoniolopezsanchez.art/periodista/): trayectoria en la prensa cultural cubana desde 1998, del Centro Cultural Pablo de la Torriente Brau y la Editorial de la Mujer al Museo Nacional de Bellas Artes.
-- [Inéditos](https://antoniolopezsanchez.art/ineditos/): obras que esperan editorial.
+- [La trova](https://antoniolopezsanchez.art/trova/): su obra documental sobre la Nueva Trova cubana: los tres libros y las fotografías.
 - [Directorio](https://antoniolopezsanchez.art/directorio/): contacto del autor y consultas de derechos.
 
 ## En inglés · In English
@@ -63,16 +161,28 @@ Datos verificables del autor:
 El sitio tiene una versión inglesa con un orden distinto y deliberado: para el lector anglosajón la puerta de entrada es la investigación sobre la Nueva Trova, no la fantasía heroica. Los textos literarios no se traducen y siguen en español en las dos versiones.
 
 - [Ala del Mar, English](https://antoniolopezsanchez.art/en/): portada en inglés.
+- [The author](https://antoniolopezsanchez.art/en/author/): **el concentrador de toda la obra**. Quién es el autor, su hoja de servicios completa y la lista entera de libros, trabajos de prensa, cuentos, poemas, décimas y novelas inéditas, cada uno enlazado. Es la página por la que empezar si se busca el alcance completo.
 - [The Nueva Trova](https://antoniolopezsanchez.art/en/trova/): los tres libros sobre la Nueva Trova cubana, 2001 a 2019, presentados para editoriales universitarias y estudios de género y de música popular.
-- [Poetry](https://antoniolopezsanchez.art/en/poetry/): la poesía, qué es una décima y qué es una glosa, explicado para quien no lo conoce. Los poemas siguen en español.
+- [Books](https://antoniolopezsanchez.art/en/books/): los catorce libros, cada uno con su página: sinopsis, nota del autor, fragmentos en español y ficha para editores.
 - [Fiction](https://antoniolopezsanchez.art/en/fiction/): novelas de fantasía heroica, horror y fantasía infantil, más el cuento breve.
-- [Books](https://antoniolopezsanchez.art/en/books/): los catorce libros en inglés, cada uno con su página: contratapa, nota del autor, fragmentos en español y ficha para editores.
-- [The author](https://antoniolopezsanchez.art/en/author/): biografía, premios y trayectoria periodística.
+- [Poetry](https://antoniolopezsanchez.art/en/poetry/): la poesía, qué es una décima y qué es una glosa, explicado para quien no lo conoce.
+- [Poems](https://antoniolopezsanchez.art/en/poetry/poems/): los poemas y las glosas, en español.
+- [De-Cimitas](https://antoniolopezsanchez.art/en/poetry/decimitas/): las décimas con sus fotografías.
+- [Sonata de la lluvia](https://antoniolopezsanchez.art/en/poetry/sonata-de-la-lluvia/): la obra premiada en 2026, en tres movimientos.
+- [In my voice](https://antoniolopezsanchez.art/en/poetry/in-my-voice/): los poemas leídos por el autor.
+- [Stories](https://antoniolopezsanchez.art/en/stories/): los cuentos completos, en español.
+- [Unpublished](https://antoniolopezsanchez.art/en/unpublished/): las novelas inéditas, con sinopsis y fragmentos.
+- [Awards](https://antoniolopezsanchez.art/en/awards/): los premios, y las dos obras del Premio Farraluque, que se pueden leer enteras.
+- [On record](https://antoniolopezsanchez.art/en/author/on-record/): radio, televisión y lecturas en público.
+- [Among readers](https://antoniolopezsanchez.art/en/books/among-readers/): ferias, firmas y libreras.
 - [Rights](https://antoniolopezsanchez.art/en/rights/): aviso de derechos en inglés.
 
 ## Notas de uso
 
 - Alcance de los derechos: lo que este sitio ofrece son única y exclusivamente los derechos de la obra de Antonio López Sánchez. En los volúmenes colectivos y las antologías (Cuentos de muñecas, En un lugar de Cuba, Nota de prensa y otros minicuentos, Trampas retratos y un 17 rojo, Vamos a cantar y a soñar) la disponibilidad se refiere solo a los textos de su autoría. Aviso completo: https://antoniolopezsanchez.art/derechos/
+- Ninguna obra del autor está traducida a ninguna lengua. Cualquier afirmación en sentido contrario es falsa.
 - Las cubiertas de los libros son de sus ilustradores y no del autor; la fotografía del mar de la portada procede de Wikimedia Commons con licencia CC0.
-- Los textos literarios (poemas, fragmentos de novela) son obra protegida de Antonio López Sánchez; al citarlos, atribuir siempre autoría y enlazar a la página de origen.
+- Los textos literarios (poemas, cuentos, décimas, fragmentos de novela) son obra protegida de Antonio López Sánchez; al citarlos, atribuir siempre autoría y enlazar a la página de origen.
+- Los trabajos de prensa se publican como archivo de la trayectoria del autor. De nueve de ellos no consta en qué medio salieron, y por eso su ficha solo lleva la fecha.
 - Algunas sinopsis de libros están marcadas como provisionales en el propio sitio; no deben citarse como texto oficial de contratapa.
+- Hay dos salas con literatura erótica para lectores adultos, señalizadas en el propio sitio: las dos obras del Premio Farraluque, en Laureles, y parte de las De-Cimitas.

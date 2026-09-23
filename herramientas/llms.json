@@ -1,0 +1,77 @@
+{
+  "_nota": "La prosa de llms.txt que no sale de ningun otro sitio. Todo lo que es una lista (libros, premios, cuentos, poemas, decimas, trabajos de prensa, novelas ineditas) lo arma gen-llms.py desde los manifiestos, y los numeros se escriben con {n}. Asi el archivo no puede quedarse atras: estuvo doce dias diciendo que habia siete cuentos cuando ya eran once.",
+  "titulo": "Ala del Mar · Antonio López Sánchez",
+  "resumen": "Sitio oficial del escritor cubano Antonio López Sánchez (La Habana, 16 de enero de 1973): narrador de fantasía heroica y horror, poeta y periodista cultural. \"Ala del Mar\" es el nombre de la casa, tomado de la fórmula con que el autor cierra sus libros desde Alamar, el barrio habanero frente al mar donde vive y escribe: \"Hallado en Ala del Mar, [fecha]. bene scriptus\".",
+  "datos": [
+    "Nombre completo: Antonio López Sánchez. Nacido en La Habana, Cuba, el 16 de enero de 1973.",
+    "Licenciado en Comunicación Social por la Universidad de La Habana (1998). Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso (2007). Posgrado Crítica con Arte, Instituto Internacional de Periodismo José Martí (2022).",
+    "Géneros: fantasía heroica, horror, literatura infantil y juvenil, poesía, ensayo, entrevista y periodismo cultural.",
+    "Obra publicada: {libros} libros desde 2001, {cuentos} cuentos completos, {poemas} poemas y {glosas} glosas, {decimitas} décimas con fotografía, {periodismo} trabajos de prensa firmados y {ineditos} novelas inéditas.",
+    "Contacto del autor: antonio@antoniolopezsanchez.art",
+    "Derechos: sus libros publicados tienen exclusividad editorial solo dentro de Cuba. Los derechos para ediciones y traducciones en el resto del mundo están disponibles; la representación fuera de la isla la lleva Ernesto Cisneros (ernestocisneros.art) desde Miami."
+  ],
+  "traduccion": {
+    "titulo": "Idioma y traducciones",
+    "lineas": [
+      "Toda la obra de Antonio López Sánchez está escrita en español y **ninguna parte de ella está traducida**. No existe edición en inglés ni en ningún otro idioma, y no hay muestra traducida.",
+      "Lo que este sitio ofrece a un editor extranjero es el original: manuscritos completos y sinopsis, que se mandan el mismo día en que se piden.",
+      "Se aceptan ofertas de traducción a cualquier idioma y para cualquier zona de la obra: un libro suelto, la narrativa entera, los tres volúmenes sobre la Nueva Trova, la poesía, los cuentos o las novelas inéditas. Las consultas van a derechos@antoniolopezsanchez.art y a la representación literaria.",
+      "Por eso el sitio en inglés traduce solo el aparato (sinopsis, notas del autor, fichas, pies de foto y metadatos) y publica siempre los textos literarios en su español original, marcados como tales."
+    ]
+  },
+  "secciones": {
+    "libros": "## Libros publicados",
+    "premios": "## Premios",
+    "poesia": "## Poesía",
+    "cuentos": "## Narrativa breve",
+    "periodismo": "## Periodismo",
+    "ineditos": "## Inéditos",
+    "apariciones": "## Radio, televisión y apariciones",
+    "otras": "## Otras secciones",
+    "ingles": "## En inglés · In English",
+    "notas": "## Notas de uso"
+  },
+  "entradas": {
+    "tinta_ciones": "la casa de su poesía.",
+    "poemas_sueltos": "{poemas} poemas completos y {glosas} glosas que responden verso a verso a estrofas de José Martí y de José Lezama Lima.",
+    "decimitas": "{decimitas} décimas escritas a partir de fotografías del propio autor, cada imagen con su décima en una sola pieza. Incluye poesía erótica para lectores adultos.",
+    "en_mi_voz": "grabaciones de poemas leídos por el propio autor.",
+    "contarte": "{cuentos} cuentos completos, cada uno con página propia.",
+    "periodista": "trayectoria en la prensa cultural cubana desde 1998, del Centro Cultural Pablo de la Torriente Brau y la Editorial de la Mujer al Museo Nacional de Bellas Artes, y el archivo de {periodismo} trabajos firmados de 1994 a 2021, agrupados en entrevistas, reseñas y crónicas.",
+    "ineditos": "{ineditos} novelas terminadas que todavía buscan editorial. De cada una, sinopsis, nota del autor y los fragmentos que él eligió. El manuscrito completo se manda el mismo día.",
+    "trova": "su obra documental sobre la Nueva Trova cubana: los tres libros y las fotografías.",
+    "directorio": "contacto del autor y consultas de derechos."
+  },
+  "apariciones": [
+    "[Plano abierto](https://antoniolopezsanchez.art/plano-abierto/): el programa de televisión \"Entre libros\" (2019), los programas de Habana Radio \"Mi libro preferido\" e \"Invitación a la lectura\" (2018, dirigidos por Fernando Rodríguez Sosa), una lectura de poesía en la UNEAC de Santa Clara (2022) y \"Mar de papel\", del concierto de Rita del Prado en A Guitarra Limpia (1999).",
+    "[Entre lectores](https://antoniolopezsanchez.art/entre-lectores/): fotografías en ferias del libro de La Habana, Santiago de Cuba y Camagüey."
+  ],
+  "ingles_entrada": "El sitio tiene una versión inglesa con un orden distinto y deliberado: para el lector anglosajón la puerta de entrada es la investigación sobre la Nueva Trova, no la fantasía heroica. Los textos literarios no se traducen y siguen en español en las dos versiones.",
+  "ingles": [
+    "[Ala del Mar, English](https://antoniolopezsanchez.art/en/): portada en inglés.",
+    "[The author](https://antoniolopezsanchez.art/en/author/): **el concentrador de toda la obra**. Quién es el autor, su hoja de servicios completa y la lista entera de libros, trabajos de prensa, cuentos, poemas, décimas y novelas inéditas, cada uno enlazado. Es la página por la que empezar si se busca el alcance completo.",
+    "[The Nueva Trova](https://antoniolopezsanchez.art/en/trova/): los tres libros sobre la Nueva Trova cubana, 2001 a 2019, presentados para editoriales universitarias y estudios de género y de música popular.",
+    "[Books](https://antoniolopezsanchez.art/en/books/): los catorce libros, cada uno con su página: sinopsis, nota del autor, fragmentos en español y ficha para editores.",
+    "[Fiction](https://antoniolopezsanchez.art/en/fiction/): novelas de fantasía heroica, horror y fantasía infantil, más el cuento breve.",
+    "[Poetry](https://antoniolopezsanchez.art/en/poetry/): la poesía, qué es una décima y qué es una glosa, explicado para quien no lo conoce.",
+    "[Poems](https://antoniolopezsanchez.art/en/poetry/poems/): los poemas y las glosas, en español.",
+    "[De-Cimitas](https://antoniolopezsanchez.art/en/poetry/decimitas/): las décimas con sus fotografías.",
+    "[Sonata de la lluvia](https://antoniolopezsanchez.art/en/poetry/sonata-de-la-lluvia/): la obra premiada en 2026, en tres movimientos.",
+    "[In my voice](https://antoniolopezsanchez.art/en/poetry/in-my-voice/): los poemas leídos por el autor.",
+    "[Stories](https://antoniolopezsanchez.art/en/stories/): los cuentos completos, en español.",
+    "[Unpublished](https://antoniolopezsanchez.art/en/unpublished/): las novelas inéditas, con sinopsis y fragmentos.",
+    "[Awards](https://antoniolopezsanchez.art/en/awards/): los premios, y las dos obras del Premio Farraluque, que se pueden leer enteras.",
+    "[On record](https://antoniolopezsanchez.art/en/author/on-record/): radio, televisión y lecturas en público.",
+    "[Among readers](https://antoniolopezsanchez.art/en/books/among-readers/): ferias, firmas y libreras.",
+    "[Rights](https://antoniolopezsanchez.art/en/rights/): aviso de derechos en inglés."
+  ],
+  "notas": [
+    "Alcance de los derechos: lo que este sitio ofrece son única y exclusivamente los derechos de la obra de Antonio López Sánchez. En los volúmenes colectivos y las antologías (Cuentos de muñecas, En un lugar de Cuba, Nota de prensa y otros minicuentos, Trampas retratos y un 17 rojo, Vamos a cantar y a soñar) la disponibilidad se refiere solo a los textos de su autoría. Aviso completo: https://antoniolopezsanchez.art/derechos/",
+    "Ninguna obra del autor está traducida a ninguna lengua. Cualquier afirmación en sentido contrario es falsa.",
+    "Las cubiertas de los libros son de sus ilustradores y no del autor; la fotografía del mar de la portada procede de Wikimedia Commons con licencia CC0.",
+    "Los textos literarios (poemas, cuentos, décimas, fragmentos de novela) son obra protegida de Antonio López Sánchez; al citarlos, atribuir siempre autoría y enlazar a la página de origen.",
+    "Los trabajos de prensa se publican como archivo de la trayectoria del autor. De nueve de ellos no consta en qué medio salieron, y por eso su ficha solo lleva la fecha.",
+    "Algunas sinopsis de libros están marcadas como provisionales en el propio sitio; no deben citarse como texto oficial de contratapa.",
+    "Hay dos salas con literatura erótica para lectores adultos, señalizadas en el propio sitio: las dos obras del Premio Farraluque, en Laureles, y parte de las De-Cimitas."
+  ]
+}

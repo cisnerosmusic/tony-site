@@ -1,0 +1,53 @@
+{
+  "_nota": "Capa inglesa del archivo de prensa. Trae solo el aparato: el grupo, la linea de cada trabajo y la fecha. Los titulares NO se traducen, porque son del medio, y el nombre de la publicacion tampoco. Los trabajos siguen en español y por ahora solo tienen pagina española: desde la zona inglesa se enlazan marcados con lang=es.",
+  "grupos": {
+    "entrevistas": "Interviews",
+    "resenas": "Reviews",
+    "cronicas": "Chronicles and essays"
+  },
+  "fechas": {
+    "1994": "1994",
+    "diciembre de 2005": "December 2005",
+    "noviembre de 2005": "November 2005",
+    "junio de 2009": "June 2009",
+    "marzo de 2010": "March 2010",
+    "junio de 2014": "June 2014",
+    "agosto de 2014": "August 2014",
+    "marzo de 2014": "March 2014",
+    "mayo de 2013": "May 2013",
+    "agosto de 2008": "August 2008",
+    "enero de 2015": "January 2015",
+    "mayo de 2012": "May 2012",
+    "noviembre de 2012": "November 2012",
+    "diciembre de 2012": "December 2012",
+    "junio de 2012": "June 2012",
+    "septiembre de 2021": "September 2021"
+  },
+  "medios": {
+    "Proyecto Voces, Facultad de Comunicación de la Universidad de La Habana": "Proyecto Voces, School of Communication, University of Havana"
+  },
+  "trabajos": {
+    "carlos-varela-el-riesgo-de-buscar": "A 1994 conversation with the singer-songwriter Carlos Varela, just after the album Como los peces. It stayed unpublished for thirty years: the magazine that commissioned it never appeared.",
+    "ramon-haiti-colores-al-desnudo": "The painter on the palette knife he found while looking for something else, on faces that are neither male nor female, and on what he steals from Van Gogh, from Lam and from his own father.",
+    "hipnosis-rebeldes-con-causa": "An afternoon at the Patio de María with the leader of Hipnosis, a metal band with three women in it, in a scene where women are scarce.",
+    "palabras-desde-una-flauta": "A flautist fresh from the ISA rehearses at dawn on a Havana street corner, and the interview lets itself be answered by what she plays.",
+    "la-trova-canta-a-dos-lentes": "Two photographers, Alain Gutiérrez and Kaloian Santos, explain how you photograph a sound.",
+    "el-loquito-locuras-de-pincel": "El Loquito, the cartoon character created by René de la Nuez, returns in an anthology by Axel Li, and with him a whole line of Cuban graphic humour that said what could not be said.",
+    "el-verde-de-las-canicas": "A novel by Marvelys Marrero enters childhood without sweetening it, and comes out warning of hopelessness.",
+    "sonar-en-cubano": "Sonar en cubano gathers the interviews with musicians that ran in La Gaceta de Cuba, from Juan Formell to Orishas.",
+    "palabras-sin-velo": "Helen Hernández Hormilla interviews Cuban women writers, and along the way someone has to explain what feminism is and is not.",
+    "un-siglo-de-jazz-en-cuba": "Leonardo Acosta tells a hundred years of jazz on the island, and Ediciones Museo de la Música put it in the right hands.",
+    "isla-en-negro": "An anthology by Leopoldo Luis and Rafael Grillo tries to give the island back the crime story that the Special Period left without magazines.",
+    "aqui-esta-zumbado": "A review written as if it were a television programme, for a master of humour who deserved that joke.",
+    "la-musica-en-cuba": "Carpentier's La música en Cuba returns to the bookshops with the final chapter the author himself had removed.",
+    "memorias-del-subdesarrollo": "Forty years since the première of Tomás Gutiérrez Alea's film, and a whole day of panels arguing over why it is still so current.",
+    "orquesta-aragon-los-75-del-futuro": "Seventy-five years of the charanga, told from a ten-year-old who saw Oscar de León and did not understand what his father said.",
+    "una-trova-es-con-guitarra": "A tour of the guitar in Cuban trova, from Sindo Garay to the filin, from the Nueva Trova to today's ensembles.",
+    "cesar-portillo-al-cesar-lo-que-es-del-filin": "Ninety years of the man who turned the guitar of the filin into a language of its own.",
+    "juan-formell-trovar-con-los-pies": "Los Van Van have a birthday, and here is the case for what Formell is almost never given credit for: that he is a trovador too.",
+    "santiago-feliu-medio-vinilo": "Fifty years of the singer-songwriter, told record by record, from Vida to the last of the decade.",
+    "trova-electrica": "A list made while washing up: the electric guitars that found their way into Cuban trova, from the GES to Habana Abierta.",
+    "los-diez-discos-de-trova": "Which records to put on for someone just arriving at Cuban trova, knowing the list is going to annoy somebody.",
+    "trova-cubana-con-nombres-y-apellidos": "Traditional trova, filin and Nueva Trova are not the same thing, and here is who is who, and why."
+  }
+}

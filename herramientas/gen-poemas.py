@@ -23,7 +23,7 @@ leer_poema = SourceFileLoader("leer_poema", os.path.join(
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
 URL = DOMINIO + "/tinta-ciones/poemas-sueltos/"
-CSS = "?v=35"
+CSS = "?v=36"
 
 
 def esc(t):
@@ -37,10 +37,9 @@ def esc_attr(t):
     return html.escape(t, quote=True)
 
 
-def ancla(titulo):
-    t = unicodedata.normalize("NFKD", titulo.lower())
-    t = "".join(c for c in t if not unicodedata.combining(c))
-    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")[:60]
+# El ancla de cada poema la calcula pagina.py, porque el concentrador ingles
+# tiene que escribir esos mismos enlaces y no pueden salir dos resultados.
+ancla = pagina.ancla
 
 
 def bloque(p, ficha, n, la=""):

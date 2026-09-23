@@ -8,14 +8,14 @@
 # La salida en español es identica, byte a byte, a la que escribian los
 # generadores con sus copias: se comprobo con un diff antes de cambiarlos.
 
-import html, json, os, sys
+import html, json, os, re, sys, unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=35"
+CSS = "?v=36"
 IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
 
 FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
@@ -31,6 +31,18 @@ def esc(t):
 def esc_attr(t):
     """Valor de atributo: aqui las comillas SI se escapan."""
     return html.escape(t, quote=True)
+
+
+def ancla(titulo):
+    """El id de un poema o de una decima dentro de su sala.
+
+    Vive aqui, y no en el generador que lo pinta, porque desde que /en/author/
+    es un concentrador hay dos sitios que lo calculan: el que escribe el id y
+    el que escribe el enlace. Si cada uno lo hiciera a su manera, los enlaces
+    del concentrador apuntarian a anclas que no existen y nada lo avisaria."""
+    t = unicodedata.normalize("NFKD", titulo.lower())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")[:60]
 
 
 def lenguas_con_capa(base):
