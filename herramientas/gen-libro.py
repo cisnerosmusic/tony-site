@@ -476,7 +476,12 @@ def generar_idioma(m, lang, disponibles):
 """
     destino = os.path.join(RAIZ, ruta_libro(lang, slug).strip("/").replace("/", os.sep), "index.html")
     os.makedirs(os.path.dirname(destino), exist_ok=True)
-    with open(destino, "w", encoding="utf-8") as f:
+    # newline="" para que Python no traduzca los saltos de linea a CRLF en
+    # Windows. Sin esto, gen-libro.py era el unico generador que escribia CRLF,
+    # y las setenta paginas de libro mas los catalogos salian marcados como
+    # modificados en git status despues de cada pasada, sin un solo cambio de
+    # contenido. Es el ruido que AGENTS.md avisa que engaña a quien verifica.
+    with open(destino, "w", encoding="utf-8", newline="") as f:
         f.write(pagina)
     print("escrito:", destino)
 
@@ -682,7 +687,7 @@ def catalogos():
 """
         destino = os.path.join(RAIZ, L["ruta_libros"].strip("/").replace("/", os.sep), "index.html")
         os.makedirs(os.path.dirname(destino), exist_ok=True)
-        with open(destino, "w", encoding="utf-8") as f:
+        with open(destino, "w", encoding="utf-8", newline="") as f:
             f.write(pagina)
         print(f"escrito: {L['ruta_libros']} · {len(listados)} libros en {len(C['grupos'])} grupos")
 
