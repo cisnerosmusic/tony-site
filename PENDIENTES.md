@@ -30,15 +30,14 @@ Se mide el rendimiento y se publican las cifras cuando cierre la lista de cambio
 11. **Material nuevo, cuando haya corriente en Alamar**:
    - más cuentos para Contarte, que ya son once;
    - más De-Cimitas: dijo tener «cientos», van veinte;
-   - las sinopsis oficiales de los libros que aún tienen texto provisional;
+   - **la sinopsis de tres libros que no la tienen**: *En un lugar de Cuba*, *Trampas, retratos y un 17 rojo* y *Vamos a cantar y a soñar*. Sus páginas van de la cubierta a Con voz y voto, sin bloque de Sinopsis, porque nunca llegó su contratapa. Los otros once llevan la suya, tal como él la escribió;
    - prensa de los nueve libros que no la tienen: *La canción de la Nueva Trova*, *Trovadoras*, *Trampas retratos y un 17 rojo*, *De la extraña aventura de Don Quijote*, *Perdidos en un librero*, *En un lugar de Cuba*, *Nota de prensa y otros minicuentos*, *Vamos a cantar y a soñar* y *Cuentos de muñecas*;
    - fotos de presentaciones;
    - la foto de escritor oficial, si hace la sesión.
 12. **Inéditos**: entraron las cuatro novelas que mandó. Si quiere enseñar también algo de sus poemarios y libros de cuentos inéditos, falta que lo mande.
 13. **El periodista**: los trabajos ya llegaron y están publicados. Falta la lista de cambios que anunció para la ficha de redacción («hay que hacerle mil cosas»). Y **tres trabajos del mismo zip se quedaron fuera**, porque son de la publicación que está fuera de lista: si quiere que salgan, que lo diga él.
-14. **El logotipo de De-Cimitas.** Mandó dos versiones, en cian y en blanco, en JPEG de 5000 px. No se han puesto: son tipografía de sistema y una margarita de clip-art sobre fondo cian, y al lado del navy y el oro del sitio desentonan. Si quiere que la sala lleve marca propia, la hacemos en SVG con la paleta de la casa, y entonces se decide con él.
-15. **Los segundos fragmentos de Valnúss**: cada tomo lleva uno, como pidió. El segundo de cada tomo está en su material (`OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/`, archivos 016, 026, 039, 042 y 059) por si los quiere.
-16. **Erratas dudosas en los Inéditos**, que no se tocaron por si son a propósito: en *Mis diarios de cama*, el archivo de la entrada 8 dice «20 de septiembre de 2004» y el texto «18» (se publicó el 18), y «María con la mala noticia de su mamá al final murió», donde parece faltar un «de que»; en *Preguntas*, «un tangente homenaje» y «desde las páginas de novela»; en *Palabras*, «A esas respuestas [...] se intentó responder», donde quizá quiso decir «preguntas».
+14. **Los segundos fragmentos de Valnúss**: cada tomo lleva uno, como pidió. El segundo de cada tomo está en su material (`OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/`, archivos 016, 026, 039, 042 y 059) por si los quiere.
+15. **Erratas dudosas en los Inéditos**, que no se tocaron por si son a propósito: en *Mis diarios de cama*, el archivo de la entrada 8 dice «20 de septiembre de 2004» y el texto «18» (se publicó el 18), y «María con la mala noticia de su mamá al final murió», donde parece faltar un «de que»; en *Preguntas*, «un tangente homenaje» y «desde las páginas de novela»; en *Palabras*, «A esas respuestas [...] se intentó responder», donde quizá quiso decir «preguntas».
 
 ## 3. Espera la decisión de Ernesto
 

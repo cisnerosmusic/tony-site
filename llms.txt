@@ -184,5 +184,5 @@ El sitio tiene una versión inglesa con un orden distinto y deliberado: para el 
 - Las cubiertas de los libros son de sus ilustradores y no del autor; la fotografía del mar de la portada procede de Wikimedia Commons con licencia CC0.
 - Los textos literarios (poemas, cuentos, décimas, fragmentos de novela) son obra protegida de Antonio López Sánchez; al citarlos, atribuir siempre autoría y enlazar a la página de origen.
 - Los trabajos de prensa se publican como archivo de la trayectoria del autor. De nueve de ellos no consta en qué medio salieron, y por eso su ficha solo lleva la fecha.
-- Algunas sinopsis de libros están marcadas como provisionales en el propio sitio; no deben citarse como texto oficial de contratapa.
+- La Sinopsis de un libro es su contratapa, escrita por el autor. Tres títulos no la tienen y su página sale sin ese bloque, sin sustituirla por un resumen ajeno: En un lugar de Cuba, Trampas retratos y un 17 rojo y Vamos a cantar y a soñar. La línea corta de cada libro en el catálogo la escribe el estudio y no debe citarse como contratapa.
 - Hay dos salas con literatura erótica para lectores adultos, señalizadas en el propio sitio: las dos obras del Premio Farraluque, en Laureles, y parte de las De-Cimitas.

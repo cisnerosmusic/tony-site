@@ -105,7 +105,7 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 - **Hay material que existe y no se publica**, por decisión del autor y de Ernesto. La lista no está en este repositorio, que es público: la conocen el autor y Ernesto. Ver los innegociables de `AGENTS.md`.
 - **Mayúscula inicial** en nombres propios, premios y editoriales.
 - Las **obras inéditas** se presentan solo con sinopsis y fragmentos, nunca íntegras.
-- Las sinopsis marcadas como provisionales se sustituirán por el texto oficial del autor.
+- **La Sinopsis de un libro es su contratapa, escrita por el autor, o no está.** Once libros la tienen; tres no llegaron a mandarla (*En un lugar de Cuba*, *Trampas retratos y un 17 rojo* y *Vamos a cantar y a soñar*) y su página va de la cubierta a Con voz y voto, sin inventar nada. La línea corta que cada libro enseña en el catálogo, en español y en inglés, sí la escribe el estudio en primera persona del autor: sirve para escoger, no para citar como contratapa.
 
 ## SEO y AEO
 

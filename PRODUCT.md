@@ -71,7 +71,7 @@ Verificado en fuentes públicas (EcuRed, El Camagüey, La Jiribilla):
 - Textos literarios reales del autor: contratapas, fragmentos y "con voz y voto" de cada libro, más el poema íntegro "Informe legal sobre la muerte de un poema".
 - Dos grabaciones en la voz del autor, en `/tinta-ciones/en-mi-voz/`.
 
-Ausencias que no se deben fabricar: sinopsis oficiales de los títulos aún marcados como provisionales, reseñas y prensa citable de la mayoría de los libros, y cualquier dato de extensión o categoría de edad que no venga del autor o de su editorial.
+Ausencias que no se deben fabricar: la contratapa de los tres títulos que no la mandaron, reseñas y prensa citable de nueve de los catorce libros, y cualquier dato de extensión o categoría de edad que no venga del autor o de su editorial. Un libro sin Sinopsis sale sin ese bloque, no con un resumen escrito por el estudio.
 
 ## Product Principles
 
