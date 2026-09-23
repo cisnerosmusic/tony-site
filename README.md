@@ -47,7 +47,7 @@ Archivos de raíz: `index.html`, `styles.css`, `app.js`, `fonts.css`, `robots.tx
 - **Los textos literarios se publican siempre en su español original**, en todos los idiomas del sitio. Se traduce el aparato: navegación, contratapas, notas del autor, fichas, pies de foto y metadatos.
 - **La zona inglesa no es la española traducida.** En español abre la fantasía heroica; en inglés, la investigación sobre la Nueva Trova, luego la poesía y luego la narrativa.
 - **Las páginas de libro son el mismo generador para todos los idiomas.** Los textos de interfaz de cada idioma están en `herramientas/idiomas.json`, y lo traducido de cada libro, en una capa: `herramientas/libros/<idioma>/<slug>.json`. Esas capas no tienen campo para los fragmentos, así que un fragmento traducido no puede colarse.
-- **Añadir un idioma**: su bloque en `idiomas.json`, catorce capas y su menú en `herramientas/navegacion.py`. No hace falta tocar el generador.
+- **Añadir un idioma**: su bloque en `idiomas.json`, su menú en `herramientas/navegacion.py`, las catorce capas de libro y una capa por sala (`cuentos`, `poemas`, `decimitas`, `sonata`, `farraluque`, `ineditos`, `laureles`, `grabaciones` y `periodismo`), con el nombre `herramientas/<sala>.<idioma>.json`. No hace falta tocar ningún generador: cada uno publica la sala en los idiomas que tengan capa, y se salta los que no.
 
 ## Añadir contenido
 
@@ -72,11 +72,11 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-llms.py` | `llms.txt`, el mapa del sitio para los modelos de lenguaje | `llms.json` y todos los manifiestos |
 | `gen-sitemap.py` | `sitemap.xml`, con la fecha real de cada página según git y sus alternates por idioma | las propias páginas |
 
-Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cabecera, menú, pie y camino de miga), que usan los generadores de poesía; `subset-fuentes.py`, que recorta las fuentes servidas desde `fonts/originales/` a lo que el sitio escribe de verdad; `navegacion.py`, que es la **única** definición del menú y del pie en cada idioma; `unificar-nav.py`, que la aplica a las páginas escritas a mano; `comprobar.py`, que verifica el sitio entero; `version.py`, que sube el `?v=N` de un recurso en todas las páginas a la vez; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
+Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cabecera, menú, pie y camino de miga), que usan nueve de los generadores, y donde vive además el cálculo del ancla de un poema o de una décima, para que el que escribe el `id` y el que escribe el enlace no puedan discrepar; `subset-fuentes.py`, que recorta las fuentes servidas desde `fonts/originales/` a lo que el sitio escribe de verdad; `navegacion.py`, que es la **única** definición del menú y del pie en cada idioma; `unificar-nav.py`, que la aplica a las páginas escritas a mano; `comprobar.py`, que verifica el sitio entero; `version.py`, que sube el `?v=N` de un recurso en todas las páginas a la vez; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
 
-Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas.
+Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
 
-**Una obra nueva aparece sola en tres sitios**: en su sala, en el concentrador inglés `/en/author/` y en `llms.txt`. Los tres leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
+**Una obra nueva aparece sola en tres sitios**: en su sala, en el concentrador inglés `/en/author/` y en `llms.txt`. Los tres leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás.
 
 Requisitos: Python 3 y `pip install Pillow fonttools brotli`, las mismas dependencias que instala GitHub Actions.
 
@@ -99,7 +99,7 @@ Decisiones del autor y del estudio que deben respetarse en cualquier cambio futu
 - **Los textos literarios se publican siempre en su idioma original, el español**, aunque el sitio crezca a otros idiomas.
 - **Primera persona**: en la casa habla siempre el autor, salvo donde se declare otra voz.
 - **Sin raya larga** en ningún texto público.
-- **La atribución es sagrada.** Varios poemas glosan o citan a otros autores (José Martí, Lezama Lima, Silvio Rodríguez, Polito Ibáñez, Fito Páez, Noel Nicola, Santiago Feliú). Esos versos salen siempre en bloque aparte y con la firma de quien los escribió, nunca corridos con los del autor.
+- **La atribución es sagrada.** Varios textos glosan o citan a otros autores (José Martí, Lezama Lima, Jorge Luis Borges, Silvio Rodríguez, Polito Ibáñez, Fito Páez, Noel Nicola, Santiago Feliú, Carlos Varela). Esos versos salen siempre en bloque aparte y con la firma de quien los escribió, nunca corridos con los del autor.
 - **En verso no se normaliza nada.** Los espacios múltiples dentro del verso son puntuación del autor y las sangrías marcan dónde abre cada décima. Se conservan tal cual, con `white-space: pre-wrap`.
 - **Un texto vive una sola vez.** Si una pieza pertenece a dos salas, se repite el enlace o el reproductor, nunca el texto ni el marcado de datos.
 - **Hay material que existe y no se publica**, por decisión del autor y de Ernesto. La lista no está en este repositorio, que es público: la conocen el autor y Ernesto. Ver los innegociables de `AGENTS.md`.
