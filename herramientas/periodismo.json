@@ -89,7 +89,7 @@
       "fecha": "junio de 2009",
       "archivo": "periodismo/palabras-desde-una-flauta.txt",
       "credito": "Fotos: Miguel Gutiérrez",
-      "linea": "Una flautista recién graduada del ISA ensaya al amanecer en una esquina de La Habana, y la entrevista decide contestarse con lo que ella toca.",
+      "linea": "Durante una entrevista a una flautista ocurre un curioso milagro. Es su flauta la que responde el cuestionario.",
       "seo_titulo": "Palabras desde una flauta | Entrevista de A. López Sánchez",
       "seo_desc": "Entrevista de Antonio López Sánchez a la flautista cubana Yailín Martínez Hierrezuelo, contada al ritmo de lo que toca. Revista Muchacha, junio de 2009."
     },
@@ -132,7 +132,7 @@
       "titulo": "¿El verde de la desesperanza?",
       "fecha": "agosto de 2014",
       "archivo": "periodismo/el-verde-de-las-canicas.txt",
-      "linea": "Una novela de Marvelys Marrero entra en la infancia sin endulzarla, y sale avisando de la desesperanza.",
+      "linea": "Una novela de Marvelys Marrero entra en la infancia sin endulzarla. ¿Conducen sus caminos a la desesperanza?",
       "seo_titulo": "¿El verde de la desesperanza? | Sobre Marvelys Marrero",
       "seo_desc": "Reseña de Antonio López Sánchez sobre El verde de las canicas, novela de Marvelys Marrero Fleites publicada por la Editorial Letras Cubanas."
     },
@@ -142,7 +142,7 @@
       "antetitulo": "Entrevistas con música",
       "titulo": "Para sonar en buen cubano",
       "archivo": "periodismo/sonar-en-cubano.txt",
-      "linea": "Sonar en cubano reúne las entrevistas a músicos que fueron saliendo en La Gaceta de Cuba, de Juan Formell a Orishas.",
+      "linea": "Reseña de un libro de entrevistas a importantes músicos cubanos, publicadas en La Gaceta de Cuba. Desde Juan Formell, hasta Orishas.",
       "seo_titulo": "Para sonar en buen cubano | Sobre Sonar en cubano",
       "seo_desc": "Reseña de Antonio López Sánchez sobre Sonar en cubano. Músicos en La Gaceta de Cuba, compilación de Norberto Codina y Arturo Arango, Editorial Oriente."
     },
@@ -152,7 +152,7 @@
       "titulo": "A velo descubierto las palabras",
       "fecha": "junio de 2014",
       "archivo": "periodismo/palabras-sin-velo.txt",
-      "linea": "Helen Hernández Hormilla entrevista a escritoras cubanas, y de paso hay que explicar qué es y qué no es el feminismo.",
+      "linea": "Helen Hernández Hormilla entrevista a varias escritoras cubanas. Entre otros temas, se abunda en qué es y qué no es el feminismo.",
       "seo_titulo": "A velo descubierto las palabras | Sobre Palabras sin velo",
       "seo_desc": "Reseña de Antonio López Sánchez sobre Palabras sin velo, de Helen Hernández Hormilla: entrevistas a escritoras cubanas, Editorial Caminos."
     },
@@ -163,7 +163,7 @@
       "titulo": "Una historia de un siglo",
       "fecha": "marzo de 2014",
       "archivo": "periodismo/un-siglo-de-jazz-en-cuba.txt",
-      "linea": "Leonardo Acosta cuenta cien años de jazz en la isla, y las Ediciones Museo de la Música lo ponen en las manos que hacía falta.",
+      "linea": "Leonardo Acosta recorre cien años de jazz en la Isla. Un libro vital para entender, y disfrutar, la historia de esta manifestación musical en Cuba.",
       "seo_titulo": "Una historia de un siglo | Sobre Un siglo de jazz en Cuba",
       "seo_desc": "Reseña de Antonio López Sánchez sobre Un siglo de jazz en Cuba, de Leonardo Acosta, Premio Nacional de Literatura, en Ediciones Museo de la Música."
     },
@@ -214,7 +214,7 @@
         ],
         "autor": "Carlos Varela"
       },
-      "linea": "Cuarenta años del estreno de la película de Titón, y una jornada entera discutiendo por qué sigue tan vigente.",
+      "linea": "A cuarenta años del estreno de la película de Titón, todavía se discute su vigencia.",
       "seo_titulo": "La persistencia de las memorias y del subdesarrollo",
       "seo_desc": "Crónica de Antonio López Sánchez sobre el homenaje a los 40 años del estreno de Memorias del subdesarrollo, de Tomás Gutiérrez Alea. La Jiribilla, 2008."
     },
@@ -230,7 +230,7 @@
         "Para Gladys Egües.",
         "Porque este cumpleaños también es suyo."
       ],
-      "linea": "Setenta y cinco años de la charanga, contados desde un niño de diez que vio a Oscar de León y no entendió lo que dijo su padre.",
+      "linea": "Setenta y cinco años de la charanga insignia de la música cubana. Un viaje desde los asombros infantiles, y la sabiduría paterna, hasta los descubrimientos de la adultez. Todo, con la Aragón sonando al fondo.",
       "seo_titulo": "Orquesta Aragón: los 75 del futuro | A. López Sánchez",
       "seo_desc": "Crónica de Antonio López Sánchez por los 75 años de la Orquesta Aragón, contada desde una anécdota de infancia. La Jiribilla, enero de 2015."
     },
@@ -248,7 +248,7 @@
         "Pues siempre que se toque con el corazón…",
         "Un ahora con cuerdas para mil islas"
       ],
-      "linea": "Un recorrido por la guitarra de la trova cubana, de Sindo Garay al filin, de la Nueva Trova a los conjuntos de ahora.",
+      "linea": "Canta la guitarra de la trova cubana, desde Sindo Garay al filin, de la Nueva Trova al sonido del presente.",
       "seo_titulo": "Una trova es con guitarra, y otra seguirá sonando",
       "seo_desc": "Ensayo de Antonio López Sánchez sobre la guitarra en la trova cubana, de Sindo Garay y Guyún al filin y la Nueva Trova. La Jiribilla, mayo de 2012."
     },
@@ -265,7 +265,7 @@
         "¿Nuevo filin para una vieja trova?",
         "El filin, como el romerillo, te conserva la salud."
       ],
-      "linea": "Noventa cumpleaños del hombre que hizo de la guitarra del filin una lengua propia.",
+      "linea": "El noventa cumpleaños del hombre que hizo del filin un idioma propio.",
       "seo_titulo": "Al César, lo que es del filin | Sobre César Portillo de la Luz",
       "seo_desc": "Crónica de Antonio López Sánchez por los 90 años de César Portillo de la Luz, y el lugar de su guitarra en el filin. La Jiribilla, noviembre de 2012."
     },
@@ -283,7 +283,7 @@
         "Existir me interesa más que soñar.",
         "Hay muchas cosas, pero sólo te voy a decir así…"
       ],
-      "linea": "Los Van Van cumplen años, y aquí se defiende lo que casi nunca se le reconoce a Formell: que también es un trovador.",
+      "linea": "En el cumpleaños de Los Van Van se analiza un curioso acápite de la obra de Juan Formell. ¿Será un trovador con orquesta?",
       "seo_titulo": "Juan Formell: trovar con los pies y bailar con la cabeza",
       "seo_desc": "Ensayo de Antonio López Sánchez sobre lo que Juan Formell y Los Van Van deben a la trova cubana, con Padura y Radamés Giro. La Jiribilla, 2012."
     },
@@ -300,7 +300,7 @@
         "Se acaban los noventa, necesitamos opciones.",
         "La vida es otra cosa, si la paciencia gana"
       ],
-      "linea": "Cincuenta años del trovador, contados disco a disco, desde el Vida hasta el último de la década.",
+      "linea": "Cincuenta años del trovador, contados disco a disco.",
       "seo_titulo": "Santiago Feliú en su primer medio vinilo",
       "seo_desc": "Crónica de Antonio López Sánchez por los 50 años del trovador cubano Santiago Feliú, recorrida disco a disco. La Jiribilla, junio de 2012."
     },
