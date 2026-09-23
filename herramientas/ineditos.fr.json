@@ -1,0 +1,64 @@
+{
+  "_nota": "Capa francesa de la sala de Ineditos. Trae solo lo traducible: el aparato (presentacion, sinopsis, Con voz y voto, lineas de tarjeta y metadatos) y los textos de interfaz. Los titulos de las novelas y de los fragmentos, y los fragmentos mismos, se quedan en español y salen marcados con lang=es.",
+  "ruta": "/fr/inedits/",
+  "h1": "Inédits",
+  "frase": "Les pages qui attendent.",
+  "sala_titulo": "La Station du Tiroir",
+  "presentacion": "ineditos/presentacion.fr.txt",
+  "seo_titulo": "Romans inédits d'Antonio López Sánchez",
+  "seo_desc": "Quatre romans inédits de l'écrivain cubain Antonio López Sánchez : synopsis, extraits en espagnol et notes de l'auteur. Droits disponibles hors de Cuba.",
+  "entrar": "Lire à propos du roman",
+  "volver": "Retour aux Inédits",
+  "migas": "Inédits",
+  "bloques": {
+    "sinopsis": "Synopsis",
+    "vyv": "Avec mes mots",
+    "fragmentos": "Extraits",
+    "ficha": "Fiche"
+  },
+  "ficha": {
+    "estado": "état",
+    "estado_valor": "Inédit",
+    "genero": "genre",
+    "derechos": "droits"
+  },
+  "aviso_adultos": "Un roman avec des passages sexuellement explicites, écrit pour un lectorat adulte.",
+  "novelas": {
+    "preguntas": {
+      "significado": "Questions. Un jour dans la vie de Juan Pérez",
+      "genero": "Roman",
+      "linea": "Une seule journée peut tenir dans un roman. Même si, parfois, les questions débordent.",
+      "sinopsis": "ineditos/preguntas/sinopsis.fr.txt",
+      "vyv": "ineditos/preguntas/voz-y-voto.fr.txt",
+      "seo_titulo": "Preguntas, un roman inédit | Antonio López Sánchez",
+      "seo_desc": "Un jour dans la vie de Juan Pérez, journaliste dans la capitale d'une île des Antilles. Synopsis, prélude et premier chapitre d'un roman cubain inédit."
+    },
+    "mis-diarios-de-cama": {
+      "significado": "Mes journaux de chevet",
+      "genero": "Roman · pour un lectorat adulte",
+      "linea": "Le journal d'une femme, avec ses devoirs, ses amours, ses chagrins. Un roman raconté à la première personne par sa propre protagoniste.",
+      "sinopsis": "ineditos/mis-diarios-de-cama/sinopsis.fr.txt",
+      "vyv": "ineditos/mis-diarios-de-cama/voz-y-voto.fr.txt",
+      "seo_titulo": "Mis diarios de cama, un roman inédit | Antonio López Sánchez",
+      "seo_desc": "Ana Paula consigne dans ses journaux de chevet les années les plus dures de sa vie. Synopsis et deux entrées d'un roman cubain inédit, pour un lectorat adulte."
+    },
+    "sonidos": {
+      "significado": "Sons",
+      "genero": "Roman d'horreur",
+      "linea": "La quête du son parfait engendre un meurtrier au dix-neuvième siècle, et déchaîne une histoire d'horreurs et de morts dont l'écho atteindra le présent, et peut-être l'avenir.",
+      "sinopsis": "ineditos/sonidos/sinopsis.fr.txt",
+      "vyv": "ineditos/sonidos/voz-y-voto.fr.txt",
+      "seo_titulo": "Sonidos, un roman d'horreur inédit | Antonio López Sánchez",
+      "seo_desc": "Un noble anglais du dix-neuvième siècle cherche le son parfait dans la mort et la douleur. Synopsis et trois extraits d'un roman d'horreur cubain inédit."
+    },
+    "palabras": {
+      "significado": "Mots",
+      "genero": "Roman de fantasy",
+      "linea": "Une poursuite à travers plusieurs dimensions mène à la Bibliothèque. Le passé et le présent croiseront leurs lignes. L'ambition convoitera le pouvoir. Les minutes seront peut-être des siècles, mais l'amour restera intact.",
+      "sinopsis": "ineditos/palabras/sinopsis.fr.txt",
+      "vyv": "ineditos/palabras/voz-y-voto.fr.txt",
+      "seo_titulo": "Palabras, un roman de fantasy inédit | Antonio López Sánchez",
+      "seo_desc": "Deux civilisations poursuivent maître Astrom jusqu'à la Terre. Extraits d'un roman de fantasy inédit, préquelle de El otro lado del espejo, d'Antonio López Sánchez."
+    }
+  }
+}
