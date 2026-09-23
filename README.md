@@ -10,7 +10,17 @@ La casa se llama *Ala del Mar* por la fórmula con que el autor cierra sus libro
 
 Sitio estático: HTML, CSS y JS propios, sin frameworks, sin dependencias en tiempo de ejecución y **sin una sola petición a terceros** (tipografías, imágenes y audio autohospedados). Alojado en GitHub Pages con dominio propio y HTTPS forzado.
 
-El sitio sigue en construcción. Las mediciones de rendimiento se harán y se publicarán cuando estén terminadas las versiones en otros idiomas.
+**Medido el 23 de septiembre de 2026 con PageSpeed Insights sobre la portada en vivo**, no estimado:
+
+| | móvil | escritorio |
+|---|---|---|
+| Rendimiento | **100** | **100** |
+| Accesibilidad | **100** | **100** |
+| Recomendaciones | **100** | **100** |
+| SEO | **100** | **100** |
+| Navegación con agentes | 3/3 | 3/3 |
+
+En móvil, con un Moto G Power emulado y 4G lenta: FCP 1,2 s, LCP 1,5 s, TBT 0 ms, CLS 0 y Speed Index 2,4 s. En escritorio, FCP y LCP 0,3 s y Speed Index 0,5 s. Las cifras se dan con la fecha y las condiciones en que se midieron, que es la única forma en que significan algo.
 
 ## Qué publica el dominio
 

@@ -13,8 +13,6 @@ De las 257 páginas indexables, 234 tienen pareja de idioma. Las 23 que no la ti
 1. **Directorio.** Fuera del español sería redundante: cada concentrador (`/en/author/` y sus tres hermanos) tiene su bloque de contacto, y el aviso de derechos de cada idioma cubre lo demás. Propuesta pendiente de Ernesto: no hacerla.
 2. **El archivo de prensa.** Los veintidós trabajos solo tienen página española, y ahí seguirán mientras los textos no se traduzcan. Lo que sí está traducido es su aparato: los cuatro concentradores listan los veintidós con su medio, su fecha y una línea que dice de qué va cada uno, y enlazan la página española marcada como tal. Las capas son `herramientas/periodismo.<idioma>.json`, así que el día que se quieran veintidós páginas en otro idioma el texto ya está escrito.
 
-Se mide el rendimiento y se publican las cifras cuando cierre la lista de cambios de Tony para El periodista. Antes no: ver `AGENTS.md`.
-
 ## 2. Espera la palabra de Tony
 
 1. **El título del poema del Farraluque.** Su mensaje decía *Tres desnudos y un delirio*; su manuscrito dice *Tres delirios y un desnudo*, y así está publicado.
@@ -32,7 +30,7 @@ Se mide el rendimiento y se publican las cifras cuando cierre la lista de cambio
    - prensa de los nueve libros que no la tienen: *La canción de la Nueva Trova*, *Trovadoras*, *Trampas retratos y un 17 rojo*, *De la extraña aventura de Don Quijote*, *Perdidos en un librero*, *En un lugar de Cuba*, *Nota de prensa y otros minicuentos*, *Vamos a cantar y a soñar* y *Cuentos de muñecas*;
    - fotos de presentaciones;
    - la foto de escritor oficial, si hace la sesión.
-11. **El periodista**: los trabajos ya llegaron y están publicados. Falta la lista de cambios que anunció para la ficha de redacción («hay que hacerle mil cosas»). Y **tres trabajos del mismo zip se quedaron fuera**, por la regla de material reservado de `AGENTS.md`: si quiere que salgan, que lo diga él.
+11. **Tres trabajos del zip de prensa se quedaron fuera**, por la regla de material reservado de `AGENTS.md`: si quiere que salgan, que lo diga él. (La lista de cambios que anunció para la ficha de redacción de El periodista la dio Ernesto por cerrada el 23 de septiembre de 2026.)
 12. **Los segundos fragmentos de Valnúss**: cada tomo lleva uno, como pidió. El segundo de cada tomo está en su material (`OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/`, archivos 016, 026, 039, 042 y 059) por si los quiere.
 
 ## 3. Espera la decisión de Ernesto
