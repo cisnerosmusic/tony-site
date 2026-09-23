@@ -11,10 +11,11 @@
 #
 # Uso: python herramientas/unificar-nav.py [--comprobar]
 
-import io, os, re, sys
+import io, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
+import pagina as marco
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Las zonas extranjeras se leen del registro de idiomas, no se escriben aqui.
@@ -38,6 +39,30 @@ def es_pagina_de_libro(rel):
 def ruta_web(rel):
     d = os.path.dirname(rel)
     return "/" + (d + "/" if d else "")
+
+
+def hermanas():
+    """Que versiones extranjeras tiene cada pagina española, leido de donde ya
+    esta declarado: las parejas de cada zona y, para el catalogo, la ruta de
+    libros de cada idioma.
+
+    Existe porque el hreflang de las paginas escritas a mano estaba escrito a
+    mano tambien, y el dia que nacio el frances las ocho siguieron diciendo que
+    el sitio tenia dos idiomas. Se vio en el dominio, no en el comprobador."""
+    out = {}
+    for lang, cfg in marco.lenguas_con_capa("zona").items():
+        for propia, es in cfg["parejas"].items():
+            out.setdefault(es, {})[lang] = propia
+    idiomas = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"),
+                             encoding="utf-8"))
+    for lang, d in idiomas.items():
+        if lang.startswith("_") or lang == "es":
+            continue
+        out.setdefault(idiomas["es"]["ruta_libros"], {})[lang] = d["ruta_libros"]
+    return out
+
+
+HERMANAS = hermanas()
 
 
 def main(solo_comprobar=False):
@@ -70,6 +95,18 @@ def main(solo_comprobar=False):
                 lambda m: m.group(1) + navegacion.menu_de("es", activa) + m.group(2), t)
             nuevo = re.sub(r'(<nav class="footer-nav" aria-label="Secciones">\n).*?(\n  </nav>)',
                            lambda m: m.group(1) + navegacion.pie_de("es", activa_pie) + m.group(2), nuevo, flags=re.S)
+
+            # El bloque de hreflang, que va pegado bajo la canonica y tiene la
+            # misma forma que el que escribe pagina.alternos() en las paginas
+            # generadas. Solo se toca si la pagina ya lo llevaba: las que no
+            # tienen version extranjera no lo tienen y no deben tenerlo.
+            propia = ruta_web(rel)
+            if propia in HERMANAS and "rel=\"alternate\"" in nuevo:
+                rutas = {"es": propia}
+                rutas.update(HERMANAS[propia])
+                nuevo = re.sub(
+                    r'(?:<link rel="alternate"[^>]*>\n)+',
+                    lambda m: marco.alternos(rutas), nuevo, count=1)
             if nuevo != t:
                 tocadas.append(rel)
                 if not solo_comprobar:

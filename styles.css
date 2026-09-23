@@ -86,7 +86,19 @@ img { max-width: 100%; height: auto; display: block; }
   white-space: nowrap;
 }
 
-.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links { --nav-gap: 2rem; display: flex; gap: var(--nav-gap); list-style: none; }
+
+/* Los idiomas no son una sala mas. Una linea vertical los separa del menu, y
+   entre ellos van mas juntos, porque son siglas y no nombres. Todo sale del
+   mismo --nav-gap, asi que apretar la barra en pantallas medianas mueve la
+   linea con ella y no hace falta tocar dos sitios. */
+.nav-links .nav-idioma-primero {
+  border-left: 1px solid var(--line);
+  padding-left: calc(var(--nav-gap) / 2);
+  margin-left: calc(var(--nav-gap) / -2);
+}
+
+.nav-links .nav-idioma + .nav-idioma { margin-left: calc(var(--nav-gap) * -0.55); }
 
 .nav-links a {
   font-family: var(--font-display);
@@ -833,7 +845,7 @@ html:not(.fr) .solo-fr { display: none !important; }
    cabe holgada; por debajo de 1081 pasa a hamburguesa. */
 @media (max-width: 1440px) and (min-width: 1081px) {
   .nav { padding: 1.25rem 2rem; }
-  .nav-links { gap: 1.15rem; }
+  .nav-links { --nav-gap: 1.15rem; }
   .nav-links a { font-size: 0.63rem; letter-spacing: 0.09em; }
 }
 
@@ -850,6 +862,16 @@ html:not(.fr) .solo-fr { display: none !important; }
   }
   .nav-links.open { display: flex; }
   .nav-hamburger { display: flex; }
+
+  /* En columna la linea se tumba: separa igual, pero de lado a lado. */
+  .nav-links .nav-idioma-primero {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    margin-left: 0;
+    padding-top: 1.5rem;
+  }
+  .nav-links .nav-idioma + .nav-idioma { margin-left: 0; }
 }
 
 @media (max-width: 900px) {

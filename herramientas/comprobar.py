@@ -115,6 +115,43 @@ def anclas():
                 falla("ancla inexistente", f"{rel(p)} apunta a {destino}#{frag}")
 
 
+# ── 1c. hreflang reciproco: si A dice que B es su version en otro idioma,
+# B tiene que decir lo mismo, y las dos tienen que nombrar a todas las demas.
+#
+# El 23 de septiembre de 2026, con el frances ya publicado, las ocho paginas
+# españolas escritas a mano seguian declarando solo es y en: le decian a Google
+# que la version francesa no existe. No lo caza ninguna otra regla, porque un
+# hreflang que falta no rompe nada y no da 404.
+def hreflang_reciproco():
+    mapa = {}
+    for p in paginas():
+        t = leer(p)
+        if "noindex" in t:
+            continue
+        can = re.search(r'rel="canonical" href="' + re.escape(DOMINIO) + r'([^"]*)"', t)
+        if not can:
+            continue
+        mapa[can.group(1)] = dict(re.findall(
+            r'rel="alternate" hreflang="([^"]+)" href="' + re.escape(DOMINIO) + r'([^"]*)"', t))
+    for url, alt in mapa.items():
+        if not alt:
+            continue
+        for lang, destino in alt.items():
+            if lang == "x-default":
+                continue
+            otra = mapa.get(destino)
+            if otra is None:
+                falla("hreflang a pagina inexistente", f"{url} dice que {lang} esta en {destino}")
+                continue
+            if not otra:
+                falla("hreflang sin vuelta", f"{url} nombra a {destino} y {destino} no nombra a nadie")
+                continue
+            faltan = sorted(set(alt) - set(otra) - {"x-default"})
+            if faltan:
+                falla("hreflang incompleto",
+                      f"{destino} no declara {', '.join(faltan)}, y {url} si")
+
+
 # ── 2. El sitemap y las paginas indexables tienen que coincidir ──────────
 def sitemap_cuadra():
     t = leer(os.path.join(RAIZ, "sitemap.xml"))
@@ -380,6 +417,7 @@ def publicacion_acotada():
 def main():
     enlaces_rotos()
     anclas()
+    hreflang_reciproco()
     sitemap_cuadra()
     datos_estructurados()
     metadatos()

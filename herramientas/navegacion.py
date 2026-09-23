@@ -151,8 +151,13 @@ def menu_de(lang, activa, sangria="    "):
         # tambien tiene que saber en que pagina esta.
         marca = ' class="active" aria-current="page"' if h == activa else ""
         filas.append(f'{sangria}<li><a href="{h}"{marca}>{n}</a></li>')
-    for l, d in _otros(lang):
-        filas.append(f'{sangria}<li><a href="{d["portada"]}" lang="{l}" '
+    # Los idiomas no son una sala mas y el menu tiene que decirlo: el primero
+    # lleva la clase con que styles.css dibuja la linea que los separa. Con dos
+    # idiomas daba igual; con cinco, la barra acaba en cuatro siglas seguidas
+    # que se leen como secciones. Lo pidio Ernesto el 23 de septiembre de 2026.
+    for n, (l, d) in enumerate(_otros(lang)):
+        clase = "nav-idioma nav-idioma-primero" if n == 0 else "nav-idioma"
+        filas.append(f'{sangria}<li class="{clase}"><a href="{d["portada"]}" lang="{l}" '
                      f'hreflang="{l}">{d["etiqueta"]}</a></li>')
     return "\n".join(filas)
 

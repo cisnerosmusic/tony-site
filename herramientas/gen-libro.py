@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=37"
+CSS = "?v=38"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -349,9 +349,12 @@ def generar_idioma(m, lang, disponibles):
         seo_desc = m.get("seo_desc") or m["descripcion"][:155]
     else:
         seo_titulo, seo_desc = o["seo_titulo"], o["seo_desc"]
+    # El locale de la pagina y el de todas las versiones que existen de ESTE
+    # libro. Estaba clavado en es_ES y solo lo llevaban las extranjeras.
     locale = f'<meta property="og:locale" content="{L["locale"]}">'
-    if not es:
-        locale += '\n<meta property="og:locale:alternate" content="es_ES">'
+    for otro in disponibles:
+        if otro != lang:
+            locale += f'\n<meta property="og:locale:alternate" content="{IDIOMAS[otro]["locale"]}">'
 
     def bloque(id_, titulo_b, cuerpo, lado):
         if not cuerpo.strip():
@@ -589,6 +592,19 @@ def catalogos():
                                      "name": manifiestos[s]["titulo"]}
                                     for i, s in enumerate(listados, 1)]}}
         es_url = DOMINIO + IDIOMAS["es"]["ruta_libros"]
+        # Todos los catalogos que existen, no solo este y el español: con dos
+        # idiomas daba igual, con tres el frances le decia a los buscadores que
+        # el catalogo ingles no existe.
+        con_catalogo = ["es"] + [l for l in LENGUAS
+                                 if l != "es" and "catalogo" in IDIOMAS[l]]
+        alternos_cat = "".join(
+            f'\n<link rel="alternate" hreflang="{l}" href="{DOMINIO}{IDIOMAS[l]["ruta_libros"]}">'
+            for l in con_catalogo)
+        alternos_cat += f'\n<link rel="alternate" hreflang="x-default" href="{es_url}">'
+        locales_cat = f'<meta property="og:locale" content="{L["locale"]}">'
+        for l in LENGUAS:
+            if l != lang:
+                locales_cat += f'\n<meta property="og:locale:alternate" content="{IDIOMAS[l]["locale"]}">'
         pagina = f"""<!DOCTYPE html>
 <html lang="{L["lang"]}">
 <head>
@@ -597,10 +613,7 @@ def catalogos():
 <title>{esc(C["seo_titulo"])}</title>
 <meta name="description" content="{esc_attr(C["seo_desc"])}">
 {FAVICON}
-<link rel="canonical" href="{url}">
-<link rel="alternate" hreflang="es" href="{es_url}">
-<link rel="alternate" hreflang="{L["lang"]}" href="{url}">
-<link rel="alternate" hreflang="x-default" href="{es_url}">
+<link rel="canonical" href="{url}">{alternos_cat}
 <meta property="og:type" content="website">
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{esc_attr(C["seo_titulo"])}">
@@ -610,8 +623,7 @@ def catalogos():
 <meta name="twitter:title" content="{esc_attr(C["seo_titulo"])}">
 <meta name="twitter:description" content="{esc_attr(C["seo_desc"])}">
 <meta name="twitter:image" content="{DOMINIO}/img/retrato.webp">
-<meta property="og:locale" content="{L["locale"]}">
-<meta property="og:locale:alternate" content="es_ES">
+{locales_cat}
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
