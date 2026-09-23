@@ -614,6 +614,17 @@ a.libro-cubierta:hover img {
    concentradores de fuera la misma lista tiene mas de cien entradas, y un
    cuadrado por linea seria ruido. */
 .indice-casa li { position: relative; padding-left: 1.6rem; }
+/* Y el nombre de la sala va subrayado. En el indice los nueve nombres estan
+   en oro y en versalita, igual que los titulos de seccion del resto de la
+   casa, asi que el color no basta para decir que ademas se pinchan: es la
+   misma razon por la que el pie lleva subrayado desde el 12 de septiembre.
+   Pedido por Tony el 23 de septiembre de 2026. */
+.indice-casa strong a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
 .indice-casa li::before {
   content: "";
   position: absolute;

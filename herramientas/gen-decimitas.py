@@ -23,7 +23,7 @@ import pagina
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=43"
+CSS = "?v=44"
 
 ES = {
     "ruta": "/tinta-ciones/de-cimitas/",
