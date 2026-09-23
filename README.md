@@ -69,7 +69,7 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-legal.py` | `/derechos/` y `/en/rights/` | `legal.json` |
 | `gen-404.py` | el 404, en los dos idiomas | `navegacion.py` |
 | `gen-tarjetas.py` | la postal de cada libro para redes, 1200 x 630: cubierta a la izquierda, título a la derecha | `libros/<slug>.json` y las cubiertas |
-| `gen-portada.py` | el Índice de la casa, dentro de la portada | `portada.json` y todos los manifiestos |
+| `gen-portada.py` | el Índice de la casa, dentro de la portada | `portada.json` y `navegacion.py` |
 | `gen-llms.py` | `llms.txt`, el mapa del sitio para los modelos de lenguaje | `llms.json` y todos los manifiestos |
 | `gen-sitemap.py` | `sitemap.xml`, con la fecha real de cada página según git y sus alternates por idioma | las propias páginas |
 
@@ -77,7 +77,7 @@ Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cab
 
 Siguen escritas a mano la portada (salvo el Índice de la casa, que escribe `gen-portada.py`), el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
 
-**Una obra nueva aparece sola en cuatro sitios**: en su sala, en el Índice de la casa de la portada (que además le cambia la cifra), en el concentrador inglés `/en/author/` y en `llms.txt`. Los cuatro leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás.
+**Una obra nueva aparece sola en tres sitios**: en su sala, en el concentrador inglés `/en/author/` y en `llms.txt`. Los tres leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás. El Índice de la casa de la portada no cuenta obras, solo salas, y se para si deja de coincidir con el menú.
 
 Requisitos: Python 3 y `pip install Pillow fonttools brotli`, las mismas dependencias que instala GitHub Actions.
 

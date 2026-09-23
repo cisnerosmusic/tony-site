@@ -17,6 +17,20 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 from collections import Counter, defaultdict
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def correr(orden):
+    """Lanza un generador y devuelve su resultado con el mensaje legible.
+
+    En Windows, un generador que se para con sys.exit("texto con acentos")
+    escribia a una tuberia en cp1252 y el mensaje se perdia entero: el
+    comprobador decia que habia fallado y no por que. Con PYTHONIOENCODING el
+    hijo escribe en UTF-8, y aqui se lee igual."""
+    entorno = dict(os.environ, PYTHONIOENCODING="utf-8")
+    return subprocess.run(orden, cwd=RAIZ, capture_output=True, text=True,
+                          encoding="utf-8", errors="replace", env=entorno)
+
+
 DOMINIO = "https://antoniolopezsanchez.art"
 
 # Tipos que schema.org define de verdad. "Poem" NO existe: da 404, y estuvo
@@ -215,9 +229,14 @@ def generado_al_dia():
         ordenes.append(["python", "herramientas/gen-libro.py", os.path.relpath(m, RAIZ)])
     ordenes.append(["python", "herramientas/gen-libro.py", "--catalogos"])
     for o in ordenes:
-        r = subprocess.run(o, cwd=RAIZ, capture_output=True, text=True)
+        r = correr(o)
         if r.returncode:
-            falla("generador con error", f"{' '.join(o[1:])}: {r.stderr.strip()[:120]}")
+            # Un generador que se para puede haber escrito el motivo en stderr o
+            # en stdout, y puede no haber escrito nada. El comprobador no puede
+            # reventar mientras informa de un fallo: paso el 22 de septiembre de
+            # 2026 con gen-portada.py, y la traza tapo el fallo de verdad.
+            motivo = (r.stderr or r.stdout or "sin mensaje").strip()
+            falla("generador con error", f"{' '.join(o[1:])}: {motivo[:120]}")
     despues = {rel(p): leer(p) for p in list(paginas()) + extra}
     sucios = [k for k, v in despues.items() if antes.get(k) != v]
     if sucios:
@@ -263,8 +282,7 @@ def higiene():
 
 # ── 8. La navegacion, con el comprobador que ya existe ───────────────────
 def navegacion_alineada():
-    r = subprocess.run(["python", "herramientas/unificar-nav.py", "--comprobar"],
-                       cwd=RAIZ, capture_output=True, text=True)
+    r = correr(["python", "herramientas/unificar-nav.py", "--comprobar"])
     if r.returncode:
         falla("navegacion desalineada", r.stdout.strip().splitlines()[-1] if r.stdout else "")
 
@@ -328,8 +346,7 @@ def fuentes_completas():
 # de 60 URLs. Ahora lo escribe gen-sitemap.py desde la historia de git; aqui
 # solo se comprueba que se haya regenerado despues del ultimo cambio.
 def sitemap_al_dia():
-    r = subprocess.run(["python", "herramientas/gen-sitemap.py", "--comprobar"],
-                       cwd=RAIZ, capture_output=True, text=True)
+    r = correr(["python", "herramientas/gen-sitemap.py", "--comprobar"])
     if r.returncode:
         falla("sitemap desactualizado",
               (r.stdout.strip().splitlines() or ["regenera con gen-sitemap.py"])[-1])

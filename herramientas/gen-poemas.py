@@ -83,7 +83,7 @@ ES = {
     "glosas_nota": None,
     "migas": ["Tinta-ciones", "Poemas sueltos"],
     "seo_titulo": "Poemas sueltos de Antonio López Sánchez",
-    "seo_desc": "{} poemas del poeta cubano Antonio López Sánchez, entre ellos ocho glosas sobre versos de José Martí y de Lezama Lima.",
+    "seo_desc": "{} poemas del poeta cubano Antonio López Sánchez, entre ellos ocho glosas sobre versos de José Martí y de José Lezama Lima.",
 }
 
 
