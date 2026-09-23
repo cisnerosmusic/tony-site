@@ -1,0 +1,45 @@
+{
+  "seo_titulo": "El Escudo de Valnúss : une saga de fantasy en cinq volumes",
+  "seo_desc": "El Escudo de Valnúss (Editorial de la Mujer, 2015), saga de fantasy publiée en coffret de cinq volumes illustrés. Synopsis et extraits.",
+  "cubierta_alt": "Couverture de El Escudo de Valnúss, illustrée par Rainel Cabarroi",
+  "genero": "Fantasy",
+  "contratapa": "libros/el-escudo-de-valnuss/contratapa.fr.txt",
+  "vyv": "libros/el-escudo-de-valnuss/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "El Escudo de Valnúss (Le Bouclier de Valnúss)",
+    "género": "Fantasy",
+    "formato": "Coffret de cinq volumes",
+    "cubierta": "Illustration de toutes les couvertures et du coffret : Rainel Cabarroi"
+  },
+  "volumenes": [
+    {
+      "alt": "Couverture de La magia de la aurora, volume 1 de El Escudo de Valnúss",
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-1-sinopsis.fr.txt"
+    },
+    {
+      "alt": "Couverture de El rojo del mar, volume 2 de El Escudo de Valnúss",
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-2-sinopsis.fr.txt"
+    },
+    {
+      "alt": "Couverture de Un fuego a toda vela, volume 3 de El Escudo de Valnúss",
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-3-sinopsis.fr.txt"
+    },
+    {
+      "alt": "Couverture de Campos de caballos, volume 4 de El Escudo de Valnúss",
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-4-sinopsis.fr.txt"
+    },
+    {
+      "alt": "Couverture de Los cuatro talismanes, volume 5 de El Escudo de Valnúss",
+      "sinopsis": "libros/el-escudo-de-valnuss/volumen-5-sinopsis.fr.txt"
+    }
+  ],
+  "prensa": [
+    {
+      "pie": "Entretien par Iyaimí Palomares, Juventud Rebelde, 12 février 2016"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Le Bouclier de Valnúss",
+    "sinopsis": "Une magicienne, une guerrière sous-marine, un destrier enchanté et une corsaire s'allient contre un sorcier qui a semé le chaos dans leurs mondes. Cinq livres, un seul roman, publiés en coffret illustré."
+  }
+}

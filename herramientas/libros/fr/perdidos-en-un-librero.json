@@ -1,0 +1,18 @@
+{
+  "seo_titulo": "Perdidos en un librero : un roman de fantasy pour enfants",
+  "seo_desc": "Perdidos en un librero (Editorial Quisicuaba, 2026), roman de fantasy jeunesse en format numérique, situé dans les pages d'un livre de mythes cubains.",
+  "cubierta_alt": "Couverture de Perdidos en un librero, illustrée par Alain R. Cuba",
+  "genero": "Fantasy jeunesse",
+  "contratapa": "libros/perdidos-en-un-librero/contratapa.fr.txt",
+  "vyv": "libros/perdidos-en-un-librero/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "Perdidos en un librero (Perdus dans une bibliothèque)",
+    "género": "Roman de fantasy jeunesse",
+    "formato": "EPUB et PDF",
+    "cubierta": "Illustration d'Alain R. Cuba"
+  },
+  "catalogo": {
+    "glosa": "Perdus dans une bibliothèque",
+    "sinopsis": "Un chapeau de magicien, une baguette de fée, un cheval, une poupée et un zombie savant se perdent dans les livres d'une bibliothèque magique, et atterrissent dans les pages de la mythologie cubaine. Le livre le plus récent de l'auteur."
+  }
+}
