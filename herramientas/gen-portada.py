@@ -42,7 +42,7 @@ def bloque(P):
     for i, p in enumerate(P["entrada"]):
         margen = "2.5rem" if i == ultimo else "1.25rem"
         out.append(f'    <p class="section-text" style="margin-bottom:{margen};">{esc(p)}</p>')
-    out.append('    <ul class="lista-obras">')
+    out.append('    <ul class="lista-obras indice-casa">')
     for s in P["salas"]:
         out += ['      <li>',
                 f'        <strong><a href="{esc_attr(s["url"])}">{esc(s["titulo"])}</a></strong>',

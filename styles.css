@@ -608,6 +608,22 @@ a.libro-cubierta:hover img {
   color: var(--text-secondary);
 }
 
+/* El Indice de la casa lleva un cuadradito delante de cada sala. Pedido por
+   Tony el 23 de septiembre de 2026: son nueve puertas seguidas y el ojo
+   necesita ver donde empieza cada una sin leer. Va solo en la portada: en los
+   concentradores de fuera la misma lista tiene mas de cien entradas, y un
+   cuadrado por linea seria ruido. */
+.indice-casa li { position: relative; padding-left: 1.6rem; }
+.indice-casa li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+}
+
 /* Poemas y decimas: solo titulo y enlace, asi que caben en dos columnas.
    Con una sola, cuarenta entradas de tres palabras dejan la pagina vacia por
    la derecha y obligan a bajar el doble. */
