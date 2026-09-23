@@ -69,14 +69,15 @@ Casi nada se escribe a mano: cada sala tiene su generador y su manifiesto en `he
 | `gen-legal.py` | `/derechos/` y `/en/rights/` | `legal.json` |
 | `gen-404.py` | el 404, en los dos idiomas | `navegacion.py` |
 | `gen-tarjetas.py` | la postal de cada libro para redes, 1200 x 630: cubierta a la izquierda, título a la derecha | `libros/<slug>.json` y las cubiertas |
+| `gen-portada.py` | el Índice de la casa, dentro de la portada | `portada.json` y todos los manifiestos |
 | `gen-llms.py` | `llms.txt`, el mapa del sitio para los modelos de lenguaje | `llms.json` y todos los manifiestos |
 | `gen-sitemap.py` | `sitemap.xml`, con la fecha real de cada página según git y sus alternates por idioma | las propias páginas |
 
 Auxiliares: `pagina.py`, el marco común de una página en cualquier idioma (cabecera, menú, pie y camino de miga), que usan nueve de los generadores, y donde vive además el cálculo del ancla de un poema o de una décima, para que el que escribe el `id` y el que escribe el enlace no puedan discrepar; `subset-fuentes.py`, que recorta las fuentes servidas desde `fonts/originales/` a lo que el sitio escribe de verdad; `navegacion.py`, que es la **única** definición del menú y del pie en cada idioma; `unificar-nav.py`, que la aplica a las páginas escritas a mano; `comprobar.py`, que verifica el sitio entero; `version.py`, que sube el `?v=N` de un recurso en todas las páginas a la vez; `a-texto.py`, que convierte los RTF y DOCX del autor a texto plano (con `--verso` para conservar las estrofas); y `leer-poema.py`, que separa título, epígrafe, cuerpo y colofón.
 
-Siguen escritas a mano la portada, el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
+Siguen escritas a mano la portada (salvo el Índice de la casa, que escribe `gen-portada.py`), el catálogo español `/libros/`, la portada de Tinta-ciones, Trova, Plano abierto y En mi voz (salvo la región de grabaciones, que escribe `gen-audios.py`), El periodista (salvo la región del archivo de prensa, que escribe `gen-periodismo.py`), Directorio, Entre lectores y las dos redirecciones blandas. Su menú y su pie no se tocan a mano: los mantiene `unificar-nav.py`.
 
-**Una obra nueva aparece sola en tres sitios**: en su sala, en el concentrador inglés `/en/author/` y en `llms.txt`. Los tres leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás.
+**Una obra nueva aparece sola en cuatro sitios**: en su sala, en el Índice de la casa de la portada (que además le cambia la cifra), en el concentrador inglés `/en/author/` y en `llms.txt`. Los cuatro leen el mismo manifiesto. No hay que acordarse de nada, y el comprobador falla si alguno se queda atrás.
 
 Requisitos: Python 3 y `pip install Pillow fonttools brotli`, las mismas dependencias que instala GitHub Actions.
 

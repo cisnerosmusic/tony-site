@@ -33,11 +33,8 @@ Se mide el rendimiento y se publican las cifras cuando cierre la lista de cambio
    - prensa de los nueve libros que no la tienen: *La canción de la Nueva Trova*, *Trovadoras*, *Trampas retratos y un 17 rojo*, *De la extraña aventura de Don Quijote*, *Perdidos en un librero*, *En un lugar de Cuba*, *Nota de prensa y otros minicuentos*, *Vamos a cantar y a soñar* y *Cuentos de muñecas*;
    - fotos de presentaciones;
    - la foto de escritor oficial, si hace la sesión.
-11. **Inéditos**: entraron las cuatro novelas que mandó. Si quiere enseñar también algo de sus poemarios y libros de cuentos inéditos, falta que lo mande.
-12. **El periodista**: los trabajos ya llegaron y están publicados. Falta la lista de cambios que anunció para la ficha de redacción («hay que hacerle mil cosas»). Y **tres trabajos del mismo zip se quedaron fuera**, porque son de la publicación que está fuera de lista: si quiere que salgan, que lo diga él.
-13. **Los segundos fragmentos de Valnúss**: cada tomo lleva uno, como pidió. El segundo de cada tomo está en su material (`OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/`, archivos 016, 026, 039, 042 y 059) por si los quiere.
-14. **Dos erratas en verso, que no se tocan sin él.** En la décima *Penitente*, «Tu **legua** entona un vehemente ruego»: una legua es una medida de distancia y lo que entona en ese verso es la lengua. En *Beso (I)*, «y **una** cauce de agua silente»: cauce es masculino. Las dos caben en la métrica sin cambiarla, pero están en verso, donde el innegociable dice que no se normaliza nada. Que lo diga él.
-15. **Una fecha que se contradice**: en *Mis diarios de cama*, el nombre del archivo de la entrada 8 dice «20 de septiembre de 2004» y el texto dice «18». Se publicó con 18. No es errata obvia porque no se sabe cuál de las dos es la buena.
+11. **El periodista**: los trabajos ya llegaron y están publicados. Falta la lista de cambios que anunció para la ficha de redacción («hay que hacerle mil cosas»). Y **tres trabajos del mismo zip se quedaron fuera**, porque son de la publicación que está fuera de lista: si quiere que salgan, que lo diga él.
+12. **Los segundos fragmentos de Valnúss**: cada tomo lleva uno, como pidió. El segundo de cada tomo está en su material (`OneDrive/Imágenes/tony/x/(2015) El Escudo de Valnúss/`, archivos 016, 026, 039, 042 y 059) por si los quiere.
 
 ## 3. Espera la decisión de Ernesto
 

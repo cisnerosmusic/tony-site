@@ -193,6 +193,9 @@ def generado_al_dia():
     # lenguaje, no lo mira nadie, y por eso paso doce dias diciendo que Contarte
     # tenia siete cuentos cuando ya eran once.
     extra = [os.path.join(RAIZ, "llms.txt")]
+    # index.html ya entra por paginas(), asi que el indice de la portada se
+    # comprueba solo: si una obra nueva cambia una cifra, regenerar mueve la
+    # portada y la regla salta.
     antes = {rel(p): leer(p) for p in list(paginas()) + extra}
     ordenes = [["python", "herramientas/gen-cuento.py"],
                ["python", "herramientas/gen-ineditos.py"],
@@ -203,6 +206,7 @@ def generado_al_dia():
                ["python", "herramientas/gen-farraluque.py"],
                ["python", "herramientas/gen-periodismo.py"],
                ["python", "herramientas/gen-llms.py"],
+               ["python", "herramientas/gen-portada.py"],
                ["python", "herramientas/gen-audios.py"],
                ["python", "herramientas/gen-ingles.py"],
                ["python", "herramientas/gen-legal.py"],
