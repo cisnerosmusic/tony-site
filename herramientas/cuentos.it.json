@@ -1,0 +1,94 @@
+{
+  "_nota": "Capa italiana de Contarte. Trae solo el aparato: la entrada de la sala, la linea de cada cuento, su procedencia y los metadatos. Los cuentos y sus titulos se quedan en español y salen marcados con lang=es.",
+  "ruta": "/it/racconti/",
+  "h1": "Racconti",
+  "frase": "Contarte: la stanza dove vivono i racconti.",
+  "h2": "C'era una volta...",
+  "intro": [
+    "Quelle parole antiche annunciano una storia. Alcuni dei miei racconti vivono qui, ognuno con un posto suo e una mano tesa che invita a entrare.",
+    "Alcuni sono liberi, ancora senza legami. Altri vengono da libri che aspettano di vedere la luce. Alcuni sono allegri, altri cupi. Ma tutti sono pronti a farvi compagnia.",
+    "Il racconto, quel folletto che accompagna l'umanità dall'alba dei tempi, regala ancora magia, realtà e perfino paure."
+  ],
+  "aviso": "I racconti sono pubblicati nel loro spagnolo originale, come tutti i testi letterari di questo sito.",
+  "avisos_adultos": {
+    "erotico": "Opera di letteratura erotica, scritta per un pubblico adulto.",
+    "duro": "Racconto per un pubblico adulto."
+  },
+  "leer": "Leggi il racconto",
+  "volver": "Torna ai Racconti",
+  "migas": "Racconti",
+  "ver_ficha": "Vedi la scheda di {}",
+  "seo_titulo": "Racconti di Antonio López Sánchez, in spagnolo",
+  "seo_desc": "Racconti completi dello scrittore cubano Antonio López Sánchez, pubblicati nel loro spagnolo originale, ognuno con una pagina propria.",
+  "cuentos": {
+    "la-muneca-y-el-principe": {
+      "significado": "La bambola e il principe",
+      "linea": "Un drago è comparso nella stanza dei giocattoli di Pilar. Ma per affrontarlo ci vorrà un principe.",
+      "procedencia": "Pubblicato in Cuentos de muñecas (¡A leer y a jugar!), a cura di Magaly Sánchez Ochoa, Editorial de la Mujer, 2015",
+      "seo_titulo": "La muñeca y el príncipe, un racconto di Antonio López Sánchez",
+      "seo_desc": "Racconto per bambini completo di Antonio López Sánchez, in spagnolo: i giocattoli di Pilar preparano il suo compleanno, e serve un principe. 2015."
+    },
+    "aquelarre": {
+      "significado": "Sabba",
+      "linea": "Sei amici molto particolari devono compiere un rito arcano per sopravvivere nel mondo di oggi.",
+      "seo_titulo": "Aquelarre, un racconto di Antonio López Sánchez",
+      "seo_desc": "Racconto completo di Antonio López Sánchez, in spagnolo: sei amici si ritrovano in un appartamento dell'Avana, e la serata finisce in rituale."
+    },
+    "asesinato": {
+      "significado": "Omicidio",
+      "linea": "La vicina del piano di sotto aveva paura di un albero. Così decise di ucciderlo...",
+      "seo_titulo": "Asesinato, un racconto di Antonio López Sánchez",
+      "seo_desc": "Racconto completo di Antonio López Sánchez, in spagnolo: una vicina teme l'albero del marciapiede e scende con benzina e stracci. Un balcone vede il resto."
+    },
+    "clinica-del-miedo": {
+      "significado": "Clinica della paura",
+      "linea": "Un paziente crolla sul lettino di uno specialista quanto mai insolito.",
+      "seo_titulo": "Clínica del miedo, un racconto brevissimo di Antonio López Sánchez",
+      "seo_desc": "Racconto brevissimo di Antonio López Sánchez, in spagnolo: un paziente confessa la sua paura a uno specialista molto paziente. Si legge in un minuto."
+    },
+    "duelo": {
+      "significado": "Duello",
+      "linea": "Due figure si affrontano nella neve. Un duello fra avversari diseguali...",
+      "seo_titulo": "Duelo, un racconto brevissimo di Antonio López Sánchez",
+      "seo_desc": "Racconto brevissimo di Antonio López Sánchez, in spagnolo: due figure si affrontano sulla neve, e parte uno sparo. Si legge in un minuto."
+    },
+    "luces": {
+      "significado": "Luci",
+      "linea": "Uno scrittore preso fra due blackout cerca di fare letteratura e di stare dietro alle faccende di casa.",
+      "seo_titulo": "Luces, un racconto di Antonio López Sánchez",
+      "seo_desc": "Racconto completo di Antonio López Sánchez, in spagnolo: torna la corrente, e con lei la lavatrice, il tubo alzato in aria e un racconto mai scritto."
+    },
+    "sombreros-pamelas-y-magicas-varitas": {
+      "significado": "Cappelli, capelline e bacchette magiche",
+      "linea": "Brujito Sombrero è svegliato da una sonata, e dall'altra parte della staccionata passa una bacchetta magica.",
+      "seo_titulo": "Sombreros, pamelas y mágicas varitas, un racconto in spagnolo",
+      "seo_desc": "Racconto completo di Antonio López Sánchez, in spagnolo: Brujito Sombrero è svegliato da una sonata di Scarlatti, e una bacchetta magica passa oltre la staccionata."
+    },
+    "cantar-el-cuento-iii": {
+      "significado": "Cantare il racconto (III)",
+      "linea": "Parte di una trilogia dove i racconti suonano anche come canzoni. L'amore adolescente e le sue passioni, cantato fra due corpi.",
+      "procedencia": "Da Oleaje de pianos, libro oggi presso il suo editore",
+      "seo_titulo": "Cantar el cuento (III), un racconto di Antonio López Sánchez",
+      "seo_desc": "Racconto completo di Antonio López Sánchez, in spagnolo: l'ultimo giorno di un campo di addestramento, una lettera scritta come una canzone, e un letto appena rifatto."
+    },
+    "la-urna-del-tio": {
+      "significado": "L'urna dello zio",
+      "linea": "Un ritratto vivo della vita e delle sue giravolte, raccontato dalle ceneri di un morto.",
+      "procedencia": "Da El color de las decisiones, libro oggi presso il suo editore",
+      "seo_titulo": "La urna del tío, un racconto di Antonio López Sánchez",
+      "seo_desc": "Racconto completo di Antonio López Sánchez, in spagnolo: un morto racconta dalla sua urna di argilla come la stanza si riempì di parenti."
+    },
+    "traje-de-lluvia": {
+      "significado": "Un abito di pioggia",
+      "linea": "La pioggia chiama insieme i sogni e la letteratura, e lascia viverci dentro.",
+      "seo_titulo": "Traje de lluvia, un racconto di Antonio López Sánchez",
+      "seo_desc": "Racconto completo di Antonio López Sánchez, in spagnolo: un acquazzone svuota il viale, e una donna con un abito di pioggia si siede sul marciapiede di fronte."
+    },
+    "hipo-talamo": {
+      "significado": "Ipotalamo, e il letto nuziale",
+      "linea": "Un viaggio nella mente di una bambina, nelle sue ambivalenze, e in un orrore che può essere reale o immaginato.",
+      "seo_titulo": "Hipo-Tálamo, un racconto di Antonio López Sánchez",
+      "seo_desc": "Racconto di Antonio López Sánchez, in spagnolo, per un pubblico adulto: una ragazza che compie quindici anni prepara le sue nozze per qualcuno che esiste solo di notte."
+    }
+  }
+}

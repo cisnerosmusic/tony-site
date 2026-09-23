@@ -1,0 +1,64 @@
+{
+  "_nota": "Capa portuguesa de la sala de Ineditos. Trae solo lo traducible: el aparato (presentacion, sinopsis, Con voz y voto, lineas de tarjeta y metadatos) y los textos de interfaz. Los titulos de las novelas y de los fragmentos, y los fragmentos mismos, se quedan en español y salen marcados con lang=es.",
+  "ruta": "/pt/ineditos/",
+  "h1": "Inéditos",
+  "frase": "As páginas que esperam.",
+  "sala_titulo": "A Estação da Gaveta",
+  "presentacion": "ineditos/presentacion.pt.txt",
+  "seo_titulo": "Romances inéditos de Antonio López Sánchez",
+  "seo_desc": "Quatro romances inéditos do escritor cubano Antonio López Sánchez: sinopses, trechos em espanhol e notas do autor. Direitos disponíveis fora de Cuba.",
+  "entrar": "Ler sobre o romance",
+  "volver": "Voltar aos Inéditos",
+  "migas": "Inéditos",
+  "bloques": {
+    "sinopsis": "Sinopse",
+    "vyv": "Com minhas palavras",
+    "fragmentos": "Trechos",
+    "ficha": "Ficha"
+  },
+  "ficha": {
+    "estado": "estado",
+    "estado_valor": "Inédito",
+    "genero": "gênero",
+    "derechos": "direitos"
+  },
+  "aviso_adultos": "Romance com passagens sexualmente explícitas, escrito para leitores adultos.",
+  "novelas": {
+    "preguntas": {
+      "significado": "Perguntas. Um dia na vida de Juan Pérez",
+      "genero": "Romance",
+      "linea": "Um único dia pode caber num romance. Mesmo que, às vezes, as perguntas transbordem.",
+      "sinopsis": "ineditos/preguntas/sinopsis.pt.txt",
+      "vyv": "ineditos/preguntas/voz-y-voto.pt.txt",
+      "seo_titulo": "Preguntas, um romance inédito | Antonio López Sánchez",
+      "seo_desc": "Um dia na vida de Juan Pérez, jornalista na capital de uma ilha das Antilhas. Sinopse, prelúdio e primeiro capítulo de um romance cubano inédito."
+    },
+    "mis-diarios-de-cama": {
+      "significado": "Meus diários de cabeceira",
+      "genero": "Romance · para leitores adultos",
+      "linea": "O diário de uma mulher, com seus deveres, seus amores, suas dores. Um romance contado em primeira pessoa pela própria protagonista.",
+      "sinopsis": "ineditos/mis-diarios-de-cama/sinopsis.pt.txt",
+      "vyv": "ineditos/mis-diarios-de-cama/voz-y-voto.pt.txt",
+      "seo_titulo": "Mis diarios de cama, um romance inédito | Antonio López Sánchez",
+      "seo_desc": "Ana Paula registra nos seus diários de cabeceira os anos mais duros da sua vida. Sinopse e duas entradas de um romance cubano inédito, para adultos."
+    },
+    "sonidos": {
+      "significado": "Sons",
+      "genero": "Romance de horror",
+      "linea": "A busca do som perfeito gera um assassino no século dezenove, e desencadeia uma história de horrores e mortes cujo eco chegará ao presente, e talvez ao futuro.",
+      "sinopsis": "ineditos/sonidos/sinopsis.pt.txt",
+      "vyv": "ineditos/sonidos/voz-y-voto.pt.txt",
+      "seo_titulo": "Sonidos, um romance de horror inédito | Antonio López Sánchez",
+      "seo_desc": "Um nobre inglês do século dezenove busca o som perfeito na morte e na dor. Sinopse e três trechos de um romance de horror cubano inédito."
+    },
+    "palabras": {
+      "significado": "Palavras",
+      "genero": "Romance de fantasia",
+      "linea": "Uma perseguição por várias dimensões leva à Biblioteca. Passado e presente cruzarão suas linhas. A ambição cobiçará o poder. Os minutos talvez sejam séculos, mas o amor ficará intacto.",
+      "sinopsis": "ineditos/palabras/sinopsis.pt.txt",
+      "vyv": "ineditos/palabras/voz-y-voto.pt.txt",
+      "seo_titulo": "Palabras, um romance de fantasia inédito | Antonio López Sánchez",
+      "seo_desc": "Duas civilizações perseguem o mestre Astrom até a Terra. Trechos de um romance de fantasia inédito, prequela de El otro lado del espejo."
+    }
+  }
+}

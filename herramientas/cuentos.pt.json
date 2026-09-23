@@ -1,0 +1,94 @@
+{
+  "_nota": "Capa portuguesa de Contarte. Trae solo el aparato: la entrada de la sala, la linea de cada cuento, su procedencia y los metadatos. Los cuentos y sus titulos se quedan en español y salen marcados con lang=es.",
+  "ruta": "/pt/contos/",
+  "h1": "Contos",
+  "frase": "Contarte: o quarto onde moram os contos.",
+  "h2": "Era uma vez...",
+  "intro": [
+    "Essas palavras antigas anunciam uma história. Alguns dos meus contos moram aqui, cada um com seu lugar e uma mão estendida que convida a entrar.",
+    "Alguns estão soltos, ainda sem vínculo. Outros vêm de livros que esperam ver a luz. Alguns são alegres, outros sombrios. Mas todos estão prontos para lhe fazer companhia.",
+    "O conto, esse duende que acompanha a humanidade desde o início dos tempos, ainda dá de presente magia, realidades e até medos."
+  ],
+  "aviso": "Os contos são publicados no seu espanhol original, como todos os textos literários deste site.",
+  "avisos_adultos": {
+    "erotico": "Obra de literatura erótica, escrita para leitores adultos.",
+    "duro": "Conto para leitores adultos."
+  },
+  "leer": "Ler o conto",
+  "volver": "Voltar aos Contos",
+  "migas": "Contos",
+  "ver_ficha": "Ver a ficha de {}",
+  "seo_titulo": "Contos de Antonio López Sánchez, em espanhol",
+  "seo_desc": "Contos completos do escritor cubano Antonio López Sánchez, publicados no seu espanhol original, cada um com sua própria página.",
+  "cuentos": {
+    "la-muneca-y-el-principe": {
+      "significado": "A boneca e o príncipe",
+      "linea": "Um dragão apareceu no quarto de brinquedos de Pilar. Mas para enfrentá-lo vai ser preciso um príncipe.",
+      "procedencia": "Publicado em Cuentos de muñecas (¡A leer y a jugar!), organizado por Magaly Sánchez Ochoa, Editorial de la Mujer, 2015",
+      "seo_titulo": "La muñeca y el príncipe, um conto de Antonio López Sánchez",
+      "seo_desc": "Conto infantil completo de Antonio López Sánchez, em espanhol: os brinquedos de Pilar preparam seu aniversário, e é preciso um príncipe. 2015."
+    },
+    "aquelarre": {
+      "significado": "Sabá",
+      "linea": "Seis amigos muito especiais precisam cumprir um rito antigo para sobreviver no mundo de hoje.",
+      "seo_titulo": "Aquelarre, um conto de Antonio López Sánchez",
+      "seo_desc": "Conto completo de Antonio López Sánchez, em espanhol: seis amigos se reúnem num apartamento de Havana, e a noite termina em ritual."
+    },
+    "asesinato": {
+      "significado": "Assassinato",
+      "linea": "A vizinha de baixo tinha medo de uma árvore. Então decidiu matá-la...",
+      "seo_titulo": "Asesinato, um conto de Antonio López Sánchez",
+      "seo_desc": "Conto completo de Antonio López Sánchez, em espanhol: uma vizinha teme a árvore da calçada e desce com gasolina e trapos. Uma varanda vê o resto."
+    },
+    "clinica-del-miedo": {
+      "significado": "Clínica do medo",
+      "linea": "Um paciente desmorona no divã de um especialista dos mais incomuns.",
+      "seo_titulo": "Clínica del miedo, um miniconto de Antonio López Sánchez",
+      "seo_desc": "Miniconto completo de Antonio López Sánchez, em espanhol: um paciente confessa seu medo a um especialista muito paciente. Lê-se num minuto."
+    },
+    "duelo": {
+      "significado": "Duelo",
+      "linea": "Duas figuras se enfrentam na neve. Um duelo entre adversários desiguais...",
+      "seo_titulo": "Duelo, um miniconto de Antonio López Sánchez",
+      "seo_desc": "Miniconto completo de Antonio López Sánchez, em espanhol: duas figuras se enfrentam sobre a neve, e soa um tiro. Lê-se num minuto."
+    },
+    "luces": {
+      "significado": "Luzes",
+      "linea": "Um escritor preso entre dois apagões tenta fazer literatura e dar conta das tarefas de casa.",
+      "seo_titulo": "Luces, um conto de Antonio López Sánchez",
+      "seo_desc": "Conto completo de Antonio López Sánchez, em espanhol: a luz volta, e com ela a máquina de lavar, a mangueira erguida no ar e um conto nunca escrito."
+    },
+    "sombreros-pamelas-y-magicas-varitas": {
+      "significado": "Chapéus, capelinas e varinhas mágicas",
+      "linea": "Brujito Sombrero é acordado por uma sonata, e do outro lado da cerca passa uma varinha mágica.",
+      "seo_titulo": "Sombreros, pamelas y mágicas varitas, um conto em espanhol",
+      "seo_desc": "Conto completo de Antonio López Sánchez, em espanhol: Brujito Sombrero é acordado por uma sonata de Scarlatti, e uma varinha mágica passa atrás da cerca."
+    },
+    "cantar-el-cuento-iii": {
+      "significado": "Cantar o conto (III)",
+      "linea": "Parte de uma trilogia em que os contos soam também como canções. O amor adolescente e suas paixões, cantado entre dois corpos.",
+      "procedencia": "De Oleaje de pianos, livro hoje na sua editora",
+      "seo_titulo": "Cantar el cuento (III), um conto de Antonio López Sánchez",
+      "seo_desc": "Conto completo de Antonio López Sánchez, em espanhol: o último dia de um acampamento, uma carta escrita como canção, e uma cama recém-arrumada."
+    },
+    "la-urna-del-tio": {
+      "significado": "A urna do tio",
+      "linea": "Um retrato vivo da vida e de suas viravoltas, contado pelas cinzas de um morto.",
+      "procedencia": "De El color de las decisiones, livro hoje na sua editora",
+      "seo_titulo": "La urna del tío, um conto de Antonio López Sánchez",
+      "seo_desc": "Conto completo de Antonio López Sánchez, em espanhol: um morto conta de sua urna de barro como o cômodo foi se enchendo de parentes."
+    },
+    "traje-de-lluvia": {
+      "significado": "Um vestido de chuva",
+      "linea": "A chuva convoca ao mesmo tempo os sonhos e a literatura, e deixa morar dentro deles.",
+      "seo_titulo": "Traje de lluvia, um conto de Antonio López Sánchez",
+      "seo_desc": "Conto completo de Antonio López Sánchez, em espanhol: um aguaceiro esvazia a avenida, e uma mulher com vestido de chuva senta na calçada em frente."
+    },
+    "hipo-talamo": {
+      "significado": "Hipotálamo, e o leito nupcial",
+      "linea": "Uma viagem pela mente de uma menina, suas ambivalências, e um horror que pode ser real ou imaginado.",
+      "seo_titulo": "Hipo-Tálamo, um conto de Antonio López Sánchez",
+      "seo_desc": "Conto de Antonio López Sánchez, em espanhol, para leitores adultos: uma menina que faz quinze anos prepara sua festa de casamento para alguém que só existe à noite."
+    }
+  }
+}
