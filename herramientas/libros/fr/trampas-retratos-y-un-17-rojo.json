@@ -1,0 +1,27 @@
+{
+  "seo_titulo": "Trampas, retratos y un 17 rojo : poésie, en coauteur",
+  "seo_desc": "Trampas, retratos y un 17 rojo (Editorial de la Mujer, 2005), recueil de poésie à trois voix : vers libre, haïku et décimas érotiques. Extrait en espagnol.",
+  "cubierta_alt": "Couverture de Trampas, retratos y un 17 rojo, illustrée par Juan Carlos García",
+  "genero": "Poésie",
+  "vyv": "libros/trampas-retratos-y-un-17-rojo/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "Trampas, retratos y un 17 rojo (Pièges, portraits et un 17 rouge)",
+    "autoría": "En coauteur avec María del Carmen Mestas et Marcel Luerio",
+    "género": "Poésie",
+    "cubierta": "Illustration de Juan Carlos García"
+  },
+  "galeria": [
+    {
+      "alt": "Antonio López Sánchez avec María del Carmen Mestas et Marcel Luerio",
+      "pie": "Avec María del Carmen Mestas et Marcel Luerio"
+    },
+    {
+      "alt": "Présentation du recueil à la Casa de la Poesía",
+      "pie": "Présentation à la Casa de la Poesía, La Havane, mars 2005"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Pièges, portraits et un 17 rouge",
+    "sinopsis": "Trois poètes, trois formes : le vers libre de María del Carmen Mestas, le haïku de Marcel Luerio, et une suite de décimas érotiques de l'auteur, Retratos de mañana. Son seul recueil de poésie à ce jour."
+  }
+}

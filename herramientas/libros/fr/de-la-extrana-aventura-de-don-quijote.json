@@ -1,0 +1,33 @@
+{
+  "seo_titulo": "De la extraña aventura de Don Quijote : Cervantès, depuis Cuba",
+  "seo_desc": "Don Quichotte et Sancho atterrissent dans La Havane des années 1990 : le récit lauréat de Reescribir El Quijote en Cuba en 2005, publié par Cubaliteraria en 2021. Téléchargement libre.",
+  "cubierta_alt": "Couverture de De la extraña aventura de Don Quijote, illustrée par Iván Batista",
+  "genero": "Récit",
+  "premios": [
+    "Premier prix, concours Reescribir El Quijote en Cuba, 2005"
+  ],
+  "contratapa": "libros/de-la-extrana-aventura-de-don-quijote/contratapa.fr.txt",
+  "vyv": "libros/de-la-extrana-aventura-de-don-quijote/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (De l'étrange aventure de Don Quichotte en de lointaines contrées, et d'autres faits oubliés jusqu'à ce jour)",
+    "género": "Récit",
+    "formato": "EPUB",
+    "cubierta": "Illustration d'Iván Batista",
+    "origen": "Issu du premier prix du concours Reescribir El Quijote en Cuba, 2005"
+  },
+  "descarga": {
+    "texto": "Lire le livre entier (en espagnol)",
+    "pie": "Téléchargement libre chez Cubaliteraria, la maison qui l'a publié"
+  },
+  "galeria": [
+    {
+      "alt": "Table de présentation avec le livre numérique projeté sur un écran derrière",
+      "pie": "Présentation de l'EPUB au Palacio de Computación, 30e Foire internationale du livre, 2022"
+    }
+  ],
+  "catalogo": {
+    "glosa": "De l'étrange aventure de Don Quichotte en de lointaines contrées",
+    "premio": "Premier prix, Reescribir El Quijote en Cuba, 2005",
+    "sinopsis": "Emportés par une bourrasque devant les moulins du chapitre VIII, Don Quichotte et Sancho Panza atterrissent dans une capitale des Caraïbes des années 1990, où un jeune poète les recueille. Le jury qui l'a primé comptait Leonardo Padura. Libre à lire, en espagnol."
+  }
+}

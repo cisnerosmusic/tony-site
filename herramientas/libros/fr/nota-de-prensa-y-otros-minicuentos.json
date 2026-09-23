@@ -1,0 +1,20 @@
+{
+  "seo_titulo": "Nota de prensa y otros minicuentos : une anthologie de micro-récits",
+  "seo_desc": "Anthologie du Centre Onelio Jorge Cardoso (Cajachina, 2006) avec le micro-récit Sin segundas partes, d'Antonio López Sánchez. Fiche et note de l'auteur.",
+  "cubierta_alt": "Couverture de Nota de prensa y otros minicuentos, illustrée par Michele Millares Hollands",
+  "genero": "Récit",
+  "contratapa": "libros/nota-de-prensa-y-otros-minicuentos/contratapa.fr.txt",
+  "vyv": "libros/nota-de-prensa-y-otros-minicuentos/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "Nota de prensa y otros minicuentos (Communiqué de presse et autres micro-récits)",
+    "autoría": "Ouvrage collectif",
+    "género": "Récit",
+    "edición": "Editorial Cajachina, Centre de formation littéraire Onelio Jorge Cardoso",
+    "cubierta": "Illustration de Michele Millares Hollands",
+    "incluye": "Sin segundas partes (Pas de suite), d'Antonio López Sánchez"
+  },
+  "catalogo": {
+    "glosa": "Communiqué de presse et autres micro-récits",
+    "sinopsis": "Des micro-récits du concours El Dinosaurio, qui a reçu en 2006 mille deux cent douze textes, de Cuba et d'ailleurs, jusqu'à l'Australie. Le recueil comprend Sin segundas partes, de l'auteur."
+  }
+}

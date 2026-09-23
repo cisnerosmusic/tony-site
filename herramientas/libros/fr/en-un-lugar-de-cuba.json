@@ -1,0 +1,29 @@
+{
+  "seo_titulo": "En un lugar de Cuba : l'anthologie Reescribir El Quijote",
+  "seo_desc": "Anthologie du concours Reescribir El Quijote en Cuba (2005), où Antonio López Sánchez a remporté le premier prix. Fiche et note de l'auteur.",
+  "cubierta_alt": "Couverture de En un lugar de Cuba de cuyo nombre quiero acordarme, illustrée par Tomás Egea Ascona",
+  "genero": "Récit",
+  "premios": [
+    "Premier prix, concours Reescribir El Quijote en Cuba, 2005"
+  ],
+  "vyv": "libros/en-un-lugar-de-cuba/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "En un lugar de Cuba de cuyo nombre quiero acordarme (En un lieu de Cuba dont je veux bien me souvenir)",
+    "autoría": "Ouvrage collectif",
+    "género": "Récit",
+    "edición": "Fondation provinciale des arts plastiques Rafael Botí, Conseil provincial de Cordoue, ambassade d'Espagne à Cuba et Agence espagnole de coopération internationale",
+    "cubierta": "Illustration de couverture et vignettes de Tomás Egea Ascona",
+    "premio": "Premier prix, concours Reescribir El Quijote en Cuba, 2005"
+  },
+  "galeria": [
+    {
+      "alt": "Du prix Reescribir El Quijote en Cuba",
+      "pie": "Du prix Reescribir El Quijote en Cuba, 2005"
+    }
+  ],
+  "catalogo": {
+    "glosa": "En un lieu de Cuba dont je veux bien me souvenir",
+    "premio": "Premier prix, 2005",
+    "sinopsis": "L'anthologie du concours organisé pour le quatre centième anniversaire de Don Quichotte, publiée en Espagne, où l'auteur a remporté le premier prix devant un jury qui comptait Leonardo Padura."
+  }
+}

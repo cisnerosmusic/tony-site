@@ -1,0 +1,26 @@
+{
+  "seo_titulo": "Cuentos de muñecas : des histoires dont les poupées sont les héroïnes",
+  "seo_desc": "Anthologie compilée par Magaly Sánchez Ochoa (Editorial de la Mujer, 2015) avec le conte La muñeca y el príncipe, d'Antonio López Sánchez.",
+  "cubierta_alt": "Couverture de Cuentos de muñecas, illustrée par Alain R. Cuba",
+  "genero": "Littérature de jeunesse",
+  "contratapa_titulo": "À propos du livre",
+  "contratapa": "libros/cuentos-de-munecas/contratapa.fr.txt",
+  "vyv": "libros/cuentos-de-munecas/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "Cuentos de muñecas (¡A leer y a jugar!) (Contes de poupées : lisons et jouons !)",
+    "autoría": "Ouvrage collectif, compilation de Magaly Sánchez Ochoa",
+    "género": "Littérature de jeunesse",
+    "cubierta": "Illustration d'Alain R. Cuba",
+    "incluye": "La muñeca y el príncipe (La poupée et le prince), d'Antonio López Sánchez"
+  },
+  "lecturas": [
+    {
+      "texto": "Lire La muñeca y el príncipe",
+      "pie": "Mon conte de ce livre, entier et en espagnol, dans la salle Contarte de ce site"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Contes de poupées",
+    "sinopsis": "Contes et poèmes pour enfants dont les poupées sont les protagonistes, réunis par Magaly Sánchez Ochoa. Le premier conte pour enfants de l'auteur, qui a fait naître les personnages de ses livres suivants."
+  }
+}
