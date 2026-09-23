@@ -33,11 +33,16 @@
 <link rel="preload" as="image" href="/img/retrato.webp" fetchpriority="high">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<!-- La cursiva del lema tambien se lee en la primera pantalla, y no se
-     descubria hasta que llegaba fonts.css, mas de un segundo despues. -->
-<link rel="preload" href="/fonts/cormorant-garamond-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
-<link rel="stylesheet" href="/styles.css?v=40">
+<!-- El lema tambien se lee en la primera pantalla, y su cursiva no se descubria
+     hasta que llegaba fonts.css, mas de un segundo despues. Pero la cursiva
+     completa pesa 28,7 KB y venia a competir con el retrato justo cuando el
+     retrato mas lo necesitaba: medido, 94,9 KB pidiendose a la vez a los 640
+     ms. Aqui se precarga la misma cursiva recortada a los once glifos de
+     "bene scriptus", 2,8 KB, y la completa llega luego con fonts.css para el
+     resto del sitio. Ver fonts.css y herramientas/subset-fuentes.py. -->
+<link rel="preload" href="/fonts/lema.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css?v=7">
+<link rel="stylesheet" href="/styles.css?v=41">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

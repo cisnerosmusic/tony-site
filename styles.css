@@ -242,7 +242,10 @@ img { max-width: 100%; height: auto; display: block; }
 .casa-autor { color: var(--text-primary); margin-top: 0.4rem; }
 
 .lema {
-  font-family: var(--font-body);
+  /* 'Lema' es la misma cursiva Cormorant recortada a los once glifos de
+     "bene scriptus", 2,8 KB en vez de 28,7. Ver fonts.css y DESIGN.md. La
+     familia completa queda detras por si el texto del lema cambiara. */
+  font-family: 'Lema', var(--font-body);
   font-style: italic;
   /* Es un span dentro del h1, asi que heredaba la negrita del titular y pedia
      una cursiva de 700 que el sitio no tiene: el navegador la fabricaba
@@ -826,7 +829,7 @@ a.libro-cubierta:hover img {
 .footer-nav span[aria-current] { color: var(--gold); }
 
 .footer-lema {
-  font-family: var(--font-body);
+  font-family: 'Lema', var(--font-body);
   font-style: italic;
   font-size: 1.05rem;
   color: var(--gold);

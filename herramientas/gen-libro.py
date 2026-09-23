@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=40"
+CSS = "?v=41"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -435,7 +435,7 @@ def generar_idioma(m, lang, disponibles):
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
+<link rel="stylesheet" href="/fonts.css?v=7">
 <link rel="stylesheet" href="/styles.css{CSS}">
 </head>
 <body>
@@ -632,7 +632,7 @@ def catalogos():
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
+<link rel="stylesheet" href="/fonts.css?v=7">
 <link rel="stylesheet" href="/styles.css{CSS}">
 <script type="application/ld+json">
 {json.dumps(datos, ensure_ascii=False, indent=2)}

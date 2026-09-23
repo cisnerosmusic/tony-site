@@ -32,6 +32,29 @@ UNICODES = "U+0020-007E,U+00A0-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122
 # lo demas sobra mientras el sitio no lo pida desde el CSS.
 FUNCIONES = "kern,liga,clig,calt,locl"
 
+# El lema de la casa tiene fuente propia, y es el unico caso.
+#
+# "bene scriptus" se escribe en cursiva, y la cursiva completa pesa 28,7 KB. En
+# la portada esa cursiva se precargaba, asi que salia a competir por el ancho
+# de banda en el mismo instante que el retrato, que es el elemento mayor de la
+# primera pantalla: medido el 23 de septiembre de 2026, 94,9 KB pidiendose a la
+# vez a los 640 ms, y el retrato tardando 1.193 ms en bajar.
+#
+# Estas dos palabras necesitan once glifos. Recortada a ellos, la misma cursiva
+# pesa 2,6 KB, asi que se precarga esta y la completa deja de ir en la carrera:
+# 26,1 KB menos compitiendo con el retrato.
+#
+# Se puede hacer porque el lema entra con 1,45 s de retardo (ver styles.css):
+# no hay prisa por su tipografia, pero si por que sea la correcta desde el
+# primer fotograma del fundido, y con 2,6 KB lo es.
+#
+# El texto se declara aqui y comprobar.py comprueba que la fuente cubra lo que
+# las paginas escriben de verdad: si el lema cambia y nadie vuelve a recortar,
+# salta.
+LEMA_ORIGEN = "cormorant-garamond-400-italic.woff2"
+LEMA_DESTINO = "lema.woff2"
+LEMA_TEXTO = "bene scriptus"
+
 
 def main():
     if not os.path.isdir(ORIGEN):
@@ -52,6 +75,22 @@ def main():
         despues += os.path.getsize(d)
         print("%-42s %6.1f -> %5.1f KB" % (f, os.path.getsize(o) / 1024, os.path.getsize(d) / 1024))
     print("total: %.0f KB -> %.0f KB, %.0f KB menos" % (antes / 1024, despues / 1024, (antes - despues) / 1024))
+
+    # Y la fuente del lema, que sale de la misma cursiva pero con once glifos.
+    o = os.path.join(ORIGEN, LEMA_ORIGEN)
+    d = os.path.join(DESTINO, LEMA_DESTINO)
+    letras = sorted(set(LEMA_TEXTO))
+    r = subprocess.run([sys.executable, "-m", "fontTools.subset", o,
+                        "--unicodes=" + ",".join("U+%04X" % ord(c) for c in letras),
+                        "--layout-features=" + FUNCIONES,
+                        "--flavor=woff2", "--output-file=" + d],
+                       capture_output=True, text=True)
+    if r.returncode:
+        sys.exit(f"fallo al recortar el lema: {r.stderr.strip()[:200]}")
+    print("%-42s %6.1f -> %5.1f KB  (solo «%s», %d glifos)"
+          % (LEMA_DESTINO, os.path.getsize(os.path.join(DESTINO, LEMA_ORIGEN)) / 1024,
+             os.path.getsize(d) / 1024, LEMA_TEXTO, len(letras)))
+
     print("Sube el ?v=N de fonts.css si cambio el juego de caracteres.")
 
 

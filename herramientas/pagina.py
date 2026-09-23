@@ -15,7 +15,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=40"
+CSS = "?v=41"
 IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
 
 FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
@@ -97,7 +97,7 @@ def cabeza(lang, titulo, desc, url, tipo_og="article", imagen=None, rutas=None, 
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
+<link rel="stylesheet" href="/fonts.css?v=7">
 <link rel="stylesheet" href="/styles.css{CSS}">
 """
 

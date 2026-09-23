@@ -45,7 +45,7 @@ import pagina as marco
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=40"
+CSS = "?v=41"
 RETRATO = "/img/retrato.webp"
 
 
@@ -495,6 +495,12 @@ def pagina(d):
     secciones = "\n\n".join(seccion_html(s, n) for n, s in enumerate(d.get("secciones", [])))
     activa = navegacion.seccion_de(d["ruta"], LANG)
 
+    # Solo la portada lleva el lema en la primera pantalla, asi que solo ella
+    # precarga su fuente. En las demas paginas el lema vive en el pie, bajo el
+    # pliegue, y llega de sobra con fonts.css.
+    precarga_lema = ('\n<link rel="preload" href="/fonts/lema.woff2" as="font" '
+                     'type="font/woff2" crossorigin>') if d.get("es_portada") else ""
+
     # El locale de la pagina y el de todos los demas idiomas del sitio.
     locales = f'<meta property="og:locale" content="{L()["locale"]}">'
     for l in IDIOMAS:
@@ -529,8 +535,8 @@ def pagina(d):
 {locales}
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
+<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>{precarga_lema}
+<link rel="stylesheet" href="/fonts.css?v=7">
 <link rel="stylesheet" href="/styles.css{CSS}">
 <script type="application/ld+json">
 {json.dumps(datos_estructurados(d, url), ensure_ascii=False, indent=2)}

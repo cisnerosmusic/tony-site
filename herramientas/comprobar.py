@@ -401,17 +401,27 @@ def medidas_reales():
 def fuentes_completas():
     from fontTools.ttLib import TTFont
     usados = set()
+    # lema.woff2 es la excepcion, y la unica: no lleva el juego del sitio sino
+    # los once glifos de "bene scriptus". Se le exige lo suyo, que es cubrir el
+    # texto que las paginas escriben en .lema y .footer-lema. Si el lema
+    # cambiara y nadie volviera a correr subset-fuentes.py, esto salta.
+    del_lema = set()
     for p in paginas():
         t = leer(p)
+        for m in re.finditer(r'class="(?:lema|footer-lema)"[^>]*>([^<]*)<', t):
+            del_lema |= {c for c in html_lib.unescape(m.group(1)) if ord(c) >= 32}
         t = re.sub(r"<script.*?</script>|<style.*?</style>", " ", t, flags=re.S)
         t = re.sub(r"<[^>]+>", " ", t)
         usados |= {c for c in html_lib.unescape(t) if ord(c) >= 32}
+    if not del_lema:
+        falla("lema sin texto", "ninguna pagina escribe .lema ni .footer-lema")
     for f in sorted(glob.glob(os.path.join(RAIZ, "fonts", "*.woff2"))):
         with TTFont(f) as tf:
             tiene = set()
             for tabla in tf["cmap"].tables:
                 tiene |= set(tabla.cmap)
-        faltan = sorted(c for c in usados if ord(c) not in tiene)
+        exigidos = del_lema if os.path.basename(f) == "lema.woff2" else usados
+        faltan = sorted(c for c in exigidos if ord(c) not in tiene)
         if faltan:
             falla("fuente sin glifos",
                   f"{os.path.basename(f)} no tiene: " + " ".join(faltan[:12]))

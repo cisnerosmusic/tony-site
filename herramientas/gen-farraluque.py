@@ -31,7 +31,7 @@ import pagina
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=40"
+CSS = "?v=41"
 RETRATO = "/img/retrato.webp"
 PREMIO = "XXX Premio Farraluque de Literatura Erótica, 2026"
 

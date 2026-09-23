@@ -71,3 +71,21 @@
   src: url('/fonts/space-mono-400.woff2') format('woff2');
   unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212;
 }
+
+/* El lema de la casa, y nada mas. Es la misma cursiva Cormorant recortada a
+   los once glifos de "bene scriptus": 2,8 KB en vez de 28,7. Existe para poder
+   precargarla en la portada sin robarle ancho de banda al retrato, que es el
+   elemento mayor de la primera pantalla. La cursiva completa sigue estando
+   para todo lo demas, y ya no se precarga.
+
+   Lleva family propia porque un unicode-range no serviria: esas once letras
+   se usan en toda la cursiva del sitio, no solo en el lema. Y la generan
+   herramientas/subset-fuentes.py y nadie mas; comprobar.py verifica que cubra
+   el texto que las paginas escriben de verdad. */
+@font-face {
+  font-family: 'Lema';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/lema.woff2') format('woff2');
+}

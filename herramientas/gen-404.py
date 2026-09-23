@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CSS = "?v=40"
+CSS = "?v=41"
 
 IDIOMA = {
     "es": {
@@ -156,7 +156,7 @@ def main():
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
+<link rel="stylesheet" href="/fonts.css?v=7">
 <link rel="stylesheet" href="/styles.css{CSS}">
 </head>
 <body>

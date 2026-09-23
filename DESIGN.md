@@ -120,6 +120,7 @@ Tres familias, autohospedadas en `fonts/` como woff2 subset latin, sin una sola 
 - **Cinzel 400** (`--font-display`): romana capital. Nombres, títulos de sección, títulos de libro, botones y navegación. Siempre con tracking abierto (0.05em a 0.2em) y con frecuencia en ALTAS. Nunca se usa para leer.
 - **Cormorant Garamond 300/400/500, con itálicas 300/400** (`--font-body`): la letra de lectura. Prosa, sinopsis, fragmentos, poemas, lema. El peso por defecto del cuerpo es 300 y la interlínea es ancha (1.7 en el body, 1.9 en la prosa de sección).
 - **Space Mono 400** (`--font-mono`): el aparato. Etiquetas de ficha, metadatos de libro, pies de galería, notas, idiomas, copyright. Siempre pequeña (0.6rem a 0.7rem), en ALTAS y con tracking amplio.
+- **Lema**: no es una cuarta tipografía. Es **la misma cursiva Cormorant Garamond 400 recortada a los once glifos de *bene scriptus***, 2,8 KB en vez de 28,7, y la usan solo `.lema` y `.footer-lema`. Existe por rendimiento, no por diseño: permite precargar el lema en la portada sin quitarle ancho de banda al retrato, que es el elemento mayor de la primera pantalla. Visualmente es indistinguible de la cursiva completa, porque es ella. La genera `herramientas/subset-fuentes.py` y `comprobar.py` verifica que cubra el texto que las páginas escriben.
 
 El body arranca en 18px con `line-height: 1.7`. Los tamaños grandes usan `clamp()` para escalar con el viewport; el aparato usa pasos literales en rem.
 
