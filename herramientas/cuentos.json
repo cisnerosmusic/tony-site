@@ -25,6 +25,7 @@
     "slug": "asesinato",
     "titulo": "Asesinato",
     "archivo": "cuentos/asesinato.txt",
+    "colofon": ["12 y agosto y 2025"],
     "linea": "La vecina de los bajos le tenía miedo a un árbol. Y decidió matarlo...",
     "seo_titulo": "Asesinato, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: una vecina le teme al árbol de la acera y baja con gasolina y trapos. Lo que ocurre después lo ve un balcón."
@@ -49,6 +50,7 @@
     "slug": "luces",
     "titulo": "Luces",
     "archivo": "cuentos/luces.txt",
+    "colofon": ["Hallado en Ala del Mar", "12 y abril y 2026", "bene scriptus"],
     "linea": "Un escritor entre apagones trata de hacer literatura y cumplir los deberes hogareños.",
     "seo_titulo": "Luces, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: llega la electricidad y con ella la lavadora, la manguera en alto y un cuento que no llega a escribirse."

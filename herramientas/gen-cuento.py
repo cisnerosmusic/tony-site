@@ -15,10 +15,17 @@
 # Uso: python herramientas/gen-cuento.py
 
 import json, os, sys
+from importlib.machinery import SourceFileLoader
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pagina
 from pagina import esc, esc_attr, cabeza, menu, pie, migas, IDIOMAS
+
+# Las convenciones de los textos del autor (fecha al pie, sello de la casa)
+# viven en leer-poema.py, que es donde se descubrieron. El guion del nombre
+# impide un import normal.
+leer_poema = SourceFileLoader("leer_poema", os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "leer-poema.py")).load_module()
 
 RAIZ = pagina.RAIZ
 DOMINIO = pagina.DOMINIO
@@ -114,8 +121,37 @@ def cuerpo_cuento(texto, c):
         partes.append('  <blockquote class="poema-epigrafe">\n'
                       + "\n".join(f'    <div class="verso">{esc(v)}</div>' for v in e["versos"])
                       + f'\n    <cite>{esc(e["autor"])}</cite>\n  </blockquote>')
+    quita_colofon(lineas, c)
     partes += [f"<p>{esc(l)}</p>" for l in lineas if l]
     return "\n".join(partes)
+
+
+def quita_colofon(lineas, c):
+    """El cuento acaba donde acaba la historia.
+
+    Tony cierra algunos textos con la fecha y con el sello de la casa
+    («Hallado en Ala del Mar… bene scriptus»), y el 22 de septiembre de 2026
+    pidió que no salieran, ni en Contarte ni en Inéditos. Es la misma decisión
+    que ya regía en los poemas.
+
+    Las líneas exactas se declaran en el manifiesto y se comprueban, en vez de
+    recortar por parecido: un cuento puede acabar de verdad con una frase corta
+    que lleve un mes dentro. Y si aparece un colofón sin declarar, el generador
+    se para; así una reimportación del original no lo devuelve a la página sin
+    que nadie se entere."""
+    for e in reversed(c.get("colofon", [])):
+        while lineas and not lineas[-1]:
+            lineas.pop()
+        if not lineas or lineas[-1] != e:
+            sys.exit(f"{c['slug']}: esperaba al final la línea «{e}» y vino "
+                     f"«{lineas[-1] if lineas else '(nada)'}»")
+        lineas.pop()
+    while lineas and not lineas[-1]:
+        lineas.pop()
+    if lineas and leer_poema.parece_colofon(lineas[-1]):
+        sys.exit(f"{c['slug']}: el texto acaba en «{lineas[-1]}», que parece fecha o "
+                 "sello. Si lo es, declárala en «colofon»; si es parte del cuento, "
+                 "dilo en un comentario del manifiesto.")
 
 
 def rutas_de(capas, slug=None):

@@ -18,9 +18,15 @@
 # Uso: python herramientas/gen-ineditos.py
 
 import json, os, sys, html
+from importlib.machinery import SourceFileLoader
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion   # menu y pie: una sola definicion para todo el sitio
+
+# Las convenciones de los textos del autor (fecha al pie, sello de la casa)
+# viven en leer-poema.py. El guion del nombre impide un import normal.
+leer_poema = SourceFileLoader("leer_poema", os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "leer-poema.py")).load_module()
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
@@ -88,6 +94,15 @@ def cuerpo_fragmento(texto, lugar=False):
             datos.append(lineas.pop(0).strip())
         if datos:
             cabecera = '<p class="fragmento-lugar">' + "<br>".join(esc(l) for l in datos) + "</p>\n"
+    # Ni fecha ni sello al final, como en los cuentos y en los poemas: lo pidio
+    # Tony el 22 de septiembre de 2026. Hoy ningun fragmento de Ineditos trae
+    # uno; esto esta para que no entre callando con el proximo envio.
+    while lineas and not lineas[-1].strip():
+        lineas.pop()
+    if lineas and leer_poema.parece_colofon(lineas[-1]):
+        sys.exit(f"un fragmento de Inéditos acaba en «{lineas[-1].strip()}», que parece "
+                 "fecha o sello. Si lo es, quítalo del texto; si es parte de la obra, "
+                 "dilo en un comentario del manifiesto.")
     return cabecera + prosa_a_html("\n".join(lineas))
 
 

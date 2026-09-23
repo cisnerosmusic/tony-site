@@ -22,6 +22,24 @@ def linea_de_fecha(l):
     return bool(l) and len(l) < 45 and bool(FECHA.search(l) or MES.search(l))
 
 
+# El sello con que el autor cierra sus textos: «Hallado en Ala del Mar, [fecha].
+# bene scriptus». Es el mismo del que sale el nombre de la casa.
+SELLO = re.compile(r"^(hallado en\b|bene scriptus$|alamar\b)", re.IGNORECASE)
+
+
+def parece_colofon(l):
+    """Una linea del final que es fecha o sello, no texto de la obra.
+
+    Sirve para detectar, no para borrar a ciegas: el que la use tiene que
+    declarar en su manifiesto las lineas exactas que quita, y pararse si
+    aparece una que no esperaba. Un cuento puede acabar de verdad con una
+    frase corta que lleve un mes dentro, y eso no se recorta por estadistica.
+    Lo pidio Tony el 22 de septiembre de 2026 para Contarte y para Ineditos,
+    como ya estaba hecho en los poemas."""
+    l = l.strip()
+    return bool(l) and (linea_de_fecha(l) or bool(SELLO.match(l)))
+
+
 def partes(texto):
     lineas = [l.rstrip() for l in texto.replace("\r", "").split("\n")]
     while lineas and not lineas[0]:
