@@ -98,7 +98,23 @@ img { max-width: 100%; height: auto; display: block; }
   margin-left: calc(var(--nav-gap) / -2);
 }
 
-.nav-links .nav-idioma + .nav-idioma { margin-left: calc(var(--nav-gap) * -0.55); }
+/* Las siglas son diminutas: 14 px de alto y entre 11 y 16 de ancho. Juntarlas
+   con el margen negativo dejo el espacio seguro para el dedo en 17,8-22,6 px,
+   y la regla target-size de axe pide 24. Lighthouse lo cazo el 23 de
+   septiembre de 2026 y bajo la accesibilidad de escritorio a 96, el mismo dia
+   en que se puso la linea: lo rompio esta misma regla.
+   Se le da al enlace una caja de 24x24 sin tocar el tamano de la letra, y el
+   margen se aprieta de -0,55 a -0,86 para que la separacion optica entre las
+   siglas siga siendo la misma. El ancho de la barra apenas se mueve. */
+.nav-links .nav-idioma a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.nav-links .nav-idioma + .nav-idioma { margin-left: calc(var(--nav-gap) * -0.86); }
 
 .nav-links a {
   font-family: var(--font-display);
