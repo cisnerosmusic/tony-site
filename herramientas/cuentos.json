@@ -49,7 +49,7 @@
     "slug": "luces",
     "titulo": "Luces",
     "archivo": "cuentos/luces.txt",
-    "linea": "La literatura y la imaginación desbordante de un escritor contra la realidad cotidiana y la electricidad voluble.",
+    "linea": "Un escritor entre apagones trata de hacer literatura y cumplir los deberes hogareños.",
     "seo_titulo": "Luces, cuento de Antonio López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: llega la electricidad y con ella la lavadora, la manguera en alto y un cuento que no llega a escribirse."
   },
@@ -60,5 +60,56 @@
     "linea": "A Brujito Sombrero lo despierta una sonata, y al otro lado de la verja pasa una varita mágica.",
     "seo_titulo": "Sombreros, pamelas y mágicas varitas | A. López Sánchez",
     "seo_desc": "Cuento completo de Antonio López Sánchez: a Brujito Sombrero lo despierta una sonata de Scarlatti y al otro lado de la verja pasa una varita mágica."
+  },
+  {
+    "slug": "cantar-el-cuento-iii",
+    "titulo": "Cantar el cuento (III)",
+    "archivo": "cuentos/cantar-el-cuento-iii.txt",
+    "adultos": "erotico",
+    "linea": "Parte de una trilogía donde las historias también suenan a canción. El amor de la adolescencia y sus pasiones se cantan entre dos cuerpos.",
+    "procedencia": {
+      "texto": "Del libro en proceso editorial Oleaje de pianos"
+    },
+    "seo_titulo": "Cantar el cuento (III), cuento de Antonio López Sánchez",
+    "seo_desc": "Cuento completo de Antonio López Sánchez: el último día de un entrenamiento, una carta que se escribe como canción y el regreso a una cama recién tendida."
+  },
+  {
+    "slug": "la-urna-del-tio",
+    "titulo": "La urna del tío",
+    "archivo": "cuentos/la-urna-del-tio.txt",
+    "adultos": "erotico",
+    "dedicatoria": [
+      "A mi hermano Ramón Haití,",
+      "por aquella caminata.",
+      "A Groucho Marx,",
+      "por aquel camarote."
+    ],
+    "linea": "Un vivo retrato de la vida y sus avatares contada por las cenizas de un muerto.",
+    "procedencia": {
+      "texto": "Del libro en proceso editorial El color de las decisiones"
+    },
+    "seo_titulo": "La urna del tío, cuento de Antonio López Sánchez",
+    "seo_desc": "Cuento completo de Antonio López Sánchez: un muerto cuenta desde su urna de barro cómo se le fue llenando de gente el cuarto, y cómo acabó en el suelo."
+  },
+  {
+    "slug": "traje-de-lluvia",
+    "titulo": "Traje de lluvia",
+    "archivo": "cuentos/traje-de-lluvia.txt",
+    "epigrafe": {
+      "versos": ["La mojada", "tarde me trae la voz, la voz deseada"],
+      "autor": "Jorge Luis Borges"
+    },
+    "linea": "La lluvia evoca a la vez sucesos oníricos y literarios y permite habitarlos.",
+    "seo_titulo": "Traje de lluvia, cuento de Antonio López Sánchez",
+    "seo_desc": "Cuento completo de Antonio López Sánchez: cae el aguacero sobre una avenida vacía y una mujer en traje de lluvia se sienta en la acera de enfrente."
+  },
+  {
+    "slug": "hipo-talamo",
+    "titulo": "Hipo-Tálamo",
+    "archivo": "cuentos/hipo-talamo.txt",
+    "adultos": "duro",
+    "linea": "Un viaje a través de la mente infantil, de las ambivalencias, del horror que puede ser real o imaginario.",
+    "seo_titulo": "Hipo-Tálamo, cuento de Antonio López Sánchez",
+    "seo_desc": "Cuento completo de Antonio López Sánchez, para lectores adultos: una niña que cumple quince años prepara la fiesta de su boda con quien solo existe de noche."
   }
 ]

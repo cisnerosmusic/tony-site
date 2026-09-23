@@ -10,6 +10,10 @@
     "The story, that sprite that has kept humanity company since the dawn of time, still gives away magic, realities and even fears."
   ],
   "aviso": "The stories are published in their original Spanish, as all literary texts on this site are.",
+  "avisos_adultos": {
+    "erotico": "A work of erotic literature, written for adult readers.",
+    "duro": "A story for adult readers: a minor's sexualised delusion, and a death by her own hand."
+  },
   "leer": "Read the story",
   "volver": "Back to Stories",
   "migas": "Stories",
@@ -50,7 +54,7 @@
     },
     "luces": {
       "significado": "Lights",
-      "linea": "A writer's literature and overflowing imagination against everyday reality and a fickle power supply.",
+      "linea": "A writer caught between power cuts tries to make literature and keep up with the housework.",
       "seo_titulo": "Luces, a story by Antonio López Sánchez",
       "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: the power comes back, and with it the washing machine, the hose held high and a story never written."
     },
@@ -59,6 +63,32 @@
       "linea": "Brujito Sombrero is woken by a sonata, and on the other side of the fence a magic wand goes by.",
       "seo_titulo": "Sombreros, pamelas y mágicas varitas, a story in Spanish",
       "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: Brujito Sombrero is woken by a Scarlatti sonata, and a magic wand passes beyond the fence."
+    },
+    "cantar-el-cuento-iii": {
+      "significado": "Singing the Story (III)",
+      "linea": "Part of a trilogy where the stories sound like songs too. Adolescent love and its passions, sung between two bodies.",
+      "procedencia": "From Oleaje de pianos, a book now with its publisher",
+      "seo_titulo": "Cantar el cuento (III), a story by Antonio López Sánchez",
+      "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: the last day of a training camp, a letter written as a song, and a bed freshly made."
+    },
+    "la-urna-del-tio": {
+      "significado": "The Uncle's Urn",
+      "linea": "A vivid portrait of life and its turns, told by the ashes of a dead man.",
+      "procedencia": "From El color de las decisiones, a book now with its publisher",
+      "seo_titulo": "La urna del tío, a story by Antonio López Sánchez",
+      "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: a dead man tells from his clay urn how the room filled up with relatives, and how he ended on the floor."
+    },
+    "traje-de-lluvia": {
+      "significado": "A Dress of Rain",
+      "linea": "Rain calls up dreams and literature at once, and lets you live inside them.",
+      "seo_titulo": "Traje de lluvia, a story by Antonio López Sánchez",
+      "seo_desc": "A complete story by Antonio López Sánchez, in Spanish: a downpour empties the avenue, and a woman in a dress of rain sits down on the opposite pavement."
+    },
+    "hipo-talamo": {
+      "significado": "Hypothalamus, and the marriage bed",
+      "linea": "A journey through a child's mind, its ambivalences, and a horror that may be real or imagined.",
+      "seo_titulo": "Hipo-Tálamo, a story by Antonio López Sánchez",
+      "seo_desc": "A story by Antonio López Sánchez, in Spanish, for adult readers: a girl turning fifteen prepares her wedding feast for someone who exists only at night."
     }
   }
 }

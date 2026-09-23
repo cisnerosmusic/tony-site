@@ -14,35 +14,31 @@
 #
 # Uso: python herramientas/gen-cuento.py
 
-import json, os, sys, html
+import json, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import pagina
+from pagina import esc, esc_attr, cabeza, menu, pie, migas, IDIOMAS
 
-RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=33"
-IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
+RAIZ = pagina.RAIZ
+DOMINIO = pagina.DOMINIO
 
-# Calendario de Contarte. Cuadrado latino de 7x7: cada dia los cuentos salen en
-# otro orden, cada cuento pasa exactamente una vez por cada posicion a lo largo
-# de la semana, los siete ordenes son distintos y ninguno es la rotacion de
-# otro, que es lo que haria evidente la repeticion. Calculado con busqueda y
-# horneado aqui; si cambia el numero de cuentos hay que recalcularlo.
+# Calendario de Contarte. Rectangulo latino de 7 x 11: cada dia los cuentos
+# salen en otro orden, ningun cuento repite posicion en toda la semana, los
+# siete ordenes son distintos y ninguno es la rotacion de otro, que es lo que
+# haria evidente la repeticion. Con siete cuentos era un cuadrado y cada uno
+# pasaba por todas las posiciones; con once ya no caben, asi que la propiedad
+# es la de arriba. Calculado con busqueda y horneado aqui; si cambia el numero
+# de cuentos hay que recalcularlo.
 CALENDARIO = [
-    [4, 5, 6, 0, 3, 1, 2],
-    [5, 0, 4, 1, 6, 2, 3],
-    [2, 6, 1, 3, 5, 4, 0],
-    [6, 3, 2, 4, 0, 5, 1],
-    [3, 1, 0, 2, 4, 6, 5],
-    [1, 4, 3, 5, 2, 0, 6],
-    [0, 2, 5, 6, 1, 3, 4],
+    [9, 10, 7, 5, 4, 1, 8, 0, 2, 6, 3],
+    [10, 0, 1, 7, 8, 3, 9, 5, 6, 4, 2],
+    [0, 7, 3, 6, 2, 5, 1, 8, 10, 9, 4],
+    [5, 2, 10, 0, 3, 9, 6, 4, 8, 1, 7],
+    [8, 4, 2, 9, 1, 10, 3, 7, 0, 5, 6],
+    [4, 3, 6, 1, 9, 0, 5, 2, 7, 10, 8],
+    [2, 9, 8, 4, 6, 7, 10, 3, 5, 0, 1],
 ]
-
-FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
-           '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
-           '<link rel="apple-touch-icon" href="/apple-touch-icon.png">')
-
-import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 # Lo que en español estaba escrito aqui. En los demas idiomas lo trae la capa.
 ES = {
@@ -56,6 +52,13 @@ ES = {
         "El cuento, ese duende que acompaña a la humanidad desde los albores de los tiempos, todavía regala magias, realidades y hasta miedos.",
     ],
     "aviso": None,
+    # No todo lo que pide aviso lo pide por lo mismo: un cuento erotico entre
+    # adultos y el delirio de una menor que acaba en suicidio no se avisan con
+    # la misma frase. El manifiesto elige cual con el campo «adultos».
+    "avisos_adultos": {
+        "erotico": "Cuento de literatura erótica, escrito para lectores adultos.",
+        "duro": "Cuento para lectores adultos: el delirio sexualizado de una menor, y una muerte por su propia mano.",
+    },
     "leer": "Leer el cuento",
     "volver": "Volver a Contarte",
     "migas": "Contarte",
@@ -64,18 +67,8 @@ ES = {
     "seo_desc": "Los cuentos de Antonio López Sánchez, completos y con su propia habitación cada uno.",
 }
 
-
-def esc(t):
-    """Texto visible: se dejan las comillas como el autor las escribio."""
-    return html.escape(t, quote=False)
-
-
-def esc_attr(t):
-    """Valor de atributo: aqui las comillas SI se escapan, o una comilla en
-    un titulo o en un alt parte el HTML en dos."""
-    return html.escape(t, quote=True)
-
 TEXTOS = os.path.join(RAIZ, "herramientas", "textos")
+
 
 def leer(ruta):
     if not os.path.isabs(ruta):
@@ -83,108 +76,52 @@ def leer(ruta):
     with open(ruta, encoding="utf-8") as f:
         return f.read().replace("\r\n", "\n").strip("\n")
 
-def cuerpo_cuento(texto, titulo):
-    # La primera linea suele repetir el titulo en mayusculas: fuera.
+
+def quita(lineas, esperadas, cuento, que):
+    """Saca del cuerpo las lineas que el manifiesto ya declara aparte, y se
+    para si no son exactamente las que dice. Se declaran en el manifiesto y no
+    se adivinan con heuristicas: una dedicatoria de tres lineas y un primer
+    parrafo corto se parecen demasiado, y aqui equivocarse es publicar mal un
+    texto del autor."""
+    for e in esperadas:
+        while lineas and not lineas[0]:
+            lineas.pop(0)
+        if not lineas or lineas[0] != e:
+            sys.exit(f"{cuento}: esperaba en {que} la línea «{e}» y vino "
+                     f"«{lineas[0] if lineas else '(nada)'}»")
+        lineas.pop(0)
+
+
+def cuerpo_cuento(texto, c):
+    # La primera linea suele repetir el titulo en mayusculas: fuera. Tambien
+    # el numero de la serie, «(III)», que va en el titulo de la pagina.
     lineas = [l.strip() for l in texto.split("\n")]
-    while lineas and (not lineas[0] or lineas[0].upper() == titulo.upper() or
+    while lineas and (not lineas[0] or lineas[0].upper() == c["titulo"].upper() or
                       (lineas[0].isupper() and len(lineas[0]) < 70)):
         lineas.pop(0)
-    return "\n".join(f"<p>{esc(l)}</p>" for l in lineas if l)
+    partes = []
+    if c.get("dedicatoria"):
+        quita(lineas, c["dedicatoria"], c["slug"], "la dedicatoria")
+        partes.append('  <p class="texto-dedicatoria">'
+                      + "<br>\n  ".join(esc(l) for l in c["dedicatoria"]) + '</p>')
+    if c.get("epigrafe"):
+        e = c["epigrafe"]
+        quita(lineas, e["versos"] + [e["autor"]], c["slug"], "el epígrafe")
+        partes.append('  <blockquote class="poema-epigrafe">\n'
+                      + "\n".join(f'    <div class="verso">{esc(v)}</div>' for v in e["versos"])
+                      + f'\n    <cite>{esc(e["autor"])}</cite>\n  </blockquote>')
+    partes += [f"<p>{esc(l)}</p>" for l in lineas if l]
+    return "\n".join(partes)
 
-def alternos(rutas):
-    """hreflang reciproco entre las versiones de una pagina, y x-default al
-    español, como en las paginas de libro."""
-    if len(rutas) < 2:
-        return ""
-    t = "".join(f'<link rel="alternate" hreflang="{l}" href="{DOMINIO}{r}">\n' for l, r in rutas.items())
-    return t + f'<link rel="alternate" hreflang="x-default" href="{DOMINIO}{rutas["es"]}">\n'
-
-def cabeza(lang, titulo_seo, desc, url, rutas):
-    L = IDIOMAS[lang]
-    img = f"{DOMINIO}/img/retrato.webp"
-    locale = f'<meta property="og:locale" content="{L["locale"]}">'
-    if lang != "es":
-        locale += '\n<meta property="og:locale:alternate" content="es_ES">'
-    return f"""<!DOCTYPE html>
-<html lang="{L["lang"]}">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(titulo_seo)}</title>
-<meta name="description" content="{esc_attr(desc)}">
-{FAVICON}
-<link rel="canonical" href="{url}">
-{alternos(rutas)}<meta property="og:type" content="article">
-<meta property="og:url" content="{url}">
-<meta property="og:title" content="{esc_attr(titulo_seo)}">
-<meta property="og:description" content="{esc_attr(desc)}">
-<meta property="og:image" content="{img}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{esc_attr(titulo_seo)}">
-<meta name="twitter:description" content="{esc_attr(desc)}">
-<meta name="twitter:image" content="{img}">
-{locale}
-<meta name="theme-color" content="#0a0c1f">
-<link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts.css?v=6">
-<link rel="stylesheet" href="/styles.css{CSS}">
-"""
-
-def menu(lang):
-    L = IDIOMAS[lang]
-    # En ingles los cuentos no tienen entrada propia en el menu: se llega
-    # desde la portada inglesa y desde la pagina de ficcion.
-    activa = "/contarte/" if lang == "es" else None
-    return f"""</head>
-<body>
-
-<a class="salto" href="#main">{L["saltar"]}</a>
-
-<nav class="nav">
-  <a href="{L["portada"]}" class="nav-logo">Ala del Mar</a>
-  <button class="nav-hamburger" type="button" aria-label="{L["abrir_menu"]}" aria-expanded="false" aria-controls="menu-principal">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="menu-principal">
-{navegacion.menu_de(lang, activa)}
-  </ul>
-</nav>
-"""
-
-def pie(lang, activa):
-    L = IDIOMAS[lang]
-    return f"""
-<footer class="footer">
-  <nav class="footer-nav" aria-label="{L["secciones_aria"]}">
-{navegacion.pie_de(lang, activa)}
-  </nav>
-  <div class="footer-socials">
-    <a href="https://www.facebook.com/profile.php?id=100071950279104" target="_blank" rel="noopener" aria-label="{L["facebook_aria"]}"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M13.5 22v-8.1h2.72l.41-3.16H13.5V8.72c0-.91.25-1.53 1.56-1.53h1.67V4.36c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.34H7.53v3.16h2.72V22h3.25z"/></svg></a>
-  </div>
-  <p class="footer-lema">bene scriptus</p>
-  <p class="footer-copy">&copy; 2026 Antonio López Sánchez · Ala del Mar</p>
-  <p class="footer-copy">{L["desarrollado"]} <a href="https://index01.net" target="_blank" rel="noopener">Index01</a></p>
-</footer>
-
-<script src="/app.js?v=10" defer></script>
-</body>
-</html>
-"""
-
-def migas(items):
-    lista = ",\n    ".join(
-        f'{{ "@type": "ListItem", "position": {i}, "name": {json.dumps(n, ensure_ascii=False)}, "item": "{u}" }}'
-        for i, (n, u) in enumerate(items, 1))
-    return ('<script type="application/ld+json">\n{\n  "@context": "https://schema.org",\n'
-            '  "@type": "BreadcrumbList",\n  "itemListElement": [\n    ' + lista + '\n  ]\n}\n</script>\n')
 
 def rutas_de(capas, slug=None):
     return {l: V["ruta"] + (f"{slug}/" if slug else "") for l, V in capas.items()}
 
+
 def libro_en(lang, ruta_es):
     """La ficha del libro del que viene un cuento, en el idioma de la pagina."""
     return ruta_es if lang == "es" else ruta_es.replace("/libros/", IDIOMAS[lang]["ruta_libros"], 1)
+
 
 def pagina_cuento(lang, V, c, capas):
     L = IDIOMAS[lang]
@@ -192,26 +129,36 @@ def pagina_cuento(lang, V, c, capas):
     t = c if es else {**c, **V["cuentos"][c["slug"]]}
     la = "" if es else ' lang="es"'
     url = f"{DOMINIO}{V['ruta']}{c['slug']}/"
-    texto = cuerpo_cuento(leer(c["archivo"]), c["titulo"])
+    texto = cuerpo_cuento(leer(c["archivo"]), c)
+    # La procedencia puede venir de un libro que ya tiene ficha en el sitio o
+    # de uno que todavia esta en proceso editorial y no tiene pagina adonde
+    # mandar a nadie. En ese caso sale la linea sola, sin enlace.
     p = c.get("procedencia") or {}
     nota = ""
     if p:
         texto_p = p["texto"] if es else t["procedencia"]
-        nota = (f'  <p class="cuento-procedencia reveal reveal-left">{esc(texto_p)}. '
-                f'<a href="{libro_en(lang, p["libro"])}">{esc(V["ver_ficha"].format(p["libro_titulo"]))}</a></p>\n')
+        ficha = (f' <a href="{libro_en(lang, p["libro"])}">'
+                 f'{esc(V["ver_ficha"].format(p["libro_titulo"]))}</a>') if p.get("libro") else ""
+        nota = f'  <p class="cuento-procedencia reveal reveal-left">{esc(texto_p)}.{ficha}</p>\n'
     aviso = (f'  <p class="nota" style="margin-bottom:2rem;">{esc(V["aviso"])}</p>\n' if V.get("aviso") else "")
+    if c.get("adultos"):
+        aviso += f'  <p class="sonata-premio">{esc(V["avisos_adultos"][c["adultos"]])}</p>\n\n'
 
     datos = {"@context": "https://schema.org", "@type": "ShortStory",
              "name": c["titulo"], "url": url, "inLanguage": "es",
              "author": {"@id": f"{DOMINIO}/#antonio"},
              "description": t["seo_desc"]}
     if c.get("anio"): datos["datePublished"] = c["anio"]
-    if p: datos["isPartOf"] = {"@type": "Book", "name": p["libro_titulo"], "url": DOMINIO + libro_en(lang, p["libro"])}
+    if c.get("adultos"): datos["isFamilyFriendly"] = False
+    if p and p.get("libro"):
+        datos["isPartOf"] = {"@type": "Book", "name": p["libro_titulo"],
+                             "url": DOMINIO + libro_en(lang, p["libro"])}
 
-    return (cabeza(lang, t["seo_titulo"], t["seo_desc"], url, rutas_de(capas, c["slug"]))
+    return (cabeza(lang, t["seo_titulo"], t["seo_desc"], url,
+                   rutas=rutas_de(capas, c["slug"]), adultos=bool(c.get("adultos")))
             + '<script type="application/ld+json">\n' + json.dumps(datos, ensure_ascii=False, indent=2) + '\n</script>\n'
             + migas([("Ala del Mar", DOMINIO + L["portada"]), (V["migas"], DOMINIO + V["ruta"]), (c["titulo"], url)])
-            + menu(lang)
+            + menu(lang, "/contarte/" if es else None)
             + f"""
 <header class="page-header">
   <h1{la}>{esc(c["titulo"])}</h1>
@@ -227,6 +174,7 @@ def pagina_cuento(lang, V, c, capas):
 </main>
 """
             + pie(lang, None))
+
 
 def pagina_indice(lang, V, cuentos, capas):
     L = IDIOMAS[lang]
@@ -252,8 +200,8 @@ def pagina_indice(lang, V, cuentos, capas):
 
     # El orden del dia. El script va sin defer, justo detras de la lista, para
     # que se ejecute mientras se analiza la pagina: asi el navegador pinta una
-    # sola vez y no se ve el barajado. Sin JavaScript se ven los siete en el
-    # orden del manifiesto, que es la degradacion correcta.
+    # sola vez y no se ve el barajado. Sin JavaScript se ven en el orden del
+    # manifiesto, que es la degradacion correcta.
     orden_js = (
         '<script>\n'
         '(function(){\n'
@@ -285,10 +233,10 @@ def pagina_indice(lang, V, cuentos, capas):
         intro = intro.replace('style="margin-bottom:3rem;"', 'style="margin-bottom:1.5rem;"') + \
                 f'\n    <p class="nota" style="margin-bottom:3rem;">{esc(V["aviso"])}</p>'
 
-    return (cabeza(lang, V["seo_titulo"], V["seo_desc"], url, rutas_de(capas))
+    return (cabeza(lang, V["seo_titulo"], V["seo_desc"], url, rutas=rutas_de(capas))
             + '<script type="application/ld+json">\n' + json.dumps(lista, ensure_ascii=False, indent=2) + '\n</script>\n'
             + migas([("Ala del Mar", DOMINIO + L["portada"]), (V["migas"], url)])
-            + menu(lang)
+            + menu(lang, "/contarte/" if es else None)
             + f"""
 <header class="page-header">
   <h1>{esc(V["h1"])}</h1>
@@ -313,30 +261,25 @@ def pagina_indice(lang, V, cuentos, capas):
 """
             + pie(lang, "/contarte/" if es else None))
 
+
 def main():
     cuentos = json.load(open(os.path.join(RAIZ, "herramientas", "cuentos.json"), encoding="utf-8"))
+    if len(cuentos) != len(CALENDARIO[0]):
+        sys.exit(f"el calendario de Contarte es de {len(CALENDARIO[0])} cuentos y hay {len(cuentos)}: "
+                 "hay que recalcularlo (ver la cabecera de este archivo)")
     capas = {"es": ES}
-    for lang in IDIOMAS:
-        if lang.startswith("_") or lang == "es":
-            continue
-        ruta = os.path.join(RAIZ, "herramientas", f"cuentos.{lang}.json")
-        if os.path.exists(ruta):
-            V = json.load(open(ruta, encoding="utf-8"))
-            faltan = [c["slug"] for c in cuentos if c["slug"] not in V["cuentos"]
-                      or (c.get("procedencia") and not V["cuentos"][c["slug"]].get("procedencia"))]
-            if faltan:
-                sys.exit(f"cuentos.{lang}.json incompleto: {', '.join(faltan)}")
-            capas[lang] = V
+    for lang, V in pagina.lenguas_con_capa("cuentos").items():
+        faltan = [c["slug"] for c in cuentos if c["slug"] not in V["cuentos"]
+                  or (c.get("procedencia") and not V["cuentos"][c["slug"]].get("procedencia"))]
+        if faltan:
+            sys.exit(f"cuentos.{lang}.json incompleto: {', '.join(faltan)}")
+        capas[lang] = V
     for lang, V in capas.items():
-        base = os.path.join(RAIZ, V["ruta"].strip("/").replace("/", os.sep))
         for c in cuentos:
-            destino = os.path.join(base, c["slug"], "index.html")
-            os.makedirs(os.path.dirname(destino), exist_ok=True)
-            with open(destino, "w", encoding="utf-8", newline="") as f:
-                f.write(pagina_cuento(lang, V, c, capas))
-        with open(os.path.join(base, "index.html"), "w", encoding="utf-8", newline="") as f:
-            f.write(pagina_indice(lang, V, cuentos, capas))
+            pagina.escribe(V["ruta"] + c["slug"] + "/", pagina_cuento(lang, V, c, capas))
+        pagina.escribe(V["ruta"], pagina_indice(lang, V, cuentos, capas))
         print(f"escrito: {V['ruta']} con {len(cuentos)} cuento(s)")
+
 
 if __name__ == "__main__":
     main()

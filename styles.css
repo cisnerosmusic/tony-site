@@ -592,6 +592,19 @@ a.libro-cubierta:hover img {
   margin-left: 0.5rem;
 }
 
+/* La dedicatoria de un texto: va arriba, al margen derecho y en cursiva,
+   como en la pagina impresa, y no se confunde con el primer parrafo. */
+.texto-dedicatoria {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  text-align: right;
+  text-indent: 0;
+  margin: 0 0 2.4rem;
+}
+
 /* El epigrafe son versos de otro poeta: se marca aparte y se firma. */
 .poema-epigrafe {
   border-left: 1px solid var(--line-bright);
@@ -894,7 +907,9 @@ html:not(.en) .solo-en { display: none !important; }
   margin-bottom: 0.15rem;
   text-wrap: pretty;
 }
-.cuento-texto p:first-child { text-indent: 0; }
+.cuento-texto p:first-child,
+.texto-dedicatoria + p,
+.poema-epigrafe + p { text-indent: 0; }
 
 .cuento-procedencia {
   margin-top: 3rem;
