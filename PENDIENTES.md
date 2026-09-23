@@ -29,7 +29,6 @@ Se mide el rendimiento y se publican las cifras cuando cierre la lista de cambio
 10. **Material nuevo, cuando haya corriente en Alamar**:
    - más cuentos para Contarte, que ya son once;
    - más De-Cimitas: dijo tener «cientos», van veinte;
-   - **la sinopsis de tres libros que no la tienen**: *En un lugar de Cuba*, *Trampas, retratos y un 17 rojo* y *Vamos a cantar y a soñar*. Sus páginas van de la cubierta a Con voz y voto, sin bloque de Sinopsis, porque nunca llegó su contratapa. Los otros once llevan la suya, tal como él la escribió;
    - prensa de los nueve libros que no la tienen: *La canción de la Nueva Trova*, *Trovadoras*, *Trampas retratos y un 17 rojo*, *De la extraña aventura de Don Quijote*, *Perdidos en un librero*, *En un lugar de Cuba*, *Nota de prensa y otros minicuentos*, *Vamos a cantar y a soñar* y *Cuentos de muñecas*;
    - fotos de presentaciones;
    - la foto de escritor oficial, si hace la sesión.
