@@ -1,0 +1,33 @@
+{
+  "seo_titulo": "De la extraña aventura de Don Quijote: Cervantes, desde Cuba",
+  "seo_desc": "Dom Quixote e Sancho aterrissam na Havana dos anos 1990. Conto vencedor de Reescribir El Quijote en Cuba, 2005, publicado pela Cubaliteraria.",
+  "cubierta_alt": "Capa de De la extraña aventura de Don Quijote, ilustrada por Iván Batista",
+  "genero": "Conto",
+  "premios": [
+    "Primeiro prêmio, concurso Reescribir El Quijote en Cuba, 2005"
+  ],
+  "contratapa": "libros/de-la-extrana-aventura-de-don-quijote/contratapa.pt.txt",
+  "vyv": "libros/de-la-extrana-aventura-de-don-quijote/voz-y-voto.pt.txt",
+  "ficha": {
+    "título": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (Da estranha aventura de Dom Quixote por terras distantes, e de outros sucessos até hoje esquecidos)",
+    "género": "Conto",
+    "formato": "EPUB",
+    "cubierta": "Ilustração de Iván Batista",
+    "origen": "Nascido do primeiro prêmio do concurso Reescribir El Quijote en Cuba, 2005"
+  },
+  "descarga": {
+    "texto": "Ler o livro inteiro (em espanhol)",
+    "pie": "Download livre na Cubaliteraria, a editora que o publicou"
+  },
+  "galeria": [
+    {
+      "alt": "Mesa de lançamento com o livro digital projetado numa tela atrás",
+      "pie": "Lançamento do EPUB no Palacio de Computación, 30ª Feira internacional do livro, 2022"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Da estranha aventura de Dom Quixote por terras distantes",
+    "premio": "Primeiro prêmio, Reescribir El Quijote en Cuba, 2005",
+    "sinopsis": "Levados por uma rajada diante dos moinhos do capítulo VIII, Dom Quixote e Sancho Pança aterrissam numa capital do Caribe dos anos 1990, onde um jovem poeta os acolhe. No júri que o premiou estava Leonardo Padura. Livre para ler, em espanhol."
+  }
+}

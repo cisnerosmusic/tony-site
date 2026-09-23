@@ -1,0 +1,33 @@
+{
+  "seo_titulo": "De la extraña aventura de Don Quijote: Cervantes, da Cuba",
+  "seo_desc": "Don Chisciotte e Sancho atterrano nell'Avana degli anni Novanta. Racconto vincitore di Reescribir El Quijote en Cuba, 2005, pubblicato da Cubaliteraria.",
+  "cubierta_alt": "Copertina di De la extraña aventura de Don Quijote, illustrata da Iván Batista",
+  "genero": "Racconto",
+  "premios": [
+    "Primo premio, concorso Reescribir El Quijote en Cuba, 2005"
+  ],
+  "contratapa": "libros/de-la-extrana-aventura-de-don-quijote/contratapa.it.txt",
+  "vyv": "libros/de-la-extrana-aventura-de-don-quijote/voz-y-voto.it.txt",
+  "ficha": {
+    "título": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (Della strana avventura di Don Chisciotte per terre lontane, e di altri fatti fino a oggi dimenticati)",
+    "género": "Racconto",
+    "formato": "EPUB",
+    "cubierta": "Illustrazione di Iván Batista",
+    "origen": "Nato dal primo premio del concorso Reescribir El Quijote en Cuba, 2005"
+  },
+  "descarga": {
+    "texto": "Leggi il libro intero (in spagnolo)",
+    "pie": "Scaricabile liberamente da Cubaliteraria, la casa che lo ha pubblicato"
+  },
+  "galeria": [
+    {
+      "alt": "Tavolo di presentazione con il libro digitale proiettato su uno schermo dietro",
+      "pie": "Presentazione dell'EPUB al Palacio de Computación, 30ª Fiera internazionale del libro, 2022"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Della strana avventura di Don Chisciotte per terre lontane",
+    "premio": "Primo premio, Reescribir El Quijote en Cuba, 2005",
+    "sinopsis": "Travolti da una raffica davanti ai mulini del capitolo VIII, Don Chisciotte e Sancho Panza atterrano in una capitale dei Caraibi degli anni Novanta, dove un giovane poeta li accoglie. Nella giuria che lo premiò c'era Leonardo Padura. Libero da leggere, in spagnolo."
+  }
+}

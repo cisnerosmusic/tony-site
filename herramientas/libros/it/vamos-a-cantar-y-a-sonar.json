@@ -1,0 +1,24 @@
+{
+  "seo_titulo": "Vamos a cantar y a soñar: poesie e canzoni per bambini",
+  "seo_desc": "Antologia curata da Nerys Pupo (Editorial de la Mujer, 2008) con tre poesie per bambini di Antonio López Sánchez: Náufrago, Tus ojos e Trovada.",
+  "cubierta_alt": "Copertina di Vamos a cantar y a soñar, illustrata da Juan Carlos García",
+  "genero": "Letteratura per ragazzi",
+  "vyv": "libros/vamos-a-cantar-y-a-sonar/voz-y-voto.it.txt",
+  "ficha": {
+    "título": "Vamos a cantar y a soñar (Cantiamo e sogniamo)",
+    "autoría": "Opera collettiva, a cura di Nerys Pupo",
+    "género": "Scritti per bambini",
+    "cubierta": "Illustrazione di Juan Carlos García",
+    "incluye": "Le poesie Tus ojos, Náufrago e Trovada de Grillo y Polimita, di Antonio López Sánchez"
+  },
+  "galeria": [
+    {
+      "alt": "Una copia di Vamos a cantar y a soñar",
+      "pie": "Dal libro Vamos a cantar y a soñar"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Cantiamo e sogniamo",
+    "sinopsis": "Testi, canzoni, giochi e poesie per bambini, raccolti da Nerys Pupo. Tre poesie dell'autore, una delle quali fece nascere più tardi due personaggi dei suoi libri per ragazzi."
+  }
+}

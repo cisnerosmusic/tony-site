@@ -1,0 +1,26 @@
+{
+  "seo_titulo": "Cuentos de muñecas: storie con bambole protagoniste",
+  "seo_desc": "Antologia curata da Magaly Sánchez Ochoa (Editorial de la Mujer, 2015) con il racconto La muñeca y el príncipe, di Antonio López Sánchez.",
+  "cubierta_alt": "Copertina di Cuentos de muñecas, illustrata da Alain R. Cuba",
+  "genero": "Letteratura per ragazzi",
+  "contratapa_titulo": "Sul libro",
+  "contratapa": "libros/cuentos-de-munecas/contratapa.it.txt",
+  "vyv": "libros/cuentos-de-munecas/voz-y-voto.it.txt",
+  "ficha": {
+    "título": "Cuentos de muñecas (¡A leer y a jugar!) (Racconti di bambole: leggiamo e giochiamo!)",
+    "autoría": "Opera collettiva, a cura di Magaly Sánchez Ochoa",
+    "género": "Letteratura per ragazzi",
+    "cubierta": "Illustrazione di Alain R. Cuba",
+    "incluye": "La muñeca y el príncipe (La bambola e il principe), di Antonio López Sánchez"
+  },
+  "lecturas": [
+    {
+      "texto": "Leggi La muñeca y el príncipe",
+      "pie": "Il mio racconto di questo libro, intero e in spagnolo, nella stanza Contarte di questo sito"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Racconti di bambole",
+    "sinopsis": "Racconti e poesie per bambini con le bambole come protagoniste, raccolti da Magaly Sánchez Ochoa. Il primo racconto per bambini dell'autore, che fece nascere i personaggi dei suoi libri successivi."
+  }
+}

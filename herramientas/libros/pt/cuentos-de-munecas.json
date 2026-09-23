@@ -1,0 +1,26 @@
+{
+  "seo_titulo": "Cuentos de muñecas: histórias com bonecas como heroínas",
+  "seo_desc": "Antologia organizada por Magaly Sánchez Ochoa (Editorial de la Mujer, 2015) com o conto La muñeca y el príncipe, de Antonio López Sánchez.",
+  "cubierta_alt": "Capa de Cuentos de muñecas, ilustrada por Alain R. Cuba",
+  "genero": "Literatura infantojuvenil",
+  "contratapa_titulo": "Sobre o livro",
+  "contratapa": "libros/cuentos-de-munecas/contratapa.pt.txt",
+  "vyv": "libros/cuentos-de-munecas/voz-y-voto.pt.txt",
+  "ficha": {
+    "título": "Cuentos de muñecas (¡A leer y a jugar!) (Contos de bonecas: vamos ler e brincar!)",
+    "autoría": "Obra coletiva, organizada por Magaly Sánchez Ochoa",
+    "género": "Literatura infantojuvenil",
+    "cubierta": "Ilustração de Alain R. Cuba",
+    "incluye": "La muñeca y el príncipe (A boneca e o príncipe), de Antonio López Sánchez"
+  },
+  "lecturas": [
+    {
+      "texto": "Ler La muñeca y el príncipe",
+      "pie": "Meu conto deste livro, inteiro e em espanhol, na sala Contarte deste site"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Contos de bonecas",
+    "sinopsis": "Contos e poemas para crianças com bonecas como protagonistas, reunidos por Magaly Sánchez Ochoa. O primeiro conto infantil do autor, que fez nascer os personagens dos seus livros seguintes."
+  }
+}
