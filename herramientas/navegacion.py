@@ -51,6 +51,23 @@ MENU_EN = [
 PIE_EN = MENU_EN
 
 
+# ── El sitio en frances ───────────────────────────────
+#
+# Mismo orden que el ingles y por la misma razon: para quien llega de fuera, la
+# puerta es la investigacion sobre la Nueva Trova. Las rutas se traducen, menos
+# "trova", que es el nombre del movimiento y no se traduce en ningun idioma.
+
+MENU_FR = [
+    ("/fr/trova/", "La trova"),
+    ("/fr/poesie/", "Poésie"),
+    ("/fr/livres/", "Livres"),
+    ("/fr/auteur/", "L'auteur"),
+    ("/fr/droits/", "Droits"),
+]
+
+PIE_FR = MENU_FR
+
+
 
 
 # ── Por idioma ───────────────────────────────────────────────────────────
@@ -77,17 +94,29 @@ IDIOMAS = {
         "pie": PIE,
         "portada": "/",
         "etiqueta": "ES",
-        # El pie español no enlaza a los demas idiomas y el ingles si. Es como
-        # estaba. Cuando entren el frances, el italiano y el portugues habra
-        # que decidir si los cinco pies se igualan.
-        "pie_idiomas": None,
+        # Como se llama este sitio en su propio idioma, para el pie de los
+        # demas: el enlace se lee en la lengua a la que lleva.
+        "pie_nombre": "Sitio en español",
+        # El pie español no enlaza a los demas idiomas y los extranjeros si.
+        # Es como estaba. Cuando esten los cinco habra que decidir si se
+        # igualan; hoy el visitante español ya tiene el selector arriba.
+        "pie_idiomas": False,
     },
     "en": {
         "menu": MENU_EN,
         "pie": PIE_EN,
         "portada": "/en/",
         "etiqueta": "EN",
-        "pie_idiomas": "Sitio en español",
+        "pie_nombre": "Site in English",
+        "pie_idiomas": True,
+    },
+    "fr": {
+        "menu": MENU_FR,
+        "pie": PIE_FR,
+        "portada": "/fr/",
+        "etiqueta": "FR",
+        "pie_nombre": "Site en français",
+        "pie_idiomas": True,
     },
 }
 
@@ -137,6 +166,8 @@ def pie_de(lang, activa, sangria="    "):
             filas.append(f'{sangria}<a href="{h}">{n}</a>')
     if IDIOMAS[lang]["pie_idiomas"]:
         for l, d in _otros(lang):
+            # Cada enlace se lee en la lengua a la que lleva, no en la de la
+            # pagina: es lo que ya hacia el pie ingles con "Sitio en español".
             filas.append(f'{sangria}<a href="{d["portada"]}" lang="{l}" '
-                         f'hreflang="{l}">{IDIOMAS[lang]["pie_idiomas"]}</a>')
+                         f'hreflang="{l}">{d["pie_nombre"]}</a>')
     return "\n".join(filas)
