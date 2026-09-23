@@ -31,6 +31,10 @@ ES = {
     "titulo_sala": "Lo que mira la décima",
     "entrada": "Otro modo de hacer poesía es buscar la voz oculta, las historias que habitan detrás de una imagen. Aquí van mis fotos vistas y el poema que escucho en ellas.",
     "aviso": None,
+    # La segunda tanda trajo decimas francamente eroticas. La sala entera lleva
+    # aviso y rating adult, como las dos obras del Farraluque: no se puede
+    # avisar decima a decima porque todas viven en la misma pagina.
+    "aviso_adultos": "Entre estas décimas hay poesía erótica, escrita para lectores adultos.",
     "titulo_mayor": "Una que se salió del cuadro",
     "entrada_mayor": "Empezó como las demás, mirando una foto. Pero le crecieron tres movimientos, cada uno con su tempo, y ya no cabía en diez versos. Tiene cuarto propio.",
     "sonata_sinopsis": "Tres movimientos en décimas: un preludio, un aguacero y lo que queda después. Con Fito Páez, Noel Nicola y Santiago Feliú asomados a cada uno.",
@@ -93,17 +97,39 @@ def dims(rel):
         return im.size
 
 
+def quita_cabecera(cuerpo, d):
+    """Saca del cuerpo el subtitulo y la dedicatoria, que en el documento del
+    autor van pegados al encabezado y si no se sacan se leen como versos. Se
+    declaran en el manifiesto y el generador se para si no aparecen: aqui
+    equivocarse es publicar mal una decima."""
+    for clave in ("subtitulo", "dedicatoria"):
+        if not d.get(clave):
+            continue
+        while cuerpo and not cuerpo[0].strip():
+            cuerpo.pop(0)
+        if not cuerpo or cuerpo[0].strip() != d[clave]:
+            sys.exit(f"{d['slug']}: esperaba {clave} «{d[clave]}» y vino "
+                     f"«{cuerpo[0].strip() if cuerpo else '(nada)'}»")
+        cuerpo.pop(0)
+    while cuerpo and not cuerpo[0].strip():
+        cuerpo.pop(0)
+    return cuerpo
+
+
 def pieza(d, cuerpo, n, alt, la=""):
     img = f"/img/decimitas/{d['slug']}.webp"
     w, h = dims(img)
-    epi, firma, versos = separa_epigrafe(cuerpo)
+    epi, firma, versos = separa_epigrafe(quita_cabecera(list(cuerpo), d))
     lado = "right" if n % 2 == 0 else "left"
     partes = [f'  <article class="decimita reveal reveal-{lado}" id="{d["slug"]}">']
     partes.append(f'    <figure class="decimita-foto">')
     partes.append(f'      <img src="{img}" width="{w}" height="{h}" alt="{esc_attr(alt)}" loading="lazy">')
     partes.append(f'    </figure>')
     partes.append(f'    <div class="decimita-texto"{la}>')
-    partes.append(f'      <h2 class="decimita-titulo">{esc(d["titulo"])}</h2>')
+    rotulo = (f' <span class="poema-numero">{esc(d["rotulo"])}</span>' if d.get("rotulo") else "")
+    partes.append(f'      <h2 class="decimita-titulo">{esc(d["titulo"])}{rotulo}</h2>')
+    if d.get("dedicatoria"):
+        partes.append(f'      <p class="texto-dedicatoria">{esc(d["dedicatoria"])}</p>')
     if epi:
         partes.append('      <blockquote class="poema-epigrafe">')
         partes.append(f'        <div class="verso">{esc(epi[0])}</div>')
@@ -134,14 +160,17 @@ def pagina_decimitas(lang, V, cfg, trozos, capas):
              "itemListElement": [{"@type": "ListItem", "position": i, "name": d["titulo"]}
                                  for i, d in enumerate(cfg["decimitas"], 1)]}
 
-    margen = "1.5rem" if V.get("aviso") else "3rem"
-    aviso = f'\n    <p class="nota" style="margin-bottom:3rem;">{esc(V["aviso"])}</p>' if V.get("aviso") else ""
+    margen = "1.5rem" if (V.get("aviso") or V.get("aviso_adultos")) else "3rem"
+    aviso = f'\n    <p class="nota" style="margin-bottom:1.5rem;">{esc(V["aviso"])}</p>' if V.get("aviso") else ""
+    aviso += (f'\n    <p class="sonata-premio" style="margin-bottom:3rem;">{esc(V["aviso_adultos"])}</p>'
+              if V.get("aviso_adultos") else "")
     nota = V["sonata_nota"].replace(
         "{premio}", f'<a href="{V["premios_url"]}">{esc(PREMIO)}</a>')
 
     return (pagina.cabeza(lang, V["seo_titulo"], V["seo_desc"], url,
                           imagen=f"{DOMINIO}/img/decimitas/baraja-rota.webp",
-                          rutas={l: c["ruta"] for l, c in capas.items()})
+                          rutas={l: c["ruta"] for l, c in capas.items()},
+                          adultos=bool(V.get("aviso_adultos")))
             + '<script type="application/ld+json">\n' + json.dumps(lista, ensure_ascii=False, indent=2) + '\n</script>\n'
             + pagina.migas([("Ala del Mar", DOMINIO + L["portada"]), (V["migas"][0], DOMINIO + seccion), (V["migas"][1], url)])
             + pagina.menu(lang, seccion)

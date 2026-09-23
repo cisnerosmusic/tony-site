@@ -43,6 +43,90 @@
       "titulo_doc": "BARAJA ROTA",
       "titulo": "Baraja rota",
       "alt": "Un siete de bastos partido por la mitad, tirado en la tierra"
+    },
+    {
+      "slug": "llamada",
+      "titulo_doc": "LLAMADA",
+      "titulo": "Llamada",
+      "alt": "Un pájaro pequeño recortado a contraluz en el hueco de un ventanuco abierto en un muro oscuro"
+    },
+    {
+      "slug": "preguntas-con-palomas",
+      "titulo_doc": "PREGUNTAS CON PALOMAS",
+      "titulo": "Preguntas con palomas",
+      "alt": "Una estatua viviente plateada, con alas, recibe una paloma en el brazo mientras otras picotean a sus pies"
+    },
+    {
+      "slug": "opciones",
+      "titulo_doc": "OPCIONES",
+      "titulo": "Opciones",
+      "alt": "Una carita de loza blanca, con los ojos cerrados y la boca abierta, empotrada en una pared rosada y descascarada"
+    },
+    {
+      "slug": "beso-i",
+      "titulo_doc": "BESO (I)",
+      "subtitulo": "(PRELUDIO)",
+      "titulo": "Beso (I)",
+      "rotulo": "Preludio",
+      "alt": "Un zunzún en vuelo se acerca a las flores anaranjadas de un arbusto, junto a la baranda de un balcón"
+    },
+    {
+      "slug": "beso-ii",
+      "titulo_doc": "BESO (II)",
+      "subtitulo": "(VUELO)",
+      "titulo": "Beso (II)",
+      "rotulo": "Vuelo",
+      "alt": "El zunzún suspendido ya entre las flores anaranjadas, con la baranda blanca del balcón al fondo"
+    },
+    {
+      "slug": "penitente",
+      "titulo_doc": "PENITENTE",
+      "titulo": "Penitente",
+      "alt": "La huella de unos labios pintados de rojo, marcada sobre un papel blanco"
+    },
+    {
+      "slug": "rostros-del-mar-i",
+      "titulo_doc": "ROSTROS DEL MAR (I)",
+      "titulo": "Rostros del mar (I)",
+      "alt": "El mar azul rompiendo en olas blancas contra unas rocas, bajo un cielo claro"
+    },
+    {
+      "slug": "rostros-del-mar-ii",
+      "titulo_doc": "ROSTROS DEL MAR (II)",
+      "titulo": "Rostros del mar (II)",
+      "alt": "El sol de frente sobre el mar, con una ola que revienta a contraluz sobre las rocas"
+    },
+    {
+      "slug": "la-oruga-infinita",
+      "titulo_doc": "LA ORUGA INFINITA",
+      "dedicatoria": "(Para Ernesto Cisneros)",
+      "titulo": "La oruga infinita",
+      "alt": "Una oruga de anillos negros y amarillos recorriendo el nervio de una hoja verde"
+    },
+    {
+      "slug": "mano-miel",
+      "titulo_doc": "MANO MIEL",
+      "titulo": "Mano miel",
+      "alt": "Dos dedos juntos de los que cuelga una gota de miel a punto de caer"
+    },
+    {
+      "slug": "si-hubiera-sido",
+      "titulo_doc": "SI HUBIERA SIDO…",
+      "titulo": "Si hubiera sido…",
+      "alt": "Una mujer sentada en el muro del Malecón, junto a un bloque de hormigón, con el mar detrás"
+    },
+    {
+      "slug": "rueda",
+      "titulo_doc": "RUEDA",
+      "dedicatoria": "(A Nicolás Guillén)",
+      "titulo": "Rueda",
+      "alt": "La rueda de un camión detenida sobre la tierra, con matojos crecidos alrededor"
+    },
+    {
+      "slug": "salto",
+      "titulo_doc": "SALTO",
+      "titulo": "Salto",
+      "alt": "El hueco de un patio interior visto desde arriba, con las barandas de cada piso encajadas una dentro de otra hasta el fondo"
     }
   ]
 }
