@@ -45,7 +45,7 @@ import pagina as marco
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=39"
+CSS = "?v=40"
 RETRATO = "/img/retrato.webp"
 
 

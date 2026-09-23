@@ -252,7 +252,30 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-secondary);
   letter-spacing: 0.06em;
   margin: 0.8rem 0 0.4rem;
+
+  /* El lema no entra con el titular: entra solo, y despues. No es un adorno:
+     "bene scriptus" es lo que el autor escribe al cerrar sus libros, y una
+     firma no llega con el nombre, llega cuando lo demas ya esta puesto.
+     Decision de Ernesto, 23 de septiembre de 2026.
+
+     La cuenta, medida en el navegador y no estimada: el titular va de 0 a 1
+     entre 151 y 903 ms, y el bloque del oficio entre 451 y 1.203, porque lleva
+     0,25 de retardo mas 0,9 de transicion. Lo ultimo en posarse es el oficio,
+     no el titular. El compas de silencio de 300 ms se cuenta desde ahi, asi
+     que el retardo del lema es 1,45 s: 0,25 + 0,9 + 0,3. Con 1,2 s el silencio
+     se quedaba en 148 ms y no se notaba la pausa.
+
+     Solo opacidad, sin desplazamiento, para que entre con calma y no
+     deslizandose como el resto.
+
+     Funciona siendo hijo de un .reveal porque la opacidad del padre multiplica
+     la del hijo: mientras el titular sube de 0 a 1, el lema esta a 0 de todos
+     modos, y cuando le toca moverse el padre ya vale 1. */
+  opacity: 0;
+  transition: opacity 1s ease 1.45s;
 }
+
+.reveal.visible .lema { opacity: 1; }
 
 .oficio {
   font-size: 1.15rem;
@@ -924,7 +947,10 @@ html:not(.pt) .solo-pt { display: none !important; }
    observar nada; si se cambia aqui, se cambia alli. */
 @media (max-width: 1080px), (hover: none), (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .reveal-right, .reveal-left { opacity: 1; transform: none; will-change: auto; }
+  /* El lema entra aqui tambien, y no es un detalle: su opacidad de reposo es
+     0 y la pone visible una transicion. Sin esta linea, apagar las
+     transiciones lo dejaria invisible para siempre en todos los telefonos. */
+  .reveal, .reveal-right, .reveal-left, .lema { opacity: 1; transform: none; will-change: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 

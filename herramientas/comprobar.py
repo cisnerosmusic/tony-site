@@ -287,6 +287,39 @@ def generado_al_dia():
 
 
 # ── 7. Higiene que la auditoria ya pillo una vez ─────────────────────────
+def lema_animado():
+    """El lema de la portada entra solo y con retardo, asi que su opacidad de
+    reposo es 0 y quien lo enciende es la clase .visible de un .reveal padre.
+
+    Eso lo vuelve fragil de una forma que no se ve: si alguien saca el
+    <span class="lema"> de dentro del bloque .reveal, la firma queda invisible
+    para siempre en escritorio, y ninguna otra regla lo nota porque el HTML es
+    valido, el enlace no se rompe y la pagina no da 404. Y si alguien quita
+    .lema del apagado de animaciones de styles.css, queda invisible en todos
+    los telefonos. Las dos cosas se comprueban aqui."""
+    css = leer(os.path.join(RAIZ, "styles.css"))
+    if ".reveal.visible .lema" not in css:
+        falla("lema sin encendido", "styles.css ya no trae la regla .reveal.visible .lema")
+    # Hay dos bloques @media de 1080px, el de maquetacion y el que apaga las
+    # animaciones. Se busca la linea que devuelve los .reveal a opacidad 1, que
+    # solo existe en el segundo, y se exige que el lema vaya con ellos.
+    reset = re.search(r"^\s*\.reveal,[^\n]*opacity: 1[^\n]*$", css, re.M)
+    if not reset:
+        falla("lema invisible en movil",
+              "styles.css ya no trae la linea que devuelve los .reveal a opacidad 1")
+    elif ".lema" not in reset.group(0):
+        falla("lema invisible en movil",
+              "styles.css apaga las animaciones sin devolver .lema a opacidad 1")
+    for p in paginas():
+        t = leer(p)
+        if 'class="lema"' not in t:
+            continue
+        bloque = re.search(r'<div class="reveal[^"]*"[^>]*>\s*<h1>.*?</h1>\s*</div>', t, re.S)
+        if not bloque or 'class="lema"' not in bloque.group(0):
+            falla("lema fuera del reveal",
+                  f"{rel(p)}: el lema tiene que vivir dentro del bloque .reveal del h1")
+
+
 def higiene():
     # Rutas absolutas de una maquina concreta
     for p in glob.glob(os.path.join(RAIZ, "herramientas", "**", "*.*"), recursive=True):
@@ -422,6 +455,7 @@ def main():
     datos_estructurados()
     metadatos()
     versiones()
+    lema_animado()
     higiene()
     navegacion_alineada()
     medidas_reales()

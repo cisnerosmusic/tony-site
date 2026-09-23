@@ -15,7 +15,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=39"
+CSS = "?v=40"
 IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
 
 FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'

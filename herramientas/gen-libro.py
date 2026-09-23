@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=39"
+CSS = "?v=40"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
