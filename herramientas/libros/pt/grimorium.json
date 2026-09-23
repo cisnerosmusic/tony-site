@@ -1,0 +1,24 @@
+{
+  "seo_titulo": "Grimorium: um romance de horror de Antonio López Sánchez",
+  "seo_desc": "Grimorium (Editorial Oriente, 2018), romance de horror em homenagem a Lovecraft: três histórias paralelas em torno de um livro proibido. Sinopse e trechos.",
+  "cubierta_alt": "Capa de Grimorium, ilustrada por Rainel Cabarroi",
+  "genero": "Horror",
+  "contratapa": "libros/grimorium/contratapa.pt.txt",
+  "vyv": "libros/grimorium/voz-y-voto.pt.txt",
+  "ficha": {
+    "título": "Grimorium",
+    "género": "Horror",
+    "cubierta": "Ilustração de Rainel Cabarroi"
+  },
+  "prensa": [
+    {
+      "pie": "Entrevista de Iyaimí Palomares, Juventud Rebelde, 8 de fevereiro de 2019"
+    },
+    {
+      "pie": "Habana Radio, 2019. O site original saiu do ar, e o link leva à cópia do Internet Archive"
+    }
+  ],
+  "catalogo": {
+    "sinopsis": "Três histórias paralelas, situadas em épocas diferentes, cujos protagonistas perseguem o mesmo livro proibido e seu mistério antigo e aterrorizante. Um horror de atmosfera, em homenagem a Lovecraft."
+  }
+}

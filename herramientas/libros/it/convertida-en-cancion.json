@@ -1,0 +1,56 @@
+{
+  "seo_titulo": "Convertida en canción: la donna nella Nueva Trova",
+  "seo_desc": "Convertida en canción (Capiro, 2019), saggio sull'immagine della donna nei testi della Nueva Trova cubana. Sinossi, scheda ed estratti.",
+  "cubierta_alt": "Copertina di Convertida en canción, illustrata da Ramón Eduardo Haití",
+  "genero": "Saggio",
+  "contratapa": "libros/convertida-en-cancion/contratapa.it.txt",
+  "vyv": "libros/convertida-en-cancion/voz-y-voto.it.txt",
+  "ficha": {
+    "título": "Convertida en canción. La imagen de la mujer en los textos de la Nueva Trova (Diventata canzone: l'immagine della donna nei testi della Nueva Trova)",
+    "género": "Saggio",
+    "cubierta": "Illustrazione di Ramón Eduardo Haití"
+  },
+  "galeria": [
+    {
+      "alt": "Locandina gialla dell'incontro e della presentazione del libro alla Biblioteca nazionale",
+      "pie": "Locandina dell'incontro alla Biblioteca nazionale José Martí di Cuba, giovedì 10 marzo 2022, presentato da Yosvel Hernández Alén"
+    },
+    {
+      "alt": "Presentazione nella sala di lettura della Biblioteca nazionale, il libro posato su un leggio",
+      "pie": "Presentazione alla Biblioteca nazionale José Martí di Cuba, con il musicografo e ricercatore Yosvel Hernández Alén, 10 marzo 2022"
+    },
+    {
+      "alt": "Due partecipanti seduti davanti ai microfoni durante la presentazione",
+      "pie": "Al tavolo della Biblioteca nazionale, marzo 2022"
+    },
+    {
+      "alt": "Firmacopie dopo la presentazione, circondato dal pubblico",
+      "pie": "Dopo la presentazione, alla Biblioteca nazionale, marzo 2022"
+    },
+    {
+      "alt": "Tavolo di presentazione nella sala José Lezama Lima, con quattro partecipanti e i libri esposti",
+      "pie": "Presentazione dell'Editorial Capiro nella sala José Lezama Lima del Colegio San Gerónimo, Fiera internazionale del libro dell'Avana, aprile 2022"
+    },
+    {
+      "alt": "Due dei partecipanti al tavolo di presentazione, uno di loro al microfono",
+      "pie": "Il tavolo di presentazione alla Fiera internazionale del libro dell'Avana, aprile 2022"
+    },
+    {
+      "alt": "Due partecipanti a un tavolo di presentazione, uno tiene il libro",
+      "pie": "Presentazione con Alexis Castañeda Pérez de Alejo alla 30ª Fiera internazionale del libro, Santa Clara, maggio 2022"
+    },
+    {
+      "alt": "Presentazione del libro in un cortile con colonne, davanti a un pubblico seduto",
+      "pie": "Presentazione alla Casa Granda, Santiago de Cuba"
+    }
+  ],
+  "prensa": [
+    {
+      "pie": "Cronaca di Amalia Alejandra, Cubaliteraria, 25 aprile 2022"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Diventata canzone",
+    "sinopsis": "A quale donna cantano i trovatori cubani? Un saggio sulla donna che abita i testi della Nueva Trova."
+  }
+}
