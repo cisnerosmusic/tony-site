@@ -52,12 +52,16 @@ ES = {
         "El cuento, ese duende que acompaña a la humanidad desde los albores de los tiempos, todavía regala magias, realidades y hasta miedos.",
     ],
     "aviso": None,
-    # No todo lo que pide aviso lo pide por lo mismo: un cuento erotico entre
-    # adultos y el delirio de una menor que acaba en suicidio no se avisan con
-    # la misma frase. El manifiesto elige cual con el campo «adultos».
+    # No todo lo que pide aviso lo pide por lo mismo, asi que hay dos: el de
+    # literatura erotica y el de un cuento duro que no es erotico. El manifiesto
+    # elige cual con el campo «adultos».
+    #
+    # El segundo decia de que trata, y Ernesto lo acorto el 22 de septiembre de
+    # 2026: un aviso que enumera lo que va a pasar es un resumen del final, y en
+    # este cuento el final es el cuento. Avisa, y no cuenta.
     "avisos_adultos": {
         "erotico": "Cuento de literatura erótica, escrito para lectores adultos.",
-        "duro": "Cuento para lectores adultos: el delirio sexualizado de una menor, y una muerte por su propia mano.",
+        "duro": "Cuento para lectores adultos.",
     },
     "leer": "Leer el cuento",
     "volver": "Volver a Contarte",
