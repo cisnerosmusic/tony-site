@@ -1,0 +1,27 @@
+{
+  "seo_titulo": "El otro lado del espejo : un roman de fantasy",
+  "seo_desc": "El otro lado del espejo (Gente Nueva, 2017), fantasy distinguée au Concurso La Edad de Oro. Synopsis, trois chapitres en espagnol, note de l'auteur.",
+  "cubierta_alt": "Couverture de El otro lado del espejo, illustrée par Rainel Cabarroi",
+  "genero": "Fantasy",
+  "premios": [
+    "Mention, Concurso La Edad de Oro 2014"
+  ],
+  "contratapa": "libros/el-otro-lado-del-espejo/contratapa.fr.txt",
+  "vyv": "libros/el-otro-lado-del-espejo/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "El otro lado del espejo (De l'autre côté du miroir)",
+    "género": "Fantasy",
+    "cubierta": "Illustration de Rainel Cabarroi",
+    "premio": "Mention, Concurso La Edad de Oro 2014"
+  },
+  "prensa": [
+    {
+      "pie": "Entretien par Iyaimí Palomares, Juventud Rebelde, 8 février 2019"
+    }
+  ],
+  "catalogo": {
+    "glosa": "De l'autre côté du miroir",
+    "premio": "Mention, La Edad de Oro 2014",
+    "sinopsis": "Ceux qui vivent de l'autre côté du miroir pourraient-ils nous envahir ? L'un des derniers mages de la Bibliothèque traverse des temps et des dimensions magiques pour sauver son amour. Fantasy en hommage à Borges."
+  }
+}

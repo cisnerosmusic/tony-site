@@ -1,0 +1,30 @@
+{
+  "seo_titulo": "La canción de la Nueva Trova : essais et entretiens",
+  "seo_desc": "La canción de la Nueva Trova (Atril, 2001), le premier livre de l'auteur : une histoire de la Nueva Trova cubaine racontée avec ses fondateurs. Extraits en espagnol.",
+  "cubierta_alt": "Couverture de La canción de la Nueva Trova",
+  "genero": "Essai",
+  "contratapa": "libros/la-cancion-de-la-nueva-trova/contratapa.fr.txt",
+  "vyv": "libros/la-cancion-de-la-nueva-trova/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "La canción de la Nueva Trova (La chanson de la Nueva Trova)",
+    "género": "Essais et entretiens"
+  },
+  "galeria": [
+    {
+      "alt": "Présentation de La canción de la Nueva Trova à Cubadisco 2001",
+      "pie": "Présentation à Cubadisco, mai 2001. Photo : Alain Gutiérrez Almeida"
+    },
+    {
+      "alt": "Dédicace d'un exemplaire pour le troubadour Augusto Blanca, à Cubadisco 2001",
+      "pie": "Avec le troubadour Augusto Blanca. Cubadisco 2001. Photo : Alain Gutiérrez Almeida"
+    },
+    {
+      "alt": "Présentation du livre au Festival universitaire du livre et de la lecture",
+      "pie": "Festival universitaire du livre et de la lecture (FULL), Pabellón Cuba, 2007. Photo : Alain Gutiérrez Almeida"
+    }
+  ],
+  "catalogo": {
+    "glosa": "La chanson de la Nueva Trova",
+    "sinopsis": "La mémoire irremplaçable d'un premier livre. Essais et entretiens sur la naissance de la Nueva Trova cubaine et sur ce qu'elle est devenue."
+  }
+}

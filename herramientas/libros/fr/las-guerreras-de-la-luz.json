@@ -1,0 +1,57 @@
+{
+  "seo_titulo": "Las guerreras de la luz : un roman de fantasy",
+  "seo_desc": "Las guerreras de la luz (Editorial de la Mujer, 2011), fantasy et Premio La Rosa Blanca de l'UNEAC. Synopsis, extraits et note de l'auteur.",
+  "cubierta_alt": "Couverture de Las guerreras de la luz, illustrée par Rainel Cabarroi : une garde d'épée avec une rose gravée sur le pommeau, sur cuir vert",
+  "genero": "Fantasy",
+  "premios": [
+    "Premio La Rosa Blanca 2012, Section de littérature pour l'enfance et la jeunesse de l'UNEAC"
+  ],
+  "contratapa": "libros/las-guerreras-de-la-luz/contratapa.fr.txt",
+  "vyv": "libros/las-guerreras-de-la-luz/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "Las guerreras de la luz (Les guerrières de la lumière)",
+    "género": "Fantasy",
+    "cubierta": "Illustration de Rainel Cabarroi",
+    "premio": "La Rosa Blanca 2012, Section de littérature pour l'enfance et la jeunesse de l'UNEAC, remis le 19 mars 2013"
+  },
+  "galeria": [
+    {
+      "alt": "Présentation du livre, un exemplaire posé sur la table devant le micro",
+      "pie": "Présentation au Pabellón Cuba, Foire internationale du livre de La Havane, 14 février 2012"
+    },
+    {
+      "alt": "Deux personnes à la table de présentation, le livre entre elles",
+      "pie": "À la table de présentation, Pabellón Cuba, février 2012"
+    },
+    {
+      "alt": "Le public assis pendant la présentation du livre",
+      "pie": "Le public de la présentation au Pabellón Cuba, février 2012"
+    },
+    {
+      "alt": "Dédicaces à une table en plein air, entouré de lecteurs",
+      "pie": "Dédicaces au Sábado del Libro, août 2012"
+    },
+    {
+      "alt": "Une place avec des lecteurs faisant la queue à la table de dédicaces",
+      "pie": "La file des lecteurs au Sábado del Libro, août 2012"
+    },
+    {
+      "alt": "Antonio López Sánchez reçoit le Premio La Rosa Blanca",
+      "pie": "Remise du Premio La Rosa Blanca, 19 mars 2013"
+    },
+    {
+      "alt": "Cérémonie de remise du Premio La Rosa Blanca",
+      "pie": "La cérémonie du Premio La Rosa Blanca, UNEAC, 2013"
+    }
+  ],
+  "prensa": [
+    {
+      "pie": "Entretien par Alain Gutiérrez, Juventud Rebelde, 13 juillet 2012"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Les guerrières de la lumière",
+    "premio": "Premio La Rosa Blanca 2012, UNEAC",
+    "sinopsis": "Un sorcier venu des confins de l'ombre tente d'arrêter toute vie sur une île tranquille. Une fillette, Aria Musa, ses amies et un colibri magique lèvent une armée pour l'affronter. Le premier roman de l'auteur."
+  }
+}

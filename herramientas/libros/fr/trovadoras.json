@@ -1,0 +1,27 @@
+{
+  "seo_titulo": "Trovadoras : entretiens avec les femmes de la chanson cubaine",
+  "seo_desc": "Trovadoras (Editorial Oriente, 2008), entretiens avec les femmes de la trova cubaine, avec Isabel Moya sur le genre et Lino Betancourt sur la musique.",
+  "cubierta_alt": "Couverture de Trovadoras, illustrée par Ramón Eduardo Haití",
+  "genero": "Entretiens",
+  "contratapa": "libros/trovadoras/contratapa.fr.txt",
+  "vyv": "libros/trovadoras/voz-y-voto.fr.txt",
+  "ficha": {
+    "título": "Trovadoras (Les femmes de la trova)",
+    "género": "Entretiens",
+    "cubierta": "Illustration de Ramón Eduardo Haití"
+  },
+  "galeria": [
+    {
+      "alt": "Présentation du livre Trovadoras",
+      "pie": "Présentation de Trovadoras. Photos : Ramón Eduardo Haití et Alain Gutiérrez Almeida"
+    },
+    {
+      "alt": "Présentation de Trovadoras à la Foire internationale du livre de La Havane",
+      "pie": "18e Foire internationale du livre de La Havane, février 2009"
+    }
+  ],
+  "catalogo": {
+    "glosa": "Les femmes de la trova",
+    "sinopsis": "Des entretiens et des guitares à nouveau, cette fois à voix de femmes seulement. Avec la docteure Isabel Moya Richard et le musicographe Lino Betancourt, les études de genre et l'histoire de la trova apportent leur savoir à ces pages."
+  }
+}
