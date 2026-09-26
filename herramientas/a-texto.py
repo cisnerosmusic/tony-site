@@ -112,9 +112,26 @@ def de_docx(ruta):
 
 def limpiar(t, verso=False):
     """En prosa se descartan las lineas vacias, que solo son separacion.
-    En verso NO: el blanco entre estrofas es parte del poema. Se conserva uno."""
+    En verso NO: el blanco entre estrofas es parte del poema. Se conserva uno.
+
+    Y en verso tampoco se tocan los espacios de dentro de la linea. Tony usa
+    los espacios multiples como puntuacion, y esta regla esta escrita en
+    AGENTS.md desde hace semanas: styles.css pinta el verso con
+    `white-space: pre-wrap` justamente para respetarlos.
+
+    Esta funcion los aplastaba igual, con un re.sub que metia todas las rachas
+    en un solo espacio, y nadie lo noto porque el texto se lee bien sin ellos.
+    Se vio el 25 de septiembre de 2026, cuando Ernesto lo recordo al llegar
+    material nuevo: el .docx de las De-Cimitas publicadas traia 36 rachas de
+    espacios y en el sitio habia cero. En prosa se siguen colapsando, que ahi
+    son un descuido de mecanografia y no puntuacion."""
     t = t.replace("\u00a0", " ").replace("\r", "")
-    lineas = [re.sub(r"[ \t]+", " ", l).strip() for l in t.split("\n")]
+    if verso:
+        # Solo se recorta el final de la linea: el sangrado de la izquierda
+        # marca donde abre cada decima y tambien es del autor.
+        lineas = [l.rstrip() for l in t.split("\n")]
+    else:
+        lineas = [re.sub(r"[ \t]+", " ", l).strip() for l in t.split("\n")]
     if not verso:
         return "\n".join(l for l in lineas if l) + "\n"
     salida, blanco = [], False
