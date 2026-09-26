@@ -247,3 +247,11 @@ git config --local user.email "..."
 ```
 
 En este repositorio la identidad del historial es la personal.
+
+**Al empujar con un token, desactiva antes el ayudante de credenciales.** `git -c credential.helper='!f() { ... }; f' push` **añade** el ayudante a los que ya hay, no los sustituye: el Git Credential Manager de Windows se consulta igual y se queda esperando una ventana que en una sesión de agente nadie va a ver. El push no falla, se cuelga, que es peor. Pasó el 25 de septiembre de 2026 subiendo las once décimas nuevas. La forma que sí funciona lleva un valor vacío delante, que vacía la lista:
+
+```bash
+git -c credential.helper= -c credential.helper='!f() { echo username=x-access-token; echo "password=$GH_TOKEN"; }; f' push origin main
+```
+
+El token sale de `~/.secrets` o de `$GH_TOKEN`, nunca escrito en el comando. Si aun así se queda colgado, el proceso a matar es `git-credential-manager`.
