@@ -7,7 +7,7 @@ Datos verificables del autor:
 - Nombre completo: Antonio López Sánchez. Nacido en La Habana, Cuba, el 16 de enero de 1973.
 - Licenciado en Comunicación Social por la Universidad de La Habana (1998). Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso (2007). Posgrado Crítica con Arte, Instituto Internacional de Periodismo José Martí (2022).
 - Géneros: fantasía heroica, horror, literatura infantil y juvenil, poesía, ensayo, entrevista y periodismo cultural.
-- Obra publicada: 14 libros desde 2001, 11 cuentos completos, 12 poemas y 8 glosas, 31 décimas con fotografía, 22 trabajos de prensa firmados y 4 novelas inéditas.
+- Obra publicada: 14 libros desde 2001, 11 cuentos completos, 12 poemas y 8 glosas, 31 décimas con fotografía, 23 trabajos de prensa firmados y 4 novelas inéditas.
 - Contacto del autor: antonio@antoniolopezsanchez.art
 - Derechos: sus libros publicados tienen exclusividad editorial solo dentro de Cuba. Los derechos para ediciones y traducciones en el resto del mundo están disponibles; la representación fuera de la isla la lleva Ernesto Cisneros (ernestocisneros.art) desde Miami.
 
@@ -122,13 +122,14 @@ Datos verificables del autor:
 
 ## Periodismo
 
-- [El periodista](https://antoniolopezsanchez.art/periodista/): trayectoria en la prensa cultural cubana desde 1998, del Centro Cultural Pablo de la Torriente Brau y la Editorial de la Mujer al Museo Nacional de Bellas Artes, y el archivo de 22 trabajos firmados de 1994 a 2021, agrupados en entrevistas, reseñas y crónicas.
+- [El periodista](https://antoniolopezsanchez.art/periodista/): trayectoria en la prensa cultural cubana desde 1998, del Centro Cultural Pablo de la Torriente Brau y la Editorial de la Mujer al Museo Nacional de Bellas Artes, y el archivo de 23 trabajos firmados de 1994 a 2021, agrupados en entrevistas, reseñas y crónicas.
   - Entrevistas:
     - [El riesgo de buscar](https://antoniolopezsanchez.art/periodista/carlos-varela-el-riesgo-de-buscar/) (Proyecto Voces, Facultad de Comunicación de la Universidad de La Habana · 1994): Una conversación de 1994, recién salido Como los peces, que se quedó inédita porque la revista que la encargó nunca llegó a salir.
     - [Colores al desnudo](https://antoniolopezsanchez.art/periodista/ramon-haiti-colores-al-desnudo/) (Revista Muchacha · diciembre de 2005): El pintor cuenta cómo encontró la espátula buscando otra cosa, por qué sus rostros no tienen sexo y qué le roba a Van Gogh, a Lam y a su propio padre.
     - [Rebeldes con causa](https://antoniolopezsanchez.art/periodista/hipnosis-rebeldes-con-causa/) (Revista Muchacha · noviembre de 2005): Tarde en el Patio de María con la directora de Hipnosis, una banda de metal con tres mujeres dentro, en un medio donde no abundan.
     - [Palabras desde una flauta](https://antoniolopezsanchez.art/periodista/palabras-desde-una-flauta/) (Revista Muchacha · junio de 2009): Durante una entrevista a una flautista ocurre un curioso milagro. Es su flauta la que responde el cuestionario.
     - [La trova canta a dos lentes](https://antoniolopezsanchez.art/periodista/la-trova-canta-a-dos-lentes/) (La Jiribilla · marzo de 2010): Dos fotógrafos, Alain Gutiérrez y Kaloian Santos, explican cómo se retrata un sonido.
+    - [Sigue pariendo corazones](https://antoniolopezsanchez.art/periodista/omara-portuondo-sigue-pariendo-corazones/) (Revista Mujeres · julio de 2009): La casa donde aprendió todo, Las D’Aida, el Buena Vista Social Club y dos incursiones en el cine, contadas por ella en 2009.
   - Reseñas:
     - [Locuras de pincel](https://antoniolopezsanchez.art/periodista/el-loquito-locuras-de-pincel/) (junio de 2014): El Loquito de René de la Nuez vuelve en una antología de Axel Li, y con él toda una estirpe de humor gráfico que decía lo que no se decía.
     - [¿El verde de la desesperanza?](https://antoniolopezsanchez.art/periodista/el-verde-de-las-canicas/) (agosto de 2014): Una novela de Marvelys Marrero entra en la infancia sin endulzarla. ¿Conducen sus caminos a la desesperanza?

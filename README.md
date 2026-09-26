@@ -42,7 +42,7 @@ Base heredada del template propio de Index01 ([impulses-art-site](https://github
 | `/trova/` | Su obra documental sobre la Nueva Trova |
 | `/plano-abierto/` | Radio, televisión y grabaciones |
 | `/laureles/` | Los premios, y las dos obras premiadas en el Farraluque 2026, para lectores adultos: `tres-delirios-y-un-desnudo/` y `revelaciones/` |
-| `/periodista/` | Ficha, trayectoria y el archivo de prensa: 22 trabajos firmados, cada uno con su página |
+| `/periodista/` | Ficha, trayectoria y el archivo de prensa: 23 trabajos firmados, cada uno con su página |
 | `/entre-lectores/` | Álbum de ferias y firmas; se llega solo desde Mis libros |
 | `/directorio/` | Contacto del autor y consultas de derechos |
 | `/derechos/` | Aviso de derechos |
