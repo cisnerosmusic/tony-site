@@ -14,7 +14,10 @@
   "sonata_boton": "Read the sonata",
   "sonata_alt": "Sunset over the Malecón sea wall, with the sun breaking through the clouds",
   "premios_url": "/en/awards/",
-  "migas": ["Poetry", "De-Cimitas"],
+  "migas": [
+    "Poetry",
+    "De-Cimitas"
+  ],
   "seo_titulo": "De-Cimitas: décimas with photographs by Antonio López Sánchez",
   "seo_desc": "Décimas by the Cuban poet Antonio López Sánchez written from his own photographs: each image with its décima, in a single piece. In Spanish.",
   "alts": {
@@ -37,6 +40,17 @@
     "mano-miel": "Two fingers together with a drop of honey hanging, about to fall",
     "si-hubiera-sido": "A woman sitting on the Malecón sea wall, beside a concrete block, the sea behind her",
     "rueda": "A lorry wheel at rest on bare ground, with weeds grown up around it",
-    "salto": "The well of an inner courtyard seen from above, the railings of each floor set one inside the other down to the bottom"
+    "salto": "The well of an inner courtyard seen from above, the railings of each floor set one inside the other down to the bottom",
+    "firma-del-beso": "The word «Azul…» written by hand in marker on the white tiles of a wall, beside an old stopcock",
+    "magia": "An old horseshoe set into the concrete of a step, beneath a course of red bricks",
+    "amantes-piedra-viva-i": "A white stone sculpture in a park: a seated shepherd plays a flute with a kid goat at his feet, under the branches of a tree",
+    "amantes-piedra-viva-ii": "A white stone sculpture in the same park: a seated woman, her hair gathered up, holds a tambourine against her chest",
+    "paisajes-fuegos-i": "The low sun over the bay, the city skyline behind it and a burning reflection splitting the water in two",
+    "paisajes-fuegos-ii": "A small boat crosses the sun's reflection on the bay, the city backlit behind it",
+    "circulos": "A tree trunk cut off at ground level, a raised ring of wood standing over the growth rings at its centre, among the grass",
+    "plegaria-con-flor": "A cluster of white flowers open among the leaves of a shrub, dry branches behind it",
+    "rabia-y-pez": "A fish's head on the white bottom of a sink, a stain of red blood beside its mouth",
+    "oasis": "A bird of paradise flower, orange and blue, open among the leaves of the plant",
+    "romerillo": "A bee resting on the white flower of a romerillo, among the weeds"
   }
 }

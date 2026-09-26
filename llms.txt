@@ -7,7 +7,7 @@ Datos verificables del autor:
 - Nombre completo: Antonio López Sánchez. Nacido en La Habana, Cuba, el 16 de enero de 1973.
 - Licenciado en Comunicación Social por la Universidad de La Habana (1998). Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso (2007). Posgrado Crítica con Arte, Instituto Internacional de Periodismo José Martí (2022).
 - Géneros: fantasía heroica, horror, literatura infantil y juvenil, poesía, ensayo, entrevista y periodismo cultural.
-- Obra publicada: 14 libros desde 2001, 11 cuentos completos, 12 poemas y 8 glosas, 20 décimas con fotografía, 22 trabajos de prensa firmados y 4 novelas inéditas.
+- Obra publicada: 14 libros desde 2001, 11 cuentos completos, 12 poemas y 8 glosas, 31 décimas con fotografía, 22 trabajos de prensa firmados y 4 novelas inéditas.
 - Contacto del autor: antonio@antoniolopezsanchez.art
 - Derechos: sus libros publicados tienen exclusividad editorial solo dentro de Cuba. Los derechos para ediciones y traducciones en el resto del mundo están disponibles; la representación fuera de la isla la lleva Ernesto Cisneros (ernestocisneros.art) desde Miami.
 
@@ -70,7 +70,7 @@ Datos verificables del autor:
   - [Mapa de las horas, sobre realidad y persistencia](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#mapa-de-las-horas-sobre-realidad-y-persistencia)
   - [Soledad con pájaro y poeta](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#soledad-con-pajaro-y-poeta)
   - [Bambú y mástil](https://antoniolopezsanchez.art/tinta-ciones/poemas-sueltos/#bambu-y-mastil)
-- [De-Cimitas](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/): 20 décimas escritas a partir de fotografías del propio autor, cada imagen con su décima en una sola pieza. Incluye poesía erótica para lectores adultos.
+- [De-Cimitas](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/): 31 décimas escritas a partir de fotografías del propio autor, cada imagen con su décima en una sola pieza. Incluye poesía erótica para lectores adultos.
   - [En cada mundo](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#en-cada-mundo)
   - [Hada astral](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#hada-astral)
   - [Señal](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#senal)
@@ -91,6 +91,17 @@ Datos verificables del autor:
   - [Si hubiera sido…](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#si-hubiera-sido)
   - [Rueda](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#rueda)
   - [Salto](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#salto)
+  - [Firma del beso](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#firma-del-beso)
+  - [Magia](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#magia)
+  - [Amantes (Piedra viva I)](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#amantes-piedra-viva-i)
+  - [Amantes (Piedra viva II)](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#amantes-piedra-viva-ii)
+  - [Paisajes (Fuegos I)](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#paisajes-fuegos-i)
+  - [Paisajes (Fuegos II)](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#paisajes-fuegos-ii)
+  - [Círculos](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#circulos)
+  - [Plegaria con flor](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#plegaria-con-flor)
+  - [Rabia y pez](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#rabia-y-pez)
+  - [Oasis](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#oasis)
+  - [Romerillo](https://antoniolopezsanchez.art/tinta-ciones/de-cimitas/#romerillo)
 - [Sonata de la lluvia](https://antoniolopezsanchez.art/tinta-ciones/sonata-de-la-lluvia/): tres movimientos en décimas, Premio Colateral Yasmina Calcines del XXVI Concurso Nacional Ala Décima, 2026.
 - [En mi voz](https://antoniolopezsanchez.art/tinta-ciones/en-mi-voz/): grabaciones de poemas leídos por el propio autor.
 

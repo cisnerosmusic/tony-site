@@ -14,7 +14,10 @@
   "sonata_boton": "Lire la sonate",
   "sonata_alt": "Coucher de soleil sur le mur du Malecón, le soleil perçant les nuages",
   "premios_url": "/fr/prix/",
-  "migas": ["Poésie", "De-Cimitas"],
+  "migas": [
+    "Poésie",
+    "De-Cimitas"
+  ],
   "seo_titulo": "De-Cimitas : décimas et photographies d'Antonio López Sánchez",
   "seo_desc": "Décimas du poète cubain Antonio López Sánchez écrites à partir de ses propres photographies : chaque image avec sa décima, en une seule pièce. En espagnol.",
   "alts": {
@@ -37,6 +40,17 @@
     "mano-miel": "Deux doigts serrés d'où pend une goutte de miel, sur le point de tomber",
     "si-hubiera-sido": "Une femme assise sur le mur du Malecón, à côté d'un bloc de béton, la mer derrière elle",
     "rueda": "La roue d'un camion à l'arrêt sur la terre nue, avec des herbes folles autour",
-    "salto": "La cage d'une cour intérieure vue d'en haut, les rambardes de chaque étage emboîtées l'une dans l'autre jusqu'au fond"
+    "salto": "La cage d'une cour intérieure vue d'en haut, les rambardes de chaque étage emboîtées l'une dans l'autre jusqu'au fond",
+    "firma-del-beso": "Le mot «Azul…» écrit à la main au marqueur sur le carrelage blanc d'un mur, à côté d'un vieux robinet d'arrêt",
+    "magia": "Un vieux fer à cheval incrusté dans le ciment d'une marche, sous une rangée de briques rouges",
+    "amantes-piedra-viva-i": "Sculpture de pierre blanche dans un parc: un berger assis joue de la flûte, un chevreau à ses pieds, sous les branches d'un arbre",
+    "amantes-piedra-viva-ii": "Sculpture de pierre blanche dans le même parc: une femme assise, les cheveux relevés, serre un tambourin contre sa poitrine",
+    "paisajes-fuegos-i": "Le soleil bas sur la baie, la silhouette de la ville au fond et un reflet incandescent qui coupe l'eau en deux",
+    "paisajes-fuegos-ii": "Un petit bateau traverse le reflet du soleil sur la baie, la ville à contre-jour au fond",
+    "circulos": "Un tronc coupé au ras du sol, un anneau de bois en relief au-dessus des cernes du centre, dans l'herbe",
+    "plegaria-con-flor": "Une grappe de fleurs blanches ouverte parmi les feuilles d'un arbuste, les branches sèches derrière",
+    "rabia-y-pez": "La tête d'un poisson au fond blanc d'un évier, une tache de sang rouge près de la bouche",
+    "oasis": "Une fleur d'oiseau de paradis, orange et bleue, ouverte parmi les feuilles de la plante",
+    "romerillo": "Une abeille posée sur la fleur blanche d'un romerillo, au milieu des herbes folles"
   }
 }

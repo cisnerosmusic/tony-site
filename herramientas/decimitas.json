@@ -127,6 +127,72 @@
       "titulo_doc": "SALTO",
       "titulo": "Salto",
       "alt": "El hueco de un patio interior visto desde arriba, con las barandas de cada piso encajadas una dentro de otra hasta el fondo"
+    },
+    {
+      "slug": "firma-del-beso",
+      "titulo_doc": "FIRMA DEL BESO",
+      "titulo": "Firma del beso",
+      "alt": "La palabra «Azul…» escrita a mano con rotulador sobre los azulejos blancos de una pared, junto a una vieja llave de paso"
+    },
+    {
+      "slug": "magia",
+      "titulo_doc": "MAGIA",
+      "titulo": "Magia",
+      "alt": "Una herradura vieja incrustada en el cemento de un escalón, bajo una hilada de ladrillos rojos"
+    },
+    {
+      "slug": "amantes-piedra-viva-i",
+      "titulo_doc": "AMANTES (PIEDRA VIVA I)",
+      "titulo": "Amantes (Piedra viva I)",
+      "alt": "Escultura de piedra blanca en un parque: un pastor sentado toca una flauta con un cabrito a sus pies, bajo las ramas de un árbol"
+    },
+    {
+      "slug": "amantes-piedra-viva-ii",
+      "titulo_doc": "AMANTES (PIEDRA VIVA II)",
+      "titulo": "Amantes (Piedra viva II)",
+      "alt": "Escultura de piedra blanca en el mismo parque: una mujer sentada, con el pelo recogido, abraza contra el pecho un pandero"
+    },
+    {
+      "slug": "paisajes-fuegos-i",
+      "titulo_doc": "PAISAJES (FUEGOS I)",
+      "titulo": "Paisajes (Fuegos I)",
+      "alt": "El sol bajo sobre la bahía, con el perfil de la ciudad al fondo y un reflejo encendido que parte el agua en dos"
+    },
+    {
+      "slug": "paisajes-fuegos-ii",
+      "titulo_doc": "PAISAJES (FUEGOS II)",
+      "titulo": "Paisajes (Fuegos II)",
+      "alt": "Un barco pequeño cruza el reflejo del sol en la bahía, con la ciudad a contraluz al fondo"
+    },
+    {
+      "slug": "circulos",
+      "titulo_doc": "CÍRCULOS",
+      "titulo": "Círculos",
+      "alt": "El corte de un tronco a ras de tierra, con un anillo de madera levantado sobre los cercos del centro, entre la hierba"
+    },
+    {
+      "slug": "plegaria-con-flor",
+      "titulo_doc": "PLEGARIA CON FLOR",
+      "titulo": "Plegaria con flor",
+      "alt": "Un racimo de flores blancas abierto entre las hojas de un arbusto, con las ramas secas detrás"
+    },
+    {
+      "slug": "rabia-y-pez",
+      "titulo_doc": "RABIA Y PEZ",
+      "titulo": "Rabia y pez",
+      "alt": "La cabeza de un pez sobre el fondo blanco de un fregadero, con una mancha de sangre roja junto a la boca"
+    },
+    {
+      "slug": "oasis",
+      "titulo_doc": "OASIS",
+      "titulo": "Oasis",
+      "alt": "Una flor de ave del paraíso, naranja y azul, abierta entre las hojas de la mata"
+    },
+    {
+      "slug": "romerillo",
+      "titulo_doc": "ROMERILLO",
+      "titulo": "Romerillo",
+      "alt": "Una abeja posada en la flor blanca de un romerillo, entre la maleza"
     }
   ]
 }
