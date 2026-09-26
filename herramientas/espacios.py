@@ -24,7 +24,7 @@
 #   - cualquier linea donde no cuadre el numero de palabras: se anota para
 #     mirarla a mano y no se decide sola.
 
-import io, os, re, sys, unicodedata, zipfile, html as html_lib
+import glob, io, json, os, re, sys, unicodedata, zipfile, html as html_lib
 from collections import defaultdict
 from importlib.machinery import SourceFileLoader
 
@@ -107,6 +107,83 @@ def trasplante(linea, fuente):
         return None
     return re.match(r"[ \t]*", fuente).group(0) + "".join(
         p + g for p, g in zip(pal, h + [""]))
+
+
+def sangrias(docs):
+    """Devuelve al verso la sangria de la izquierda del original.
+
+    La sangria marca donde abre cada tramo de la decima, y es del autor igual
+    que los espacios de dentro del verso. El conversor viejo la borraba, con
+    un .strip() que corria tambien en verso, y de las 105 sangrias de las
+    decimitas quedaban 52. Lo vio Ernesto el 26 de septiembre de 2026, al
+    notar que unas decimas abrian sangradas y otras no.
+
+    No lo arreglaba el trasplante de rachas: aquel solo tocaba los versos que
+    ademas llevaban espacios interiores, y por eso el resto quedaba a medias,
+    con sangrias sueltas que no eran criterio de nadie.
+
+    Solo se cambia el blanco de la izquierda. La linea, sin el, tiene que
+    quedar identica, y se comprueba antes de escribir."""
+    izq = {}
+    for L in docs.values():
+        for l in L:
+            k = clave(l)
+            if len(k) >= 12:
+                izq.setdefault(k, re.match(r"[ \t]*", l).group(0))
+
+    # Los fragmentos de libro que son verso tambien cuentan, y ahi el verso no
+    # se deduce de la carpeta: lo declara el campo `tipo` de su manifiesto.
+    en_verso = set()
+    for m in glob.glob(os.path.join(RAIZ, "herramientas", "libros", "*.json")):
+        for fr in json.load(io.open(m, encoding="utf-8")).get("fragmentos", []):
+            if fr.get("tipo") == "verso":
+                en_verso.add(os.path.normpath(os.path.join(TEXTOS, fr["archivo"])))
+
+    puestas, quitadas, informe = 0, [], []
+    for raiz, _, fs in os.walk(TEXTOS):
+        carpeta = os.path.basename(raiz)
+        for f in sorted(fs):
+            if not f.endswith(".txt"):
+                continue
+            p = os.path.join(raiz, f)
+            if carpeta not in VERSO and os.path.normpath(p) not in en_verso:
+                continue
+            rel = os.path.relpath(p, RAIZ)
+            bruto = io.open(p, encoding="utf-8").read()
+            lineas = bruto.split("\n")
+            # El epigrafe es de otro poeta y el titulo lo buscan los
+            # generadores por texto exacto: ninguno de los dos se toca.
+            try:
+                P = leer_poema.partes(bruto)
+                veda = {l.strip() for l in P["epigrafe"] + P["titulo"] if l.strip()}
+            except Exception:
+                veda = set()
+            veda |= {l.strip() for l in lineas if l.strip().isupper()}
+            n = 0
+            for i, l in enumerate(lineas):
+                if not l.strip() or l.strip() in veda:
+                    continue
+                k = clave(l)
+                if len(k) < 12 or k not in izq:
+                    continue
+                nueva = izq[k] + l.strip()
+                if nueva == l:
+                    continue
+                if len(nueva) < len(l):
+                    quitadas.append((rel, i + 1, l.strip()[:44]))
+                lineas[i] = nueva
+                n += 1
+            if n:
+                puestas += n
+                informe.append((rel, n))
+                if APLICAR:
+                    io.open(p, "w", encoding="utf-8", newline="\n").write("\n".join(lineas))
+    if informe:
+        for rel, n in sorted(informe, key=lambda t: -t[1]):
+            print(f"  {n:4}  {rel}")
+    if quitadas:
+        print(f"  ({len(quitadas)} versos en los que el repo sangraba y el original no)")
+    return puestas
 
 
 def pausas(docs):
@@ -216,6 +293,12 @@ def main():
                     io.open(p, "w", encoding="utf-8", newline="\n").write("\n".join(lineas))
 
     print("APLICADO\n" if APLICAR else "AUDITORIA (no se ha escrito nada)\n")
+    print("Sangrias de verso que faltan:")
+    sang = sangrias(docs)
+    if not sang:
+        print("  ninguna: el verso conserva la sangria de los originales.")
+    print()
+
     print("Pausas de prosa que faltan:")
     faltan = pausas(docs)
     if not faltan:
