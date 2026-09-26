@@ -115,16 +115,17 @@ def limpiar(t, verso=False):
     En verso NO: el blanco entre estrofas es parte del poema. Se conserva uno.
 
     Y en verso tampoco se tocan los espacios de dentro de la linea. Tony usa
-    los espacios multiples como puntuacion, y esta regla esta escrita en
-    AGENTS.md desde hace semanas: styles.css pinta el verso con
+    los espacios multiples como puntuacion, y styles.css pinta el verso con
     `white-space: pre-wrap` justamente para respetarlos.
 
     Esta funcion los aplastaba igual, con un re.sub que metia todas las rachas
     en un solo espacio, y nadie lo noto porque el texto se lee bien sin ellos.
     Se vio el 25 de septiembre de 2026, cuando Ernesto lo recordo al llegar
     material nuevo: el .docx de las De-Cimitas publicadas traia 36 rachas de
-    espacios y en el sitio habia cero. En prosa se siguen colapsando, que ahi
-    son un descuido de mecanografia y no puntuacion."""
+    espacios y en el sitio habia cero. La regla no estaba escrita en ninguna
+    parte, que es por lo que se perdio; ahora esta en AGENTS.md, y
+    herramientas/espacios.py la comprueba contra los originales. En prosa se
+    siguen colapsando, que ahi son un descuido de mecanografia."""
     t = t.replace("\u00a0", " ").replace("\r", "")
     if verso:
         # Solo se recorta el final de la linea: el sangrado de la izquierda
