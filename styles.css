@@ -1053,6 +1053,15 @@ html:not(.pt) .solo-pt { display: none !important; }
 .texto-dedicatoria + p,
 .poema-epigrafe + p { text-indent: 0; }
 
+/* La linea en blanco que el autor deja entre dos bloques es una pausa: en
+   «Cantar el cuento (III)» separa la narracion de la voz que le habla a Olga
+   en segunda persona. Se abre aire y se quita la sangria, que es lo que pide
+   la tipografia cuando un bloque empieza despues de un blanco. */
+.cuento-texto p.tras-pausa {
+  margin-top: 2.2rem;   /* una linea entera: es lo que el autor dejo */
+  text-indent: 0;
+}
+
 .cuento-procedencia {
   margin-top: 3rem;
   padding-top: 1.4rem;

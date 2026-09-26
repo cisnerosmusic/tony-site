@@ -122,7 +122,22 @@ def cuerpo_cuento(texto, c):
                       + "\n".join(f'    <div class="verso">{esc(v)}</div>' for v in e["versos"])
                       + f'\n    <cite>{esc(e["autor"])}</cite>\n  </blockquote>')
     quita_colofon(lineas, c)
-    partes += [f"<p>{esc(l)}</p>" for l in lineas if l]
+    # La linea en blanco del autor es una pausa, no un hueco de tecleo: en
+    # «Cantar el cuento (III)» separa la narracion de la voz que le habla a
+    # Olga. Se marca el parrafo que la sigue, que es donde se ve, y ahi
+    # styles.css abre aire y quita la sangria, que es lo que pide la
+    # tipografia despues de un blanco.
+    pausa, cuerpo = False, 0
+    for l in lineas:
+        if not l:
+            # El blanco que va antes del primer parrafo no es pausa: solo
+            # separa el titulo, la dedicatoria o el epigrafe de lo que viene.
+            pausa = cuerpo > 0
+            continue
+        cuerpo += 1
+        clase = ' class="tras-pausa"' if pausa else ""
+        partes.append(f"<p{clase}>{esc(l)}</p>")
+        pausa = False
     return "\n".join(partes)
 
 

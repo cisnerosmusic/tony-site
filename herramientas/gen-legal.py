@@ -21,7 +21,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=44"
+CSS = "?v=45"
 
 # Aqui hay una funcion que se llama pagina(), asi que el marco comun no se
 # puede importar con su nombre: de idiomas.json solo hacen falta las etiquetas

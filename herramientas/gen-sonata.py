@@ -23,7 +23,7 @@ import pagina
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=44"
+CSS = "?v=45"
 FUENTE = os.path.join(RAIZ, "herramientas", "textos", "decimitas", "sonata-de-la-lluvia.txt")
 FOTO = "/img/decimitas/sonata-de-la-lluvia.webp"
 

@@ -111,8 +111,15 @@ def de_docx(ruta):
 
 
 def limpiar(t, verso=False):
-    """En prosa se descartan las lineas vacias, que solo son separacion.
-    En verso NO: el blanco entre estrofas es parte del poema. Se conserva uno.
+    """La linea en blanco se conserva, en verso y en prosa. Se guarda una sola
+    donde el autor puso una o varias.
+
+    En verso separa estrofas. En prosa tampoco es adorno: en «Cantar el cuento
+    (III)» los blancos separan la voz narrativa de la voz que le habla a Olga
+    en segunda persona, y sin ellos las dos se leen como una sola. Aqui se
+    descartaban, con un `for l in lineas if l`, y el cuento perdio sus seis
+    pausas. Lo dijo Ernesto el 25 de septiembre de 2026 y estaban igual en
+    otros siete cuentos.
 
     Y en verso tampoco se tocan los espacios de dentro de la linea. Tony usa
     los espacios multiples como puntuacion, y styles.css pinta el verso con
@@ -121,7 +128,7 @@ def limpiar(t, verso=False):
     Esta funcion los aplastaba igual, con un re.sub que metia todas las rachas
     en un solo espacio, y nadie lo noto porque el texto se lee bien sin ellos.
     Se vio el 25 de septiembre de 2026, cuando Ernesto lo recordo al llegar
-    material nuevo: el .docx de las De-Cimitas publicadas traia 36 rachas de
+    material nuevo: el .docx de las De-Cimitas publicadas traia 16 rachas de
     espacios y en el sitio habia cero. La regla no estaba escrita en ninguna
     parte, que es por lo que se perdio; ahora esta en AGENTS.md, y
     herramientas/espacios.py la comprueba contra los originales. En prosa se
@@ -133,8 +140,6 @@ def limpiar(t, verso=False):
         lineas = [l.rstrip() for l in t.split("\n")]
     else:
         lineas = [re.sub(r"[ \t]+", " ", l).strip() for l in t.split("\n")]
-    if not verso:
-        return "\n".join(l for l in lineas if l) + "\n"
     salida, blanco = [], False
     for l in lineas:
         if l:
