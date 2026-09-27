@@ -36,6 +36,18 @@ VERSO = ("poemas", "decimitas", "laureles")
 # La prosa no lleva rachas, pero si lleva pausas: la linea en blanco del autor.
 PROSA = os.path.join(TEXTOS, "cuentos")
 RACHA = re.compile(r"\S  +\S")
+
+# Versos en los que el sitio se aparta del original A PROPOSITO, porque el
+# autor lo dijo. Sin esto la herramienta los "arreglaria" de vuelta en la
+# siguiente pasada, deshaciendo lo que el pidio. Cada uno con su fecha: quien
+# quiera revocar uno, que lo hable con Tony y lo borre de aqui.
+EXCEPCIONES = {
+    # 27 de septiembre de 2026, por Tony: «Las dos que NO tienen sangria en el
+    # primer verso son errores mios. Casi siempre uso sangria de la primera
+    # linea.» Son Labios del deseo y Para nadie, en De-Cimitas.
+    "Verde carne   pulpa abierta": "sangria del primer verso, pedida por Tony",
+    "-¿Qué ganas con escribir": "sangria del primer verso, pedida por Tony",
+}
 APLICAR = "--aplicar" in sys.argv
 
 leer_poema = SourceFileLoader("leer_poema", os.path.join(
@@ -163,6 +175,8 @@ def sangrias(docs):
             for i, l in enumerate(lineas):
                 if not l.strip() or l.strip() in veda:
                     continue
+                if l.strip() in EXCEPCIONES:
+                    continue
                 k = clave(l)
                 if len(k) < 12 or k not in izq:
                     continue
@@ -274,6 +288,8 @@ def main():
             n = 0
             for i, l in enumerate(lineas):
                 if RACHA.search(l) or not l.strip() or l.strip() in veda:
+                    continue
+                if l.strip() in EXCEPCIONES:
                     continue
                 k = clave(l)
                 if len(k) < 12 or k not in orig:

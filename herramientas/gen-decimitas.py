@@ -117,6 +117,27 @@ def quita_cabecera(cuerpo, d):
     return cuerpo
 
 
+def cursivas(d, cuerpo):
+    """Pone en cursiva las palabras que el manifiesto declare.
+
+    No es enfasis de diseno: es para que un neologismo del autor no se lea
+    como una errata. Lo pidio Tony el 27 de septiembre de 2026 para
+    «dulcehumeda», en Penitente. Va declarado en el manifiesto y no se deduce,
+    porque adivinar que palabra es invento y cual descuido no lo puede hacer
+    una maquina; y el generador se para si la palabra no esta en la decima,
+    para que una reimportacion del original no la deje marcando en el vacio.
+
+    El texto de Tony no se toca: la marca vive en el manifiesto, asi que el
+    .txt sigue siendo transcripcion limpia y espacios.py lo puede cotejar."""
+    for palabra in d.get("cursivas", []):
+        m = esc(palabra)
+        if m not in cuerpo:
+            sys.exit(f"{d['slug']}: «{palabra}» esta declarada en cursivas "
+                     f"y no aparece en la decima")
+        cuerpo = cuerpo.replace(m, f"<em>{m}</em>")
+    return cuerpo
+
+
 def pieza(d, cuerpo, n, alt, la=""):
     img = f"/img/decimitas/{d['slug']}.webp"
     w, h = dims(img)
@@ -137,7 +158,7 @@ def pieza(d, cuerpo, n, alt, la=""):
         partes.append(f'        <cite>{esc(firma)}</cite>')
         partes.append('      </blockquote>')
     partes.append('      <div class="verso decimita-versos">'
-                  + "\n".join(esc(l) for l in versos).strip("\n") + '</div>')
+                  + cursivas(d, "\n".join(esc(l) for l in versos).strip("\n")) + '</div>')
     partes.append('      <p class="vyv-firma">ALS</p>')
     partes.append('    </div>')
     partes.append('  </article>')

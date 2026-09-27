@@ -82,7 +82,10 @@
       "slug": "penitente",
       "titulo_doc": "PENITENTE",
       "titulo": "Penitente",
-      "alt": "La huella de unos labios pintados de rojo, marcada sobre un papel blanco"
+      "alt": "La huella de unos labios pintados de rojo, marcada sobre un papel blanco",
+      "cursivas": [
+        "dulcehúmeda"
+      ]
     },
     {
       "slug": "rostros-del-mar-i",
