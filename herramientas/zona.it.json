@@ -687,15 +687,6 @@
         {
           "titulo": "Letti ad alta voce",
           "grabaciones": "plano-abierto"
-        },
-        {
-          "titulo": "Senza registrazione sottomano",
-          "alt": true,
-          "lista": [
-            "<strong lang=\"es\">Hablar de poesía</strong> <span class=\"meta\">· Radio Ciudad de La Habana, 2000 · un programma interamente dedicato alla mia poesia · la registrazione è in corso di ricerca</span>",
-            "<strong lang=\"es\">La impúdica es la guitarra</strong> <span class=\"meta\">· cassetta registrata dal vivo con diversi trovatori, Centro Pablo de la Torriente Brau, 2000 · con mie poesie</span>",
-            "<strong lang=\"es\">Más que sobrevivir</strong> <span class=\"meta\">· cassetta della trovatrice Rita del Prado, 1999 · con mie poesie</span>"
-          ]
         }
       ]
     },

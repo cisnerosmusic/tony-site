@@ -687,15 +687,6 @@
         {
           "titulo": "Lidos em voz alta",
           "grabaciones": "plano-abierto"
-        },
-        {
-          "titulo": "Sem gravação à mão",
-          "alt": true,
-          "lista": [
-            "<strong lang=\"es\">Hablar de poesía</strong> <span class=\"meta\">· Radio Ciudad de La Habana, 2000 · um programa inteiramente dedicado à minha poesia · a gravação está sendo procurada</span>",
-            "<strong lang=\"es\">La impúdica es la guitarra</strong> <span class=\"meta\">· fita gravada ao vivo com vários trovadores, Centro Pablo de la Torriente Brau, 2000 · com poemas meus</span>",
-            "<strong lang=\"es\">Más que sobrevivir</strong> <span class=\"meta\">· fita da trovadora Rita del Prado, 1999 · com poemas meus</span>"
-          ]
         }
       ]
     },

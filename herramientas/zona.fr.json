@@ -687,15 +687,6 @@
         {
           "titulo": "Lus à voix haute",
           "grabaciones": "plano-abierto"
-        },
-        {
-          "titulo": "Sans enregistrement sous la main",
-          "alt": true,
-          "lista": [
-            "<strong lang=\"es\">Hablar de poesía</strong> <span class=\"meta\">· Radio Ciudad de La Habana, 2000 · une émission entièrement consacrée à ma poésie · l'enregistrement est en cours de recherche</span>",
-            "<strong lang=\"es\">La impúdica es la guitarra</strong> <span class=\"meta\">· cassette enregistrée en public avec plusieurs trovadores, Centro Pablo de la Torriente Brau, 2000 · avec des poèmes de moi</span>",
-            "<strong lang=\"es\">Más que sobrevivir</strong> <span class=\"meta\">· cassette de la trovadora Rita del Prado, 1999 · avec des poèmes de moi</span>"
-          ]
         }
       ]
     },

@@ -687,15 +687,6 @@
         {
           "titulo": "Read aloud",
           "grabaciones": "plano-abierto"
-        },
-        {
-          "titulo": "No recording at hand",
-          "alt": true,
-          "lista": [
-            "<strong lang=\"es\">Hablar de poesía</strong> <span class=\"meta\">· Radio Ciudad de La Habana, 2000 · a programme devoted entirely to my poetry · the recording is being traced</span>",
-            "<strong lang=\"es\">La impúdica es la guitarra</strong> <span class=\"meta\">· cassette recorded live with several trova singers, Centro Pablo de la Torriente Brau, 2000 · with poems of mine</span>",
-            "<strong lang=\"es\">Más que sobrevivir</strong> <span class=\"meta\">· cassette by the trova singer Rita del Prado, 1999 · with poems of mine</span>"
-          ]
         }
       ]
     },
