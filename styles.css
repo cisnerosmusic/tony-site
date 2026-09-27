@@ -485,6 +485,17 @@ a.libro-cubierta:hover img {
   color: var(--gold);
   margin-top: 2.8rem;
 }
+/* El ISBN de cada tomo: dato de catalogo, no texto que se lea de corrido.
+   Va en la misma mono que los rotulos y atenuado, para que este ahi cuando un
+   editor lo busque y no estorbe cuando nadie lo busca. */
+.volumen-isbn {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-top: 1rem;
+}
+
 .volumen-rotulo + .nota { margin-top: 0.6rem; }
 .volumen-rotulo + .fragmento-titulo,
 .volumen-rotulo + .nota + .fragmento-titulo { margin-top: 0.5rem; }

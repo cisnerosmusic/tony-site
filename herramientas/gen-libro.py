@@ -33,7 +33,7 @@ import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=45"
+CSS = "?v=46"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -51,7 +51,7 @@ IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), enc
 LENGUAS = [k for k in IDIOMAS if not k.startswith("_")]
 
 # Datos de la ficha que pueden pasar sin traducir: son un numero y un nombre.
-INVARIABLES = {"año", "editorial"}
+INVARIABLES = {"año", "editorial", "ISBN"}
 
 
 def esc(t):
@@ -251,6 +251,11 @@ def generar_idioma(m, lang, disponibles):
                   f'      <img src="{v["img"]}" width="{vw}" height="{vh}" alt="{esc_attr(tv["alt"])}" loading="lazy">\n'
                   f'      <div>{prosa_a_html(leer(tv["sinopsis"]))}</div>\n'
                   f'    </div>\n')
+        # Cada tomo tiene su propio ISBN, y en una obra de cinco es el unico
+        # modo de que un editor de fuera pida el que quiere sin equivocarse.
+        # No se traduce: es un numero.
+        if v.get("isbn"):
+            cuerpo += f'    <p class="volumen-isbn">ISBN {esc(v["isbn"])}</p>\n'
         if v.get("fragmento"):
             # El aviso de por que el fragmento sigue en español se da una sola
             # vez, en el primer tomo que lo lleva, y no cinco veces seguidas.
@@ -344,6 +349,13 @@ def generar_idioma(m, lang, disponibles):
     # los buscadores no lo confundan con obras homonimas de otros autores.
     referencias = m.get("referencias", [])
     sameas_jsonld = (',\n  "sameAs": ' + json.dumps(referencias, ensure_ascii=False)) if referencias else ""
+    # El ISBN identifica la edicion sin ambiguedad: es lo primero que pide una
+    # editorial de fuera y lo que usan las bases bibliograficas para no
+    # confundir un titulo con el homonimo de otro autor. Vive en la ficha, asi
+    # que sale a la vez en la pagina y aqui, y no hay dos sitios donde pueda
+    # envejecer distinto.
+    isbn = next((v for k, v in m["ficha"].items() if k.upper() == "ISBN"), None)
+    isbn_jsonld = (',\n  "isbn": ' + json.dumps(isbn, ensure_ascii=False)) if isbn else ""
     if es:
         seo_titulo = m.get("seo_titulo") or (titulo + L["titulo_sufijo"])
         seo_desc = m.get("seo_desc") or m["descripcion"][:155]
@@ -418,7 +430,7 @@ def generar_idioma(m, lang, disponibles):
   "genre": {json.dumps(T("genero"), ensure_ascii=False)},
   "award": {premios_jsonld},
   "image": "{DOMINIO}{m["cubierta"]}",
-  "url": "{url}"{sameas_jsonld}{subjectof_jsonld}
+  "url": "{url}"{isbn_jsonld}{sameas_jsonld}{subjectof_jsonld}
 }}
 </script>
 <script type="application/ld+json">

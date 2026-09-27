@@ -489,8 +489,34 @@ def publicacion_acotada():
         falla("dominio sin acotar", "_config.yml no excluye: " + ", ".join(faltan))
 
 
+def isbn_valido():
+    """Un ISBN con un digito cambiado no falla en ninguna parte: identifica
+    otro libro, o ninguno. Y es el dato con el que una editorial de fuera y
+    una base bibliografica buscan el titulo, asi que un dedazo aqui manda a
+    otro sitio a quien venga a comprobarnos. El digito final es de control y
+    se puede verificar sin consultar nada."""
+    import glob
+    for ruta in sorted(glob.glob(os.path.join(RAIZ, "herramientas", "libros", "*.json"))):
+        with open(ruta, encoding="utf-8") as f:
+            m = json.load(f)
+        for clave, valor in m.get("ficha", {}).items():
+            if clave.upper() != "ISBN":
+                continue
+            digitos = [int(c) for c in valor if c.isdigit()]
+            nombre = os.path.basename(ruta)
+            if len(digitos) != 13:
+                falla("ISBN mal formado",
+                      f"{nombre}: «{valor}» tiene {len(digitos)} digitos, no 13")
+                continue
+            suma = sum(d * (1 if i % 2 == 0 else 3) for i, d in enumerate(digitos[:12]))
+            if (10 - suma % 10) % 10 != digitos[12]:
+                falla("ISBN con digito de control erroneo",
+                      f"{nombre}: «{valor}» no cuadra, revisa la pagina de creditos")
+
+
 def main():
     enlaces_rotos()
+    isbn_valido()
     anclas()
     canonicas()
     hreflang_reciproco()

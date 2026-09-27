@@ -19,7 +19,8 @@
         "capitulo": "IV",
         "archivo": "libros/el-escudo-de-valnuss/volumen-1-fragmento.txt",
         "tipo": "prosa"
-      }
+      },
+      "isbn": "978-959-7217-92-3"
     },
     {
       "img": "/img/libros/valnuss-2-rojo.webp",
@@ -30,7 +31,8 @@
         "capitulo": "IV",
         "archivo": "libros/el-escudo-de-valnuss/volumen-2-fragmento.txt",
         "tipo": "prosa"
-      }
+      },
+      "isbn": "978-959-7217-93-0"
     },
     {
       "img": "/img/libros/valnuss-3-fuego.webp",
@@ -41,7 +43,8 @@
         "capitulo": "IV",
         "archivo": "libros/el-escudo-de-valnuss/volumen-3-fragmento.txt",
         "tipo": "prosa"
-      }
+      },
+      "isbn": "978-959-7217-94-7"
     },
     {
       "img": "/img/libros/valnuss-4-caballos.webp",
@@ -52,7 +55,8 @@
         "capitulo": "I",
         "archivo": "libros/el-escudo-de-valnuss/volumen-4-fragmento.txt",
         "tipo": "prosa"
-      }
+      },
+      "isbn": "978-959-7217-95-4"
     },
     {
       "img": "/img/libros/valnuss-5-talismanes.webp",
@@ -63,7 +67,8 @@
         "capitulo": "VII",
         "archivo": "libros/el-escudo-de-valnuss/volumen-5-fragmento.txt",
         "tipo": "prosa"
-      }
+      },
+      "isbn": "978-959-7217-96-1"
     }
   ],
   "contratapa": "libros/el-escudo-de-valnuss/contratapa.txt",
