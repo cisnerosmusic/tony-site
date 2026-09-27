@@ -502,21 +502,62 @@ def isbn_valido():
         for clave, valor in m.get("ficha", {}).items():
             if clave.upper() != "ISBN":
                 continue
-            digitos = [int(c) for c in valor if c.isdigit()]
             nombre = os.path.basename(ruta)
-            if len(digitos) != 13:
-                falla("ISBN mal formado",
-                      f"{nombre}: «{valor}» tiene {len(digitos)} digitos, no 13")
+            # Los libros anteriores a 2007 llevan ISBN de diez, y su digito de
+            # control puede ser una X, que vale once. Se guarda el que esta
+            # impreso en el libro, no una conversion: lo que se publica tiene
+            # que poder comprobarse contra la pagina de creditos.
+            crudo = [c for c in valor.upper() if c.isdigit() or c == "X"]
+            if len(crudo) == 10:
+                d = [10 if c == "X" else int(c) for c in crudo]
+                if sum((10 - i) * x for i, x in enumerate(d)) % 11 != 0:
+                    falla("ISBN con digito de control erroneo",
+                          f"{nombre}: «{valor}» no cuadra, revisa la pagina de creditos")
                 continue
+            if len(crudo) != 13 or "X" in crudo:
+                falla("ISBN mal formado",
+                      f"{nombre}: «{valor}» no es ni de diez ni de trece")
+                continue
+            digitos = [int(c) for c in crudo]
             suma = sum(d * (1 if i % 2 == 0 else 3) for i, d in enumerate(digitos[:12]))
             if (10 - suma % 10) % 10 != digitos[12]:
                 falla("ISBN con digito de control erroneo",
                       f"{nombre}: «{valor}» no cuadra, revisa la pagina de creditos")
 
 
+def catalogo_espanol_al_dia():
+    """El catalogo español, /libros/, se mantiene A MANO.
+
+    Los cuatro de fuera los escribe gen-libro.py --catalogos, pero el español
+    no, y eso no se ve: se corrige un dato en el manifiesto, se regenera todo,
+    el comprobador sale verde y esa pagina se queda con el dato viejo. Paso dos
+    veces el 27 de septiembre de 2026, con el nombre de dos editoriales y con
+    «Marcel Luerio» por «Marcel Lueiro», y las dos veces lo caze buscando el
+    texto a mano, que es justo lo que esta regla evita."""
+    import glob
+    ruta = os.path.join(RAIZ, "libros", "index.html")
+    if not os.path.exists(ruta):
+        return
+    pagina = leer(ruta)
+    for m_ruta in sorted(glob.glob(os.path.join(RAIZ, "herramientas", "libros", "*.json"))):
+        with open(m_ruta, encoding="utf-8") as f:
+            m = json.load(f)
+        # Los tres libros de la trova se presentan en /trova/ y no en el
+        # catalogo, a proposito: lo dice su campo `seccion` y AGENTS.md.
+        if m.get("seccion"):
+            continue
+        for campo in ("titulo", "editorial", "anio"):
+            valor = m.get(campo)
+            if valor and html_lib.escape(str(valor)) not in pagina and str(valor) not in pagina:
+                falla("catalogo español desactualizado",
+                      f"/libros/ no dice «{valor}» ({campo} de {m['slug']}): "
+                      f"esa pagina se edita a mano, no la escribe ningun generador")
+
+
 def main():
     enlaces_rotos()
     isbn_valido()
+    catalogo_espanol_al_dia()
     anclas()
     canonicas()
     hreflang_reciproco()
