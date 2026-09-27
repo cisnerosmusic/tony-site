@@ -4,11 +4,11 @@
   "genero": "Narrativa",
   "genero_frase": "relato en formato digital",
   "anio": "2021",
-  "editorial": "Editorial Cubaliteraria",
+  "editorial": "Cubaliteraria Ediciones Digitales",
   "premios": [
     "Primer premio del concurso Reescribir El Quijote en Cuba, 2005"
   ],
-  "descripcion": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (Editorial Cubaliteraria, 2021, EPUB), el Quijote reescrito desde Cuba por Antonio López Sánchez: ficha, presentación y el comentario del autor.",
+  "descripcion": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (Cubaliteraria Ediciones Digitales, 2021, EPUB), el Quijote reescrito desde Cuba por Antonio López Sánchez: ficha, presentación y el comentario del autor.",
   "cubierta": "/img/libros/quijote-cubierta.webp",
   "cubierta_alt": "Cubierta de De la extraña aventura de Don Quijote, ilustrada por Iván Batista",
   "descarga": {
@@ -21,7 +21,8 @@
   "ficha": {
     "título": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados",
     "género": "Narrativa",
-    "editorial": "Editorial Cubaliteraria",
+    "editorial": "Cubaliteraria Ediciones Digitales",
+    "ISBN": "978-959-263-214-1",
     "año": "2021",
     "formato": "EPUB",
     "cubierta": "Ilustración de Iván Batista",
