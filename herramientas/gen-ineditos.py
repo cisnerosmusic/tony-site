@@ -21,6 +21,7 @@ import json, os, sys, html
 from importlib.machinery import SourceFileLoader
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import pagina as marco
 import navegacion   # menu y pie: una sola definicion para todo el sitio
 
 # Las convenciones de los textos del autor (fecha al pie, sello de la casa)
@@ -128,7 +129,7 @@ def alternos(rutas):
 
 def cabeza(lang, titulo, desc, url, tipo_og, rutas):
     L = IDIOMAS[lang]
-    img = f"{DOMINIO}/img/retrato.webp"
+    img = f"{DOMINIO}{marco.TARJETA_CASA}"
     locale = f'<meta property="og:locale" content="{L["locale"]}">'
     if lang != "es":
         locale += '\n<meta property="og:locale:alternate" content="es_ES">'

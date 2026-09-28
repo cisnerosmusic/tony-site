@@ -127,7 +127,7 @@ def envoltura(lang, V, slug, titulo, subtitulo, T, D, datos, cuerpo, capas, sub_
     # del cuento es aparato y va en el idioma de la pagina.
     la_sub = la if sub_es else ""
     migas = [("Ala del Mar", DOMINIO + L["portada"]), (V["migas"], DOMINIO + V["ruta"]), (titulo, url)]
-    return (pagina.cabeza(lang, T, D, url, tipo_og=tipo, imagen=DOMINIO + RETRATO,
+    return (pagina.cabeza(lang, T, D, url, tipo_og=tipo, imagen=DOMINIO + pagina.TARJETA_CASA,
                           rutas={l: c["ruta"] + slug + "/" for l, c in capas.items()}, adultos=True)
             + '<script type="application/ld+json">\n' + json.dumps(datos, ensure_ascii=False, indent=2) + '\n</script>\n'
             + pagina.migas(migas)

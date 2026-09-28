@@ -26,6 +26,8 @@ DOMINIO = "https://antoniolopezsanchez.art"
 CSS = "?v=46"
 FUENTE = os.path.join(RAIZ, "herramientas", "textos", "decimitas", "sonata-de-la-lluvia.txt")
 FOTO = "/img/decimitas/sonata-de-la-lluvia.webp"
+# La imagen social es la misma foto en JPEG: ver gen-tarjetas.FOTOS_SOCIALES.
+FOTO_SOCIAL = "/img/social/sonata-de-la-lluvia.jpg"
 
 FIRMAS = ("Fito Páez", "Noel Nicola", "Santiago Feliú")
 
@@ -131,7 +133,7 @@ def pagina_sonata(lang, V, movs, fw, fh, capas):
     migas += [(n, DOMINIO + u) for n, u in zip(V["migas"][:2], V["migas_urls"])]
     migas.append((V["migas"][2], url))
 
-    return (pagina.cabeza(lang, V["seo_titulo"], V["seo_desc"], url, imagen=DOMINIO + FOTO,
+    return (pagina.cabeza(lang, V["seo_titulo"], V["seo_desc"], url, imagen=DOMINIO + FOTO_SOCIAL,
                           rutas={l: c["ruta"] for l, c in capas.items()})
             + '<script type="application/ld+json">\n' + json.dumps(datos, ensure_ascii=False, indent=2) + '\n</script>\n'
             + pagina.migas(migas)

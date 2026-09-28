@@ -30,6 +30,7 @@ from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion   # menu y pie: una sola definicion para todo el sitio
+import pagina as marco
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
@@ -635,11 +636,11 @@ def catalogos():
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{esc_attr(C["seo_titulo"])}">
 <meta property="og:description" content="{esc_attr(C["seo_desc"])}">
-<meta property="og:image" content="{DOMINIO}/img/retrato.webp">
+<meta property="og:image" content="{DOMINIO}{marco.TARJETA_CASA}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc_attr(C["seo_titulo"])}">
 <meta name="twitter:description" content="{esc_attr(C["seo_desc"])}">
-<meta name="twitter:image" content="{DOMINIO}/img/retrato.webp">
+<meta name="twitter:image" content="{DOMINIO}{marco.TARJETA_CASA}">
 {locales_cat}
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>

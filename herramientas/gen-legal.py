@@ -18,6 +18,7 @@ import json, os, sys, html, glob
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import navegacion
+import pagina as marco
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
@@ -101,6 +102,13 @@ def pagina(clave, cfg, todos):
     etiqueta_menu = IDIOMAS[lang]["abrir_menu"]
     saltar = IDIOMAS[lang]["saltar"]
 
+    # Esta pagina se escribe su propia cabeza, asi que el og:locale hay que
+    # ponerlo aqui: hasta el 28 de septiembre de 2026 era la unica del sitio
+    # que no lo llevaba, en los cinco idiomas.
+    locale = f'<meta property="og:locale" content="{marco.IDIOMAS[lang]["locale"]}">'
+    if lang != "es":
+        locale += chr(10) + '<meta property="og:locale:alternate" content="es_ES">' 
+
     return f"""<!DOCTYPE html>
 <html lang="{d["lang"]}">
 <head>
@@ -117,11 +125,12 @@ def pagina(clave, cfg, todos):
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{esc_attr(d["seo_titulo"])}">
 <meta property="og:description" content="{esc_attr(d["seo_desc"])}">
-<meta property="og:image" content="{DOMINIO}/img/retrato.webp">
+<meta property="og:image" content="{DOMINIO}{marco.TARJETA_CASA}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc_attr(d["seo_titulo"])}">
 <meta name="twitter:description" content="{esc_attr(d["seo_desc"])}">
-<meta name="twitter:image" content="{DOMINIO}/img/retrato.webp">
+<meta name="twitter:image" content="{DOMINIO}{marco.TARJETA_CASA}">
+{locale}
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-300.woff2" as="font" type="font/woff2" crossorigin>

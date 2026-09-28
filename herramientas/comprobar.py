@@ -489,6 +489,30 @@ def publicacion_acotada():
         falla("dominio sin acotar", "_config.yml no excluye: " + ", ".join(faltan))
 
 
+def imagen_social():
+    """La imagen que sale al compartir una pagina tiene que existir y no puede
+    ser WebP.
+
+    Nacio de la auditoria del 28 de septiembre de 2026, en visperas de que el
+    autor anunciara el sitio en sus redes: 188 paginas daban como og:image el
+    retrato en WebP, que el rastreador de Facebook no lee de forma fiable y
+    devuelve la tarjeta sin imagen. El criterio ya existia desde el 21 de
+    septiembre para las postales de libro, en JPEG por esa misma razon, pero
+    no se habia aplicado al resto del sitio. Un fallo que no se ve desde
+    dentro: la pagina se ve perfecta y lo que sale mal es el enlace pegado en
+    otro sitio.
+    """
+    for p in paginas():
+        t = leer(p)
+        for etiqueta, m in re.findall(r'<meta (?:property|name)="(og:image|twitter:image)" content="([^"]+)"', t):
+            if m.lower().endswith(".webp"):
+                falla("imagen social en WebP", f"{rel(p)}: {etiqueta} = {m}")
+                continue
+            camino = m.replace(DOMINIO, "").lstrip("/")
+            if not os.path.exists(os.path.join(RAIZ, camino)):
+                falla("imagen social que no existe", f"{rel(p)}: {m}")
+
+
 def isbn_valido():
     """Un ISBN con un digito cambiado no falla en ninguna parte: identifica
     otro libro, o ninguno. Y es el dato con el que una editorial de fuera y
@@ -573,6 +597,7 @@ def main():
     generado_al_dia()
     sitemap_al_dia()
     publicacion_acotada()
+    imagen_social()
 
     if avisos:
         print(f"\nAVISOS ({len(avisos)}), no bloquean:")

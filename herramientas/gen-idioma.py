@@ -527,11 +527,11 @@ def pagina(d):
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{esc_attr(T)}">
 <meta property="og:description" content="{esc_attr(D)}">
-<meta property="og:image" content="{DOMINIO}{RETRATO}">
+<meta property="og:image" content="{DOMINIO}{marco.TARJETA_CASA}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc_attr(T)}">
 <meta name="twitter:description" content="{esc_attr(D)}">
-<meta name="twitter:image" content="{DOMINIO}{RETRATO}">
+<meta name="twitter:image" content="{DOMINIO}{marco.TARJETA_CASA}">
 {locales}
 <meta name="theme-color" content="#0a0c1f">
 <link rel="preload" href="/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>

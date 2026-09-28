@@ -15,6 +15,14 @@
 # El titulo no se traduce, asi que una postal sirve para las paginas del libro
 # en todos los idiomas.
 #
+# Y genera ademas la postal de la casa, img/tarjetas/ala-del-mar.jpg, que es
+# la imagen social de todo lo que no es un libro: la portada, las cinco
+# portadas de idioma y las salas. Antes ese papel lo hacia img/retrato.webp,
+# y tenia los dos defectos que esta postal corrige: es WebP, que alguna red
+# devuelve como tarjeta vacia, y mide 1080 x 717, que Facebook recorta por
+# arriba y por abajo al pedir 1,91:1. La foto es la misma; lo que cambia es
+# el formato y el encuadre.
+#
 # Uso: python herramientas/gen-tarjetas.py
 
 import glob, io, json, os, sys
@@ -138,6 +146,75 @@ def tarjeta(m):
     return im
 
 
+
+def tarjeta_casa():
+    """La postal de la casa: el retrato a la izquierda, fundido al navy, y a
+    la derecha lo mismo que dice la portada."""
+    im = fondo()
+    d = ImageDraw.Draw(im)
+
+    foto = Image.open(os.path.join(RAIZ, "img", "retrato.webp")).convert("RGB")
+    ancho_f = 560
+    alto_f = round(foto.height * ancho_f / foto.width)
+    if alto_f < ALTO:
+        alto_f = ALTO
+        ancho_f = round(foto.width * alto_f / foto.height)
+    foto = foto.resize((ancho_f, alto_f), Image.LANCZOS)
+    # El recorte se lleva el sobrante por la derecha y por abajo: la cara esta
+    # arriba a la izquierda, igual que en la portada.
+    foto = foto.crop((0, 0, 560, ALTO))
+    im.paste(foto, (0, 0))
+
+    # El fundido al fondo, como la portada: la foto no termina en un canto.
+    degradado = Image.new("L", (200, ALTO), 0)
+    dd = ImageDraw.Draw(degradado)
+    for x in range(200):
+        dd.line([(x, 0), (x, ALTO)], fill=round(255 * x / 199))
+    im.paste(Image.new("RGB", (200, ALTO), FONDO_ARRIBA), (360, 0), degradado)
+
+    izq, der = 620, ANCHO - 80
+    zona = der - izq
+    f_casa = fuente("cinzel-400.woff2", 64)
+    f_lema = fuente("cormorant-garamond-400-italic.woff2", 38)
+    f_autor = fuente("cinzel-400.woff2", 44)
+    lineas_autor = partir("ANTONIO LÓPEZ SÁNCHEZ", f_autor, zona, d)
+
+    alto_bloque = 78 + 30 + 52 + 26 + 2 + 34 + len(lineas_autor) * 58
+    y = (ALTO - alto_bloque) // 2
+    d.text((izq, y), "ALA DEL MAR", font=f_casa, fill=ORO)
+    y += 78 + 30
+    d.text((izq, y), "bene scriptus", font=f_lema, fill=TEXTO)
+    y += 52 + 26
+    d.line([(izq, y), (izq + 60, y)], fill=ORO, width=2)
+    y += 34
+    for l in lineas_autor:
+        d.text((izq, y), l, font=f_autor, fill=(232, 228, 220))
+        y += 58
+    return im
+
+
+# Las salas que ensenan su propia foto al compartirse. La imagen es la misma
+# que se ve en la pagina; lo unico que cambia es el formato, porque el WebP
+# deja la tarjeta vacia en alguna red. Se copia al tamano que tiene, sin
+# reescalar: son fotos, no postales compuestas.
+FOTOS_SOCIALES = [
+    "img/decimitas/baraja-rota.webp",
+    "img/decimitas/sonata-de-la-lluvia.webp",
+    "img/album/libreras-habana-2.webp",
+    "img/guerreras.webp",
+    "img/libros/trovadoras-cubierta.webp",
+]
+
+
+def fotos_sociales():
+    destino = os.path.join(RAIZ, "img", "social")
+    os.makedirs(destino, exist_ok=True)
+    for rel in FOTOS_SOCIALES:
+        im = Image.open(os.path.join(RAIZ, rel)).convert("RGB")
+        salida = os.path.join(destino, os.path.basename(rel).replace(".webp", ".jpg"))
+        im.save(salida, "JPEG", quality=84, optimize=True, progressive=True)
+        print("%-44s %5.1f KB" % (os.path.relpath(salida, RAIZ), os.path.getsize(salida) / 1024))
+
 def main():
     os.makedirs(DESTINO, exist_ok=True)
     for r in sorted(glob.glob(os.path.join(RAIZ, "herramientas", "libros", "*.json"))):
@@ -145,6 +222,10 @@ def main():
         destino = os.path.join(DESTINO, m["slug"] + ".jpg")
         tarjeta(m).save(destino, "JPEG", quality=84, optimize=True, progressive=True)
         print("%-44s %5.1f KB" % (os.path.relpath(destino, RAIZ), os.path.getsize(destino) / 1024))
+    fotos_sociales()
+    destino = os.path.join(DESTINO, "ala-del-mar.jpg")
+    tarjeta_casa().save(destino, "JPEG", quality=84, optimize=True, progressive=True)
+    print("%-44s %5.1f KB" % (os.path.relpath(destino, RAIZ), os.path.getsize(destino) / 1024))
 
 
 if __name__ == "__main__":

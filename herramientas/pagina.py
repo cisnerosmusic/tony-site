@@ -15,6 +15,7 @@ import navegacion
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
+TARJETA_CASA = "/img/tarjetas/ala-del-mar.jpg"
 CSS = "?v=46"
 IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
 
@@ -71,7 +72,14 @@ def cabeza(lang, titulo, desc, url, tipo_og="article", imagen=None, rutas=None, 
     """adultos=True añade <meta name="rating" content="adult">, la señal que
     los buscadores entienden para la literatura erotica."""
     L = IDIOMAS[lang]
-    img = imagen or f"{DOMINIO}/img/retrato.webp"
+    # La imagen social por defecto es la postal de la casa, no el retrato:
+    # 1200 x 630 y JPEG, que es lo que las redes leen sin sorpresas. El
+    # retrato sigue siendo la foto de la portada, pero no la tarjeta.
+    img = imagen or f"{DOMINIO}{TARJETA_CASA}"
+    medidas = "" if imagen else (
+        '<meta property="og:image:width" content="1200">' + chr(10)
+        + '<meta property="og:image:height" content="630">' + chr(10)
+        + '<meta property="og:image:alt" content="Ala del Mar, la casa de Antonio Lopez Sanchez">' + chr(10))
     locale = f'<meta property="og:locale" content="{L["locale"]}">'
     if lang != "es":
         locale += '\n<meta property="og:locale:alternate" content="es_ES">'
@@ -89,7 +97,7 @@ def cabeza(lang, titulo, desc, url, tipo_og="article", imagen=None, rutas=None, 
 <meta property="og:title" content="{esc_attr(titulo)}">
 <meta property="og:description" content="{esc_attr(desc)}">
 <meta property="og:image" content="{img}">
-<meta name="twitter:card" content="summary_large_image">
+{medidas}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc_attr(titulo)}">
 <meta name="twitter:description" content="{esc_attr(desc)}">
 <meta name="twitter:image" content="{img}">

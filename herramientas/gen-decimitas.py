@@ -190,7 +190,7 @@ def pagina_decimitas(lang, V, cfg, trozos, capas):
         "{premio}", f'<a href="{V["premios_url"]}">{esc(PREMIO)}</a>')
 
     return (pagina.cabeza(lang, V["seo_titulo"], V["seo_desc"], url,
-                          imagen=f"{DOMINIO}/img/decimitas/baraja-rota.webp",
+                          imagen=f"{DOMINIO}/img/social/baraja-rota.jpg",
                           rutas={l: c["ruta"] for l, c in capas.items()},
                           adultos=bool(V.get("aviso_adultos")))
             + '<script type="application/ld+json">\n' + json.dumps(lista, ensure_ascii=False, indent=2) + '\n</script>\n'

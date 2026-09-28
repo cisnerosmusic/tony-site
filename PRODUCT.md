@@ -58,10 +58,10 @@ La compra directa de ejemplares no está resuelta y no es el objetivo. La acció
 
 ## Evidence on Hand
 
-Verificado en fuentes públicas (EcuRed, El Camagüey, La Jiribilla):
+Verificado en fuentes públicas (EcuRed, Tercera Fundación, La Jiribilla, El Camagüey y su propio perfil público):
 
 - Antonio López Sánchez, La Habana, 16 de enero de 1973. Licenciado en Comunicación Social (Universidad de La Habana). Egresado del IX curso del Centro de Formación Literaria Onelio Jorge Cardoso (2007).
-- Novelas de fantasía y horror: Las guerreras de la luz (Editorial de la Mujer, 2011; Premio La Rosa Blanca 2012, UNEAC), El Escudo de Valnúss (Editorial de la Mujer, 2015), El otro lado del espejo (Gente Nueva, 2017; mención Concurso La Edad de Oro 2014), Grimorium (Editorial Oriente, 2018), Perdidos en un librero (Quisicuaba, 2026).
+- Novelas de fantasía y horror: Las guerreras de la luz (Editorial de la Mujer, 2011; Premio La Rosa Blanca 2012, UNEAC), El Escudo de Valnúss (Editorial de la Mujer, 2015), El otro lado del espejo (Editorial Gente Nueva, 2017; mención Concurso La Edad de Oro 2014), Grimorium (Editorial Oriente, 2018), Perdidos en un librero (Ediciones Quisicuaba, 2026).
 - Ensayo y entrevista: La canción de la Nueva Trova (Atril, 2001), Trovadoras (Editorial Oriente, 2008), Convertida en canción (Capiro, 2019).
 - Poesía colectiva: Trampas, retratos y un 17 rojo (coautor, Editorial de la Mujer, 2005).
 - Primer premio "Reescribir El Quijote en Cuba" (2005). Premio Farraluque de Literatura Erótica (2026). Premio Colateral Yasmina Calcines, XXVI Concurso Nacional Ala Décima (2026).
@@ -69,7 +69,7 @@ Verificado en fuentes públicas (EcuRed, El Camagüey, La Jiribilla):
 - Carátulas reales de las ediciones, entregadas por Ernesto y optimizadas en `img/libros/`. Originales en OneDrive/Imágenes/tony.
 - Fotos reales del autor, entregadas por Tony vía Ernesto (sept 2026, 715px nativos por las condiciones de envío desde Cuba): retrato junto al cañón de la fortaleza de La Habana (`img/retrato.webp`) y la foto de mar que el autor quiso en su portada por valor simbólico (`img/mar2.webp`).
 - Textos literarios reales del autor: contratapas, fragmentos y "con voz y voto" de cada libro, más el poema íntegro "Informe legal sobre la muerte de un poema".
-- Dos grabaciones en la voz del autor, en `/tinta-ciones/en-mi-voz/`.
+- Once grabaciones en la voz del autor, en `/tinta-ciones/en-mi-voz/`.
 
 Ausencias que no se deben fabricar: la contratapa de los tres títulos que no la mandaron, reseñas y prensa citable de nueve de los catorce libros, y cualquier dato de extensión o categoría de edad que no venga del autor o de su editorial. Un libro sin Sinopsis sale sin ese bloque, no con un resumen escrito por el estudio.
 
