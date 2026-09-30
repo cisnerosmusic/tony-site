@@ -34,7 +34,7 @@ import pagina as marco
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=46"
+CSS = "?v=45"
 
 # Toda gestion de derechos fuera de Cuba pasa por Ernesto Cisneros. Dos destinos
 # fijos y ningun otro: decision del autor, 8 de septiembre de 2026. Una pagina
@@ -110,6 +110,10 @@ def validar(m, o, lang):
             falta.append(k)
     for k in ("contratapa", "vyv", "contratapa_titulo", "volumenes_titulo", "descarga"):
         if m.get(k) and not o.get(k):
+            # Un boton marcado "solo_es" no se pinta fuera del español, asi que
+            # tampoco hace falta traducirlo.
+            if k == "descarga" and m[k].get("solo_es"):
+                continue
             falta.append(k)
     if len(o.get("premios", [])) != len(m.get("premios", [])):
         falta.append("premios")
@@ -309,21 +313,39 @@ def generar_idioma(m, lang, disponibles):
     # Bajo la cubierta, los caminos para leer: la descarga oficial cuando el libro
     # entero esta en alguna parte, y los cuentos que viven en Contarte con su
     # propia habitacion. El texto no se duplica, se enlaza.
+    # Dos sitios posibles para el boton, y el manifiesto elige con el campo
+    # "posicion". Bajo la cubierta va la descarga del libro entero, que es lo
+    # que el lector busca antes de leer nada. Al final va la de un libro que
+    # ademas esta en una tienda: ahi el boton no es la puerta de entrada sino
+    # la salida, y llega cuando ya se leyeron la sinopsis, la ficha y el
+    # fragmento. Lo pidio Ernesto el 30 de septiembre de 2026 para Perdidos en
+    # un librero.
+    #
+    # Y "solo_es" deja el boton fuera de los otros cuatro idiomas. La tienda
+    # es cubana y esta por comprobar si despacha fuera de la isla: prometerle
+    # una descarga a un lector de Milan y que no pueda es peor que no
+    # ofrecersela.
     salidas = []
+    finales = []
     d = m.get("descarga")
-    if d:
+    if d and not (d.get("solo_es") and not es):
         td = d if es else {**d, **o["descarga"]}
-        salidas.append((d["url"], td["texto"], td.get("pie"), True))
+        fila = (d["url"], td["texto"], td.get("pie"), True)
+        (finales if d.get("posicion") == "final" else salidas).append(fila)
     for i, l in enumerate(m.get("lecturas", [])):
         tl = l if es else {**l, **o["lecturas"][i]}
         salidas.append((l["url"], tl["texto"], tl.get("pie"), False))
-    descarga_html = ""
-    if salidas:
+    def pinta(filas, extra=""):
+        if not filas:
+            return ""
         botones = "".join(
             f'    <a href="{u}"{" target=\"_blank\" rel=\"noopener\"" if fuera else ""} class="btn btn-filled">{esc(txt)}</a>\n'
             + (f'    <span class="meta">{esc(pie_b)}</span>\n' if pie_b else "")
-            for u, txt, pie_b, fuera in salidas)
-        descarga_html = '\n  <p class="descarga reveal reveal-left">\n' + botones + '  </p>\n'
+            for u, txt, pie_b, fuera in filas)
+        return f'\n  <p class="descarga{extra} reveal reveal-left">\n' + botones + '  </p>\n'
+
+    descarga_html = pinta(salidas)
+    descarga_final_html = pinta(finales, " descarga-final")
 
     # De que sala cuelga el libro. Casi todos cuelgan del catalogo, pero los
     # tres de la trova cuelgan de /trova/, que es donde se los presenta: el
@@ -476,7 +498,7 @@ def generar_idioma(m, lang, disponibles):
     <img src="{m["cubierta"]}" width="{cw}" height="{ch}" alt="{esc_attr(T("cubierta_alt"))}" fetchpriority="high">
   </figure>
 {descarga_html}
-{bloques}  <p style="margin-top:2rem;"><a href="{casa}" class="btn">{L["volver"].format(casa_en_frase)}</a></p>
+{bloques}{descarga_final_html}  <p style="margin-top:2rem;"><a href="{casa}" class="btn">{L["volver"].format(casa_en_frase)}</a></p>
 
 </div>
 </main>

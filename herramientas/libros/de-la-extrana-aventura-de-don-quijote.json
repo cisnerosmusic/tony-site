@@ -1,6 +1,6 @@
 {
   "slug": "de-la-extrana-aventura-de-don-quijote",
-  "titulo": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados",
+  "titulo": "De la extraña aventura de don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados",
   "genero": "Narrativa",
   "genero_frase": "relato en formato digital",
   "anio": "2021",
@@ -8,9 +8,9 @@
   "premios": [
     "Primer premio del concurso Reescribir El Quijote en Cuba, 2005"
   ],
-  "descripcion": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (Cubaliteraria Ediciones Digitales, 2021, EPUB), el Quijote reescrito desde Cuba por Antonio López Sánchez: ficha, presentación y el comentario del autor.",
+  "descripcion": "De la extraña aventura de don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados (Cubaliteraria Ediciones Digitales, 2021, EPUB), el Quijote reescrito desde Cuba por Antonio López Sánchez: ficha, presentación y el comentario del autor.",
   "cubierta": "/img/libros/quijote-cubierta.webp",
-  "cubierta_alt": "Cubierta de De la extraña aventura de Don Quijote, ilustrada por Iván Batista",
+  "cubierta_alt": "Cubierta de De la extraña aventura de don Quijote, ilustrada por Iván Batista",
   "descarga": {
     "url": "https://www.cubaliteraria.cu/download/de-la-extrana-aventura-de-don-quijote-por-lejanas-tierras-y-otros-sucesos-hasta-hoy-olvidados-de-antonio-lopez-sanchez/",
     "texto": "Leer el libro completo",
@@ -19,7 +19,7 @@
   "contratapa": "libros/de-la-extrana-aventura-de-don-quijote/contratapa.txt",
   "vyv": "libros/de-la-extrana-aventura-de-don-quijote/voz-y-voto.txt",
   "ficha": {
-    "título": "De la extraña aventura de Don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados",
+    "título": "De la extraña aventura de don Quijote por lejanas tierras y otros sucesos hasta hoy olvidados",
     "género": "Narrativa",
     "editorial": "Cubaliteraria Ediciones Digitales",
     "ISBN": "978-959-263-214-1",
@@ -40,6 +40,6 @@
   "referencias": [
     "https://www.ecured.cu/De_la_extra%C3%B1a_aventura_de_don_Quijote_por_lejanas_tierras_y_otros_sucesos_hasta_hoy_olvidados"
   ],
-  "seo_titulo": "De la extraña aventura de Don Quijote | A. López Sánchez",
+  "seo_titulo": "De la extraña aventura de don Quijote | A. López Sánchez",
   "seo_desc": "El Quijote reescrito desde Cuba (Cubaliteraria, 2021, EPUB), del primer premio de Reescribir El Quijote en Cuba: ficha y presentación."
 }

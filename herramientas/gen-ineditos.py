@@ -31,7 +31,7 @@ leer_poema = SourceFileLoader("leer_poema", os.path.join(
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://antoniolopezsanchez.art"
-CSS = "?v=46"
+CSS = "?v=45"
 DERECHOS_EMAIL = "derechos@antoniolopezsanchez.art"
 IDIOMAS = json.load(open(os.path.join(RAIZ, "herramientas", "idiomas.json"), encoding="utf-8"))
 

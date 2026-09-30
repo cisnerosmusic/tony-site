@@ -513,6 +513,30 @@ def imagen_social():
                 falla("imagen social que no existe", f"{rel(p)}: {m}")
 
 
+def comprueba_isbn(nombre, valor):
+    """Valida un ISBN suelto: el de diez con su X posible y el de trece."""
+    # Los libros anteriores a 2007 llevan ISBN de diez, y su digito de control
+    # puede ser una X, que vale once. Se guarda el que esta impreso en el
+    # libro, no una conversion: lo que se publica tiene que poder comprobarse
+    # contra la pagina de creditos.
+    crudo = [c for c in valor.upper() if c.isdigit() or c == "X"]
+    if len(crudo) == 10:
+        d = [10 if c == "X" else int(c) for c in crudo]
+        if sum((10 - i) * x for i, x in enumerate(d)) % 11 != 0:
+            falla("ISBN con digito de control erroneo",
+                  f"{nombre}: «{valor}» no cuadra, revisa la pagina de creditos")
+        return
+    if len(crudo) != 13 or "X" in crudo:
+        falla("ISBN mal formado",
+              f"{nombre}: «{valor}» no es ni de diez ni de trece")
+        return
+    digitos = [int(c) for c in crudo]
+    suma = sum(d * (1 if i % 2 == 0 else 3) for i, d in enumerate(digitos[:12]))
+    if (10 - suma % 10) % 10 != digitos[12]:
+        falla("ISBN con digito de control erroneo",
+              f"{nombre}: «{valor}» no cuadra, revisa la pagina de creditos")
+
+
 def isbn_valido():
     """Un ISBN con un digito cambiado no falla en ninguna parte: identifica
     otro libro, o ninguno. Y es el dato con el que una editorial de fuera y
@@ -527,26 +551,21 @@ def isbn_valido():
             if clave.upper() != "ISBN":
                 continue
             nombre = os.path.basename(ruta)
+            # Un libro digital puede traer un ISBN por formato, y los dos van
+            # en la misma linea de la ficha separados por un punto medio:
+            # «978-... (PDF) · 978-... (EPUB)». Se valida cada uno por su
+            # cuenta, que es lo que evita el dedazo. Perdidos en un librero,
+            # 30 de septiembre de 2026.
+            partes = [x.strip() for x in valor.split("·")]
+            if len(partes) > 1:
+                for parte in partes:
+                    comprueba_isbn(nombre, parte)
+                continue
             # Los libros anteriores a 2007 llevan ISBN de diez, y su digito de
             # control puede ser una X, que vale once. Se guarda el que esta
             # impreso en el libro, no una conversion: lo que se publica tiene
             # que poder comprobarse contra la pagina de creditos.
-            crudo = [c for c in valor.upper() if c.isdigit() or c == "X"]
-            if len(crudo) == 10:
-                d = [10 if c == "X" else int(c) for c in crudo]
-                if sum((10 - i) * x for i, x in enumerate(d)) % 11 != 0:
-                    falla("ISBN con digito de control erroneo",
-                          f"{nombre}: «{valor}» no cuadra, revisa la pagina de creditos")
-                continue
-            if len(crudo) != 13 or "X" in crudo:
-                falla("ISBN mal formado",
-                      f"{nombre}: «{valor}» no es ni de diez ni de trece")
-                continue
-            digitos = [int(c) for c in crudo]
-            suma = sum(d * (1 if i % 2 == 0 else 3) for i, d in enumerate(digitos[:12]))
-            if (10 - suma % 10) % 10 != digitos[12]:
-                falla("ISBN con digito de control erroneo",
-                      f"{nombre}: «{valor}» no cuadra, revisa la pagina de creditos")
+            comprueba_isbn(nombre, valor)
 
 
 def catalogo_espanol_al_dia():

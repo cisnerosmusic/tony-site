@@ -15,7 +15,7 @@
     "título": "Perdidos en un librero",
     "género": "Novela infantil de fantasía",
     "editorial": "Ediciones Quisicuaba",
-    "ISBN": "978-959-85023-2-5",
+    "ISBN": "978-959-85023-2-5 (PDF) · 978-959-85025-1-6 (EPUB)",
     "año": "2026",
     "formato": "EPUB y PDF",
     "cubierta": "Ilustración de Alain R. Cuba"
@@ -27,5 +27,12 @@
     "https://www.ecured.cu/Perdidos_en_un_librero"
   ],
   "seo_titulo": "Perdidos en un librero | Antonio López Sánchez",
-  "seo_desc": "Perdidos en un librero (Ediciones Quisicuaba, 2026), novela infantil de fantasía en formato digital: sinopsis, ficha y comentario del autor."
+  "seo_desc": "Perdidos en un librero (Ediciones Quisicuaba, 2026), novela infantil de fantasía en formato digital: sinopsis, ficha y comentario del autor.",
+  "descarga": {
+    "url": "https://www.filhcuba.cu/shop/quisicuaba-perdidos-en-un-librero-730?category=272",
+    "texto": "Descargar el libro",
+    "pie": "Edición digital en ISLALIBROS, la tienda de la Feria Internacional del Libro de La Habana",
+    "posicion": "final",
+    "solo_es": true
+  }
 }

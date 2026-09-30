@@ -1018,6 +1018,11 @@ html:not(.pt) .solo-pt { display: none !important; }
   text-align: center;
   margin: 0 0 3rem;
 }
+/* La descarga que va al final de la pagina quiere el aire arriba y no abajo:
+   detras viene el boton de volver. Lo usa el libro que ademas esta en una
+   tienda, donde el boton es salida y no puerta de entrada. */
+.descarga-final { margin: 3.5rem 0 0; }
+
 .descarga .meta {
   display: block;
   margin-top: 0.9rem;
