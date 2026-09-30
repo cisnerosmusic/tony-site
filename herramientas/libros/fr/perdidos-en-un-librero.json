@@ -14,5 +14,9 @@
   "catalogo": {
     "glosa": "Perdus dans une bibliothèque",
     "sinopsis": "Un chapeau de magicien, une baguette de fée, un cheval, une poupée et un zombie savant se perdent dans les livres d'une bibliothèque magique, et atterrissent dans les pages de la mythologie cubaine. Le livre le plus récent de l'auteur."
+  },
+  "descarga": {
+    "texto": "Télécharger le livre (en espagnol)",
+    "pie": "Édition numérique sur ISLALIBROS, la librairie de la Foire internationale du livre de La Havane"
   }
 }
